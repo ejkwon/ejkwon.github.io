@@ -1,0 +1,268 @@
+﻿<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/header.html'); ?>
+<!-- header -->
+<header id="header">
+    <h1 class="logo"><img src="../img/editor/h1_logo.png" alt="Edibot"></h1>
+    <div class="topHead">
+        <div class="gLeft">
+            <ol class="mBreadcrumb">
+                <li title="현재 위치"><strong>이미지 추가</strong></li>
+                <li>상품상세설명 편집</li>
+                <li>저장</li>
+            </ol>
+        </div>
+        <div class="gRight">
+            <a href="#layerGoodsGroup" class="btnSelect eLayerClick">자켓 / 블레이저</a>
+            <button type="submit" class="btnSubmit large">상세 편집하기 <em class="icoNext">다음</em></button>
+        </div>
+    </div>
+</header><!-- //header -->
+<hr class="layout">
+
+<!-- container -->
+<div id="container">
+    <!-- aside -->
+    <aside>
+        <section class="sideImage">
+            <h2 class="blind">이미지 불러오기</h2>
+            <div class="mButton gLeft">
+                <label for="fileUpload" class="btnFile"><span class="icoAdd"></span><input type="file" id="fileUpload"> 이미지 추가</label>
+                <button type="button" class="btnNormal small"><span class="icoCheck"></span> 전체선택</button>
+                <!--<button type="button" class="btnNormal small selected"><span class="icoCheck"></span> 전체해제</button>-->
+                <button type="button" class="btnNormal small"><span class="icoDelete"></span> 삭제</button>
+            </div>
+            <div class="mImgList">
+                <ul class="eImgSort"><!-- eImgSort: 드래그앤드롭 플러그인 사용을 위한 클래스 -->
+                    <li class="selected">
+                        <button type="button" class="button">
+                            <span class="icoNo">1</span>
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt="">
+                        </button>
+                        <div class="mLoading"><span style="width:33%"></span></div>
+                    </li>
+                    <li class="selected">
+                        <button type="button" class="button">
+                            <span class="icoNo">3</span>
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt="">
+                        </button>
+                        <div class="mLoading"><span style="width:20%"></span></div>
+                    </li>
+                    <li class="selected">
+                        <button type="button" class="button">
+                            <span class="icoNo">2</span>
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example3.gif" alt="">
+                        </button>
+                        <div class="mLoading"><span style="width:40%"></span></div>
+                    </li>
+                    <li>
+                        <button type="button" class="button">
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example4.gif" alt="">
+                        </button>
+                        <div class="mLoading"><span style="width:10%"></span></div>
+                    </li>
+                    <li>
+                        <button type="button" class="button">
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example5.gif" alt="">
+                        </button>
+                        <div class="mLoading"><span style="width:70%"></span></div>
+                    </li>
+                    <li>
+                        <button type="button" class="button">
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt="">
+                        </button>
+                        <div class="mLoading"><span style="width:100%"></span></div>
+                    </li>
+                    <li>
+                        <button type="button" class="button">
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt="">
+                        </button>
+                    </li>
+                    <!-- 참고 가이드: 드래그되고 있는 선택항목 강조 표시 -->
+                    <li class="ui-sortable-helper">
+                        <button type="button" class="button">
+                            <span class="icoNo">3</span>
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt="">
+                        </button>
+                    </li>
+                    <!-- 참고 가이드: 드래그되는 선택항목의 기존 위치 및 경계선 표시 -->
+                    <li class="highlight">
+                        <button type="button" class="button">
+                            <span class="icoNo">3</span>
+                            <img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt="">
+                        </button>
+                    </li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">6</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">7</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">8</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">9</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">10</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">11</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">12</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">13</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">14</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">15</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">16</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">17</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">18</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">19</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">20</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">21</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">22</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">23</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">24</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">25</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">26</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">27</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">28</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">29</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">30</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">31</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">32</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">33</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">34</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">35</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">36</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">37</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">38</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">39</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">40</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">41</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">42</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">43</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">44</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">45</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">46</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">47</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">48</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">49</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">50</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">51</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">51</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">52</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">53</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">54</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">55</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">56</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">57</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">58</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">59</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">60</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">61</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">62</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">63</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">64</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">65</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">66</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">67</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">68</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">69</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">70</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">71</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">72</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">73</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">74</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">75</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">76</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">77</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">78</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">79</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">80</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">81</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">82</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">83</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">84</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">85</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">86</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">87</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">88</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">89</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">90</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">91</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">92</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">93</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">94</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">95</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">96</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">97</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">98</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">99</span></button></li>
+                    <li class="default"><button type="button" class="button"><span class="txtNum">100</span></button></li>
+                </ul>
+            </div>
+        </section>
+    </aside><!-- //aside -->
+    <hr class="layout">
+
+    <!-- contents -->
+    <div id="contents">
+        <div class="groupArea">
+            <div class="mGroup eExpand">
+                <h3 class="title">모델 이미지</h3>
+                <div class="mImgList">
+                    <ul class="eImgSort"><!-- eImgSort: 드래그앤드롭 플러그인 사용을 위한 클래스 -->
+                        <li class="selected"><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example3.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example4.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example5.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example3.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example4.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                        <!-- 참고 가이드: 드래그되고 있는 선택항목 강조 표시 -->
+                        <li class="ui-sortable-helper"><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                        <!-- 참고 가이드: 드래그되는 선택항목의 기존 위치 및 경계선 표시 -->
+                        <li class="highlight"><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                    </ul>
+                </div>
+                <button type="button" class="btnExpand" title="확대하기"></button>
+            </div>
+            <div class="mGroup">
+                <h3 class="title">색상 이미지</h3>
+                <div class="mImgList">
+                    <ul>
+                        <li class="default"><button type="button" class="button"><img src="../img/editor/img_thumb.gif" alt=""></button></li>
+                    </ul>
+                </div>
+                <button type="button" class="btnExpand" title="확대하기"></button>
+            </div>
+            <div class="mGroup">
+                <h3 class="title">상세 이미지</h3>
+                <div class="mImgList">
+                    <ul>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example3.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example4.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example5.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example3.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example4.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example5.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example3.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example4.gif" alt=""></button></li>
+                        <li><button type="button" class="button"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example5.gif" alt=""></button></li>
+                    </ul>
+                </div>
+                <button type="button" class="btnExpand" title="확대하기"></button>
+            </div>
+        </div>
+    </div><!-- //contents -->
+</div><!-- //container -->
+
+<!-- 참고: progress bar -->
+<div class="mProgress">
+    <p class="heading">에디봇이 <strong class="txtEm">이미지 자동분류</strong>중입니다.</p>
+    자동분류되지 않은 이미지는 직접 분류해주세요.
+    <div class="mLoading"><span style="width:33%"></span></div>
+    <span class="txtEm">20</span> / <span class="txtNormal">63</span>
+    <div class="mButton">
+        <button type="button" class="btnBasic eClose">취소</button>
+    </div>
+</div>
+<div id="dimmed_progress" class="dimmed"></div>
+
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/footer.html'); ?>

@@ -1,0 +1,224 @@
+<!--  참고: 상품정보 미리보기 -->
+<link rel="stylesheet" type="text/css" href="/css/apps/edibot_contents_bak.css" media="all">
+
+<div id="edibotProduct">
+    <div class="productDetail" style="width:700px"><!-- 참고: .productDetail의 width값은 가장 큰 이미지 크기 값으로 넣어주세요 -->
+        <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/smartAdmin/CStore/myApps/edibot_editor/include/sample.html'); ?>
+    </div>
+    <div class="productInfo">
+        <div class="imgTitle">
+            <img src="//img.echosting.cafe24.com/apps/edibot/editor/product_info.png" alt="PRODUCT INFO">
+        </div>
+        <div class="imgProduct default">
+            <img src="//img.echosting.cafe24.com/apps/edibot/edibot/admin/img_style1_jumper.png" alt="">
+        </div>
+        <div class="mSize">
+            <div class="unit"><span class="txt">(단위:cm)</span></div>
+            <div class="mBoard">
+                <table border="1">
+                <caption>사이즈 정보</caption>
+                <thead>
+                <tr>
+                    <th scope="col"><span class="cell">사이즈</span></th>
+                    <th scope="col"><span class="cell">① 어깨</span></th>
+                    <th scope="col"><span class="cell">② 가슴</span></th>
+                    <th scope="col"><span class="cell">③ 소매</span></th>
+                    <th scope="col"><span class="cell">④ 암홀</span></th>
+                    <th scope="col"><span class="cell">⑤ 팔통</span></th>
+                    <th scope="col"><span class="cell">⑥ 밑단</span></th>
+                    <th scope="col"><span class="cell">⑦ 총길이</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th><span class="cell">S</span></th>
+                    <td><span class="cell">43</span></td>
+                    <td><span class="cell">48</span></td>
+                    <td><span class="cell">58</span></td>
+                    <td><span class="cell">23</span></td>
+                    <td><span class="cell">17</span></td>
+                    <td><span class="cell">53</span></td>
+                    <td><span class="cell">59</span></td>
+                </tr>
+                <tr>
+                    <th><span class="cell">M</span></th>
+                    <td><span class="cell">43</span></td>
+                    <td><span class="cell">50</span></td>
+                    <td><span class="cell">59</span></td>
+                    <td><span class="cell">23</span></td>
+                    <td><span class="cell">18</span></td>
+                    <td><span class="cell">54</span></td>
+                    <td><span class="cell">60</span></td>
+                </tr>
+                <tr>
+                    <th><span class="cell">L</span></th>
+                    <td><span class="cell">43</span></td>
+                    <td><span class="cell">50</span></td>
+                    <td><span class="cell">59</span></td>
+                    <td><span class="cell">23</span></td>
+                    <td><span class="cell">18</span></td>
+                    <td><span class="cell">54</span></td>
+                    <td><span class="cell">60</span></td>
+                </tr>
+                <tr>
+                    <th><span class="cell">XL</span></th>
+                    <td><span class="cell">43</span></td>
+                    <td><span class="cell">50</span></td>
+                    <td><span class="cell">59</span></td>
+                    <td><span class="cell">23</span></td>
+                    <td><span class="cell">18</span></td>
+                    <td><span class="cell">54</span></td>
+                    <td><span class="cell">60</span></td>
+                </tr>
+                </tbody>
+                </table>
+                <ul class="mList">
+                    <li>위의 실측사이즈는 '단면의 길이'입니다. 참고해 주세요.</li>
+                    <li>사이즈는 측정방법에 따라 1~3cm 정도 오차가 있을 수 있습니다.</li>
+                    <li>제품색상은 사용자의 모니터의 해상도에 따라 실제 색상과 다소 차이가 있을 수 있습니다.</li>
+                    <li>제품컷의 색상이 실제 제품 색상과 가장 비슷합니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mBoard">
+            <table border="1">
+            <caption>착용 정보</caption>
+            <tbody>
+            <tr>
+                <th scope="row"><span class="cell">착용감</span></th>
+                <td><span class="chk checked"><span class="icoChk"></span> 슬림핏</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 적당함</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 루즈핏</span></td>
+            </tr>
+            <tr>
+                <th scope="row"><span class="cell">신축성</span></th>
+                <td><span class="chk checked"><span class="icoChk"></span> 좋음</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 적당함</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 없음</span></td>
+            </tr>
+            <tr>
+                <th scope="row"><span class="cell">두께감</span></th>
+                <td><span class="chk"><span class="icoChk"></span> 얇음</span></td>
+                <td><span class="chk checked"><span class="icoChk"></span> 적당함</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 두꺼움</span></td>
+            </tr>
+            <tr>
+                <th scope="row"><span class="cell">안감</span></th>
+                <td><span class="chk"><span class="icoChk"></span> 전체안감</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 부분안감</span></td>
+                <td><span class="chk checked"><span class="icoChk"></span> 안감없음</span></td>
+            </tr>
+            <tr>
+                <th scope="row"><span class="cell">비침</span></th>
+                <td><span class="chk checked"><span class="icoChk"></span> 비침</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 조금비침</span></td>
+                <td><span class="chk"><span class="icoChk"></span> 비침없음</span></td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="mProduct">
+            <strong class="blind">상세 정보</strong>
+            <ul class="info">
+                <li>
+                    <strong class="title">소재 : </strong>
+                    <div class="item"><span class="desc">폴리에스터80%,아크릴20%</span></div>
+                </li>
+                <li>
+                    <strong class="title">세탁방법 : </strong>
+                    <div class="mThumbList typeHor washing">
+                        <ul>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_drycleaning.png" alt="">
+                                <span class="text">드라이크리닝</span>
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_handwash.png" alt="">
+                                <span class="text">단독손세탁</span>
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_washer.png" alt="">
+                                <span class="text">세탁기가능</span>
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_twistban.png" alt="">
+                                <span class="text">비틀기금지</span>
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_bleachban.png" alt="">
+                                <span class="text">표백금지</span>
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_cleanser.png" alt="">
+                                <span class="text">전용세제</span>
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_ironing.png" alt="">
+                                <span class="text">천대고다림질</span>
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_drying.png" alt="">
+                                <span class="text">그늘에건조</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <strong class="title">세탁방법 : </strong>
+                    <div class="mThumbList typeHor washing">
+                        <ul>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_drycleaning.png" alt="드라이크리닝">
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_handwash.png" alt="단독손세탁">
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_washer.png" alt="세탁기가능">
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_twistban.png" alt="비틀기금지">
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_bleachban.png" alt="표백금지">
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_cleanser.png" alt="전용세제">
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_ironing.png" alt="천대고다림질">
+                            </li>
+                            <li>
+                                <img src="//img.echosting.cafe24.com/apps/edibot/admin/img_washing_drying.png" alt="그늘에건조">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <strong class="title">세탁방법 : </strong>
+                    <div class="item"><span class="desc">드라이크리닝, 단독손세탁, 세탁기가능, 비틀기금지, 표백금지, 전용세제, 천대고다림질, 그늘에건조</span></div>
+                </li>
+                <li>
+                    <strong class="title">색상 : </strong>
+                    <div class="item"><span class="desc">블랙</span></div>
+                </li>
+                <li>
+                    <strong class="title">제조사 : </strong>
+                    <div class="item"><span class="desc">부건FNC(주) 의상디자인팀</span></div>
+                </li>
+                <li>
+                    <strong class="title">제조일자 : </strong>
+                    <div class="item"><span class="desc">2016년 11월 17일</span></div>
+                </li>
+                <li>
+                    <strong class="title">원산지 : </strong>
+                    <div class="item"><span class="desc">중국</span></div>
+                </li>
+                <li>
+                    <strong class="title">A/S정보 및 담당자 : </strong>
+                    <div class="item"><span class="desc">님님몰즈 고객센터 / 1688-6745</span></div>
+                </li>
+            </ul>
+        </div>
+    </div><!--  //참고: 상품정보 미리보기 -->
+</div>

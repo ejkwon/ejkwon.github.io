@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* btnSwitch */
+  .btnSwitch, .btnSwitch span { display:inline-block; position:relative; height:20px; line-height:20px; vertical-align:middle; text-decoration:none; white-space:nowrap; background-image:url("//img.echosting.cafe24.com/apps/edibot/admin/sflex_btn_switch.png"); background-repeat:no-repeat; }
+  .btnSwitch { margin:0 5px 0 0; color:#868e9b; outline:0; font-size:11px; cursor:pointer; background-position:0 0; }
+  .btnSwitch span { left:5px; display:inline-block; min-width:44px; padding:0 5px 0 0; cursor:pointer; vertical-align:top; background-position:right 0; }
+    @-moz-document url-prefix() { .btnSwitch span { top:-1px; } }
+    .btnSwitch:hover,
+    .btnSwitch:hover span { background-position-y:-50px; }
+    .btnSwitch.selected,
+    .btnSwitch.selected span { color:#fff; background-position-y:-100px; }
+    .btnSwitch.selected:hover,
+    .btnSwitch.selected:hover span { background-position-y:-150px; }
+
+/* mSwipe */
+  .mSwipe { margin:8px 0; text-align:center; }
+  .mSwipe .btnMove.icoLeft { margin-right:6px; }
+  .mSwipe .btnMove.icoRight { margin-left:6px; }
+  .mSwipe .circle { margin:0 2px; width:11px; height:11px; vertical-align:middle; font-size:0; line-height:0; background:url("//img.echosting.cafe24.com/apps/edibot/admin/sfix_swipe.png") no-repeat 0 0; }
+  .mSwipe .circle.selected { background-position:-50px 0; }
+
+/* mEdibotDisplay */
+  .mEdibotDisplay { margin:2px 2px -8px; }
+  .mEdibotDisplay li { padding:11px 0 0; margin:9px 0 0; border-top:1px solid #e5e5e5; color:#747474; }
+  .mEdibotDisplay li:first-child { padding-top:0; margin-top:0; border-top-width:0; }
+  /* 템플릿 구성 선택 아이콘 */
+    .mEdibotDisplay .icoCategory { display:inline-block; overflow:hidden; width:32px; margin:-2px 7px 0 0; font-size:0; line-height:0; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/admin/sfix_prd_display.png") no-repeat 0 0; }
+      .edibotTemplateArea .mEdibotDisplay .icoCategory { margin-right:9px; }
+    .mEdibotDisplay .icoCategory.topInfo { height:26px; background-position:0 0; }
+      .edibotTemplateArea .selected .topInfo,
+      .edibotTemplateArea .mEdibotDisplay li:hover .topInfo { background-position:0 -50px; }
+    .mEdibotDisplay .icoCategory.bottomInfo { height:26px; background-position:-50px 0; }
+      .edibotTemplateArea .selected .bottomInfo,
+      .edibotTemplateArea .mEdibotDisplay li:hover .bottomInfo { background-position:-50px -50px; }
+    .mEdibotDisplay .icoCategory.modelImage { height:29px; background-position:-100px 0; }
+      .edibotTemplateArea .selected .modelImage,
+      .edibotTemplateArea .mEdibotDisplay li:hover .modelImage { background-position:-100px -50px; }
+    .mEdibotDisplay .icoCategory.colorImage { height:28px; background-position:-150px 0; }
+      .edibotTemplateArea .selected .colorImage,
+      .edibotTemplateArea .mEdibotDisplay li:hover .colorImage { background-position:-150px -50px; }
+    .mEdibotDisplay .icoCategory.detailImage { height:28px; background-position:-200px 0; }
+      .edibotTemplateArea .selected .detailImage,
+      .edibotTemplateArea .mEdibotDisplay li:hover .detailImage { background-position:-200px -50px; }
+    .mEdibotDisplay .icoCategory.productInfo { height:27px; background-position:-250px 0; }
+      .edibotTemplateArea .selected .productInfo,
+      .edibotTemplateArea .mEdibotDisplay li:hover .productInfo { background-position:-250px -50px; }
+
+/* 템플릿 구성 */
+  .edibotTemplateArea { position:relative; margin:-10px 0 0; padding:0 0 0 285px; }
+  /* 템플릿 구성 선택 */
+    .mEdibotTemplate { position:absolute; top:0; left:0; width:265px; padding:18px 21px; border:1px solid #ccc; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background-color:#f5f4f4; }
+    .mEdibotTemplate h3 { font-size:13px; color:#1c1c1c; }
+    .mEdibotTemplate .box { height:404px; margin:10px 0 0; border:1px solid #dedede; background-color:#fff; border-radius:7px; }
+    .edibotTemplateArea .mEdibotDisplay { margin:0 9px; }
+    .edibotTemplateArea .mEdibotDisplay li { position:relative; margin:10px 0 0; padding:0 18px 0 10px; border-radius:7px; border:1px solid #dedede; height:55px; line-height:55px; cursor:pointer; color:#747474; font-weight:bold; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f9f9f9; }
+    .edibotTemplateArea .mEdibotDisplay li.selected,
+    .edibotTemplateArea .mEdibotDisplay li:hover { border-color:#599ee3; border-width:2px; padding-left:9px; line-height:53px; color:#599ee3; }
+    .edibotTemplateArea .mEdibotDisplay .icoSquare { position:absolute; top:50%; right:5px; margin-top:-15px; padding:7px; cursor:move; display:inline-block; }
+    .edibotTemplateArea .mEdibotDisplay .icoSquare .square { display:block; width:1px; height:1px; margin:2px 0 0; background:#5b5b5b; }
+    .edibotTemplateArea .mEdibotDisplay .icoSquare .square:after { display:inline-block; content:""; width:1px; height:1px; margin:0 0 0 3px; vertical-align:top; background:#5b5b5b; }
+      .edibotTemplateArea .mEdibotDisplay li.selected .icoSquare,
+      .edibotTemplateArea .mEdibotDisplay li:hover .icoSquare { right:4px; }
+      .edibotTemplateArea .mEdibotDisplay .btnSwitch { margin-left:7px; }
+
+/* 상품정보 템플릿 */
+  .mEdibotOption { margin:-6px 0 3px -2px; }
+  .mEdibotOption li { display:inline-block; width:90px; margin:9px 0 0 2px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; text-align:center; }
+  .mEdibotOption .fChk { margin:0 0 8px; }
+  .mEdibotOption .icoNum { display:inline-block; width:14px; height:14px; margin:0 0 0 5px; font-size:11px; color:#fff; vertical-align:middle; text-align:center; background:url("//img.echosting.cafe24.com/apps/edibot/admin/sfix_ico_num.png") no-repeat 0 0; }
+  .mEdibotOption input.fText { border-color:#fff; font-size:12px; color:#1c1c1c; background:#fff; }
+  .mEdibotOption input.fText:first-child { text-align:center; }
+  .mEdibotOption .button { position:relative; display:inline-block; width:100%; height:34px; padding:5px; border:1px solid #cbd3dc; background:#fff;
+    -webkit-box-shadow: inset 1px 2px 5px 0px rgba(241,243,246,1);
+    -moz-box-shadow: inset 1px 2px 5px 0px rgba(241,243,246,1);
+    box-shadow: inset 1px 2px 5px 0px rgba(241,243,246,1);
+    -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
+    -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;
+  }
+  .mEdibotOption .button:after { content:""; display:block; position:absolute; top:-1px; left:-1px; right:-1px; bottom:-1px;
+    -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
+    -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;
+  }
+    .mEdibotOption .fChk:checked + .button:after { border:2px solid #54aef5; cursor:text; }
+    .mEdibotOption .fChk:checked + .button .icoNum { background-position:0 -50px; }
+    .mEdibotOption .fChk:checked + .button:hover input.fText,
+    .mEdibotOption .fChk:checked + .button.edit input.fText { border-color:#a7a7a7; border-bottom-color:#cfcfcf; border-right-color:#cfcfcf; }
+    .mEdibotOption .fChk:checked + .button:hover input.fText:focus,
+    .mEdibotOption .fChk:checked + .button:hover input.fText:active,
+    .mEdibotOption .fChk:checked + .button.edit input.fText { background:#f3f3f3; }
+    .mEdibotOption .fChk:checked + .button.readonly:hover input.fText { border-color:#fff; background:#fff; }
+    .mEdibotOption .fChk:checked + .button.readonly:after { cursor:default; }
+
+  /* 사이즈 이미지 */
+    .mEdibotSizeImage { display:inline-block; }
+    .mEdibotSizeImage .frame { width:340px; height:340px; text-align:center; }
+    .mEdibotSizeImage .frame img { max-height:300px; padding:16px 10px; }
+
+  /* 세탁방법 */
+    .mThumbList.typeHor.washing li { width:72px; margin:4px 4px 0 0; text-align:center; }
+    .mThumbList.typeHor.washing li .figure { margin-bottom:0; }
+    .mThumbList.typeHor.washing li .text { display:block; margin:4px 0 0; font-size:11px; }
+
+/* 에디봇 공통설정 */
+  /* PC 상품정보 스타일 */
+    .mThumbSelect.templateImage { overflow-y:auto; max-height:278px; }
+    .mThumbSelect.templateImage li { width:auto; height:auto; margin:0 6px 8px 0; }
+    .mThumbSelect.templateImage li .btnZoom { z-index:1; }
+  /* 상품정보 타이틀 스타일 */
+    .mEdibotTitleImage { display:inline-block; }
+    .mEdibotTitleImage .frame { width:240px; height:65px; text-align:center; }
+    .mEdibotTitleImage .frame img { max-width:218px; max-height:25px; padding:16px 10px; }
+  /* 클립아트 설정 */
+    .mImgSelect.typeClipart { overflow-y:auto; max-height:322px; }
+    .mImgSelect.typeClipart li { width:120px; }
+    .mImgSelect.typeClipart .border { width:120px; height:120px; line-height:113px; background:url("//img.echosting.cafe24.com/apps/edibot/admin/bg_transparent.gif") repeat 0 0; }
+    .mImgSelect.typeClipart .border > img { max-width:98px; max-height:98px; }
+    .mImgSelect.typeClipart .border .btnZoom { overflow:hidden; position:absolute; right:0; bottom:0; width:20px; height:19px; font-size:0; line-height:0; text-indent:150%; cursor:pointer; background:url("//img.echosting.cafe24.com/suio/btn_figure_closeup.gif") no-repeat 0 0; outline:0; }
+    .mImgSelect.typeClipart .eSelected .border .btnZoom { bottom:-2px; right:-2px; }

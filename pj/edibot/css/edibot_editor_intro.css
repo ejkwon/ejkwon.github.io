@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+/* Intro */
+#introWrap .dimmed { z-index:22; opacity:0.65; }
+.introArea { z-index:30; overflow:hidden; position:fixed; top:50%; left:50%; width:1160px; height:800px; margin:-400px 0 0 -580px; }
+.introArea .mIntro { position:relative; width:100%; height:100%;
+  -webkit-transform:translate3d(0,0,0); -moz-transform:translate3d(0,0,0); -ms-transform:translate3d(0,0,0); transform:translate3d(0,0,0);
+  -webkit-transition-duration:1s; -moz-transition-duration:1s; -ms-transition-duration:1s; transition-duration:1s;
+}
+.introArea .mIntro [id*="chapter"] { position:relative; }
+.introArea .mLoadingbar { position:absolute; left:50%; bottom:42px; width:266px; margin:0 0 0 -133px; }
+.introArea .mLoadingbar .txtPercent { position:absolute; top:9px; left:52px; color:#848484; font-family:Arial; }
+.introArea .mLoadingbar .moveloading { position:absolute; top:8px; left:23px; }
+.introArea .mIntroNav { z-index:31; position:absolute; top:50%; right:19px; min-width:92px; margin:-149px 0 0; }
+.introArea .mIntroNav li { margin:15px 0 0;font-size:0; line-height:0; text-align:center; }
+.introArea .mIntroNav li:first-child { margin-top:0; }
+.introArea .mIntroNav .selected a { cursor:default; }
+.introArea .mIntroNav .icoNav { display:inline-block; width:14px; height:15px; background:url("//img.echosting.cafe24.com/apps/edibot/editor/intro/sfix_intro_nav.png") no-repeat 0 0;
+    -webkit-transition:height .3s ease-out;
+    transition:height .3s ease-out;
+}
+  .introArea .mIntroNav .selected .icoNav.edibot { width:38px; height:54px; background-position:-100px 0; }
+  .introArea .mIntroNav .selected .icoNav.knowhow { width:38px; height:50px; background-position:-200px 0; }
+  .introArea .mIntroNav .selected .icoNav.ai { width:49px; height:59px; background-position:0 -100px; }
+  .introArea .mIntroNav .selected .icoNav.edit { width:48px; height:52px; background-position:-100px -100px; }
+  .introArea .mIntroNav .selected .icoNav.multi { width:92px; height:51px; background-position:-200px -100px; }
+  .introArea .mIntroNav .selected .icoNav.template { width:64px; height:51px; background-position:0 -200px; }
+  .introArea .mIntroNav .selected .icoNav.preview { width:48px; height:44px; background-position:-100px -200px; }
+  .introArea .mIntroNav .selected .icoNav.save { width:49px; height:51px; background-position:-200px -200px; }
+.introArea .btnClose { position:absolute; top:28px; right:54px; width:22px; height:21px; font-size:0; line-height:0; background:url("//img.echosting.cafe24.com/apps/edibot/editor/intro/btn_close.png") no-repeat 0 0; }
+.introArea .btnStart { position:absolute; left:633px; }
+  /* 에디봇 */
+    #chapter1 .btnStart { left:50%; bottom:44px; margin:0 0 0 -101px; }
+  /* 노하우 */
+    #chapter2 .knowhow1,
+    #chapter2 .knowhow2 { position:absolute; left:50%; margin:0 0 0 -349px; }
+    #chapter2 .knowhow1 { opacity:0; bottom:278px;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter2 .knowhow2 { opacity:0; bottom:0px;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter2.animation .knowhow1 { opacity:1; bottom:378px;
+        -webkit-transition: all .5s ease-out .3s;
+        transition: all .5s ease-out .3s;
+    }
+    #chapter2.animation .knowhow2 { opacity:1; bottom:184px;
+        -webkit-transition: all .5s ease-out .3s;
+        transition: all .5s ease-out .3s;
+    }
+    #chapter2 .btnStart { left:50%; bottom:44px; margin:0 0 0 -101px; }
+  /* 인공지능 */
+	#chapter3 .aniDiv { position:absolute; }
+	#chapter3 .layer { top:339px; left:122px; opacity:1; }
+    #chapter3 .loadingBar { position:absolute;  width:0px; height:3px; top:383px; left:137px; background-color:#e70044;
+        -webkit-transition: all .1s cubic-bezier(0.7, 0.5, 0.265, 0.99) .5s;
+        transition: all .1s cubic-bezier(0.7, 0.5, 0.265, 0.99) .5s;
+    }
+	#chapter3 .bgTrue { top:205px; left:0px; opacity:0;
+		-webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+	}
+    #chapter3.animation .loadingBar { width:161px;
+        -webkit-transition: all 3s cubic-bezier(0.7, 0.5, 0.265, 0.99) .7s;
+        transition: all 3s cubic-bezier(0.7, 0.5, 0.265, 0.99) .7s;
+    }
+	#chapter3.animation .bgTrue { opacity:1;
+        -webkit-transition: all .7s ease-in-out 4s;
+        transition: all .7s ease-in-out 4s;
+    }
+    #chapter3 .btnStart { bottom:169px; }
+  /* 간단편집 */
+    #chapter4 .scrollAni { position:absolute; width:469px; height:310px; top:222px; left:0px; background-color:#000; overflow:hidden;}
+    #chapter4 .scrollAni .scroll { position:absolute; top:0px;
+        -webkit-transition: all .1s ease-in-out 1s;
+        transition: all .1s ease-in-out 1s;
+    }
+    #chapter4.animation .scrollAni .scroll { top: -568px;
+        -webkit-transition: all 5s ease-in-out 3s;
+		-webkit-animation: mymove 5s;
+        transition: all 5s ease-in-out 3s;
+		animation: mymove 5s;
+    }
+	/* Safari 4.0 - 8.0 */
+	@-webkit-keyframes mymove {
+		0%  {top: 0px}
+		30% {top: 0px}
+		50% {top: -237px}
+		80% {top: -237px}
+		100% {top: -568px;}
+	}
+	/* Standard syntax */
+	@keyframes mymove {
+		0%  {top: 0px}
+		30% {top: 0px}
+		50% {top: -237px}
+		80% {top: -237px}
+		100% {top: -568px;}
+	}
+    #chapter4 .btnStart { bottom:169px; }
+  /* PC, 모바일, 해외 */
+    #chapter5 .aniDiv { position:absolute; }
+    #chapter5 .clickicon { top:212px; left:253px; width:4px; height:4px; opacity:1; }
+	#chapter5 .enclick { top:210px; left:251px; opacity:0; }
+    #chapter5 .change { top:396px; left:161px; opacity:0;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    #chapter5 .cicon { top:191px; left:35px; opacity:0;
+        -webkit-transform: scale(0.1);
+        -webkit-transition: all .1s ease-out .5s;
+        transform: scale(0.1);
+        transition: all .1s ease-out .5s;
+    }
+    #chapter5 .jicon { top:73px; left:172px; opacity:0;
+        -webkit-transform: scale(0.1);
+        -webkit-transition: all .1s ease-out .5s;
+        transform: scale(0.1);
+        transition: all .1s ease-out .5s;
+    }
+    #chapter5 .eicon { top:110px; left:377px; opacity:0;
+        -webkit-transform: scale(0.1);
+        -webkit-transition: all .1s ease-out .5s;
+        transform: scale(0.1);
+        transition: all .1s ease-out .5s;
+    }
+    #chapter5 .ticon { top:302px; left:452px; opacity:0;
+        -webkit-transform: scale(0.1);
+        -webkit-transition: all .1s ease-out .5s;
+        transform: scale(0.1);
+        transition: all .1s ease-out .5s;
+    }
+    #chapter5 .mimg { top:454px; left:396px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter5 .phone { top:454px; left:396px; opacity:1;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter5.animation .clickicon { opacity:0;
+        -webkit-transition: all .6s ease-in-out 1.5s;
+        -webkit-transform: scale(20);
+        transition: all .6s ease-in-out 1.5s;
+        transform: scale(20);
+    }
+	#chapter5.animation .enclick { opacity:1;
+        -webkit-transition: all 1s ease-in-out 2s;
+        transition: all 1s ease-in-out 2s;
+	}
+    #chapter5.animation .change { opacity:1;
+        -webkit-transition: all 1.3s ease-in-out 2s;
+        -webkit-transform: scale(1);
+        transition: all 1.3s ease-in-out 2s;
+        transform: scale(1);
+    }
+    #chapter5.animation .cicon { top:151px; opacity:1;
+        -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 3.5s;
+        -webkit-transform: scale(1);
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 3.5s;
+        transform: scale(1);
+    }
+    #chapter5.animation .jicon { top:33px; opacity:1;
+        -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 4.5s;
+        -webkit-transform: scale(1);
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 4.5s;
+        transform: scale(1);
+    }
+    #chapter5.animation .eicon { top:70px; opacity:1;
+        -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 5.5s;
+        -webkit-transform: scale(1);
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 5.5s;
+        transform: scale(1);
+    }
+    #chapter5.animation .ticon { top:262px; opacity:1;
+        -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 6.5s;
+        -webkit-transform: scale(1);
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 6.5s;
+        transform: scale(1);
+    }
+    #chapter5.animation .mimg { opacity:1;
+        -webkit-transition: all 1s ease-in-out 8s;
+        transition: all 1s ease-in-out 8s;
+    }
+    #chapter5.animation .phone { opacity:0;
+        -webkit-transition: all 1s ease-in-out 8s;
+        transition: all 1s ease-in-out 8s;
+    }
+    #chapter5 .btnStart { bottom:138px; }
+  /* 템플릿 관리 */
+
+    #chapter6 .aniDiv { position:absolute; }
+    #chapter6 .clickicon { bottom:145px; left:183px; width:1px; height:1px; opacity:1; }
+    #chapter6 .clickicon1 { top:155px; left:276px; width:1px; height:1px; opacity:1; }
+    #chapter6 .registerView { top:115px; left:0px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .01s ease-out .5s;
+    }
+    #chapter6 .layer { top:215px; left:265px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter6 .clickicon2 { top:261px; left:298px; width:1px; height:1px; opacity:1; }
+    #chapter6 .layer2 { top:115px; left:265px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter6 .hand { top:507px; left:451px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter6 .clickicon3 { top:410px; left:455px; width:1px; height:1px; opacity:1; }
+    #chapter6 .complete { top:115px; left:0px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter6.animation .clickicon { opacity:0;
+        -webkit-transition: all .6s ease-in-out 1.5s;
+        -webkit-transform: scale(100);
+        transition: all .6s ease-in-out 1.5s;
+        transform: scale(100);
+    }
+    #chapter6.animation .registerView { opacity:1;
+        -webkit-transition: all 1.5s ease-out 2s;
+        transition: all 1.5s ease-out 2s;
+    }
+    #chapter6.animation .clickicon1 { opacity:0;
+        -webkit-transition: all .6s ease-in-out 4s;
+        -webkit-transform: scale(100);
+        transition: all .6s ease-in-out 4s;
+        transform: scale(100);
+    }
+    #chapter6.animation .layer { top:115px; opacity:1;
+        -webkit-transition: all 1.2s ease-in-out 4.5s;
+        transition: all 1.2s ease-in-out 4.5s;
+    }
+    #chapter6.animation .layer.two { opacity:0;
+        -webkit-transition: all 1.2s ease-in-out 1s;
+        transition: all 1.2s ease-in-out 1s;
+    }
+    #chapter6.animation .clickicon2 { opacity:0;
+        -webkit-transition: all .6s ease-in-out 6.5s;
+        -webkit-transform: scale(100);
+        transition: all .6s ease-in-out 6.5s;
+        transform: scale(100);
+    }
+    #chapter6.animation .layer2 { opacity:1;
+        -webkit-transition: all .8s ease-in-out 7s;
+        transition: all .8s ease-in-out 7s;
+    }
+    #chapter6.animation .hand { top:407px; opacity:1;
+        -webkit-transition: all .8s ease-in-out 9s;
+        transition: all .8s ease-in-out 9s;
+    }
+    #chapter6.animation .clickicon3 { opacity:0;
+        -webkit-transition: all .6s ease-in-out 10s;
+        -webkit-transform: scale(100);
+        transition: all .6s ease-in-out 10s;
+        transform: scale(100);
+    }
+    #chapter6.animation .complete { opacity:1;
+        -webkit-transition: all 1.3s ease-in-out 10.5s;
+        transition: all 1.3s ease-in-out 10.5s;
+    }
+    #chapter6 .btnStart { bottom:192px; }
+  /* 미리보기 */
+    #chapter7 .hand2 { position:absolute; top:476px; left:285px; opacity:0;
+        -webkit-transition: all .1s ease-in-out .8s;
+        transition: all .1s ease-in-out .8s;
+    }
+    #chapter7.animation .hand2 { top:376px; opacity:1;
+        -webkit-transition: all .8s ease-in-out 1.5s;
+        transition: all .8s ease-in-out 1.5s;
+    }
+    #chapter7 .btnStart { bottom:192px; }
+  /* 저장하기 */
+    #chapter8 .aniDiv { position:absolute; }
+    #chapter8 .checkbox { top:256px; left:0px; opacity:0; }
+    #chapter8 .preview { top:221px; left:0px; opacity:0;
+        -webkit-transition: all .1s ease-out .8s;
+        transition: all .1s ease-out .8s;
+    }
+    #chapter8 .clickicon { top:262px; left:263px; width:1px; height:1px; opacity:1; }
+    #chapter8 .preview2 { top:221px; left:0px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        transition: all .1s ease-out .5s;
+    }
+    #chapter8 .check{ top:365px; left:185px; opacity:0;
+        -webkit-transition: all .1s ease-out .5s;
+        -webkit-transform: scale(.5);
+        transition: all .1s ease-out .5s;
+        transform: scale(.5);
+    }
+    #chapter8.animation .checkbox { opacity:1;
+        -webkit-transition: all .5s ease-in-out 1.5s;
+        transition: all .5s ease-in-out 1.5s;
+    }
+    #chapter8.animation .preview { opacity:1;
+        -webkit-transition: all .8s ease-in-out 3s;
+        transition: all .8s ease-in-out 3s;
+    }
+    #chapter8.animation .clickicon { opacity:0;
+        -webkit-transition: all .6s ease-in-out 4.5s;
+        -webkit-transform: scale(100);
+        transition: all .6s ease-in-out 4.5s;
+        transform: scale(100);
+    }
+    #chapter8.animation .preview2 { opacity:1;
+        -webkit-transition: all 1.2s ease-in-out 4.8s;
+        transition: all 1.2s ease-in-out 4.8s;
+    }
+    #chapter8.animation .check{ opacity:1;
+        -webkit-transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55) 6s;
+        -webkit-transform: scale(1);
+        transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55) 6s;
+        transform: scale(1);
+    }
+    #chapter8 .btnStart { bottom:192px; }
+
+/* enter */
+.mSwitch { position:absolute; top:317px; left:50%; margin:0 0 0 -402px; font-size:0; line-height:0; }
+.mSwitch a { display:inline-block; width:241px; height:241px; margin:0 0 0 40px; background:url("//img.echosting.cafe24.com/apps/edibot/editor/intro/sfix_enter_switch.png") no-repeat 0 0; }
+.mSwitch a:first-child { margin-left:0; }
+  .mSwitch .btnNew { background-position:0 0; }
+  .mSwitch .btnImport { background-position:-250px 0; }
+  .mSwitch .btnContents { background-position:-500px 0; }
+  .mSwitch .btnNew:hover { background-position:0 -250px; }
+  .mSwitch .btnImport:hover { background-position:-250px -250px; }
+  .mSwitch .btnContents:hover { background-position:-500px -250px; }

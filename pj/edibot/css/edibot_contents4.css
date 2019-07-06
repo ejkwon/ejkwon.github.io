@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* font-face */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* _edibotProduct reset  */
+body,
+._edibotProduct div,
+._edibotProduct dl,
+._edibotProduct dt,
+._edibotProduct dd,
+._edibotProduct ul,
+._edibotProduct ol,
+._edibotProduct li,
+._edibotProduct h1,
+._edibotProduct h2,
+._edibotProduct h3,
+._edibotProduct h4,
+._edibotProduct h5,
+._edibotProduct h6,
+._edibotProduct pre,
+._edibotProduct code,
+._edibotProduct form,
+._edibotProduct fieldset,
+._edibotProduct legend,
+._edibotProduct input,
+._edibotProduct textarea,
+._edibotProduct p,
+._edibotProduct blockquote,
+._edibotProduct th,
+._edibotProduct td,
+._edibotProduct img { margin:0; padding:0; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+._edibotProduct ul,
+._edibotProduct ol,
+._edibotProduct dl,
+._edibotProduct li { list-style:none; }
+._edibotProduct img,
+._edibotProduct fieldset { border:0; max-width:100%; vertical-align:top; }
+._edibotProduct table { table-layout:fixed; width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+._edibotProduct table img { vertical-align:middle; }
+._edibotProduct th,
+._edibotProduct td { border:0; word-wrap:break-word; }
+._edibotProduct label { cursor:pointer; }
+._edibotProduct caption { overflow:hidden; width:1px; font-size:1px; line-height:0; text-indent:150%; white-space:nowrap; }
+._edibotProduct legend,
+._edibotProduct hr.layout,
+._edibotProduct .blind { display:block; overflow:hidden; font-size:1px; line-height:0; color:transparent; text-indent:150%; white-space:nowrap; }
+._edibotProduct a { text-decoration:none; }
+._edibotProduct em,
+._edibotProduct address { font-style:normal; }
+._edibotProduct i { font-style:italic; }
+._edibotProduct [data-component="text"] a,
+._edibotProduct [data-component="table"] a { text-decoration:underline; color:#0000ee; }
+._edibotProduct button { overflow:visible; padding:0; margin:0; border:0; outline:0; cursor:pointer; font-size:12px; font-family:'Nanum Gothic',Helvetica,Arial,sans-serif; }
+._edibotProduct button::-moz-focus-inner,
+._edibotProduct input[type="reset"]::-moz-focus-inner,
+._edibotProduct input[type="button"]::-moz-focus-inner,
+._edibotProduct input[type="submit"]::-moz-focus-inner,
+._edibotProduct input[type="file"] > input[type="button"]::-moz-focus-inner { padding:0; border:0; }
+
+.-pc { background:#fff; width:100%; height:100%; overflow-y:auto; }
+.-pc ._edibotProduct input,
+.-pc ._edibotProduct select,
+.-pc ._edibotProduct textarea { font-size:12px; font-family:'Nanum Gothic',Helvetica,Arial,sans-serif; color:#242424; vertical-align:middle; }
+
+.-pc ._edibotProduct { width:1000px; margin:100px auto; min-height:10px; font-size:12px; font-family:'Nanum Gothic',Helvetica,Arial,sans-serif; line-height:1.2; color:#242424; background:#fff; }
+.-pc ._edibotProduct .mFigure { text-align:center; }
+.-pc ._edibotProduct .mFigure img { max-width:100%; }
+.-pc ._edibotProduct .mClip { max-width:100%; margin:0 auto; }
+.-pc ._edibotProduct .mTextField { width:100%; margin:0 auto; }
+.-pc ._edibotProduct .mTextField .inner { min-height: 55px; padding:18px 25px; line-height:1.6; box-sizing:border-box; }
+.-pc ._edibotProduct .mBoard { position:relative; padding:0; border:none; background:#fff; }
+.-pc ._edibotProduct .mBoard table { position:relative; border:1px solid #dadadc; border-width:0 1px 1px 0; font-size:12px; text-align:left; }
+.-pc ._edibotProduct .mBoard tbody td { min-height:28px; padding:5px 5px 6px; border:1px solid #dadadc; text-align:center; line-height:140%; color:#303030; }
+.-pc ._edibotProduct .mBoard table .cell { display:block; position:relative; min-height:16px; box-sizing:border-box; }
+.-pc ._edibotProduct .mList:before { display:none; }
+.-pc ._edibotProduct .btnIcon.icoCal { display:inline-block; overflow:hidden; width:13px; height:13px; font-size:0; line-height:0; vertical-align:middle; white-space:nowrap; background:url('//img.echosting.cafe24.com/suio/sfix_icon_button.png') -50px -500px no-repeat; }
+.-pc ._edibotProduct .btnSquare { display:inline-block; overflow:hidden; width:22px; height:22px; border:1px solid #7b7a7a; vertical-align:middle; box-sizing:border-box; background:#fff; }
+.-pc ._edibotProduct .btnSquare span { display:block; margin:0 auto; font-size:0; line-height:0; text-indent:120%; vertical-align:middle; background-image:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png"); background-repeat:no-repeat; }
+.-pc ._edibotProduct .btnSquare.plus span {  width:10px; height:10px; background-position:0 -200px; }
+.-pc ._edibotProduct .btnSquare.minus span { width:10px; height:2px; background-position:-50px -200px; }
+
+/* 편집영역 gEditor */
+  .-pc ._edibotProduct.gEditor { padding:20px 40px; }
+  .-pc ._edibotProduct.gEditor .section { position:relative; min-height:102px; margin:40px 0; padding:48px 0; box-sizing:border-box; }
+  .-pc ._edibotProduct.gEditor .section.selected:before { content:''; position:absolute; left:-19px; right:-19px; top:-19px; bottom:-19px; outline:1px dotted #ea1b5e; }
+  .-pc ._edibotProduct.gEditor .section.cEmpty { padding:42px 0; font-size:15px; color:#000; text-align:center; outline:none; background:#f7f7f7; }
+  /* 썸네일 이동선 표시 */
+    .-pc ._edibotProduct.gEditor .moveline { position:relative; left:-10px; width:100%; height:9px; padding:0 20px 0 0; background:url("//img.echosting.cafe24.com/apps/edibot/editor/bg_contents_drag.gif") no-repeat 0 0; margin:-5px 0 -4px; }
+  .-pc ._edibotProduct.gEditor .wrapper { position:relative; display:inline-block; }
+  .-pc ._edibotProduct.gEditor .EDIT,
+  .-pc ._edibotProduct.gEditor .REVIVE { position:relative; }
+  .-pc ._edibotProduct.gEditor .btnDel { display:none; }
+  .-pc ._edibotProduct.gEditor .EDIT .btnDel { z-index:1; display:block; position:absolute; right:-23px; top:-18px; width:36px; height:36px; border-radius:18px; background:#ea1b5e; }
+  .-pc ._edibotProduct.gEditor .EDIT .btnDel span { display:block; width:8px; height:8px; margin:0 auto; font-size:0; line-height:0; text-indent:120%; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png") no-repeat -100px -200px; }
+  .-pc ._edibotProduct.gEditor .REVIVE img,
+  .-pc ._edibotProduct.gEditor .REVIVE .text { opacity:.3; }
+  .-pc ._edibotProduct.gEditor .REVIVE .btnPlus { z-index:1; display:block; position:absolute; right:-23px; top:-18px; width:36px; height:36px; border-radius:18px; background:#3f455f; }
+  .-pc ._edibotProduct.gEditor .REVIVE .btnPlus span { display:block; width:10px; height:10px; margin:0 auto; font-size:0; line-height:0; text-indent:120%; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png") no-repeat -200px -200px; }
+  .-pc ._edibotProduct.gEditor .REVIVE.imgTitle .wrapper img:hover,
+  .-pc ._edibotProduct.gEditor .REVIVE.imgProduct .wrapper img:hover { outline:0; }
+  .-pc ._edibotProduct.gEditor .REVIVE.imgTitle .wrapper:hover:after { display:none; }
+  .-pc ._edibotProduct.gEditor .REVIVE .wrapper:before { display:block; content:""; position:absolute; top:-7px; left:-7px; right:-7px; bottom:-7px; outline:1px dotted #9e9e9e; }
+  /* 해외몰인 경우 */
+    .-pc ._edibotProduct.gEditor .-noteditable .mSize .mBoard td .cell { cursor:text; }
+    .-pc ._edibotProduct.gEditor .-noteditable .mSize .mBoard td .cell:not(.EDIT):hover { border:0; }
+    .-pc ._edibotProduct.gEditor .-noteditable .mSize .mBoard td .cell:not(.EDIT):hover:after { display:none; }
+
+
+/* template4 */
+/* productInfo */
+  .-pc ._edibotProduct .productInfo { min-width:600px; max-width:880px; margin:0 auto; text-align:left; }
+
+  .-pc ._edibotProduct .gHalf { display:table; table-layout:fixed; width:100%; }
+  .-pc ._edibotProduct .gHalf > div { display:table-cell; width:50%; vertical-align:middle; }
+  .-pc ._edibotProduct .gHalf > div:first-child { border-right:1px solid #aeaeae; }
+
+  .-pc ._edibotProduct .imgTitle { display:block; margin:0 0 50px; text-align:left; }
+  .-pc ._edibotProduct .imgTitle .wrapper { margin:0 0 0 -84px; }
+  .-pc ._edibotProduct .imgTitle .wrapper img { padding:17px 84px 16px; }
+  .-pc ._edibotProduct .imgProduct { position:relative; margin-top:20px; text-align:center; }
+  .-pc ._edibotProduct .imgProduct .wrapper img { width:auto; max-height:300px; padding:10px; }
+  .-pc ._edibotProduct .productInfo .mSize { position:relative; }
+  .-pc ._edibotProduct .productInfo .mSize .unit { position:absolute; right:0px; top:-31px; padding:6px 8px; border:1px solid transparent; }
+
+  /* mBoard */
+    .-pc ._edibotProduct .productInfo .mBoard { margin-top:40px; }
+    .-pc ._edibotProduct .mSize .mBoard { margin-top:30px; }
+    .-pc ._edibotProduct .productInfo .mBoard table { border-color:#aeaeae; border-width:1px 0 1px 0; }
+    .-pc ._edibotProduct .productInfo .mBoard table th { padding:6px 5px 7px; color:#303030; text-align:center; font-weight:bold; line-height:140%; background:#f9f9fa; }
+    .-pc ._edibotProduct .productInfo .mBoard thead th { border-bottom:1px solid #aeaeae; vertical-align:middle; }
+    .-pc ._edibotProduct .productInfo .mBoard tbody th { overflow:hidden; min-height:28px; border-right:1px solid #aeaeae; }
+    .-pc ._edibotProduct .productInfo .mBoard tbody td { border:0; vertical-align:middle; text-align:left; }
+      .-pc ._edibotProduct .mBoard.typeWear tbody th { padding-left:16px; text-align:left; }
+      .-pc ._edibotProduct .mSize .mBoard tbody th { border-right-width:0; background:#fff; }
+      .-pc ._edibotProduct .mSize .mBoard tbody td { text-align:center; }
+
+    .-pc ._edibotProduct .productInfo .mBoard table .cell { padding:4px; display:inline-block; border:1px solid transparent; vertical-align:top; }
+      .-pc ._edibotProduct .mSize .mBoard table .cell { display:block; }
+    .-pc ._edibotProduct .mBoard .chk { position:relative; margin-left:20px; }
+    .-pc ._edibotProduct .mBoard .chk.checked { color:#ea1b5e; }
+    .-pc ._edibotProduct .mBoard a.chk:hover { text-decoration:none; }
+    .-pc ._edibotProduct .mBoard .chk .icoChk { display:inline-block; width:16px; height:16px; margin:0 11px 0 0; border:1px solid #d6d6d6; border-radius:8px; box-sizing:border-box; vertical-align:middle; background:#d6d6d6; }
+    .-pc ._edibotProduct .mBoard .chk.checked .icoChk { position:relative; border:1px solid transparent; background:#ea1b5e; }
+    .-pc ._edibotProduct .mBoard .chk.checked .icoChk:after { position:absolute; top:7px; left:3px; display:inline-block; content:""; width:7px; height:4px; margin:-4px 3px 0 0; border-bottom:solid 1px currentColor; border-left:solid 1px currentColor; vertical-align:middle; color:#fff; font-size:0; line-height:0; -webkit-transform:rotate(-45deg); transform:rotate(-45deg); }
+
+  /* mList */
+    .-pc ._edibotProduct .mList { position:relative; margin:30px 0 0; padding:16px 10px; color:#636363; font-size:12px; line-height:1.5; white-space:pre-line; }
+
+  /* mProduct */
+    .-pc ._edibotProduct .mProduct { }
+    .-pc ._edibotProduct .mProduct .info { position:relative; margin:0 45px 0 0; }
+    .-pc ._edibotProduct .mProduct .info > li { margin:2px 0 0; color:#303030; }
+    .-pc ._edibotProduct .mProduct .info > li:first-child { margin-top:0; }
+    .-pc ._edibotProduct .mProduct .info > li:after { display:block; content:""; clear:both; }
+    .-pc ._edibotProduct .mProduct li .title { float:left; margin:3px 2px 0 0; line-height:22px; }
+    .-pc ._edibotProduct .mProduct li .title:before { display:inline-block; content:""; width:3px; height:3px; margin:-2px 10px 0 0; vertical-align:middle; background:#303030; }
+    .-pc ._edibotProduct .mProduct li .item { float:left; line-height:22px; }
+    .-pc ._edibotProduct .mProduct li .item .desc { display:inline-block; position:relative; padding:2px 5px; border:1px solid transparent; }
+    .-pc ._edibotProduct .mProduct li .item input.fTxt { margin:3px 0; }
+    .-pc ._edibotProduct .item ul.mForm input.fTxt { margin:0; }
+    /* 세탁방법 */
+      .-pc ._edibotProduct .mThumbList { width:auto; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing { margin:0 0 12px; padding:10px 0 0; clear:both; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing li { display:inline-block; position:relative; width:72px; margin:4px 4px 0 0; text-align:center; vertical-align:top; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing li .text { display:block; margin:4px 0 12px; font-size:11px; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing li img { width:40px; height:40px; }
+
+  /* mForm */
+    .-pc ._edibotProduct ul.mForm { margin:0; }
+    .-pc ._edibotProduct .mProduct .info .mForm li { display:inline-block; margin:-1px 0 0; padding:3px 5px 3px 0; }
+    .-pc ._edibotProduct .fSelect { display:inline; height:22px; line-height:22px; margin:0; max-width:100%; }
+    .-pc ._edibotProduct input.fTxt { height:20px; padding:0 5px; line-height:20px; border:1px solid #a7a7a7; border-right-color:#cfcfcf; border-bottom-color:#cfcfcf; outline:0 none; }
+    .-pc ._edibotProduct input.fTxt.gDate { width:77px; }
+
+
+/* 편집영역 gEditor */
+  .-pc ._edibotProduct.gEditor .mSize .mBoard table .cell { overflow:hidden; white-space:nowrap; }
+  .-pc ._edibotProduct.gEditor .mFigure,
+  .-pc ._edibotProduct.gEditor .mClip,
+  .-pc ._edibotProduct.gEditor .textField,
+  .-pc ._edibotProduct.gEditor .mTextField,
+  .-pc ._edibotProduct.gEditor .imgTitle .wrapper,
+  .-pc ._edibotProduct.gEditor .imgProduct .wrapper img,
+  .-pc ._edibotProduct.gEditor .mSize .unit,
+  .-pc ._edibotProduct.gEditor .mBoard table td .cell,
+  .-pc ._edibotProduct.gEditor .mList,
+  .-pc ._edibotProduct.gEditor .mProduct .item .desc,
+  .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li { cursor:pointer; }
+
+  /* 각각의 요소 hover시 */
+    .-pc ._edibotProduct.gEditor .mFigure img:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .mClip .mov:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .mBoard table:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard table:hover { outline:none; }
+    .-pc ._edibotProduct.gEditor .mTextField .inner:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .imgTitle .wrapper:hover:after { outline:8px solid #f0f0f0; display:block; content:""; position:absolute; top:0; left:0; right:0; bottom:0; }
+    .-pc ._edibotProduct.gEditor .imgProduct .wrapper img:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .mBoard tbody td { cursor:pointer; }
+    .-pc ._edibotProduct.gEditor .mSize .mBoard tbody td,
+    .-pc ._edibotProduct.gEditor .mProduct .mBoard tbody td { cursor:default; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard td .cell:not(.EDIT):hover { border:1px dashed #797979; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard td .cell:not(.EDIT):hover:after { display:inline-block; content:''; width:13px; height:13px; margin:-2px 0 0 8px; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png")  no-repeat -150px -200px; }
+    .-pc ._edibotProduct.gEditor .mSize .mBoard td .cell:not(.EDIT):hover:after { position:absolute; right:0; top:50%; margin:-6px 8px 0; }
+    .-pc ._edibotProduct.gEditor .mSize .unit:hover { right:-21px; padding-right:29px; border:1px dashed #797979; }
+    .-pc ._edibotProduct.gEditor .mSize .unit:hover:after { content:''; position:absolute; right:8px; top:8px; width:13px; height:13px; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png") no-repeat -150px -200px; }
+    .-pc ._edibotProduct.gEditor .mList:hover { padding:8px 2px; border:8px solid #f0f0f0; box-sizing:border-box; }
+    .-pc ._edibotProduct.gEditor .mBoard .chk:not(.checked):hover { color:#797979; }
+    .-pc ._edibotProduct.gEditor .mProduct li .item .desc:hover { border:1px dashed #797979; background:#fff; }
+    .-pc ._edibotProduct.gEditor .mProduct li .item .desc:hover:after { display:inline-block; content:''; width:13px; height:13px; margin:0 0 0 8px; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png")  no-repeat -150px -200px; }
+
+  /* 각각의 요소 클릭시 */
+    .-pc ._edibotProduct.gEditor .mFigure.EDIT,
+    .-pc ._edibotProduct.gEditor .mClip.EDIT,
+    .-pc ._edibotProduct.gEditor .imgTitle.EDIT .wrapper,
+    .-pc ._edibotProduct.gEditor .imgProduct.EDIT .wrapper img,
+    .-pc ._edibotProduct.gEditor .mSize .unit.EDIT,
+    .-pc ._edibotProduct.gEditor .mProduct .item.EDIT .desc,
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.EDIT { cursor:default; }
+    .-pc ._edibotProduct.gEditor .mFigure.EDIT img { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .mClip.EDIT .mov { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .mBoard.EDIT table { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard.EDIT table { outline:none; }
+    .-pc ._edibotProduct.gEditor .mTextField.EDIT .inner { cursor:text; outline:8px solid #ddd;  }
+    .-pc ._edibotProduct.gEditor .imgTitle.EDIT .wrapper:after { outline:8px solid #f0f0f0; display:block; content:""; position:absolute; top:0; left:0; right:0; bottom:0; }
+    .-pc ._edibotProduct.gEditor .imgProduct.EDIT .wrapper img { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .imgTitle.EDIT .mToolbar { top:100%; left:-84px; }
+    .-pc ._edibotProduct.gEditor .imgProduct.EDIT .mToolbar { top:438px; left:0; right:0; }
+    .-pc ._edibotProduct.gEditor .imgProduct.EDIT .mToolbar .imgSelect { max-width:353px; }
+    .-pc ._edibotProduct.gEditor .mSize tbody td .cell.EDIT { border-top:1px solid #a7a7a7; border-left:1px solid #a7a7a7; border-right:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf; cursor:text; background:#fff; }
+    .-pc ._edibotProduct.gEditor .mSize tbody td .cell.EDIT:hover:after { display:none; }
+    .-pc ._edibotProduct.gEditor .mList.EDIT { padding:8px 2px; border:8px solid #ddd; box-sizing:border-box; cursor:text; }
+    .-pc ._edibotProduct.gEditor .mSize .unit.EDIT { border-color:transparent; }
+    .-pc ._edibotProduct.gEditor .mSize .unit.EDIT:hover:after { display:none; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.btnDel { display:none; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.EDIT .btnDel { right:13px; top:-3px; width:20px; height:20px; border-radius:20px; background:#fb5555; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.REVIVE img,
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.REVIVE .text { opacity:.5; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.REVIVE .btnPlus { right:13px; top:-3px; width:20px; height:20px; border-radius:20px; }

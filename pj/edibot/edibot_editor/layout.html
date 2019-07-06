@@ -1,0 +1,64 @@
+﻿<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/header.html'); ?>
+
+    <!-- header -->
+    <header id="header">
+        <h1 class="logo"><img src="../img/editor/h1_logo.png" alt="Edibot"></h1>
+        <div class="topHead">
+            <div class="gLeft">
+                <ol class="mBreadcrumb">
+                    <li>이미지 추가</li>
+                    <li title="현재 위치"><strong>상품상세설명 편집</strong></li>
+                    <li>저장</li>
+                </ol>
+            </div>
+            <div class="gCenter">
+                <div class="device">
+                    <button type="button" class="btnToggle selected" title="PC 미리보기"><span class="icoSFIX icoPC">PC</span></button>
+                    <button type="button" class="btnToggle" title="Mobile 미리보기"><span class="icoSFIX icoMobile">Mobile</span></button>
+                </div>
+                <div class="language">
+                    <div class="toggleWrap">
+                    <!--div class="toggleWrap selected"-->
+                        <button type="button" class="btnToggle" title="멀티쇼핑몰 미리보기"><span class="icoSFIX icoFlag kr"></span></button>
+                        <div class="list">
+                            <ul>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag kr"></span> 국문몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag us"></span> 영문몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag cn"></span> 중문몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag jp"></span> 일본몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag tw"></span> 대만몰</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gRight">
+                <a href="#layerOrderChange" class="btnNormal small eFullLayer"><span class="icoSFIX icoOrder"></span> 순서변경</a><!-- 참고: 버튼 클릭시 #contents에 eFullPopup 클래스 추가 -->
+                <a href="#layerTemplate" class="btnNormal small eLayerClick"><span class="icoSFIX icoTemplate"></span> 템플릿</a>
+                <button type="submit" class="btnSubmit large">저장하기</button>
+            </div>
+        </div>
+    </header><!-- //header -->
+    <hr class="layout">
+
+    <!-- container -->
+    <div id="container">
+        <!-- aside -->
+        <aside>
+            <section class="">
+                <h2 class="mTitle">대제목 mTitle</h2>
+                <h2 class="blind">대제목</h2>
+                <h3 class="title">소제목 title</h3>
+            </section>
+        </aside><!-- //aside -->
+        <hr class="layout">
+
+        <!-- contents -->
+        <div id="contents">
+            <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/layer_order_change.html'); ?>
+            <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/guide.html'); ?>
+
+        </div><!-- //contents -->
+    </div><!-- //container -->
+
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/footer.html'); ?>

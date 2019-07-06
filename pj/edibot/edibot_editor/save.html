@@ -1,0 +1,119 @@
+﻿<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/header.html'); ?>
+    <!-- header -->
+    <header id="header">
+        <h1 class="logo"><img src="../img/editor/h1_logo.png" alt="Edibot"></h1>
+        <div class="topHead">
+            <div class="gLeft">
+                <ol class="mBreadcrumb">
+                    <li>이미지 추가</li>
+                    <li>상품상세설명 편집</li>
+                    <li title="현재 위치"><strong>저장</strong></li>
+                </ol>
+            </div>
+            <div class="gCenter">
+                <div class="device">
+                    <button type="button" class="btnToggle selected" title="PC 미리보기"><span class="icoSFIX icoPC">PC</span></button>
+                    <button type="button" class="btnToggle" title="Mobile 미리보기"><span class="icoSFIX icoMobile">Mobile</span></button>
+                </div>
+                <div class="language">
+                    <div class="toggleWrap">
+                        <button type="button" class="btnToggle" title="멀티쇼핑몰 미리보기"><span class="icoSFIX icoFlag kr"></span></button>
+                        <div class="list">
+                            <ul>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag kr"></span> 국문몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag us"></span> 영문몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag cn"></span> 중문몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag jp"></span> 일본몰</button></li>
+                                <li><button type="button" class="button"><span class="icoSFIX icoFlag tw"></span> 대만몰</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gRight">
+                <a href="edit.html" class="btnCtrl large"><em class="icoPrev">이전</em> 콘텐츠 수정</a>
+                <button type="submit" class="btnSubmit large eSave">저장하기</button>
+            </div>
+        </div>
+    </header><!-- //header -->
+    <hr class="layout">
+
+    <!-- container -->
+    <div id="container">
+        <!-- aside -->
+        <aside>
+            <section class="sideSave">
+                <h2 class="mTitle">상품정보로 저장</h2>
+                <div class="prdInfo">
+                    <div class="allCheck"><label class="fCheck"><input type="checkbox">전체 선택</label></div>
+                    <ul class="checkList">
+                        <li><label class="fCheck"><input type="checkbox" checked="checked" disabled="disabled">[기본정보] 상품 상세설명</label></li>
+                        <li><label class="fCheck"><input type="checkbox">[제작정보] 제조사</label></li>
+                        <li><label class="fCheck"><input type="checkbox">[제작정보] 제조일자</label></li>
+                        <li><label class="fCheck"><input type="checkbox">[제작정보] 사이즈가이드</label></li>
+                        <li><label class="fCheck"><input type="checkbox">[제작정보] 원산지</label></li>
+                        <li><label class="fCheck"><input type="checkbox">[배송정보] 상품소재</label></li>
+                        <li><label class="fCheck"><input type="checkbox">[배송정보] 영문 상품소재</label></li>
+                        <li>
+                            <label class="fCheck"><input type="checkbox">[이미지 정보] 대표이미지</label>
+                            <p class="mList">인공지능으로 최적의 이미지를 추천드립니다.</p>
+                        </li>
+                    </ul>
+                    <ul class="recommendList">
+                        <li class="selected">
+                            <div class="thumbnail"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example1.gif" alt=""></div>
+                            <p class="figure"><span class="icoFavorite selected">즐겨찾기 추가</span> 86%</p>
+                        </li>
+                        <li>
+                            <div class="thumbnail"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example2.gif" alt=""></div>
+                            <p class="figure">73%</p>
+                        </li>
+                        <li>
+                            <div class="thumbnail"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_example3.gif" alt=""></div>
+                            <p class="figure">62%</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2 class="mTitle">콘텐츠 저장</h2>
+                <div class="prdContents">
+                    <ul class="checkList">
+                        <li><label class="fRadio"><input type="radio" name="contents_save">전체저장</label></li>
+                        <li>
+                            <label class="fRadio"><input type="radio" name="contents_save" checked="checked">선택저장</label>
+                            <p class="mList">선택한 멀티쇼핑몰의 상품상세설명을 편집한 내용으로 <br>저장합니다.</p>
+                        </li>
+                    </ul>
+                    <ul class="multishop">
+                        <li><label class="fCheck"><input type="checkbox"><span class="icoSFIX icoFlag kr"></span> 기본몰 쇼핑몰</label></li>
+                        <li><label class="fCheck"><input type="checkbox"><span class="icoSFIX icoFlag us"></span> 영문몰 쇼핑몰</label></li>
+                        <li><label class="fCheck"><input type="checkbox"><span class="icoSFIX icoFlag cn"></span> 중문몰 쇼핑몰</label></li>
+                        <li><label class="fCheck"><input type="checkbox"><span class="icoSFIX icoFlag jp"></span> 일본몰 쇼핑몰</label></li>
+                        <li><label class="fCheck"><input type="checkbox"><span class="icoSFIX icoFlag tw"></span> 대만몰 쇼핑몰</label></li>
+                        <li><label class="fCheck"><input type="checkbox"><span class="icoSFIX icoFlag kr"></span> 국내 서브 쇼핑몰</label></li>
+                    </ul>
+                </div>
+            </section>
+        </aside><!-- //aside -->
+        <hr class="layout">
+
+        <!-- contents -->
+        <div id="contents">
+            <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/preview_save.html'); ?>
+        </div><!-- //contents -->
+    </div><!-- //container -->
+
+<div class="mQrcode">
+    <div class="frame"><img src="/img.echosting.cafe24.com/apps/edibot/editor/@img_qrcode.gif" alt=""></div>
+    <p class="mList">스마트기기로 QR코드를 인식하여 상품상세설명을 확인해보세요.</p>
+</div>
+
+<!-- 참고: progress bar -->
+<div class="mProgress" style="display:none">
+    <p class="heading">에디봇이 <span class="icoSFIX icoFlag kr"></span> <strong class="txtEm">$쇼핑몰명에 <br>상품상세설명 콘텐츠와 정보를 저장중</strong>입니다.</p>
+    잠시만 기다려주세요.
+    <div class="mLoading"><span style="width:33%"></span></div>
+</div>
+<div id="dimmed_progress" class="dimmed" style="display:none"></div>
+
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/edibot/edibot_editor/include/footer.html'); ?>

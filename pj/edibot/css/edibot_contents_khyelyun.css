@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+/* _edibotProduct reset  */
+body,
+._edibotProduct div,
+._edibotProduct dl,
+._edibotProduct dt,
+._edibotProduct dd,
+._edibotProduct ul,
+._edibotProduct ol,
+._edibotProduct li,
+._edibotProduct h1,
+._edibotProduct h2,
+._edibotProduct h3,
+._edibotProduct h4,
+._edibotProduct h5,
+._edibotProduct h6,
+._edibotProduct pre,
+._edibotProduct code,
+._edibotProduct form,
+._edibotProduct fieldset,
+._edibotProduct legend,
+._edibotProduct input,
+._edibotProduct textarea,
+._edibotProduct p,
+._edibotProduct blockquote,
+._edibotProduct th,
+._edibotProduct td,
+._edibotProduct img { margin:0; padding:0; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+._edibotProduct ul,
+._edibotProduct ol,
+._edibotProduct dl,
+._edibotProduct li { list-style:none; }
+._edibotProduct img,
+._edibotProduct fieldset { border:0; max-width:100%; vertical-align:top; }
+._edibotProduct table { table-layout:fixed; width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+._edibotProduct table img { vertical-align:middle; }
+._edibotProduct th,
+._edibotProduct td { border:0; word-wrap:break-word; }
+._edibotProduct label { cursor:pointer; }
+._edibotProduct caption { overflow:hidden; width:1px; font-size:1px; line-height:0; text-indent:150%; white-space:nowrap; }
+._edibotProduct legend,
+._edibotProduct hr.layout,
+._edibotProduct .blind { display:block; overflow:hidden; font-size:1px; line-height:0; color:transparent; text-indent:150%; white-space:nowrap; }
+._edibotProduct a { text-decoration:none; }
+._edibotProduct em,
+._edibotProduct address { font-style:normal; }
+._edibotProduct i { font-style:italic; }
+._edibotProduct [data-component="text"] a,
+._edibotProduct [data-component="table"] a { text-decoration:underline; color:#0000ee; }
+._edibotProduct button { overflow:visible; padding:0; margin:0; border:0; outline:0; cursor:pointer; font-size:12px; font-family:'Lato','돋움',Dotum; }
+._edibotProduct button::-moz-focus-inner,
+._edibotProduct input[type="reset"]::-moz-focus-inner,
+._edibotProduct input[type="button"]::-moz-focus-inner,
+._edibotProduct input[type="submit"]::-moz-focus-inner,
+._edibotProduct input[type="file"] > input[type="button"]::-moz-focus-inner { padding:0; border:0; }
+
+.-pc { background:#fff; width:100%; height:100%; overflow-y:auto; }
+.-pc ._edibotProduct input,
+.-pc ._edibotProduct select,
+.-pc ._edibotProduct textarea { font-size:12px; font-family:'Lato','돋움',Dotum; color:#303030; vertical-align:middle; }
+
+.-pc ._edibotProduct { width:1000px; margin:100px auto; min-height:10px; font-size:11px; font-family:'Lato','돋움',Dotum; line-height:1.2; color:#303030; background:#fff; }
+.-pc ._edibotProduct .mFigure { text-align:center; }
+.-pc ._edibotProduct .mFigure img { max-width:100%; }
+.-pc ._edibotProduct .mClip { max-width:100%; margin:0 auto; }
+.-pc ._edibotProduct .mTextField { width:100%; margin:0 auto; }
+.-pc ._edibotProduct .mTextField .inner { min-height: 55px; padding:18px 25px; line-height:1.6; box-sizing:border-box; }
+.-pc ._edibotProduct .mBoard { position:relative; padding:0; border:none; background:#fff; }
+.-pc ._edibotProduct .mBoard table { position:relative; border:1px solid #dadadc; border-width:0 1px 1px 0; font-size:11px; text-align:left; }
+.-pc ._edibotProduct .mBoard tbody td { min-height:28px; padding:5px 5px 6px; border:1px solid #dadadc; text-align:center; line-height:140%; color:#303030; }
+.-pc ._edibotProduct .mBoard table .cell { display:block; position:relative; min-height:16px; box-sizing:border-box; }
+.-pc ._edibotProduct .mList:before { display:none; }
+.-pc ._edibotProduct .btnIcon.icoCal { display:inline-block; overflow:hidden; width:13px; height:13px; font-size:0; line-height:0; vertical-align:middle; white-space:nowrap; background:url('//img.echosting.cafe24.com/suio/sfix_icon_button.png') -50px -500px no-repeat; }
+.-pc ._edibotProduct .btnSquare { display:inline-block; overflow:hidden; width:22px; height:22px; border:1px solid #7b7a7a; vertical-align:middle; box-sizing:border-box; background:#fff; }
+.-pc ._edibotProduct .btnSquare span { display:block; margin:0 auto; font-size:0; line-height:0; text-indent:120%; vertical-align:middle; background-image:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png"); background-repeat:no-repeat; }
+.-pc ._edibotProduct .btnSquare.plus span {  width:10px; height:10px; background-position:0 -200px; }
+.-pc ._edibotProduct .btnSquare.minus span { width:10px; height:2px; background-position:-50px -200px; }
+
+/* 편집영역 gEditor */
+  .-pc ._edibotProduct.gEditor { padding:20px 40px; }
+  .-pc ._edibotProduct.gEditor .section { position:relative; min-height:102px; margin:40px 0; padding:48px 0; box-sizing:border-box; }
+  .-pc ._edibotProduct.gEditor .section.selected:before { content:''; position:absolute; left:-19px; right:-19px; top:-19px; bottom:-19px; outline:1px dotted #ea1b5e; }
+  .-pc ._edibotProduct.gEditor .section.cEmpty { padding:42px 0; font-size:15px; color:#000; text-align:center; outline:none; background:#f7f7f7; }
+  /* 썸네일 이동선 표시 */
+    .-pc ._edibotProduct.gEditor .moveline { position:relative; left:-10px; width:100%; height:9px; padding:0 20px 0 0; background:url("//img.echosting.cafe24.com/apps/edibot/editor/bg_contents_drag.gif") no-repeat 0 0; margin:-5px 0 -4px; }
+  .-pc ._edibotProduct.gEditor .wrapper { position:relative; display:inline-block; }
+  .-pc ._edibotProduct.gEditor .EDIT,
+  .-pc ._edibotProduct.gEditor .REVIVE { position:relative; }
+  .-pc ._edibotProduct.gEditor .btnDel { display:none; }
+  .-pc ._edibotProduct.gEditor .EDIT .btnDel { z-index:1; display:block; position:absolute; right:-23px; top:-18px; width:36px; height:36px; border-radius:18px; background:#ea1b5e; }
+  .-pc ._edibotProduct.gEditor .EDIT .btnDel span { display:block; width:8px; height:8px; margin:0 auto; font-size:0; line-height:0; text-indent:120%; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png") no-repeat -100px -200px; }
+  .-pc ._edibotProduct.gEditor .REVIVE img,
+  .-pc ._edibotProduct.gEditor .REVIVE .text { opacity:.3; }
+  .-pc ._edibotProduct.gEditor .REVIVE .btnPlus { z-index:1; display:block; position:absolute; right:-23px; top:-18px; width:36px; height:36px; border-radius:18px; background:#3f455f; }
+  .-pc ._edibotProduct.gEditor .REVIVE .btnPlus span { display:block; width:10px; height:10px; margin:0 auto; font-size:0; line-height:0; text-indent:120%; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png") no-repeat -200px -200px; }
+  .-pc ._edibotProduct.gEditor .REVIVE.imgTitle .wrapper img:hover,
+  .-pc ._edibotProduct.gEditor .REVIVE.imgProduct .wrapper img:hover { outline:0; }
+  .-pc ._edibotProduct.gEditor .REVIVE.imgTitle .wrapper:hover:after { display:none; }
+  .-pc ._edibotProduct.gEditor .REVIVE .wrapper:before { display:block; content:""; position:absolute; top:-7px; left:-7px; right:-7px; bottom:-7px; outline:1px dotted #9e9e9e; }
+  /* 해외몰인 경우 */
+    .-pc ._edibotProduct.gEditor .-noteditable .mSize .mBoard td .cell { cursor:text; }
+    .-pc ._edibotProduct.gEditor .-noteditable .mSize .mBoard td .cell:not(.EDIT):hover { border:0; }
+    .-pc ._edibotProduct.gEditor .-noteditable .mSize .mBoard td .cell:not(.EDIT):hover:after { display:none; }
+
+
+/* template_khyelyun */
+.-pc ._edibotProduct { width:1200px; font-family:'Lato','돋움',Dotum; }
+
+/* productInfo */
+  .-pc ._edibotProduct .productInfo { min-width:600px; max-width:1200px; margin:0 auto; text-align:left; }
+  .-pc ._edibotProduct .imgTitle { display:block; margin:0 0 50px; text-align:center; }
+  .-pc ._edibotProduct .imgTitle .wrapper img { padding:17px 84px 16px; }
+  .-pc ._edibotProduct .imgProduct { position:relative; margin:0 0 50px; text-align:center; }
+  .-pc ._edibotProduct .imgProduct .wrapper img { padding:10px; }
+  .-pc ._edibotProduct .productInfo .mSize { position:relative; }
+  .-pc ._edibotProduct .txtHelp { margin:35px 0 20px; font-size:11px; color:#303030; line-height:19px; letter-spacing:-0.5px; }
+  .-pc ._edibotProduct .productInfo .heading { display:block; margin:20px 0 30px; font-size:14px; letter-spacing:-0.5px; }
+
+  /* mBoard */
+    .-pc ._edibotProduct .productInfo .mBoard { margin:30px 0; border:1px solid #333; }
+    .-pc ._edibotProduct .productInfo .mBoard table { border-width:0; }
+    .-pc ._edibotProduct .productInfo .mBoard table th { padding:4px 5px; text-align:center; font-weight:normal; line-height:140%; color:#303030; background:#ededed; }
+    .-pc ._edibotProduct .productInfo .mBoard thead th { padding:5px; vertical-align:middle; }
+    .-pc ._edibotProduct .productInfo .mBoard tbody th { overflow:hidden; min-height:28px; }
+    .-pc ._edibotProduct .productInfo .mBoard tbody td { border-width:0; padding:4px 5px; vertical-align:middle; text-align:left; }
+      .-pc ._edibotProduct .mBoard.typeWear { margin-bottom:50px; }
+      .-pc ._edibotProduct .mSize .mBoard thead th { border:1px solid #e1e1e1; border-width:0 0 1px 1px; }
+      .-pc ._edibotProduct .mSize .mBoard thead th:first-child { border-left-width:0; }
+      .-pc ._edibotProduct .mSize .mBoard tbody th { background:#fff; }
+      .-pc ._edibotProduct .mSize .mBoard tbody td { border-left:1px solid #e1e1e1; text-align:center; }
+
+    .-pc ._edibotProduct .productInfo .mBoard table .cell { padding:4px; display:inline-block; border:1px solid transparent; vertical-align:top; }
+      .-pc ._edibotProduct .mSize .mBoard table .cell { display:block; }
+    .-pc ._edibotProduct .mBoard .chk { position:relative; margin:0 0 0 8px; }
+    .-pc ._edibotProduct .mBoard a.chk:hover { text-decoration:none; }
+    .-pc ._edibotProduct .mBoard .chk .icoChk { display:inline-block; width:12px; height:12px; margin:-2px 4px 0 0; border:1px solid #333; box-sizing:border-box; vertical-align:middle; }
+    .-pc ._edibotProduct .mBoard .chk.checked .icoChk { background:#e9887f; }
+
+  /* mList */
+    .-pc ._edibotProduct .mComment { margin:25px 0 0; }
+    .-pc ._edibotProduct .mComment .title { display:block; }
+    .-pc ._edibotProduct .mList { position:relative; margin:0 0 0 -10px; padding:5px 10px; font-size:11px; color:#303030; line-height:19px; white-space:pre-line; }
+
+  /* mProduct */
+    .-pc ._edibotProduct .mProduct { margin:25px 0 0; }
+    .-pc ._edibotProduct .mProduct .info > li { margin:10px 0 0; }
+    .-pc ._edibotProduct .mProduct li .title { display:block; line-height:19px; }
+    .-pc ._edibotProduct .item .desc { display:inline-block; position:relative; margin:0 0 0 -6px; padding:0 5px; border:1px solid transparent; line-height:22px; }
+    .-pc ._edibotProduct .item input.fTxt { margin:3px 0; }
+    .-pc ._edibotProduct .item ul.mForm input.fTxt { margin:0; }
+    /* 세탁방법 */
+      .-pc ._edibotProduct .mThumbList { width:auto; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing { margin:15px 0 0; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing li { display:inline-block; position:relative; width:72px; margin:4px 4px 0 0; text-align:center; vertical-align:top; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing li .text { display:block; margin:4px 0 12px; font-size:11px; }
+      .-pc ._edibotProduct .mThumbList.typeHor.washing li img { width:40px; height:40px; }
+
+  /* mForm */
+    .-pc ._edibotProduct ul.mForm { margin:0; }
+    .-pc ._edibotProduct .mProduct .info .mForm li { display:inline-block; margin:-1px 0 0; padding:0 7px 0 0; }
+    .-pc ._edibotProduct .fSelect { display:inline; height:22px; line-height:22px; margin:0; max-width:100%; }
+    .-pc ._edibotProduct input.fTxt { height:20px; padding:0 5px; line-height:20px; border:1px solid #a7a7a7; border-right-color:#cfcfcf; border-bottom-color:#cfcfcf; outline:0 none; }
+    .-pc ._edibotProduct input.fTxt.gDate { width:77px; }
+
+
+/* 편집영역 gEditor */
+  .-pc ._edibotProduct.gEditor .mSize .mBoard table .cell { overflow:hidden; white-space:nowrap; }
+  .-pc ._edibotProduct.gEditor .mFigure,
+  .-pc ._edibotProduct.gEditor .mClip,
+  .-pc ._edibotProduct.gEditor .textField,
+  .-pc ._edibotProduct.gEditor .mTextField,
+  .-pc ._edibotProduct.gEditor .imgTitle .wrapper img,
+  .-pc ._edibotProduct.gEditor .imgProduct .wrapper img,
+  .-pc ._edibotProduct.gEditor .mBoard table td .cell,
+  .-pc ._edibotProduct.gEditor .mList,
+  .-pc ._edibotProduct.gEditor .item .desc,
+  .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li { cursor:pointer; }
+
+  /* 각각의 요소 hover시 */
+    .-pc ._edibotProduct.gEditor .mFigure img:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .mClip .mov:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .mBoard table:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard table:hover { outline:none; }
+    .-pc ._edibotProduct.gEditor .mTextField .inner:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .imgTitle .wrapper img:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .imgProduct .wrapper img:hover { outline:8px solid #f0f0f0; }
+    .-pc ._edibotProduct.gEditor .mBoard tbody td { cursor:pointer; }
+    .-pc ._edibotProduct.gEditor .mSize .mBoard tbody td,
+    .-pc ._edibotProduct.gEditor .mProduct .mBoard tbody td { cursor:default; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard td .cell:not(.EDIT):hover { border:1px dashed #797979; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard td .cell:not(.EDIT):hover:after { display:inline-block; content:''; width:13px; height:13px; margin:-2px 0 0 8px; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png")  no-repeat -150px -200px; }
+    .-pc ._edibotProduct.gEditor .mSize .mBoard td .cell:not(.EDIT):hover:after { position:absolute; right:0; top:50%; margin:-6px 8px 0; }
+    .-pc ._edibotProduct.gEditor .mList:hover { padding:2px 8px; margin:-5px 0 -5px -16px; border:8px solid #f0f0f0; box-sizing:border-box; }
+    .-pc ._edibotProduct.gEditor .mBoard .chk:not(.checked):hover .icoChk { background:#d6d6d6; }
+    .-pc ._edibotProduct.gEditor .item .desc:hover { border:1px dashed #797979; background:#fff; }
+    .-pc ._edibotProduct.gEditor .item .desc:hover:after { display:inline-block; content:''; width:13px; height:13px; margin:-2px 0 0 8px; vertical-align:middle; background:url("//img.echosting.cafe24.com/apps/edibot/editor/sfix_icon.png")  no-repeat -150px -200px; }
+
+  /* 각각의 요소 클릭시 */
+    .-pc ._edibotProduct.gEditor .mFigure.EDIT,
+    .-pc ._edibotProduct.gEditor .mClip.EDIT,
+    .-pc ._edibotProduct.gEditor .imgTitle.EDIT .wrapper img,
+    .-pc ._edibotProduct.gEditor .imgProduct.EDIT .wrapper img,
+    .-pc ._edibotProduct.gEditor .item.EDIT .desc,
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.EDIT { cursor:default; }
+    .-pc ._edibotProduct.gEditor .mFigure.EDIT img { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .mClip.EDIT .mov { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .mBoard.EDIT table { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .productInfo .mBoard.EDIT table { outline:none; }
+    .-pc ._edibotProduct.gEditor .mTextField.EDIT .inner { cursor:text; outline:8px solid #ddd;  }
+    .-pc ._edibotProduct.gEditor .imgTitle.EDIT .wrapper img { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .imgProduct.EDIT .wrapper img { outline:8px solid #ddd; }
+    .-pc ._edibotProduct.gEditor .imgTitle.EDIT .mToolbar,
+    .-pc ._edibotProduct.gEditor .imgProduct.EDIT .mToolbar { top:100%; left:0; right:0; }
+    .-pc ._edibotProduct.gEditor .mSize tbody td .cell.EDIT { border-top:1px solid #a7a7a7; border-left:1px solid #a7a7a7; border-right:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf; cursor:text; background:#fff; }
+    .-pc ._edibotProduct.gEditor .mSize tbody td .cell.EDIT:hover:after { display:none; }
+    .-pc ._edibotProduct.gEditor .mList.EDIT { padding:2px 8px; margin:-5px 0 -5px -16px; border:8px solid #ddd; box-sizing:border-box; cursor:text; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.btnDel { display:none; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.EDIT .btnDel { right:13px; top:-3px; width:20px; height:20px; border-radius:20px; background:#fb5555; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.REVIVE img,
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.REVIVE .text { opacity:.5; }
+    .-pc ._edibotProduct.gEditor .mThumbList.typeHor.washing li.REVIVE .btnPlus { right:13px; top:-3px; width:20px; height:20px; border-radius:20px; }
+
+
+
+/* 모바일 */
+  .-mo ._edibotProduct { width:100%; min-width:320px; margin: 20px auto; text-align:left; font-family:'맑은 고딕','Malgun-gothic','Lato','돋움',Dotum; font-size:11px; color:#333; background:#fff; -webkit-text-size-adjust:none; }
+  .-mo ._edibotProduct button { font-family:'맑은 고딕','Malgun-gothic','Lato','돋움',Dotum; }
+  .-mo ._edibotProduct input,
+  .-mo ._edibotProduct select,
+  .-mo ._edibotProduct textarea { font-size:12px; font-family:'맑은 고딕','Malgun-gothic','Lato','돋움',Dotum; color:#333; vertical-align:middle; outline:0; -webkit-appearance:none; -webkit-border-radius:0; }
+  .-mo ._edibotProduct .mFigure { margin:0; text-align:center; }
+  .-mo ._edibotProduct .mFigure img { max-width:100%; }
+  .-mo ._edibotProduct .mClip { max-width:100%; margin:0 auto; }
+  .-mo ._edibotProduct .mTextField { width:100%; padding:18px 0; line-height:1.6; box-sizing:border-box; }
+  .-mo ._edibotProduct .mTextField span { display:block; }
+  .-mo ._edibotProduct .productDetail .mBoard { margin:20px 0 0; }
+  .-mo ._edibotProduct .mBoard th { padding:12px 5px; border:1px solid #d9d9db; }
+  .-mo ._edibotProduct .mBoard td { padding:12px 5px; border:1px solid #d9d9db; vertical-align:top; }
+  .-mo ._edibotProduct .mBoard th .cell { display:block; min-height:17px; }
+  .-mo ._edibotProduct .mBoard td .cell { display:block; min-height:17px; }
+  .-mo ._edibotProduct .productInfo .mBoard { margin:30px 0; border:1px solid #333; border-width:1px 0; }
+  .-mo ._edibotProduct .productInfo .mBoard table { border-width:0; }
+  .-mo ._edibotProduct .productInfo .mBoard table th { padding:4px 2px; text-align:center; font-weight:normal; line-height:140%; letter-spacing:-0.4px; background:#ededed; }
+  .-mo ._edibotProduct .productInfo .mBoard thead th { padding:9px 0 8px; border:1px solid #e4e4e4; border-width:0 0 1px 1px; vertical-align:middle; }
+  .-mo ._edibotProduct .productInfo .mBoard thead th:first-child { border-left-width:0; }
+  .-mo ._edibotProduct .productInfo .mBoard tbody th { border-width:0; }
+  .-mo ._edibotProduct .productInfo .mBoard tbody td { padding:10px 2px; border-width:0; text-align:left; }
+  .-mo ._edibotProduct .mSize .mBoard { margin-top:25px; }
+  .-mo ._edibotProduct .mSize .mBoard tbody th { background:#fff; }
+  .-mo ._edibotProduct .mSize .mBoard tbody td { padding:8px 0; border-left:1px solid #e4e4e4; text-align:center; }
+  .-mo ._edibotProduct .productInfo .heading { display:block; margin:20px 32px 30px; font-size:12px; line-height:17px; letter-spacing:-0.4px; }
+  .-mo ._edibotProduct .mBoard.typeWear td { vertical-align:middle; }
+  .-mo ._edibotProduct .mBoard.typeWear .chk { display:block; position:relative; padding:0 0 0 17px; margin:0 0 0 5px; line-height:13px; }
+  .-mo ._edibotProduct .mBoard.typeWear .chk .icoChk { position:absolute; left:3px; top:50%; margin:-5px 0 0; width:11px; height:11px; border:1px solid #000; box-sizing:border-box; }
+  .-mo ._edibotProduct .mBoard .chk.checked .icoChk { background:#e9887f; }
+
+  .-mo ._edibotProduct .imgTitle { display:block; margin:0 0 10px; text-align:center; }
+  .-mo ._edibotProduct .txtHelp { margin:20px 32px; line-height:16px; }
+  .-mo ._edibotProduct .imgProduct { display:block; margin:10px 0 25px; text-align:center; }
+  .-mo ._edibotProduct .imgProduct img { max-width:250px; height:auto; }
+  .-mo ._edibotProduct .imgProduct.default img { width:205px; }
+  .-mo ._edibotProduct .mList pre { white-space:pre-line; }
+  .-mo ._edibotProduct .mList:before { display:none; }
+  .-mo ._edibotProduct .mComment { margin:40px 32px; line-height:12px; }
+  .-mo ._edibotProduct .mComment .title { display:block; margin:0 0 6px; }
+  .-mo ._edibotProduct .mProduct .info { margin:0 32px; line-height:12px; }
+  .-mo ._edibotProduct .mProduct li { margin:25px 0 0; }
+  .-mo ._edibotProduct .mProduct li:first-child { margin-top:0; }
+  .-mo ._edibotProduct .mProduct li .title { display:block; margin:0 0 4px; }
+  /* 세탁방법 */
+    .-mo ._edibotProduct .mThumbList.typeHor.washing { margin:-9px 0 30px; }
+    .-mo ._edibotProduct .mThumbList.typeHor.washing li { display:inline-block; position:relative; width:50px; margin:9px 0 0; text-align:center; vertical-align:top; }
+    .-mo ._edibotProduct .mThumbList.typeHor.washing li img { width:36px !important; height:36px !important; }
+    .-mo ._edibotProduct .mThumbList.typeHor.washing li .text { display:block; width:45px; margin:4px auto 6px; font-size:11px; line-height:15px; }
