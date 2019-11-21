@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+ * Noto Sans http://fonts.googleapis.com/earlyaccess/notosanskr.css
+*/
+@font-face {
+  font-family:'Noto Sans KR';
+  font-style:normal;
+  font-weight:400;
+  src:url('./NotoSansKR-Regular.woff2') format('woff2'),
+    url('./NotoSansKR-Regular.woff') format('woff'),
+    url('./NotoSansKR-Regular.otf') format('opentype');
+    src:local(¡Ø), url('./NotoSansKR-Regular.woff') format('woff');
+}
+@font-face {
+  font-family:'Noto Sans KR';
+  font-style:normal;
+  font-weight:500;
+  src:url('./NotoSansKR-Medium.woff2') format('woff2'),
+    url('./NotoSansKR-Medium.woff') format('woff'),
+    url('./NotoSansKR-Medium.otf') format('opentype');
+    src:local(¡Ø), url('./NotoSansKR-Medium.woff') format('woff');
+}
+@font-face {
+  font-family:'Noto Sans KR';
+  font-style:normal;
+  font-weight:700;
+  src:url('./NotoSansKR-Bold.woff2') format('woff2'),
+    url('./NotoSansKR-Bold.woff') format('woff'),
+    url('./NotoSansKR-Bold.otf') format('opentype');
+    src:local(¡Ø), url('./NotoSansKR-Bold.woff') format('woff');
+}
