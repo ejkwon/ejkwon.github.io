@@ -1,0 +1,144 @@
+html{overflow-x:hidden;}
+body {
+	color: #212121;
+	font-size: 13px;
+	line-height: 1.5;
+	font-family: verdana, tahoma, "굴림", Gulim, AppleGothic, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+a:link { color: #4f4f4f; text-decoration: none;}
+a:visited {color: #4f4f4f; text-decoration: none;}
+a:hover, a:focus {color: #f00; text-decoration: none;}
+img{vertical-align: top; border:0;}
+input, label, select, textarea {vertical-align: middle; }
+
+/* ----------------------------------- skipNav ----------------------------------- */
+#skipNav {position: relative; width:100%; overflow: hidden;}
+#skipNav a{ color:#369; display: block; height: 1px; margin-bottom: -1px; }
+#skipNav a:hover, #skipNav a:focus{ 
+  display: block; height: auto; padding: 3px 0; background: #f2f2f2;
+}
+
+h1.logo{border: 2px solid #4f4f4f; padding: 15px 25px;} /* 로고 */
+h2 {font-size:50px; } /* 각 부분별 타이틀 */
+h2:first-letter{font-size: 200%; color:#747474;} /* 타이틀 첫번째 글자 */
+
+
+/* ----------------------------------- 사이드메뉴 ----------------------------------- */
+ul.sideul li {
+  margin-bottom:15px;
+  position: relative;
+}
+ul.sideul li a span{
+  position: absolute;
+  top: 0px; left: 20px;
+  text-transform: uppercase;
+  color:#cfcfcf;
+  background:#222;
+  padding: 10px 15px;
+  display:none;
+}
+ul.sideul li a{
+  background: url("../images/side_dot.png") no-repeat 0 10px;
+  width:15px;
+  height:30px;
+  display: block;
+}
+ul.sideul li a:hover{
+  background: url("../images/side_dotov.png") no-repeat 0 10px;
+}
+ul.sideul li a:hover span{ display:block; }
+
+
+/* ----------------------------------- 프로필 영역 ----------------------------------- */
+#profile p.meImg{margin-left: 10px;float:left; width:240px;}
+#profile p.about{margin-left: 40px;margin-top:15px; float:left; width:685px;}
+#profile p.about span{display: block; padding-top: 15px; font-size: 14px;}
+#profile p.about span.imgList{
+  border:1px solid #bbb; 
+  margin-top: 40px;  padding:10px;
+  background: #ddd;
+}
+
+
+/* ----------------------------------- 타임라인 영역 ----------------------------------- */
+#timeline p {
+  margin-left: 30px; padding: 10px 0 5px 50px;
+  border-left:4px solid #666; 
+  background:url("../images/timeicon.gif") no-repeat 0 23px; width:500px;
+}
+#timeline p span.date{display:block; color:#676767;}
+#timeline p span.cont{display:block;}
+
+
+/* ----------------------------------- 포트폴리오 영역 ----------------------------------- */
+#portfolio div.captureWrap{
+  float:left;
+  width: 720px;
+  background: #ddd;
+  padding: 10px;
+  margin-right: 10px;
+}
+.captureWrap div {overflow:auto;}
+.captureImg{float:left; width:370px;}
+.captureImg a{ display:block; width:350px; height:400px;}
+.captureCont{padding:0 10px; float:left; width:320px;}
+.captureCont strong { display:block; padding-top:10px; }
+.captureCont strong a{
+  display:block; 
+  padding: 5px; margin-bottom: 15px;
+  font-size:170%;
+  border-bottom: 1px solid #999;
+  color:#212121;
+}
+.captureCont span{
+  display: block;
+  background: url("../images/dot_icon.gif") no-repeat 0 50%;
+  padding: 5px 0 5px 15px;
+}
+.captureList {
+  float:left; width: 100px; height:415px;
+  background: #ddd; padding-top: 5px;
+}
+.captureList ul {width:80px; margin:0 auto;}
+.captureList ul li{
+  margin-top: 10px;
+  position: relative;
+}
+.captureList ul li a{ display:block; width:80px; height:90px;}
+.captureList ul li a span.subBox{
+  display:block;
+  width:230px;
+  position: absolute; top:0px; left:75px;
+}
+.captureList ul li a span.subBox span{
+display: block;
+  background:url("../images/subBoxBody.gif") no-repeat top right;
+  padding:10px 5px 0 40px; color: #212121; font-size:95%; text-align:left;
+}
+.captureList ul li a span.subBox span strong{ 
+  display: block;
+  background: url("../images/dot_icon.gif") no-repeat 0 50%;
+  padding-left: 10px;
+}
+.subBox span .date, .subBox span .per{text-indent: 1em; display: block;padding:0 !important;} 
+
+
+/* ----------------------------------- 북마크 영역 ----------------------------------- */
+#bookmark p {margin-bottom:10px;width:500px;}
+#bookmark p span.link {display:block; padding-left: 15px;}
+
+
+/* ----------------------------------- 푸터 영역 ----------------------------------- */
+address{
+  margin-left: 60px; margin-top:3px;
+  font-style:normal;
+  font-size:12px;
+  color:#D3D3D3;
+}
+address span{
+  display:block;
+}
+.email a{color:#D3D3D3;}
+.copyright{margin-left:10px; color:#929292;}
