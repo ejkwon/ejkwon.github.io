@@ -1,0 +1,262 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>주문개별등록</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li>출고</li>
+            <li>주문목록</li>
+            <li class="now" title="현재 페이지">주문개별등록</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>주문 정보</h2>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>주문 정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">주문일자 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" id="pr_start_date" name="start_date" value="2013-04-03" class="fText" style="width:65px;" />
+                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">판매사 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <select class="fSelect">
+                      <option selected="selected">-판매사 선택-</option>
+                      <option>$판매사1</option>
+                      <option>$판매사2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">판매자 주문번호 <strong class="icoRequired">필수</strong></th>
+                <td><input type="text" placeholder="20140314-85664" class="fText" style="width:190px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">주문자명</th>
+                <td><input type="text" class="fText" style="width:180px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">주문자 일반전화</th>
+                <td><input type="text" class="fText" style="width:180px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">주문자 휴대전화</th>
+                <td><input type="text" class="fText" style="width:180px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">주문자 이메일</th>
+                <td>
+                    <input type="text" class="fText" style="width: 150px;" /> @
+                    <select class="fSelect">
+                      <option selected="selected">- 이메일 선택 -</option>
+                      <option>네이버</option>
+                      <option>다음</option>
+                      <option>핫메일</option>
+                      <option>네이트</option>
+                      <option>야후</option>
+                      <option>엠파스</option>
+                      <option>드림위즈</option>
+                      <option>프리챌</option>
+                      <option>라이코스</option>
+                      <option>코리아닷컴</option>
+                      <option>G메일</option>
+                      <option>한미르</option>
+                      <option>파란</option>
+                      <option>직접입력</option>
+                    </select>
+                    <input type="text" class="fText" style="width: 120px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">주문자 주소</th>
+                <td>
+                    <input type="text" readonly="readonly" class="fText" style="width:39px;" /> -
+                    <input type="text" readonly="readonly" class="fText" style="width:39px;" />
+                    <a href="#none" class="btnNormal"><span>우편번호 검색</span></a>
+                    <div class="gSingle"><input type="text" readonly="readonly" class="fText" style="width:300px;" /> <input type="text" class="fText" style="width:400px;" /></div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">통화</th>
+                <td>
+                    <select class="fSelect">
+                      <option selected="selected">KRW</option>
+                      <option>USD</option>
+                      <option>JPY</option>
+                      <option>EUR</option>
+                      <option>CNY</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>상품 정보</h2>
+        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>상품선택<em class="icoLink"></em></span></a>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>상품 정보</caption>
+        <colgroup>
+            <col style="width:40px" />
+            <col style="width:140px" />
+            <col style="width:100px" />
+            <col style="width:140px" />
+            <col style="width:auto" />
+            <col style="width:120px" />
+            <col style="width:120px" />
+            <col style="width:70px" />
+            <col style="width:90px" />
+            <col style="width:70px" />
+            <col style="width:70px" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">판매사 품주번호 <strong class="icoRequired">필수</strong></th>
+                <th scope="col">상품품목코드</th>
+                <th scope="col">바코드/상품코드</th>
+                <th scope="col">상품명/ 품목명 <strong class="icoRequired">필수</strong></th>
+                <th scope="col">위치코드</th>
+                <th scope="col">현재 재고<br />(가용/할당)</th>
+                <th scope="col">수량 <strong class="icoRequired">필수</strong></th>
+                <th scope="col">판매가 <strong class="icoRequired">필수</strong></th>
+                <th scope="col">HS코드</th>
+                <th scope="col">삭제</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td>1</td>
+                <td><input type="text" class="fText right" style="width:100px" value="" /></td>
+                <td>123568989</td>
+                <td>11111111/222223333</td>
+                <td>
+                    <div class="gGoods gSmall">
+                        <span class="frame"><img src="//img.echosting.cafe24.com/thumb/32x32.gif" width="32" height="32" alt="" /></span>
+                        <p>청바지</p>
+                        <p class="etc">/노랑빨강 XL</p>
+                    </div>
+                </td>
+                <td>AA-123-987</td>
+                <td class="right">79 / 33</td>
+                <td><input type="text" value="1" class="fText right" style="width:30px" /></td>
+                <td><input type="text" value="20,000" class="fText right" style="width:60px" /></td>
+                <td></td>
+                <td><a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>배송 정보</h2>
+        <label><input type="checkbox" class="fChk" /> 주문자정보와 같음</label>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>배송 설정</caption>
+        <tbody>
+            <tr>
+                <th scope="row">배송국가</th>
+                <td>
+                    <select class="fSelect">
+                      <option>가나[GH]</option>
+                      <option>가봉[GA]</option>
+                      <option selected="selected">대한민국[KR]</option>
+                      <option>도미니카공화국[DO]</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">수령자명 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" value="김배송" class="fText" style="width:120px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">수령자 일반전화 <strong class="icoRequired">필수</strong></th>
+                <td><input type="text" class="fText" style="width:300px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">수령자 휴대전화</th>
+                <td><input type="text" class="fText" style="width:300px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">수령자 E-mail</th>
+                <td>
+                    <input type="text" value="" class="fText" style="width:300px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송지 주소 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" readonly="readonly" class="fText" style="width:39px;" value="132" /> -
+                    <input type="text" readonly="readonly" class="fText" style="width:39px;" value="222" />
+                    <a href="#none" class="btnNormal"><span>우편번호 검색</span></a>
+                    <div class="gSingle"><input type="text" readonly="readonly" class="fText" style="width:300px;" value="서울 동작구 신대방2동" /> <input type="text" class="fText" style="width:400px;" value="81번지 전문건설회관 28층" /></div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송 메시지
+                </th>
+                <td>
+                    <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                    <p class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 500 ]</p>
+                    <p class="txtInfo">부재시 연락 가능한 전화번호 또는 상품 수령이 가능한 장소를 남겨주세요.</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">판매사 배송비</th>
+                <td><input type="text" value="2,500" class="fText" style="width: 150px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">배송기준</th>
+                <td>
+                    <label class="gLabel"><input type="radio" class="fChk" name="radio" checked="checked" /> 선불</label>
+                    <label class="gLabel"><input type="radio" class="fChk" name="radio" /> 착불</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">기타 메시지
+                </th>
+                <td>
+                    <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                    <p class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 500 ]</p>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+
+<div class="mHelp typeInfo">
+    <h2>주문개별등록 안내</h2>
+    <div class="content">
+        <p>배송지시 상태가 '지시 전'일때만 수정할 수 있습니다.</p>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

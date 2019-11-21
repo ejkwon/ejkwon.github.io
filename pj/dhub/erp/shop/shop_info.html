@@ -1,0 +1,781 @@
+<?php require_once('../../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>상점 정보</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li><a href="#none">상점운영</a></li>
+                        <li><a href="#none">상점</a></li>
+                        <li class="now" title="현재 페이지">상점 정보</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>기본정보</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>기본정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">아이디 및 비밀번호</th>
+                            <td><input type="text" class="fText" style="width:105px;" value="" /> <a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>아이디 확인<em class="icoLink"></em></span></a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">아이디 및 비밀번호</th>
+                            <td>sangjumld12 <a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>비밀번호 초기화<em class="icoLink"></em></span></a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상점명 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <input type="text" class="fText" style="width:326px;" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상품구분 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select class="fSelect" style="width:150px;">
+                                    <option>-선택-</option>
+                                    <option>3PL</option>
+                                    <option>배송대행</option>
+                                    <option>크로스도킹</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">창고 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select class="fSelect" style="width:150px;">
+                                    <option>-선택-</option>
+                                    <option>A창고</option>
+                                    <option>B창고</option>
+                                    <option>C창고</option>
+                                    <option>D창고</option>
+                                    <option>E창고</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">위치코드 존 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select class="fSelect" style="width:150px;">
+                                    <option>-선택-</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">서비스상태</th>
+                            <td>
+                                <select class="fSelect" style="width:150px;">
+                                    <option>대기</option>
+                                    <option>이용중</option>
+                                    <option>일시중지</option>
+                                    <option>해지</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상점대표자명 <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">대표상호 <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">사업자등록번호 <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>상품연동정보</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>상품연동정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">연동여부</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked"/> 연동안함</label>
+                                <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 연동함</label>
+                                <a href="#choiceLayer" class="btnNormal eLayerClick"><span>연동대상 선택</span></a>
+                                <a href="#none" class="btnNormal disabled"><span>연동대상 선택</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">연동대상</th>
+                            <td>$상점아이디($상점명)</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>처리비용</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>처리비용</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">예치금 사용 여부</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked"/> 사용안함</label>
+                                <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 사용함</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입고수수료</th>
+                            <td>
+                                <input type="text" class="fText right" style="width:80px;" value="0" /> 원/입고건수
+                                <span class="txtInfo">상품구분이 "3PL"인 경우에만 처리비용 발생</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">국내배송사</th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <select class="fSelect">
+                                            <option>-선택-</option>
+                                            <option>우체국</option>
+                                            <option>CJ대한통운</option>
+                                        </select>
+                                        수수료율 :
+                                        <input type="text" class="fText right" style="width:40px;" value="150" /> %
+                                        <a href="#none" class="btnIcon icoPlus"><span>추가</span></a>
+                                    </li>
+                                    <li class="gSingle">
+                                        <select class="fSelect">
+                                            <option>-선택-</option>
+                                            <option>우체국</option>
+                                            <option>CJ대한통운</option>
+                                        </select>
+                                        수수료율 :
+                                        <input type="text" class="fText right" style="width:40px;" value="150" /> %
+                                        <a href="#none" class="btnIcon icoDel"><span>삭제</span></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">해외배송사</th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <select class="fSelect">
+                                            <option>-선택-</option>
+                                            <option>우체국EMS</option>
+                                            <option>우정글로벌</option>
+                                            <option>한진</option>
+                                        </select>
+                                        수수료율 :
+                                        <input type="text" class="fText right" style="width:40px;" value="150" /> %
+                                        <a href="#none" class="btnIcon icoPlus"><span>추가</span></a>
+                                    </li>
+                                    <li class="gSingle">
+                                        <select class="fSelect">
+                                            <option>-선택-</option>
+                                            <option>우체국EMS</option>
+                                            <option>우정글로벌</option>
+                                            <option>한진</option>
+                                        </select>
+                                        수수료율 :
+                                        <input type="text" class="fText right" style="width:40px;" value="150" /> %
+                                        <a href="#none" class="btnIcon icoDel"><span>삭제</span></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                배송비테이블
+                                <div class="mTooltip gMedium">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">배송비 계산식 도움말</strong>
+                                            <ul class="mList">
+                                                <li>기본배송비(우체국EMS) = 배송사단가 * 수수료율 <br />기본배송비(그외) = 공급원가 * 수수료율</li>
+                                                <li>창고수익 = 기본배송비 - 공급원가</li>
+                                                <li>상점할인율(해외배송사) = 1 - 기본배송비/배송사단가</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </th>
+                            <td>
+                                <!--배송사 선택없음 -->
+                                <div class="mBoard typeFixed">
+                                    <table border="1" summary="">
+                                        <caption>배송비테이블</caption>
+                                        <colgroup>
+                                            <col style="width:130px" />
+                                            <col style="width:130px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">금액</th>
+                                                <th scope="col">배송사</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="right">
+                                            <tr>
+                                                <td class="left">배송사단가</td>
+                                                <td><span class="txtLight">-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">공급원가</td>
+                                                <td><span class="txtLight">0원</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">기본배송비</td>
+                                                <td><strong>0원</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">창고수익</td>
+                                                <td>0원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">상점할인율</td>
+                                                <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--배송사 모두 추가 -->
+                                <div class="mBoard typeFixed">
+                                    <table border="1" summary="">
+                                        <caption>배송비테이블</caption>
+                                        <colgroup>
+                                            <col style="width:130px" />
+                                            <col style="width:130px" />
+                                            <col style="width:130px" />
+                                            <col style="width:130px" />
+                                            <col style="width:130px" />
+                                            <col style="width:130px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">금액</th>
+                                                <th scope="col">우체국</th>
+                                                <th scope="col">CJ대한통운</th>
+                                                <th scope="col">우체국EMS</th>
+                                                <th scope="col">우정글로벌</th>
+                                                <th scope="col">한진</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="right">
+                                            <tr>
+                                                <td class="left">배송사단가</td>
+                                                <td><span class="txtLight">-</span></td>
+                                                <td><span class="txtLight">-</span></td>
+                                                <td><span class="txtLight">17,100원</span></td>
+                                                <td><span class="txtLight">17,100원</span></td>
+                                                <td><span class="txtLight">17,100원</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">공급원가</td>
+                                                <td><span class="txtLight">2,000원</span></td>
+                                                <td><span class="txtLight">1,800원</span></td>
+                                                <td><span class="txtLight">13,167원</span></td>
+                                                <td><span class="txtLight">10,920원</span></td>
+                                                <td><span class="txtLight">13,000원</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">기본배송비</td>
+                                                <td><strong>3,000원</strong></td>
+                                                <td><strong>2,700원</strong></td>
+                                                <td><strong>13,680원</strong></td>
+                                                <td><strong>11,794원</strong></td>
+                                                <td><strong>14,040원</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">창고수익</td>
+                                                <td>1,000원</td>
+                                                <td>900원</td>
+                                                <td>513원</td>
+                                                <td>874원</td>
+                                                <td>1,040원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">상점할인율</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>20%</td>
+                                                <td>31%</td>
+                                                <td>18%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>담당자정보</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>담당자정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">담당자명 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <input type="text" name="name1" class="fText" style="width:120px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상점 주소 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <input type="text" class="fText" readonly="readonly" style="width:45px;" /> -
+                                <input type="text" class="fText" readonly="readonly" style="width:45px;" />
+                                <a href="/suio/module/zipcode.html" onclick="window.open(this.href, 'zipcode', 'width=600, height=600'); return false;" target="_blank" title="새창 열림" class="btnNormal"><span>우편번호 검색<em class="icoLink"></em></span></a>
+                                <div class="gSingle"><input type="text" readonly="readonly" class="fText" style="width:340px;" /></div>
+                                <div class="gSingle"><input type="text" class="fText" style="width:340px;" /></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">휴대전화 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>010</option>
+                                    <option>011</option>
+                                    <option>016</option>
+                                    <option>017</option>
+                                    <option>108</option>
+                                    <option>109</option>
+                                </select> -
+                                <input type="text" class="fText" style="width:40px;"/> -
+                                <input type="text" class="fText" style="width:40px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일반전화</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>02</option>
+                                    <option>051</option>
+                                    <option>053</option>
+                                    <option>032</option>
+                                    <option>062</option>
+                                    <option>042</option>
+                                    <option>052</option>
+                                    <option>031</option>
+                                    <option>033</option>
+                                    <option>043</option>
+                                    <option>041</option>
+                                    <option>063</option>
+                                    <option>061</option>
+                                    <option>054</option>
+                                    <option>055</option>
+                                    <option>064</option>
+                                </select> -
+                                <input type="text" class="fText" style="width:40px;"/> -
+                                <input type="text" class="fText" style="width:40px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이메일 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <input type="text" name="name1" class="fText" style="width:120px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">비고</th>
+                            <td>
+                                <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 참고 : 해외배송사 저장 전 -->
+            <div class="section">
+                <div class="mTitle">
+                    <h2>해외배송추가정보</h2>
+                    <p>'처리비용'의 '해외배송사' 가 저장되면, 해외배송사별로 해외배송처리시 필요한 추가정보를 등록할 수 있습니다.</p>
+                </div>
+            </div><!-- //참고 -->
+
+            <!-- 참고 : 해외배송사 저장 후 -->
+            <div class="section">
+                <div class="mTitle">
+                    <h2>해외배송추가정보</h2>
+                    <ul>
+                        <li>기본값은 fastbox 정보가 자동입력되어 있습니다. 상점 정보로 수정이 필요한 경우, 수정하여 사용하면 됩니다.</li>
+                        <li>해외배송시 해당 택배사가 선택되면 저장된 정보가 자동입력됩니다.</li>
+                    </ul>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>해외배송추가정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">우체국</th>
+                            <td>
+                                <a href="#none" class="btnNormal"><span>해외배송 추가정보</span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div><!-- //참고 -->
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>정산정보</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>정산정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사업자등록번호</th>
+                            <td>
+                                <input type="text" name="name1" class="fText" style="width:170px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">은행명</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option selected="selected">-은행선택-</option>
+                                    <option>국민은행</option>
+                                    <option>신한은행</option>
+                                    <option>우리은행</option>
+                                    <option>우체국은행</option>
+                                    <option>농협</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">계좌번호</th>
+                            <td>
+                                <input type="text" name="name1" class="fText" style="width:170px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">예금주</th>
+                            <td>
+                                <input type="text" name="name1" class="fText" style="width:170px;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>수출신고 화주정보</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>수출신고 화주정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">수출신고 사용 여부</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" name="radio2" class="fChk" /> 사용함</label>
+                                <label class="gLabel"><input type="radio" name="radio2" class="fChk" /> 사용안함</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전자상거래서비스ID <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">통관고유부호 <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수출신고인부호 <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">간이수출신고인증키 <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">기본상품중량(kg) <strong class="icoRequired">필수</strong></th>
+                            <td><input type="text" class="fText" style="width:170px;" /></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>바코드인쇄</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>바코드인쇄</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">라벨용지 규격</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>가로 25mm X 세로 15mm</option>
+                                    <option>가로 40mm X 세로 20mm</option>
+                                    <option>가로 40mm X 세로 22mm</option>
+                                    <option>가로 50mm X 세로 30mm</option>
+                                    <option>가로 50mm X 세로 62mm</option>
+                                    <option>가로 60mm X 세로 50mm</option>
+                                    <option>가로 70mm X 세로 30mm</option>
+                                </select>
+                                <select class="fSelect">
+                                    <option>100장 단위로 인쇄 처리 (권장)</option>
+                                    <option>200장 단위로 인쇄 처리</option>
+                                    <option>300장 단위로 인쇄 처리</option>
+                                    <option>400장 단위로 인쇄 처리</option>
+                                    <option>500장 단위로 인쇄 처리</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">바코드타입</th>
+                            <td>
+                                <ul class="barcodeSelect">
+                                    <li>
+                                        <p><img src="../../img/img_barcode_print1.gif" alt="" /></p>
+                                        <label class="fChk"><input type="radio" name="radio7" checked="checked" /> A타입 (바코드)</label>
+                                    </li>
+                                    <li>
+                                        <p><img src="../../img/img_barcode_print2.gif" alt="" /></p>
+                                        <label class="fChk"><input type="radio" name="radio7" /> B타입 (바코드+표시1)</label>
+                                    </li>
+                                    <li>
+                                        <p><img src="../../img/img_barcode_print3.gif" alt="" /></p>
+                                        <label class="fChk"><input type="radio" name="radio7" /> C타입 (바코드+표시2)</label>
+                                    </li>
+                                    <li>
+                                        <p><img src="../../img/img_barcode_print4.gif" alt="" /></p>
+                                        <label class="fChk"><input type="radio" name="radio7" /> D타입 (바코드+표시3)</label>
+                                    </li>
+                                    <li>
+                                        <p><img src="../../img/img_barcode_print5.gif" alt="" /></p>
+                                        <label class="fChk"><input type="radio" name="radio7" /> E타입 (바코드+표시4)</label>
+                                    </li>
+                                    <li>
+                                        <p><img src="../../img/img_barcode_print6.gif" alt="" /></p>
+                                        <label class="fChk"><input type="radio" name="radio7" /> F타입 (바코드+표시4)</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">표시내용</th>
+                            <td>
+                                <div class="mBoard typeFixed">
+                                    <table border="1" summary="">
+                                        <caption>표시내용</caption>
+                                        <colgroup>
+                                            <col style="width:80px" />
+                                            <col style="width:80px" />
+                                            <col style="width:70px" />
+                                            <col style="width:100px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">표시구분</th>
+                                                <th scope="col">정렬</th>
+                                                <th scope="col">글씨크기</th>
+                                                <th scope="col">표시항목</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="center">
+                                            <tr>
+                                                <td>표시1</td>
+                                                <td>
+                                                    <select class="fSelect">
+                                                        <option>왼쪽</option>
+                                                        <option>가운데</option>
+                                                        <option>오른쪽</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="fSelect">
+                                                        <option>7pt</option>
+                                                        <option>8pt</option>
+                                                        <option>9pt</option>
+                                                        <option>10pt</option>
+                                                        <option>11pt</option>
+                                                        <option>12pt</option>
+                                                    </select>
+                                                </td>
+                                                <td class="left">
+                                                    <select class="fSelect">
+                                                        <option>상품명</option>
+                                                        <option>상품명/품목명</option>
+                                                        <option>상품코드</option>
+                                                        <option>바코드</option>
+                                                        <option>판매가</option>
+                                                        <option>위치코드</option>
+                                                        <option>창고</option>
+                                                        <option>입력문구</option>
+                                                        <option>없음</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>엑셀 다운로드 허용 IP 관리</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>IP 등록</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">IP 등록</th>
+                            <td>
+                                <input type="text" class="fText" style="width:200px;" value="" />
+                                <a href="#none" class="btnNormal"><span>등록</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">다운로드 허용 IP</th>
+                            <td>
+                                 <div class="mSelect gSmall gFunction eSelect">
+                                    <ul>
+                                        <li class="selected">
+                                            <strong>111.111.111.111</strong>
+                                            <button class="btnIcon icoDel"><span>삭제</span></button>
+                                        </li>
+                                        <li>
+                                            <strong>222.222.222.222</strong>
+                                            <button class="btnIcon icoDel"><span>삭제</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>변경 내역</h2>
+                    <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>전체 보기<em class="icoLink"></em></span></a>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">최근 <strong>4</strong>개 총 <strong>40</strong>개</p>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>변경 내역</caption>
+                    <colgroup>
+                        <col class="time" />
+                        <col style="width:150px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><strong class="array descend">저장일시<button type="button">내림차순 정렬</button></strong></th>
+                            <!--<th scope="col"><strong class="array ascend">저장일시<button type="button">오름차순 정렬</button></strong></th>-->
+                            <th scope="col">작성자</th>
+                            <th scope="col">내용</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>2014-03-05 15:08:09</td>
+                            <td>나담당</td>
+                            <td class="left">
+                                <ul class="mList typeMore">
+                                    <li>서비스상태 : 이용중지</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2014-03-05 15:08:09</td>
+                            <td>김담당</td>
+                            <td class="left">
+                                <ul class="mList typeMore">
+                                    <li>상품구분 : 배송대행</li>
+                                    <li>국내배송사 : CJ대한통운 150%</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2014-03-05 15:08:09</td>
+                            <td>김담당</td>
+                            <td class="left">
+                                <ul class="mList typeMore">
+                                    <li>서비스상태 : 이용중</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2014-03-05 15:08:09</td>
+                            <td>김담당</td>
+                            <td class="left">
+                                <ul class="mList typeMore">
+                                    <li>서비스상태 : 대기</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mButton gCenter">
+                <a href="#none" class="btnSubmit"><span>저장</span></a>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>바코드인쇄 안내</h2>
+                <div class="content">
+                    <ul>
+                        <li>잉크젯 프린터기로 인쇄된 바코드는 스캔인식율이 낮으므로 <span class="txtEm">레이져 프린터</span>로 인쇄를 <span class="txtEm">권장</span>합니다.</li>
+                        <li>바코드타입을 A~F타입 중 하나를 선택한 후 각 표시 영역에 대한 항목 설정이 가능합니다. </li>
+                        <li>라벨용지 중 '가로 40mm X 세로 20mm'의 경우 E,F 타입은 선택할 수 없으며, 인쇄 타입 A,B,C,D 선택하여 사용 가능합니다.</li>
+                        <li>라벨용지 중 '가로 25mm X 세로 15mm'의 경우 D,E,F 타입은 선택할 수 없으며, 인쇄 타입 A,B,C 선택하여 사용 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+<?php require_once('../../include/footer.html'); ?>

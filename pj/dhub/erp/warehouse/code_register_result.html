@@ -1,0 +1,151 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>위치코드엑셀등록 결과</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">창고운영</a></li>
+            <li><a href="#none">위치코드</a></li>
+            <li><a href="#none">위치코드엑셀등록</a></li>
+            <li class="now" title="현재 페이지">위치코드엑셀등록 결과</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>창고정보</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>창고정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">창고</th>
+                <td>A창고</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>엑셀업로드 내역</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>엑셀업로드 내역</caption>
+        <tbody>
+            <tr>
+                <th scope="row">구분</th>
+                <td>
+                    <label class="gLabel"><input type="radio" name="radioTest1" class="fChk" /> 전체</label>
+                    <label class="gLabel"><input type="radio" name="radioTest1" class="fChk" /> 성공</label>
+                    <label class="gLabel"><input type="radio" name="radioTest1" class="fChk" checked="checked" /> 실패</label>
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>엑셀등록결과</h2>
+    </div>
+    <div class="mState gMerge">
+        <div class="gRight">
+            <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>실패사유 안내</caption>
+        <colgroup>
+            <col style="width:50px;" />
+            <col style="width:120px" />
+            <col style="width:180px" />
+            <col style="width:120px" />
+            <col style="width:auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col"><strong class="array ascend">엑셀 행번호<button type="button">오름차순 정렬</button></strong></th>
+                <!--<th scope="col"><strong class="array descend">엑셀 행번호<button type="button">내림차순 정렬</button></strong></th>-->
+                <th scope="col">위치코드</th>
+                <th scope="col">구분</th>
+                <th scope="col">결과</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td>1</td>
+                <td class="right">5</td>
+                <td>0A-TK1-2</td>
+                <td>실패</td>
+                <td class="left">중복 위치코드</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="right">9</td>
+                <td>가열-abc-001</td>
+                <td>실패</td>
+                <td class="left">영문대문자/숫자/대쉬(-)만 입력가능</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="right">10</td>
+                <td>012A-001-0001</td>
+                <td>실패</td>
+                <td class="left">각(존-로케이션-단) 최대 3자리 초과</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="right">12</td>
+                <td>012A-001-004</td>
+                <td>성공</td>
+                <td class="left"></td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="5">결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnEm"><span>위치코드 목록보기</span></a>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

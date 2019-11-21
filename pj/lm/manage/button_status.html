@@ -1,0 +1,175 @@
+<?php include('../include/header.html');
+?>
+ <!-- container -->
+ <div id="container">
+     <?php include('../include/sidebar.html'); ?>
+     <!-- content -->
+     <div id="content">
+         <div class="headingArea">
+             <div class="mTitle">
+                 <h1>버튼 권한보유 현황</h1>
+             </div>
+         </div>
+         <div class="section">
+             <div class="mTitle">
+                 <h2>검색</h2>
+             </div>
+             <div class="mBoard gSmall">
+                 <table border="1" summary="">
+                 <caption>사용자 검색</caption>
+                 <tbody>
+                 <tr>
+                     <th scope="row">소속</th>
+                     <td>
+                         <select class="fSelect">
+                             <option>- 전체 -</option>
+                             <option>본사</option>
+                             <option>지사(연길)</option>
+                             <option>지사(필리핀)</option>
+                         </select>
+                         <select class="fSelect">
+                             <option>-전체-</option>
+                             <option>HR팀</option>
+                             <option>BPM팀</option>
+                             <option>전략기획팀</option>
+                             <option>경영지원팀</option>
+                             <option>EC서비스팀</option>
+                             <option>호스팅팀</option>
+                             <option>글로벌비즈니스팀</option>
+                             <option>SCM팀</option>
+                             <option>솔루션디자인팀</option>
+                             <option>마케팅센터</option>
+                             <option>개발팀</option>
+                             <option>기술연구소</option>
+                             <option>인프라팀</option>
+                             <option>통합서비스운영팀</option>
+                             <option>마케팅 커뮤니케이션팀</option>
+                             <option>제휴팀</option>
+                        </select>
+                         <select class="fSelect">
+                             <option>- 전체 -</option>
+                         </select>
+                         <select class="fSelect">
+                             <option>- 전체 -</option>
+                         </select>
+                         <select class="fSelect">
+                             <option>- 전체 -</option>
+                         </select>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">검색어</th>
+                     <td>
+                         <select class="fSelect">
+                             <option>사원 이름</option>
+                             <option>사원 아이디</option>
+                         </select>
+                         <input type="text" class="fText" style="width:200px" />
+                     </td>
+                 </tr>
+                 </tbody>
+                 </table>
+             </div>
+             <div class="mButton gCenter">
+                 <a href="#none" class="btnSearch"><span>검색</span></a>
+             </div>
+         </div>
+         <div class="section">
+             <div class="mTitle">
+                 <h2>현황</h2>
+             </div>
+             <div class="mState">
+                 <div class="gLeft">
+                     <p class="total">[총 권한 보유 버튼 수 <strong>300</strong>명]</p>
+                 </div>
+                 <div class="gRight">
+                     <select class="fSelect">
+                         <option>10개씩보기</option>
+                         <option selected="selected">20개씩보기</option>
+                         <option>50개씩보기</option>
+                         <option>100개씩보기</option>
+                         <option>전체보기</option>
+                     </select>
+                 </div>
+             </div>
+             <div class="mCtrl typeHeader">
+                <div class="gLeft">
+                    <span class="txtLess">선택한 사원의</span>
+                    <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 권한삭제</span></a>
+                </div>
+            </div>
+             <div class="mBoard">
+                 <table border="1" summary="" class="eChkColor">
+                 <caption>검색 상세 목록</caption>
+                 <colgroup>
+                     <col class="chk" />
+                     <col style="width:60px" />
+                     <col class="time" />
+                     <col style="width:110px;" />
+                     <col style="width:100px;" />
+                     <col style="width:130px;" />
+                     <col style="width:auto" />
+                 </colgroup>
+                 <thead>
+                     <tr>
+                         <th scope="col"><input type="checkbox" class="allChk" /></th>
+                         <th scope="col">No</th>
+                         <th scope="col">등록일</th>
+                         <th scope="col">사원 아이디</th>
+                         <th scope="col">사원 이름</th>
+                         <th scope="col">사원 IP</th>
+                         <th scope="col">소속</th>
+                     </tr>
+                 </thead>
+                 <tbody class="center middle">
+                     <tr>
+                         <td><input class="rowChk" type="checkbox" /></td>
+                         <td>300</td>
+                         <td>2015-03-11 15:00</td>
+                         <td>ejkim</td>
+                         <td>김은주</td>
+                         <td>123.333.333.33</td>
+                         <td class="left">본사&gt; 솔루션디자인팀&gt; 솔루션기획&gt; 솔루션기획3팀</td>
+                     </tr>
+                     <tr>
+                         <td><input class="rowChk" type="checkbox" /></td>
+                         <td>299</td>
+                         <td>2015-03-10 16:00</td>
+                         <td>ejkim01</td>
+                         <td>김은진</td>
+                         <td>123.333.333.33</td>
+                         <td class="left">본사&gt; 솔루션디자인팀&gt; 솔루션기획&gt; 솔루션기획2팀&gt; 파트1</td>
+                     </tr>
+                     <tr>
+                         <td><input class="rowChk" type="checkbox" /></td>
+                         <td>298</td>
+                         <td>2015-02-09 22:01</td>
+                         <td>cskim</td>
+                         <td>김철수</td>
+                         <td>123.333.333.33</td>
+                         <td class="left">본사&gt; 솔루션디자인팀&gt; 솔루션기획&gt; 솔루션기획3팀</td>
+                     </tr>
+                 </tbody>
+                 </table>
+                 <p class="empty">검색 결과가 없습니다.</p>
+             </div>
+             <div class="mPaginate">
+                 <a href="#none" class="prev">이전 10페이지</a>
+                 <ol>
+                     <li><a href="#none">1</a></li>
+                     <li><a href="#none">2</a></li>
+                     <li><strong title="현재페이지">3</strong></li>
+                     <li><a href="#none">4</a></li>
+                     <li><a href="#none">5</a></li>
+                     <li><a href="#none">6</a></li>
+                     <li><a href="#none">7</a></li>
+                     <li><a href="#none">8</a></li>
+                     <li><a href="#none">9</a></li>
+                     <li><a href="#none">10</a></li>
+                 </ol>
+                 <a href="#none" class="next">다음 10페이지</a>
+             </div>
+         </div>
+     </div><!-- //content -->
+ </div><!-- //container -->
+<?php include('../include/footer.html'); ?>

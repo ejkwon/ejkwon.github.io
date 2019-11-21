@@ -1,0 +1,32 @@
+/* 기본 - 가변형 */
+/* 네이비톤 */
+.tab.typeStrong { width:100%; font-size:13px; }
+.tab.typeStrong ul { border-bottom:1px solid #4a5164; }
+.tab.typeStrong ul:after { content:""; display:block; clear:both; }
+.tab.typeStrong li { float:left; width:50%; height:35px; border-top:1px solid #ececec; font-size:0; text-align:center; vertical-align:middle; background:#fff; }
+.tab.typeStrong li.selected { border-top-color:#4a5164; background:#4a5164; }
+.tab.typeStrong li a { display:inline-block; width:100%; border-left:1px solid #ececec; color:#000; font-size:13px; line-height:35px; }
+.tab.typeStrong li:first-child a { border-left:0; }
+.tab.typeStrong li.selected a { border-left:0; color:#fff; font-weight:bold; }
+/* 그레이톤 */
+.tab.typeNormal { width:100%; font-size:13px; }
+.tab.typeNormal ul { height:36px; border:1px solid #c8cdd2; border-bottom:0; font-size:0; }
+.tab.typeNormal ul:after { content:""; display:block; clear:both; }
+.tab.typeNormal li { float:left; width:25%; height:36px; text-align:center; vertical-align:middle; background:#f1f1f1; }
+.tab.typeNormal li.selected { background:#fff; }
+.tab.typeNormal li a { display:inline-block; width:100%; border-left:1px solid #c8cdd2; border-bottom:1px solid #c8cdd2; color:#333; font-size:14px; line-height:35px; }
+.tab.typeNormal li:first-child a { border-left:0; }
+.tab.typeNormal li.selected a { border-bottom:0; color:#333; font-weight:bold; }
+
+/* 고정형 */
+/* 네이비톤  */
+.tab.typeStrong.gFix ul { border-left:1px solid #ececec;  }
+.tab.typeStrong.gFix li { width:auto; margin:0 0 0 -1px; }
+.tab.typeStrong.gFix li:first-child { margin-left:0; }
+.tab.typeStrong.gFix li a { width:auto; min-width:40px; padding:0 7px; border-right:1px solid #ececec; }
+.tab.typeStrong.gFix li.selected a { border-left:1px solid #4a5164; border-right-color:#4a5164; }
+/* 그레이톤 */
+.tab.typeNormal.gFix ul { border:0; border-left:1px solid #c8cdd2; }
+.tab.typeNormal.gFix li { width:auto; }
+.tab.typeNormal.gFix li a { width:auto; min-width:40px; padding:0 7px; margin:0 0 0 -1px; border:1px solid #c8cdd2; }
+.tab.typeNormal.gFix li.selected a { border-bottom:1px solid #fff; }

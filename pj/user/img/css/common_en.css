@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* mBoard */
+.mBoard th { width:150px; }
+
+/* 약관 */
+.termArea[class*="grid"] .mTerm h3 { height:32px; }
+
+/* 도움말 */
+.mHelp li dt { width:140px; }
+.mHelp li dd { padding:0 0 0 140px; }
+
+/* ====================================== Media Query ========================================== */
+
+/* PC & Mobile */
+@media all and (max-width:977px) {
+}
+
+/* Mobile */
+@media all and (max-width:767px) {
+  /* mBoard */
+  .mBoard th { width:63px; }
+  /* 약관 */
+  .termArea[class*="grid"] .mTerm h3 { padding-bottom:7px; }
+}
+
+/* Mobile */
+@media all and (max-width:480px) {
+  /* footer */
+  #footer .related { top:122px; }
+  #footer .inner .util li { width:50%; }
+  #footer .inner .util li:nth-child(1) a,
+  #footer .inner .util li:nth-child(3) a,
+  #footer .inner .util li:nth-child(5) a { border-left-width:0; }
+  #footer .inner .util li:nth-child(4) a { border-left-width:1px; }
+}

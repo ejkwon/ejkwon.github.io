@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>솔루션 퍼블리싱가이드</title>
+<link rel="stylesheet" type="text/css" href="/guide/ui/common.css" media="all" />
+<link href="icon.png" rel="apple-touch-icon"></link>
+<link href="icon.png" rel="shortcut icon"></link>
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/guide/ui/ui.js"></script>
+</head>
+
+<body id="main">
+<div id="wrap">
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/menu.html'); ?>
+
+    <div id="contents">
+        <div class="mTitle">
+            <h1>EC솔루션</h1>
+        </div>
+
+        <div class="mTitle">
+            <h2>EC어드민</h2>
+        </div>
+
+        <table border="1" class="mTable eHover" summary="">
+            <caption>진행중인 프로젝트</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:200px" />
+                <col style="width:200px" />
+                <col style="width:120px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">서비스명</th>
+                    <th scope="col">디렉토리</th>
+                    <th scope="col">퍼블리싱 가이드</th>
+                    <th scope="col">프로젝트 설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>EC쇼핑몰 어드민</td>
+                    <td><a href="/smartAdmin/dashboard">smartAdmin</a></td>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 PC버전, 부가서비스와 마켓통합관리 메뉴는 EC어드민에 있지만 별도로 배포함</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 공통 &gt; CRM </td>
+                    <td><a href="/ec/common/crm">ec &gt; common &gt; crm</a></td>
+                    <td class="center">-</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 공통 &gt; 공지</td>
+                    <td><a href="/ec/common/notice">ec &gt; common &gt; notice</a></td>
+                    <td class="center">-</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 상점관리</td>
+                    <td><a href="/ec/shop">ec &gt; shop</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=592740554" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 상품관리</td>
+                    <td><a href="/ec/product/">ec &gt; product</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=652415753" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 주문관리</td>
+                    <td><a href="/ec/order/">ec &gt; order</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=549357661" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 정산관리</td>
+                    <td><a href="/ec/calculate/">ec &gt; calculate</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=581404906" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 고객</td>
+                    <td><a href="/ec/member/">ec &gt; member</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=523438881" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 게시판</td>
+                    <td><a href="/ec/community/">ec &gt; community</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=527665905" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 디자인관리</td>
+                    <td><a href="/ec/design/">ec &gt; design</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=458326111" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 모바일쇼핑몰</td>
+                    <td><a href="/ec/mobile/">ec &gt; mobile</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=458326111" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>EC쇼핑몰 어드민 &gt; 프로모션</td>
+                    <td><a href="/ec/promotion/">ec &gt; promotion</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=598409988" target="_blank">[가이드]</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>부가서비스</td>
+                    <td><a href="/ec/bm/">bm</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>마켓통합관리</td>
+                    <td><a href="/ec/market/">market</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>FTP</td>
+                    <td><a href="/ec/ftp/">ftp</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>접속통계</td>
+                    <td><a href="/ec/report/">report</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>EC쇼핑몰 모바일어드민</td>
+                    <td><a href="/ec_mobile/index.php">ec_mobile</a></td>
+                    <td class="center"><a href="/ec_mobile/guide/icon.html">[가이드]</a></td>
+                    <td>EC 몰어드민 모바일 버전</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h2>EC프론트</h2>
+        </div>
+        <table border="1" class="mTable eHover" summary="">
+            <caption>진행중인 프로젝트</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:200px" />
+                <col style="width:200px" />
+                <col style="width:120px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">서비스명</th>
+                    <th scope="col">디렉토리</th>
+                    <th scope="col">퍼블리싱 가이드</th>
+                    <th scope="col">프로젝트 설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>EC쇼핑몰 프론트</td>
+                    <td><a href="/ec_front/solution" target="_blank">solution</a></td>
+                    <td class="center">-</td>
+                    <td>
+                        <p>EC프론트에서 사용되는 솔루션 화면</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>EC쇼핑몰 프론트</td>
+                    <td><a href="http://uidevdmp.cafe24.com/" target="_blank">http://uidevdmp.cafe24.com</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=78349624" target="_blank">[매뉴얼]</a></td>
+                    <td>UI개발팀 테스트몰. FE 서버에서 관리하지 않으며, 자세한 내용은 업무매뉴얼은 위키 매뉴얼을 참고한다</td>
+                </tr>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>엘라스틱 검색</td>
+                    <td>elastic</td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=666047141" target="_blank">[제작정보]</a></td>
+                    <td>
+                        <p>- 최종 파일관리: D:\fe\ec_front\elastic</p>
+                        <p>- 미리보기: <a href="http://skin-skin7--shop2.uidevsmart.cafe24.com/category/%EB%8C%80%EB%B6%84%EB%A5%98-outerwear/24/" target="_blank">[uidevsmart PC]</a>
+                        <a href="http://skin-mobile3--shop2.uidevsmart.cafe24.com/product/list_thumb.html?cate_no=24" target="_blank">[uidevsmart Mobile]</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>리뷰톡톡</td>
+                    <td>reviewtalk</td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=701273500" target="_blank">[관련정보]</a></td>
+                    <td>
+                        <p>- 최종 파일관리: D:\fe\ec_front\reviewtalk</p>
+                        <ul>
+                            <li>한국어
+                                [<a href="http://skin-skin20.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">uidevsmart PC</a>]
+                                [<a href="http://skin-mobile15.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">uidevsmart Mobile</a>]
+                            </li>
+                            <li>영어
+                                [<a href="http://skin-skin16--shop3.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">PC</a>]
+                                [<a href="http://skin-mobile11--shop3.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">Mobile</a>]
+                             </li>
+                             <li>일본어
+                                [<a href="http://skin-skin18--shop5.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">PC</a>]
+                                [<a href="http://skin-mobile13--shop5.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">Mobile</a>]
+                             </li>
+                             <li>중국어간체
+                                [<a href="http://skin-skin17--shop4.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">PC</a>]
+                                [<a href="http://skin-mobile12--shop4.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">Mobile</a>]
+                             </li>
+                             <li>중국어번체
+                                [<a href="http://skin-skin19--shop6.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">PC</a>]
+                                [<a href="http://skin-mobile14--shop6.uidevsmart.cafe24.com/board/smartreview/list.html" target="_blank">Mobile</a>]
+                             </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h2>EC 마이크로서비스</h2>
+        </div>
+        <table border="1" class="mTable eHover" summary="">
+            <caption>진행중인 프로젝트</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:200px" />
+                <col style="width:200px" />
+                <col style="width:120px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">서비스명</th>
+                    <th scope="col">디렉토리</th>
+                    <th scope="col">퍼블리싱 가이드</th>
+                    <th scope="col">프로젝트 설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>이벤트팩토리</td>
+                    <td><a href="/ec_micro/eventFactory/" target="_blank">eventFactory</a></td>
+                    <td class="center">-</td>
+                    <td>
+                        <p>고객참여도 향상을 위한 정형화된 이벤트툴로 어드민은 내부에서만 사용함</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>통합멤버십</td>
+                    <td><a href="/ec_micro/membership/index.html" target="_blank">membership</a></td>
+                    <td class="center"><a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=875303274" target="_blank">[가이드]</a></td>
+                    <td>쇼핑몰 간 공통으로 혜택을 통합하여 관리하는 서비스 사이트</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h2>EC스마트디자인</h2>
+            <p>스마트디자인으로 제작된 서비스사이트. EC서비스가 아니지만 편의상 한곳에서 관리한다. <a href="https://wiki.simplexi.com/pages/viewpage.action?pageId=808192305" target="_blank">[서비스 접속정보]</a></p>
+        </div>
+        <table border="1" class="mTable eHover" summary="">
+            <caption>진행중인 프로젝트</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:200px" />
+                <col style="width:200px" />
+                <col style="width:120px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">서비스명</th>
+                    <th scope="col">디렉토리</th>
+                    <th scope="col">퍼블리싱 가이드</th>
+                    <th scope="col">프로젝트 설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">스마트디자인</td>
+                    <td>EC서포트</td>
+                    <td><a href="http://ecsupport.cafe24.com/" target="_blank">http://ecsupport.cafe24.com</a></td>
+                    <td class="center">-</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center">스마트디자인</td>
+                    <td>스마트디자인 서포트</td>
+                    <td><a href="http://sdsupport.cafe24.com/" target="_blank">http://sdsupport.cafe24.com</a></td>
+                    <td class="center">-</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center">스마트디자인</td>
+                    <td>교육센터</td>
+                    <td><a href="http://adminedu.cafe24.com/" target="_blank">http://edu.cafe24.com/</a></td>
+                    <td class="center">-</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center">스마트디자인</td>
+                    <td>JC어패럴</td>
+                    <td><a href="http://jcapparel24.cafe24.com" target="_blank">http://jcapparel24.cafe24.com</a></td>
+                    <td class="center">-</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h2>기능개선 패턴</h2>
+        </div>
+        <table border="1" class="mTable eHover" summary="">
+            <caption>진행중인 프로젝트</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:200px" />
+                <col style="width:200px" />
+                <col style="width:120px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">서비스명</th>
+                    <th scope="col">디렉토리</th>
+                    <th scope="col">퍼블리싱 가이드</th>
+                    <th scope="col">프로젝트 설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">가이드</td>
+                    <td>Font Guide</td>
+                    <td><a href="/ec_guide/font">font</a></td>
+                    <td></td>
+                    <td>한국어 및 해외 언어들의 폰트 가이드</td>
+                </tr>
+                <tr>
+                    <td class="center">가이드</td>
+                    <td>Flag SET</td>
+                    <td><a href="/ec_guide/flag.html">Flag</a></td>
+                    <td></td>
+                    <td>해외 언어가 추가되거나, 국기 사이즈가 변경될때 추가되는 리스트</td>
+                </tr>
+                <tr>
+                    <td class="center">가이드</td>
+                    <td>PG SET</td>
+                    <td><a href="/ec_guide/pg.html">pg</a></td>
+                    <td></td>
+                    <td>PG가 추가 될때마다 변경되어야 하는 리스트</td>
+                </tr>
+                <tr>
+                    <td class="center">가이드</td>
+                    <td>SNS 로그인 연동</td>
+                    <td><a href="/ec_guide/sns.html">SNS</a></td>
+                    <td></td>
+                    <td>로그인 연동 관리에 SNS 추가 될때마다 변경되어야 하는 리스트</td>
+                </tr>
+                <tr>
+                    <td class="center">가이드</td>
+                    <td>MARKET SET</td>
+                    <td><a href="/ec_guide/market.html">market</a></td>
+                    <td></td>
+                    <td>오픈마켓이 추가 될때마다 변경되어야 하는 리스트</td>
+                </tr>
+                <tr>
+                    <td class="center">가이드</td>
+                    <td>멀티쇼핑몰 SET</td>
+                    <td><a href="/ec_guide/multi.html">multi</a></td>
+                    <td></td>
+                    <td>멀티쇼핑몰 언어가 추가 될때마다 변경되어야 하는 리스트</td>
+                </tr>
+            </table>
+        </table>
+
+        <div class="mTitle">
+            <h2>EC (구)어드민 기능개선</h2>
+        </div>
+        <table border="1" class="mTable eHover" summary="">
+            <caption>진행중인 프로젝트</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:200px" />
+                <col style="width:200px" />
+                <col style="width:120px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">서비스명</th>
+                    <th scope="col">디렉토리</th>
+                    <th scope="col">퍼블리싱 가이드</th>
+                    <th scope="col">프로젝트 설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">서비스솔루션</td>
+                    <td>EC (구)어드민 기능개선</td>
+                    <td><a href="/ec_old">ec admin</a></td>
+                    <td></td>
+                    <td>EC 어드민 중 비표준으로 제작되어 화면 내에서 소스보기후 작업해서 전달하는 페이지. 형상관리 대상아님</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer">
+        <p>copyright&copy; <strong>Cafe24 Corp.</strong> All rights Reserved.</p>
+        <p class="guide"><a href="/guide/uidev_guide.pdf">[가이드 개요 다운로드]</a></p>
+    </div>
+</div>
+</body>
+</html>

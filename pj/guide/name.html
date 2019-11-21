@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>솔루션 퍼블리싱가이드</title>
+<link rel="stylesheet" type="text/css" href="ui/common.css" media="all" />
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="ui/ui.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1 class="logo">
+            <a href="#none"><span class="logoSub">Web Publisher</span> :: EJ</a>
+        </h1>
+        <ul>
+            <li><a href="name.html" target="_blank">명명규칙</a> /</li>
+            <li><a href="http://wiki.simplexi.com:8080/pages/viewpage.action?pageId=50823847" target="_blank">UI표준화 WIKI</a> /</li>
+            <li><a href="module.html" target="_blank">Module</a> /</li>
+            <li><a href="/pj/suio/include/layout.php?MODULE=main" target="_blank">SUIO</a></li>
+        </ul>
+    </div>
+
+    <div id="contents">
+        <div class="mTab typeNav">
+            <ul>
+                <li class="selected"><a href="name.html">명명규칙</a></li>
+                <li><a href="module.html">MODULE</a></li>
+                <li><a href="/pj/suio/" target="_blank">SUIO</a></li>
+            </ul>
+        </div>
+
+        <div class="mTitle">
+            <h1>명명 규칙</h1>
+        </div>
+
+        <div class="structure">
+            <p class="img"><img src="img/page.gif" alt=""></p>
+            <div class="mTitle">
+                <h2>컨텐츠의 구성</h2>
+            </div>
+            <table border="1" class="mTable" summary="">
+                <caption>컨텐츠의 구성</caption>
+                <colgroup>
+                    <col width="90px" />
+                    <col width="auto" />
+                    <col width="400px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">명칭</th>
+                        <th scope="col">정의</th>
+                        <th scope="col">규칙</th>
+                    </tr>
+                </head>
+                <tbody>
+                    <tr>
+                        <td>page</td>
+                        <td>
+                            사용자가 웹사이트에서 보이는 한 화면단위이며, 즉 하나의 html 이며, <br />
+                            제목+ 컨텐츠 + 전체를 컨트롤 하는 버튼으로 구성 되어있다.
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>section</td>
+                        <td>
+                            모듈의 모음으로 한 row 단위로 구성된다. <br />
+                            해당 class는 유일하게 사용하며, 다른 어떤 요소에도 사용을 금한다.
+                        </td>
+                        <td>.section</td>
+                    </tr>
+                    <tr>
+                        <td>module</td>
+                        <td>
+                            기능의 단위를 의미하며, 프로그래밍적인 의미의 기능과 요소의 묶음을 포함한다. (ex, 타이틀)
+                            <strong class="title">모듈의 정의(우선순위)</strong>
+                            <ol>
+                                <li>1. 공통으로 사용 될 경우 모듈로 처리한다.</li>
+                                <li>2. 기능 혹은 데이터로 처리할 경우 모듈로 처리한다.</li>
+                                <li>3. 그 외 단순 컨텐츠 일 경우 : 모듈에서 제외</li>
+                        </td>
+                        <td>
+                            일반모듈: .m + [명시적인단어] (예: mTab)<br />
+                            알럿창용 모듈: mAlert + [명시적인단어]  (예: mAlertTab)<br />
+                            레이어팝업용 모듈: mLayer + [명시적인단어]  (예: mLayerTab)<br />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mTitle">
+                <h2>화면 구성</h2>
+                <p>컨텐츠의 배치, 여백을 정의하며 쓰임새에 따라 아래 4가지 형태로 분리된다.</p>
+            </div>
+            <table border="1" class="mTable" summary="">
+                <caption>화면 구성</caption>
+                <colgroup>
+                    <col width="90px" />
+                    <col width="auto" />
+                    <col width="400px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">명칭</th>
+                        <th scope="col">정의</th>
+                        <th scope="col">규칙</th>
+                    </tr>
+                </head>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">area</td>
+                        <td>배경이나 float해제 relative min-height 등 디자인을 위한 빈 div가 필요한 경우가 발생시, area로 그룹핑 하여 사용한다.</td>
+                        <td>모듈을 감싸는 경우: [명시적인단어]+Area</td>
+                    </tr>
+                    <tr>
+                        <td>개발이 필요한 기능의 단위가 아닌, 컨텐츠 단위의 묶음이 필요할때 사용한다.</td>
+                        <td>[명시적인단어]+Area</td>
+                    </tr>
+                    <tr>
+                        <td>모듈안에 사용 될때는 .inner로 통일한다.</td>
+                        <td>모듈 내부에 위치하는 경우: .inner</td>
+                    </tr>
+                    <tr>
+                        <td>column</td>
+                        <td>한 Row에 하나의 섹션(모듈)이 삽입되지 않고, 2개 이상의 섹션(모듈)이 배치될때 사용된다. 섹션(모듈)에만 적용 할 수 있으며, 단순 엘리먼트 단위에선 사용 될 수 없다. </td>
+                        <td>.column1 ~ .column16</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">grid</td>
+                        <td>
+                            모듈단위가 아닌 엘리먼트 단위의 요소의 묶음을 포함하는 경우에 사용된다. <br />
+                            부모요소의 float clear를 위해 사용되거나 배경등이 필요할때 사용된다.
+                        </td>
+                        <td>.g[명시적인단어]의 조합</td>
+                    </tr>
+                    <tr>
+                        <td>모듈이 아닌 엘리먼트의 여백을 구하고자 할때 사용된다. 모듈이 여백을 가질때는 모듈의 class에서 여백을 지정한다.<br />여백은 bottom 에 정의하는 것을 우선으로 하며, 특수한 경우에만 방향을 지정하는 class를 추가한다. </td>
+                        <td>.gSingle, gDouble, gTriple, gSingleTop</td>
+                    </tr>
+                    <tr>
+                        <td>툴팁이나 레이어팝업등 동일한 UI에서 컨텐츠 폭을 Variation하기 위해 사용된다. </td>
+                        <td>.gSmall, .gMedium, .gLarge</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mTitle">
+                <h2>이벤트 적용</h2>
+            </div>
+            <table border="1" class="mTable" summary="">
+                <caption>이벤트 적용</caption>
+                <colgroup>
+                    <col width="90px" />
+                    <col width="auto" />
+                    <col width="400px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">명칭</th>
+                        <th scope="col">정의</th>
+                        <th scope="col">규칙</th>
+                    </tr>
+                </head>
+                    <tbody>
+                    <tr>
+                        <td>event</td>
+                        <td>
+                            사용자의 액션에 따른 효과가 있는 경우에 사용한다. <br />
+                            (예: 팝업을 닫거나, td가 hover될때, tr의 background가 변경 될때)<br />
+                            javascript의 trigger로 사용되며, 어떠한 디자인 속성도 가지지 않는다.
+                        </td>
+                        <td>event의 e를 접두어로 사용한다. <br />.e[trigger]의 조합</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Copyright&copy; <strong>EonJeong Kwon.</strong> All rights Reserved.</p>
+    </div>
+</div>
+</body>
+</html>

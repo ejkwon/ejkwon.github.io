@@ -1,0 +1,163 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>상품엑셀등록</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">상품</a></li>
+            <li class="now" title="현재 페이지">상품엑셀등록</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>엑셀양식</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>엑셀양식</caption>
+        <tbody>
+            <tr>
+                <th scope="row">엑셀양식 다운로드</th>
+                <td>
+                    <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span><em class="icoXls"></em> 양식 다운로드 <em class="icoLink"></em></span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">엑셀양식</th>
+                <td>
+                    <select class="fSelect">
+                        <option>기본양식</option>
+                        <option>동대문25호</option>
+                        <option>평화 나열 309호</option>
+                        <option>천사몰</option>
+                        <option>에이비씨</option>
+                        <option>울랄라</option>
+                    </select>
+                    <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>양식관리 <em class="icoLink"></em></span></a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>항목 엑셀매칭</h2>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>항목 엑셀매칭</caption>
+        <colgroup>
+            <col style="width:50%" />
+            <col style="width:50%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">항목</th>
+                <th scope="col">엑셀 열</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">상점상품코드</th>
+                <td>A열</td>
+            </tr>
+            <tr>
+                <th scope="row">상품명</th>
+                <td>B열</td>
+            </tr>
+            <tr>
+                <th scope="row">공급사상품명</th>
+                <td>C열</td>
+            </tr>
+            <tr>
+                <th scope="row">공급사명</th>
+                <td>D열</td>
+            </tr>
+            <tr>
+                <th scope="row">판매가</th>
+                <td>E열</td>
+            </tr>
+            <tr>
+                <th scope="row">상품이미지URL</th>
+                <td>F열</td>
+            </tr>
+            <tr>
+                <th scope="row">품목명</th>
+                <td>G열</td>
+            </tr>
+            <tr>
+                <th scope="row">위치코드</th>
+                <td>I열</td>
+            </tr>
+            <tr>
+                <th scope="row">바코드</th>
+                <td>J열</td>
+            </tr>
+            <tr>
+                <th scope="row">입고가</th>
+                <td>K열</td>
+            </tr>
+            <tr>
+                <th scope="row">현재재고</th>
+                <td>L열</td>
+            </tr>
+            <tr>
+                <th scope="row">HS CODE</th>
+                <td>M열</td>
+            </tr>
+            <tr>
+                <th scope="row">상품소재</th>
+                <td>N열</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>엑셀 업로드</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>엑셀 업로드</caption>
+        <tbody>
+            <tr>
+                <th scope="row">엑셀파일 선택</th>
+                <td>
+                    <input type="file" size="22" class="fFile" style="width:250px;" />
+                    <p class="txtInfo">한 번에 최대 1,000개까지만 업로드할 수 있습니다.</p>
+                    <ul class="mAttach typeFile">
+                        <li><a href="파일명.xls" class="attached">파일명.xls</a> <button type="button" class="btnIcon icoDel"><span>삭제</span></button></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnSubmit"><span>엑셀 업로드</span></a>
+</div>
+
+<div class="mHelp typeInfo">
+    <h2>상품엑셀등록 안내</h2>
+    <div class="content">
+        <ul>
+            <li>상품코드/상품명/바코드는 다른 상품과 중복되지 않게 입력해 주세요.</li>
+            <li>상품코드 또는 바코드는 입력이 없으면 시스템에서 자동생성됩니다.</li>
+            <li>공급사명/위치코드는 시스템에 등록되어 있는 값으로 입력해 주세요.</li>
+            <li>판매가/입고가/현재재고는 숫자만 입력해 주세요.</li>
+            <li>파일형식을 CSV(*.csv)로 저장해 업로드해 주세요.</li>
+        </ul>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

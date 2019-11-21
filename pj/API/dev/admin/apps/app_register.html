@@ -1,0 +1,731 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+<!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>Apps</li>
+                <li>App 관리</li>
+                <li>App 기본정보등록([[앱 이름]])</li>
+                <li class="now" title="현재 페이지">App Store 판매정보등록</li>
+            </ol>
+
+            <div class="mTitle">
+                <h1>App Store 판매정보등록</h1>
+            </div>
+
+            <div class="mProcess">
+                <ol>
+                    <li>01. App 기본정보등록</li>
+                    <li class="selected">02. App Store 판매정보등록</li>
+                    <li>03. 테스트 및 심사요청</li>
+                </ol>
+                <ul class="desc">
+                    <li>App Store에 판매를 위해 노출되는 App의 정보를 입력하거나 수정할 수 있습니다.</li>
+                    <li>App을 판매하고 홍보하는데 매우 중요한 정보이며, 심사시 반드시 필요로 하는 항목이오니 최대한 빠짐없이 작성하는 것을 권장합니다.</li>
+                </ul>
+            </div>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>노출정보</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit">
+                        <table border="1">
+                            <caption>노출정보</caption>
+                            <colgroup>
+                                <col style="width:201px;">
+                                <col style="width:auto;">
+                                <col style="width:280px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">App 부제목
+                                        <div class="mTooltip gLarge">
+                                            <button type="button" class="icon eTip">도움말</button>
+                                            <div class="tooltip">
+                                                <div class="content">
+                                                    <strong class="titleEm">App 부제목 도움말</strong>
+                                                    <ul class="mList">
+                                                        <li>App Store에 App 이름과 함께 노출되는 부제목입니다.</li>
+                                                        <li>구매자들이 쉽게 이해하고 관심을 갖을 수 있는 부제목을 추가적으로 사용할 수 있습니다.</li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="close eClose">닫기</button>
+                                                <span class="edge"></span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td colspan="2">
+                                        <input type="text" class="fText" style="width:100%;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">스토어 노출</th>
+                                    <td colspan="2">
+                                        <a href="#none" class="btnNormal">노출안함</a>
+                                        <span class="txtInfo">App의 판매심사가 완료된 경우만 스토어 노출 여부를 설정할 수 있습니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">목록이미지
+                                        <div class="mTooltip gLarge">
+                                            <button type="button" class="icon eTip">도움말</button>
+                                            <div class="tooltip">
+                                                <div class="content">
+                                                    <strong class="titleEm">목록 이미지 도움말</strong>
+                                                    <strong class="title">이미지 제작 가이드</strong>
+                                                    <ul class="mList">
+                                                        <li>스토어에 진열되고 판매하기 위해 App을 잘 표현할 수 있는 이미지를 제작합니다.</li>
+                                                        <li>선명하고 진한 색상의 사용을 권장합니다. (흰색 배경 사용을 권장하지 않습니다.)</li>
+                                                        <li>간단하고 명료한 문구와 아이콘 이미지의 사용을 권장합니다.</li>
+                                                        <li>예시 이미지 및 템플릿을 다운받아 제작하시면 보다 쉽게 제작할 수 있습니다.</li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="close eClose">닫기</button>
+                                                <span class="edge"></span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <input type="file" class="fFile">
+                                        <a href="#none" class="btnCtrl">템플릿 다운로드</a>
+                                        <ul class="txtInfo">
+                                            <li>권장(등록) 이미지: 310px * 100px / 1M이하 / gif, png, jpg(jpeg)</li>
+                                        </ul>
+                                        <p class="gSingle">
+                                            <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_310x100.png" alt="" width="310" height="100">
+                                            <button type="button" class="btnIcon icoDel top">삭제</button>
+                                        </p>
+                                    </td>
+                                    <td rowspan="2">
+                                        예시이미지
+                                        <p class="gDouble"><img src="//img.echosting.cafe24.com/api/dev/admin/img_app_register_example.gif" alt=""></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">간략설명
+                                        <div class="mTooltip gMedium">
+                                            <button type="button" class="icon eTip">도움말</button>
+                                            <div class="tooltip">
+                                                <div class="content">
+                                                    <strong class="titleEm">간략설명 도움말</strong>
+                                                    <ul class="mList">
+                                                        <li>간단한 설명을 입력할 수 있습니다. (최대 한글 80자 이내)</li>
+                                                        <li>등록한 설명은 App을 선택하고 설치하는데 많은 도움을 줍니다.</li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="close eClose">닫기</button>
+                                                <span class="edge"></span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td><textarea cols="40" rows="4" class="fTextarea" style="width:100%;"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">스크린샷</th>
+                                    <td colspan="2">
+                                        <div class="mThumbList typeHor">
+                                            <ul>
+                                                <li>
+                                                    <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_100x100.png" alt="" width="100" height="100">
+                                                    <span class="button gSingle">
+                                                        <button type="button" class="btnText">변경</button>
+                                                        <button type="button" class="btnText">삭제</button>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_100x100.png" alt="" width="100" height="100">
+                                                    <span class="button gSingle">
+                                                        <button type="button" class="btnText">등록</button>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_100x100.png" alt="" width="100" height="100">
+                                                    <span class="button gSingle">
+                                                        <button type="button" class="btnText">수정</button>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_100x100.png" alt="" width="100" height="100">
+                                                    <span class="button gSingle">
+                                                        <button type="button" class="btnText">등록</button>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_100x100.png" alt="" width="100" height="100">
+                                                    <span class="button gSingle">
+                                                        <button type="button" class="btnText">수정</button>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="txtInfo">
+                                            <li>권장(등록) 이미지: 500px * 500px / 1M이하 / gif, png, jpg(jpeg)</li>
+                                            <li>스크린샷 이미지는 최대 5개까지 추가 가능합니다. (권장 3개 이상)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">필수 요구조건</th>
+                                    <td colspan="2">
+                                        <textarea cols="70" rows="4" class="fTextarea" style="width:540px;"></textarea>
+                                        <ul class="txtInfo">
+                                            <li>App이 동작하는데 필요한 외부 서비스가 있는 경우 작성할 수 있습니다.<br>(예시 : 이 App을 동작하기 위해 페이스북 계정이 필요합니다.)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">샘플사이트 URL</th>
+                                    <td colspan="2"><input type="text" class="fText" style="width:540px;" placeholder="ex) http://www.cafe24.com"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">멀티쇼핑몰 지원언어</th>
+                                    <td colspan="2">
+                                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked"> 한국어</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked"> 영어</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked"> 중국어(간체)</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked"> 대만어(번체)</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked"> 일본어</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked"> 스페인어</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked"> 포르투갈어</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">메타태그</th>
+                                    <td colspan="2"><input type="text" class="fText" style="width:540px;" placeholder="ex) 추천시스템, 매출향상, 디스플레이, 상품추천"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>상세설명</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit gMedium">
+                        <table border="1">
+                            <caption>상세설명</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">홍보 동영상 URL</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:540px;" placeholder="ex) https://youtu.be/LvL1HcalDjk">
+                                        <ul class="txtInfo">
+                                            <li>App에 대하여 잘 설명하고 홍보할 수 있는 동영상을 등록할 수 있습니다.</li>
+                                            <li>동영상은 유튜브 등에 업로드 한 후 URL을 등록하면 노출할 수 있습니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">핵심포인트</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:540px;" placeholder="ex) 보유한 쿠폰이 있다는 것을 잘 알려줄 수 있습니다.">
+                                        <input type="text" class="fText gSingle" style="width:540px;" placeholder="ex) 실시간으로 장바구니에 많이 담긴 상품을 안내해 줍니다.">
+                                        <input type="text" class="fText gSingle" style="width:540px;" placeholder="ex) 상품 가격을 쉽게 계산할 수 있는 계산기를 제공할 수 있습니다.">
+                                        <ul class="txtInfo">
+                                            <li>App에 흥미와 호감을 느낄 수 있는 핵심 기능 또는 내용을 등록할 수 있습니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상세설명</th>
+                                    <td>
+                                        <div class="gEditor"><img src="//img.echosting.cafe24.com/suio/@editor.gif" alt=""></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>결제정보</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit gMedium">
+                        <table border="1">
+                            <caption>결제정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">결제방식/가격
+                                        <div class="mTooltip gLarge">
+                                            <button type="button" class="icon eTip">도움말</button>
+                                            <div class="tooltip">
+                                                <div class="content">
+                                                    <strong class="titleEm">결제방식 / 가격 도움말</strong>
+                                                    <strong class="title">무료</strong>
+                                                    <ul class="mList">
+                                                        <li>App에 대한 과금없이 무료로 설치하여 사용할 수 있습니다.</li>
+                                                    </ul>
+                                                    <strong class="title">일시불</strong>
+                                                    <ul class="mList">
+                                                        <li>최초 구입시에 결제하며 결제 후 무제한 사용이 가능합니다.</li>
+                                                    </ul>
+                                                    <strong class="title">일 과금</strong>
+                                                    <ul class="mList">
+                                                        <li>3일, 5일 사용과 같이 지정된 일자 당 자동 결제 됩니다.</li>
+                                                    </ul>
+                                                    <strong class="title">월 과금</strong>
+                                                    <ul class="mList">
+                                                        <li>매월 자동 결제될 금액을 입력할 수 있습니다.</li>
+                                                        <li>최소값만 입력해 놓은 경우 매월 최소값이 결제되며, 최소/최대 모두 입력한 경우 App 내에서 결제 안내가 되어야 합니다.</li>
+                                                    </ul>
+                                                    <strong class="title">사용자지정</strong>
+                                                    <ul class="mList">
+                                                        <li>App에서 특정 기능 사용시 과금이 발생하는 경우 사용할 수 있습니다. <br>(예 : SMS 발송시 20원 과금 등)</li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="close eClose">닫기</button>
+                                                <span class="edge"></span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="mForm">
+                                            <select class="fSelect">
+                                                <option>결제방식을 선택하세요.</option>
+                                                <option>무료</option>
+                                                <option>유료</option>
+                                            </select>
+                                            <!-- 참고: 결제방식/가격 > 유료 경우 -->
+                                            <div class="addForm">
+                                                <div class="mCtrl typeHeader">
+                                                    <div class="gLeft">
+                                                        <span class="txtLess">선택한 항목을</span>
+                                                        <a href="#none" class="btnNormal mini">삭제</a>
+                                                    </div>
+                                                    <div class="gRight">
+                                                        <a href="#layerOptionRegister" class="btnCtrl mini eModal">옵션등록</a>
+                                                    </div>
+                                                </div>
+                                                <div class="mBoard">
+                                                    <table border="1" class="eChkColor">
+                                                        <caption>결제방식/가격</caption>
+                                                        <colgroup>
+                                                            <col class="chk">
+                                                            <col style="width:55px;">
+                                                            <col style="width:auto;">
+                                                            <col style="width:100px;">
+                                                            <col style="width:100px;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col"><input type="checkbox" class="allChk"></th>
+                                                                <th scope="col">No</th>
+                                                                <th scope="col">옵션명</th>
+                                                                <th scope="col">서비스기간</th>
+                                                                <th scope="col">가격</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="center">
+                                                            <tr>
+                                                                <td><input type="checkbox" class="rowChk"></td>
+                                                                <td>1</td>
+                                                                <td class="left"><a href="#layerOptionView" class="txtLink eLayerOverReview">1개월 서비스 플랜</a></td>
+                                                                <td>1개월</td>
+                                                                <td class="right">89,600</td>
+                                                            </tr>
+                                                            <tr class="">
+                                                                <td><input type="checkbox" class="rowChk"></td>
+                                                                <td>2</td>
+                                                                <td class="left"><a href="#layerOptionView" class="txtLink eLayerOverReview">2개월+1개월 서비스 플랜</a></td>
+                                                                <td>3개월</td>
+                                                                <td class="right">153,000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!--p class="empty">검색된 결과가 없습니다.</p-->
+                                                </div>
+                                                <div class="mCtrl typeFooter">
+                                                    <div class="gLeft">
+                                                        <span class="txtLess">선택한 항목을</span>
+                                                        <a href="#none" class="btnNormal mini">삭제</a>
+                                                    </div>
+                                                    <div class="gRight">
+                                                        <a href="#layerOptionRegister" class="btnCtrl mini eModal">옵션등록</a>
+                                                    </div>
+                                                </div>
+                                                <textarea cols="80" rows="4" class="fTextarea gSingle" style="width:600px;" placeholder="가격 정책에 대한 상세 설명을 입력할 수 있습니다."></textarea>
+                                                <ul class="txtInfo">
+                                                    <li>상품 가격 옵션은 최대 6개까지 입력하는 것을 권장합니다.<br>(많은 옵션을 입력하시면 구매자의 선택을 불편하게 만들 수 있습니다.)</li>
+                                                </ul>
+                                            </div><!-- //참고 -->
+                                            <!-- 참고: 결제방식/가격 > PG신청을 한 경우 -->
+                                            <div class="addForm">
+                                                <strong>판매가 :</strong>
+                                                <input type="text" class="fText right" style="width:70px;"> 원
+                                                <textarea cols="80" rows="4" class="fTextarea gSingle" style="width:600px;" placeholder="가격 정책에 대한 상세 설명을 입력할 수 있습니다."></textarea>
+                                            </div><!-- //참고 -->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기본 무료 사용기간</th>
+                                    <td>
+                                        <input type="text" class="fText right" style="width:50px;"> 일 무료 사용 후 결제 진행
+                                        <ul class="txtInfo">
+                                            <li>App 구매 전 App의 기능 및 사용법을 확인할 수 있도록 무료 사용 기간을 제공해야 합니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>상품정보제공 고시</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit gMedium">
+                        <table border="1">
+                            <caption>상품정보제공 고시</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">제작자 또는 공급자</th>
+                                    <td><input type="text" class="fText" style="width:540px;"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이용조건 및 이용기간</th>
+                                    <td>판매정보가 자동으로 반영됩니다.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="10">상품정보제공고시 내용</th>
+                                    <td class="gClearBorder">
+                                        상품제공방식
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        최소 시스템 사양 및 필수 소프트웨어
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        청약철회 또는 계약의 해제/해지
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        소비자상담 관련 전화번호
+                                        <input type="text" class="fText gSingle" style="width:540px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        주문 후 공급 방법 및 공급 시기
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        제품하자가 아닌 소비자의 단순변심, 착오구매에 따른 청약철회가 불가능한 경우 그 구체적 사유
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        상품의 교환·반품·보증 조건 및 품질보증기준
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        대금환불 및 환불지연에 따른 배상금 안내
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        소비자피해보상의 처리, 재화 등에 대한 불만 처리 및 소비자와 사업자 사이의 분쟁 처리에 관한 사항
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gClearBorder">
+                                        거래에 관한 약관의 내용 또는 확인할 수 있는 방법
+                                        <textarea cols="40" rows="3" class="fTextarea gSingle" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>문의/안내 연락처</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit gMedium">
+                        <table border="1">
+                            <caption>문의/안내 연락처</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">연락처</th>
+                                    <td>
+                                        <div class="mForm">
+                                            <label class="gLabel"><input type="radio" class="fChk"> 대표 연락처 사용</label>
+                                            <label class="gLabel"><input type="radio" class="fChk"> 개별 연락처 사용</label>
+                                            <ul class="addForm gVer">
+                                                <li>
+                                                    <span class="gWidth w90">상담 연락처</span>
+                                                    <input type="text" class="fText" style="width:360px;">
+                                                </li>
+                                                <li>
+                                                    <span class="gWidth w90">상담 이메일</span>
+                                                    <input type="text" class="fText" style="width:360px;">
+                                                </li>
+                                                <li>
+                                                    <span class="gWidth w90">웹사이트 URL</span>
+                                                    <input type="text" class="fText" style="width:360px;">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>FAQ 관리</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mCtrl typeHeader">
+                        <div class="gLeft">
+                            <button type="button" class="btnMove icoLast">선택한 항목 최하단으로 이동</button>
+                            <button type="button" class="btnMove icoNext">선택한 항목 한줄 아래로 이동</button>
+                            <button type="button" class="btnMove icoPrev">선택한 항목 한줄 위로 이동</button>
+                            <button type="button" class="btnMove icoFirst">선택한 항목 최상단으로 이동</button>
+                            <a href="#none" class="btnNormal mini">삭제</a>
+                            <a href="#layerExcelUpload" class="btnNormal mini eModal">엑셀 업로드</a>
+                        </div>
+                        <div class="gRight">
+                            <a href="#layerFAQregister" class="btnCtrl mini eModal">등록</a>
+                        </div>
+                    </div>
+                    <div class="mBoard">
+                        <table border="1" class="eChkColor">
+                            <caption>FAQ 관리 목록</caption>
+                            <colgroup>
+                                <col class="chk">
+                                <col style="width:70px;">
+                                <col style="width:140px;">
+                                <col style="width:auto">
+                                <col style="width:130px;">
+                                <col class="time">
+                                <col style="width:90px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox" class="allChk"></th>
+                                    <th scope="col">순위</th>
+                                    <th scope="col">문의유형</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">작성일시</th>
+                                    <th scope="col">조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>1</td>
+                                    <td>설치/적용</td>
+                                    <td class="left"><a href="#layerFAQregister" class="txtLink eModal">설치가 된 것을 어떻게 확인할 수 있나요?</a></td>
+                                    <td>모렌비</td>
+                                    <td>2018-08-10 10:35</td>
+                                    <td class="right">1,255</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>2</td>
+                                    <td>결제/환불</td>
+                                    <td class="left"><a href="#layerFAQregister" class="txtLink eModal">결제시 할부로 할 수 없나요?</a></td>
+                                    <td>[개발사(자) 명]</td>
+                                    <td>[작성일시]</td>
+                                    <td class="right">[조회수]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="empty">등록된 내용이 없습니다.</p>
+                    </div>
+                    <div class="mCtrl typeFooter">
+                        <div class="gLeft">
+                            <button type="button" class="btnMove icoLast">선택한 항목 최하단으로 이동</button>
+                            <button type="button" class="btnMove icoNext">선택한 항목 한줄 아래로 이동</button>
+                            <button type="button" class="btnMove icoPrev">선택한 항목 한줄 위로 이동</button>
+                            <button type="button" class="btnMove icoFirst">선택한 항목 최상단으로 이동</button>
+                            <a href="#none" class="btnNormal mini">삭제</a>
+                            <a href="#layerExcelUpload" class="btnNormal mini eModal">엑셀 업로드</a>
+                        </div>
+                        <div class="gRight">
+                            <a href="#layerFAQregister" class="btnCtrl mini eModal">등록</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="mButton gFooter gCenter">
+                <button type="button" class="btnSubmit">저장</button>
+                <a href="#none" class="btnEm">목록</a>
+                <span class="gLeft">
+                    <button type="button" class="btnNormal">App 삭제</button>
+                </span>
+                <span class="gRight">
+                    <a href="#none" class="btnBasic">step2. App Store 정보등록<i class="icoArrow"></i></a>
+                </span>
+            </div>
+            <div class="mButton gFooter">
+                <a href="#none" class="btnPrimary">step3. 테스트 및 심사요청<i class="icoArrow"></i></a>
+            </div>
+        </section><!-- //[ contents ] -->
+
+        <div class="mLayerOver">
+            <div id="layerOptionView" class="mLayer gSmall">
+                <h2>옵션설명</h2>
+                <div class="wrap">
+                    <ul class="mList">
+                        <li>매월 1GB의 새로운 업로드 용량.</li>
+                        <li>사용하시는 모든 장치에 동기화.</li>
+                        <li>웹 페이지, 이미지, PDF 파일 스크랩.</li>
+                        <li>이미지 안의 텍스트 검색.</li>
+                        <li>친구나 동료와 노트 공유.</li>
+                        <li>모바일 앱에 암호 잠금 설정.</li>
+                        <li>이메일을 통한 고객 지원.</li>
+                        <li>오프라인으로 노트북 액세스.</li>
+                        <li>Evernote로 이메일 전달.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="layerOptionRegister" class="mLayer gLarge">
+            <h2>상품 옵션 등록</h2>
+            <div class="wrap">
+                <div class="mTitle">
+                    <h3>상품 옵션 등록</h3>
+                    <ul>
+                        <li>상품 옵션은 심사가 완료된 후 판매에 적용되며, 심사전에는 수정과 삭제가 가능합니다.</li>
+                        <li>심사 후 가격이 변경되는 경우 앱의 판매는 중단되며 재심사를 받아야 합니다.</li>
+                        <li>정기결제는 일/월단위 결제 상품을 선택한 경우만 제공됩니다.</li>
+                    </ul>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1">
+                        <caption>상품 옵션 등록</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">옵션명</th>
+                                <td>
+                                    <input type="text" class="fText" style="width:100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">서비스기간</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>월과금</option>
+                                        <option>일과금</option>
+                                        <option>일시불</option>
+                                    </select>
+                                    <select class="fSelect">
+                                        <option>1개월</option>
+                                        <option>2개월</option>
+                                        <option>3개월</option>
+                                        <option>4개월</option>
+                                        <option>5개월</option>
+                                        <option>6개월</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">가격</th>
+                                <td><input type="text" class="fText" style="width:170px;"> 원</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">옵션설명</th>
+                                <td><textarea cols="38" rows="4" class="fTextarea" style="width:100%;"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#none" class="btnSubmit">저장</a>
+                <a href="#none" class="btnEm eClose">닫기</a>
+            </div>
+            <button type="button" class="btnClose eClose">닫기</button>
+        </div>
+
+        <div id="layerFAQregister" class="mLayer" style="width:880px;">
+            <h2>FAQ 등록/수정</h2>
+            <div class="wrap">
+                <div class="mBoard gSmall">
+                    <table border="1">
+                        <caption>FAQ 등록/수정</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">분류/제목</th>
+                                <td>
+                                    <select class="fSelect" style="width:120px;">
+                                        <option selected="selected">설치/삭제</option>
+                                        <option>결제/환불</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:540px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">내용</th>
+                                <td>
+                                    <div class="gEditor"><img src="//img.echosting.cafe24.com/suio/@editor.gif" alt=""></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#none" class="btnSubmit">저장</a>
+                <a href="#none" class="btnEm eClose">닫기</a>
+            </div>
+            <button type="button" class="btnClose eClose">닫기</button>
+        </div>
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>
+

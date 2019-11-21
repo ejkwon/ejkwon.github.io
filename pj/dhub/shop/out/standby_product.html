@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>상품연결 설정</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="700, 870"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>상품연결 설정</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>주문 상품</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption>주문 상품</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">상품명/품목명</th>
+                    <td><strong>[판매사]</strong><br />상품명 / 품목명</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>연결상품</h2>
+        </div>
+
+        <div class="mTitle">
+            <h3>연결상품 검색</h3>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption>연결상품 검색</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">검색어</th>
+                    <td>
+                        <select class="fSelect">
+                          <option selected="selected">상품명</option>
+                          <option>공급사상품명</option>
+                          <option>공급사</option>
+                        </select>
+                        <input type="text" class="fText" style="width:300px;" />
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="mButton gCenter">
+            <a href="#none" class="btnSearch"><span>검색</span></a>
+        </div>
+
+        <div class="mTitle">
+            <h3>검색 결과</h3>
+        </div>
+        <div class="mState">
+            <div class="gLeft">
+                <p class="total">[총 <strong>40</strong>건] 검색결과 <strong>10</strong>건</p>
+            </div>
+            <div class="gRight">
+                <select class="fSelect">
+                    <option>10개씩보기</option>
+                    <option>20개씩보기</option>
+                    <option>30개씩보기</option>
+                    <option>50개씩보기</option>
+                    <option>100개씩보기</option>
+                </select>
+            </div>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+            <caption>검색 결과</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:80px;" />
+                <col style="width:80px;" />
+                <col style="width:80px;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">상품정보</th>
+                    <th scope="col">입고가</th>
+                    <th scope="col">판매가</th>
+                    <th scope="col">연결</th>
+                </tr>
+            </thead>
+            <tbody class="right">
+                <tr>
+                    <td class="left">
+                        <div class="gGoods gMedium">
+                            <span class="frame"><img src="//img.echosting.cafe24.com/thumb/44x44.gif" width="44" height="44" alt="" /></span>
+                            <p><a href="#none">상품명1 / 품목명</a></p>
+                            <p class="etc"><a href="#none">공급사명 <br />공급사상품명</a></p>
+                        </div>
+                    </td>
+                    <td>15,000원</td>
+                    <td>30,000원</td>
+                    <td class="center"><a href="#none" class="btnNormal"><span>상품연결</span></a></td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <div class="gGoods gMedium">
+                            <span class="frame"><img src="//img.echosting.cafe24.com/thumb/44x44.gif" width="44" height="44" alt="" /></span>
+                            <p><a href="#none">상품명2 / 품목명</a></p>
+                            <p class="etc"><a href="#none">공급사명 <br />공급사상품명</a></p>
+                        </div>
+                    </td>
+                    <td>15,000원</td>
+                    <td>30,000원</td>
+                    <td class="center"><a href="#none" class="btnNormal"><span>상품연결</span></a></td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <div class="gGoods gMedium">
+                            <span class="frame"><img src="//img.echosting.cafe24.com/thumb/44x44.gif" width="44" height="44" alt="" /></span>
+                            <p><a href="#none">상품명3 / 품목명</a></p>
+                            <p class="etc"><a href="#none">공급사명 <br />공급사상품명</a></p>
+                        </div>
+                    </td>
+                    <td>15,000원</td>
+                    <td>30,000원</td>
+                    <td class="center"><a href="#none" class="btnNormal"><span>상품연결</span></a></td>
+                </tr>
+            </tbody>
+            <tbody class="empty">
+                <tr>
+                    <td colspan="4">검색된 상품이 없습니다.</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+    </div>
+
+    <div class="mHelp typeInfo">
+        <h2>주문 상품 연결 설정 안내</h2>
+        <div class="content">
+            <ul>
+                <li><span class="txtWarn">연결이 잘못되면 오배송이 될 수 있으니 매칭시 필히 확인하시길 바랍니다.</span></li>
+                <li><span class="txtWarn">한번 상품을 한번 연결해 두면, 이후 부터</span> 추후 동일한 주문상품 출고시 자동 적용됩니다.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <a href="#none" class="btnEm"><span>닫기</span></a>
+</div>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+
+</body>
+</html>

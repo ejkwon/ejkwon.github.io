@@ -1,0 +1,297 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>배송비관리</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">창고운영</a></li>
+            <li class="now" title="현재 페이지">배송비관리</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>배송비 검색</h2>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>배송비 검색</caption>
+        <tbody>
+            <tr>
+                <th scope="row">배송사 배송서비스 그룹</th>
+                <td>
+                    <select class="fSelect">
+                        <option>- 전 체 -</option>
+                        <option>한진</option>
+                        <option>사가와</option>
+                        <option>범한</option>
+                        <option>린코스</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송사</th>
+                <td>
+                    <select class="chosen-select" multiple="multiple">
+                        <option>DHL</option>
+                        <option>한진(SMART POST)</option>
+                        <option>WEX24(SMART POST)</option>
+                        <option>사가와(B2B2C)</option>
+                        <option>린코스</option>
+                        <option>CJ차이냐오</option>
+                        <option>범한(royalmail-영국)</option>
+                        <option>범한(singpost-싱가폴)</option>
+                        <option>범한(aupost-호주)</option>
+                        <option>범한(usps-미국)</option>
+                        <option>차이냐오</option>
+                        <option>사가와</option>
+                        <option>K-Packet</option>
+                        <option>한진Fedex(Home delivery)</option>
+                        <option>우체국EMS</option>
+                    </select>
+                    <script src="../../js/chosen.jquery.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        var config = {
+                        '.chosen-select' : {width:"100%"},
+                        '.chosen-select-deselect' : {allow_single_deselect:true},
+                        '.chosen-select-no-single' : {disable_search_threshold:10},
+                        '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+                        '.chosen-select-width' : {width:"95%"}
+                        }
+                        for (var selector in config) {
+                        $(selector).chosen(config[selector]);
+                        }
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송국가</th>
+                <td>
+                    <!-- 참고 : chzn 테스트용으로 개발소스에 적용하는 범위 아님 -->
+                    <script type="text/javascript">
+                        $(function(){
+                            $(".chzn-select").chosen();
+                            $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+                        });
+                    </script>
+                    <!-- //참고 -->
+                    <label class="gLabel"><input type="radio" class="fChk" /> 전체</label>
+                    <label class="gLabel"><input type="radio" class="fChk" /> 선택</label>
+                    <span class="gLabel">
+                        <select data-placeholder="- 배송국가 선택 -" class="mSearchForm chzn-select-deselect">
+                            <option>일본[JP]</option>
+                            <option>미국[US]</option>
+                            <option>중화인민공화국[CN]</option>
+                            <option>중화민국[TW]</option>
+                            <option>캐나다[CA]</option>
+                            <option>오스트레일리아[AU]</option>
+                            <option>감비아[GM]</option>
+                            <option>건지 섬[GG]</option>
+                            <option>과들루프[GP]</option>
+                            <option>과테말라[GT]</option>
+                            <option>괌[GU]</option>
+                            <option>그레나다[GD]</option>
+                            <option>그리스[GR]</option>
+                            <option>그린란드[GL]</option>
+                            <option>기니[GN]</option>
+                            <option>기니비사우[GW]</option>
+                            <option>나미비아[NA]</option>
+                            <option>나우루[NR]</option>
+                            <option>나이지리아[NG]</option>
+                            <option>남극[AQ]</option>
+                            <option>남아프리카 공화국[ZA]</option>
+                            <option>네덜란드[NL]</option>
+                            <option>네덜란드령 신트 마르턴[SX]</option>
+                            <option>네덜란드령 안틸레스[AN]</option>
+                            <option>네덜란드령 카리브 제도[BQ]</option>
+                            <option>네덜란드령 큐라소 섬[CW]</option>
+                            <option>네팔[NP]</option>
+                            <option>노르웨이[NO]</option>
+                            <option>노퍽 섬[NF]</option>
+                            <option>누벨칼레도니[NC]</option>
+                            <option>뉴질랜드[NZ]</option>
+                            <option>니우에[NU]</option>
+                            <option>니제르[NE]</option>
+                            <option>니카라과[NI]</option>
+                            <option>덴마크[DK]</option>
+                            <option>도미니카[DM]</option>
+                            <option>도미니카 공화국[DO]</option>
+                            <option>독일[DE]</option>
+                            <option>동티모르[TL]</option>
+                            <option>라오스[LA]</option>
+                            <option>라이베리아[LR]</option>
+                            <option>라트비아[LV]</option>
+                            <option>러시아[RU]</option>
+                            <option>레바논[LB]</option>
+                            <option>레소토[LS]</option>
+                            <option>레위니옹[RE]</option>
+                            <option>루마니아[RO]</option>
+                            <option>룩셈부르크[LU]</option>
+                            <option>르완다[RW]</option>
+                            <option>리비아[LY]</option>
+                            <option>리투아니아[LT]</option>
+                            <option>리히텐슈타인[LI]</option>
+                            <option>마다가스카르[MG]</option>
+                            <option>마르티니크[MQ]</option>
+                            <option>마셜 제도[MH]</option>
+                            <option>마요트[YT]</option>
+                        </select>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송비구간</th>
+                <td>
+                    <input type="text" class="fText right" style="width:50px;" /> kg ~
+                    <input type="text" class="fText right" style="width:50px;" /> kg
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>배송비 목록</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 <strong>40</strong>건]</p>
+        </div>
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+                <option>300개씩보기</option>
+                <option>500개씩보기</option>
+                <option>1000개씩보기</option>
+                <option>2000개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>배송지역관리<em class="icoLink"></em></span></a>
+            <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span><em class="icoXls"></em> 배송비 엑셀 등록<em class="icoLink"></em></span></a>
+            <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="" class="eChkTr">
+        <caption>배송비 목록</caption>
+        <colgroup>
+            <col class="chk" />
+            <col style="width:50px;" />
+            <col style="width:140px;" />
+            <col style="width:auto;" />
+            <col style="width:70px;" />
+            <col style="width:80px;" />
+            <col style="width:70px;" />
+            <col style="width:90px;" />
+            <col style="width:90px;" />
+            <col style="width:90px;" />
+            <col class="date" />
+        </colgroup>
+        <thead>
+            <!--
+                ※ 참고: 소팅 아이콘 가이드 : http://fe.cafe24.com/suio/include/layout.php?MODULE=board_col_list
+            -->
+            <tr>
+                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                <th scope="col">No</th>
+                <th scope="col"><strong class="array ascending">배송서비스 그룹<button type="button">정렬선택</button></strong></th>
+                <th scope="col"><strong class="array ascending">배송사<button type="button">정렬선택</button></strong></th>
+                <th scope="col">배송지역</th>
+                <th scope="col">배송국가</th>
+                <th scope="col">무게(kg)</th>
+                <th scope="col">원가</th>
+                <th scope="col">매입가</th>
+                <th scope="col">판매가</th>
+                <th scope="col"><strong class="array descend">등록일시<button type="button">내림차순 정렬</button></strong></th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>3</td>
+                <td>한진</td>
+                <td class="left"><a href="#layerDeliveryModify" class="txtLink eLayerClick">한진Fedex(SMART POST)</a></td>
+                <td>-</td>
+                <td>US</td>
+                <td class="right">0.1</td>
+                <td class="right">10600</td>
+                <td class="right">10600</td>
+                <td class="right">10600</td>
+                <td>2014-03-05 16:33:41</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>2</td>
+                <td>한진</td>
+                <td class="left"><a href="#layerDeliveryModify" class="txtLink eLayerClick">한진Fedex(SMART POST)</a></td>
+                <td>A1</td>
+                <td>US</td>
+                <td class="right">0.1</td>
+                <td class="right">10600</td>
+                <td class="right">10600</td>
+                <td class="right">10600</td>
+                <td>2014-03-05 16:33:41</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>1</td>
+                <td>한진</td>
+                <td class="left"><a href="#layerDeliveryModify" class="txtLink eLayerClick">한진Fedex(SMART POST)</a></td>
+                <td>A1</td>
+                <td>US</td>
+                <td class="right">0.1</td>
+                <td class="right">10600</td>
+                <td class="right">10600</td>
+                <td class="right">10600</td>
+                <td>2014-03-05 16:33:41</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>배송지역관리<em class="icoLink"></em></span></a>
+            <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span><em class="icoXls"></em> 배송비 엑셀 등록<em class="icoLink"></em></span></a>
+            <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

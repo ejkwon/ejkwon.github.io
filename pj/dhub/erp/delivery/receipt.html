@@ -1,0 +1,254 @@
+<?php require_once('../../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>화물인계증 관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home">홈</li>
+                        <li>출고처리</li>
+                        <li class="now" title="현재 페이지">화물인계증 관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>화물인계증 검색</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>화물인계증 검색</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">화물인계증 작성일</th>
+                                <td>
+                                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                                    <a href="#none" class="btnDate"><span>3일</span></a>
+                                    <a href="#none" class="btnDate"><span>7일</span></a>
+                                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                                    <a href="#none" class="btnDate"><span>3개월</span></a>
+                                    <a href="#none" class="btnDate"><span>1년</span></a>
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>인계증번호</option>
+                                        <option>배송사</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:290px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">인수여부</th>
+                                <td>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 전체</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 미인수</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 인수</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>화물인계증 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                            <option>300개씩보기</option>
+                            <option>500개씩보기</option>
+                            <option>1000개씩보기</option>
+                            <option>2000개씩보기</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                        <a href="#layerOutboxPrint" class="btnNormal eLayerClick "><span>아웃박스 라벨 출력</span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>화물인계증 생성<em class="icoLink"></em></span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>화물출고라벨 출력<em class="icoLink"></em></span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>화물인계증 출력<em class="icoLink"></em></span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>바코드 배송중처리<em class="icoLink"></em></span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <div class="mOpen">
+                            <a href="#ordOpen1" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                            <div id="ordOpen1" class="open" style="width:120px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#layerPassword" class="eLayerClick">기본양식</a></li>
+                                        <li><a href="#layerPassword" class="eLayerClick">사용자 입력 양식1</a></li>
+                                        <li><a href="#layerPassword" class="eLayerClick">사용자 입력 양식2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="" class="eChkColor">
+                        <caption>화물인계증 목록</caption>
+                        <colgroup>
+                            <col class="chk" />
+                            <col style="width:40px;" />
+                            <col class="time" />
+                            <col style="width:auto;" />
+                            <col style="width:15%;" />
+                            <col style="width:10%;" />
+                            <col style="width:10%;" />
+                            <col style="width:15%;" />
+                            <col style="width:15%;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                                <th scope="col">No.</th>
+                                <th scope="col">화물인계증 작성일</th>
+                                <th scope="col">배송사</th>
+                                <th scope="col">화물인계증번호</th>
+                                <th scope="col">인수여부</th>
+                                <th scope="col">아웃박스 번호</th>
+                                <th scope="col">인박스 무게 (Kg)</th>
+                                <th scope="col">실결제금액</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>1</td>
+                                <td>2016-01-19 14:32:21</td>
+                                <td>차이냐오</td>
+                                <td><a href="#none" class="txtLink">20160121-4KR001000001</a></td>
+                                <td>인수</td>
+                                <td>outbox1</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:50px;" value="21.12" />
+                                    <a href="#none" class="btnNormal"><span>저장</span></a>
+                                </td>
+                                <td class="right">634,534 (USD)</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4"><input type="checkbox" class="rowChk" /></td>
+                                <td rowspan="4">2</td>
+                                <td rowspan="4">2016-01-19 14:35:41</td>
+                                <td rowspan="4">사가와</td>
+                                <td rowspan="4"><a href="#none" class="txtLink">20160121-4KR001000001</a></td>
+                                <td  rowspan="4">미인수</td>
+                                <td>outbox1</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:50px;" value="21.12" />
+                                    <a href="#none" class="btnNormal"><span>저장</span></a>
+                                </td>
+                                <td class="right">634,534 (JPY)</td>
+                            </tr>
+                            <tr>
+                                <td>outbox2</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:50px;" value="18.88" />
+                                    <a href="#none" class="btnNormal"><span>저장</span></a>
+                                </td>
+                                <td class="right">634,534 (JPY)</td>
+                            </tr>
+                            <tr>
+                                <td>outbox3</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:50px;" value="22.87" />
+                                    <a href="#none" class="btnNormal"><span>저장</span></a>
+                                </td>
+                                <td class="right">634,534 (JPY)</td>
+                            </tr>
+                            <tr>
+                                <td>outbox4</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:50px;" value="22.87" />
+                                    <a href="#none" class="btnNormal"><span>저장</span></a>
+                                </td>
+                                <td class="right">634,534 (JPY)</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>3</td>
+                                <td>2016-01-19 14:32:21</td>
+                                <td>범한판토스</td>
+                                <td><a href="#none" class="txtLink">20160121-4KR001000001</a></td>
+                                <td>미인수</td>
+                                <td>outbox1</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:50px;" value="19.71" />
+                                    <a href="#none" class="btnNormal"><span>저장</span></a>
+                                </td>
+                                <td class="right">634,534 (USD)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="empty">내역이 없습니다.</p>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                        <a href="#layerOutboxPrint" class="btnNormal eLayerClick "><span>아웃박스 라벨 출력</span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>화물인계증 생성<em class="icoLink"></em></span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>화물출고라벨 출력<em class="icoLink"></em></span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>화물인계증 출력<em class="icoLink"></em></span></a>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>바코드 배송중처리<em class="icoLink"></em></span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <div class="mOpen">
+                            <a href="#ordOpen2" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                            <div id="ordOpen2" class="open" style="top:22px; right:0; width:120px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#layerPassword" class="eLayerClick">기본양식</a></li>
+                                        <li><a href="#layerPassword" class="eLayerClick">사용자 입력 양식1</a></li>
+                                        <li><a href="#layerPassword" class="eLayerClick">사용자 입력 양식2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+<?php require_once('../../include/footer.html'); ?>

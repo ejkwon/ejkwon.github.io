@@ -1,0 +1,215 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>배송지시 현황</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li>배송지시</li>
+            <li class="now" title="현재 페이지">배송지시 현황</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>배송지시 검색</caption>
+        <tbody>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <select class="fSelect" style="width:105px;">
+                      <option selected="selected">등록일</option>
+                      <option>도착예정일</option>
+                    </select>
+                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                    <a href="#none" class="btnDate selected"><span>2일</span></a>
+                    <a href="#none" class="btnDate"><span>3일</span></a>
+                    <a href="#none" class="btnDate"><span>5일</span></a>
+                    <a href="#none" class="btnDate"><span>7일</span></a>
+                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                    <input type="text" id="pr_start_date" name="start_date" class="fText" style="width:65px;" value="2012-04-03" />
+                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                    ~
+                    <input type="text" id="pr_end_date" name="end_date" class="fText" style="width:65px;" value="2013-04-03" />
+                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송지시 상태</th>
+                <td>
+                    <label class="gLabel w60"><input type="radio" name="radioTest1" class="fChk" checked="checked" /> 전체</label>
+                    <label class="gLabel w100"><input type="radio" name="radioTest1" class="fChk" /> 처리예정</label>
+                    <label class="gLabel w80"><input type="radio" name="radioTest1" class="fChk" /> 처리중</label>
+                    <label class="gLabel w80"><input type="radio" name="radioTest1" class="fChk" /> 처리완료</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">포장상태</th>
+                <td>
+                    <label class="gLabel w60"><input type="radio" name="radioTest2" class="fChk" checked="checked" /> 전체</label>
+                    <label class="gLabel w100"><input type="radio" name="radioTest2" class="fChk" /> 주문별 포장</label>
+                    <label class="gLabel w80"><input type="radio" name="radioTest2" class="fChk" /> 상품만</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송방법</th>
+                <td>
+                    <label class="gLabel w60"><input type="radio" name="radioTest3" class="fChk" checked="checked" /> 전체</label>
+                    <label class="gLabel w100"><input type="radio" name="radioTest3" class="fChk" /> 택배</label>
+                    <label class="gLabel w80"><input type="radio" name="radioTest3" class="fChk" /> 퀵</label>
+                    <label class="gLabel w80"><input type="radio" name="radioTest3" class="fChk" /> 기타</label>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>배송지시 내역</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 <strong>40</strong>건] 검색결과 <strong>15</strong>건</p>
+        </div>
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mCtrl typeHeader">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="" class="eChkColor">
+        <caption>배송지시 내역</caption>
+        <colgroup>
+            <col class="chk" />
+            <col style="width:40px" />
+            <col class="date" />
+            <col style="width:140px" />
+            <col class="date" />
+            <col style="width:100px" />
+            <col style="width:90px" />
+            <col style="width:auto" />
+            <col style="width:70px" />
+            <col style="width:70px" />
+            <col style="width:100px" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                <th scope="col">No</th>
+                <th scope="col"><strong class="array descend">등록일<button type="button">내림차순 정렬</button></strong></th>
+                <!--<th scope="col"><strong class="array ascend">등록일<button type="button">오름차순 정렬</button></strong></th>-->
+                <th scope="col"><strong class="array">배송지시 번호<button type="button">정렬선택</button></strong></th>
+                <!--<th scope="col"><strong class="array ascending">배송지시 번호<button type="button">정렬선택</button></strong></th>-->
+                <th scope="col"><strong class="array">도착예정일<button type="button">정렬선택</button></strong></th>
+                <!--<th scope="col"><strong class="array ascending">도착예정일<button type="button">정렬선택</button></strong></th>-->
+                <th scope="col">배송지시상태</th>
+                <th scope="col">포장상태</th>
+                <th scope="col">배송방법</th>
+                <th scope="col">주문갯수</th>
+                <th scope="col">수량합계</th>
+                <th scope="col">요청자</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>1</td>
+                <td>2014-03-05</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">20140314-31AA123456</a></td>
+                <td>2014-03-05</td>
+                <td>처리예정</td>
+                <td>주문별 포장</td>
+                <td class="left">
+                    우체국EMS 8989898989
+                    <a href="#none" class="btnNormal gSingle"><span>해외배송추가정보</span></a>
+                </td>
+                <td class="right">3</td>
+                <td class="right">100</td>
+                <td>김씨 <br />010-8895-8989</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>2</td>
+                <td>2014-03-05</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">20140314-31AA123456</a></td>
+                <td>2014-03-05</td>
+                <td>처리예정</td>
+                <td>상품만</td>
+                <td class="left">퀵 -</td>
+                <td class="right">4</td>
+                <td class="right">230</td>
+                <td>김씨 <br />010-8895-8989</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>3</td>
+                <td>2014-03-05</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">20140314-31AA123456</a></td>
+                <td>2014-03-05</td>
+                <td>처리중</td>
+                <td>주문별 포장</td>
+                <td class="left">기타 -</td>
+                <td class="right">5</td>
+                <td class="right">500</td>
+                <td>김씨 <br />010-8895-8989</td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="11">검색결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<div class="mHelp typeInfo">
+    <h2>배송지시 등록 안내</h2>
+    <div class="content">
+        <p><span class="txtWarn">파일형식은 'CSV분리(쉼표로 분리)'로 선택, 저장하여 업로드</span> 해주세요.</p>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

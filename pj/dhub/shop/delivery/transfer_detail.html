@@ -1,0 +1,212 @@
+<?php require_once('../../include/header.html'); ?>
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>화물인계증 상세</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li>배송지시</li>
+                        <li>화물인계증 관리</li>
+                        <li class="now" title="현재 페이지">화물인계증 상세</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>기본정보</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>기본정보</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">화물인계증 번호</th>
+                                <td>20160121-4KR001000001</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송사</th>
+                                <td>사가와</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">작성일</th>
+                                <td>2016-01-19 14:35:41</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">아웃박스 갯수</th>
+                                <td>12 개</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전체 출고건수</th>
+                                <td>204 건</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>인박스 검색</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>인박스 검색</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>택배사 송장번호</option>
+                                        <option>출고지시번호</option>
+                                        <option>아웃박스 번호</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:270px;" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>인박스 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                            <option>300개씩보기</option>
+                            <option>500개씩보기</option>
+                            <option>1000개씩보기</option>
+                            <option>2000개씩보기</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="" class="eChkColor">
+                        <caption>인박스 목록</caption>
+                        <colgroup>
+                            <col style="width:60px" />
+                            <col style="width:15%" />
+                            <col class="chk" />
+                            <col style="width:20%" />
+                            <col style="width:10%" />
+                            <col style="width:130px" />
+                            <col style="width:20%" />
+                            <col style="width:20%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">아웃박스 번호</th>
+                                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                                <th scope="col">택배사 송장번호</th>
+                                <th scope="col">무게</th>
+                                <th scope="col">실 결제금액</th>
+                                <th scope="col">FB송장번호</th>
+                                <th scope="col">출고지시번호</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td rowspan="4">1</td>
+                                <td rowspan="4">MIXXMIX-01</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>123456789</td>
+                                <td class="right">1.23 Kg</td>
+                                <td class="right">12,871 (JPY)</td>
+                                <td>FB1512070152000005</td>
+                                <td><a href="#none"class="txtLink">20151117-2KR430000991</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>123456790</td>
+                                <td class="right">2.13 Kg</td>
+                                <td class="right">12,871 (JPY)</td>
+                                <td>FB1511170152001133</td>
+                                <td><a href="#none"class="txtLink">20151117-2KR430000990</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>123456791</td>
+                                <td class="right">1.12 Kg</td>
+                                <td class="right">12,871 (JPY)</td>
+                                <td>FB1511170152001138</td>
+                                <td><a href="#none"class="txtLink">20151117-2KR430000992</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>123456792</td>
+                                <td class="right">0.91 Kg</td>
+                                <td class="right">12,871 (JPY)</td>
+                                <td>FB1511170152001142</td>
+                                <td><a href="#none"class="txtLink">20151117-2KR430000995</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>MIXXMIX-02</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>123456793</td>
+                                <td class="right">1.11 Kg</td>
+                                <td class="right">12,871 (JPY)</td>
+                                <td>FB1510070152000020</td>
+                                <td><a href="#none"class="txtLink">20151117-2KR430000999</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>MIXXMIX-03</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>123456794</td>
+                                <td class="right">1.97 Kg</td>
+                                <td class="right">12,871 (JPY)</td>
+                                <td>FB1510070152000031</td>
+                                <td><a href="#none"class="txtLink">20151117-2KR430000993</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="empty">내역이 없습니다.</p>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+
+<?php require_once('../../include/footer.html'); ?>

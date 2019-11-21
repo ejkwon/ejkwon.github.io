@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cafe24 LM Admin</title>
+    <link rel="stylesheet" type="text/css" href="/pj/suio/css/suio.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lm.css" />
+    <script type="text/javascript" src="/pj/js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/pj/suio/js/suio.js"></script>
+</head>
+<body id="popup" size="750, 800"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+    <div id="wrap">
+        <div class="headingArea">
+            <div class="mTitle">
+                <h1>권한 신청</h1>
+            </div>
+        </div>
+        <div class="section">
+            <div class="mBoard gSmall">
+                <table border="1" summary="">
+                <caption>권한 신청</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">상태</th>
+                        <td>신규 권한 신청</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">신청 권한</th>
+                        <td>
+                            <select class="fSelect">
+                                <option>hosting.cafe24.com</option>
+                                <option>reseller.cafe24.com</option>
+                                <option>reselleradmin.cafe24.com</option>
+                                <option>home.cafe24.com</option>
+                                <option>cmc.cafe24.com</option>
+                                <option>adtok.com</option>
+                                <option>edu.cafe24.com</option>
+                                <option>cmcglobal.cafe24.com</option>
+                                <option>apicenter.cafe24.com</option>
+                                <option>dbank.cafe24.com</option>
+                                <option>d.cafe24.com</option>
+                                <option>agency.cafe24.com</option>
+                                <option>biz.cafe24.com</option>
+                                <option>tax.cafe24.com</option>
+                                <option>etax.cafe24.com</option>
+                                <option>weblog.cafe24.com</option>
+                                <option>bm-001.cafe24.com</option>
+                                <option>쇼핑몰 어드민</option>
+                                <option>쇼핑몰 어드민 (QA용)</option>
+                                <option>쇼핑몰 어드민 (mnew 19)</option>
+                                <option>쇼핑몰 어드민 (mold 19)</option>
+                                <option>쇼핑몰 어드민 (mold 20)</option>
+                                <option>그룹웨어 어드민</option>
+                                <option>그룹웨어 프론트</option>
+                                <option>빌더 어드민</option>
+                                <option>리셀러 빌더 어드민</option>
+                                <option>웹메일 어드민</option>
+                                <option>mvod.cafe24.com</option>
+                                <option>쇼핑몰 어드민 (SUGAR)</option>
+                                <option>어드민 운영지원 (MINT)</option>
+                            </select>
+                            <p class="txtInfo">신청중이거나 이미 가지고있는 권한은 '수정' 신청만 가능합니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">신청 권한</th>
+                        <td uidev-case="권한수정신청인 경우">
+                            <select class="fSelect" disabled="disabled">
+                                <option>hosting.cafe24.com</option>
+                                <option>reseller.cafe24.com</option>
+                                <option>reselleradmin.cafe24.com</option>
+                                <option>home.cafe24.com</option>
+                                <option>cmc.cafe24.com</option>
+                                <option>adtok.com</option>
+                                <option>edu.cafe24.com</option>
+                                <option>cmcglobal.cafe24.com</option>
+                                <option>apicenter.cafe24.com</option>
+                                <option>dbank.cafe24.com</option>
+                                <option>d.cafe24.com</option>
+                                <option>agency.cafe24.com</option>
+                                <option>biz.cafe24.com</option>
+                                <option>tax.cafe24.com</option>
+                                <option>etax.cafe24.com</option>
+                                <option>weblog.cafe24.com</option>
+                                <option>bm-001.cafe24.com</option>
+                                <option>쇼핑몰 어드민</option>
+                                <option>쇼핑몰 어드민 (QA용)</option>
+                                <option>쇼핑몰 어드민 (mnew 19)</option>
+                                <option>쇼핑몰 어드민 (mold 19)</option>
+                                <option>쇼핑몰 어드민 (mold 20)</option>
+                                <option>그룹웨어 어드민</option>
+                                <option>그룹웨어 프론트</option>
+                                <option>빌더 어드민</option>
+                                <option>리셀러 빌더 어드민</option>
+                                <option>웹메일 어드민</option>
+                                <option>mvod.cafe24.com</option>
+                                <option>쇼핑몰 어드민 (SUGAR)</option>
+                                <option>어드민 운영지원 (MINT)</option>
+                            </select>
+                            <p class="txtInfo"><span class="txtWarn">권한을 수정 신청하는 경우, 재승인 시까지 권한 사용이 불가능하니 주의해주세요.</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">업무 타입</th>
+                        <td>
+                            <label class="gSingleLabel"><input type="radio" class="fChk" /> 기획</label>
+                            <label class="gSingleLabel"><input type="radio" class="fChk" /> 개발</label>
+                            <label class="gSingleLabel"><input type="radio" class="fChk" /> 디자인/퍼블리싱</label>
+                            <label class="gSingleLabel"><input type="radio" class="fChk" /> CS</label>
+                            <label class="gSingleLabel"><input type="radio" class="fChk" /> 기타</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">권한 사용 기간</th>
+                        <td>
+                            <input type="text" value="2013-04-03" class="fText gDate" />
+                            <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                            ~
+                            <input type="text"  value="2013-04-03" class="fText gDate" />
+                            <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">권한 타입</th>
+                        <td>
+                            <div class="mForm">
+                                <label class="gLabel"><input type="radio" class="fChk" /> 전체권한</label>
+                                <label class="gLabel"><input type="radio" class="fChk" /> 부분권한</label>
+                                <div class="mTooltip gLabel">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip" style="width:380px;">
+                                        <div class="content">
+                                            <strong class="titleEm">부분권한 도움말</strong>
+                                            <ul class="mList">
+                                                <li>부분권한에서 선택 가능한 메뉴는 EC 어드민의 GNB(대메뉴) 명칭과 일치합니다.</li>
+                                                <li>
+                                                    다음의 메뉴는 GNB 권한을 가지고 있더라도 이용이 불가능하며, 관리자가 별도로 지급한 경우에만 이용할 수 있습니다.<br />
+                                                    <ul>
+                                                        <li>(GNB)상점관리 &gt; (LNB)기본정보관리</li>
+                                                        <li>(GNB)상점관리 &gt; (LNB)운영관리</li>
+                                                        <li>(GNB)상점관리 &gt; (LNB)결제관리</li>
+                                                        <li>(GNB)상점관리 &gt; (LNB)보안관리</li>
+                                                        <li>(GNB)상점관리 &gt; (LNB)통합엑셀</li>
+                                                        <li>(GNB)고객관리 &gt; (LNB)메시지 발송 관리</li>
+                                                    </ul>
+                                                </li>
+                                                <li>위 권한이 필요한 경우, 메모 란에 요청사유를 기재해주세요.</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                                <div class="addForm">
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 상점관리</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 상품관리</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 주문관리</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 고객관리</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 게시판관리</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 디자인관리</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 모바일쇼핑몰</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 프로모션</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 마켓통합관리</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 부가서비스</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 앱스토어</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 접속통계</label>
+                                    <label class="gSingleLabel"><input type="checkbox" class="fChk" /> FTP</label>
+                                    <div class="mBox typeDisabled">
+                                        <label class="gSingleLabel"><input type="checkbox" class="fChk" disabled="disabled" /> 기본정보관리</label>
+                                        <label class="gSingleLabel"><input type="checkbox" class="fChk" disabled="disabled" /> 운영관리</label>
+                                        <label class="gSingleLabel"><input type="checkbox" class="fChk" disabled="disabled" /> 결제관리</label>
+                                        <label class="gSingleLabel"><input type="checkbox" class="fChk" disabled="disabled" /> 보안관리</label>
+                                        <label class="gSingleLabel"><input type="checkbox" class="fChk" disabled="disabled" /> 통합엑셀</label>
+                                        <label class="gSingleLabel"><input type="checkbox" class="fChk" disabled="disabled" /> 메시지 발송 관리</label>
+                                    </div>
+                                    <p class="txtInfo">부분권한에 대한 도움말을 꼭 읽어본 후 신청해 주세요.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">권한 마스킹</th>
+                        <td>
+                            <label class="gLabel"><input type="radio" class="fChk" /> ON</label>
+                            <label class="gLabel"><input type="radio" class="fChk" disabled="disabled" /> OFF (관리자만 설정 가능)</label>
+                            <p class="txtInfo">쇼핑몰 어드민 권한은 사용자 액션이 차단된 '마스킹 ON' 상태로 신청 가능합니다. <br />정보 수정이 가능하도록 '마스킹 OFF'를 원하시면, 메모 란에 요청사유를 기재해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">접속 가능 시간</th>
+                        <td>
+                            <label class="gLabel"><input type="radio" class="fChk" /> 제한없음</label>
+                            <label class="gLabel"><input type="radio" class="fChk" /> 설정</label>
+                            <span class="gLabel">
+                                <select class="fSelect">
+                                    <option>-선택-</option>
+                                    <option>01시</option>
+                                    <option>02시</option>
+                                    <option>03시</option>
+                                    <option>04시</option>
+                                    <option>05시</option>
+                                    <option>06시</option>
+                                    <option>07시</option>
+                                    <option>08시</option>
+                                    <option>09시</option>
+                                    <option>10시</option>
+                                    <option>11시</option>
+                                    <option>12시</option>
+                                    <option>13시</option>
+                                    <option>14시</option>
+                                    <option>15시</option>
+                                    <option>16시</option>
+                                    <option>17시</option>
+                                    <option>18시</option>
+                                    <option>19시</option>
+                                    <option>20시</option>
+                                    <option>21시</option>
+                                    <option>22시</option>
+                                    <option>23시</option>
+                                    <option>24시</option>
+                                </select>
+                                ~
+                                <select class="fSelect">
+                                    <option>-선택-</option>
+                                    <option>01시</option>
+                                    <option>02시</option>
+                                    <option>03시</option>
+                                    <option>04시</option>
+                                    <option>05시</option>
+                                    <option>06시</option>
+                                    <option>07시</option>
+                                    <option>08시</option>
+                                    <option>09시</option>
+                                    <option>10시</option>
+                                    <option>11시</option>
+                                    <option>12시</option>
+                                    <option>13시</option>
+                                    <option>14시</option>
+                                    <option>15시</option>
+                                    <option>16시</option>
+                                    <option>17시</option>
+                                    <option>18시</option>
+                                    <option>19시</option>
+                                    <option>20시</option>
+                                    <option>21시</option>
+                                    <option>22시</option>
+                                    <option>23시</option>
+                                    <option>24시</option>
+                                </select>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">메모 <strong class="icoRequired">필수</strong></th>
+                        <td>
+                            <textarea class="fTextarea" cols="60" rows="6" placeholder="예시) 기획업무 진행 시 실제 쇼핑몰 사용현황 확인을 위해
+
+- 권한 타입 추가요청 : (필요시 사유 기재)
+- 권한 마스킹 해제 요청 : (필요시 사유 기재)" style="width:95%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">권한 대상</th>
+                        <td>
+                            <label class="gLabel"><input type="radio" class="fChk" /> 제한없음</label>
+                            <label class="gLabel"><input type="radio" class="fChk" /> 지정아이디</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">접속 몰 아이디</th>
+                        <td uidev-case="권한 대상 > 지정아이디 선택시">
+                            <textarea class="fTextarea" cols="60" rows="6" style="width:95%;"></textarea>
+                            <p class="txtInfo">한 줄에 한 아이디씩 입력해주세요.</p>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="#none" class="btnSubmit"><span>신청</span></a>
+        <a href="#none" class="btnEm" onclick="window.close();"><span>닫기</span></a>
+    </div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/pj/suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.ecIcon {
+    display:inline-block; overflow:hidden; margin:-3px 0 0 0; font-size:0; line-height:0; vertical-align:middle;
+}
+.ecIcon:lang(ko) {
+    background:url('/suio/debugLang/ko_KR/img_domain_new.gif') 0 0 no-repeat;
+}
+.ecIcon:lang(ja) {
+    background:url('/suio/debugLang/ja_JP/img_domain_new.gif') 0 0 no-repeat;
+}

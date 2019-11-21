@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>채널로그</title>
+    <link rel="stylesheet" type="text/css" href="/pj/API/css/font/notosans.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/pj/API/css/dev_admin.css" media="all">
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="1100, 800"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="popupWrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>채널로그</h1>
+        </div>
+    </div>
+    <section class="section">
+        <div class="mBox typeAll">
+            <strong class="txtMore">상품테스트채널</strong> <span class="txtLight">(채널코드 : 15)</span>
+        </div>
+         <div class="mBoard gSmall">
+            <table border="1">
+                <caption>검색</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">검색어</th>
+                        <td>
+                            <select class="fSelect">
+                                <option>처리자 ID</option>
+                                <option>아이피(IP)</option>
+                            </select>
+                            <select class="fSelect">
+                                <option>- 유저 타입 -</option>
+                                <option>개발사(개발자)</option>
+                                <option>카페24 운영자</option>
+                            </select>
+                            <input type="text" class="fText" style="width:60%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">기간</th>
+                        <td>
+                            <span class="btnDate">
+                                <button type="button" class="button">오늘</button>
+                                <button type="button" class="button">3일</button>
+                                <button type="button" class="button">7일</button>
+                                <button type="button" class="button">1개월</button>
+                                <button type="button" class="button">3개월</button>
+                                <button type="button" class="button">1년</button>
+                                <button type="button" class="button selected">전체</button>
+                            </span>
+                            <input type="text" class="fText gDate">
+                            <a href="#none" class="btnIcon icoCal">달력보기</a> ~
+                            <input type="text" class="fText gDate">
+                            <a href="#none" class="btnIcon icoCal">달력보기</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">유형</th>
+                        <td>
+                            <label class="gLabel"><input type="checkbox" class="fChk"> 전체</label>
+                            <label class="gLabel"><input type="checkbox" class="fChk"> 채널 수정</label>
+                            <label class="gLabel"><input type="checkbox" class="fChk"> 심사대기(배포요청)</label>
+                            <label class="gLabel"><input type="checkbox" class="fChk"> 배포요청 취소</label>
+                            <label class="gLabel"><input type="checkbox" class="fChk"> 심사중</label>
+                            <label class="gLabel"><input type="checkbox" class="fChk"> 배포보류</label>
+                            <label class="gLabel"><input type="checkbox" class="fChk"> 배포완료</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mButton gCenter">
+            <a href="#none" class="btnSubmit">검색</a>
+        </div>
+    </section>
+    <section class="section">
+        <div class="mState">
+            <div class="gRight">
+                <select class="fSelect">
+                    <option>10개씩 보기</option>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mBoard">
+            <table border="1">
+                <caption>검색결과</caption>
+                <colgroup>
+                    <col style="width:60px;">
+                    <col class="time">
+                    <col style="width:130px;">
+                    <col style="width:140px;">
+                    <col style="width:120px;">
+                    <col style="width:421px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">처리일시</th>
+                        <th scope="col">아이피(IP)</th>
+                        <th scope="col">처리자 ID</th>
+                        <th scope="col">유형</th>
+                        <th scope="col">상세</th>
+                    </tr>
+                </thead>
+                <tbody class="center">
+                    <tr>
+                        <td>14</td>
+                        <td>2017-11-20 09:00:00</td>
+                        <td>-</td>
+                        <td>cafe24_system</td>
+                        <td>배포완료</td>
+                        <td class="left">서비스 버전 : 1.0</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>2017-11-19 10:00:10</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>심사대기</td>
+                        <td class="left">배포 내용 : 지송... 인증정보 세팅 완료!!!</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>2017-11-18 16:02:48</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>채널 수정</td>
+                        <td class="left"><a href="#editLayer" class="btnNormal eLayerClick">수정사항확인</a></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>2017-11-07 00:00:02</td>
+                        <td>-</td>
+                        <td>cafe24_system</td>
+                        <td>배포보류</td>
+                        <td class="left">인증정보를 올바르게 세팅해주세요.</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>2017-11-05 13:21:37</td>
+                        <td>-</td>
+                        <td>cafe24_system</td>
+                        <td>심사중</td>
+                        <td class="left"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>2017-11-05 10:10:00</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>심사대기</td>
+                        <td class="left">배포 내용 : 채널 등록 8282</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2017-11-03 10:07:00</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>배포요청 취소</td>
+                        <td class="left">사유 : 소개문구 오타 발견</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2017-11-03 10:05:00</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>심사대기</td>
+                        <td class="left">배포 내용 : 채널 소개 URL 수정했어요. 이제 등록해주실거죠?</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>2017-11-03 10:01:05</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>채널 수정</td>
+                        <td class="left"><a href="#editLayer" class="btnNormal eLayerClick">수정사항확인</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2017-11-02 18:21:37</td>
+                        <td>-</td>
+                        <td>cafe24_system</td>
+                        <td>배포보류</td>
+                        <td class="left">기타
+                            <ul class="mList">
+                                <li><span class="txtEm">거절사유 : 채널 소개에 입력된 URL이 유효하지 않습니다.</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2017-11-02 13:21:37</td>
+                        <td>-</td>
+                        <td>cafe24_system</td>
+                        <td>심사중</td>
+                        <td class="left"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2017-11-02 12:00:00</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>심사대기</td>
+                        <td class="left">배포 내용 : 채널 등록합니다. 서비스에 빨리 올려주세요</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2017-11-02 11:00:00</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>채널 수정</td>
+                        <td class="left"><a href="#editLayer" class="btnNormal eLayerClick">수정사항확인</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2017-11-01 10:01:05</td>
+                        <td>211.63.40.169</td>
+                        <td>hong</td>
+                        <td>채널 등록</td>
+                        <td class="left"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="empty">내역이 없습니다.</p>
+        </div>
+        <div class="mPaginate">
+            <!-- 참고: 이전/다음 페이지가 없는 경우, disabled 클래스 추가 -->
+            <a href="#none" class="btnPrev">이전 페이지</a>
+            <span class="page">
+                <a href="#none">1</a>
+                <a href="#none" class="selected" title="현재 페이지">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none">6</a>
+                <a href="#none">7</a>
+                <a href="#none">8</a>
+                <a href="#none">9</a>
+                <a href="#none">10</a>
+            </span>
+            <a href="#none" class="btnNext">다음 페이지</a>
+        </div>
+    </section>
+    <div class="mHelp typeInfo">
+        <h2>도움말</h2>
+        <div class="content">
+            <ul>
+                <li>채널 설정 정보 및 심사 결과에 대한 이력으로, 최대 6개월간 보관됩니다.</li>
+                <li>승인상태에 따라 레시피 서비스 화면에 채널 정보가 반영됩니다. 자세한 사항은 아래의 TIP을 참고하세요.</li>
+            </ul>
+            <h3 class="tip">배포 승인 절차</h3>
+            <ol>
+                <li>1. 심사대기
+                    <ul>
+                        <li>[배포] 버튼을 클릭하면 카페24에 해당 채널의 배포 승인 요청이 접수되고, '심사대기' 상태로 표시됩니다.</li>
+                        <li>레시피 서비스 서버에 '배포완료'되기 전까지, 변경한 내용은 레시피 서비스상에 반영되지 않습니다.</li>
+                        <li>카페24 운영자가 심사를 시작하기 전까지는 [배포 요청 취소]하면 채널 정보를 다시 수정할 수 있습니다.</li>
+                    </ul>
+                </li>
+                <li>2. 심사중
+                    <ul>
+                        <li>카페24 운영자가 개발사에서 접수한 내용을 검토중인 상태입니다.</li>
+                        <li>'심사중' 상태로 변경하기 직전인, '심사대기' 상태로 접수된 가장 최신 정보를 기준으로 테스트를 진행합니다</li>
+                        <li>심사중 상태일 때에는 심사를 마치고 배포 승인 상태가 변경되기 전까지 채널 정보를 수정하거나, 배포 요청을 취소할 수 없습니다.</li>
+                    </ul>
+                </li>
+                <li>3. 배포보류
+                    <ul>
+                        <li>개발사에서 요청한 배포 버전의 정상 동작 여부를 검토하였으나, 다소 불완전한 부분으로 인해 접수한 내용이 반려된 상태입니다.</li>
+                        <li>개발사에서는 거절 사유를 확인하고 채널 정보를 수정해야 합니다. 수정한 후에도 다시 [배포] 버튼을 클릭하기 전까지는 배포보류 상태가 유지됩니다.</li>
+                        <li>수정한 내용을 반영하시려면 [배포] 버튼을 클릭해주세요.</li>
+                    </ul>
+                </li>
+                <li>4. 배포완료
+                    <ul>
+                        <li>카페24 운영자가 개발사에서 접수한 내용을 검토한 결과, 정상적으로 채널의 역할을 수행하는 것으로 확인하여 레시피 서비스상의 채널 버전을 업그레이드 했습니다.</li>
+                        <li>채널 정보를 다시 수정하더라도 레시피 서비스 사용자의 채널 이용에는 영향이 없습니다. (가장 최근에 배포 승인된 채널 정보만이 레시피 서비스상에 반영됨)</li>
+                        <li>다른 내용을 추가로 적용하길 원하신다면, 수정 후 [배포] 버튼을 통해 다시 접수해주시기 바랍니다.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- 참고: 채널 수정 내역 -->
+<div id="editLayer" class="mLayer" style="width:800px;">
+    <h2>채널 수정 내역</h2>
+    <div class="wrap">
+        <div class="mBoard gMedium">
+            <table border="1">
+                <caption>채널 수정 내역</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">채널코드</th>
+                        <td>0001</td>
+                        <th scope="row">처리자 ID</th>
+                        <td>hong</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">수정일시</th>
+                        <td><span class="txtEm">2017-11-01 10:01:05</span></td>
+                        <th scope="row">아이피</th>
+                        <td>211.63.40.169</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mTitle">
+            <h3>기본 설정</h3>
+        </div>
+        <div class="mBoard">
+            <table border="1">
+                <caption>기본 설정</caption>
+                <colgroup>
+                    <col style="width:60px;">
+                    <col style="width:130px;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">변경 전</th>
+                        <th scope="col">변경 후</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">1</td>
+                        <td>채널명</td>
+                        <td>날짜&시간</td>
+                        <td>스케줄</td>
+                    </tr>
+                    <tr>
+                        <td class="center">2</td>
+                        <td>아이콘</td>
+                        <td>-</td>
+                        <td>http://~/img.png</td>
+                    </tr>
+                    <tr>
+                        <td class="center">3</td>
+                        <td>검색 공개여부</td>
+                        <td>[비공개&gt; EC Admin User]<br>ㄴ$mallid1, $mallid2, $mallid3<br>[비공개&gt; Cafe24 사내 User&gt; 전사 공개]</td>
+                        <td>[비공개&gt; EC Admin User]<br>ㄴ$mallid2, $mallid3<br>[비공개&gt; Cafe24 사내 User&gt; 특정 직원/부서에 공개]<br>ㄴ[서울] $id1, $id2<br>ㄴ[부산] -</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mTitle">
+            <h3>액션</h3>
+        </div>
+        <div class="mBoard">
+            <table border="1">
+                <caption>액션</caption>
+                <colgroup>
+                    <col style="width:60px;">
+                    <col style="width:130px;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">변경 전</th>
+                        <th scope="col">변경 후</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">1</td>
+                        <td>순서</td>
+                        <td>상품 등록<br>상품 수정<br>상품 삭제</td>
+                        <td>상품 등록<br>상품 삭제<br>상품 수정</td>
+                    </tr>
+                    <tr>
+                        <td class="center">2</td>
+                        <td>상품 등록<br>액션명</td>
+                        <td>상품을 등록</td>
+                        <td>상품 등록</td>
+                    </tr>
+                    <tr>
+                        <td class="center">3</td>
+                        <td>상품 등록<br>안내문구</td>
+                        <td>-</td>
+                        <td>조건이 충족될 때마다 상품이 등록됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">4</td>
+                        <td>상품 수정<br>공개여부</td>
+                        <td>비공개</td>
+                        <td>공개</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button type="button" class="btnClose eClose">닫기</button>
+</div><!-- //참고 -->
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/suio/js/debug.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(this).eDebugBot({eQaId:false, eCss:false});
+    });
+</script><!-- //참고 -->
+</body>
+</html>

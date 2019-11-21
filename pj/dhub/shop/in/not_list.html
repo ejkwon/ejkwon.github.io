@@ -1,0 +1,160 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>미입고</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li>입고</li>
+            <li class="now" title="현재 페이지">미입고</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>입고지시 검색</caption>
+        <tbody>
+            <tr>
+                <th scope="row">입고예정일</th>
+                <td>
+                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                    <a href="#none" class="btnDate selected"><span>2일</span></a>
+                    <a href="#none" class="btnDate"><span>3일</span></a>
+                    <a href="#none" class="btnDate"><span>5일</span></a>
+                    <a href="#none" class="btnDate"><span>7일</span></a>
+                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                    <input type="text" id="pr_start_date" name="start_date" value="2013-04-03" class="fText" style="width:65px;" />
+                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                    ~
+                    <input type="text" id="pr_end_date" name="end_date" value="2013-04-03" class="fText" style="width:65px;" />
+                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">입고지시 번호</th>
+                <td><input type="text" class="fText" style="width:300px;" />
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>입고지시 목록</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 입고지시 <strong>30</strong>건] 검색결과 <strong>15</strong>건</p>
+        </div>
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>입고지시 목록</caption>
+        <colgroup>
+            <col style="width:50px;" />
+            <col style="width:150px;" />
+            <col class="date" />
+            <col style="width:120px;" />
+            <col style="width:atuo;" />
+            <col style="width:atuo;" />
+            <col style="width:120px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">No</th>
+                <th scope="col" rowspan="2">입고지시번호</th>
+                <th scope="col" rowspan="2">입고예정일</th>
+                <th scope="col" rowspan="2">입고대기처리</th>
+                <th scope="col" colspan="2">입고상태</th>
+                <th scope="col" rowspan="2">메모</th>
+            </tr>
+            <tr>
+                <th>미입고</th>
+                <th>입고취소</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td>2</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">20140305-31AA123456</a></td>
+                <td>2014-03-04</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>입고대기처리<em class="icoLink"></em></span></a></td>
+                <td>100개</td>
+                <td>0개</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>메모<em class="icoLink"></em></span></a></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">20140305-31AA123456</a></td>
+                <td>2014-03-04</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>입고대기처리<em class="icoLink"></em></span></a></td>
+                <td>100개</td>
+                <td>10개</td>
+                <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">메모(<span class="txtWarn">1</span>)</a></td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="7">검색결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<!-- 참고 : 도움말 -->
+<div class="mHelp typeInfo">
+    <h2>미입고 안내</h2>
+    <div class="content">
+        <ul>
+            <li>입고지시서의 '미입고/ 입고취소'상태의 상품만 표시된다.</li>
+            <li>입고지시번호를 선택하면 '입고지시서 상세' 화면이 표시되며, 전체 상품의 입고상태를 확인할 수 있습니다.</li>
+            <li>[입고대기처리]를 클릭하면 '미입고/입고취소'상태의 상품을 '입고대기'처리할 수 있습니다.</li>
+        </ul>
+    </div>
+</div><!-- //참고 -->
+
+<?php require_once('../../include/footer.html'); ?>

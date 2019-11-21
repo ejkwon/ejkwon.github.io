@@ -1,0 +1,331 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMMERCIAL INVOICE</title>
+    <style>
+    /* reset */
+    html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img { margin:0; padding:0; }
+    html { width:100%; height:100%; }
+    body,code { font-size:10px; font-family:Calibri,sans-serif; color:#333; background:#fff; -webkit-text-size-adjust:none; }
+    body { min-width:985px; }
+    ul,ol,dl,li { list-style:none; }
+    img,fieldset { border:0; vertical-align:top; }
+    table { table-layout:fixed; width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+    table img { vertical-align:middle; }
+    th,td { border:0; word-wrap:break-word; }
+    input,select,textarea { font-size:11px; font-family:Calibri,sans-serif; color:#333; vertical-align:middle; }
+    label { cursor:pointer; }
+    caption { overflow:hidden; width:1px; font-size:1px; line-height:0; text-indent:150%; white-space:nowrap; }
+    legend,.blind { display:block; overflow:hidden; position:absolute; width:1px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; white-space:nowrap; }
+    hr.layout { display:none; }
+    button { overflow:visible; padding:0; margin:0; border:0; outline:0; cursor:pointer; background:transparent; }
+    a { text-decoration:none; color:#000; }
+    a:hover { text-decoration:underline; }
+
+    .invoiceWrap { position:relative; width:362px; height:522px; margin:24px 14px; border:2px solid #000; box-sizing:border-box; }
+    .invoiceWrap .title { display:block; padding:0 0 2px; font-size:16px; line-height:17px; text-align:center; background:#f1f1f1; }
+    .invoiceWrap table th { padding:3px 5px 5px; font-size:12px; word-break:break-all; }
+    .invoiceWrap table td { padding:2px 5px 3px; text-align:center; vertical-align:top; word-break:break-all; }
+    .invoiceWrap table .no { font-size:12px; }
+    .invoiceWrap table th + td { border-top:2px solid #000; }
+      .information table th { border-top:2px solid #000; background:#f1f1f1; }
+      .description { overflow:hidden; height:480px; }
+      .description .title { padding:3px 5px 5px; font-size:12px; border-top:2px solid #000; }
+      .information + .description { max-height:268px; }
+      .description table th { font-weight:normal; }
+      .description table td { height:27px; padding-bottom:0; box-sizing:border-box; }
+    .totalValue { overflow:hidden; position:absolute; left:0; bottom:0; width:100%; padding:0 20px 0 5px; box-sizing:border-box; }
+    .totalValue dt { float:left; font-size:12px; }
+    .totalValue dd { float:right; }
+    /* For Print */
+    @media print {
+        body { -webkit-print-color-adjust:exact; }
+        thead { display:table-row-group; }
+        .break { page-break-before:always; }
+    }
+    </style>
+</head>
+<body>
+<div class="invoiceWrap">
+    <strong class="title">COMMERCIAL INVOICE</strong>
+    <div class="information">
+        <table border="1">
+            <caption>COMMERCIAL INVOICE</caption>
+            <colgroup>
+                <col style="width:62%;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th scope="col">Flight No.</th>
+                <th scope="col" class="bg">Hawb No.</th>
+            </tr>
+            <tr>
+                <td>{$비행기 번호$}</td>
+                <td>{$송장번호$}</td>
+            </tr>
+            <tr>
+                <th scope="col">From / Shipper</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td>{$영문 화주명$}</td>
+                <td>{$화주 연락처$}</td>
+            </tr>
+            <tr>
+                <td colspan="2">{$영문 화주주소$}</td>
+            </tr>
+            <tr>
+                <th scope="col">TO / Shipper</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td>{$수령자명$}</td>
+                <td>{$수령자연락처$}</td>
+            </tr>
+            <tr>
+                <td colspan="2">{$수령자 주소$}</td>
+            </tr>
+            <tr>
+                <th scope="col">Port of Loading</th>
+                <th scope="col">Final Destination</th>
+            </tr>
+            <tr>
+                <td>KOR {$공항코드$}</td>
+                <td>{$배송국가코드$}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="description">
+        <strong class="title">Description</strong>
+        <table border="1">
+            <caption>Description</caption>
+            <colgroup>
+                <col style="width:28px;">
+                <col style="width:60px;">
+                <col style="width:auto;">
+                <col style="width:60px;">
+                <col style="width:60px;">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">NO</th>
+                <th scope="col" colspan="2">Item</th>
+                <th scope="col">Q’TY</th>
+                <th scope="col">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="no">1</td>
+                <td>{$브랜드명$}</td>
+                <td>{$통관용카테고리명$}</td>
+                <td>{$품주수$}</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">2</td>
+                <td>66Girls</td>
+                <td>ClothingsClothingsClothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">3</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">4</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">5</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">6</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">7</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">8</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <dl class="totalValue">
+        <dt>TOTAL VALUE(TWD)</dt>
+        <dd>2984</dd>
+    </dl>
+</div>
+<div class="invoiceWrap break">
+    <strong class="title">COMMERCIAL INVOICE</strong>
+    <div class="description">
+        <strong class="title">Description</strong>
+        <table border="1">
+            <caption>Description</caption>
+            <colgroup>
+                <col style="width:28px;">
+                <col style="width:60px;">
+                <col style="width:auto;">
+                <col style="width:60px;">
+                <col style="width:60px;">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">NO</th>
+                <th scope="col" colspan="2">Item</th>
+                <th scope="col">Q’TY</th>
+                <th scope="col">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="no">1</td>
+                <td>{$브랜드명$}</td>
+                <td>{$통관용카테고리명$}</td>
+                <td>{$품주수$}</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">2</td>
+                <td>66Girls</td>
+                <td>ClothingsClothingsClothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">3</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">4</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">5</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">6</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">7</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">8</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">9</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">10</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">11</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">12</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">13</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">14</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">15</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            <tr>
+                <td class="no">16</td>
+                <td>66Girls</td>
+                <td>Clothings(Women`s Tops)Clothings(Women`s Tops)</td>
+                <td>1</td>
+                <td>370</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <dl class="totalValue">
+        <dt>TOTAL VALUE(TWD)</dt>
+        <dd>2984</dd>
+    </dl>
+</div>
+</body>
+</html>

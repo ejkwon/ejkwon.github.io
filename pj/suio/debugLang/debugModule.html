@@ -1,0 +1,832 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EC 솔루션 어드민</title>
+    <link rel="stylesheet" type="text/css" href="/css/ec/layout/layout.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/module.css" />
+    <link rel="stylesheet" type="text/css" href="//img.echosting.cafe24.com/css/ec/coupon.css" />
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/ui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/module.js"></script>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/colorpicker.js"></script>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</head>
+<body>
+<!--
+<div id="skipNavigation">
+    <p>
+        <a href="#gnb">대메뉴 바로가기</a>
+        <a href="#content">컨텐츠 바로가기</a>
+    </p>
+</div>
+<hr class="layout" />
+-->
+<div id="wrap">
+    <!-- [header] -->
+    <div id="header">
+        <!-- 전체 퍼블리싱/사양 : http://fe.cafe24.com/smartAdmin/layout/layout.html -->
+        <div class="header">
+            <h1><a href="/smartAdmin/dashboard/index.html"><img src="//img.echosting.cafe24.com/ec/layout/h1_logo.png" alt="CAFE24 쇼핑몰센터" /></a></h1>
+            <div class="topBar">
+                <div class="shop"><!-- 참고: 멀티샵인 경우 move버튼 click시 selected class추가 -->
+                    <div class="myshop ko_KR"><!-- 참고: 접속중인 국가에 따라 class 추가 (국가코드: ko_KR, en_US, ja_JP, zh_CN, zh_TW, pt_PT, es_ES) -->
+                        <strong class="mall"><span class="base">[기본]</span>국문쇼핑몰몰몰</strong>에 접속중
+                        <a href="#none" class="move multi">쇼핑몰 바로가기</a>
+                        <!-- <a href="#none" class="move">쇼핑몰 바로가기</a> 참고: 멀티샵인 경우 multi class 추가 -->
+                    </div>
+                    <!-- 참고 : 멀티샵 -->
+                    <div class="multiShop">
+                        <strong class="title">쇼핑몰 바로가기</strong>
+                        <div class="shops">
+                            <ul>
+                                <li>
+                                    <a href="#none" target="_blank" title="새창 열림">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/ko_KR_32x24.png" alt="" /></span>
+                                        <strong class="name"><span class="base">[기본]</span>한국어 쇼핑몰</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" target="_blank" title="새창 열림">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/en_US_32x24.png" alt="" /></span>
+                                        <strong class="name">테스트용 미국몰</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" target="_blank" title="새창 열림">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/ja_JP_32x24.png" alt="" /></span>
+                                        <strong class="name">테스트용 일본몰</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" target="_blank" title="새창 열림">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/zh_CN_32x24.png" alt="" /></span>
+                                        <strong class="name">테스트용 중국몰</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" target="_blank" title="새창 열림">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/zh_TW_32x24.png" alt="" /></span>
+                                        <strong class="name">테스트용 대만몰</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" target="_blank" title="새창 열림">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/pt_PT_32x24.png" alt="" /></span>
+                                        <strong class="name">테스트용 포르투갈몰</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" target="_blank" title="새창 열림">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/es_ES_32x24.png" alt="" /></span>
+                                        <strong class="name">테스트용 스페인몰 이름이 길다면</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="control">
+                                <button type="button" class="prev">이전</button>
+                                <button type="button" class="next">다음</button>
+                            </div>
+                        </div>
+                    </div><!-- //참고 -->
+                </div>
+                <div class="util">
+                    <!-- 참고: (구)상품 -->
+                    <a href="#none" class="myshop">내상점</a><!-- //참고 -->
+                    <ul class="related">
+                        <li><a href="#none" class="ftp">FTP</a></li>
+                        <li><a href="#none" class="access">접속통계</a></li>
+                        <li><a href="#none" class="myApp">My App</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#none">B2B</a></li>
+                        <li><a href="#none">매뉴얼</a></li>
+                        <li><a href="#none">1:1 문의</a></li>
+                        <li><a href="#none" class="customer">고객센터</a></li>
+                        <li class="add">
+                            <a href="#none">더보기</a>
+                            <div class="menu">
+                                <h3>바로가기</h3>
+                                <ul>
+                                    <li><a href="#none" target="_blank" title="새창 열림">교육센터</a></li>
+                                    <li><a href="#none" target="_blank" title="새창 열림">운영자카페(Daum)</a></li>
+                                    <li><a href="#none" target="_blank" title="새창 열림">운영자카페(Naver)</a></li>
+                                </ul>
+                                <h3>편의기능</h3>
+                                <ul>
+                                    <li><a href="#none">사이트맵</a></li>
+                                    <li><a href="#none">즐겨찾기 추가</a></li>
+                                    <li><a href="#none">바탕화면 추가</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="member">
+                    대표운영자<strong><a href="#none">(AAAAAAAAA...)</a>님</strong>
+                    <a href="#none">로그아웃</a>
+                </p>
+                <ul class="cti">
+                    <li><a href="#none" class="lamp selected">ON</a> <a href="#none" target="_blank" title="새창 열림" class="comm">SK</a><!-- 참고 : ON일 경우 class="selected" 추가 --></li>
+                    <li><a href="#none" class="lamp">OFF</a><a href="#none" target="_blank" title="새창 열림" class="comm">KT</a></li>
+                    <li><a href="#none" class="lamp">OFF</a><a href="#none" target="_blank" title="새창 열림" class="comm">CTI</a></li>
+                </ul>
+            </div>
+        </div>
+        <h2>주요메뉴</h2>
+        <div id="gnb" class="menu12">
+            <ul>
+                <li id="shop"><a href="/ec/shop/index.html">상점관리</a></li>
+                <li id="product"><a href="/ec/product/">상품관리</a></li>
+                <li id="order"><a href="/ec/order/index.html">주문관리</a></li>
+                <li id="member"><a href="/ec/member/index.html">고객관리</a></li>
+                <li id="board"><a href="/ec/community/index.html">게시판관리</a></li>
+                <li id="design"><a href="/ec/design/index.html">디자인관리</a></li>
+                <li id="mobile"><a href="/ec/mobile/index.html">모바일쇼핑몰</a></li>
+                <li id="promotion"><a href="/ec/promotion/index.html">프로모션</a></li>
+                <li id="marketing"><a href="#none">마케팅센터</a></li>
+                <li id="market"><a href="/smartAdmin/market/index.html">마켓통합관리</a></li>
+                <li id="optional"><a href="/ec/bm/index.html">부가서비스</a></li>
+                <li id="financial">
+                    <a href="#none" class="focus"><span>KEB하나은행</span></a>
+                    <a href="#none" class="active"><span>금융서비스</span></a>
+                </li>
+            </ul>
+            <div class="search">
+                <div class="form">
+                   <label class="keyword"><input type="text" class="fText" placeholder="검색할 메뉴명을 입력해주세요." style="width:178px;" /></label>
+                   <button type="button">검색</button>
+                   <ul id="searchFakeScroll">
+                       <li><a href="#none">분류별 <strong>상품</strong>관리관리관리관리관리관리관리관리</a></li>
+                       <li><a href="#none"><strong>상품</strong> 검색</a></li>
+                       <li><a href="#none"><strong>상품</strong> 등록</a></li>
+                       <li><a href="#none">세트<strong>상품</strong>관리</a></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="//img.echosting.cafe24.com/js/fakescroll.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(function(){
+                var multiShop = $('.multiShop');
+                multiShop.hide();
+                $('.util li .menu').hide();
+                $('.util li').mouseenter(function(){
+                    $(this).siblings().find('.menu').hide();
+                    var menu = $(this).find('.menu');
+                    if(menu){
+                        menu.show();
+                    }
+                });
+                $('.util li .menu').mouseleave(function(){
+                    $(this).hide();
+                });
+                $('.myshop .move').click(function(){
+                    $(this).toggleClass("selected");
+                    multiShop.toggle();
+                });
+                $('.search button').click(function(){
+                    $(this).parents(".search").toggleClass("selected");
+                });
+                $(".search .keyword input").focus(function(){
+                   $(this).parents(".form").addClass("focus");
+                    fakescroll.set('searchFakeScroll');// fakescroll 적용
+                });
+                $(".search .keyword input").blur(function(){
+                   $(this).parents(".form").removeClass("focus");
+                });
+                $('.topMenu .cti li').click(function(){
+                    $(this).addClass('selected').siblings().removeClass('selected');
+                });
+            });
+        </script>
+    </div><!-- //[header] -->
+    <hr class="layout" />
+
+    <div id="container">
+        <!-- [sidebar] -->
+        <div id="sidebar">
+            <p class="snbToggle eSnb"><button type="button">메뉴 CLOSE/OPEN</button></p>
+            <div class="snbArea">
+                <div id="sideMultiShop" class="multiShops">
+                    <p class="setting">
+                        <span class="flag"><img src="//img.cafe24.com/img/common/global/en_US_16.png" alt="" /></span>
+                        <span class="shop">
+                            <strong>[기본]</strong>
+                            테스트용 미국몰
+                        </span>
+                        <button type="button" class="toggle">멀티샵 열기/닫기</button>
+                    </p>
+                    <div class="wrap">
+                        <div id="multiShopfakeScroll" class="list">
+                            <ul>
+                                <li class="default">
+                                    <a href="#none">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/en_US_16.png" alt="" /></span>
+                                        <span class="shop">
+                                            <strong>기본</strong>
+                                            stylenandadadaaaaaaaaaa???
+                                        </span>
+                                        <span class="currency">USD</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/ko_KR_16.png" alt="" /></span>
+                                        <span class="shop">
+                                            stylenandadada
+                                        </span>
+                                        <span class="currency">KRW</span>
+                                    </a>
+                                </li>
+                                <li class="disabled">
+                                    <a href="#none">
+                                        <span class="flag"><img src="//img.cafe24.com/img/common/global/en_US_16_disabled.png" alt="" /></span>
+                                        <span class="shop">
+                                            stylenandadadaaaaaaaaaa???
+                                        </span>
+                                        <span class="currency">USD</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <a href="#none" class="close"><span>닫기</span></a>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                        $('#sideMultiShop .close').click(function(){
+                            $('#sideMultiShop .wrap').hide();
+                            return false
+                        });
+                        $('#sideMultiShop .toggle').click(function(){
+                            $('#sideMultiShop .wrap').toggle();
+                            fakescroll.set('multiShopfakeScroll', { tracksize:'-3' });
+                            $('#multiShopfakeScroll .scroll-bar').append('<span class="inner"></span>');
+                            $('#multiShopfakeScroll .scroll-arrow').append('<span class="inner"></span>');
+                            return false
+                        });
+                        $('.eSnb button').click(function(){
+                            $('#container').toggleClass("snbHidden");
+                        });
+                    });
+                </script>
+
+                <div id="snb" class="sub">
+                    <div class="tabArea">
+                        <ul class="tab">
+                            <li class="selected"><a href="#none">영업관리</a></li><!-- 참고 : 메뉴 선택되었을 때 class="selected" 추가 -->
+                            <li><a href="#none">정산관리</a></li>
+                        </ul>
+                    </div>
+                    <div class="link">
+                        <a href="#none"><span><em class="ico doc"></em>디자인 수정하기</span></a>
+                    </div>
+                    <ul class="menu">
+                        <li class="expandable collapsable">
+                            <a href="#none">부가서비스</a>
+                            <ul>
+                                <li><a href="#none">서비스안내 <span class="icon new">NEW</span></a></li>
+                                <li class="collapsable">
+                                    <a href="#none">부가서비스 설정</a>
+                                    <ul>
+                                        <li><a href="#none">나의 이용내역</a></li>
+                                        <li><a href="#none">부가서비스 신청/연장</a></li>
+                                        <li class="selected"><a href="#none">부가서비스 요금안내</a></li>
+                                        <li class="disabled"><a href="#none">부가서비스 요금안내</a></li>
+                                        <li>
+                                            <a href="#none"><span class="icon help">도움말</span> <span class="transfer">부가서비스 만료안내설정</span></a>
+                                            <p class="tooltip">해당메뉴가 <strong>프로모션대메뉴로 이동</strong>되었습니다.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="expandable">
+                                    <a href="#none">세금계산서 신청</a>
+                                    <ul>
+                                        <li><a href="#none">신청</a></li>
+                                    </ul>
+                                </li>
+                                 <li class="disabled">
+                                     <a href="#none"><span class="icon help">도움말</span> <span class="transfer">부가서비스 요금안내</span></a>
+                                     <p class="tooltip">해당메뉴가 <strong>프로모션대메뉴로 이동</strong>되었습니다.</p>
+                                 </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">운영지원서비스</a>
+                        </li>
+                        <li>
+                            <a href="#none"><span class="icon help">도움말</span> <span class="transfer">아웃소싱대행</span></a>
+                            <p class="tooltip">해당메뉴가 <strong>프로모션대메뉴로 이동</strong>되었습니다.</p>
+                        </li>
+                        <li class="expandable">
+                            <a href="#none">제휴구매서비스</a>
+                            <ul>
+                                <li><a href="#none">하위메뉴1</a></li>
+                                <li><a href="#none">하위메뉴2</a></li>
+                            </ul>
+                        </li>
+                        <li class="disabled">
+                            <a href="#none">제휴구매서비스</a>
+                        </li>
+                        <li class="line collapsable">
+                            <a href="#none">앱스토어 <span class="icon hot">HOT</span></a>
+                            <ul>
+                                <li><a href="#none">페이스북 뉴스피드 <span class="icon gRecommend">추천</span></a></li>
+                                <li><a href="#none">포토 슬라이드 v2 <span class="icon rRecommend">추천</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    var changeImg;
+                    function fadeImages(){
+                        var $active = $('#financial .active');
+                        var $next = ($active.next().length > 0) ? $active.next() : $('#financial a:first');
+                        $next.css('z-index',2); //move the next image up the pile
+                        $active.fadeOut(1500,function(){ //fade out the top image
+                            $active.css('z-index',1).show().removeClass('active'); //reset the z-index and unhide the image
+                            $next.css('z-index',3).addClass('active'); //make the next image the top one
+                        });
+                    }
+                    $(function(){
+                        // snb action
+                        // 1depth
+                        $('#snb.sub .menu > li > a').click(function(){
+                            if($(this).children().hasClass("transfer") == false && $(this).parent().hasClass("disabled") == false) {
+                                $(this).parent().siblings().removeClass("collapsable").removeClass("selected");
+
+                                if($(this).parent().hasClass("expandable") == true){
+                                    $(this).parent().toggleClass("collapsable");
+                                } else {
+                                    $(this).parent().addClass("selected");
+                                }
+                            }
+                            return false
+                        });
+                        // 2depth
+                        $('#snb.sub .menu > li > ul > li > a').click(function(){
+                            if($(this).children().hasClass("transfer") == false && $(this).parent().hasClass("disabled") == false ) {
+                                var siblings = $(this).parent().siblings();
+                                siblings.removeClass("selected");
+                                $(this).parent().siblings('.collapsable').removeClass("collapsable").addClass("expandable");
+
+                                if($(this).parent().hasClass("expandable") == true){
+                                    $(this).parent().removeClass("expandable").addClass("collapsable");
+                                } else if($(this).parent().hasClass("collapsable") == true){
+                                    $(this).parent().removeClass("collapsable").addClass("expandable");
+                                } else {
+                                    $(this).parent().addClass("selected");
+                                }
+                            }
+                            return false
+                        });
+                        // 3depth
+                        $('#snb.sub .menu li li li a').click(function(){
+                            if($(this).children().hasClass("transfer") == false && $(this).parent().hasClass("disabled") == false) {
+                                $(this).parent().siblings().removeClass("selected");
+                                $(this).parent().addClass("selected");
+                            }
+                            return false
+                        });
+
+                        // gnb menu fadeout
+                        changeImg = setInterval('fadeImages()', 3000);
+                        $("#financial > a").mouseenter(function() {
+                            clearInterval(changeImg);
+                            $(this).css('z-index',1).show().removeClass('active');
+                            $(".focus").css('z-index',3).css('color','#fff').addClass('active');
+                        }).mouseleave(function() {
+                            changeImg = setInterval('fadeImages()', 3000);
+                            $(".focus").css('color','#c8dbf8')
+                        });
+                    });
+                </script>
+                <div class="bookmark">
+                    <div class="title">
+                        <h2>즐겨찾는 메뉴</h2>
+                        <a href="#none" class="setting">설정</a>
+                        <a href="#none" class="toggle open"><span>펼침</span></a>
+                    </div>
+                    <ul>
+                        <li><a href="#none">페이스북 뉴스피드</a></li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                        // 즐겨찾는 메뉴 샘플
+                        $('.bookmark .toggle').click(function(){
+                            var bookmarkList = $('.bookmark ul');
+                            if($(this).hasClass('open')){
+                                $(this).removeClass('open').addClass('close');
+                                $(this).find('span').text('닫힘');
+                                bookmarkList.show();
+                            } else {
+                                $(this).removeClass('close').addClass('open');
+                                $(this).find('span').text('펼침');
+                                bookmarkList.hide();
+                            }
+                        });
+                    });
+                </script>
+                <div class="promotion">
+                    <span id="admngDebug"></span><span id="admngSide_1"></span><script id="admng" type="text/javascript" src="http://ad.cafe24.com/adManager/logic/WebAnalysis.js?siteType=malladmin&userID=&groupIdx=69"></script>
+                    <a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/bnr_newproduct_apply.jpg" alt="뉴상품 전환 신청" /></a>
+                </div>
+            </div>
+        </div><!-- //[sidebar] -->
+        <hr class="layout" />
+
+
+
+
+        <!-- [ content ] -->
+        <div id="content">
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>쿠폰 설정</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home">홈</li>
+                        <li>프로모션</li>
+                        <li>쿠폰서비스</li>
+                        <li title="현재 위치"><strong>쿠폰기본설정</strong></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>기본 설정</h2>
+                </div>
+                <div class="mBoard type2 gMedium">
+                    <table border="1" summary="">
+                    <caption>기본 설정</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">쿠폰사용</th>
+                            <td ec-lang="ja_JP">
+                                <label class="fChk"><input type="radio" name="radio1" /> 사용함</label>
+                                <label class="fChk"><input type="radio" name="radio1" /> 사용안함</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">쿠폰 사용 제한 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select ec-lang="ja_JP">
+                                    <option>주문서쿠폰만 사용</option>
+                                    <option>상품별쿠폰만 사용</option>
+                                    <option selected="selected">주문서+상품별쿠폰 사용</option>
+                                </select>
+                                <ul class="gFormInfo">
+                                    <li>쇼핑몰에서 사용 가능한 쿠폰 기준의 설정이 가능합니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">노출 유형 설정</th>
+                            <td>
+                                <img src="/suio/debugLang/ko_KR/img_realtimer_rolling.jpg" alt="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">적립금 동시사용</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio2" /> 사용함</label>
+                                <label class="fChk"><input type="radio" name="radio2" /> 사용안함</label>
+                                <ul class="gFormInfo">
+                                    <li>적립금과 쿠폰의 동시사용 설정입니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">할인 동시사용 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select>
+                                    <option>쿠폰만 사용</option>
+                                    <option>회원등급할인만 사용</option>
+                                    <option selected="selected">쿠폰+회원등급할인 동시사용</option>
+                                </select>
+                                <ul class="gFormInfo">
+                                    <li>"회원등급할인만 사용"으로 선택시, 쿠폰 기능을 사용으로 하였더라도 쿠폰을 선택할 수 있는 버튼이 나타나지 않습니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상품/주문서 동시사용</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio3" /> 사용함</label>
+                                <label class="fChk"><input type="radio" name="radio3" /> 사용안함</label>
+                                <ul class="gFormInfo">
+                                    <li>상품별 쿠폰과 주문서 쿠폰 동시사용 설정입니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" rowspan="2">
+                                쿠폰 복원 설정
+                                <span class="icoHelp eTip">도움말</span>
+                                <div class="mTooltip gLarge">
+                                    <div class="gTop"></div>
+                                    <div class="gMiddle">
+                                        <strong class="tipTitle">쿠폰 복원 설정 안내</strong>
+                                        <ul>
+                                            <li>취소/반품/교환시 해당 상품에 사용한 쿠폰을 미사용쿠폰으로 복원할지 또는 쿠폰을 소멸할지에 대한 설정입니다.</li>
+                                            <li>부분 취소/반품/교환의 경우, '쿠폰복원 여부를 확인함' 설정시 취소/반품/교환 처리단계에서 상품, 주문서 쿠폰별로 복원 여부를 선택할 수 있습니다.</li>
+                                        </ul>
+                                        <strong class="tipTitle">설정 상세안내</strong>
+                                        <ul>
+                                            <li>자동 복원함 : 쿠폰을 복원처리합니다. (자동처리)</li>
+                                            <li>자동복원 안함 : 쿠폰을 복원하지 않습니다, (자동처리)</li>
+                                            <li>쿠폰복원 여부를 확인함 : 취소,반품접수시에 쿠폰복원여부를 선택할 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="gBottom"></div>
+                                    <a href="#none" class="btnClose eClose"><span>도움말 닫기</span></a>
+                                    <span class="icoArrTL"></span>
+                                </div>
+                            </th>
+                            <td>
+                                <p class="gDouble"><span class="icoDot"></span> <strong>전체 취소/반품/교환 시</strong></p>
+                                <div class="mBoard type2">
+                                    <table border="1" summary="">
+                                    <caption>전체 취소/반품/교환 상세 설정</caption>
+                                    <colgroup>
+                                        <col style="width:120px;" />
+                                        <col style="width:auto" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">취소 시 (입금전)</th>
+                                            <td>
+                                                <label class="fChk"><input type="radio" name="radio4_1" /> 자동 복원함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_1" /> 자동 복원 안함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_1" /> 쿠폰복원 여부를 확인함</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">취소 시 (입금후)</th>
+                                            <td>
+                                                <label class="fChk"><input type="radio" name="radio4_2" /> 자동 복원함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_2" /> 자동 복원 안함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_2" /> 쿠폰복원 여부를 확인함</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">반품 시</th>
+                                            <td>
+                                                <label class="fChk"><input type="radio" name="radio4_3" /> 자동 복원함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_3" /> 자동 복원 안함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_3" /> 쿠폰복원 여부를 확인함</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">교환 시</th>
+                                            <td>
+                                                <label class="fChk"><input type="radio" name="radio4_4" /> 자동 복원함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_4" /> 자동 복원 안함</label>
+                                                <label class="fChk"><input type="radio" name="radio4_4" /> 쿠폰복원 여부를 확인함</label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="gWidth type13"><span class="icoDot"></span> <strong>부분 취소/반품/교환 시</strong></span>
+                                <label class="fChk"><input type="radio" name="radio4_5" /> 쿠폰 복원 안함</label>
+                                <label class="fChk"><input type="radio" name="radio4_5" /> 쿠폰 복원 여부를 확인함</label>
+                                <ul class="txtInfo">
+                                    <li>부분 취소/반품/교환 시에는 자동 복원 설정이 불가능합니다. 쿠본복원 여부 확인창에서 상품,주문서 쿠폰별로 복원여부를 선택하셔야합니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">사용 개수 제한</th>
+                            <td>
+                                <ul class="gSelectList">
+                                    <li>
+                                        <label class="fChk gWidth type6"><input type="checkbox" name="" /> 상품당 상품쿠폰</label>
+                                        <span class="gLabel"><input type="text" class="fText right" style="width:50px;" /> 개</span>
+                                    </li>
+                                    <li>
+                                        <label class="fChk gWidth type6"><input type="checkbox" name="" /> 1회 주문당 주문서쿠폰 </label>
+                                        <span class="gLabel"><input type="text" class="fText right" style="width:50px;" /> 개</span>
+                                    </li>
+                                    <li>
+                                        <label class="fChk gWidth type6"><input type="checkbox" name="" /> 1회 주문당 상품쿠폰</label>
+                                        <span class="gLabel"><input type="text" class="fText right" style="width:50px;" /> 개</span>
+                                    </li>
+                                    <li>
+                                        <label class="fChk gWidth type6"><input type="checkbox" name="" /> 주문건당 (주문서+상품쿠폰)</label>
+                                        <span class="gLabel"><input type="text" class="fText right" style="width:50px;" /> 개</span>
+                                    </li>
+                                    <li>
+                                        <label class="fChk gWidth type6"><input type="checkbox" name="" /> 일간 (주문서+상품쿠폰)</label>
+                                        <span class="gLabel"><input type="text" class="fText right" style="width:50px;" /> 개</span>
+                                    </li>
+                                </ul>
+                                <ul class="gFormInfo">
+                                    <li>쿠폰의 사용 갯수를 제한하고 싶으시면 설정을 해주시고, 보유량만큼 무제한 사용이 되도록 하고 싶으시면 체크 후 수량을 입력할 수 있습니다.</li>
+                                    <li>쿠폰 사용량의 제한이 하나도 없는 경우 쿠폰사용에 의한 결제금액이 '0'원까지 내려갈 수 있으니, 체크 설정을 한 개이상 하시는 것을 권장합니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>진열 및 기본 디자인 설정</h2>
+                </div>
+                <div class="mBoard type2 gMedium">
+                    <table border="1" summary="">
+                    <caption>진열 및 기본 디자인 설정</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">비회원 노출설정</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio2_0" /> 노출함</label>
+                                <label class="fChk"><input type="radio" name="radio2_0" /> 노출안함</label>
+                                <p class="gSingleTop">
+                                    <label class="fChk"><input type="checkbox" /> 회원등급할인이 지정된 쿠폰 포함</label>
+                                </p>
+                                <ul class="gFormInfo">
+                                    <li>비회원 / 비로그인시 상품상세페이지에서 쿠폰 기본 노출에 대한 설정을 할 수 있습니다.</li>
+                                    <li>회원등급할인이 지정된 쿠폰 포함' 체크시 회원등급할인이 지정된 쿠폰이 모두 노출됩니다. (로그인시 해당 회원등급 쿠폰만 노출됩니다.)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">쿠폰 다운로드시 노출 설정</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio2_01" /> 노출함</label>
+                                <label class="fChk"><input type="radio" name="radio2_01" /> 노출안함</label>
+                                <ul class="gFormInfo">
+                                    <li>쿠폰을 다운로드 / 발급받아 보유한 경우에도 쿠폰이 노출될지의 여부를 설정할 수 있습니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">정렬 기준 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select>
+                                    <option>쿠폰시작일자</option>
+                                    <option>쿠폰종료일자</option>
+                                    <option>쿠폰발급일자</option>
+                                    <option selected="selected">할인/적립금액</option>
+                                    <option>할인/적립률</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">진열 방식</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio2_1" /> 1열</label>
+                                <label class="fChk"><input type="radio" name="radio2_1" /> 2열</label>
+                                <label class="fChk"><input type="radio" name="radio2_1" /> 3열</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">글자색</th>
+                            <td>
+                                <div class="mColorPicker eColorPicker">
+                                    <span class="selected" style="background-color:#ff0000"></span>
+                                    <input type="text" maxlength="7" readonly="readonly" value="#ff0000" class="fText" style="width:50px" />
+                                    <span class="selector">
+                                        <a href="#none">컬러선택</a>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">글자글꼴</th>
+                            <td>
+                                <select>
+                                    <option selected="selected">굴림</option>
+                                    <option>돋움</option>
+                                    <option>천리안체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">글자크기</th>
+                            <td>
+                                <select>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option selected="selected">10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>22</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">쿠폰 다운로드 이미지</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio2_2" /> 기본 이미지</label>
+                                <label class="fChk"><input type="radio" name="radio2_2" /> 직접 등록</label>
+                                <!-- 기본이미지 -->
+                                <ul class="gSelectList gCouponBtn">
+                                    <li>
+                                        <label class="fChk theme1"><input type="radio" name="radio2_2_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme2"><input type="radio" name="radio2_2_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme3"><input type="radio" name="radio2_2_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme4"><input type="radio" name="radio2_2_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme5"><input type="radio" name="radio2_2_1" /></label>
+                                    </li>
+                                </ul>
+                                <!-- //기본이미지 -->
+                                <!-- 직접 등록 -->
+                                <p class="gDoubleTop">
+                                    <input type="file" class="fFile" />
+                                    <span class="gFormInfo">권장 이미지 : gif / 권장 사이즈 : 62px * 23px </span>
+                                </p>
+                                <!-- //직접 등록 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">쿠폰 배경이미지</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio3_2" /> 기본 이미지</label>
+                                <label class="fChk"><input type="radio" name="radio3_2" /> 직접 등록</label>
+                                <!-- 기본이미지 -->
+                                <ul class="gSelectList gCouponBg">
+                                    <li>
+                                        <label class="fChk theme1"><input type="radio" name="radio2_3_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme2"><input type="radio" name="radio2_3_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme3"><input type="radio" name="radio2_3_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme4"><input type="radio" name="radio2_3_1" /></label>
+                                    </li>
+                                    <li>
+                                        <label class="fChk theme5"><input type="radio" name="radio2_3_1" /></label>
+                                    </li>
+                                </ul><!-- //기본이미지 -->
+                                <!-- 직접 등록 -->
+                                <p class="gDoubleTop">
+                                    <input type="file" class="fFile" />
+                                    <span class="gFormInfo">권장 이미지 : gif / 권장 사이즈 : 216px * 105px</span>
+                                </p>
+                                <!-- //직접 등록 -->
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mButton">
+                <p>
+                    <a href="#none" class="btnCancel"><span>쿠폰디자인 미리보기</span></a>
+                    <a href="#none" class="btnSubmit"><span>저장</span></a>
+                </p>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>쿠폰 기본 설정 도움말</h2>
+                <div class="gInner">
+                    <ol>
+                        <li>스마트디자인 사용시 쿠폰 진열 디자인 및 기본 설정(글자색, 글꼴, 글자크기)은 스마트디자인 편집창에서 직접 변경 가능합니다.</li>
+                        <li>선택된 쿠폰 다운로드이미지, 쿠폰 배경이미지는 기본 쿠폰 이미지로만 사용되며, 스마트디자인 편집창에서 편집시 변경될 수 있습니다.</li>
+                        <li>기본 디자인을 등록해놓으시면 개별 쿠폰마다 특정 디자인을 적용하기 전에는 기본 디자인으로 설정된 쿠폰이 표시됩니다.</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- //[ content ] -->
+    </div>
+</div>
+
+    <div class="mLoading" id="jsLoadingSample">
+        <p>처리중입니다. 잠시만 기다려 주세요.</p>
+        <img src="//img.echosting.cafe24.com/suio/ico_loading.gif" alt="" />
+    </div>
+</body>
+</html>

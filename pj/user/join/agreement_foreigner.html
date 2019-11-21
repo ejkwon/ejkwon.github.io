@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>CAFE24 회원가입</title>
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="screen">
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/ui.js" charset="utf-8"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="skipNavigation">
+        <p><a href="#contents">본문 바로가기</a></p>
+    </div>
+    <div id="wrap">
+        <?php require('../include/header.html'); ?>
+
+        <div id="container">
+            <div class="mStep step1">
+                <ol>
+                    <li class="first selected"><strong>약관동의</strong></li>
+                    <li class="second"><strong>회원정보 입력</strong></li>
+                    <li class="third"><strong>가입완료</strong></li>
+                </ol>
+            </div>
+            <!-- contents -->
+            <div id="contents">
+                <div class="mTitle">
+                    <h2>약관동의</h2>
+                    <p>회원가입을 위해 이용약관 및 개인정보 수집 및 이용에 관한 안내를 읽고 동의해주세요.</p>
+                </div>
+                <div class="agreeArea">
+                    <div class="mAgree">
+                        <h3>카페24 회원 약관</h3>
+                        <div class="termsArea">
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_member_agreement.html" class="term" frameborder="0" scrolling="yes"></iframe>
+                            </div>
+                            <label class="fCheck"><input type="checkbox">동의함</label>
+                        </div>
+                    </div>
+                    <div class="mAgree">
+                        <h3>개인정보 수집 및 이용</h3>
+                        <div class="termsArea">
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_privacy01.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_privacy02.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_privacy03.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <label class="fCheck"><input type="checkbox">동의함</label>
+                        </div>
+                    </div>
+                    <!-- 참고 : 쇼핑몰센터, 마케팅센터 -->
+                    <div class="mAgree">
+                        <h3>카페24 EC호스팅 이용약관</h3>
+                        <div class="termsArea">
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_echosting.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <label class="fCheck"><input type="checkbox">동의함</label>
+                        </div>
+                    </div><!-- //참고 : 쇼핑몰센터, 마케팅센터 -->
+                </div>
+
+                <div class="mTitle">
+                    <h2>회원인증</h2>
+                    <p>여권번호의 경우 별도의 인증서류 접수가 필요하므로, 아래 '회원인증 안내'를 꼭 확인해주세요.</p>
+                </div>
+
+                <div class="mBoard">
+                    <p class="mRequired"><img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"> 필수 입력</p>
+                    <table border="1" summary="">
+                        <caption>회원인증</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">등록번호 <img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"></th>
+                                <td>
+                                    <label class="fRadio eSelected"><input type="radio" name="radio1" checked="checked"> 외국인등록번호</label>
+                                    <label class="fRadio"><input type="radio" name="radio1"> 여권번호</label>
+                                    <!-- 참고 : 여권번호 선택시 -->
+                                    <div class="gSingle">
+                                        <input type="text" class="fText" style="width:35%;"> <a href="#layer_certify" class="btnNormal strong eLayerClick">중복확인</a><strong class="check">인증완료</strong>
+                                        <span class="gSingle"><label class="fCheck"><input type="checkbox"> 고유식별정보 처리에 동의합니다.</label></span>
+                                        <p class="gSingle explain">
+                                            <strong>[고유식별정보 처리에 대한 안내]</strong><br>
+                                            회사는 회원의 본인확인을 위하여 고유식별정보(여권번호, 외국인등록번호)를 수집하여 회원탈퇴까지 보유 및 이용합니다.<br>
+                                            고유식별정보 제공에 동의하지 않으시면, 그 대체수단으로 휴대폰, I-PIN을 이용하여 본인확인 및 회원가입을 하실 수 있습니다.
+                                        </p>
+                                    </div><!-- // 참고 : 여권번호 선택시 -->
+                                </td>
+                            </tr>
+                            <!-- 참고 : 여권번호 선택시 -->
+                            <tr>
+                                <th scope="row">이름 <img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"></th>
+                                <td><input type="text" class="fText" style="width:200px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">생년월일 <img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"></th>
+                                <td><input type="text" class="fText" style="width:60px;">년 <input type="text" class="fText gIndent" style="width:60px;">월 <input type="text" class="fText gIndent" style="width:60px;">일</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">성별 <img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"></th>
+                                <td>
+                                    <label class="fRadio"><input type="radio" name="radio2"> 남자</label>
+                                    <label class="fRadio"><input type="radio" name="radio2"> 여자</label>
+                                </td>
+                            </tr><!-- // 참고 : 여권번호 선택시 -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 참고 : 외국인등록번호 선택시 -->
+                <div class="mButton">
+                    <a href="#layer_certify" class="btnSubmit eLayerClick"><span class="icoPhone"></span> 휴대폰 인증</a>
+                    <a href="#layer_certify" class="btnEm eLayerClick">아이핀 인증</a>
+                </div><!-- //참고 : 외국인등록번호 선택시 -->
+
+                <!-- 참고 : 여권번호 선택시 -->
+                <div class="mButton">
+                    <a href="../join/profile.html" class="btnSubmit">다음 단계로<span class="icoNext"></span></a>
+                </div><!-- //참고 : 여권번호 선택시 -->
+
+                <div class="mHelp">
+                    <h2>회원인증 안내</h2>
+                    <ul>
+                        <li>외국인등록번호 인증의 경우 <span class="txtEm">본인의 이름 입력 후 휴대폰 인증 또는 아이핀 인증</span>을 해주세요.</li>
+                        <li>휴대폰 인증과 아이핀 인증은 방송통신위원회에서 주관하는 주민번호 대체 수단으로 주민번호를 입력하지 않고 가입할 수 있는 서비스입니다.</li>
+                        <li><strong>휴대폰 인증</strong> : 가입하시는 분 명의의 휴대폰 번호로만 회원 인증이 가능합니다.</li>
+                        <li><strong>아이핀 인증</strong> : 아이핀 인증방식으로 가입하기 위해서는 아이핀 ID가 있어야 합니다. <a href="http://i-pin.kisa.or.kr/kor/main.jsp" class="btnLink" target="_blank">[I-PIN 발급 서비스 바로가기<em class="icoLink"></em>]</a></li>
+                        <li>여권번호 인증의 경우 <span class="txtEm">본인의 이름과 여권번호</span>를 정확하게 입력하여 주시기 바랍니다.</li>
+                        <li>
+                            여권번호의 경우 별도의 인증서류 확인 후 서비스 이용이 가능합니다. 아래 접수 방법으로 본인의 '여권' 사본을 보내주세요.
+                            <dl>
+                                <dt>인증서류 : </dt>
+                                <dd>여권사본 1부</dd>
+                            </dl>
+                            <dl>
+                                <dt>접수방법 : </dt>
+                                <dd>이메일 hosting@cafe24.com, <br class="RMB">팩스 02-6280-0331</dd>
+                            </dl>
+                            (제출서류에 '아이디' 정보와 '외국인회원 인증요청' 문구를 함께 기재해주세요.)
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- //contents -->
+        </div>
+
+        <?php require('../include/footer.html'); ?>
+    </div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>남궁찬♥권언정 결혼식에 초대합니다.</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+  <meta property="og:url" content="http://kejjj.cafe24.com/card/index.html">
+  <meta property="og:title" content="남궁찬 ♥ 권언정 결혼식에 초대합니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/img_visual.jpg">
+  <meta property="og:description" content="2017.11.11 토요일 오후 1시 30분">
+  <link rel="apple-touch-icon-precomposed" href="img/marry.ico">
+  <link rel="shortcut Icon" href="img/marry.ico">
+  <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanummyeongjo.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="http://mcard.barunnfamily.com/resources/css/ui/photoswipe.css">
+  <script src="js/jquery_1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/photoswipe.js"></script>
+  <script type="text/javascript" src="js/photoswipe-ui-default.min.js"></script>
+  <script>
+      $(document).ready(function () {
+        var lat = 37.5113174;
+        var lng = 127.0317052;
+        var loc = "뉴힐탑호텔 더 피아체";
+        // 내비게이션 (0:네이버/1:카카오)
+        $("#location .button a").click(function () {
+            var navurl = "http://app.map.naver.com/launchApp/?version=11&menu=navigation&elat=" + lat + "&elng=" + lng + "&etitle=" + encodeURIComponent(loc);
+            var f = window.open(navurl);
+            return false;
+        });
+
+        // 교통정보 (0:네이버자동차길찾기/1:네이버대중교통길찾기/2:네이버대중교통길찾기)
+        $("ul.traffic>li>a").click(function () {
+            var ix = $(this).parent().index();
+            var navurl = "";
+
+            if ($("ul.traffic").children('li').length == 2) {
+                ix = ix;
+            } else if ($("ul.traffic li ul").children('li').length == 2) {
+                if ($(this).attr("id") == "car") {
+                    ix = 0;
+                } else if ($(this).attr("id") == "bus") {
+                    ix = 1;
+                }
+            }else {
+                ix = $(this).index() - 1;
+            }
+
+
+            if (ix == 0) {
+                // car
+                navurl = "https://m.map.naver.com/route.nhn?menu=route&ename=" + encodeURIComponent(loc) + "&ex=" + lng + "&ey=" + lat + "&pathType=0&showMap=true";
+            }
+            else if (ix == 1) {
+                // bus
+                navurl = "https://m.map.naver.com/route.nhn?menu=route&ename=" + encodeURIComponent(loc) + "&ex=" + lng + "&ey=" + lat + "&pathType=1&showMap=true";
+            }
+            else if (ix == 2) {
+                // subway
+                navurl = "https://m.map.naver.com/route.nhn?menu=route&ename=" + encodeURIComponent(loc) + "&ex=" + lng + "&ey=" + lat + "&pathType=1&showMap=true";
+            }
+            var f = window.open(navurl);
+            return false;
+        });
+      });
+  </script>
+</head>
+<body>
+<div id="wrap">
+  <section id="main">
+    <div class="headline">
+      <p class="sub">Wedding Invitation</p>
+      <h1 class="mainTitle">남궁찬 <i class="icoHeart"></i> 권언정</h1>
+      <div class="typewriter"><strong>결혼합니다.</strong></div>
+    </div>
+    <img class="visual" src="img/img_visual.jpg" alt="">
+    <div class="info">
+      <p class="date">
+        <span class="day">2017.11.11 SAT</span>
+        <span class="time">1:30 PM</span>
+      </p>
+      <p class="address">
+        <span class="place">뉴힐탑호텔 더 피아체</span>
+        <span class="hall">2층 에스톤홀</span>
+      </p>
+    </div>
+  </section>
+
+  <section id="invitation">
+    <h2><img src="img/tit_greeting.png" alt="INVITATION"></h2>
+    <p class="ment">
+      서로가 마주보며 다져온 사랑을 <br>
+      이제 함께 한 곳을 바라보며 걸어갈 수 있는<br>
+      큰 사랑으로 키우고자 합니다.<br>
+      저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게<br>
+      앞날을 축복해 주시면 감사하겠습니다.
+    </p>
+    <div class="couple">
+      <div class="box">
+        <span class="title">신랑</span>
+        <strong class="name">남궁찬</strong>
+        <div class="util">
+          <a href="tel:010-3248-3814"><img src="img/btn_tel.png" width="35"></a>
+          <a href="sms:010-3248-3814"><img src="img/btn_sms.png" width="35"></a>
+        </div>
+      </div>
+      <div class="box">
+        <span class="title">신부</span>
+        <strong class="name">권언정</strong>
+        <div class="util">
+          <a href="tel:010-4720-9811"><img src="img/btn_tel.png" width="35"></a>
+          <a href="sms:010-4720-9811"><img src="img/btn_sms.png" width="35"></a>
+        </div>
+      </div>
+    </div>
+    <div class="parents">
+      <dl>
+        <dt>신랑측 혼주</dt>
+        <dd>
+          <div class="box">
+            <span class="title">아버지</span>
+            <strong class="name">남궁갑</strong>
+            <div class="util">
+              <a href="tel:010-5340-8572"><img src="img/btn_tel.png" width="35"></a>
+              <a href="sms:010-5340-8572"><img src="img/btn_sms.png" width="35"></a>
+            </div>
+          </div>
+        </dd>
+      </dl>
+      <dl>
+        <dt>신부측 혼주</dt>
+        <dd>
+          <div class="box">
+            <span class="title">아버지</span>
+            <strong class="name">권윤식</strong>
+            <div class="util">
+              <a href="tel:010-6227-9811"><img src="img/btn_tel.png" width="35"></a>
+              <a href="sms:010-6227-9811"><img src="img/btn_sms.png" width="35"></a>
+            </div>
+          </div><div class="box">
+            <span class="title">어머니</span>
+            <strong class="name">우명남</strong>
+            <div class="util">
+              <a href="tel:010-2128-9811"><img src="img/btn_tel.png" width="35"></a>
+              <a href="sms:010-2128-9811"><img src="img/btn_sms.png" width="35"></a>
+            </div>
+          </div>
+        </dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2><img src="img/tit_gallery.png" alt="웨딩사진"></h2>
+    <div class="galleryWrap">
+      <!-- a href="팝업이미지" background="섬네일 이미지" data-size=이미지 원본 사이즈 -->
+      <div class="galleryList">
+        <figure><a href="img/img1.jpg" style="background:url('img/img1.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x779" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img2.jpg" style="background:url('img/img2.jpg') no-repeat center center" itemprop="contentUrl" data-size="466x699" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <!--<figure><a href="img/img3.jpg" style="background:url('img/img3.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x702" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>-->
+        <figure><a href="img/img4.jpg" style="background:url('img/img4.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x691" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img5.jpg" style="background:url('img/img5.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x665" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img6.jpg" style="background:url('img/img6.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x665" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img7.jpg" style="background:url('img/img7.jpg') no-repeat center center" itemprop="contentUrl" data-size="684x1001" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img8.jpg" style="background:url('img/img8.jpg') no-repeat center center" itemprop="contentUrl" data-size="667x1001" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img9.jpg" style="background:url('img/img9.jpg') no-repeat center center" itemprop="contentUrl" data-size="670x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img10.jpg" style="background:url('img/img10.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x665" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img11.jpg" style="background:url('img/img11.jpg') no-repeat center center" itemprop="contentUrl" data-size="667x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img12.jpg" style="background:url('img/img12.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img13.jpg" style="background:url('img/img13.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x655" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img14.jpg" style="background:url('img/img14.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x665" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img15.jpg" style="background:url('img/img15.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x656" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img16.jpg" style="background:url('img/img16.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img17.jpg" style="background:url('img/img17.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x665" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <!--<figure><a href="img/img18.jpg" style="background:url('img/img18.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>-->
+        <figure><a href="img/img19.jpg" style="background:url('img/img19.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img20.jpg" style="background:url('img/img20.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img21.jpg" style="background:url('img/img21.jpg') no-repeat center center" itemprop="contentUrl" data-size="666x999" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img22.jpg" style="background:url('img/img22.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img23.jpg" style="background:url('img/img23.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img24.jpg" style="background:url('img/img24.jpg') no-repeat center center" itemprop="contentUrl" data-size="682x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img25.jpg" style="background:url('img/img25.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img26.jpg" style="background:url('img/img26.jpg') no-repeat center center" itemprop="contentUrl" data-size="667x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img27.jpg" style="background:url('img/img27.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x698" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img28.jpg" style="background:url('img/img28.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x673" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img29.jpg" style="background:url('img/img29.jpg') no-repeat center center" itemprop="contentUrl" data-size="666x999" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img30.jpg" style="background:url('img/img30.jpg') no-repeat center center" itemprop="contentUrl" data-size="666x999" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img31.jpg" style="background:url('img/img31.jpg') no-repeat center center" itemprop="contentUrl" data-size="667x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img32.jpg" style="background:url('img/img32.jpg') no-repeat center center" itemprop="contentUrl" data-size="667x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img33.jpg" style="background:url('img/img33.jpg') no-repeat center center" itemprop="contentUrl" data-size="1000x666" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img34.jpg" style="background:url('img/img34.jpg') no-repeat center center" itemprop="contentUrl" data-size="750x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+        <figure><a href="img/img35.jpg" style="background:url('img/img35.jpg') no-repeat center center" itemprop="contentUrl" data-size="750x1000" class="setimgsize"><img src="img/img_frame.png" class="img_frame" itemprop="thumbnail" alt=""></a></figure>
+      </div>
+    </div>
+
+    <!-- 갤러리 확대 -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+      <!-- Background of PhotoSwipe.
+      It's a separate element as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default(PhotoSwipeUI_Default) interface on top of sliding area.Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+
+            <!--  Controls are self-explanatory.Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / 갤러리 확대 -->
+
+
+    <!--<div class="list">-->
+      <!--<ul>-->
+        <!--<li><a href="#none" class="thumb"><img src="img/img1.jpg" alt=""></a></li>-->
+        <!--<li><a href="#none" class="thumb"><img src="img/img2.jpg" alt=""></a></li>-->
+        <!--<li><a href="#none" class="thumb"><img src="img/img3.jpg" alt=""></a></li>-->
+        <!--<li><a href="#none" class="thumb"><img src="img/img4.jpg" alt=""></a></li>-->
+         <!--<li><a href="#none" class="thumb"><img src="img/img5.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img6.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img7.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img8.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img9.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img10.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img11.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img12.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img13.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img14.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img15.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img16.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img17.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img18.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img19.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img20.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img21.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img22.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img23.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img24.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img25.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img26.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img27.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img28.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img29.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img30.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img31.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img32.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img33.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img34.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img35.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img36.jpg" alt=""></a></li> -->
+         <!--<li><a href="#none" class="thumb"><img src="img/img37.jpg" alt=""></a></li> -->
+      <!--</ul>-->
+    <!--</div>-->
+  </section>
+  <section id="movie">
+    <h2><img src="img/tit_movie.png" alt="웨딩영상"></h2>
+    <iframe width="100%" height="300" src="http://www.youtube.com/embed/4lcy-ncwAPA?rel=0" frameborder="0" allowfullscreen=""></iframe>
+  </section>
+  <section id="location">
+    <h2><img src="img/tit_map.png" alt="찾아오시는 길"></h2>
+    <div class="detail">
+      <strong>뉴힐탑호텔 더 피아체 2층 에스톤홀</strong><br>
+      서울 강남구 논현로 645<br>
+      <a href="tel:02-3443-3400" class="tel">02-3443-3400</a>
+      <div class="button">
+        <a href="#"><img src="img/btn_map_naver.png" width="53"></a>
+      </div>
+    </div>
+    <div class="map">
+      <iframe id="incGoogleMap" src="http://mcard.barunnfamily.com/Invitations/NaverMap?lat=37.5113174&lng=127.0317052" width="100%" height="300" frameborder="0" style="border: 0" allowfullscreen=""></iframe>
+    </div>
+    <dl class="desc">
+      <dt>버스 안내</dt>
+      <dd>147, 401, 463, 241, 3412, 3414, 4211, 6411<br>학동역 사거리 or 논현고개 하차</dd>
+      <dt>자가용 안내</dt>
+      <dd>주차요원의 안내를 받아 지하 및 옥외주차장 이용</dd>
+      <dt>지하철 안내</dt>
+      <dd>7호선 학동역(4번출구) 도보 2분거리<br>9호선 언주역(2번출구) 도보 5분거리</dd>
+    </dl>
+    <ul class="traffic">
+      <li><a href="#"><img src="img/btn_car.png" width="53" alt="자동차"><span class="txt">자동차</span></a></li>
+      <li><a href="#"><img src="img/btn_metro.png" width="53" alt="대중교통"><span class="txt">대중교통</span></a></li>
+    </ul>
+  </section>
+</div>
+<script type="text/javascript" src="js/photoswipe-gallery.js"></script>
+</body>
+</html>

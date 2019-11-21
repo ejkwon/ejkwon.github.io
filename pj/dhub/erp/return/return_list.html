@@ -1,0 +1,306 @@
+<?php require_once('../../include/header.html'); ?>
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>반송목록</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li>반송처리</li>
+                        <li class="now" title="현재 페이지">반송목록</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>반송 검색</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>반송 검색</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>판매사주문번호</option>
+                                        <option>합포번호</option>
+                                        <option>송장번호</option>
+                                        <option>FB송장번호</option>
+                                        <option>배송지시번호</option>
+                                        <option>출고지시번호</option>
+                                        <option>카페24아이디</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:430px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">기간</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>반송요청일</option>
+                                        <option>판매사주문일</option>
+                                    </select>
+                                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                                    <a href="#none" class="btnDate"><span>3일</span></a>
+                                    <a href="#none" class="btnDate"><span>7일</span></a>
+                                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                                    <a href="#none" class="btnDate"><span>3개월</span></a>
+                                    <a href="#none" class="btnDate"><span>1년</span></a>
+                                    <a href="#none" class="btnDate"><span>전체</span></a>
+                                    <input type="text" id="pr_start_date" name="start_date" value="2012-06-07" class="fText gDate" />
+                                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                                    ~
+                                    <input type="text" id="pr_end_date" name="end_date" value="2012-06-07" class="fText gDate" />
+                                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상점</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>전체</option>
+                                        <option>MIXXMIX</option>
+                                        <option>DABAGIRL</option>
+                                        <option>LG생활건강</option>
+                                        <option>메이블루</option>
+                                        <option>샵인샵</option>
+                                        <option>ZEMMAWORLD</option>
+                                        <option>티몰유니버스</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>반송 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                            <option>300개씩보기</option>
+                            <option>500개씩보기</option>
+                            <option>1000개씩보기</option>
+                            <option>2000개씩보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span>반송지시 처리</span></a>
+                        <a href="#none" class="btnNormal"><span>바코드 반송지시</span></a>
+                        <a href="#none" class="btnNormal"><span>반송취소 처리</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <div class="mOpen">
+                            <a href="#excelOpen1" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+                            <div id="excelOpen1" class="open" style="width:120px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">기본양식</a></li>
+                                        <li><a href="#none">사용자 입력 양식1</a></li>
+                                        <li><a href="#none">사용자 입력 양식2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mBoard gScroll">
+                    <table border="1" summary="" class="eChkColor">
+                        <caption>반송 목록</caption>
+                        <colgroup>
+                            <col style="width:40px;" />
+                            <col style="width:100px;" />
+                            <col class="chk" />
+                            <col style="width:100px;" />
+                            <col style="width:130px;" />
+                            <col style="width:130px;" />
+                            <col class="time" />
+                            <col style="width:120px;" />
+                            <col style="width:150px;" />
+                            <col style="width:100px;" />
+                            <col style="width:50px;" />
+                            <col class="time" />
+                            <col style="width:150px;" />
+                            <col style="width:130px;" />
+                            <col style="width:80px;" />
+                        </colgroup>
+                        <thead>
+                            <!--
+                                ※ 참고: 소팅 아이콘 가이드 : http://fe.cafe24.com/suio/include/layout.php?MODULE=board_col_list
+                            -->
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">상점</th>
+                                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                                <th scope="col">카페24아이디</th>
+                                <th scope="col">합포번호</th>
+                                <th scope="col">FB송장번호</th>
+                                <th scope="col"><strong class="array">반송요청일<button type="button">정렬선택</button></strong></th>
+                                <th scope="col">판매사주문번호</th>
+                                <th scope="col">상품명</th>
+                                <th scope="col">품목명</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">판매사 주문일자</th>
+                                <th scope="col">반송지 주소</th>
+                                <th scope="col">반송지 전화번호</th>
+                                <th scope="col">반송취소</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td>1</td>
+                                <td>OHOTORO</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>()</td>
+                                <td>20160202-0007665</td>
+                                <td>FB1603150121000007</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>20160125-0013369</td>
+                                <td class="left">Solid Tone Chest Pocket T-Shirt</td>
+                                <td class="left">PINK</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td class="left">08511<br />서울시 금천구 디지털로 173 (가산동,엘리시아 8~9층)</td>
+                                <td class="left">02-4832-5830<br />010-5783-9213</td>
+                                <td>불가</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">2</td>
+                                <td rowspan="2">REORDER</td>
+                                <td rowspan="2"><input type="checkbox" class="rowChk" /></td>
+                                <td rowspan="2">()</td>
+                                <td rowspan="2">TEST-2222-101</td>
+                                <td rowspan="2">FB1603150121000006</td>
+                                <td rowspan="2">2016-03-15 09:28:58</td>
+                                <td rowspan="2">TEST-2222-101</td>
+                                <td class="left">Loose Essential T-Shirt</td>
+                                <td class="left">GRAY</td>
+                                <td class="right">1</td>
+                                <td rowspan="2">2016-03-15 09:28:58</td>
+                                <td rowspan="2" class="left">92743<br />서울특별시 성북구 하월곡동 51-30번지 자산빌딩 4층</td>
+                                <td rowspan="2" class="left">02-4832-5830<br />010-5783-9213</td>
+                                <td rowspan="2">불가</td>
+                            </tr>
+                            <tr>
+                                <td class="left">Mid-Rise Folded Cuff Shorts</td>
+                                <td class="left">MUSTARD</td>
+                                <td class="right">1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">3</td>
+                                <td rowspan="2">샵인샵</td>
+                                <td rowspan="2"><input type="checkbox" class="rowChk" /></td>
+                                <td rowspan="2">미건스타일</td>
+                                <td rowspan="2">20160322-0003218</td>
+                                <td rowspan="2">FB1603150121000001</td>
+                                <td rowspan="2">2016-03-15 09:28:58</td>
+                                <td rowspan="2">20160322-0003218</td>
+                                <td class="left">[22XX]데미멜빵팬츠</td>
+                                <td class="left">COLOR=Blue (블루), SIZE=S</td>
+                                <td class="right">1</td>
+                                <td rowspan="2">2016-03-15 09:28:58</td>
+                                <td rowspan="2" class="left">10048<br />경기도 김포시 양촌읍 황금로 127번길 117, 2층(학운리 3043번지)</td>
+                                <td rowspan="2" class="left">02-4832-5830<br />010-5783-9213</td>
+                                <td rowspan="2">가능</td>
+                            </tr>
+                            <tr>
+                                <td class="left">스웨트원피스</td>
+                                <td class="left">COLOR=Sora (소라)- 모델착용컬러</td>
+                                <td class="right">1</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>샵인샵</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>로미스토리</td>
+                                <td>20160322-0003218</td>
+                                <td>FB1603150121000001</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>20160322-0003218</td>
+                                <td class="left">디렉트 소잉 진</td>
+                                <td class="left">color=중청, size=XL</td>
+                                <td class="right">2</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td class="left">10048<br />경기도 김포시 양촌읍 황금로 127번길 117, 2층(학운리 3043번지)</td>
+                                <td class="left">02-4832-5830<br />010-5783-9213</td>
+                                <td>가능</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>샵인샵</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>업타운홀릭</td>
+                                <td>1384930246780400</td>
+                                <td>FB1511110166000359</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>1384930246780400</td>
+                                <td class="left">이네스트 pants (*5color)</td>
+                                <td class="left">color=아이보리</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td class="left">10048<br />경기도 김포시 양촌읍 황금로 127번길 117, 2층(학운리 3043번지)</td>
+                                <td class="left">02-4832-5830<br />010-5783-9213</td>
+                                <td>가능</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="empty">검색결과가 없습니다.</p>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span>반송지시 처리</span></a>
+                        <a href="#none" class="btnNormal"><span>바코드 반송지시</span></a>
+                        <a href="#none" class="btnNormal"><span>반송취소 처리</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <div class="mOpen">
+                            <a href="#excelOpen2" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+                            <div id="excelOpen2" class="open" style="width:120px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">기본양식</a></li>
+                                        <li><a href="#none">사용자 입력 양식1</a></li>
+                                        <li><a href="#none">사용자 입력 양식2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+<?php require_once('../../include/footer.html'); ?>

@@ -1,0 +1,176 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>재고조사 등록</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">재고</a></li>
+            <li><a href="#none">재고조사</a></li>
+            <li class="now" title="현재 페이지">재고조사 등록</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>바코드 등록</h2>
+        <a href="#layerSoundSet2" class="btnNormal eLayerClick"><span>효과음설정</span></a>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>바코드 등록</caption>
+        <tbody>
+            <tr>
+                <th scope="row">창고</th>
+                <td>
+                    <select class="fSelect">
+                        <option>- 창고선택 -</option>
+                        <option>창고1</option>
+                        <option>창고2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">수량입력</th>
+                <td><input type="text" class="fText right" style="width:50px;" /></td>
+            </tr>
+            <tr>
+                <th scope="row">바코드스캔</th>
+                <td><input type="text" class="fText" style="width:300px;" /></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>처리결과</h2>
+    </div>
+    <div class="mBox typeBorder">
+        <!-- 참고 : 정상 -->
+        <strong>정상</strong>
+        <p>(바코드 : 123456789)</p>
+        <p>상품명 : 땡땡이스카프 빨강 FREE</p>
+        <p>옵션 : 단일옵션</p>
+        <p>공급처 : 대한상사</p>
+        <p>공급처 상품명 : 땡땡빨강S</p>
+        <p>조사수량 : 1개</p>
+
+        <!-- 참고 : 오류 -->
+        <strong>오류</strong>
+        <p>(바코드 : 123456789)</p>
+        <p><span class="txtWarn">미등록된 상품입니다.</span></p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>조사 내역</h2>
+    </div>
+    <div class="mBoardArea">
+        <div class="mBoard typeHead">
+            <table border="1" summary="">
+            <caption>조사 내역</caption>
+            <colgroup>
+                <col class="time" />
+                <col style="width:70px;" />
+                <col style="width:80px;" />
+                <col style="width:auto;" />
+                <col style="width:100px;" />
+                <col style="width:117px;*width:98px;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="col">일시</th>
+                    <th scope="col">처리구분</th>
+                    <th scope="col">바코드번호</th>
+                    <th scope="col">상품정보/품목명</th>
+                    <th scope="col">창고/위치코드</th>
+                    <th scope="col">수량</th>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="mBoard typeBody">
+            <table border="1" summary="">
+            <caption>바코드 스캔 내역</caption>
+            <colgroup>
+                <col class="time" />
+                <col style="width:70px;" />
+                <col style="width:80px;" />
+                <col style="width:auto;" />
+                <col style="width:100px;" />
+                <col style="width:100px;*width:81px;" />
+            </colgroup>
+            <tbody class="center">
+                <tr>
+                    <td>2012-12-12 15:00:32</td>
+                    <td>정상</td>
+                    <td>1000355214</td>
+                    <td class="left">
+                        <div class="gGoods">
+                            <p>너무 멋진 디올 더블 숄가디건</p>
+                            <ul class="etc">
+                                <li>블랙,L</li>
+                                <li>공급사명1</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>창고명<br /><span class="txtLight">AA-123-002</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td>2012-12-12 15:00:32</td>
+                    <td>오류</td>
+                    <td>1000355214</td>
+                    <td class="left"><span class="txtWarn">상품정보 없음</span></td>
+                    <td>창고명<br /><span class="txtLight">AA-123-002</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td>2012-12-12 15:00:32</td>
+                    <td>정상</td>
+                    <td>1000355214</td>
+                    <td class="left">
+                        <div class="gGoods">
+                            <p>너무 멋진 디올 더블 숄가디건</p>
+                            <ul class="etc">
+                                <li>블랙,L</li>
+                                <li>공급사명1</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>창고명<br /><span class="txtLight">AA-123-002</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td>2012-12-12 15:00:32</td>
+                    <td>정상</td>
+                    <td>1000355214</td>
+                    <td class="left">
+                        <div class="gGoods">
+                            <p>너무 멋진 디올 더블 숄가디건</p>
+                            <ul class="etc">
+                                <li>블랙,L</li>
+                                <li>공급사명1</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>창고명<br /><span class="txtLight">AA-123-002</span></td>
+                    <td class="right">1</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

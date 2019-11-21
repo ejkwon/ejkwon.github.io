@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>CAFE24 회원가입</title>
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="screen">
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/ui.js" charset="utf-8"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="skipNavigation">
+        <p><a href="#contents">본문 바로가기</a></p>
+    </div>
+    <div id="wrap">
+        <?php require('../include/header.html'); ?>
+
+        <div id="container">
+            <div class="mStep step1">
+                <ol>
+                    <li class="first selected"><strong>약관동의</strong></li>
+                    <li class="second"><strong>회원정보 입력</strong></li>
+                    <li class="third"><strong>가입완료</strong></li>
+                </ol>
+            </div>
+            <!-- contents -->
+            <div id="contents">
+                <div class="mTitle">
+                    <h2>약관동의</h2>
+                    <p>회원가입을 위해 이용약관 및 개인정보 수집 및 이용에 관한 안내를 읽고 동의해주세요.</p>
+                </div>
+                <div class="agreeArea">
+                    <div class="mAgree">
+                        <h3>카페24 회원 약관</h3>
+                        <div class="termsArea">
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_member_agreement.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <label class="fCheck"><input type="checkbox">동의함</label>
+                        </div>
+                    </div>
+                    <div class="mAgree">
+                        <h3>개인정보 수집 및 이용</h3>
+                        <div class="termsArea">
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_privacy01.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_privacy02.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_privacy03.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <label class="fCheck"><input type="checkbox">동의함</label>
+                        </div>
+                    </div>
+                    <!-- 참고 : 쇼핑몰센터, 마케팅센터 -->
+                    <div class="mAgree">
+                        <h3>카페24 EC호스팅 이용약관</h3>
+                        <div class="termsArea">
+                            <div class="mTerms">
+                                <iframe src="//img.cafe24.com/txt/rule/common/cafe24_echosting.html" class="term" frameborder="0"></iframe>
+                            </div>
+                            <label class="fCheck"><input type="checkbox">동의함</label>
+                        </div>
+                    </div><!-- //참고 : 쇼핑몰센터, 마케팅센터 -->
+                </div>
+
+                <div class="mTitle">
+                    <h2>회원인증</h2>
+                    <p>법인회원의 경우 별도의 인증서류 접수가 필요하므로, 아래 '회원인증 안내'를 꼭 확인해주세요.</p>
+                </div>
+
+                <div class="mBoard">
+                    <p class="mRequired"><img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"> 필수 입력</p>
+                    <table border="1" summary="">
+                        <caption>회원인증</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">법인명 <img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"></th>
+                                <td><input type="text" class="fText"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">법인<br class="RMB">등록번호 <img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"></th>
+                                <td><input type="text" class="fText" style="width:65px;"> - <input type="text" class="fText" style="width:70px;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사업자<br class="RMB">등록번호 <img src="//img.cafe24.com/img/user/join/ico_required.png" class="icoRequired" alt="필수"></th>
+                                <td>
+                                    <input type="text" class="fText" style="width:45px;"> - <input type="text" class="fText" style="width:35px;"> - <input type="text" class="fText" style="width:55px;"> <a href="#layer_certify" class="btnNormal strong eLayerClick">중복확인</a>
+                                    <strong class="check gSingleM">인증완료</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대표자<br class="RMB">인증</th>
+                                <td>
+                                    <a href="#layer_certify" class="btnBasic eLayerClick">휴대폰 인증</a>
+                                    <a href="#layer_certify" class="btnBasic eLayerClick">아이핀 인증</a>
+                                    <label class="fCheck gSingleM"><input type="checkbox"> 나중에 인증하기</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mButton">
+                    <a href="../join/profile.html" class="btnSubmit">다음 단계로<span class="icoNext"></span></a>
+                </div>
+
+                <div class="mHelp">
+                    <h2>회원인증 안내</h2>
+                    <ul>
+                        <li><span class="txtEm">법인명과 법인등록번호</span>를 정확히 기입해주시기 바랍니다. </li>
+                        <li><span class="txtEm">법인등록번호를 부여받지 않은 사업자</span>는 개인사업자 회원으로 가입하셔야 합니다.</li>
+                        <li>법인회원은 인증서류 확인 후 서비스 이용이 가능합니다. 아래 접수 방법으로 '사업자등록증 또는 법인등기부등본 사본'을 내주세요.</li>
+                        <li>
+                            대표자 인증이 가능하지 않은 경우 '나중에 인증하기'에 체크하신 후 아래 접수방법으로 '대표자 신분증 사본'을 보내주세요.
+                            <dl>
+                                <dt>접수방법 : </dt>
+                                <dd>이메일 hosting@cafe24.com, <br class="RMB">팩스 02-6280-0331</dd>
+                            </dl>
+                            (제출서류에 '아이디' 정보와 '법인회원 인증요청' 문구를 함께 기재해주세요.)
+                        </li>
+                        <!-- 참고 : 마케팅센터 -->
+                        <li>마케팅센터 회원에 가입하시면 EC 호스팅과 동시 가입이 되며 회원 가입아이디로 쇼핑몰이 자동 생성됩니다.</li><!-- //참고 : 마케팅센터 -->
+                    </ul>
+                </div>
+            </div><!-- //contents -->
+        </div>
+
+        <?php require('../include/footer.html'); ?>
+    </div>
+</body>
+</html>

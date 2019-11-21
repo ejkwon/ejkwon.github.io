@@ -1,0 +1,124 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/front/include/header.html'); ?>
+
+<body class="memberArea">
+<div id="wrap">
+    <header id="header">
+        <h1 class="logo">
+            <a href="#none"><img src="//img.echosting.cafe24.com/api/dev/front/h1_logo_join.png" alt="cafe24" class="img"><span class="dev">Developers</span></a>
+        </h1>
+    </header>
+    <hr class="layout">
+
+    <div id="container">
+        <!-- [ contents ] -->
+        <section id="contents" class="joinArea">
+            <ol class="mIndicator">
+                <li>카페24 회원 정보 확인</li>
+                <li>개발사(자) 등록 약관 동의</li>
+                <li class="selected">개발사(자) 정보 입력</li>
+                <li>개발사(자) 등록 완료</li>
+            </ol>
+            <div class="mTitle gCenter">
+                <h2>개발사(자) 정보 입력</h2>
+                <p>카페24 개발자센터를 이용하고 App을 제작, 생성, 판매할 때 필요한 개발사(자) 정보를 입력합니다.</p>
+            </div>
+            <section class="section">
+                <div class="mInfo typeWrite">
+                    <h3 class="title">기본정보</h3>
+                    <dl class="info">
+                        <dt>개발사(자)명</dt>
+                        <dd><input type="text" class="fText" placeholder="개발사(자)명" style="width:100%;"></dd>
+                        <dt>생년월일</dt>
+                        <dd>
+                            <select class="fSelect">
+                                <option>2018</option>
+                                <option>~</option>
+                                <option>1930</option>
+                            </select> 년
+                            <select class="fSelect">
+                                <option>1</option>
+                                <option>~</option>
+                                <option>12</option>
+                            </select> 월
+                            <select class="fSelect">
+                                <option>1</option>
+                                <option>~</option>
+                                <option>12</option>
+                            </select> 일
+                        </dd>
+                    </dl>
+                    <div class="expand">
+                        <div class="head">
+                            <strong class="view">개발사(자) 안내 샘플 화면 보기</strong>
+                            <button type="button" class="button eToggle">열기</button>
+                        </div>
+                        <div class="body">
+                            <p class="desc">입력된 개발사(자) 정보는 App을 판매/설치하는 스토어에 아래와 같은 형태로 정보가 제공됩니다.</p>
+                            <div class="preview">
+                                <img src="//img.echosting.cafe24.com/api/dev/front/img_developer_preview.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mInfo typeWrite">
+                    <h3 class="title">연락처</h3>
+                    <dl class="info">
+                        <dt>이메일</dt>
+                        <dd><input type="text" class="fText" placeholder="이메일" style="width:100%;"></dd>
+                        <dt>전화번호</dt>
+                        <dd>
+                            <div class="gCellTel">
+                                <select class="fSelect">
+                                    <option>+82</option>
+                                </select>
+                                <input type="number" class="fText" placeholder="전화번호">
+                            </div>
+                        </dd>
+                        <dt>주소</dt>
+                        <dd><input type="text" class="fText" placeholder="주소" style="width:100%;"></dd>
+                    </dl>
+                </div>
+
+                <div class="mInfo typeWrite">
+                    <h3 class="title">선택정보</h3>
+                    <dl class="info">
+                        <dt>대표이미지 <span class="txtLight">(선택)</span></dt>
+                        <dd>
+                            <div class="mForm typeFile">
+                                <div class="file">선택된 파일 없음</div>
+                                <input type="file" id="file1" title="파일첨부">
+                                <label for="file1" class="button">찾아보기</label>
+                            </div>
+                            <p class="txtInfo">첨부파일: 85x70px / 300KB 이하/ png, jpg(jpeg)</p>
+                        </dd>
+                        <dt>웹사이트 URL <span class="txtLight">(선택)</span></dt>
+                        <dd><input type="text" class="fText" placeholder="웹사이트 URL " style="width:100%;"></dd>
+                        <dt>국가 <span class="txtLight">(선택)</span></dt>
+                        <dd>
+                            <select class="fSelect" style="width:100%;">
+                                <option>대한민국</option>
+                                <option>일본</option>
+                            </select>
+                        </dd>
+                        <dt>도시 <span class="txtLight">(선택)</span></dt>
+                        <dd>
+                            <select class="fSelect" style="width:100%;" disabled="disabled">
+                                <option>도시</option>
+                                <option>서울</option>
+                            </select>
+                        </dd>
+                        <dt>주소 <span class="txtLight">(선택)</span></dt>
+                        <dd><input type="text" class="fText" placeholder="주소" style="width:100%;"></dd>
+                        <dt>소개 <span class="txtLight">(선택)</span></dt>
+                        <dd><textarea class="fTextarea" placeholder="소개" style="width:100%;"></textarea></dd>
+                    </dl>
+                </div>
+            </section>
+            <div class="mButton">
+                <a href="/pj/API/dev/front/member/join_term.html" class="btnEm">이전</a>
+                <a href="/pj/API/dev/front/member/join_complete.html" class="btnStrong">다음</a>
+            </div>
+        </section><!-- //[ contents ] -->
+    </div>
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/front/include/footer.html'); ?>

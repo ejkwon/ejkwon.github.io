@@ -1,0 +1,228 @@
+<?php include('../layout/header_main.html'); ?>
+    <!-- content -->
+    <div id="contents">
+        <div class="mSelect">
+            <div class="select eToggle">
+                <button type="button" class="button eButton">게시판선택 : <strong>전체목록</strong></button>
+                <ul class="list">
+                    <li><strong>전체목록</strong></li>
+                    <li>뉴스/이벤트</li>
+                    <li>이용안내 FAQ</li>
+                    <li>1:1 맞춤상담</li>
+                    <li>상품 사용후기</li>
+                    <li>상품 자유게시판</li>
+                    <li>상품 Q&amp;A</li>
+                    <li>자유게시판3</li>
+                    <li>자유게시판</li>
+                    <li>자유게시판2</li>
+                    <li>자료실</li>
+                    <li>한줄메모</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mSearch eToggle">
+            <fieldset>
+                <legend>검색조건</legend>
+                <table border="1">
+                    <caption>검색조건</caption>
+                    <colgroup>
+                        <col style="width:116px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">게시판선택</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option selected="selected">전체목록</option>
+                                    <option>뉴스/이벤트</option>
+                                    <option>이용안내 FAQ</option>
+                                    <option>1:1 맞춤상담</option>
+                                    <option>상품 사용후기</option>
+                                    <option>상품 자유게시판</option>
+                                    <option>상품 Q&amp;A</option>
+                                    <option>자유게시판3</option>
+                                    <option>자유게시판</option>
+                                    <option>자유게시판2</option>
+                                    <option>자료실</option>
+                                    <option>한줄메모</option>
+                                </select>
+                                <span class="gSingle">
+                                    <select class="fSelect full">
+                                        <option selected="selected">카테고리 전체</option>
+                                        <option>카테고리1</option>
+                                        <option>카테고리2</option>
+                                        <option>카테고리3</option>
+                                        <option>카테고리4</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <select class="fSelect full">
+                                    <option selected="selected">제목</option>
+                                    <option>내용</option>
+                                    <option>작성자</option>
+                                    <option>상품명</option>
+                                    <option>아이디</option>
+                                    <option>아이피</option>
+                                </select>
+                            </th>
+                            <td>
+                                <div class="keyword">
+                                    <input type="text" class="fText">
+                                    <button type="button" class="btnClear">검색어삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">작성일</th>
+                            <td>
+                                <div class="btnToggle">
+                                    <button type="button">전체</button>
+                                    <button type="button" class="selected">1개월</button>
+                                    <button type="button">7일</button>
+                                    <button type="button">직접입력</button>
+                                </div>
+                                <!-- 직접입력 선택시 날짜선택용 버튼노출 -->
+                                <p class="selectDate" style="display:none;">
+                                    <a href="#none">2015.03.23(월)</a>
+                                    <a href="#none">2015.05.23(수)</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">답변여부</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option selected="selected">전체보기</option>
+                                    <option>답변전</option>
+                                    <option>처리중</option>
+                                    <option>답변완료</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mButton">
+                    <a href="#none" class="btnSubmit">검색</a>
+                    <a href="#none" class="btnNormal">초기화</a>
+                </div>
+            </fieldset>
+            <a href="#none" class="btnDetail eButton"><span>상세검색</span></a>
+        </div>
+
+        <div class="searchArea">
+            <div class="mCtrl typeHeader">
+                <div class="gRight">
+                    <select class="fSelect sort">
+                        <option selected="selected">10개씩보기</option>
+                        <option>20개씩보기</option>
+                        <option>30개씩보기</option>
+                    </select>
+                </div>
+            </div>
+
+            <ul class="mIndex">
+                <li class="notice">
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[공지사항 이벤트 공지]</p>
+                            <span class="heading"><strong class="icoNotice">공지</strong> 설날맞이 할인 이벤트!!설날맞이 할인 이벤트!!설날맞이 할인 이벤트!!</span>
+                            <p class="txtNormal txtLess">홍길동 <span class="bar"></span> 2014-05-05 16:32:10</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="notice">
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[상품 Q&amp;A]</p>
+                            <span class="heading"><strong class="icoFixed">고정</strong> <span class="icoLock">비밀글</span><span class="icoMobileMark">모바일</span> 배송관련해서 문의 드립니다.</span>
+                            <p class="txtNormal txtLess">홍길동 <span class="bar"></span> 2014-05-05 16:32:10</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[상품 Q&amp;A]</p>
+                            <span class="heading"><span class="icoLock">비밀글</span><span class="icoMobileMark">모바일</span><span class="icoAttach">파일첨부</span> 배송관련해서 문의 드립니다. <span class="icoNineteen">19세</span></span>
+                            <p class="txtNormal txtLess">홍길동 <span class="bar"></span> 2014-05-05 16:32:10 <span class="bar"></span> <strong class="txtEm">처리중</strong></p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[상품 Q&amp;A]</p>
+                            <span class="heading"><span class="icoReply">답변</span> [답변] 배송관련해서 문의 드립니다.</span>
+                            <p class="txtNormal txtLess">홍길동 <span class="bar"></span> 2014-05-05 16:32:10</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[상품사용후기]</p>
+                            <span class="heading">배송관련해서 문의 드립니다.</span>
+                            <p class="txtNormal txtLess">홍길동 <span class="bar"></span> 2014-05-05 16:32:10 <span class="bar"></span> <strong class="txtWarn">답변전</strong></p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[상품사용후기]</p>
+                            <span class="heading"><span class="icoLock">비밀글</span><span class="icoMobileMark">모바일</span> 배송관련해서 문의 드립니다.</span>
+                            <p class="txtNormal txtLess">홍길동 <span class="bar"></span> 2014-05-05 16:32:10 <span class="bar"></span> <strong class="txtBasic">답변완료</strong></p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[상품사용후기]</p>
+                            <span class="heading"><span class="icoLock">비밀글</span><span class="icoMobileMark">모바일</span> 배송관련해서 문의 드립니다.배송관련해서 문의 드립니다.배송관련해서 문의 드립니다.</span>
+                            <p class="txtNormal txtLess">홍길동홍길동 <span class="bar"></span> 2014-05-05 16:32:10 <span class="bar"></span> <strong class="txtBasic">답변완료</strong></p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <a href="#none">
+                            <p class="txtLight">[상품사용후기]</p>
+                            <span class="heading"><span class="icoLock">비밀글</span><span class="icoMobileMark">모바일</span> 배송관련해서 문의 드립니다.</span>
+                            <p class="txtNormal txtLess">홍길동 <span class="bar"></span> 2014-05-05 16:32:10 <span class="bar"></span> <strong class="txtBasic">답변완료</strong></p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <p class="mEmpty">검색된 게시글 내역이 없습니다.</p>
+
+            <div class="mCtrl typeFooter">
+                <div class="gRight">
+                    <select class="fSelect sort">
+                        <option selected="selected">10개씩보기</option>
+                        <option>20개씩보기</option>
+                        <option>30개씩보기</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mPaginate">
+                <a href="#none" class="prev">이전 5페이지</a>
+                <ol>
+                    <li><a href="#none">101</a></li>
+                    <li><strong title="현재페이지">102</strong></li>
+                    <li><a href="#none">103</a></li>
+                    <li><a href="#none">104</a></li>
+                    <li><a href="#none">105</a></li>
+                </ol>
+                <a href="#none" class="next">다음 5페이지</a>
+            </div>
+        </div>
+    </div><!-- //content -->
+<?php include('../layout/footer.html'); ?>

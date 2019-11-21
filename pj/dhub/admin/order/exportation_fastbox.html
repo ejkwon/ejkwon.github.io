@@ -1,0 +1,403 @@
+<?php include('../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>수출신고관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home">홈</li>
+                        <li>주문관리</li>
+                        <li class="now" title="현재 페이지">수출신고관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문 검색</h2>
+                </div>
+                <!-- 참고 : chzn 테스트용으로 개발소스에 적용하는 범위 아님 -->
+                <script type="text/javascript" src="../../js/chosen.jquery.js"></script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".chzn-select").chosen();
+                        $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+                    });
+                </script>
+                <!-- //참고 -->
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>주문 검색</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">일자</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>등록일</option>
+                                        <option>판매자주문일자</option>
+                                        <option>수출신고완료일</option>
+                                    </select>
+                                    <a href="#none" class="btnDate"><span> 오늘</span></a>
+                                    <a href="#none" class="btnDate"><span> 3일</span></a>
+                                    <a href="#none" class="btnDate"><span> 7일</span></a>
+                                    <a href="#none" class="btnDate"><span> 1개월</span></a>
+                                    <a href="#none" class="btnDate"><span> 3개월</span></a>
+                                    <a href="#none" class="btnDate"><span> 1년</span></a>
+                                    <a href="#none" class="btnDate"><span> 전체</span></a>
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>선택</option>
+                                        <option>판매사 주문번호</option>
+                                        <option>합포번호</option>
+                                        <option>FB송장번호</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:210px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주문처리상태</th>
+                                <td>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 전체</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 주문접수</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 접수확정</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 배송지시</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 출고준비</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 출고보류</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 출고완료</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 출고취소</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 배송중</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 배송완료</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수출신고상태</th>
+                                <td>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 전체</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 미신고</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 신고완료</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 기타</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">판매사</th>
+                                <td>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 전체</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 선택</label>
+                                    <span class="gLabel">
+                                        <select data-placeholder="- 전체 판매내역 -" class="mSearchForm chzn-select-deselect" style="width:200px;">
+                                            <option value=""></option>
+                                            <option value="MIXXMIX(모구지에)">MIXXMIX(모구지에)</option>
+                                            <option value="MIXXMIX(아마존US)">MIXXMIX(아마존US)</option>
+                                            <option value="기타판매사(일문)">기타판매사(일문)</option>
+                                            <option value="MIXXMIX(Rakuten)">MIXXMIX(Rakuten)</option>
+                                            <option value="카페23(일문)">카페23(일문)</option>
+                                            <option value="카페23(중문)">카페23(중문)</option>
+                                            <option value="카페23(영문)">카페23(영문)</option>
+                                            <option value="카페23(대만)">카페23(대만)</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송국가</th>
+                                <td>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 전체</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 대한민국</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 대한민국 외 국가</label>
+                                    <span class="gLabel">
+                                        <select data-placeholder="- 전체 판매내역 -" class="mSearchForm chzn-select-deselect" style="width:200px;">
+                                            <option value="일본[JP]">일본[JP]</option>
+                                            <option value="미국[US]">미국[US]</option>
+                                            <option value="중화인민공화국[CN]">중화인민공화국[CN]</option>
+                                            <option value="중화민국[TW]">중화민국[TW]</option>
+                                            <option value="캐나다[CA]">캐나다[CA]</option>
+                                            <option value="오스트레일리아[AU]">오스트레일리아[AU]</option>
+                                            <option value="감비아[GM]">감비아[GM]</option>
+                                            <option value="건지 섬[GG]">건지 섬[GG]</option>
+                                            <option value="과들루프[GP]">과들루프[GP]</option>
+                                            <option value="과테말라[GT]">과테말라[GT]</option>
+                                            <option value="괌[GU]">괌[GU]</option>
+                                            <option value="그레나다[GD]">그레나다[GD]</option>
+                                            <option value="그리스[GR]">그리스[GR]</option>
+                                            <option value="그린란드[GL]">그린란드[GL]</option>
+                                            <option value="기니[GN]">기니[GN]</option>
+                                            <option value="기니비사우[GW]">기니비사우[GW]</option>
+                                            <option value="나미비아[NA]">나미비아[NA]</option>
+                                            <option value="나우루[NR]">나우루[NR]</option>
+                                            <option value="나이지리아[NG]">나이지리아[NG]</option>
+                                            <option value="남극[AQ]">남극[AQ]</option>
+                                            <option value="남아프리카 공화국[ZA]">남아프리카 공화국[ZA]</option>
+                                            <option value="네덜란드[NL]">네덜란드[NL]</option>
+                                            <option value="네덜란드령 신트 마르턴[SX]">네덜란드령 신트 마르턴[SX]</option>
+                                            <option value="네덜란드령 안틸레스[AN]">네덜란드령 안틸레스[AN]</option>
+                                            <option value="네덜란드령 카리브 제도[BQ]">네덜란드령 카리브 제도[BQ]</option>
+                                            <option value="네덜란드령 큐라소 섬[CW]">네덜란드령 큐라소 섬[CW]</option>
+                                            <option value="네팔[NP]">네팔[NP]</option>
+                                            <option value="노르웨이[NO]">노르웨이[NO]</option>
+                                            <option value="노퍽 섬[NF]">노퍽 섬[NF]</option>
+                                            <option value="누벨칼레도니[NC]">누벨칼레도니[NC]</option>
+                                            <option value="뉴질랜드[NZ]">뉴질랜드[NZ]</option>
+                                            <option value="니우에[NU]">니우에[NU]</option>
+                                            <option value="니제르[NE]">니제르[NE]</option>
+                                            <option value="니카라과[NI]">니카라과[NI]</option>
+                                            <option value="덴마크[DK]">덴마크[DK]</option>
+                                            <option value="도미니카[DM]">도미니카[DM]</option>
+                                            <option value="도미니카 공화국[DO]">도미니카 공화국[DO]</option>
+                                            <option value="독일[DE]">독일[DE]</option>
+                                            <option value="동티모르[TL]">동티모르[TL]</option>
+                                            <option value="라오스[LA]">라오스[LA]</option>
+                                            <option value="라이베리아[LR]">라이베리아[LR]</option>
+                                            <option value="라트비아[LV]">라트비아[LV]</option>
+                                            <option value="러시아[RU]">러시아[RU]</option>
+                                            <option value="레바논[LB]">레바논[LB]</option>
+                                            <option value="레소토[LS]">레소토[LS]</option>
+                                            <option value="레위니옹[RE]">레위니옹[RE]</option>
+                                            <option value="루마니아[RO]">루마니아[RO]</option>
+                                            <option value="룩셈부르크[LU]">룩셈부르크[LU]</option>
+                                            <option value="르완다[RW]">르완다[RW]</option>
+                                            <option value="리비아[LY]">리비아[LY]</option>
+                                            <option value="리투아니아[LT]">리투아니아[LT]</option>
+                                            <option value="리히텐슈타인[LI]">리히텐슈타인[LI]</option>
+                                            <option value="마다가스카르[MG]">마다가스카르[MG]</option>
+                                            <option value="마르티니크[MQ]">마르티니크[MQ]</option>
+                                            <option value="마셜 제도[MH]">마셜 제도[MH]</option>
+                                            <option value="마요트[YT]">마요트[YT]</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+                <div class="mTitle">
+                    <h2>검색결과 주문 요약현황</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                        <caption>검색결과 주문 요약현황</caption>
+                        <colgroup>
+                            <col style="width:25%;" />
+                            <col style="width:25%;" />
+                            <col style="width:25%;" />
+                            <col style="width:25%;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">수출신고 대상 주문수</th>
+                                <th scope="col">미신고 주문수</th>
+                                <th scope="col">신고완료 주문수</th>
+                                <th scope="col">기타 주문수</th>
+                            </tr>
+                        </thead>
+                        <tbody class="right">
+                            <tr>
+                                <td>100</td>
+                                <td>1</td>
+                                <td>98</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩 보기</option>
+                            <option>20개씩 보기</option>
+                            <option>30개씩 보기</option>
+                            <option>50개씩 보기</option>
+                            <option>100개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gRight">
+                        <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+                <div class="mBoardArea typeDhub">
+                    <div class="mBoard gFixed gCell">
+                        <table border="1" summary="">
+                            <caption>주문 목록</caption>
+                            <colgroup>
+                                <col style="width:50px;" />
+                                <col style="width:100px;" />
+                                <col style="width:130px;" />
+                                <col style="width:auto;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">판매사</th>
+                                    <th scope="col">FB송장<br />번호</th>
+                                    <th scope="col">합포번호</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>카페24</td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">FB20150707<br />00991234567</a></td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">20140315-88888</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>티몰유니버스</td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">FB20150707<br />00991234560</a></td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">20140315-88899</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>일문몰</td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">FB20150707<br />00991234590</a></td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">20140315-888123</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>중문몰</td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">FB20150707<br />00991234521</a></td>
+                                    <td><a href="#none" title="새창 열림" target="_blank">20140315-888933</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mBoard gScroll gCell">
+                        <table border="1" summary="">
+                            <caption>주문 목록</caption>
+                            <colgroup>
+                                <col style="width:90px;" />
+                                <col style="width:95px;" />
+                                <col style="width:95px;" />
+                                <col class="date" />
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">배송국가</th>
+                                    <th scope="col">수출신고상태</th>
+                                    <th scope="col">수출신고번호</th>
+                                    <th scope="col">수출신고<br />완료일</th>
+                                    <th scope="col">주문처리상태</th>
+                                    <th scope="col">배송사<br />/송장번호</th>
+                                    <th scope="col">결제금액</th>
+                                    <th scope="col">결제통화</th>
+                                    <th scope="col">영문수령자명</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td>미국</td>
+                                    <td>미신고</td>
+                                    <td></td>
+                                    <td>-</td>
+                                    <td>출고준비</td>
+                                    <td class="left">-<br />/ -</td>
+                                    <td class="right">70</td>
+                                    <td>USD</td>
+                                    <td class="left">Kelly Young</td>
+                                </tr>
+                                <tr>
+                                    <td>중화인민공화국</td>
+                                    <td>신고완료</td>
+                                    <td>123456789</td>
+                                    <td>2016-10-31 13:20:12</td>
+                                    <td>출고완료</td>
+                                    <td class="left">우체국EMS<br />/ EM34792023</td>
+                                    <td class="right">100</td>
+                                    <td>CNY</td>
+                                    <td class="left">Yu Jia Qi</td>
+                                </tr>
+                                <tr>
+                                    <td>일본</td>
+                                    <td>신고완료</td>
+                                    <td>123456789</td>
+                                    <td>2016-10-31 13:20:12</td>
+                                    <td>출고완료</td>
+                                    <td class="left">우체국EMS<br />/ EM34792023</td>
+                                    <td class="right">25</td>
+                                    <td>JPY</td>
+                                    <td class="left">Keiko Nabila</td>
+                                </tr>
+                                <tr>
+                                    <td>중화인민공화국</td>
+                                    <td>신고실패</td>
+                                    <td></td>
+                                    <td>-</td>
+                                    <td>출고준비</td>
+                                    <td class="left">우체국EMS<br />/ EM34234223</td>
+                                    <td class="right">100</td>
+                                    <td>CNY</td>
+                                    <td class="left">Chan sze ching</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="empty">검색결과가 없습니다.</p>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gRight">
+                        <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><strong title="현재페이지">1</strong></li>
+                        <li><a href="#none">2</a></li>
+                        <li><a href="#none">3</a></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>수출신고관리 안내</h2>
+                <div class="content">
+                    <ul>
+                        <li>
+                            수출신고상태 안내
+                            <ol>
+                                <li>1) 미신고 : 수출신고 전 주문</li>
+                                <li>2) 신고완료 : 수출신고요청 후 관세청에서 발급한 수출신고번호를 회신 받은 주문</li>
+                                <li>3) 신고실패 : 수출신고요청 후 수출신고처리 중 오류가 발생한 주문 (패스트박스에서 확인중인 주문)</li>
+                                <li>4) 정정완료 : 수출신고완료 후 정정완료 되어 수출신고가 완료된 주문</li>
+                                <li>5) 취하요청 : 수출신고완료 후 취하 요청해 놓은 주문(수출신고 취하 진행중인 주문)</li>
+                                <li>6) 취하완료 : 수출신고취하요청 후 취하가 완료된 주문</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<?php include('../include/footer.html'); ?>

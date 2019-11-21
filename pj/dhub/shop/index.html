@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>물류/생산관리 솔루션 디허브</title>
+<link rel="stylesheet" type="text/css" href="../../guide/ui/common.css" media="all" />
+<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+<script src="https://use.fontawesome.com/cef0874c19.js"></script><!-- //fontawesome.io/icons/ -->
+<script type="text/javascript" src="../../guide/ui/ui.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <?php require('../../menu.html'); ?>
+
+    <div id="contents">
+        <div class="mTitle">
+            <h1>디허브</h1>
+        </div>
+
+        <div class="mTab typeNav gExtend">
+            <ul>
+                <li class="selected">
+                    <a href="../index.html"><span>ERP</span></a>
+                    <ul>
+                        <li><a href="../index.html">공통</a></li>
+                        <li><a href="../erp/index.html">디허브관리</a></li>
+                        <li class="selected"><a href="index.html">상점별</a></li>
+                    </ul>
+                </li>
+                <li><a href="../admin/index.html"><span>상점Admin</span></a></li>
+            </ul>
+        </div>
+
+        <div class="mTitle">
+            <h2>디허브 CSS 가이드</h2>
+        </div>
+        <div class="section gHalf">
+            <div class="gLeft">
+                <div class="mBox gFlow">
+                    퍼블리싱 생략하고 개발팀에서 자체 제작한 컨텐츠가 다수 존재합니다.
+                </div>
+            </div>
+            <div class="gRight">
+                <table border="1" class="mTable typeGuide" summary="">
+                    <caption>페이지 목록</caption>
+                    <colgroup>
+                        <col style="width:40%" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">메뉴명</th>
+                            <th scope="col">CSS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ERP (공통, 디허브관리, 상점별)</td>
+                            <td>/dhub/css/dhub.css</td>
+                        </tr>
+                        <tr>
+                            <td>상점Admin</td>
+                            <td>/dhub/css/admin.css</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mTitle">
+            <h2>상점별 | shop</h2>
+        </div>
+
+        <table border="1" class="mTable eHover" summary="">
+            <caption>페이지 목록</caption>
+            <colgroup>
+                <col class="gId" />
+                <col class="g2depth" />
+                <col class="g3depth" />
+                <col class="g4depth" />
+                <col class="g5depth" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col">3depth</th>
+                    <th scope="col">4depth</th>
+                    <th scope="col">5depth</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>/dashboard</strong></td>
+                    <td>대시보드</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>index</td>
+                    <td></td>
+                    <td><a href="dashboard/index.html" target="_blank">상점별 메인</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/shop</strong></td>
+                    <td>상품</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>list</td>
+                    <td></td>
+                    <td><a href="shop/list.html" target="_blank">상품목록</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>list_info</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/list_info.html" target="_blank">상품정보</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>list_info_create</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/list_info_create.html" target="_blank" opts="800,700,y" class="popup">품목명 조합생성</a></td>
+                </tr>
+                <tr>
+                    <td>register</td>
+                    <td></td>
+                    <td><a href="shop/register.html" target="_blank">상품엑셀등록</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>register_form</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/register_form.html" target="_blank" opts="700,600,y" class="popup">상품엑셀등록 양식</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>register_form_info</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/register_form_info.html" target="_blank" opts="700,600,y" class="popup">상품엑셀등록 양식 정보</a></td>
+                </tr>
+                <tr>
+                    <td>register_result</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/register_result.html" target="_blank">상품엑셀등록 결과</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>modify</td>
+                    <td></td>
+                    <td><a href="shop/modify.html" target="_blank">상품엑셀수정</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>modify_form</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/modify_form.html" target="_blank" target="_blank" opts="800,700,y" class="popup">상품엑셀수정 양식</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>modify_form_info</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/modify_form_info.html" target="_blank" target="_blank" opts="800,700,y" class="popup">상품엑셀수정 양식 정보</a></td>
+                </tr>
+                <tr>
+                    <td>modify_result</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/modify_result.html" target="_blank">상품엑셀수정 결과</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>linkage</td>
+                    <td></td>
+                    <td><a href="shop/linkage.html" target="_blank">상품연동</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>linkage_compare</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/linkage_compare.html" target="_blank" target="_blank" opts="800,700,y" class="popup">연동상품비교</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/in</strong></td>
+                    <td>입고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>register</td>
+                    <td></td>
+                    <td><a href="in/register.html" target="_blank">입고지시등록</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>upload_excel</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="in/upload_excel.html" target="_blank" target="_blank" opts="800,700,y" class="popup">상품 엑셀업로드</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>upload_result</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="in/upload_result.html" target="_blank" target="_blank" opts="800,700,y" class="popup">상품 엑셀업로드 결과</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_list</td>
+                    <td></td>
+                    <td><a href="in/not_list.html" target="_blank">미입고</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_process</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="in/not_process.html" target="_blank">입고대기처리</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>standby_list</td>
+                    <td></td>
+                    <td><a href="in/standby_list.html" target="_blank">입고대기</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>standby_process</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="in/standby_process.html" target="_blank">입고완료처리</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>barcode_check</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="in/barcode_check.html" target="_blank" target="_blank" opts="800,700,y" class="popup">바코드 검수</a></td>
+                </tr>
+                <tr>
+                    <td>state_list</td>
+                    <td></td>
+                    <td><a href="in/state_list.html" target="_blank">전체입고현황</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>state_detail</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="in/state_detail.html" target="_blank">입고지시 상세</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/delivery</strong></td>
+                    <td>배송지시</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_list</td>
+                    <td></td>
+                    <td><a href="delivery/order_list.html" target="_blank">주문목록</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/order_register.html" target="_blank">주문개별등록</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_detail</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/order_detail.html" target="_blank">주문상세</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_process</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/order_process.html" target="_blank">배송지시 처리</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_complete</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/order_complete.html" target="_blank">배송지시 처리완료</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_print</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/order_print.html" target="_blank" target="_blank" opts="600,650,y" class="popup">배송지시서</a></td>
+                </tr>
+                <tr>
+                    <td>barcode_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/barcode_register.html" target="_blank" opts="820,780,y" class="popup">바코드배송지시 (입력)</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>barcode_scan</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/barcode_scan.html" target="_blank" opts="820,780,y" class="popup">바코드배송지시 (처리)</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>barcode_complete</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/barcode_complete.html" target="_blank" opts="820,780,y" class="popup">바코드배송지시 (확인)</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>exportation_request</td>
+                    <td></td>
+                    <td><a href="delivery/exportation_request.html" target="_blank">수출신고요청</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>exportation_entry</td>
+                    <td></td>
+                    <td><a href="delivery/exportation_entry.html" target="_blank">수출신고관리</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_list</td>
+                    <td></td>
+                    <td><a href="delivery/not_list.html" target="_blank">미입고</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_process</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/not_process.html" target="_blank">주문입고처리</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_barcode</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/not_barcode.html" target="_blank" target="_blank" opts="700,600,y" class="popup">바코드 주문입고</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_all</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/not_all.html" target="_blank" opts="460,300,n" class="popup">주문 일괄입고</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_one</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/not_one.html" target="_blank" opts="800,700,y" class="popup">주문별 입고처리</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_id</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/not_id.html" target="_blank" opts="900,600,y" class="popup">카페24 아이디별 입고</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>not_product</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/not_product.html" target="_blank" opts="900,700,y" class="popup">품주별 입고</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ready</td>
+                    <td></td>
+                    <td><a href="delivery/ready.html" target="_blank">출고준비</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ready_print</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/ready_print.html" target="_blank" target="_blank" opts="900,700,y" class="popup">차이냐오 송장출력</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ready_sagawa_addr</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/ready_sagawa_addr.html" target="_blank" target="_blank" opts="900,600,y" class="popup">사가와 주소실패건 수정</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice_printing</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/invoice_printing.html" target="_blank" target="_blank" opts="1100,830,y" class="popup">송장바로출력</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>complete</td>
+                    <td></td>
+                    <td><a href="delivery/complete.html" target="_blank">출고완료</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>complete_delivery1</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/complete_delivery1.html" target="_blank" target="_blank" opts="700,700,y" class="popup">판매사 배송중 적용 1</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>complete_delivery2</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/complete_delivery2.html" target="_blank" target="_blank" opts="850,700,y" class="popup">판매사 배송중 적용 2</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>state_list</td>
+                    <td></td>
+                    <td><a href="delivery/state_list.html" target="_blank">배송지시 현황</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>return_state</td>
+                    <td></td>
+                    <td><a href="delivery/return_state.html" target="_blank">반송지시 현황</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>return_print</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/return_print.html" target="_blank">반송지시서</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>transfer</td>
+                    <td></td>
+                    <td><a href="delivery/transfer.html" target="_blank" target="_blank">화물인계증 관리</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>transfer_barcode</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/transfer_barcode.html" target="_blank" target="_blank" opts="830,750,y" class="popup">화물인계증 생성</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>transfer_detail</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/transfer_detail.html" target="_blank" target="_blank">화물인계증 상세</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>transfer_label</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/transfer_label.html" target="_blank" target="_blank">화물인계증 라벨지</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ems_invoice</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/ems_invoice.html" target="_blank" target="_blank">CLIO EMS 송장</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>quantium_invoice</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="delivery/quantium_invoice.html" target="_blank">콴티움송장(홍콩)</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/out</strong></td>
+                    <td>출고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_list</td>
+                    <td></td>
+                    <td><a href="out/order_list.html" target="_blank">주문목록</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="out/order_register.html" target="_blank">주문개별등록(3PL)</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_change</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="out/order_change.html" target="_blank" opts="800,700,y" class="popup">주문변경내역(3PL)</a></td>
+                </tr>
+                <tr>
+                    <td>standby</td>
+                    <td></td>
+                    <td><a href="out/standby.html" target="_blank">출고대기</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>standby_product</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="out/standby_product.html" target="_blank" opts="700,870,y" class="popup">상품연결</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>standby_print</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="out/standby_print.html" target="_blank" opts="900,700,y" class="popup">출고지시 인쇄</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ready</td>
+                    <td></td>
+                    <td><a href="out/ready.html" target="_blank">출고준비</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>complete</td>
+                    <td></td>
+                    <td><a href="out/complete.html" target="_blank">출고완료</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>instruct_state</td>
+                    <td></td>
+                    <td><a href="out/instruct_state.html" target="_blank">출고지시현황</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>instruct_detail</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="out/instruct_detail.html" target="_blank">출고지시상세</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>instruct_change</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="out/instruct_change.html" target="_blank" opts="800,700,y" class="popup">출고변경내역</a></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/use</strong></td>
+                    <td>배송현황</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>state</td>
+                    <td></td>
+                    <td><a href="use/state.html" target="_blank">전체배송현황</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/stock</strong></td>
+                    <td>재고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>state</td>
+                    <td></td>
+                    <td><a href="stock/state.html" target="_blank">재고현황</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>list</td>
+                    <td></td>
+                    <td><a href="stock/list.html" target="_blank">입출고내역</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>modify_history</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="stock/modify_history.html" target="_blank" target="_blank" opts="800,700,y" class="popup">입출고 변경 내역</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>random</td>
+                    <td></td>
+                    <td><a href="stock/random.html" target="_blank">임의 입/출고</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>barcode_product</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="stock/barcode_product.html" target="_blank" target="_blank" opts="800,700,y" class="popup">바코드 상품선택</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>stocklist</td>
+                    <td></td>
+                    <td><a href="stock/stocklist.html" target="_blank">오입고처리내역</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>stocktaking_list</td>
+                    <td></td>
+                    <td><a href="stock/stocktaking_list.html" target="_blank">재고조사</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>stocktaking_product</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="stock/stocktaking_product.html" target="_blank">재고조사 등록(개별)</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>stocktaking_barcode</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="stock/stocktaking_barcode.html" target="_blank">재고조사 등록(바코드)</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>stocktaking_upload</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="stock/stocktaking_upload.html" target="_blank">재고조사 등록(엑셀업로드)</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>stocktaking_result</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="stock/stocktaking_result.html" target="_blank">재고조사 등록(엑셀업로드결과)</a></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/customer</strong></td>
+                    <td>거래처</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>supplier_list</td>
+                    <td></td>
+                    <td><a href="customer/supplier_list.html" target="_blank">공급사</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>supplier_info</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="customer/supplier_info.html" target="_blank">공급사 정보</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>supplier_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="customer/supplier_register.html" target="_blank">공급사엑셀등록</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>supplier_result</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="customer/supplier_result.html" target="_blank">공급사엑셀등록 결과</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>vendor</td>
+                    <td></td>
+                    <td><a href="customer/vendor.html" target="_blank">판매사</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>vendor_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="customer/vendor_register.html" target="_blank">판매사 등록</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/setting</strong></td>
+                    <td>기초설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>rating</td>
+                    <td></td>
+                    <td><a href="setting/rating.html" target="_blank">공급사등급</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td></td>
+                    <td><a href="setting/type.html" target="_blank">공급사상품유형</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/board</strong></td>
+                    <td>게시판</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order</td>
+                    <td></td>
+                    <td><a href="board/order.html" target="_blank">주문관련 메모조회</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>qna</td>
+                    <td></td>
+                    <td><a href="board/qna.html" target="_blank">질문게시판</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>qna_replay</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="board/qna_replay.html" target="_blank">답변 작성</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>notice</td>
+                    <td></td>
+                    <td><a href="board/notice.html" target="_blank">공지사항</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>notice_view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="board/notice_view.html" target="_blank">공지사항보기</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer">
+        <p>Copyright&copy; <strong>EonJeong Kwon.</strong> All rights Reserved.</p>
+    </div>
+</div>
+</body>
+</html>

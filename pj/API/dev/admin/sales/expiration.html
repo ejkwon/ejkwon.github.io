@@ -1,0 +1,176 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>매출관리</li>
+                <li class="now" title="현재 페이지">기간만료내역</li>
+            </ol>
+            <div class="mTitle">
+                <h1>기간만료내역</h1>
+            </div>
+
+            <div class="sectionArea">
+                <section class="section">
+                    <div class="mBoard gSmall">
+                        <table border="1">
+                            <caption>기간만료내역</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">검색기간</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>이용시작일자</option>
+                                            <option>이용종료일자</option>
+                                        </select>
+                                        <span class="btnDate">
+                                            <button type="button" class="button">오늘</button>
+                                            <button type="button" class="button">3일</button>
+                                            <button type="button" class="button">7일</button>
+                                            <button type="button" class="button">1개월</button>
+                                            <button type="button" class="button">3개월</button>
+                                            <button type="button" class="button">1년</button>
+                                        </span>
+                                        <input type="text" class="fText gDate">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button> -
+                                        <input type="text" class="fText gDate">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">종료상태</th>
+                                    <td>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 종료예정</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 종료완료</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">검색어</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>App 명</option>
+                                            <option>App ID</option>
+                                            <option>쇼핑몰 ID</option>
+                                        </select>
+                                        <input type="text" class="fText" style="width:400px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mButton gCenter">
+                        <a href="#none" class="btnSubmit">검색</a>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>결제내역</h2>
+                    </div>
+                    <div class="mState">
+                        <div class="gLeft">
+                            <p class="total">[총 <strong class="txtEm">40</strong>개] 검색결과 <strong class="txtEm">4</strong>개</p>
+                        </div>
+                        <div class="gRight">
+                            <select class="fSelect">
+                                <option>10개씩보기</option>
+                                <option>20개씩보기</option>
+                                <option>30개씩보기</option>
+                                <option>40개씩보기</option>
+                                <option>50개씩보기</option>
+                                <option>100개씩보기</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mCtrl typeHeader">
+                        <div class="gLeft">
+                            <a href="#none" class="btnNormal mini">엑셀다운로드</a>
+                        </div>
+                    </div>
+                    <div class="mBoard">
+                        <table border="1">
+                            <caption>결제내역</caption>
+                            <colgroup>
+                                <col style="width:55px;">
+                                <col style="width:150px;">
+                                <col style="width:auto;">
+                                <col style="width:150px;">
+                                <col style="width:100px;">
+                                <col style="width:120px;">
+                                <col style="width:120px;">
+                                <col style="width:90px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">App ID</th>
+                                    <th scope="col">App 명</th>
+                                    <th scope="col">쇼핑몰 ID</th>
+                                    <th scope="col">종료상태</th>
+                                    <th scope="col">이용시작일자</th>
+                                    <th scope="col">이용종료일자</th>
+                                    <th scope="col">남은기간</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>APP12312313132</td>
+                                    <td class="left"><a href="#none" class="txtLink">페이스북 리뷰</a></td>
+                                    <td class="left"><a href="#none" class="txtLink" target="_blank" title="새창 열림">testshop1234</a></td>
+                                    <td>종료예정</td>
+                                    <td>2018-01-08</td>
+                                    <td>2018-01-08</td>
+                                    <td>1일</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>APP12312313132</td>
+                                    <td class="left"><a href="#none" class="txtLink">페이스북 리뷰</a></td>
+                                    <td class="left"><a href="#none" class="txtLink" target="_blank" title="새창 열림">testshop1234</a></td>
+                                    <td>종료예정</td>
+                                    <td>2018-01-08</td>
+                                    <td>2018-01-08</td>
+                                    <td>1일</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>APP12312313132</td>
+                                    <td class="left"><a href="#none" class="txtLink">페이스북 리뷰</a></td>
+                                    <td class="left"><a href="#none" class="txtLink" target="_blank" title="새창 열림">testshop1234</a></td>
+                                    <td>종료예정</td>
+                                    <td>2018-01-08</td>
+                                    <td>2018-01-08</td>
+                                    <td>1일</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--p class="empty">검색된 결과가 없습니다.</p-->
+                    </div>
+                    <div class="mCtrl typeFooter">
+                        <div class="gLeft">
+                            <a href="#none" class="btnNormal mini">엑셀다운로드</a>
+                        </div>
+                    </div>
+                    <div class="mPaginate">
+                        <!-- 참고: 이전/다음 페이지가 없는 경우, disabled 클래스 추가 -->
+                        <a href="#none" class="btnPrev">이전 페이지</a>
+                        <span class="page">
+                            <a href="#none" class="selected" title="현재 페이지">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btnNext">다음 페이지</a>
+                    </div>
+                </section>
+            </div>
+        </section><!-- //[ contents ] -->
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>

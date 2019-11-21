@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>바코드 인쇄</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="800, 700"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>바코드 인쇄</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>바코드인쇄 상품목록</h2>
+        </div>
+        <div class="mState">
+            <div class="gLeft">
+                <p class="total">[총 <strong>3</strong>건]</p>
+            </div>
+        </div>
+        <div class="mCtrl typeHeader">
+            <div class="gLeft">
+                <span class="txtLess">선택한 항목을</span>
+                <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                <a href="#barcodeLayer" class="btnNormal eModal"><span>바코드매수 일괄적용</span></a>
+            </div>
+        </div>
+        <div class="mBoardArea">
+            <div class="mBoard typeHead">
+                <table border="1" summary="">
+                <caption>바코드인쇄 상품목록 제목</caption>
+                <colgroup>
+                    <col class="chk" />
+                    <col style="width:120px" />
+                    <col style="width:auto" />
+                    <col style="width:90px" />
+                    <col style="width:120px" />
+                    <col style="width:107px;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col"><input type="checkbox" class="allChk" /></th>
+                        <th scope="col">상품코드/바코드</th>
+                        <th scope="col">상품명/품목명</th>
+                        <th scope="col">판매가</th>
+                        <th scope="col">창고/위치코드</th>
+                        <th scope="col">바코드매수</th>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="mBoard typeBody" style="max-height:700px;">
+                <table border="1" summary="" class="eChkColor">
+                <caption>바코드인쇄 상품목록</caption>
+                <colgroup>
+                    <col class="chk" />
+                    <col style="width:120px" />
+                    <col style="width:auto" />
+                    <col style="width:90px" />
+                    <col style="width:120px" />
+                    <col style="width:90px;" />
+                </colgroup>
+                <tbody class="center">
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>OU2_121107003 <br /><span class="txtLight">8100003978713</span></td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p><a href="#none">원피스</a></p>
+                                <ul class="etc">
+                                    <li>흰색/L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="right">15,000</td>
+                        <td><a href="#none" class="txtLink">디허브김포 <br /><span class="txtLight">A-P01-2</span></a></td>
+                        <td class="right">
+                            <input type="text" class="fText right" style="width:40px;" value="1"/> 매
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>OU2_121107003 <br /><span class="txtLight">8100003978713</span></td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p><a href="#none">원피스</a></p>
+                                <ul class="etc">
+                                    <li>흰색/L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="right">15,000</td>
+                        <td><a href="#none" class="txtLink">디허브김포 <br /><span class="txtLight">A-P01-2</span></a></td>
+                        <td class="right">
+                            <input type="text" class="fText right" style="width:40px;" value="1"/> 매
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>OU2_121107003 <br /><span class="txtLight">8100003978713</span></td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p><a href="#none">원피스</a></p>
+                                <ul class="etc">
+                                    <li>흰색/L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="right">15,000</td>
+                        <td><a href="#none" class="txtLink">디허브김포 <br /><span class="txtLight">A-P01-2</span></a></td>
+                        <td class="right">
+                            <input type="text" class="fText right" style="width:40px;" value="1"/> 매
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="empty">
+                    <tr>
+                        <td colspan="6">인쇄할 상품이 없습니다.</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mCtrl typeFooter">
+            <div class="gLeft">
+                <span class="txtLess">선택한 항목을</span>
+                <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                <a href="#barcodeLayer" class="btnNormal eModal"><span>바코드매수 일괄적용</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>바코드 인쇄</span></a>
+    <a href="#none" class="btnEm"><span>닫기</span></a>
+</div>
+
+<?php require_once('../../include/layer.html'); ?>
+
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+
+</body>
+</html>

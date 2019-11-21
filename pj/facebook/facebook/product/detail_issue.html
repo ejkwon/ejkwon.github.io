@@ -1,0 +1,66 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/head_popup.html'); ?>
+<body id="popup" size="900, 900"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+    <div class="mLayer">
+        <header class="header">
+            <h1 class="title">제품 : $제품명</h1>
+        </header>
+        <div class="wrap">
+            <div class="mTab typeNav">
+                <ul>
+                    <li><a href="detail_simple.html">간단보기</a></li>
+                    <li><a href="detail_view.html">상세보기</a></li>
+                    <li class="selected"><a href="#none">문제보기</a></li>
+                </ul>
+            </div>
+
+            <div class="mBoard typeView gBlankL">
+                <table border="1">
+                    <caption>문제보기</caption>
+                    <colgroup>
+                        <col style="width:170px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">피드 소스</th>
+                            <td>새 제품 피드 국내_TEST_2017.08.01</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">마지막 업로드 시간</th>
+                            <td>2017-09-04 02:18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mBoard typeView gBlankL">
+                <table border="1">
+                    <caption>문제보기</caption>
+                    <colgroup>
+                        <col style="width:auto;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">문제 $갯수$ 개가 발생했습니다.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. 이미지가 너무 작습니다 : 권장 해상도인 600 * 600 픽셀보다 작습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>2. $문제 내용$ : $상세 내용$</td>
+                        </tr>
+                        <tr>
+                            <td>3. $문제 내용$ : $상세 내용$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <footer class="footer">
+            <a href="#none" class="btnNormal medium" onclick="window.close();">닫기</a>
+        </footer>
+
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/footer_popup.html'); ?>

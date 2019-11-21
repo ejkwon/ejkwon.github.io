@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>배송사 배송서비스 그룹 관리</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="600, 650"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>배송사 배송서비스 그룹 관리</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>배송사 배송서비스 그룹</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption>배송사 배송서비스 그룹</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">배송서비스 그룹명</th>
+                    <td>
+                        <input type="text" class="fText" style="width:85%;" />
+                        <a href="#none" class="btnNormal"><span>등록</span></a>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>배송사 배송서비스 목록</h2>
+        </div>
+        <div class="mState">
+            <div class="gLeft">
+                <p class="total">[총 <strong>6</strong>개]</p>
+            </div>
+        </div>
+        <div class="mCtrl typeHeader">
+            <div class="gLeft">
+                <span class="txtLess">선택한 항목을</span>
+                <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+            </div>
+        </div>
+        <div class="mBoardArea">
+            <div class="mBoard typeHead">
+                <table border="1" summary="">
+                <caption>배송사 배송서비스 목록</caption>
+                <colgroup>
+                    <col class="chk" />
+                    <col style="width:50px;" />
+                    <col style="width:auto;" />
+                    <col style="width:160px;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col"><input type="checkbox" class="allChk" /></th>
+                        <th scope="col">No</th>
+                        <th scope="col">배송서비스 그룹</th>
+                        <th scope="col">배송사 수</th>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="mBoard typeBody">
+                <table border="1" summary="" class="eChkTr">
+                <caption>배송사 배송서비스 목록</caption>
+                <colgroup>
+                    <col class="chk" />
+                    <col style="width:50px;" />
+                    <col style="width:auto;" />
+                    <col style="width:143px;" />
+                </colgroup>
+                <tbody class="center">
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>6</td>
+                        <td class="left"><a href="#layerNameModify" class="txtLink eLayerClick">한진</a></td>
+                        <td class="right">2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>5</td>
+                        <td class="left"><a href="#layerNameModify" class="txtLink eLayerClick">퀀티엄</a></td>
+                        <td class="right">1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>4</td>
+                        <td class="left"><a href="#layerNameModify" class="txtLink eLayerClick">야마토</a></td>
+                        <td class="right">0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>3</td>
+                        <td class="left"><a href="#layerNameModify" class="txtLink eLayerClick">사가와</a></td>
+                        <td class="right">1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>2</td>
+                        <td class="left"><a href="#layerNameModify" class="txtLink eLayerClick">린코스</a></td>
+                        <td class="right">2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="rowChk" /></td>
+                        <td>1</td>
+                        <td class="left"><a href="#layerNameModify" class="txtLink eLayerClick">범한</a></td>
+                        <td class="right">5</td>
+                    </tr>
+                </tbody>
+                </table>
+                <p class="empty">등록 내역이 없습니다.</p>
+            </div>
+        </div>
+         <div class="mCtrl typeFooter">
+            <div class="gLeft">
+                <span class="txtLess">선택한 항목을</span>
+                <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <a href="#none" class="btnEm" onclick="window.close();"><span>닫기</span></a>
+</div>
+
+<?php require_once('../../include/layer.html'); ?>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

@@ -1,0 +1,225 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>주문관련메모조회</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">게시판</a></li>
+            <li class="now" title="현재 페이지">주문관련메모조회</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>검색조건</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>검색조건</caption>
+        <tbody>
+            <tr>
+                <th scope="row">검색어</th>
+                <td>
+                    <select class="fSelect">
+                        <option>- 선택 -</option>
+                        <option>판매사주문번호</option>
+                        <option>출고지시번호</option>
+                        <option>FB송장번호</option>
+                        <option>상점명</option>
+                        <option>작성자</option>
+                    </select>
+                    <input type="text" class="fText" style="width:335px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">등록일시</th>
+                <td>
+                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                    <a href="#none" class="btnDate"><span>3일</span></a>
+                    <a href="#none" class="btnDate"><span>7일</span></a>
+                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                    <a href="#none" class="btnDate"><span>3개월</span></a>
+                    <a href="#none" class="btnDate"><span>1년</span></a>
+                    <input type="text" id="pr_start_date" name="start_date" value="2012-06-07" class="fText gDate" />
+                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                    ~
+                    <input type="text" id="pr_end_date" name="end_date" value="2012-06-07" class="fText gDate" />
+                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>검색결과</h2>
+    </div>
+    <div class="mState gMerge">
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>검색결과</caption>
+        <colgroup>
+            <col style="width:60px;" />
+            <col class="time" />
+            <col style="width:80px;" />
+            <col style="width:160px;" />
+            <col style="width:auto;" />
+            <col style="width:148px;" />
+            <col style="width:100px;" />
+            <col style="width:85px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col"><strong class="array"><span>등록일시</span><button type="button">내림차순 정렬</button></strong><!-- strong class="array ascend">등록일시<button type="button">오름차순 정렬</button></strong --></th>
+                <th scope="col">상점명</th>
+                <th scope="col">판매사주문번호</th>
+                <th scope="col">메모</th>
+                <th scope="col">FB송장번호</th>
+                <th scope="col">출고지시번호</th>
+                <th scope="col">작성자<br />(id)</th>
+            </tr>
+        </thead>
+        <tbody class="middle center">
+            <tr>
+                <td>32</td>
+                <td>2015-07-21 11:20:00</td>
+                <td>testmall</td>
+                <td><a href="#none" class="txtLink">20150730-001-001</a></td>
+                <td class="left">재고가 없어서 주문취소되었어오</td>
+                <td>FB1405080010123456</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123456</a></td>
+                <td>믹엑스믹스(mixxmxi)</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>2015-07-21 09:20:00</td>
+                <td>bagaziyo</td>
+                <td><a href="#none" class="txtLink">20150730-12365478</a></td>
+                <td class="left">청바지 사이즈 교환해달래요</td>
+                <td>FB1405080010123457</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123441</a></td>
+                <td>다바걸(bagaziyo)</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>2015-07-20 20:20:00</td>
+                <td>imall01</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">오늘 추가상품이 있어서 다시보낼께요</td>
+                <td>FB1405080010123454</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123442</a></td>
+                <td>믹스(ioddddd)</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>2015-07-18 12:22:11</td>
+                <td>imall01</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">두번째상품 출고 보류해주세요</td>
+                <td>FB1405080010123453</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123456</a></td>
+                <td>다바(ddddd)</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>2015-07-18 10:22:11</td>
+                <td>imall01</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">배송시 제외하였습니다.</td>
+                <td>FB1405080010123452</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123457</a></td>
+                <td>패스트박스(fastbox)</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>2015-07-16 17:22:11</td>
+                <td>imall01</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">4번상품 제외해주세요</td>
+                <td>FB1405080010123451</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123458</a></td>
+                <td>다바(ddddd)</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>2015-07-15 15:22:11</td>
+                <td>stylegood</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">무게가 초과되어 배송비용이 변경되었.....</td>
+                <td>FB1405080010123450</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123459</a></td>
+                <td>패스트박스(fastbox)</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>2015-07-13 15:22:11</td>
+                <td>stylegood</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">도착한 나시티 상품이 불량입니다.</td>
+                <td>FB1405080010123449</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123460</a></td>
+                <td>패스트박스(fastbox)</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>2015-07-13 10:22:11</td>
+                <td>testmall</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">수정이필요한데..여기다 요청하면되요?</td>
+                <td>FB1405080010123448</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123461</a></td>
+                <td>믹엑스믹스(mixxmxi)</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>2015-07-12 15:22:11</td>
+                <td>stylegood</td>
+                <td><a href="#none" class="txtLink">20150730-123654789</a></td>
+                <td class="left">배송지시는 어케해요?</td>
+                <td>FB1405080010123447</td>
+                <td><a href="#none" class="txtLink">20140305-21AA123462</a></td>
+                <td>다바(ddddd)</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+
+<?php require_once('../../include/footer.html'); ?>

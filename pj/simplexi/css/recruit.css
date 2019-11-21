@@ -1,0 +1,162 @@
+/* reset */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, button, p, blockquote, th, td { margin:0; padding:0;-webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+html { width:100%; height:100%; }
+body { font-family:'Nanum Gothic',Helvetica,Arial,sans-serif; font-size:12px; line-height:1.2em; color:#303030; background:#fff; -webkit-text-size-adjust:none; }
+ul, ol { list-style:none; }
+img, fieldset{ border:0; }
+img, video { max-width:100%; }
+i, em, address { font-style:normal; font-weight:normal; }
+ins { text-decoration:none; }
+a { text-decoration:none; color:#303030; }
+a:active { text-decoration:none; }
+table { width:100%; table-layout:fixed; border:0 none; border-spacing:0; border-collapse:collapse; }
+caption { visibility:hidden; width:0; height:0; margin:0; padding:0; background:none; font-size:0; line-height:0; }
+th, td { border:0; line-height:18px; vertical-align:top; word-wrap:break-word; }
+legend, hr, .blind { visibility:hidden; position:absolute; left:-9999em; width:1px; height:1px; margin:0; padding:0; background:none; font-size:0; line-height:0; text-indent:-9999em; }
+label { cursor:pointer; }
+img, textarea, input, select { vertical-align:middle; }
+textarea { resize:none; line-height:1.2em; }
+button::-moz-focus-inner { padding:0; border:0; }
+button { overflow:visible; border:0; padding:0; margin:0; cursor:pointer; vertical-align:middle; text-align:left; font-family:'Nanum Gothic',Helvetica,Arial; font-size:12px; line-height:1.2em; color:#303030; outline:0; background:none; }
+
+/* html5 */
+object, del, sub, var { margin:0; padding:0; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+
+/* common */
+input[type="text"], input[type="file"] { padding:9px 6px; border:1px solid #cbcbcb; -moz-border-radius:1px; -webkit-border-radius:1px; -ms-border-radius:1px; border-radius:1px; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
+input[type="file"] { padding:5px 6px; }
+select { border:1px solid #cbcbcb; padding:0 16px 0 10px; height:35px; line-height:35px; outline:0; font-family:'Nanum Gothic'; font-size:14px; -moz-border-radius:1px; -webkit-border-radius:1px; -ms-border-radius:1px; border-radius:1px; }
+
+.mTitle, .mSubTitle, .mAgree, .mBrdWrite, .mBox { margin:0 40px; }
+
+/* mTitle */
+.mTitle { border-bottom:3px solid #0186e3; }
+.mTitle h1 { display:inline-block; font-size:24px; line-height:24px; margin:0 0 15px; padding:0 0 0 29px; background:url("../img/news/ico_h2_bullet.gif") no-repeat 0 center; }
+
+/* mSubtitle */
+.mSubTitle { padding:50px 30px 20px; }
+.mSubTitle h2 { font-size:30px; line-height:30px; color:#0186e3; }
+
+/* mAgree */
+.mAgree { padding:0 30px 40px; }
+.mAgree .title { margin:0 0 7px; font-size:18px; line-height:22px; font-weight:normal; }
+.mAgree .agree { overflow:auto; height:250px; padding:20px 28px; border:1px solid #ccc; font-size:12px; line-height:20px; text-align:left; color:#707070; background-color:#fff; }
+.mAgree .agree h3 { margin:25px 0 0; font-size:12px; line-height:20px; font-weight:normal; }
+.mAgree .agree h3:first-child { margin-top:0; }
+.mAgree .agree p, .mAgree .agree ul { margin:0 0 0 10px; }
+.mAgree .agree .gIndent { margin:0 0 0 65px; }
+.mAgree .check { margin:10px 0 0; font-size:14px; }
+.mAgree .check input[type="checkbox"]{ margin:0 8px 0 0; }
+
+/* mBrdWrite */
+.mBrdWrite { padding:10px 30px; }
+.mBrdWrite .gMedium { width:200px; }
+.mBrdWrite tbody th { padding:21px 30px; border-bottom:1px solid #d6d6d6; font-size:14px; vertical-align:middle; text-align:left; color:#148fe5; font-weight:normal; background-color:#ebf5fc; }
+.mBrdWrite tbody td { padding:12px 18px; border-bottom:1px solid #d6d6d6; font-size:14px; vertical-align:middle; }
+.mBrdWrite tbody tr:first-child th, .mBrdWrite tbody tr:first-child td { border-top:1px solid #d6d6d6; }
+.mBrdWrite .gEmail { width:160px; }
+
+/* mList */
+.mList { margin:18px 0 8px; font-size:13px; line-height:20px; color:#707070; }
+.mList li { position:relative; padding:0 0 0 10px; }
+.mList li:before { display:block; content:""; position:absolute; top:8px; left:2px; width:2px; height:2px; background:#707070; }
+
+/* mBox */
+.mBox { padding:46px 25px; border-top:1px solid #bcdff7; border-bottom:1px solid #bcdff7; font-size:14px; line-height:26px; text-align:center; word-wrap:break-word; word-break:keep-all; background-color:#ebf5fc; }
+.mBox li { margin:26px 0 0; }
+.mBox li:first-child { margin-top:0; }
+
+/* mButton */
+.mButton { padding:10px 0 0; width:100%; text-align:center; }
+.mButton a { margin:0 1px; }
+
+/* btnSubmit */
+.btnSubmit { display:inline-block; margin:28px 0 0; background:#000; color:#fff; font-size:16px; line-height:16px; text-align:center; padding:12px 40px; }
+
+/* btnCancel */
+.btnCancel { display:inline-block; margin:28px 0 0; padding:11px 40px; border:1px solid #aaa; font-size:16px; line-height:16px; text-align:center; background:#fff; }
+
+/* 입사지원*/
+.mComplete { margin:35px 0; text-align:center; }
+.mComplete strong { position:relative; padding:0 0 0 52px; font-size:24px; line-height:30px; }
+.mComplete strong:before { display:block; content:""; position:absolute; top:-6px; left:0; width:40px; height:40px; background:url("../img/recruit/sfix_recruit.png") no-repeat 0 -200px; }
+
+
+/* ====================================== Media Query ========================================== */
+/* Mobile */
+@media all and (max-width:767px) {
+    body { min-width:320px; }
+    /* common */
+    input[type="text"], input[type="file"] { padding:5px 3px; }
+    input[type="file"] { padding:2px 3px; }
+    select { height:27px; line-height:27px; padding-left:6px; font-size:12px; }
+    .mTitle, .mSubTitle, .mAgree, .mBrdWrite, .mBox { margin:0 20px; }
+    /* mTitle */
+    .mTitle { border-width:2px; }
+    .mTitle h1 { font-size:13px; line-height:15px; margin:0 0 7px; padding:0 0 0 14px; font-weight:normal; background:url("../img/news/ico_h2_bullet_m.png") no-repeat 0 center; background-size:7px 7px; }
+    /* mSubTitle */
+    .mSubTitle { padding:25px 0 14px; }
+    .mSubTitle h2 { font-size:15px; line-height:15px; }
+    /* mAgree */
+    .mAgree { padding:0 0 15px; }
+    .mAgree .title { margin-bottom:5px; font-size:13px; line-height:13px; }
+    .mAgree .agree { height:270px; padding:10px 14px; }
+    .mAgree .agree h3 { margin-top:12px; }
+    .mAgree .check { margin-top:5px; font-size:12px; }
+    /* mBrdWrite */
+    .mBrdWrite { padding:6px 0; }
+    .mBrdWrite .gMedium { width:27%; }
+    .mBrdWrite tbody th { padding:11px 10px; font-size:12px; }
+    .mBrdWrite tbody td { padding:6px 10px; font-size:12px; }
+    .mBrdWrite .gEmail { width:74%; display:block; margin:6px 0 0; }
+    /* mList */
+    .mList { margin:10px 0 2px; font-size:12px; line-height:16px; }
+    .mList li { padding:0 0 0 5px; }
+    .mList li:before { top:6px; left:0; width:1px; height:1px; }
+    /* mBox */
+    .mBox { padding:18px; font-size:12px; line-height:16px; }
+    .mBox li { margin:16px 0 0; }
+    /* mButton */
+    .btnSubmit { padding:10px 20px 8px; font-size:12px; line-height:11px; }
+    .btnCancel { padding:9px 20px 7px; font-size:12px; line-height:11px; }
+    /* 입사지원*/
+    .mComplete { margin:22px 0; }
+    .mComplete strong { padding-left:26px; font-size:13px; line-height:16px; }
+    .mComplete strong:before { top:-2px; width:20px; height:20px; background-position:0 -100px; background-size:100px auto; }
+}
+/* Tablet */
+@media all and (min-width:768px) and (max-width:1023px) {
+    /* mSubTitle */
+    .mSubTitle { padding:50px 0 20px; }
+    /* mAgree */
+    .mAgree { padding:0 0 40px; margin:0 40px; }
+    /* mBrdWrite */
+    .mBrdWrite { padding:10px 0; }
+    .mBrdWrite .gMedium { width:23%; }
+    .mBrdWrite .gEmail { width:74%; display:block; margin:6px 0 0; }
+}
+
+/* PC */
+@media all and (width:1000px) {
+    /* mSubtitle */
+    .mSubTitle { padding:50px 30px 20px; }
+    /* mAgree */
+    .mAgree { padding:0 30px 40px; margin:0 40px; }
+    /* mBrdWrite */
+    .mBrdWrite { padding:10px 30px; }
+    .mBrdWrite .gMedium { width:200px; }
+    .mBrdWrite .gEmail { width:160px; display:inline; margin:0; }
+}
+
+/* Full */
+@media all and (min-width:1340px) {
+    .mTitle, .mSubTitle, .mAgree, .mBrdWrite { margin:0 70px; }
+    /* mAgree */
+    .mAgree { padding:0 30px 40px; }
+    /* mBrdWrite */
+    .mBrdWrite { padding:10px 30px; }
+    .mBrdWrite .gEmail { width:250px; }
+    /* mBox */
+    .mBox { margin:0 100px; }
+}

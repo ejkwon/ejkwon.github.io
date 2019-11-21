@@ -1,0 +1,163 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>사용자 정보</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">창고운영</a></li>
+            <li><a href="#none">사용자</a></li>
+            <li class="now" title="현재 페이지">사용자 정보</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>기본정보</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>기본정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">아이디 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" class="fText" style="width:165px;" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">이름 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" class="fText" style="width:165px;" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">비밀번호 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="password" class="fText" style="width:165px;" value="" />
+                    <span class="txtInfo">영문자/숫자/특수문자 2가지 이상 조합하여  10~16자</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">비밀번호 확인 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="password" class="fText" style="width:165px;" value="" />
+                    <span class="txtInfo">영문자/숫자/특수문자 2가지 이상 조합하여  10~16자</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">휴대전화</th>
+                <td>
+                    <select class="fSelect">
+                        <option>010</option>
+                        <option>011</option>
+                        <option>016</option>
+                        <option>017</option>
+                        <option>108</option>
+                        <option>109</option>
+                    </select> -
+                    <input type="text" class="fText" style="width:40px;"/> -
+                    <input type="text" class="fText" style="width:40px;"/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">일반전화</th>
+                <td>
+                    <select class="fSelect">
+                        <option>02</option>
+                        <option>051</option>
+                        <option>053</option>
+                        <option>032</option>
+                        <option>062</option>
+                        <option>042</option>
+                        <option>052</option>
+                        <option>031</option>
+                        <option>033</option>
+                        <option>043</option>
+                        <option>041</option>
+                        <option>063</option>
+                        <option>061</option>
+                        <option>054</option>
+                        <option>055</option>
+                        <option>064</option>
+                    </select> -
+                    <input type="text" class="fText" style="width:40px;"/> -
+                    <input type="text" class="fText" style="width:40px;"/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">이메일</th>
+                <td>
+                    <input type="text" class="fText" style="width:165px;" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">IP접근제한</th>
+                <td>
+                    <ul class="mForm typeVer">
+                        <li>
+                            <input type="text" class="fText" style="width:150px" />
+                            <a href="#none" class="btnNormal"><span>등록</span></a>
+                        </li>
+                        <li>
+                            <div class="mSelect gSmall gFunction eSelect">
+                                <ul>
+                                    <li class="selected">
+                                        <strong>123.123.123.321</strong>
+                                        <button class="btnIcon icoDel"><span>삭제</span></button>
+                                    </li>
+                                    <li>
+                                        <strong>123.321.123.123</strong>
+                                        <button class="btnIcon icoDel"><span>삭제</span></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>권한정보</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>권한정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">사용자등급 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <select class="fSelect">
+                        <option>-선택-</option>
+                        <option>A등급</option>
+                        <option>B등급</option>
+                    </select>
+                    <a href="#none" class="btnLink"><strong>[사용자등급 바로가기]</strong></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">상점</th>
+                <td>
+                    <label class="gLabel"><input type="radio" name="radio2" class="fChk" checked="checked" /> 전체 상점</label>
+                    <label class="gLabel"><input type="radio" name="radio2" class="fChk" /> 선택 상점 [0개]</label>
+                    <a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>상점 선택 <em class="icoLink"></em></span></a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

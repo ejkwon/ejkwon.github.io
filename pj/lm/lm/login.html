@@ -1,0 +1,105 @@
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/lm/include/header_index.html'); ?>
+    <!-- container -->
+    <div id="container">
+        <!-- content -->
+         <div class="mSearch typeHeader">
+            <fieldset>
+                <input type="text" class="fText" placeholder="고객 아이디" style="width:228px;" />
+                <a href="#none" class="btnCtrl"><span>검색</span></a>
+                <span class="txtLess gSingleSide">로그인 권한</span>
+                <div class="mTooltip gLarge">
+                    <button type="button" class="icon eTip">도움말</button>
+                    <div class="tooltip">
+                        <div class="content">
+                            <strong class="titleEm">로그인 권한 도움말</strong>
+                            <ul class="mList">
+                                <li>각 버튼의 권한이 필요하신 경우, 권한 관리 메뉴에서 내 권한을 확인하고 필요한 권한을 요청할 수 있습니다.</li>
+                                <li>테스트몰로 등록된 아이디의 경우 별도의 권한요청 없이 로그인 버튼 이용이 가능합니다.</li>
+                                <li>테스트몰은 [빌링어드민(billingadmin.cafe24.com)]에서 관리되고 있으며, 관리주체는 호스팅팀 입니다.</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="close eClose">닫기</button>
+                        <span class="edge"></span>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div id="content">
+            <div class="mBox typeBg">
+                아이디 <strong class="txtEm">$abcde12345$</strong> 로 검색 하였습니다.
+            </div>
+            <div class="enterArea">
+                <div class="mEnter">
+                    <ul>
+                        <li><a href="#layerPassword" class="btnStrong eModal"><span>hosting.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>reseller.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>reselleradmin.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>home.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>cmc.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>adtok.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>edu.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>cmcglobal.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>apicenter.cafe24.com</span></a></li>
+                    </ul>
+                </div>
+                <div class="mEnter">
+                    <ul>
+                        <li><a href="#none" class="btnStrong disabled"><span>dbank.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>d.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>agency.cafe24.com</span></a></li>
+                    </ul>
+                </div>
+                <div class="mEnter">
+                    <ul>
+                        <li><a href="#none" class="btnStrong disabled"><span>biz.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>tax.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>etax.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>weblog.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>bm-001.cafe24.com</span></a></li>
+                    </ul>
+                </div>
+                <div class="mEnter">
+                    <ul>
+                        <li><a href="#layerPassword" class="btnStrong eModal"><span>쇼핑몰 어드민</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>쇼핑몰 어드민 (QA용)</span></a></li>
+                        <li><a href="#layerPassword" class="btnStrong eModal"><span>쇼핑몰 어드민 (mnew 19)</span></a></li>
+                        <li><a href="#layerPassword" class="btnStrong eModal"><span>쇼핑몰 어드민 (mold 19)</span></a></li>
+                        <li><a href="#layerPassword" class="btnStrong eModal"><span>쇼핑몰 어드민 (mold 20)</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>그룹웨어 어드민</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>그룹웨어 프론트</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>빌더 어드민</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>리셀러 빌더 어드민</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>웹메일 어드민</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>mvod.cafe24.com</span></a></li>
+                        <li><a href="#none" class="btnStrong disabled"><span>쇼핑몰 어드민 (SUGAR)</span></a></li>
+                        <li><a href="#layerPassword" class="btnStrong eModal"><span>어드민 운영지원 (MINT)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //container -->
+
+<!-- 참고 : 비밀번호 입력 -->
+<div id="layerPassword" class="mLayer gSmall">
+    <h2>로그인한 비밀번호를 입력하세요.</h2>
+    <div class="wrap">
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption>비밀번호 입력</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">비밀번호</th>
+                    <td><input type="password" class="fText" style="width:95%;" /></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#none" class="btnCtrl"><span>전송</span></a>
+        <a href="#none" class="btnNormal eClose"><span>닫기</span></a>
+    </div>
+    <button type="button" class="btnClose eClose">닫기</button>
+</div><!-- //참고 -->
+
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/lm/include/footer.html'); ?>

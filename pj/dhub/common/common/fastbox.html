@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>송장출력</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/track_order.css" media="all" charset="utf-8" />
+    <!--<link rel="stylesheet" type="text/css" href="/css/scm/dhub/dhub.css" media="all" charset="utf-8" />-->
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="800,800"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <h1 class="mTrackOrder"><img src="../../img/admin/h1_fastbox_logo.gif" alt="TRACK ORDER" /></h1>
+    <div class="mTranslate">
+        <a href="#none"><img src="//img.cafe24.com/img/common/global/en_US_32x24.png" alt="" /></a>
+        <a href="#none"><img src="//img.cafe24.com/img/common/global/ja_JP_32x24.png" alt="" /></a>
+        <a href="#none"><img src="//img.cafe24.com/img/common/global/zh_CN_32x24.png" alt="" /></a>
+    </div>
+    <div class="section">
+        <div class="mTitle">
+            <h2>FB Invoice No.</h2>
+        </div>
+        <div class="mBoard gMedium">
+            <table border="1" summary="">
+            <caption>FB Invoice No.</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">FB Invoice No.</th>
+                    <td>
+                        <input type="text" class="fText" style="width:210px;" value="FB1511170152001134" />
+                        <a href="#none" class="btnSearch"><span>Search</span></a>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>FASTBOX Shipment Information</h2>
+        </div>
+        <div class="mBoard gMedium">
+            <table border="1" summary="">
+            <caption>FASTBOX Shipment Information</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">Destination Country</th>
+                    <td>AUSTRALIA</td>
+                </tr>
+                <tr>
+                    <th scope="row">Domestic Invoice No.</th>
+                    <td><a href="#none" class="txtLink">PEKR50490260</a></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>FASTBOX Shipment Progress</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+            <caption>FASTBOX Shipment Progress</caption>
+            <colgroup>
+                <col class="time" />
+                <col style="width:180px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">Date &amp; Time</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Details</th>
+                </tr>
+            </thead>
+            <tbody class="center">
+                <tr>
+                    <td>2015-11-17 14:23</td>
+                    <td>Order Received</td>
+                    <td class="left">Order Received.</td>
+                </tr>
+                <tr>
+                    <td>2015-11-17 14:31</td>
+                    <td>Order Confirmed</td>
+                    <td class="left">Preparing for Dispatch</td>
+                </tr>
+                <tr>
+                    <td>2015-11-17 15:49</td>
+                    <td>Queued for Shipment</td>
+                    <td class="left">Dispatched to Sort Facility</td>
+                </tr>
+                <tr>
+                    <td>2015-11-17 15:49</td>
+                    <td>Arrived Facility</td>
+                    <td class="left">Arrived at FASTBOX Sort Facility</td>
+                </tr>
+                <tr>
+                    <td>2015-11-17 15:50</td>
+                    <td>Processing at Facility</td>
+                    <td class="left">Customs Documentation and Labeling</td>
+                </tr>
+                <tr>
+                    <td>2015-11-18 17:06</td>
+                    <td>Departed Facility</td>
+                    <td class="left">International Shipment Release<br />Departed Facility</td>
+                </tr>
+                <tr>
+                    <td>2015-11-18 18:32</td>
+                    <td>In Transit</td>
+                    <td class="left">Shipping to International Destination</td>
+                </tr>
+                <tr>
+                    <td>2015-11-19 11:21</td>
+                    <td>Delivered</td>
+                    <td class="left">Shipment Accepted</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2 class="trackOrder">Local Carrier Tracking Information</h2>
+        </div>
+        <div class="mBox typeFrame">
+            <iframe src="" title="" frameborder="0" scrolling="auto" style="width:100%; height:223px;"></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <a href="#none" class="btnEm"><span>Close</span></a>
+</div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

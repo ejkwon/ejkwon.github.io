@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>우편번호 검색</title>
+    <link rel="stylesheet" type="text/css" href="/css/suio.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/suio.js" charset="utf-8"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body id="popup">
+    <div id="wrap">
+        <div class="headingArea">
+            <div class="mTitle">
+                <h1>우편번호 검색</h1>
+            </div>
+        </div>
+        <div class="mZipcode">
+            <p class="mList typeMore">동(읍/면/리/건물명)을 입력해 주세요. (예 : 신대방동, 신대방)</p>
+            <fieldset><legend>우편번호 검색</legend>
+                <input type="text" title="검색어 입력" class="fText" style="width:230px;" />
+                <a href="#none" class="btnNormal"><span>검색</span></a>
+            </fieldset>
+            <div class="zipList">
+                <table border="1" summary="">
+                <caption>우편번호 검색결과</caption>
+                <colgroup>
+                    <col style="width:80px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">우편번호</th>
+                        <th scope="col">상세주소</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>156-012</td>
+                        <td>서울 동작구 신대방2동</td>
+                    </tr>
+                    <tr>
+                        <td>156-012</td>
+                        <td>서울 동작구 신대방2동 보라매 아카데미 나산스위트 아파트 (101~105동)</td>
+                    </tr>
+                    <tr>
+                        <td>156-012</td>
+                        <td>서울 동작구 신대방2동</td>
+                    </tr>
+                    <tr>
+                        <td>156-012</td>
+                        <td>서울 동작구 신대방2동</td>
+                    </tr>
+                    <tr>
+                        <td>156-012</td>
+                        <td>서울 동작구 신대방2동 보라매 아카데미 나산스위트 아파트 (101~105동)</td>
+                    </tr>
+                </tbody>
+                <tbody class="empty">
+                    <tr><td colspan="2">우편번호 검색 내역이 없습니다.</td></tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="#none" class="btnEm" onclick="window.close();"><span>닫기</span></a>
+    </div>
+    <!-- 참고 : UI 체크용 JS 입니다 -->
+    <script type="text/javascript" src="/suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

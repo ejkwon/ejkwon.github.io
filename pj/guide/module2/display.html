@@ -1,0 +1,1434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>진열관리</title>
+<link rel="stylesheet" type="text/css" href="/css/module2.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/uitest.css" media="all" /><!-- 테스트용 CSS -->
+<link rel="stylesheet" type="text/css" href="/guide/ui/import2.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>진열관리</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>매뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <div class="mGuideBox">
+                <h2><del>[mDisplay]</del> : 2012-12-10 이후 .mPicker로 대체</h2>
+                <ul>
+                    <li>.mDisplay, .gDisplay 사용. 예외케이스로 .section 으로 그룹핑 하지 않는다.</li>
+                    <li>.mDisplay 이후에는 다른 페이지와 동일하게 .section 으로 마크업한다.</li>
+                    <li>.mPaging은 경우에 따라 추가,삭제 가능</li>
+                    <li>팝업에 사용될 경우 : 하단 gCtrl삭제를 제외한 마크업 동일</li>
+                    <li>페이징, 간편순서 설정 등의 요소 미사용으로 인해 좌,우측 height값이 안 맞을 경우 gDisplay에 클래스 추가하여 typeBody의 height값을 조정한다. <strong>ex) &lt;div class=""gDisplay typeSearch typeMail"&gt;</strong></li>
+                    <li>mDisplay의 hieght값 변경으로 중간 버튼영역(.prdAdd)의 높이값 조정 필요시 .mDisplay + gHeight숫자로 제어 <strong>ex) &lt;div class="mDisplay gHeight1"&gt;</strong></li>
+                    <li>typeBody, 버튼영역 높이값을 모두 변경 시 mDisplay에 클래스 추가하여 조정 <strong>ex) &lt;div class="mDisplay gCouponIssue"&gt;</strong></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>관련 페이지</h2>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="">
+                    <caption>mDisplay</caption>
+                    <colgroup>
+                        <col style="width:8%;" />
+                        <col style="width:12%;" />
+                        <col style="width:28%;" />
+                        <col style="width:7%;" />
+                        <col style="width:9%;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" colspan="2">항목</th>
+                        <th scope="col">경로</th>
+                        <th scope="col">형태</th>
+                        <th scope="col">CSS</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">상품관리</td>
+                        <td>상품진열 설정</td>
+                        <td><a href="/smartAdmin/product/showroom/display.html" target="_blank">/smartAdmin/product/showroom/display.html</a></td>
+                        <td>페이지</td>
+                        <td>module</td>
+                        <td>페이징 없음</td>
+                    </tr>
+                    <tr class="rowMerge">
+                        <td>진열순서 수정</td>
+                        <td><a href="/smartAdmin/product/showroom/order.html" target="_blank">/smartAdmin/product/showroom/order.html</a></td>
+                        <td>페이지</td>
+                        <td>module, product</td>
+                        <td>진열부분만 사용. typeModify 클래스 추가하여 width:100%</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">스마트메일</td>
+                        <td>회원선택</td>
+                        <td><a href="/smartAdmin/member/smartMail/group/member_select.html" target="_blank">/smartAdmin/member/smartMail/group/member_select.html</a></td>
+                        <td>팝업</td>
+                        <td>module, member</td>
+                        <td>- gSelect영역 없음. typeMail,typeMember 클래스 추가하여 typeBody높이 조정 <br />- 버튼영역 높이 조정 위해 gHeight1추가 <br />-&gt; mDisplay에 클래스 추가 권장</td>
+                    </tr>
+                    <tr class="rowMerge">
+                        <td>상품선택</td>
+                        <td><a href="/smartAdmin/member/smartMail/mail/register_display_product.html" target="_blank">/smartAdmin/member/smartMail/mail/register_display_product.html</a></td>
+                        <td>팝업</td>
+                        <td>module, member</td>
+                        <td>gSelect영역 없음. typeMail 클래스 추가하여 typeBody높이 조정</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3">앱스토어</td>
+                        <td>상품 슬라이드 - 수정</td>
+                        <td><a href="/smartAdmin/Cstore/myApps/product/modify.html" target="_blank">/smartAdmin/Cstore/myApps/product/modify.html</a></td>
+                        <td>페이지</td>
+                        <td>module, myapps</td>
+                        <td>- gSelect영역 높이값 조정 <br />- 버튼영역 높이 조정 위해 gHeight1추가</td>
+                    </tr>
+                    <tr class="rowMerge">
+                        <td>상품 슬라이드 - 등록</td>
+                        <td><a href="/smartAdmin/Cstore/myApps/product/register.html" target="_blank">/smartAdmin/Cstore/myApps/product/register.html</a></td>
+                        <td>페이지</td>
+                        <td>module, myapps</td>
+                        <td>수정페이지와 동일</td>
+                    </tr>
+                    <tr class="rowMerge">
+                        <td>상품검색</td>
+                        <td><a href="/smartAdmin/Cstore/myApps/shopping/search.html" target="_blank">/smartAdmin/Cstore/myApps/shopping/search.html</a></td>
+                        <td>팝업</td>
+                        <td>module, myapps</td>
+                        <td>진열부분만 사용. typeShop 클래스 추가하여 width:100%</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">프로모션</td>
+                        <td>쿠폰 발급하기</td>
+                        <td><a href="/smartAdmin/promotion/coupon/service/issue.html" target="_blank">/smartAdmin/promotion/coupon/service/issue.html</a></td>
+                        <td>페이지</td>
+                        <td>module, coupon</td>
+                        <td>.mDisplay.gCouponIssue 추가하여 typeBody,버튼영역 높이값 조정</td>
+                    </tr>
+                    <tr class="rowMerge">
+                        <td>상품선택</td>
+                        <td><a href="/smartAdmin/promotion/coupon/service/make_product.html" target="_blank">/smartAdmin/promotion/coupon/service/make_product.html</a></td>
+                        <td>팝업</td>
+                        <td>module, coupon</td>
+                        <td>선택영역만 페이징 있음. typeProduct 추가하여 typeBody높이 조정</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mTitle">
+                <h2>페이지에서 사용 될 경우</h2>
+            </div>
+            <div class="mDisplay">
+                <!-- gDisplay -->
+                <div class="gDisplay typeSearch">
+                    <h2>상품검색</h2>
+
+                    <div class="gSelect">
+                        <table border="1" summary="">
+                        <caption>상품검색</caption>
+                        <colgroup><col style="width:24%;" /><col style="width:auto;" /></colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">상품카테고리</th>
+                            <td class="prdCategory">
+                                <select>
+                                    <option>대분류 선택</option>
+                                </select>
+
+                                <select>
+                                    <option>중분류 선택</option>
+                                </select>
+
+                                <select>
+                                    <option>소분류 선택</option>
+                                </select>
+
+                                <select>
+                                    <option>세분류 선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상품검색</th>
+                            <td>
+                                <select>
+                                    <option>상품명</option>
+                                </select>
+                                <input type="text" class="fText" style="width:150px;" />
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                        <p class="btn"><a href="#none" class="btnEm"><span>검색</span></a></p>
+                    </div>
+
+                    <div class="gResult">
+                        <p class="gTotal">총 상품목록 <em>3</em>개</p>
+                        <!--p class="gSort">
+                        <select>
+                            <option>등록순</option>
+                            <option>상품명순</option>
+                        </select-->
+                    </div>
+
+                    <div class="gCtrl typeDisplay">
+                        <p class="gCtrlRight">
+                            <span>정렬기준 :</span>
+                            <select>
+                                <option>상품명</option>
+                                <option>등록일</option>
+                                <option>판매가</option>
+                            </select>
+                        </p>
+                    </div>
+
+                    <div class="gProduct typeHead">
+                        <table border="1" summary="" class="eTr">
+                        <caption>상품검색</caption>
+                        <colgroup><col class="chk" /><col style="width:auto;" /><col class="state" /></colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                            <th scope="col">상품명</th>
+                            <th scope="col" class="state">진열상태</th>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <div class="gProduct typeBody">
+                        <table border="1" summary="" class="eTr">
+                        <caption>상품검색</caption>
+                        <colgroup><col class="chk" /><col style="width:auto;" /><col class="state" /></colgroup>
+                        <tbody>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="/smartAdmin/product/list/detail.html" target="_blank" onclick="window.open(this.href,'smAdminPopup3','scrollbars=1,width=800,height=650');return false;">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">미진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="noData">검색된 상품이 없습니다.</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mPaging typeWhole">
+                        <p class="first"><a href="#none"><span>첫 페이지</span></a></p>
+                        <p class="prev"><a href="#none"><span>이전 10 페이지</span></a></p>
+                        <ol>
+                            <li><a href="#none" title="현재페이지">1</a></li>
+                            <li><a href="#none" title="2 페이지로 이동">2</a></li>
+                            <li><strong title="3 페이지로 이동">3</strong></li>
+                            <li><a href="#none" title="4 페이지로 이동">4</a></li>
+                            <li><a href="#none" title="5 페이지로 이동">5</a></li>
+                            <li><a href="#none" title="6 페이지로 이동">6</a></li>
+                            <li><a href="#none" title="7 페이지로 이동">7</a></li>
+                            <li><a href="#none" title="8 페이지로 이동">8</a></li>
+                            <li><a href="#none" title="9 페이지로 이동">9</a></li>
+                            <li><a href="#none" title="10 페이지로 이동">10</a></li>
+                        </ol>
+                        <p class="next"><a href="#none"><span>다음 10 페이지</span></a></p>
+                        <p class="last"><a href="#none"><span>마지막 페이지</span></a></p>
+                    </div>
+                </div><!-- //gDisplay -->
+
+                <div class="gBtn prdAdd">
+                    <p>
+                        <span class="button"><button class="btnAdd">추가</button></span>
+                        <span class="button"><button class="btnAdd typeAll">전체 추가</button></span>
+                    </p>
+                </div>
+
+                <!-- gDisplay -->
+                <div class="gDisplay typeResult">
+                    <h2>상품진열</h2>
+
+                    <!-- 메인진열 선택할 경우 -->
+                    <div class="gSelect">
+                        <table border="1" summary="">
+                        <caption>상품진열</caption>
+                        <colgroup><col style="width:32%;" /><col style="width:auto;" /></colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">진열위치 선택</th>
+                            <td>
+                                <label class="fChk"><input type="radio" name="radio" checked="checked" /> 메인진열</label>
+                                <label class="fChk"><input type="radio" name="radio" /> 상품카테고리 진열</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">진열될 영역선택
+                                <span class="icoHelp eTip">도움말</span>
+                                <div class="mTooltip gSmall">
+                                    <div class="gTop"></div>
+                                    <div class="gMiddle">
+                                        <strong class="tipTitle">도움말</strong>
+                                        <ul>
+                                            <li>쇼핑몰 메인에 보여지는 상품카테고리를 설정합니다.</li>
+                                            <li>추천상품, 신상품 외에 원하는 카테고리를 추가할 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="gBottom"></div>
+                                    <a href="#none" class="btnClose eClose"><span>도움말 닫기</span></a>
+                                    <span class="icoArrTL"></span>
+                                </div>
+                            </th>
+                            <td>
+                                <select>
+                                    <option>추천상품</option>
+                                    <option>신상품</option>
+                                    <option>추가카테고리1</option>
+                                    <option>추가카테고리2</option>
+                                </select>
+                                <a href="#none" class="btnEm eLayer"><span>메인분류 추가</span></a>
+                                <div class="mLayer gLarge" style="margin-left:-500px">
+                                    <div class="gTop">
+                                        <h6>메인 추가분류 설정</h6>
+                                    </div>
+                                    <div class="gMiddle">
+                                        <strong class="layerTitle">추가 분류 설정</strong>
+
+                                        <div class="mBoard type1">
+                                            <table border="1" summary="">
+                                            <caption>메인 추가분류 설정</caption>
+                                            <colgroup><col width="30%" /><col width="10%" /><col width="auto" /><col width="10%" /><col width="10%" /></colgroup>
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">카테고리명</th>
+                                                <th scope="col">상품수</th>
+                                                <th scope="col">진열여부</th>
+                                                <th scope="col">진열순서</th>
+                                                <th scope="col">삭제</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="center">
+                                            <tr>
+                                                <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                <td>1</td>
+                                                <td>
+                                                    <label class="fChk"><input type="radio" name="radio1" checked="checked" /> 진열함</label>
+                                                    <label class="fChk"><input type="radio" name="radio1" /> 진열안함</label>
+                                                </td>
+                                                <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                <td>0</td>
+                                                <td>
+                                                    <label class="fChk"><input type="radio" name="radio2" checked="checked" /> 진열함</label>
+                                                    <label class="fChk"><input type="radio" name="radio2" /> 진열안함</label>
+                                                </td>
+                                                <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                <td>1</td>
+                                                <td>
+                                                    <label class="fChk"><input type="radio" name="radio3" checked="checked" /> 진열함</label>
+                                                    <label class="fChk"><input type="radio" name="radio3" /> 진열안함</label>
+                                                </td>
+                                                <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                <td>0</td>
+                                                <td>
+                                                    <label class="fChk"><input type="radio" name="radio4" checked="checked" /> 진열함</label>
+                                                    <label class="fChk"><input type="radio" name="radio4" /> 진열안함</label>
+                                                </td>
+                                                <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                            </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="gBtn">
+                                            <a href="#none" class="btnCtrlEm"><span>분류추가</span></a>
+                                        </div>
+
+                                        <div class="mButton">
+                                            <a href="#none" class="btnEm"><span><strong>저장</strong></span></a>
+                                            <a href="#none" class="btnEm"><span>취소</span></a>
+                                        </div>
+                                    </div>
+                                    <a href="#none" class="btnClose eClose"><span>레이어 닫기</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div><!-- //메인진열 선택할 경우 -->
+
+                    <div class="gResult">
+                        <p class="gTotal">총 상품진열목록 <em>0</em>개</p>
+                    </div>
+
+                    <div class="gCtrl typeDisplay">
+                        <p class="gCtrlLeft">
+                            <button class="btnFirst"><span>선택한 항목 최상단으로 이동</span></button>
+                            <button class="btnPrev"><span>선택한 항목 한줄 위로 이동</span></button>
+                            <button class="btnNext"><span>선택한 항목 한줄 아래로 이동</span></button>
+                            <button class="btnLast"><span>선택한 항목 최하단으로 이동</span></button>
+                        </p>
+                        <div class="gCtrlRight">
+                            <a href="#none" class="btnEm eLayer"><span>진열상태 변경</span></a>
+                            <div class="mLayer gSmall" style="margin-left:-260px;">
+                                <div class="gTop">
+                                    <h6>진열상태 변경</h6>
+                                </div>
+                                <div class="gMiddle">
+                                    <p class="gDouble center">선택한 <strong class="txtWarn">1</strong>건의 상품을</p>
+                                    <p class="gDouble center">
+                                        <label class="fChk"><input type="radio" name="radio101" checked="checked" /> 진열</label>&nbsp;&nbsp;
+                                        <label class="fChk"><input type="radio" name="radio101" /> 미진열</label>
+                                    </p>
+                                    <p class="center">상태로 변경하시겠습니까?</p>
+                                    <div class="mButton">
+                                        <a href="#none" class="btnEm"><span>진열변경</span></a>
+                                        <a href="#none" class="btnEm eLyrClose"><span>닫기</span></a>
+                                    </div>
+                                </div>
+                                <a href="#none" class="btnClose eClose"><span>레이어 닫기</span></a>
+                            </div>
+                            <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                        </div>
+                    </div>
+
+                    <div class="gProduct typeHead">
+                        <table border="1" summary="" class="eTr">
+                        <caption>상품진열</caption>
+                        <colgroup><col class="chk" /><col class="array" /><col style="width:auto;" /><col class="state" /></colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                            <th scope="col" class="array">순서</th>
+                            <th scope="col">상품명</th>
+                            <th scope="col" class="state">진열상태</th>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <div class="gProduct typeBody">
+                        <table border="1" summary="" class="eTr">
+                        <caption>상품검색</caption>
+                        <colgroup><col class="chk" /><col class="array" /><col style="width:auto;" /><col class="state" /></colgroup>
+                        <tbody>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="array"><input type="text" class="fText" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="array"><input type="text" class="fText" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">미진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="array"><input type="text" class="fText" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="array"><input type="text" class="fText" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="array"><input type="text" class="fText" /></td>
+                            <td>
+                                <div class="goods type1">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                    <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                    <ul>
+                                        <li>- Size : Free</li>
+                                        <li>- Color : Red</li>
+                                    </ul>
+                                    <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                </div>
+                            </td>
+                            <td class="state">진열</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="noData">진열된 상품이 없습니다.</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <div class="gCtrl typeDisplay">
+                        <p class="gCtrlLeft">
+                            <button class="btnFirst"><span>선택한 항목 최상단으로 이동</span></button>
+                            <button class="btnPrev"><span>선택한 항목 한줄 위로 이동</span></button>
+                            <button class="btnNext"><span>선택한 항목 한줄 아래로 이동</span></button>
+                            <button class="btnLast"><span>선택한 항목 최하단으로 이동</span></button>
+                        </p>
+                        <div class="gCtrlRight">
+                            <a href="#none" class="btnEm eLayer"><span>진열상태 변경</span></a>
+                            <div class="mLayer gSmall" style="margin-left:-260px;margin-top:-180px;">
+                                <div class="gTop">
+                                    <h6>진열상태 변경</h6>
+                                </div>
+                                <div class="gMiddle">
+                                    <p class="gDouble center">선택한 <strong class="txtWarn">1</strong>건의 상품을</p>
+                                    <p class="gDouble center">
+                                        <label class="fChk"><input type="radio" name="radio102" checked="checked" /> 진열</label>&nbsp;&nbsp;
+                                        <label class="fChk"><input type="radio" name="radio102" /> 미진열</label>
+                                    </p>
+                                    <p class="center">상태로 변경하시겠습니까?</p>
+                                    <div class="mButton">
+                                        <a href="#none" class="btnEm"><span>진열변경</span></a>
+                                        <a href="#none" class="btnEm eLyrClose"><span>닫기</span></a>
+                                    </div>
+                                </div>
+                                <a href="#none" class="btnClose eClose"><span>레이어 닫기</span></a>
+                            </div>
+                            <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                        </div>
+                    </div>
+
+                    <div class="gCtrlInsert">
+                        <p class="insert">
+                            <span>간편순서 설정 :</span>
+                            선택한 상품을
+                            <input type="text" class="fText" />
+                            번 위치로
+                            <a href="#none" class="btnEm"><span><strong>이동</strong></span></a>
+                        </p>
+                    </div>
+
+                    <div class="mPaging typeWhole">
+                        <p class="first"><a href="#none"><span>첫 페이지</span></a></p>
+                        <p class="prev"><a href="#none"><span>이전 10 페이지</span></a></p>
+                        <ol>
+                            <li><a href="#none" title="현재페이지">1</a></li>
+                            <li><a href="#none" title="2 페이지로 이동">2</a></li>
+                            <li><strong title="3 페이지로 이동">3</strong></li>
+                            <li><a href="#none" title="4 페이지로 이동">4</a></li>
+                            <li><a href="#none" title="5 페이지로 이동">5</a></li>
+                            <li><a href="#none" title="6 페이지로 이동">6</a></li>
+                            <li><a href="#none" title="7 페이지로 이동">7</a></li>
+                            <li><a href="#none" title="8 페이지로 이동">8</a></li>
+                            <li><a href="#none" title="9 페이지로 이동">9</a></li>
+                            <li><a href="#none" title="10 페이지로 이동">10</a></li>
+                        </ol>
+                        <p class="next"><a href="#none"><span>다음 10 페이지</span></a></p>
+                        <p class="last"><a href="#none"><span>마지막 페이지</span></a></p>
+                    </div>
+                </div><!-- //gDisplay -->
+            </div>
+
+            <div class="mTitle">
+                <h2>팝업에서 사용 될 경우</h2>
+            </div>
+            <div id="popup">
+                <div id="popWrap" style="padding:0;">
+
+                    <div class="mDisplay">
+                        <!-- gDisplay -->
+                        <div class="gDisplay typeSearch">
+                            <h2>상품검색</h2>
+
+                            <div class="gSelect">
+                                <table border="1" summary="">
+                                <caption>상품검색</caption>
+                                <colgroup><col style="width:24%;" /><col style="width:auto;" /></colgroup>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">상품카테고리</th>
+                                    <td class="prdCategory">
+                                        <select>
+                                            <option>대분류 선택</option>
+                                        </select>
+
+                                        <select>
+                                            <option>중분류 선택</option>
+                                        </select>
+
+                                        <select>
+                                            <option>소분류 선택</option>
+                                        </select>
+
+                                        <select>
+                                            <option>세분류 선택</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품검색</th>
+                                    <td>
+                                        <select>
+                                            <option>상품명</option>
+                                        </select>
+                                        <input type="text" class="fText" style="width:150px;" />
+                                    </td>
+                                </tr>
+                                </tbody>
+                                </table>
+
+                                <p class="btn"><a href="#none" class="btnEm"><span>검색</span></a></p>
+                            </div>
+
+                            <div class="gResult">
+                                <p class="gTotal">총 상품목록 <em>3</em>개</p>
+                                <!--p class="gSort">
+                                <select>
+                                    <option>등록순</option>
+                                    <option>상품명순</option>
+                                </select-->
+                            </div>
+
+                            <div class="gCtrl typeDisplay">
+                                <p class="gCtrlRight">
+                                    <span>정렬기준 :</span>
+                                    <select>
+                                        <option>상품명</option>
+                                        <option>등록일</option>
+                                        <option>판매가</option>
+                                    </select>
+                                </p>
+                            </div>
+
+                            <div class="gProduct typeHead">
+                                <table border="1" summary="" class="eTr">
+                                <caption>상품검색</caption>
+                                <colgroup><col class="chk" /><col width="auto" /><col class="state" /></colgroup>
+                                <tbody>
+                                <tr>
+                                    <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                                    <th scope="col">상품명</th>
+                                    <th scope="col" class="state">진열상태</th>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+
+                            <div class="gProduct typeBody">
+                                <table border="1" summary="" class="eTr">
+                                <caption>상품검색</caption>
+                                <colgroup><col class="chk" /><col style="width:auto;" /><col class="state" /></colgroup>
+                                <tbody>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="/smartAdmin/product/list/detail.html" target="_blank" onclick="window.open(this.href,'smAdminPopup3','scrollbars=1,width=800,height=650');return false;">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">미진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="noData">검색된 상품이 없습니다.</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+
+                            <div class="mPaging typeWhole">
+                                <p class="first"><a href="#none"><span>첫 페이지</span></a></p>
+                                <p class="prev"><a href="#none"><span>이전 10 페이지</span></a></p>
+                                <ol>
+                                    <li><a href="#none" title="현재페이지">1</a></li>
+                                    <li><a href="#none" title="2 페이지로 이동">2</a></li>
+                                    <li><strong title="3 페이지로 이동">3</strong></li>
+                                    <li><a href="#none" title="4 페이지로 이동">4</a></li>
+                                    <li><a href="#none" title="5 페이지로 이동">5</a></li>
+                                    <li><a href="#none" title="6 페이지로 이동">6</a></li>
+                                    <li><a href="#none" title="7 페이지로 이동">7</a></li>
+                                    <li><a href="#none" title="8 페이지로 이동">8</a></li>
+                                    <li><a href="#none" title="9 페이지로 이동">9</a></li>
+                                    <li><a href="#none" title="10 페이지로 이동">10</a></li>
+                                </ol>
+                                <p class="next"><a href="#none"><span>다음 10 페이지</span></a></p>
+                                <p class="last"><a href="#none"><span>마지막 페이지</span></a></p>
+                            </div>
+                        </div><!-- //gDisplay -->
+
+                        <div class="gBtn prdAdd">
+                            <p>
+                                <span class="button"><button class="btnAdd">추가</button></span>
+                                <span class="button"><button class="btnAdd typeAll">전체 추가</button></span>
+                            </p>
+                        </div>
+
+                        <!-- gDisplay -->
+                        <div class="gDisplay typeResult">
+                            <h2>상품진열</h2>
+
+                            <!-- 메인진열 선택할 경우 -->
+                            <div class="gSelect">
+                                <table border="1" summary="">
+                                <caption>상품진열</caption>
+                                <colgroup><col style="width:32%;" /><col style="width:auto;" /></colgroup>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">진열위치 선택</th>
+                                    <td>
+                                        <label class="fChk"><input type="radio" name="radio" checked="checked" /> 메인진열</label>
+                                        <label class="fChk"><input type="radio" name="radio" /> 상품카테고리 진열</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">진열될 영역선택
+                                        <span class="icoHelp eTip">도움말</span>
+                                        <div class="mTooltip gSmall">
+                                            <div class="gTop"></div>
+                                            <div class="gMiddle">
+                                                <strong class="tipTitle">도움말</strong>
+                                                <ul>
+                                                    <li>쇼핑몰 메인에 보여지는 상품카테고리를 설정합니다.</li>
+                                                    <li>추천상품, 신상품 외에 원하는 카테고리를 추가할 수 있습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="gBottom"></div>
+                                            <a href="#none" class="btnClose eClose"><span>도움말 닫기</span></a>
+                                            <span class="icoArrTL"></span>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <select>
+                                            <option>추천상품</option>
+                                            <option>신상품</option>
+                                            <option>추가카테고리1</option>
+                                            <option>추가카테고리2</option>
+                                        </select>
+                                        <a href="#none" class="btnEm eLayer"><span>메인분류 추가</span></a>
+                                        <div class="mLayer gLarge" style="margin-left:-500px">
+                                            <div class="gTop">
+                                                <h6>메인 추가분류 설정</h6>
+                                            </div>
+                                            <div class="gMiddle">
+                                                <strong class="layerTitle">추가 분류 설정</strong>
+
+                                                <div class="mBoard type1">
+                                                    <table border="1" summary="">
+                                                    <caption>메인 추가분류 설정</caption>
+                                                    <colgroup><col width="30%" /><col width="10%" /><col width="auto" /><col width="10%" /><col width="10%" /></colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th scope="col">카테고리명</th>
+                                                        <th scope="col">상품수</th>
+                                                        <th scope="col">진열여부</th>
+                                                        <th scope="col">진열순서</th>
+                                                        <th scope="col">삭제</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="center">
+                                                    <tr>
+                                                        <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <label class="fChk"><input type="radio" name="radio1" checked="checked" /> 진열함</label>
+                                                            <label class="fChk"><input type="radio" name="radio1" /> 진열안함</label>
+                                                        </td>
+                                                        <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                        <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                        <td>0</td>
+                                                        <td>
+                                                            <label class="fChk"><input type="radio" name="radio2" checked="checked" /> 진열함</label>
+                                                            <label class="fChk"><input type="radio" name="radio2" /> 진열안함</label>
+                                                        </td>
+                                                        <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                        <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <label class="fChk"><input type="radio" name="radio3" checked="checked" /> 진열함</label>
+                                                            <label class="fChk"><input type="radio" name="radio3" /> 진열안함</label>
+                                                        </td>
+                                                        <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                        <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" class="fText" style="width:180px;" /></td>
+                                                        <td>0</td>
+                                                        <td>
+                                                            <label class="fChk"><input type="radio" name="radio4" checked="checked" /> 진열함</label>
+                                                            <label class="fChk"><input type="radio" name="radio4" /> 진열안함</label>
+                                                        </td>
+                                                        <td><input type="text" class="fText" style="width:40px;" /></td>
+                                                        <td><a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a></td>
+                                                    </tr>
+                                                    </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="gBtn">
+                                                    <a href="#none" class="btnCtrlEm"><span>분류추가</span></a>
+                                                </div>
+
+                                                <div class="mButton">
+                                                    <a href="#none" class="btnEm"><span><strong>저장</strong></span></a>
+                                                    <a href="#none" class="btnEm"><span>취소</span></a>
+                                                </div>
+                                            </div>
+                                            <a href="#none" class="btnClose eClose"><span>레이어 닫기</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div><!-- //메인진열 선택할 경우 -->
+
+                            <div class="gResult">
+                                <p class="gTotal">총 상품진열목록 <em>0</em>개</p>
+                            </div>
+
+                            <div class="gCtrl typeDisplay">
+                                <p class="gCtrlLeft">
+                                    <button class="btnFirst"><span>선택한 항목 최상단으로 이동</span></button>
+                                    <button class="btnPrev"><span>선택한 항목 한줄 위로 이동</span></button>
+                                    <button class="btnNext"><span>선택한 항목 한줄 아래로 이동</span></button>
+                                    <button class="btnLast"><span>선택한 항목 최하단으로 이동</span></button>
+                                </p>
+                                <div class="gCtrlRight">
+                                    <a href="#none" class="btnEm eLayer"><span>진열상태 변경</span></a>
+                                    <div class="mLayer gSmall" style="margin-left:-260px;">
+                                        <div class="gTop">
+                                            <h6>진열상태 변경</h6>
+                                        </div>
+                                        <div class="gMiddle">
+                                            <p class="gDouble center">선택한 <strong class="txtWarn">1</strong>건의 상품을</p>
+                                            <p class="gDouble center">
+                                                <label class="fChk"><input type="radio" name="radio101" checked="checked" /> 진열</label>&nbsp;&nbsp;
+                                                <label class="fChk"><input type="radio" name="radio101" /> 미진열</label>
+                                            </p>
+                                            <p class="center">상태로 변경하시겠습니까?</p>
+                                            <div class="mButton">
+                                                <a href="#none" class="btnEm"><span>진열변경</span></a>
+                                                <a href="#none" class="btnEm eLyrClose"><span>닫기</span></a>
+                                            </div>
+                                        </div>
+                                        <a href="#none" class="btnClose eClose"><span>레이어 닫기</span></a>
+                                    </div>
+                                    <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                </div>
+                            </div>
+
+                            <div class="gProduct typeHead">
+                                <table border="1" summary="" class="eTr">
+                                <caption>상품진열</caption>
+                                <colgroup><col class="chk" /><col class="array" /><col style="width:auto;" /><col class="state" /></colgroup>
+                                <tbody>
+                                <tr>
+                                    <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                                    <th scope="col" class="array">순서</th>
+                                    <th scope="col">상품명</th>
+                                    <th scope="col" class="state">진열상태</th>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+
+                            <div class="gProduct typeBody">
+                                <table border="1" summary="" class="eTr">
+                                <caption>상품검색</caption>
+                                <colgroup><col class="chk" /><col class="array" /><col style="width:auto;" /><col class="state" /></colgroup>
+                                <tbody>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td class="array"><input type="text" class="fText" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td class="array"><input type="text" class="fText" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">미진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td class="array"><input type="text" class="fText" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td class="array"><input type="text" class="fText" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                                    <td class="array"><input type="text" class="fText" /></td>
+                                    <td>
+                                        <div class="goods type1">
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_38x38.jpg" alt="" /></span>
+                                            <p><a href="#none">Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm Nikon D700 번들렌즈 50mm~150mm</a></p>
+                                            <ul>
+                                                <li>- Size : Free</li>
+                                                <li>- Color : Red</li>
+                                            </ul>
+                                            <span class="preview"><a href="#none" class="icoPreview" title="미리보기">미리보기</a></span>
+                                        </div>
+                                    </td>
+                                    <td class="state">진열</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="noData">진열된 상품이 없습니다.</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="gCtrlInsert">
+                                <p class="insert">
+                                    <span>간편순서 설정 :</span>
+                                    선택한 상품을
+                                    <input type="text" class="fText" />
+                                    번 위치로
+                                    <a href="#none" class="btnEm"><span><strong>이동</strong></span></a>
+                                </p>
+                            </div>
+
+                            <div class="mPaging typeWhole">
+                                <p class="first"><a href="#none"><span>첫 페이지</span></a></p>
+                                <p class="prev"><a href="#none"><span>이전 10 페이지</span></a></p>
+                                <ol>
+                                    <li><a href="#none" title="현재페이지">1</a></li>
+                                    <li><a href="#none" title="2 페이지로 이동">2</a></li>
+                                    <li><strong title="3 페이지로 이동">3</strong></li>
+                                    <li><a href="#none" title="4 페이지로 이동">4</a></li>
+                                    <li><a href="#none" title="5 페이지로 이동">5</a></li>
+                                    <li><a href="#none" title="6 페이지로 이동">6</a></li>
+                                    <li><a href="#none" title="7 페이지로 이동">7</a></li>
+                                    <li><a href="#none" title="8 페이지로 이동">8</a></li>
+                                    <li><a href="#none" title="9 페이지로 이동">9</a></li>
+                                    <li><a href="#none" title="10 페이지로 이동">10</a></li>
+                                </ol>
+                                <p class="next"><a href="#none"><span>다음 10 페이지</span></a></p>
+                                <p class="last"><a href="#none"><span>마지막 페이지</span></a></p>
+                            </div>
+                        </div><!-- //gDisplay -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>
+

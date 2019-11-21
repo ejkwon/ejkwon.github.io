@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>차이냐오 송장출력</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="900, 700"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+    <div id="wrap">
+        <div class="headingArea">
+            <div class="mTitle">
+                <h1>차이냐오 송장출력</h1>
+            </div>
+        </div>
+        <div class="section">
+            <div class="mTitle">
+                <h2>송장출력 방법</h2>
+                <ul>
+                    <li>차이냐오에 등록된 정보 기준으로 출고지시서와 값이 다를 수 있습니다.  처리시 확인해야합니다.</li>
+                    <li>차이냐오 송장번호를 클릭하면, '송장출력 미리보기' 화면에 송장이 표시됩니다.</li>
+                </ul>
+            </div>
+
+            <div class="gLeft">
+                <div class="mBoardArea">
+                    <div class="mBoard typeHead">
+                        <table border="1" summary="">
+                        <caption>송장 목록</caption>
+                        <colgroup>
+                            <col style="width:auto" />
+                            <col style="width:197px;*width:78px;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">출고지시번호</th>
+                                <th scope="col">차이나오 송장번호</th>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="mBoard typeBody" style="max-height:none; height:416px;">
+                        <table border="1" summary="">
+                        <caption>송장 목록</caption>
+                        <colgroup>
+                            <col style="width:auto" />
+                            <col style="width:180px;*width:61px;" />
+                        </colgroup>
+                        <tbody class="center">
+                            <tr class="selected"><!-- 참고: 현재 선택한 송장번호 -->
+                                <td>20140315-21AA123456 (AA-123-123)</td>
+                                <td><a href="#none" class="txtLink">LP00012012828300</a></td>
+                            </tr>
+                            <tr>
+                                <td>20140315-21AA123456 (AA-123-123)</td>
+                                <td><a href="#none" class="txtLink">LP00012012828300</a></td>
+                            </tr>
+                            <tr class="positive"><!-- 참고: 선택한적 있는 송장번호 -->
+                                <td>20140315-21AA123456 (AA-123-123)</td>
+                                <td><a href="#none" class="txtLink">LP00012012828300</a></td>
+                            </tr>
+                            <tr>
+                                <td>20140315-21AA123456 (AA-123-123)</td>
+                                <td><a href="#none" class="txtLink">LP00012012828300</a></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <p class="empty">내역이 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gRight">
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>송장 미리보기</caption>
+                    <colgroup>
+                        <col style="width:auto" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">송장출력 미리보기</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center middle">
+                        <tr>
+                            <td>
+                                차이냐오 송장번호를 클릭하면, 송장이 표시됩니다.
+                                <iframe src="#none" frameborder="0" style="width:100%; height:400px"></iframe>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="#none" class="btnEm"><span>닫기</span></a>
+    </div>
+
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>안내</title>
+<link rel="stylesheet" type="text/css" href="/css/module2.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/uitest.css" media="all" /><!-- 테스트용 CSS -->
+<link rel="stylesheet" type="text/css" href="/guide/ui/import.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>안내</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>매뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[mInfo]</h2>
+                    <p>디자인 추가 및 변경시 .mInfo + 개별 클래스 추가 ex)&lt;div class="mInfo typeError"&gt; </p>
+                </div>
+
+                <h3>[mInfo + typeError]</h3>
+                <div class="mInfo typeError">
+                    <h2>사입대행 서비스 이용 중지 상태입니다.</h2>
+                    <p class="txt">사입대행 서비스 이용 중지 상태로, 접수가 불가능합니다. <br />기본설정 및 예치금에서 서비스를 신청하고 예치금을 충전해 주세요.</p>
+                    <p class="btn"><a href="#none" class="btnSubmit"><span>기본설정 및 예치금관리 바로가기</span></a></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mInfo typeComplete">
+                    <div class="icoChk">
+                        <p>
+                            <strong class="title">입점 신청이 완료되었습니다.</strong>
+                            입점 승인이 완료되면, 관리자 휴대폰번호로 문자메시지가 전달됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

@@ -1,0 +1,192 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>개발지원</li>
+                <li class="now" title="현재 페이지">개발사 고객지원</li>
+            </ol>
+            <div class="mTitle">
+                <h1>개발사 고객지원</h1>
+            </div>
+
+            <div class="sectionArea">
+                <section class="section">
+                    <div class="mBoard">
+                        <table border="1">
+                            <caption>개발사 고객지원</caption>
+                            <colgroup>
+                                <col style="width:195px;">
+                                <col style="width:auto;">
+                                <col style="width:195px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">검색기간</th>
+                                    <td colspan="3">
+                                        <span class="btnDate">
+                                            <button type="button" class="button">오늘</button>
+                                            <button type="button" class="button">3일</button>
+                                            <button type="button" class="button">7일</button>
+                                            <button type="button" class="button">1개월</button>
+                                            <button type="button" class="button">3개월</button>
+                                            <button type="button" class="button">1년</button>
+                                        </span>
+                                        <input type="text" class="fText gDate" value="2016-07-01">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button> -
+                                        <input type="text" class="fText gDate" value="2016-07-01">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">검색어</th>
+                                    <td colspan="3">
+                                        <select class="fSelect" style="width:90px;">
+                                            <option>제목</option>
+                                            <option>내용</option>
+                                        </select>
+                                        <input type="text" class="fText" style="width:500px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문의유형</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>전체</option>
+                                            <option>이용문의</option>
+                                            <option>오류신고</option>
+                                            <option>건의사항</option>
+                                            <option>기타</option>
+                                        </select>
+                                    </td>
+                                    <th scope="row">처리상태</th>
+                                    <td>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 문의접수</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 답변완료</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mButton gCenter">
+                        <a href="#none" class="btnSubmit">검색</a>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>문의/답변내역</h2>
+                    </div>
+                    <div class="mState">
+                        <div class="gLeft">
+                            <p class="total">[총 <strong class="txtEm">40</strong>명] 검색결과 <strong class="txtEm">4</strong>개</p>
+                        </div>
+                        <div class="gRight">
+                            <select class="fSelect">
+                                <option>10개씩보기</option>
+                                <option>20개씩보기</option>
+                                <option>30개씩보기</option>
+                                <option>40개씩보기</option>
+                                <option>50개씩보기</option>
+                                <option>100개씩보기</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mCtrl typeHeader">
+                        <div class="gLeft">
+                            <span class="txtLess">선택한 문의를</span>
+                            <a href="#none" class="btnNormal mini">삭제</a>
+                        </div>
+                        <div class="gRight">
+                            <a href="#none" class="btnCtrl mini">문의등록</a>
+                        </div>
+                    </div>
+                    <div class="mBoard">
+                        <table border="1" class="eChkTr">
+                            <caption>문의/답변내역</caption>
+                            <colgroup>
+                                <col class="chk">
+                                <col style="width:55px;">
+                                <col class="date">
+                                <col style="width:100px;">
+                                <col style="width:auto;">
+                                <col style="width:100px;">
+                                <col class="date">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox" class="allChk"></th>
+                                    <th scope="col">No</th>
+                                    <th scope="col">등록일시</th>
+                                    <th scope="col">문의유형</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">답변상태</th>
+                                    <th scope="col">답변일시</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>1</td>
+                                    <td>2017-10-19 12:12:22</td>
+                                    <td>이용문의</td>
+                                    <td class="left"><a href="#none" class="txtLink txtEllipsis">설치 후 동작이 잘 안되는것 같은데 어떻게 조치해야 제목이 너무 기네요 ㅎㅎㅎ </a></td>
+                                    <td>답변완료</td>
+                                    <td>2017-10-20 08:30:54</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>2</td>
+                                    <td>[등록일시]</td>
+                                    <td>건의사항</td>
+                                    <td class="left"><a href="#none" class="txtLink txtEllipsis">설치 후 동작이 잘 안되는것 같은데 어떻게</a></td>
+                                    <td>문의접수</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>3</td>
+                                    <td>2017-10-19 12:12:22</td>
+                                    <td>[문의유형]</td>
+                                    <td class="left"><a href="#none" class="txtLink txtEllipsis">[제목]</a></td>
+                                    <td>[답변상태]</td>
+                                    <td>[답변일시]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--p class="empty">검색된 결과가 없습니다.</p-->
+                    </div>
+                    <div class="mCtrl typeFooter">
+                        <div class="gLeft">
+                            <span class="txtLess">선택한 문의를</span>
+                            <a href="#none" class="btnNormal mini">삭제</a>
+                        </div>
+                        <div class="gRight">
+                            <a href="#none" class="btnCtrl mini">문의등록</a>
+                        </div>
+                    </div>
+                    <div class="mPaginate">
+                        <!-- 참고: 이전/다음 페이지가 없는 경우, disabled 클래스 추가 -->
+                        <a href="#none" class="btnPrev">이전 페이지</a>
+                        <span class="page">
+                            <a href="#none">1</a>
+                            <a href="#none" class="selected" title="현재 페이지">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btnNext">다음 페이지</a>
+                    </div>
+                </section>
+            </div>
+        </section><!-- //[ contents ] -->
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>
+

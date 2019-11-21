@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>출고지시정보</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="900, 700"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>출고지시정보</h1>
+        </div>
+    </div>
+
+    <div class="mBox typeBg">
+        <strong>출고지시번호</strong> : 20140315-21AA123460<br />
+        <strong>등록일</strong> : 2014.03.05 12:45:00
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>배송정보</h2>
+        </div>
+
+        <div class="mBoard">
+            <table border="1" summary="">
+            <caption>변경 내역</caption>
+            <colgroup>
+                <col style="width:70px;" />
+                <col style="width:80px;" />
+                <col style="width:240px;" />
+                <col style="width:auto;" />
+                <col style="width:100px;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">배송국가</th>
+                    <th scope="col">수령자명(수령자명2)/일반전화/휴대전화</th>
+                    <th scope="col">주소</th>
+                    <th scope="col">배송메세지</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="center">기본</th>
+                    <td>대한민국</td>
+                    <td>김배송(-)  02-000-000 / 010-000-0000</td>
+                    <td>123-123<br />서울 동작구 신대방2동 81번지</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>상품/품목정보</h2>
+        </div>
+
+        <div class="mBoard gCell">
+            <table border="1" summary="">
+            <caption>상품/품목정보</caption>
+            <colgroup>
+                <col style="width:35px" />
+                <col style="width:100px" />
+                <col style="width:100px" />
+                <col style="width:auto" />
+                <col style="width:70px" />
+                <col style="width:80px" />
+                <col style="width:50px" />
+                <col style="width:60px" />
+                <col style="width:60px" />
+                <col style="width:80px" />
+                <col style="width:50px" />
+                <col style="width:80px" />
+                <col style="width:50px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">출고품목<br />번호</th>
+                    <th scope="col">바코드/<br />상품코드</th>
+                    <th scope="col">상품명/품목명</th>
+                    <th scope="col">상품소재</th>
+                    <th scope="col">위치코드</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">판매가</th>
+                    <th scope="col">통화</th>
+                    <th scope="col">택배 송장번호</th>
+                    <th scope="col">무게(Kg)</th>
+                    <th scope="col">실 배송비(선/후불)</th>
+                    <th scope="col">처리상태</th>
+                </tr>
+            </thead>
+            <tbody class="center">
+                <tr>
+                    <td>1</td>
+                    <td>20140315-21AA123460-001</td>
+                    <td>11111/<br />234676</td>
+                    <td>
+                        <div class="gGoods">
+                            <p>청바지</p>
+                            <p class="etc">/인디고</p>
+                        </div>
+                    </td>
+                    <td class="left">면 100%</td>
+                    <td>AA-123-097</td>
+                    <td class="right">10</td>
+                    <td class="right">1,000</td>
+                    <td class="right">KRW</td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2" class="right"></td>
+                    <td rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>20140315-21AA123460-002</td>
+                    <td>111114/<br />-</td>
+                    <td>
+                        <div class="gGoods">
+                            <p>치마</p>
+                            <p class="etc">/빨강</p>
+                        </div>
+                    </td>
+                    <td class="left">-</td>
+                    <td>AA-123-097</td>
+                    <td class="right">20</td>
+                    <td class="right">25,000</td>
+                    <td class="right">KRW</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>20140315-21AA123460-003</td>
+                    <td>11111/<br />234676</td>
+                    <td>
+                        <div class="gGoods">
+                            <p>가디건</p>
+                            <p class="etc">/블루</p>
+                        </div>
+                    </td>
+                    <td class="left">-</td>
+                    <td>AA-301-007</td>
+                    <td class="right">12</td>
+                    <td class="right">35,000</td>
+                    <td class="right">KRW</td>
+                    <td></td>
+                    <td></td>
+                    <td class="right"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>상품/품목별 기타 정보</h2>
+        </div>
+
+        <div class="mBoard gCell">
+            <table border="1" summary="">
+            <caption>상품/품목정보</caption>
+            <colgroup>
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">출고<br /> 품목번호</th>
+                    <th scope="col">상품명/품목영</th>
+                    <th scope="col">품주정보01</th>
+                    <th scope="col">품주정보02</th>
+                    <th scope="col">품주정보03</th>
+                    <th scope="col">품주정보04</th>
+                    <th scope="col">품주정보05</th>
+                    <th scope="col">품주정보06</th>
+                    <th scope="col">품주정보07</th>
+                    <th scope="col">품주정보08</th>
+                    <th scope="col">품주정보09</th>
+                    <th scope="col">품주정보10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>원산지 대구</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>주문정보</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+            <caption>주문정보</caption>
+            <colgroup>
+                <col style="width:154px;*width:135px;" />
+                <col style="width:auto;" />
+                <col style="width:154px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">판매사</th>
+                    <td>옥션</td>
+                    <th scope="row">판매사 주문번호</th>
+                    <td><a href="#none" class="txtLink">20140102-23232566</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">주문자정보</th>
+                    <td>김주문/ 02-111-1111/ 010-1010-1010</td>
+                    <th scope="row">주문자 주소</th>
+                    <td>우편번호: 111-1111   서울 동작구 신대방2동120</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>추가정보</h2>
+        </div>
+
+        <div class="mBoard gMedium">
+            <table border="1" summary="">
+            <caption>추가정보</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">희망택배사</th>
+                    <td>우체국EMS</td>
+                </tr>
+                <tr>
+                    <th scope="row">배송희망일</th>
+                    <td>20150808</td>
+                </tr>
+                 <tr>
+                    <th scope="row">배송희망시간</th>
+                    <td>12시에서 2시사이에 보내주세요</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불결제여부</th>
+                    <td>후불</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불 실결제금액</th>
+                    <td>100.23</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불결제 수수료</th>
+                    <td>12.23</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불결제 통화</th>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <th scope="row">추가정보01</th>
+                    <td>원산지는 모두 부산입니다.</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보02</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보03</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보04</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보05</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보06</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보07</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보08</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보09</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보10</th>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mBox typeBg">
+        <strong>출고지시번호</strong> : 20140415-21AA123460<br />
+        <strong>등록일</strong> : 2014.04.15 12:45:00
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>배송정보</h2>
+        </div>
+
+        <div class="mBoard">
+            <table border="1" summary="">
+            <caption>변경 내역</caption>
+            <colgroup>
+                <col style="width:70px;" />
+                <col style="width:80px;" />
+                <col style="width:230px;" />
+                <col style="width:auto;" />
+                <col style="width:100px;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">배송국가</th>
+                    <th scope="col">수령자명(수령자명2)/일반전화/휴대전화</th>
+                    <th scope="col">주소</th>
+                    <th scope="col">배송메세지</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="center">기본</th>
+                    <td>대한민국</td>
+                    <td>김배송(-)  02-000-000 / 010-000-0000</td>
+                    <td>123-123<br />서울 동작구 신대방2동 81번지</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>상품/품목정보</h2>
+        </div>
+
+        <div class="mBoard gCell">
+            <table border="1" summary="">
+            <caption>상품/품목정보</caption>
+            <colgroup>
+                <col style="width:35px" />
+                <col style="width:100px" />
+                <col style="width:100px" />
+                <col style="width:auto" />
+                <col style="width:70px" />
+                <col style="width:80px" />
+                <col style="width:50px" />
+                <col style="width:60px" />
+                <col style="width:60px" />
+                <col style="width:80px" />
+                <col style="width:50px" />
+                <col style="width:80px" />
+                <col style="width:50px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">출고품목<br />번호</th>
+                    <th scope="col">바코드/<br />상품코드</th>
+                    <th scope="col">상품명/품목명</th>
+                    <th scope="col">상품소재</th>
+                    <th scope="col">위치코드</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">판매가</th>
+                    <th scope="col">통화</th>
+                    <th scope="col">택배 송장번호</th>
+                    <th scope="col">무게(Kg)</th>
+                    <th scope="col">실 배송비(선/후불)</th>
+                    <th scope="col">처리상태</th>
+                </tr>
+            </thead>
+            <tbody class="center">
+                <tr>
+                    <td>1</td>
+                    <td>20140315-21AA123460-001</td>
+                    <td>11111/<br />234676</td>
+                    <td>
+                        <div class="gGoods">
+                            <p>청바지</p>
+                            <p class="etc">/인디고</p>
+                        </div>
+                    </td>
+                    <td class="left">면 100%</td>
+                    <td>AA-123-097</td>
+                    <td class="right">10</td>
+                    <td class="right">1,000</td>
+                    <td class="right">KRW</td>
+                    <td rowspan="2">우체국택배<br />1234556</td>
+                    <td rowspan="2">2</td>
+                    <td rowspan="2" class="right"><strong>5,000<br />(선불)</strong></td>
+                    <td rowspan="2">출고준비</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>20140315-21AA123460-002</td>
+                    <td>111114/<br />-</td>
+                    <td>
+                        <div class="gGoods">
+                            <p>치마</p>
+                            <p class="etc">/빨강</p>
+                        </div>
+                    </td>
+                    <td class="left">-</td>
+                    <td>AA-123-097</td>
+                    <td class="right">20</td>
+                    <td class="right">25,000</td>
+                    <td class="right">KRW</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>20140315-21AA123460-003</td>
+                    <td>11111/<br />234676</td>
+                    <td>
+                        <div class="gGoods">
+                            <p>가디건</p>
+                            <p class="etc">/블루</p>
+                        </div>
+                    </td>
+                    <td class="left">-</td>
+                    <td>AA-301-007</td>
+                    <td class="right">12</td>
+                    <td class="right">35,000</td>
+                    <td class="right">KRW</td>
+                    <td></td>
+                    <td></td>
+                    <td class="right"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>상품/품목별 기타 정보</h2>
+        </div>
+
+        <div class="mBoard gCell">
+            <table border="1" summary="">
+            <caption>상품/품목별 기타 정보</caption>
+            <colgroup>
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+                <col style="width:75px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">출고<br /> 품목번호</th>
+                    <th scope="col">상품명/품목영</th>
+                    <th scope="col">품주정보01</th>
+                    <th scope="col">품주정보02</th>
+                    <th scope="col">품주정보03</th>
+                    <th scope="col">품주정보04</th>
+                    <th scope="col">품주정보05</th>
+                    <th scope="col">품주정보06</th>
+                    <th scope="col">품주정보07</th>
+                    <th scope="col">품주정보08</th>
+                    <th scope="col">품주정보09</th>
+                    <th scope="col">품주정보10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>원산지 대구</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>20140315-22AA123460-001</td>
+                    <td>$상품명<br/>$품목명</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>주문정보</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+            <caption>주문정보</caption>
+            <colgroup>
+                <col style="width:154px;*width:135px;" />
+                <col style="width:auto;" />
+                <col style="width:154px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">판매사</th>
+                    <td>옥션</td>
+                    <th scope="row">판매사 주문번호</th>
+                    <td><a href="#none" class="txtLink">20140102-23232566</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">주문자정보</th>
+                    <td>김주문/ 02-111-1111/ 010-1010-1010</td>
+                    <th scope="row">주문자 주소</th>
+                    <td>우편번호: 111-1111   서울 동작구 신대방2동120</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>추가정보</h2>
+        </div>
+
+        <div class="mBoard gMedium">
+            <table border="1" summary="">
+            <caption>추가정보</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">희망택배사</th>
+                    <td>우체국EMS</td>
+                </tr>
+                <tr>
+                    <th scope="row">배송희망일</th>
+                    <td>20150808</td>
+                </tr>
+                 <tr>
+                    <th scope="row">배송희망시간</th>
+                    <td>12시에서 2시사이에 보내주세요</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불결제여부</th>
+                    <td>후불</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불 실결제금액</th>
+                    <td>100.23</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불결제 수수료</th>
+                    <td>12.23</td>
+                </tr>
+                <tr>
+                    <th scope="row">후불결제 통화</th>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <th scope="row">추가정보01</th>
+                    <td>원산지는 모두 부산입니다.</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보02</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보03</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보04</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보05</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보06</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보07</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보08</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보09</th>
+                    <td>-</td>
+                </tr>
+                 <tr>
+                    <th scope="row">추가정보10</th>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>인쇄</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+
+</body>
+</html>

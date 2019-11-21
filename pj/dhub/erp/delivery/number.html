@@ -1,0 +1,201 @@
+<?php require_once('../../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>화물인계증 번호 관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home">홈</li>
+                        <li>출고처리</li>
+                        <li class="now" title="현재 페이지">화물인계증 번호 관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>화물인계증 번호 검색</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                        <caption>화물인계증 번호 검색</caption>
+                        <colgroup>
+                            <col style="width:154px;" />
+                            <col style="width:auto;" />
+                            <col style="width:154px;" />
+                            <col style="width:auto;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td colspan="3">
+                                    <select class="fSelect">
+                                        <option>출고번호</option>
+                                        <option>배송국가</option>
+                                        <option>배송사</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:270px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송국가</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>전체</option>
+                                        <option>일본[JP]</option>
+                                        <option>미국[US]</option>
+                                        <option>중화인민공화국[CN]</option>
+                                        <option>중화민국[TW]</option>
+                                        <option>캐나다[CA]</option>
+                                    </select>
+                                </td>
+                                <th scope="row">배송사</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>전체</option>
+                                        <option>TQJP</option>
+                                        <option>LTTW</option>
+                                        <option>우체국 EMS</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">등록일자</th>
+                                <td colspan="3">
+                                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                                    <a href="#none" class="btnDate"><span>3일</span></a>
+                                    <a href="#none" class="btnDate"><span>5일</span></a>
+                                    <a href="#none" class="btnDate"><span>7일</span></a>
+                                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                                    <a href="#none" class="btnDate"><span>3개월</span></a>
+                                    <a href="#none" class="btnDate"><span>1년</span></a>
+                                    <a href="#none" class="btnDate"><span>전체</span></a>
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>화물인계증 번호 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩 보기</option>
+                            <option>50개씩 보기</option>
+                            <option>100개씩 보기</option>
+                            <option>300개씩 보기</option>
+                            <option>500개씩 보기</option>
+                            <option>1000개씩 보기</option>
+                            <option>2000개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gRight">
+                        <a href="#none" class="btnNormal"><span>화물인계증 번호 등록</span></a>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                        <caption>화물인계증 번호 목록</caption>
+                        <colgroup>
+                            <col style="width:50px;" />
+                            <col style="width:25%;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                            <col style="width:auto;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">화물인계증 번호</th>
+                                <th scope="col">배송국가</th>
+                                <th scope="col">배송사</th>
+                                <th scope="col">아웃박스 수량<br />(스캔수량/출고예정수량)</th>
+                                <th scope="col">등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td>5</td>
+                                <td><a href="#none" class="txtLink">20180508-4KR001000005</a></td>
+                                <td>일본</td>
+                                <td>TQJP</td>
+                                <td>-</td>
+                                <td>2018-06-18 14:57:12</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="#none" class="txtLink">20180508-4KR001000004</a></td>
+                                <td>일본</td>
+                                <td>TQJP</td>
+                                <td>-</td>
+                                <td>2018-06-18 14:57:12</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="#none" class="txtLink">20180508-4KR001000003</a></td>
+                                <td>일본</td>
+                                <td>TQJP</td>
+                                <td>5/10</td>
+                                <td>2018-06-18 14:57:12</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="#none" class="txtLink">20180508-4KR001000002</a></td>
+                                <td>일본</td>
+                                <td>TQJP</td>
+                                <td>10/10</td>
+                                <td>2018-06-18 14:57:12</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#none" class="txtLink">20180508-4KR001000001</a></td>
+                                <td>일본</td>
+                                <td>TQJP</td>
+                                <td>10/10</td>
+                                <td>2018-06-18 14:57:12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gRight">
+                        <a href="#none" class="btnNormal"><span>화물인계증 번호 등록</span></a>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+<?php require_once('../../include/footer.html'); ?>

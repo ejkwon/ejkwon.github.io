@@ -1,0 +1,511 @@
+<?php require_once('../../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>주문상세</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li>출고</li>
+                        <li>주문목록</li>
+                        <li class="now" title="현재 페이지">주문상세</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>기본 정보</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>기본 정보</caption>
+                    <colgroup>
+                        <col style="width:25%" />
+                        <col style="width:25%" />
+                        <col style="width:25%" />
+                        <col style="width:25%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">등록일</th>
+                            <th scope="col">판매사</th>
+                            <th scope="col">판매사 주문일자</th>
+                            <th scope="col">판매사 주문번호</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>2014-03-15</td>
+                            <td>지마켓</td>
+                            <td>2014-03-14</td>
+                            <td>20142222-5555555</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문자 정보</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>주문자 정보</caption>
+                    <colgroup>
+                        <col style="width:17%" />
+                        <col style="width:16.5%" />
+                        <col style="width:16.5%" />
+                        <col style="width:180px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">주문자명</th>
+                            <th scope="col">일반전화</th>
+                            <th scope="col">휴대전화</th>
+                            <th scope="col">E-Mail</th>
+                            <th scope="col">주소</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>나좀사</td>
+                            <td>02-0000-0000</td>
+                            <td>010-5555-5555</td>
+                            <td>aa@aa.co.kr</td>
+                            <td class="left">우편번호 : 1111-2222<br />서울 동작구 신대방2동 81번지 kkk 빌딩 28층</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문 정보</h2>
+                </div>
+                <div class="mBoard gMedium">
+                    <table border="1" summary="">
+                    <caption>주문 정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">통화 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <select class="fSelect">
+                                    <option selected="selected">KRW</option>
+                                    <option>USD</option>
+                                    <option>JPY</option>
+                                    <option>EUR</option>
+                                    <option>CNY</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>상품 정보</h2>
+                    <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>상품선택<em class="icoLink"></em></span></a>
+                </div>
+                <div class="mBoard gScroll">
+                    <table border="1" summary="">
+                    <caption>상품 정보</caption>
+                    <colgroup>
+                        <col style="width:40px" />
+                        <col style="width:140px" />
+                        <col style="width:100px" />
+                        <col style="width:140px" />
+                        <col style="width:200px" />
+                        <col style="width:100px" />
+                        <col style="width:120px" />
+                        <col style="width:120px" />
+                        <col style="width:90px" />
+                        <col style="width:90px" />
+                        <col style="width:90px" />
+                        <col style="width:70px" />
+                        <col style="width:70px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">판매사 품주번호 <strong class="icoRequired">필수</strong></th>
+                            <th scope="col">상품품목코드</th>
+                            <th scope="col">바코드/상품코드</th>
+                            <th scope="col">상품명/ 품목명</th>
+                            <th scope="col">영문상품명</th>
+                            <th scope="col">상품소재</th>
+                            <th scope="col">위치코드</th>
+                            <th scope="col">현재 재고<br />(가용/할당)</th>
+                            <th scope="col">수량 <strong class="icoRequired">필수</strong></th>
+                            <th scope="col">판매가 <strong class="icoRequired">필수</strong></th>
+                            <th scope="col">HS코드</th>
+                            <th scope="col">삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" class="fText right" style="width:100px" value="" /></td>
+                            <td>123568989</td>
+                            <td>11111111/222223333</td>
+                            <td>
+                                <div class="gGoods gSmall">
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/thumb/32x32.gif" width="32" height="32" alt="" /></span>
+                                    <p>청바지</p>
+                                    <p class="etc">/노랑빨강 XL</p>
+                                </div>
+                            </td>
+                            <td><input type="text" class="fText" style="width:80%;" /></td>
+                            <td>면!00%</td>
+                            <td>AA-123-987</td>
+                            <td class="right">79 / 33</td>
+                            <td><input type="text" value="1" class="fText right" style="width:30px" /></td>
+                            <td><input type="text" value="20,000" class="fText right" style="width:60px" /></td>
+                            <td>123</td>
+                            <td><a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>상품별 기타 정보</h2>
+                    <p>상품정보에 입력된 상품명/품목명이 자동 입력되며, 상품별로 기타 필요한 정보를 입력하여 사용합니다.</p>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>주문자 정보</caption>
+                    <colgroup>
+                        <col style="width:40px" />
+                        <col style="width:auto" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                        <col style="width:85px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">상품명/품목명</th>
+                            <th scope="col">품주정보01</th>
+                            <th scope="col">품주정보02</th>
+                            <th scope="col">품주정보03</th>
+                            <th scope="col">품주정보04</th>
+                            <th scope="col">품주정보05</th>
+                            <th scope="col">품주정보06</th>
+                            <th scope="col">품주정보07</th>
+                            <th scope="col">품주정보08</th>
+                            <th scope="col">품주정보09</th>
+                            <th scope="col">품주정보10</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>1</td>
+                            <td>엄청 예쁜 봄청바지 / blue</td>
+                            <td><input type="text" value="좌측정렬" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                            <td><input type="text" value="-" class="fText" style="width:55px;" /></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>배송 정보</h2>
+                </div>
+
+                <div class="mBoard gMedium">
+                    <table border="1" summary="">
+                    <caption>배송 정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">배송국가</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>가나[GH]</option>
+                                    <option>가봉[GA]</option>
+                                    <option selected="selected">대한민국[KR]</option>
+                                    <option>도미니카공화국[DO]</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수령자명 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <input type="text" value="김배송" class="fText" style="width:120px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수령자명2</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:120px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">영문수령자명</th>
+                            <td>
+                                <input type="text" class="fText" style="width:120px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수령자 일반전화 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:300px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수령자 휴대전화</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:300px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이메일</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:300px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배송지 주소 <strong class="icoRequired">필수</strong></th>
+                            <td>
+                                <input type="text" readonly="readonly" class="fText" style="width:39px;" value="132" /> -
+                                <input type="text" readonly="readonly" class="fText" style="width:39px;" value="222" />
+                                <a href="#none" class="btnNormal"><span>우편번호 검색</span></a>
+                                <div class="gSingle"><input type="text" readonly="readonly" class="fText" style="width:300px;" value="서울 동작구 신대방2동" /> <input type="text" class="fText" style="width:400px;" value="81번지 전문건설회관 28층" /></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배송 메시지
+                            </th>
+                            <td>
+                                <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                                <p class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 500 ]</p>
+                                <p class="txtInfo">부재시 연락 가능한 전화번호 또는 상품 수령이 가능한 장소를 남겨주세요.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">판매사 배송비</th>
+                            <td><input type="text" value="2,500" class="fText" style="width: 150px;" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배송기준</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" class="fChk" name="radio" checked="checked" /> 선불</label>
+                                <label class="gLabel"><input type="radio" class="fChk" name="radio" /> 착불</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">기타 메시지
+                            </th>
+                            <td>
+                                <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                                <p class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 500 ]</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>추가 정보</h2>
+                </div>
+
+                <div class="mBoard gMedium">
+                    <table border="1" summary="">
+                    <caption>추가 정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">희망택배사</th>
+                            <td><input type="text" value="" class="fText" style="width:200px;" /> <span class="txtInfo">최대 60byte</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배송희망일</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:200px;" /> <span class="txtInfo"> YYYMMDD</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">배송희망시간</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:200px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">후불결제여부</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" class="fChk" name="radio" /> 후불</label>
+                                <label class="gLabel"><input type="radio" class="fChk" name="radio" checked="checked"/> 후불결제 아님</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">후불 실결제금액</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:200px;" /> <span class="txtInfo"> 소수점2자리까지 입력가능함</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">후불결제 수수료</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:200px;" /> <span class="txtInfo"> 소수점2자리까지 입력가능함</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">후불결제 통화</th>
+                            <td>
+                                <select class="fSelect">
+                                  <option selected="selected" value="USD">USD</option>
+                                  <option value="CNY">CNY</option>
+                                  <option value="JPY">JPY</option>
+                                  <option value="EUR">EUR</option>
+                                  <option value="KRW">KRW</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">추가정보01</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보02</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보03</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보04</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보05</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보06</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보07</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보08</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보09</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">추가정보10</th>
+                            <td>
+                                <input type="text" value="" class="fText" style="width:370px;" /> <span class="txtInfo"> 최대 100byte</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>변경 내역</h2>
+                    <a href="#none" title="새창 열림" class="btnNormal" target="_blank"><span>전체보기<em class="icoLink"></em></span></a>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">최근 <strong>4</strong>개 / 총 <strong>10</strong>개</p>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>변경 내역</caption>
+                    <colgroup>
+                        <col style="width:200px" />
+                        <col style="width:120px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><strong class="array descend">저장일시<button type="button">내림차순 정렬</button></strong></th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">내용</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>2014-03-06 15:08:09</td>
+                            <td>김운영</td>
+                            <td class="left">출고요청완료</td>
+                        </tr>
+                        <tr>
+                            <td>2014-03-05 15:08:09</td>
+                            <td>나담당</td>
+                            <td class="left">'상품명' 추가</td>
+                        </tr>
+                        <tr>
+                            <td>2014-03-03 09:57:21</td>
+                            <td>김담당</td>
+                            <td class="left">'상품명' 삭제<br />'상품명'추가</td>
+                        </tr>
+                        <tr>
+                            <td>2014-02-28 11:15:16</td>
+                            <td>김담당</td>
+                            <td class="left">'상품명' 수량 변경 : 1-->2</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mButton gCenter">
+                <a href="#none" class="btnSubmit"><span>저장</span></a>
+                <a href="#none" class="btnEm"><span>취소</span></a>
+            </div>
+
+<?php require_once('../../include/footer.html'); ?>

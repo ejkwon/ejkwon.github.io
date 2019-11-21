@@ -1,0 +1,133 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/head_popup.html'); ?>
+<body id="popup" size="900, 900"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+    <div class="mLayer">
+        <header class="header">
+            <h1 class="title">제품 : $제품명</h1>
+        </header>
+        <div class="wrap">
+            <div class="mTab typeNav">
+                <ul>
+                    <li><a href="detail_simple.html">간단보기</a></li>
+                    <li class="selected"><a href="#none">상세보기</a></li>
+                    <li><a href="detail_issue.html">문제보기</a></li>
+                </ul>
+            </div>
+            <div class="gridSet initial top gBlankL">
+                <div class="grid6">
+                    <div class="mBoard typeView">
+                        <table border="1">
+                            <caption>상세보기</caption>
+                            <colgroup>
+                                <col style="width:150px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">항목</th>
+                                    <th scope="col">내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">연령대</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">앱링크</th>
+                                    <td>
+                                        {<br>
+                                        &nbsp;&nbsp;"web": {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;"should_fallback": true,<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;"url": "http://www.11am.co.kr/product/detail.html?product_no=10667&cafe_mkt=facebook"<br>
+                                        &nbsp;&nbsp;}<br>
+                                        }
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사용 가능 여부</th>
+                                    <td>in stock</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">브랜드</th>
+                                    <td>발송일로부터 1개월 이내 제조</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">카테고리</th>
+                                    <td>Top</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상태</th>
+                                    <td>New</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">커스텀라벨_0</th>
+                                    <td>기본트렌드</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">미리보기 URL</th>
+                                    <td>https://scontent.xx.fbcdn.net/v/t45.5328-4/c62.0.276.276/19945980_1378737125514673_1285759663341568000_n.jpg?oh=7a4369ad264119a8964755112acbc655&oe=5A591A09</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상세설명</th>
+                                    <td>독특한 텍스처로 이루어진 소재로 하나쯤 소장하시면 좋은 머스트아이템!</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">구글 카테고리</th>
+                                    <td>Apparel & Accessories</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">성별</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">페이스북 ID</th>
+                                    <td>1529611237059755</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이미지 URL</th>
+                                    <td>https://scontent.xx.fbcdn.net/v/t45.5328-4/19945980_1378737125514673_1285759663341568000_n.jpg?oh=f6a6a2a99a6f614466ca44bdd233d3f7&oe=5A55335E</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이미지 크기</th>
+                                    <td>420 픽셀 * 320 픽셀</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문제</th>
+                                    <td><a href="#none">이미지 사이즈가 작습니다. 외 1건</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문제</th>
+                                    <td>발견된 문제가 없습니다.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품명</th>
+                                    <td>심쿵가디건</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">항목 ID</th>
+                                    <td>10667</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">가격</th>
+                                    <td>₩37,000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">링크</th>
+                                    <td>http://www.11am.co.kr/product/detail.html?product_no=10667&cafe_mkt=facebook</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="grid4 gSideL">
+                    <div class="mBox">
+                        <p class="txtPreview">미리보기 영역</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer">
+            <a href="#none" class="btnNormal medium" onclick="window.close();">닫기</a>
+        </footer>
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/footer_popup.html'); ?>

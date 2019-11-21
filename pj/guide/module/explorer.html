@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>디렉토리</title>
+<link rel="stylesheet" type="text/css" href="/css/module.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/import.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/smartAdmin/js/jquery.treeview.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    // directory
+    if ($(".directory").length)
+    {
+        $(".directory").treeview({
+            animated: "fast",
+            persist: "location",
+            collapsed: true
+        });
+    }
+});
+</script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>디렉토리</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>매뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <div class="mGuideBox">
+                <h2>[gExplorer] &gt; [mExplorer]</h2>
+                <ul>
+                    <li>half 타입으로, .gExplorer 과 .mExplorer 는 항상 함께 사용되어야 한다.</li>
+                    <li>.gExplorer 바로 다음에 .mExplorer를 넣어주며, .section 으로 그룹핑 하지 않는다.</li>
+                    <li>.mExplorer이후에는 다른 페이지와 동일하게, .section 으로 마크업한다.</li>
+                </ul>
+            </div>
+
+            <div class="gExplorer">
+                <div class="mExplorer">
+                    <p class="gExplorerBtn"><a href="#none" class="btnCtrl"><span>카테고리 등록</span></a></p>
+                    <div class="gExplorerCtrl">
+                        <p class="gLeft">
+                            <button class="btnFirst" title="선택한 항목 최상단으로 이동"><span>선택한 항목 최상단으로 이동</span></button>
+                            <button class="btnPrev" title="선택한 항목 한줄 위로 이동"><span>선택한 항목 한줄 위로 이동</span></button>
+                            <button class="btnNext" title="선택한 항목 한줄 아래로 이동"><span>선택한 항목 한줄 아래로 이동</span></button>
+                            <button class="btnLast" title="선택한 항목 최하단으로 이동"><span>선택한 항목 최하단으로 이동</span></button>
+                        </p>
+                        <p class="gRight">
+                            <a href="#none" class="btnCtrl"><span>저장</span></a>
+                        </p>
+                    </div>
+
+                    <div class="directory">
+                        <ul>
+                            <li><span class="gTitle"><span class="title">대분류1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                <ul>
+                                    <li><span class="gTitle"><span class="title">중분류1-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                        <ul>
+                                            <li><span class="gTitle"><span class="title">소분류1-1-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="gTitle"><span class="title">중분류1-2</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                    <li><span class="gTitle"><span class="title">중분류1-3</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                        <ul>
+                                            <li class="selected"><span class="gTitle"><span class="title">소분류1-3-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                                <ul>
+                                                    <li><span class="gTitle"><span class="title">상세분류1-3-1-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                                    <li><span class="gTitle"><span class="title">상세분류1-3-1-2</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                                    <li><span class="gTitle"><span class="title">상세분류1-3-1-3</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                                </ul>
+                                            </li>
+                                            <li><span class="gTitle"><span class="title">소분류1-3-2</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                            <li><span class="gTitle"><span class="title">소분류1-3-3</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><span class="gTitle"><span class="title">대분류2</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                <ul>
+                                    <li><span class="gTitle"><span class="title">중분류2-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                        <ul>
+                                            <li><span class="gTitle"><span class="title">소분류2-1-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="gTitle"><span class="title">중분류2-2</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                    <li><span class="gTitle"><span class="title">중분류2-3</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                        <ul>
+                                            <li><span class="gTitle"><span class="title">소분류2-3-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span>
+                                                <ul>
+                                                    <li><span class="gTitle"><span class="title">상세분류2-3-1-1</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                                    <li><span class="gTitle"><span class="title">상세분류2-3-1-2</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                                    <li><span class="gTitle"><span class="title">상세분류2-3-1-3</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                                </ul>
+                                            </li>
+                                            <li><span class="gTitle"><span class="title">소분류2-3-2</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                            <li><span class="gTitle"><span class="title">소분류2-3-3</span> <span class="gBtn"><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_add.gif" alt="하위카테고리 추가" title="하위카테고리 추가" /></a><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/ico_del.gif" alt="하위카테고리 삭제" title="하위카테고리 삭제" /></a></span></span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="gExplorerCtrl">
+                        <p class="gLeft">
+                            <button class="btnFirst" title="선택한 항목 최상단으로 이동"><span>선택한 항목 최상단으로 이동</span></button>
+                            <button class="btnPrev" title="선택한 항목 한줄 위로 이동"><span>선택한 항목 한줄 위로 이동</span></button>
+                            <button class="btnNext" title="선택한 항목 한줄 아래로 이동"><span>선택한 항목 한줄 아래로 이동</span></button>
+                            <button class="btnLast" title="선택한 항목 최하단으로 이동"><span>선택한 항목 최하단으로 이동</span></button>
+                        </p>
+                        <p class="gRight">
+                            <a href="#none" class="btnCtrl"><span>저장</span></a>
+                        </p>
+                    </div>
+                    <p class="gExplorerBtn"><a href="#none" class="btnCtrl"><span>카테고리 등록</span></a></p>
+                </div>
+
+                <div class="section">
+                    <div class="mTitle">
+                        <h2>대분류 1</h2>
+                    </div>
+                    <div class="mBoard type1">
+                        <table border="1" summary="">
+                        <caption>테이블 제목</caption>
+                        <colgroup><col width="25%" /><col width="25%" /><col width="25%" /><col width="25%" /></colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">가로형</th>
+                            <th scope="col">가로형</th>
+                            <th scope="col">가로형</th>
+                            <th scope="col">가로형</th>
+                        </tr>
+                        </thead>
+                        <tbody class="center">
+                        <tr>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                        </tr>
+                        <tr>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                            <td>내용입력 공간으로 최소여백이 넘어갈경우 2줄로 노출 내용입력 공간으로 최소여백이 넘어갈경우 2줄로 노출</td>
+                            <td class="right">내용입력</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="mTitle">
+                        <h2>대분류 1</h2>
+                    </div>
+                    <div class="mBoard type1">
+                        <table border="1" summary="">
+                        <caption>테이블 제목</caption>
+                        <colgroup><col width="25%" /><col width="25%" /><col width="25%" /><col width="25%" /></colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">가로형</th>
+                            <th scope="col">가로형</th>
+                            <th scope="col">가로형</th>
+                            <th scope="col">가로형</th>
+                        </tr>
+                        </thead>
+                        <tbody class="center">
+                        <tr>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                        </tr>
+                        <tr>
+                            <td>내용입력</td>
+                            <td>내용입력</td>
+                            <td>내용입력 공간으로 최소여백이 넘어갈경우 2줄로 노출 내용입력 공간으로 최소여백이 넘어갈경우 2줄로 노출</td>
+                            <td class="right">내용입력</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

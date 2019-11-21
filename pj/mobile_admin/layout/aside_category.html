@@ -1,0 +1,71 @@
+        <aside id="aside">
+            <h2>카테고리 검색</h2>
+            <div class="mTab typeCate">
+                <ul>
+                    <li class="selected"><a href="#tabMain">메인 분류</a></li>
+                    <li><a href="#tabProduct">상품 분류</a></li>
+                </ul>
+            </div>
+            <!-- 참고
+                    1. 선택된 li 태그에는 class="selected" 추가
+                    2. 하위메뉴가 있는 a 태그에는 class="child" 추가 및 형제레벨에 <button type="button" class="btnSpread">하위메뉴 펼침</button> 버튼 추가
+            -->
+            <!-- 메인 분류-->
+            <ul id="tabMain" class="mCategoryList">
+                <li class="selected"><a href="#none">전체상품</a></li>
+                <li><a href="#none">인기상품</a></li>
+                <li><a href="#none">신상품</a></li>
+                <li><a href="#none">오늘만 10%</a></li>
+                <li><a href="#none">바캉스 특집</a></li>
+                <li><a href="#none">Top100</a></li>
+                <li><a href="#none">인기상품</a></li>
+                <li><a href="#none">인기상품</a></li>
+                <li><a href="#none">바캉스 특집</a></li>
+                <li><a href="#none">오늘만 10%</a></li>
+                <li><a href="#none">Top100</a></li>
+                <li><a href="#none">바캉스 특집</a></li>
+                <li><a href="#none">바캉스 특집</a></li>
+            </ul>
+            <!-- 상품 분류-->
+            <ul id="tabProduct" class="mCategoryList">
+                <li class="selected"><a href="#none">전체상품</a></li>
+                <li><a href="#none">Outer</a></li>
+                <li>
+                    <a href="#none" class="child">Top & Tee</a><button type="button" class="btnSpread">하위메뉴 펼침</button>
+                    <ul>
+                        <li>
+                            <a href="#none" class="child">Shirts1</a><button type="button" class="btnSpread">하위메뉴 펼침</button>
+                            <ul>
+                                <li>
+                                    <a href="#none" class="child">Stripe1</a><button type="button" class="btnSpread">하위메뉴 펼침</button>
+                                    <ul>
+                                        <li><a href="#none">Tee1</a></li>
+                                        <li><a href="#none">Tee2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">Stripe2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" class="child">Shirts2</a><button type="button" class="btnSpread">하위메뉴 펼침</button>
+                            <ul>
+                                <li><a href="#none">Stripe1</a></li>
+                                <li><a href="#none">Stripe2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">Shirts3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#none">Dress</a></li>
+                <li>
+                    <a href="#none" class="child">Bottom</a><button type="button" class="btnSpread">하위메뉴 펼침</button>
+                    <ul>
+                        <li><a href="#none">Bottom1</a></li>
+                        <li><a href="#none">Bottom2</a></li>
+                        <li><a href="#none">Bottom3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#none">Accessory</a></li>
+            </ul>
+            <button type="button" class="btnFoldCategory">접기</button>
+        </aside>

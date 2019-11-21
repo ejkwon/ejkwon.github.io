@@ -1,0 +1,185 @@
+<?php include('../layout/header_sub.html'); ?>
+<!-- 참고
+    개발 별도처리: 레이어팝업 노출을 위한 a 태그는 뒤로가기 history가 쌓이는 이슈로 인해, 산출물과 달리 a태그 제거하고 li나 td로 셀렉터 태그 변경
+-->
+
+    <!-- content -->
+    <div id="contents">
+        <div class="mSelect">
+            <div class="select eToggle">
+                <button type="button" class="button eButton">멀티쇼핑몰 : <strong>기본몰</strong></button>
+                <ul class="list">
+                    <li><strong>기본몰</strong></li>
+                    <li>영문몰</li>
+                    <li>일문몰</li>
+                    <li>중문몰</li>
+                    <li>대만몰</li>
+                    <li>스페인몰</li>
+                    <li>포르투갈몰</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="searchArea">
+            <div class="mCtrl typeHeader">
+                <p class="help">각종 수치를 종합분석하여 진열시 주문확률이 높은 상품순으로 추천합니다.</p>
+            </div>
+
+            <ul class="mIndex">
+                <li>
+                    <div class="mSummary">
+                        <div class="cell thumb"><span class="frame"><span class="icoNum">1</span><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" height="50" alt=""></span></div>
+                        <div class="info">
+                            <span class="heading">NC8368 바나나 라운드cd</span>
+                            <p class="txtNormal">33,000원</p>
+                            <a href="#main_display" class="btnLink eLayerClick">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <div class="cell thumb"><span class="frame"><span class="icoNum">2</span><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" height="50" alt=""></span></div>
+                        <div class="info">
+                            <span class="heading">TR8199 데이 바이 데이t</span>
+                            <p class="txtNormal">20,900원</p>
+                            <a href="#main_display" class="btnLink eLayerClick">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <div class="cell thumb"><span class="frame"><span class="icoNum">3</span><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" height="50" alt=""></span></div>
+                        <div class="info">
+                            <span class="heading">U8365 벤시 운동화</span>
+                            <p class="txtNormal">29,700원</p>
+                            <a href="#main_display" class="btnLink eLayerClick">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <div class="cell thumb"><span class="frame"><span class="icoNum">50</span><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" height="50" alt=""></span></div>
+                        <div class="info">
+                            <span class="heading">TR8153 보트 단가라니트t</span>
+                            <p class="txtNormal">19,800원</p>
+                            <a href="#main_display" class="btnLink eLayerClick">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mSummary">
+                        <div class="cell thumb"><span class="frame"><span class="icoNum">100</span><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" height="50" alt=""></span></div>
+                        <div class="info">
+                            <span class="heading">by-D PR8412 아이스 쿨 레깅스</span>
+                            <p class="txtNormal">6,900원</p>
+                            <a href="#main_display" class="btnLink eLayerClick">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <p class="mEmpty">검색된 상품이 없습니다.</p>
+        </div>
+
+        <!-- 참고: 상세설정 -->
+        <div id="main_display" class="mLayer typeFull" style="display:none;">
+            <h2>상세설정</h2>
+            <div class="content">
+                <div class="mBox">
+                    <div class="mSummary">
+                        <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                        <div class="info"><span class="description">쏠라뷰_OP랩디자인으로 여심을 사로잡는 너와나의 예쁜 투피스</span></div>
+                    </div>
+                </div>
+                <div class="title">
+                    <h2>메인상품 진열관리</h2>
+                </div>
+
+                <!-- 참고: 즐겨찾는 메인분류가 있을 경우 mBookmark 에 selected 클래스 추가해주세요. -->
+                <div class="mBookmark">
+                    <strong class="title">즐겨찾는 메인분류</strong>
+                    <!-- 참고: 즐겨찾는 메인분류가 없을 경우 노출 -->
+                    <p class="info">
+                        자주쓰는 메인분류명 좌측에 <span class="icoBookmark">즐겨찾기 추가</span> 을 눌러주세요.<br>
+                        편리하게 메인분류를 이용할 수 있습니다.
+                    </p>
+                    <!-- 참고: 즐겨찾는 메인분류가 있을 경우(selected) 노출 -->
+                    <div class="switchArea">
+                        <div class="mSwitch">
+                            <div class="heading">
+                                <button type="button" class="icoBookmark">즐겨찾기 추가</button>Weekly Best
+                            </div>
+                            <span class="btnSwitch">
+                                <input type="checkbox" id="toggle-switch-1-on">
+                                <label for="toggle-switch-1-on"></label>
+                            </span>
+                        </div>
+                        <div class="mSwitch">
+                            <div class="heading">
+                                <button type="button" class="icoBookmark">즐겨찾기 추가</button>신상품
+                            </div>
+                            <span class="btnSwitch">
+                                <input type="checkbox" id="toggle-switch-2-on">
+                                <label for="toggle-switch-2-on"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="switchArea">
+                    <div class="mSwitch">
+                        <div class="heading">
+                            <button type="button" class="icoBookmark">즐겨찾기 추가</button>Weekly Best
+                        </div>
+                        <span class="btnSwitch">
+                            <input type="checkbox" id="toggle-switch-1">
+                            <label for="toggle-switch-1"></label>
+                        </span>
+                    </div>
+                    <div class="mSwitch">
+                        <div class="heading">
+                            <button type="button" class="icoBookmark">즐겨찾기 추가</button>신상품
+                        </div>
+                        <span class="btnSwitch">
+                            <input type="checkbox" id="toggle-switch-2">
+                            <label for="toggle-switch-2"></label>
+                        </span>
+                    </div>
+                    <div class="mSwitch">
+                        <div class="heading">
+                            <button type="button" class="icoBookmark">즐겨찾기 추가</button>추천상품
+                        </div>
+                        <span class="btnSwitch">
+                            <input type="checkbox" id="toggle-switch-3">
+                            <label for="toggle-switch-3"></label>
+                        </span>
+                    </div>
+                    <div class="mSwitch">
+                        <div class="heading">
+                            <button type="button" class="icoBookmark">즐겨찾기 추가</button>이번주 HIT 상품
+                        </div>
+                        <span class="btnSwitch">
+                            <input type="checkbox" id="toggle-switch-4">
+                            <label for="toggle-switch-4"></label>
+                        </span>
+                    </div>
+                    <div class="mSwitch">
+                        <div class="heading">
+                            <button type="button" class="icoBookmark">즐겨찾기 추가</button>2016 F/W할인상품
+                        </div>
+                        <span class="btnSwitch">
+                            <input type="checkbox" id="toggle-switch-5">
+                            <label for="toggle-switch-5"></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="mButton">
+                <a href="#none" onclick="$('.mLayer').hide();" class="btnNormal">취소</a>
+                <a href="#none" onclick="$('.mLayer').hide();" class="btnStrong">저장</a>
+            </div>
+            <button type="button" class="btnLayerClose" onclick="$('.mLayer').hide();">닫기</button>
+        </div><!-- //참고 -->
+    </div><!-- //content -->
+    <a href="../product/main_display_list.html" class="btnQuick prdDisplay">메인 상품 진열관리 바로가기</a>
+<?php include('../layout/footer.html'); ?>

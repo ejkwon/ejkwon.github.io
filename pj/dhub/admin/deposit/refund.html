@@ -1,0 +1,185 @@
+<?php include('../include/header.html'); ?>
+
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>예치금 환불관리</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li>예치금</li>
+            <li class="now" title="현재 페이지">예치금 환불관리</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>예치금환불 현황검색</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+            <caption>예치금환불 현황검색</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">기간</th>
+                    <td>
+                        <a href="#none" class="btnDate"><span>오늘</span></a>
+                        <a href="#none" class="btnDate"><span>3일</span></a>
+                        <a href="#none" class="btnDate"><span>7일</span></a>
+                        <a href="#none" class="btnDate"><span>1개월</span></a>
+                        <a href="#none" class="btnDate"><span>3개월</span></a>
+                        <a href="#none" class="btnDate"><span>1년</span></a>
+                        <input type="text" id="pr_start_date" name="start_date" value="2012-06-07" class="fText gDate" />
+                        <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                        <input type="text" id="pr_end_date" name="end_date" value="2012-06-07" class="fText gDate" />
+                        <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">처리상태</th>
+                    <td>
+                        <label class="gLabel"><input type="checkbox" class="fChk" /> 전체</label>
+                        <label class="gLabel"><input type="checkbox" class="fChk" /> 환불완료</label>
+                        <label class="gLabel"><input type="checkbox" class="fChk" /> 환불대기</label>
+                        <label class="gLabel"><input type="checkbox" class="fChk" /> 환불보류</label>
+                        <label class="gLabel"><input type="checkbox" class="fChk" /> 환불요청취소</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>예치금 환불 현황</h2>
+    </div>
+    <div class="mState gMerge">
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gLeft">
+            <span class="txtLess">선택한항목을</span>
+            <a href="#layerRefundInfo1" class="btnNormal eLayerClick"><span>예치금 환불 요청</span></a>
+            <a href="#layerRefundCancel" class="btnNormal eLayerClick"><span>예치금 환불요청 취소 처리</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="" class="eChkColor">
+            <caption>예치금 환불 현황</caption>
+            <colgroup>
+                <col class="chk">
+                <col class="time">
+                <col style="width:130px;">
+                <col class="time">
+                <col style="width:auto;">
+                <col style="width:auto;">
+                <col style="width:130px;">
+                <col style="width:130px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">환불요청일자</th>
+                    <th scope="col">처리상태</th>
+                    <th scope="col">환불일자</th>
+                    <th scope="col">환불요청금액</th>
+                    <th scope="col">환불금액</th>
+                    <th scope="col">환불요청자</th>
+                    <th scope="col">환불처리자</th>
+                </tr>
+            </thead>
+            <tbody class="center">
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td>2016-06-20 10:48:21</td>
+                    <td>환불완료</td>
+                    <td>2016-06-20  11:21:10</td>
+                    <td class="right">1,000,000</td>
+                    <td class="right">1,000,000</td>
+                    <td>이태혁</td>
+                    <td>최재원</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td>2016-06-22 17:00:10</td>
+                    <td>환불완료</td>
+                    <td>2016-06-22 17:30:22</td>
+                    <td class="right">500,000</td>
+                    <td class="right">500,000</td>
+                    <td>이태혁</td>
+                    <td>최재원</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td>2016-06-23 19:41:41</td>
+                    <td>환불요청취소</td>
+                    <td>-</td>
+                    <td class="right">100,000</td>
+                    <td class="right">0</td>
+                    <td>이태혁</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="empty">리스트가 없습니다.</p>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한항목을</span>
+            <a href="#layerRefundInfo1" class="btnNormal eLayerClick"><span>예치금 환불 요청</span></a>
+            <a href="#layerRefundCancel" class="btnNormal eLayerClick"><span>예치금 환불요청 취소 처리</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<div class="mHelp typeInfo">
+    <h2>예치금 환불 처리 안내</h2>
+    <div class="content">
+        <ul>
+            <li>예치금 환불은 버튼을 선택하여 가능하며 환불 요청 금액과 환불 받으실 계좌 정보를 입력 하시면, 패스트박스 담당자가 환불처리를 진행 합니다.</li>
+            <li>환불처리 완료 시 고객님 메일로 환불 결과가 전송 됩니다.</li>
+        </ul>
+        <h3>처리상태 안내</h3>
+        <ol>
+            <li>1) 환불대기 : 요청된 예치금 환불건이 패스트박스 담당자의 처리가 되기 전 상태</li>
+            <li>2) 환불요청취소 : 요청된 환불건이 취소처리된 상태</li>
+            <li>3) 환불완료 : 요청된 환불건이 패스트박스 담당자에 의해 완료 처리되고, 환불금액이 입금된 상태</li>
+        </ol>
+    </div>
+</div>
+<?php include('../include/footer.html'); ?>

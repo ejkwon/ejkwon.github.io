@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>CAFE24 회원가입</title>
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="screen">
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/ui.js" charset="utf-8"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="skipNavigation">
+        <p><a href="#contents">본문 바로가기</a></p>
+    </div>
+    <div id="wrap">
+        <?php require('../include/header.html'); ?>
+
+        <div id="container">
+            <div class="mStep step2 type2">
+                <ol>
+                    <li class="first"><strong>회원정보 입력</strong></li>
+                    <li class="second selected"><strong>가입완료</strong></li>
+                </ol>
+            </div>
+            <!-- contents -->
+            <div id="contents">
+                <div class="mTitle">
+                    <h2>회원가입완료</h2>
+                </div>
+
+                <div class="mComplete">
+                    <h3>카페24 회원가입을 환영합니다.</h3>
+                    <p>
+                        <span class="txtEm"><strong>홍길동님,</strong>카페24 회원가입과 동시에 쇼핑몰이 생성되었습니다.</span><br>
+                        회원님의 쇼핑몰과 쇼핑몰관리자 정보는 아래와 같습니다.
+                    </p>
+                    <ul class="mBox typeShop">
+                        <li>
+                            <span class="info">
+                                <a href="http://echosting.cafe24.com/Shop/" target="_blank">http://echosting.cafe24.com/Shop/</a>
+                            </span>
+                            <a href="#none" class="btnNormal RW">즐겨찾기 추가</a>
+                        </li>
+                        <li>
+                            <span class="info">
+                                <a href="#none">http://simple2015.cafe24.commhttp://simple2015.cafe24.commhttp://simple2015.cafe24.commhttp://simple2015.cafe24.com</a>
+                            </span>
+                            <a href="#none" class="btnNormal RW">즐겨찾기 추가</a>
+                        </li>
+                    </ul>
+                    <div class="mGuide">
+                        <h2 class="blind">안내사항</h2>
+                        <ul>
+                            <li>PC 쇼핑몰관리자에서 신규등록된 도메인 또는 고객님이 보유하신 도메인으로 변경할 수 있습니다. <a href="#none" class="btnLink RW">[도메인설정]</a>
+                            </li>
+                            <li>
+                                법인사업자 회원은 사업자 인증과 대표자 인증을 해주셔야 서비스 이용이 가능합니다.
+                                <dl>
+                                    <dt>인증방법 : </dt>
+                                    <dd>사업자등록증 또는 법인등기부등본 사본을 보내주세요. (상단에 가입한 아이디 기재)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>접수방법 : </dt>
+                                    <dd>이메일 echosting@cafe24.com, <br class="RMB">팩스 02-6280-0331</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mButton">
+                    <a href="http://echosting.cafe24.com/Shop/" target="_blank" class="btnSubmit">관리자 화면 바로가기</a>
+                    <a href="#none" class="btnEm">홈으로 가기</a>
+                </div>
+            </div><!-- //contents -->
+        </div>
+        <?php require('../include/footer.html'); ?>
+    </div>
+
+    <a href="#layer_error" class="eLayerOpen"></a><!-- 이벤트 없이 디폴트로 레이어 열어놓기 위함 -->
+    <div id="layer_error" class="mLayer typeError" style="display:none;">
+        <h2>쇼핑몰 접속 안내</h2>
+        <div class="wrap">
+            <h3>잠시 후 <span>다시</span> 시도해 주세요.</h3>
+            <div class="inner">
+                <p>생성된 쇼핑몰을 최적화하는 중으로,<br><strong>최소1분 ~ 최대30분</strong>까지 소요될 수 있습니다.<br>지속적으로 접속이 되지 않으면 <br><span class="txtEm">마이샵>나의 쇼핑몰 목록</span> 메뉴에서 <br class="RMB">확인해주세요.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="#none" class="btnEm">완료</a>
+        </div>
+        <button type="button" class="btnClose eClose">닫기</button>
+    </div>
+</body>
+</html>

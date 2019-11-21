@@ -1,0 +1,104 @@
+/* skip navigation */
+#skipNavigation { position:absolute; top:0; left:0; z-index:100; width:100%; }
+#skipNavigation a { position:absolute; top:0; left:-99999px; display:block; width:100%; height:30px; background:#c4122f; color:#fff; line-height:30px; text-align:center; }
+#skipNavigation a:first-child { background:#ff5e26; }
+#skipNavigation a:focus, #skipNavigation a:active { left:0; }
+
+/* Layout */
+body { height:100%; min-width:1246px; background:none; }
+#wrap { min-width:1241px; min-height:100%; margin-bottom:-30px; background:url("//img.echosting.cafe24.com/api/dev/erp/bg_sidebar.gif") repeat-y 0 0; }
+/* popup Reset */
+body#popup { height:auto; }
+body#popup #wrap { min-height:0; min-width:0; margin-bottom:0; padding-bottom:80px; background:none; }
+#container { padding:0 20px 30px 206px; }
+#container:after { content:""; display:block; clear:both; }
+#content { float:left; width:100%; padding:0px 0 10px 0; }
+
+/* Header */
+#header { position:relative; height:72px; background:url("//img.echosting.cafe24.com/api/dev/erp/bg_header.gif") repeat-x 0 0; }
+#header .header { position:relative; max-width:1259px; height:30px; }
+#header .header:after { content:""; display:block; clear:both; }
+#header h1 { position:absolute; left:19px; top:0px; }
+#header h2 { font-size:0; line-height:0; color:transparent; }
+#header .confidential { position:absolute; left:196px; top:6px; }
+#header .topMenu { position:absolute; right:0px; top:0; font-size:0; line-height:0; }
+#header .topMenu .member strong { display:inline-block; height:30px; line-height:30px; padding:0 8px 0 0; font-weight:normal; font-size:11px; color:#b4b5b8; vertical-align:top; }
+#header .topMenu .member a.login,
+#header .topMenu .member a.logout { margin:4px 0 0; padding-right:6px; display:inline-block; width:59px; height:22px; background:url("//img.echosting.cafe24.com/api/dev/erp/sfix_layout.png") no-repeat 0 0; vertical-align:top; }
+#header .topMenu .member a.logout { background-position:0 0; }
+#header .topMenu .member a.login{ background-position:0 -32px; }
+#header .topMenu .member a.login span,
+#header .topMenu .member a.logout span { overflow:hidden; position:absolute; left:0; top:0; text-indent:-9999px; font-size:0; line-height:0; color:transparent; }
+#header .topMenu .member a.btnUtil { display:inline-block; padding:0 30px 0 30px; height:30px; font-size:11px; line-height:30px; text-decoration:none; color:#aab2bf; background:url("//img.echosting.cafe24.com/api/dev/erp/ico_div.gif") no-repeat right 50%; }
+#header .topMenu .member a.btnUtil:hover { color:#fff; }
+#header .topMenu .member .related { position:relative; display:inline-block; vertical-align:top; }
+#header .topMenu .member .related .centerGo { display:inline-block; margin-right:7px; padding:0 12px 0 29px; height:30px; font-size:11px; line-height:30px; text-decoration:none; color:#aab2bf; background:url("//img.echosting.cafe24.com/api/dev/erp/ico_off.gif") no-repeat right 50%; }
+#header .topMenu .member .related ul { display:none; position:absolute; top:100%; right:0; margin-top:-2px; padding:2px 2px 3px 2px; background-color:#3c4451; }
+#header .topMenu .member .related ul li.line { margin-bottom:3px; padding-bottom:3px; border-bottom:1px solid #48505c; }
+#header .topMenu .member .related ul a { display:block; padding:3px 10px 0 10px; font-size:11px; line-height:1.25; white-space:nowrap; text-decoration:none; color:#aab2bf; }
+#header .topMenu .member .related ul a:hover { color:#ffffff; background-color:#3e69a3; }
+/* show */
+#header .topMenu .member .related.show .centerGo { color:#fff; background:url("//img.echosting.cafe24.com/api/dev/erp/ico_on.gif") no-repeat right 50%; }
+#header .topMenu .member .related.show ul { display:block; }
+/* GNB */
+#gnb { border-right:1px solid #5990da; }
+#gnb li { display:table; float:left; width:103px; border-right:1px solid #5990da; }
+#gnb li:first-child { width:106px; border-left:0px; }
+#gnb li a { display:table-cell; text-align:center; vertical-align:middle; height:39px; border-right:1px solid #3164a5; font-size:12px; font-weight:bold; text-decoration:none; color:#fff; background-color:#4080d5; }
+#gnb li.selected a { background-color:#4469bd; }
+
+/* Sidebar */
+#sidebar { float:left; width:194px; margin:0 0 0 -206px; font-family:"돋움", Dotum; }
+#sidebar #snb { border-right:1px solid #9197a3; }
+#sidebar #snb .title { padding:26px 0 24px 0; border-bottom:1px solid #5f6269; background-color:#f6f6f6; font-size:16px; color:#3c4451; text-align:center; }
+/* 메뉴 */
+#snb .menu li { position:relative; }
+#snb .menu li a { word-wrap:break-word; word-break:break-all; }
+#snb .menu li a:hover { text-decoration:none; }
+#snb .menu li:hover > .tooltip { display:block; }
+#snb .menu li .icon { display:inline-block; overflow:hidden; width:9px; height:9px; margin:2px 0 0 0; font-size:0; line-height:0; vertical-align:top; background-image:url("//img.echosting.cafe24.com/ec/layout/sfix_ico.png"); background-repeat:no-repeat; margin-top:1px \0/; }
+#snb .menu li .icon.new { width:21px; height:9px; background-position:0 0; }
+#snb .menu li a .more { overflow:hidden; display:inline-block; position:absolute; text-indent:-9999px; line-height:0; font-size:0; color:transparent; background:url("//img.echosting.cafe24.com/api/dev/erp/sflex_snb.png") no-repeat 0 0; }
+
+/* 1뎁스 */
+#snb .menu > li:first-child { border-top:0; }
+#snb .menu > li > a { display:block; padding:14px 25px 13px 19px; font-weight:bold; color:#ebebeb; border-top:1px solid #acacb0; border-bottom:1px solid #5f6269; text-decoration:none; background-color:#95959a; background-position:0 0; }
+#snb .menu > li > a:hover { color:#fff; border-top:1px solid #8b8d92; background:#77797f; }
+#snb .menu > li > a > .more { right:10px; top:14px; width:13px; height:13px; background-position:0 0; }
+#snb .menu > li.selected > a,
+#snb .menu > li.collapsable > a{ color:#fff; border-top:1px solid #8b8d92; background-color:#77797f; }
+#snb .menu > li.disabled > a,
+#snb .menu > li.disabled > a:hover { color:#b4b4b7; border-top:1px solid #acacb0; background-color:#95959a; }
+#snb .menu > li > a:hover > .more,
+#snb .menu > li.selected > a > .more { background-position:-50px 0; }
+#snb .menu > li.collapsable > a > .more{ background-position:-25px 0; }
+#snb .menu > li.disabled > a > .more,
+#snb .menu > li.disabled > a:hover > .more{ background-position:-75px 0; }
+/* 2뎁스 */
+#snb .menu > li > ul { display:none; }
+#snb .menu > li.collapsable > ul { display:block; }
+#snb .menu > li > ul > li > a { display:block; padding:8px 25px 6px 21px; border-top:1px solid #fff; border-bottom:1px solid #d9d9df; font-weight:bold; color:#8b8b93; text-decoration:none; background-color:#f6f6f9; }
+#snb .menu > li > ul > li > a:hover { padding:7px 25px 7px 21px; border-top:2px solid #0093d9; border-bottom:0; color:#fff; background:#00adff; }
+#snb .menu > li > ul > li.selected > a { padding:7px 25px 7px 21px; border-top:2px solid #0093d9; border-bottom:0; font-weight:bold; color:#fff; background:#00adff; }
+#snb .menu > li > ul > li.disabled > a,
+#snb .menu > li > ul > li.disabled > a:hover { padding:8px 25px 6px 21px; color:#c8c8cd; border-top:1px solid #fff; border-bottom:1px solid #d9d9df; background-color:#f6f6f9; }
+#snb .menu > li > ul > li.expandable > ul { display:none; }
+#snb .menu > li > ul > li > a > .more { right:12px; top:10px; width:10px; height:10px; background-position:0 -21px; }
+#snb .menu > li > ul > li > a:hover > .more,
+#snb .menu > li > ul > li.selected > a > .more { background-position:0 -41px; }
+#snb .menu > li > ul > li.expandable > a > .more { background-position:-20px -21px; }
+#snb .menu > li > ul > li.expandable > a:hover > .more { background-position:-20px -41px; }
+#snb .menu > li > ul > li.disabled > a > .more,
+#snb .menu > li > ul > li.disabled > a:hover > .more { background-position:-40px -21px; }
+/* 3뎁스 */
+#snb .menu ul ul { background:#fff; }
+#snb .menu li li li { background:none; }
+#snb .menu li li li a { display:block; padding:9px 0 7px 31px; border-bottom:1px solid #d9d9de; font-size:11px; color:#8b8b93; }
+#snb .menu li li li a:hover { padding:7px 0 8px 31px; border-top:2px solid #0093d9; border-bottom:0; color:#fff; background:#00adff; }
+#snb .menu li li li.selected a { padding:7px 0 8px 30px; border-top:2px solid #0093d9; border-bottom:0; background:#00adff; font-weight:bold; color:#fff; letter-spacing:-1px; }
+#snb .menu li li li.disabled a,
+#snb .menu li li li.disabled a:hover { padding:9px 0 7px 31px; border-top:0; border-bottom:1px solid #d9d9de; color:#c5c5c5; background:none; }
+
+/* Footer */
+#footer { width:100%; height:29px; border-top:1px solid #a4a3ab; box-shadow:inset 0 1px 0 0 #f8f8f8; font-size:9px; font-family:Verdana, sans-serif; color:#898989; line-height:27px; text-align:center; background:#f0f1f3; }
+#footer strong { color:#4f4f4f; }

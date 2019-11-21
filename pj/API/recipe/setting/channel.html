@@ -1,0 +1,193 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/API/recipe/include/inc_head.html'); ?>
+        <section id="contents">
+            <div class="headingArea">
+                <h2>채널 연결 관리</h2>
+            </div>
+            <div class="innerContents">
+                <div class="gridSet bBottomS">
+                    <div class="grid">
+                        <button type="button" class="btnNormal"><span class="icoSFIX icoAdd"></span> 연결정보 등록</button>
+                    </div>
+                    <div class="grid right">
+                        <select class="fSelect eSelect">
+                            <option>최근 연결을 위로</option>
+                            <option>만료될 연결을 위로</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mSearch bBottomM"><!-- 참고: 텍스트 입력중일 때 selected 추가 -->
+                    <input type="search" class="fSearch" placeholder="레시피 검색">
+                    <button type="button" class="btnDel">검색어 삭제</button>
+                    <button type="submit" class="btnSearch">검색</button>
+                </div>
+
+                <ul class="mForm typeThumb scroll2 bBottomM">
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_product.png" class="imgChannel" alt="">상품</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_facebook.png" class="imgChannel" alt="">페이스북</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_instagram.png" class="imgChannel" alt="">인스타그램</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_kakaotalk.png" class="imgChannel" alt="">카카오톡</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_pinterest.png" class="imgChannel" alt="">핀터레스트</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_tumblr.png" class="imgChannel" alt="">텀블러</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_slack.png" class="imgChannel" alt="">슬랙</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_kakaostory.png" class="imgChannel" alt="">카카오스토리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_kakaostory.png" class="imgChannel" alt="">카카오스토리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_kakaostory.png" class="imgChannel" alt="">카카오스토리</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="mConnect">
+                    <div class="content">
+                        <strong class="channel">
+                            <img src="//img.echosting.cafe24.com/api/recipe/ico_channel_facebook.png" class="imgChannel" alt="">
+                            페이스북
+                        </strong>
+                        <ul class="mForm typeEdit">
+                            <li><!-- 참고: btnEdit 클릭시 .edit 부여, 저장버튼 클릭시 .edit 삭제  -->
+                                <div class="gForm">
+                                    영문몰456영문몰456영문몰456영문
+                                    <button type="button" class="btnEdit eEdit">수정</button>
+                                </div>
+                                <div class="gEdit">
+                                    <input type="text" class="fText" value="영문몰456">
+                                    <button type="button" class="btnNormal mini eSave">저장</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="mall">cafe24</span>
+                        <span class="date">유효기간 : 2017-09-08 ~ 2017-10-08</span>
+                    </div>
+                    <div class="button">
+                        <button type="button" class="btnNormal mini">연결확인</button>
+                        <a href="#none" class="btnNormal mini" target="_blank">재연결</a>
+                        <button type="button" class="btnNormal mini"><span class="icoSFIX icoCancel"></span> 해제</button>
+                    </div>
+                </div>
+
+                <div class="mConnect">
+                    <div class="content">
+                        <strong class="channel">
+                            <img src="//img.echosting.cafe24.com/api/recipe/ico_channel_facebook.png" class="imgChannel" alt="">
+                            페이스북
+                        </strong>
+                        <ul class="mForm typeEdit">
+                            <li><!-- 참고: btnEdit 클릭시 .edit 부여, 저장버튼 클릭시 .edit 삭제  -->
+                                <div class="gForm">
+                                    영문몰456영문
+                                    <button type="button" class="btnEdit eEdit">수정</button>
+                                </div>
+                                <div class="gEdit">
+                                    <input type="text" class="fText" value="영문몰456">
+                                    <button type="button" class="btnNormal mini eSave">저장</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="mall">cafe24</span>
+                        <span class="date">유효기간 : 2017-09-08 ~ 2017-10-08</span>
+                    </div>
+                    <div class="button">
+                        <span class="txtEm"><span class="icoSFIX icoCheck"></span> 정상</span>
+                        <a href="#none" class="btnNormal mini" target="_blank">재연결</a>
+                        <button type="button" class="btnNormal mini"><span class="icoSFIX icoCancel"></span> 해제</button>
+                    </div>
+                </div>
+
+                <div class="mConnect">
+                    <div class="content">
+                        <strong class="channel">
+                            <img src="//img.echosting.cafe24.com/api/recipe/ico_channel_facebook.png" class="imgChannel" alt="">
+                            페이스북
+                        </strong>
+                        <ul class="mForm typeEdit">
+                            <li class="edit"><!-- 참고: btnEdit 클릭시 .edit 부여, 저장버튼 클릭시 .edit 삭제  -->
+                                <div class="gForm">
+                                    영문몰456
+                                    <button type="button" class="btnEdit eEdit">수정</button>
+                                </div>
+                                <div class="gEdit">
+                                    <input type="text" class="fText" value="영문몰456">
+                                    <button type="button" class="btnNormal mini eSave">저장</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="mall">cafe24</span>
+                        <span class="date">유효기간 : 2017-09-08 ~ 2017-10-08</span>
+                    </div>
+                    <div class="button">
+                        <span class="txtWarn"><span class="icoSFIX icoProhibit"></span> 만료</span>
+                        <a href="#none" class="btnNormal mini" target="_blank">재연결</a>
+                        <button type="button" class="btnNormal mini"><span class="icoSFIX icoCancel"></span> 해제</button>
+                    </div>
+                </div>
+
+                <div class="mConnect disabled">
+                    <div class="content">
+                        <strong class="channel">
+                            <img src="//img.echosting.cafe24.com/api/recipe/ico_channel_facebook.png" class="imgChannel" alt="">
+                            페이스북
+                        </strong>
+                        <ul class="mForm typeEdit">
+                            <li class="edit"><!-- 참고: btnEdit 클릭시 .edit 부여, 저장버튼 클릭시 .edit 삭제  -->
+                                <div class="gForm">
+                                    영문몰456
+                                    <button type="button" class="btnEdit eEdit" disabled>수정</button>
+                                </div>
+                                <div class="gEdit">
+                                    <input type="text" class="fText" value="영문몰456" disabled>
+                                    <button type="button" class="btnNormal mini eSave" disabled>저장</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="mall">cafe24</span>
+                        <span class="date">유효기간 : 2017-09-08 ~ 2017-10-08</span>
+                    </div>
+                    <div class="button">
+                        <span class="txtWarn"><span class="icoSFIX icoProhibit"></span> 만료</span>
+                        <a href="#none" class="btnNormal mini" target="_blank">재연결</a>
+                        <button type="button" class="btnNormal mini" disabled><span class="icoSFIX icoCancel"></span> 해제</button>
+                    </div>
+                </div>
+
+                <button type="button" class="btnMore">더보기 <span class="icoSFIX icoArrow"></span></button>
+            </div>
+        </section>
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/API/recipe/include/inc_foot.html'); ?>

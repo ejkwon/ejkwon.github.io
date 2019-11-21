@@ -1,0 +1,277 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>개발환경관리</li>
+                <li class="now" title="현재 페이지">개발사(자) 관리</li>
+            </ol>
+            <div class="mTitle">
+                <h1>개발사(자) 관리</h1>
+            </div>
+
+            <div class="sectionArea">
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>회원정보</h2>
+                    </div>
+                    <div class="mBoard gSmall">
+                        <table border="1">
+                            <caption>회원정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">아이디</th>
+                                    <td>test1234</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">가입자명</th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">가입유형</th>
+                                    <td>개인회원 / 사업자회원(사업자번호 : 123-01-12345)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">대표연락처</th>
+                                    <td>02-1234-1234 / 010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">대표이메일</th>
+                                    <td>test1234@cafe24corp.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mButton">
+                        <a href="#none" class="btnNormal">카페24 회원정보 수정</a>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>개발사(자) 정보</h2>
+                        <ul>
+                            <li>제작/생성한 App을 판매하기 위한 앱스토어에 정보가 노출됩니다.</li>
+                        </ul>
+                    </div>
+                    <div class="mBoard">
+                        <table border="1">
+                            <caption>개발사(자) 정보</caption>
+                            <colgroup>
+                                <col style="width:190px;">
+                                <col style="width:auto;">
+                                <col style="width:355px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">개발사(자) 명 <strong class="icoRequired">필수</strong></th>
+                                    <td><input type="text" class="fText" style="width:95%;"></td>
+                                    <td rowspan="8">
+                                        <strong>App 스토어 소개 이미지</strong>
+                                        <p class="gDouble"><img src="//img.echosting.cafe24.com/api/dev/admin/img_developer_preview.gif" alt=""></p>
+                                        <ul class="txtInfo">
+                                            <li>입력된 개발사(자) 정보는 App을 판매/설치하는 스토어에 위와 같은 형태로 정보가 제공됩니다.</li>
+                                        </ul>
+                                        <p class="gSingle center"><a href="#none" class="btnNormal"><span>새로고침</span></a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이메일 <strong class="icoRequired">필수</strong></th>
+                                    <td><input type="text" class="fText" style="width:95%;" value="aaa@aaa.com"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">연락처</th>
+                                    <td><input type="text" class="fText" style="width:95%;"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">대표이미지</th>
+                                    <td>
+                                        <input type="file" class="fFile">
+                                        <ul class="txtInfo">
+                                            <li>첨부파일: 85x70px / 300KB 이하/ png, jpg(jpeg)</li>
+                                        </ul>
+                                        <p class="gSingle">
+                                            <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_100x100.png" alt="" width="100" height="100">
+                                            <button type="button" class="btnIcon icoDel top">삭제</button>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">웹사이트 URL</th>
+                                    <td><input type="text" class="fText" style="width:95%;" value="http://www.aaa.com"></td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row">도시/국가</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:35%;"> /
+                                        <select class="fSelect" style="width:57%;">
+                                            <option>Please select country</option>
+                                            <option>SOUTH KOREA</option>
+                                            <option>U.S.A</option>
+                                            <option>AUSTRALIA</option>
+                                            <option>CANADA</option>
+                                            <option>UNITED KINGDOM</option>
+                                            <option>NEW ZEALAND</option>
+                                            <option>ALBANIA</option>
+                                            <option>ALGERIA</option>
+                                            <option>ARGENTINA</option>
+                                            <option>ARMENIA</option>
+                                            <option>AUSTRIA</option>
+                                            <option>BAHRAIN</option>
+                                            <option>BANGLADESH</option>
+                                            <option>BELGIUM</option>
+                                            <option>BHUTAN</option>
+                                            <option>Bosnia and Herzegovina</option>
+                                            <option>BOTSWANA</option>
+                                            <option>BRAZIL</option>
+                                            <option>BRUNEI DARUSSALAM</option>
+                                            <option>BULGARIA(REP)</option>
+                                            <option>CAMBODIA</option>
+                                            <option>CAPE VERDE</option>
+                                            <option>CHILE</option>
+                                            <option>CHINA(PEOPLE'S REP)</option>
+                                            <option>COSTA RICA</option>
+                                            <option>CROATIA</option>
+                                            <option>CUBA</option>
+                                            <option>CYPRUS</option>
+                                            <option>CZECH REP</option>
+                                            <option>DENMARK</option>
+                                            <option>DJIBOUTI</option>
+                                            <option>DOMINICAN REPUBLIC</option>
+                                            <option>EGYPT</option>
+                                            <option>ECUADOR</option>
+                                            <option>ESTONIA</option>
+                                            <option>ETHIOPIA</option>
+                                            <option>FIJI</option>
+                                            <option>FINLAND</option>
+                                            <option>FRANCE</option>
+                                            <option>GEORGIA</option>
+                                            <option>GERMANY</option>
+                                            <option>GREECE</option>
+                                            <option>HONG KONG</option>
+                                            <option>HUNGARY(REP)</option>
+                                            <option>INDIA</option>
+                                            <option>INDONESIA</option>
+                                            <option>IRAN(ISLAMIC REP)</option>
+                                            <option>IRELAND</option>
+                                            <option>ISRAEL</option>
+                                            <option>ITALY</option>
+                                            <option>KAZAKHSTAN</option>
+                                            <option>LAO PEOPLE'S DEM REP</option>
+                                            <option>LITHUANIA</option>
+                                            <option>LUXEMBOURE</option>
+                                            <option>MACAO</option>
+                                            <option>MALAWI</option>
+                                            <option>MALAYSIA</option>
+                                            <option>MALDIVES</option>
+                                            <option>MAURITIUS</option>
+                                            <option>MEXICO</option>
+                                            <option>MONGOLIA</option>
+                                            <option>MOROCCO</option>
+                                            <option>MOZAMBIQUE</option>
+                                            <option>MYANMAR</option>
+                                            <option>NEPAL</option>
+                                            <option>NETHERLANDS</option>
+                                            <option>NIGERIA</option>
+                                            <option>NORWAY</option>
+                                            <option>OMAN</option>
+                                            <option>PANAMA(REP)</option>
+                                            <option>PERU</option>
+                                            <option>PHILIPPINES</option>
+                                            <option>POLAND(REP)</option>
+                                            <option>PORTUGAL</option>
+                                            <option>QATAR</option>
+                                            <option>ROMANIA</option>
+                                            <option>RUSSIAN FEDERATION</option>
+                                            <option>RWANDA</option>
+                                            <option>SAUDI ARABIA</option>
+                                            <option>SINGAPORE</option>
+                                            <option>SLOVAKIA</option>
+                                            <option>SPAIN</option>
+                                            <option>SRI LANKA</option>
+                                            <option>SWEDEN</option>
+                                            <option>SWITZERLAND</option>
+                                            <option>TAIWAN</option>
+                                            <option>TANZANIA(UNITED REP)</option>
+                                            <option>THAILAND</option>
+                                            <option>TUNISIA</option>
+                                            <option>UKRAINE</option>
+                                            <option>UNITED ARAB EMIRATES</option>
+                                            <option>UZBEKISTAN</option>
+                                            <option>VIET NAM</option>
+                                            <option>ZAMBIA</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주소</th>
+                                    <td>
+                                        <input type="text" value="서울시 동작구 보라매로5길 15" class="fText" style="width:95%;"">
+                                        <div class="gSingle"><input type="text" value="전문건설회관빌딩" class="fText" style="width:95%;""></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">소개</th>
+                                    <td>
+                                        <textarea cols="40" rows="3" class="fTextarea" style="width:95%;">
+쇼핑몰의 App을 정말 잘 만드는 회사!!
+신뢰의 기업!!
+                                        </textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>통신판매 신고번호 및 결제(PG) 서비스 설정</h2>
+                        <ul>
+                            <li>cafe24 App Store를 통해 App을 판매하기 위한 결제, 정산, 증빙서류(영수증) 처리를 위해 결제서비스(PG)를 이용해야 합니다.</li>
+                            <li>금융법에 의해 한국스토어에서 페이팔 계정으로 판매가 불가능합니다. 한국 스토어에서 판매하기 위해서는 올앳을 신청하셔야 하며, <br>글로벌 스토어에 판매를 위해서는 페이팔 판매자 계정을 신청하셔야 합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="mBoard gSmall">
+                        <table border="1">
+                            <caption>통신판매 신고번호 및 결제(PG) 서비스 설정</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">통신판매업신고번호</th>
+                                    <td><input type="text" class="fText" style="width:540px;"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">올앳 서비스 신청<br>(한국 스토어 결제)</th>
+                                    <td>미신청 (무료 App만 판매 가능) <span class="gSingleSide"><a href="#none" class="btnCtrl">결제서비스(PG) 신청</a></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">페이팔 판매자 ID<br>(글로벌 스토어 결제)</th>
+                                    <td>
+                                        <input type="text" class="fText" placeholder="페이팔 판매자 ID 입력" style="width:540px;">
+                                        <ul class="txtInfo">
+                                            <li>cafe24 App Store를 통한 App의 판매 및 정산은 페이팔을 통해서 결제/정산 처리 됩니다.</li>
+                                            <li>페이팔에 판매자 ID를 생성하신 후 등록하여야 cafe24 App Store를 통한 App 판매가 가능합니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">발급 가능 영수증</th>
+                                    <td>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 현금영수증 (개인)</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 현금영수증 (사업자)</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 세금계산서</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="mButton gCenter gFooter">
+                <a href="#none" class="btnSubmit">저장</a>
+            </div>
+        </section><!-- //[ contents ] -->
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>
+

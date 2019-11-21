@@ -1,0 +1,42 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/API/recipe/include/inc_head.html'); ?>
+        <section id="contents">
+            <h2 class="blind">알림</h2>
+            <div class="mTab typeNav">
+                <ul>
+                    <li class="selected"><a href="#none">알림</a></li>
+                    <li><a href="history.html">히스토리</a></li>
+                </ul>
+            </div>
+            <div class="innerContents">
+                <div class="gridSet bBottomM">
+                    <div class="grid">
+                        <div class="mSearch"><!-- 참고: 텍스트 입력중일 때 selected 추가 -->
+                            <input type="search" class="fSearch" placeholder="레시피 검색">
+                            <button type="button" class="btnDel">검색어 삭제</button>
+                            <button type="submit" class="btnSearch">검색</button>
+                        </div>
+                    </div>
+                    <a href="#layerFilter2" class="btnFilter eLayerClick">필터적용</a>
+                </div>
+                <div class="gridSet bBottomS">
+                    <div class="grid">
+                        <span class="txtTotal">미확인 알림 총 <strong class="txtReq">5</strong>개</span>
+                    </div>
+                    <select class="fSelect eSelect">
+                        <option>최근 실행순</option>
+                        <option>최근 실행역순</option>
+                    </select>
+                </div>
+                <div class="line"></div>
+                <div class="mInfo typeFull">
+                    <img src="//img.echosting.cafe24.com/api/recipe/img_exclaim.png" alt="" width="102" class="imgInfo">
+                    <strong class="txtStrong">레시피 실행 내역이 없습니다.</strong>
+                    등록된 레시피의 사용여부를 확인해보세요.
+                    <div class="mButton bTopL">
+                        <a href="#none" class="btnEm">레시피 관리</a>
+                        <a href="#none" class="btnNormal">레시피 만들기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/API/recipe/include/inc_foot.html'); ?>

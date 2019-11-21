@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FB송장출력 1/6</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+    <style type="text/css">
+    @charset "utf-8";
+    /* 송장출력 */
+    .printArea { overflow:hidden; margin:5px; border:1px solid #ccc; border-left:0; }
+    .printArea .mReceipt { float:left; width:33.2%; border-left:1px solid #ccc; }
+    .printArea .mReceipt .mBoard { margin:5px; }
+    .printArea .mReceipt .mBoard.gTriple { margin-top:15px; }
+    .printArea .mReceipt .gCut { overflow:hidden; height:36px; word-break:break-all; }
+    @media print {
+        #debugArea, .btnSUIO { display:none !important; }
+    }
+    </style>
+    <!-- 작업시 주의사항 : 해당 페이지는 PDF 인쇄됨, 크롬에서 인쇄 > 설정더보기 > 여백 > 없음으로 설정 후 보이는 화면에 최적화 되어있음 -->
+</head>
+<body id="popup" size="1200,800"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+
+<div class="printArea print">
+    <div class="mReceipt">
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <th scope="col" class="center"><strong>FASTBOX 송장번호</strong><br />(배송대행 문의 : 02-6296-8973)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:60px;" />
+                            <strong class="txtMore gDouble">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" ><strong>상점명</strong></th>
+                        <td>MIXXMIX</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>주문자명</strong></th>
+                        <td>이태혁</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>판매사 주문번호</strong></th>
+                        <td>20160213-0002213</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2" class="right"><strong>수량합계 : 6개</strong></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mReceipt">
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <th scope="col" class="center"><strong>FASTBOX 송장번호</strong><br />(배송대행 문의 : 02-6296-8973)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:60px;" />
+                            <strong class="txtMore gDouble">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" ><strong>상점명</strong></th>
+                        <td>MIXXMIX</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>주문자명</strong></th>
+                        <td>이태혁</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>판매사 주문번호</strong></th>
+                        <td>20160213-0002213</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2" class="right"><strong>수량합계 : 6개</strong></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mReceipt">
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <th scope="col" class="center"><strong>FASTBOX 송장번호</strong><br />(배송대행 문의 : 02-6296-8973)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:60px;" />
+                            <strong class="txtMore gDouble">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" ><strong>상점명</strong></th>
+                        <td>MIXXMIX</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>주문자명</strong></th>
+                        <td>이태혁</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>판매사 주문번호</strong></th>
+                        <td>20160213-0002213</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2" class="right"><strong>수량합계 : 6개</strong></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="printArea print">
+    <div class="mReceipt">
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <th scope="col" class="center"><strong>FASTBOX 송장번호</strong><br />(배송대행 문의 : 02-6296-8973)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:60px;" />
+                            <strong class="txtMore gDouble">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" ><strong>상점명</strong></th>
+                        <td>MIXXMIX</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>주문자명</strong></th>
+                        <td>이태혁</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>판매사 주문번호</strong></th>
+                        <td>20160213-0002213</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2" class="right"><strong>수량합계 : 6개</strong></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mReceipt">
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <th scope="col" class="center"><strong>FASTBOX 송장번호</strong><br />(배송대행 문의 : 02-6296-8973)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:60px;" />
+                            <strong class="txtMore gDouble">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" ><strong>상점명</strong></th>
+                        <td>MIXXMIX</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>주문자명</strong></th>
+                        <td>이태혁</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>판매사 주문번호</strong></th>
+                        <td>20160213-0002213</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2" class="right"><strong>수량합계 : 6개</strong></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mReceipt">
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <th scope="col" class="center"><strong>FASTBOX 송장번호</strong><br />(배송대행 문의 : 02-6296-8973)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:60px;" />
+                            <strong class="txtMore gDouble">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" ><strong>상점명</strong></th>
+                        <td>MIXXMIX</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>주문자명</strong></th>
+                        <td>이태혁</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>판매사 주문번호</strong></th>
+                        <td>20160213-0002213</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2" class="right"><strong>수량합계 : 6개</strong></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

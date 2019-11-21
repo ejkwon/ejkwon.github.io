@@ -1,0 +1,436 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>입고대기처리</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li>입고</li>
+            <li>미입고</li>
+            <li class="now" title="현재 페이지">입고대기처리</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>기본정보</h2>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>기본정보</caption>
+        <colgroup>
+            <col style="width:154px;*width:135px;" />
+            <col style="width:auto;" />
+            <col style="width:154px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">등록일</th>
+                <td>2014-03-05 12:45:00</td>
+                <th scope="row">등록자</th>
+                <td>김아무개(ID) 123.25.256.235</td>
+            </tr>
+            <tr>
+                <th scope="row">입고지시번호</th>
+                <td>20140305-31AA123456</td>
+                <th scope="row">입고예정일</th>
+                <td>2014-03-06</td>
+            </tr>
+            <tr>
+                <th scope="row">입고지시상태</th>
+                <td>처리예정</td>
+                <th scope="row">메모</th>
+                <td>
+                    <a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>메모<em class="icoLink"></em></span></a>
+                    <a href="#none" target="_blank" title="새창 열림" class="txtLink">메모(<span class="txtWarn">1</span>)</a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>상품검색</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>상품검색</caption>
+        <tbody>
+            <tr>
+                <th scope="row">구분</th>
+                <td>
+                    <label class="gLabel"><input type="checkbox" class="fChk" checked="checked" /> 전체</label>
+                    <label class="gLabel"><input type="checkbox" class="fChk" /> 일반</label>
+                    <label class="gLabel"><input type="checkbox" class="fChk" /> 추가</label>
+                    <label class="gLabel"><input type="checkbox" class="fChk" /> 오입고</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">입고상태</th>
+                <td>
+                    <label class="gLabel"><input type="checkbox" class="fChk" checked="checked" /> 전체</label>
+                    <label class="gLabel"><input type="checkbox" class="fChk" /> 미입고</label>
+                    <label class="gLabel"><input type="checkbox" class="fChk" /> 입고취소</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">공급사명</th>
+                <td>
+                    <label class="gLabel"><input type="radio" name="radio1" checked="checked" class="fChk" /> 전체</label>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 선택</label>
+                    <span class="gLabel">
+                        <select class="fSelect">
+                          <option>- 공급사 선택 -</option>
+                          <option>갑</option>
+                          <option>을</option>
+                          <option>병</option>
+                          <option>정</option>
+                        </select>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">검색어</th>
+                <td>
+                    <select class="fSelect">
+                      <option>상품코드</option>
+                      <option>상품명</option>
+                      <option>공급사상품명</option>
+                      <option>바코드</option>
+                      <option>위치코드</option>
+                    </select>
+                    <input type="text" class="fText" style="width:280px;" />
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>상품내역</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 상품 <strong>30</strong>건] 검색결과 <strong>15</strong>건</p>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span>입고대기처리</span></a>
+            <a href="#none" class="btnNormal"><span>미입고처리</span></a>
+            <a href="#none" class="btnNormal"><span>입고취소처리</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#layerErrorIn" class="btnNormal eModal"><span>오입고 등록</span></a>
+            <a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>추가입고 등록<em class="icoLink"></em></span></a>
+        </div>
+    </div>
+    <div class="mBoard gScroll" style="max-height:500px;">
+        <table border="1" summary="" class="eChkTr">
+        <caption>공급사 목록</caption>
+        <colgroup>
+            <col class="chk" />
+            <col style="width:50px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+            <col style="width:150px;" />
+            <col style="width:110px;" />
+            <col style="width:150px;" />
+            <col style="width:150px;" />
+            <col style="width:110px;" />
+            <col style="width:110px;" />
+            <col style="width:70px;" />
+            <col style="width:70px;" />
+            <col style="width:110px;" />
+            <col style="width:70px;" />
+            <col style="width:70px;" />
+            <col style="width:100px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                <th scope="col">No</th>
+                <th scope="col">
+                    <strong class="array descend">공급사명<button type="button">내림차순 정렬</button></strong>
+                    <!--
+                    <strong class="array descend">공급사명<button type="button">오름차순 정렬</button></strong>
+                    -->
+                </th>
+                <th scope="col">공급사연락처</th>
+                <th scope="col">
+                    <strong class="array">공급사주소<button type="button">내림차순 정렬</button></strong>
+                    <!--
+                    <strong class="array ascend">공급사주소<button type="button">오름차순 정렬</button></strong>
+                    -->
+                </th>
+                <th scope="col">상품코드/<br />바코드</th>
+                <th scope="col">
+                    <strong class="array">상품명<button type="button">내림차순 정렬</button></strong>/품목명
+                    <!--
+                    <strong class="array descend">상품명<button type="button">오름차순 정렬</button></strong>
+                    -->
+                </th>
+                <th scope="col">
+                    <strong class="array">공급사상품명<button type="button">내림차순 정렬</button></strong>
+                    <!--
+                    <strong class="array ascend">공급사상품명<button type="button">오름차순 정렬</button></strong>
+                    -->
+                </th>
+                <th scope="col">입고가</th>
+                <th scope="col">도착입고가</th>
+                <th scope="col">수량</th>
+                <th scope="col">도착수량</th>
+                <th scope="col">금액</th>
+                <th scope="col">구분</th>
+                <th scope="col">입고상태</th>
+                <th scope="col">위치코드</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>6</td>
+                <td>갑</td>
+                <td>02-1234-1234</td>
+                <td class="left">서울 zz구 BB동 13</td>
+                <td>OU2_121107002 <br /><span class="txtLight">100039787</span></td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p>상품명</p>
+                        <ul class="etc">
+                            <li>품목명</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="left">바지1-25</td>
+                <td class="right">12,000</td>
+                <td>
+                    <input type="text" class="fText right" style="width:74px;">
+                    <div class="gSingle"><a href="#layerInfoModify" class="btnNormal eModal"><span>상품정보변경</span></a></div>
+                </td>
+                <td class="right">20</td>
+                <td><input type="text" class="fText right" style="width:40px" /></td>
+                <td class="right">240,000</td>
+                <td>일반</td>
+                <td>미입고</td>
+                <td>A-12-8888</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>5</td>
+                <td>갑</td>
+                <td>02-1234-1234</td>
+                <td class="left">서울 zz구 BB동 13</td>
+                <td>OU2_121107002 <br /><span class="txtLight">100039787</span></td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p>상품명</p>
+                        <ul class="etc">
+                            <li>품목명</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="left">바지1-25</td>
+                <td class="right">12,000</td>
+                <td>
+                    <input type="text" class="fText right" style="width:74px;">
+                    <div class="gSingle"><a href="#layerInfoModify" class="btnNormal eModal"><span>상품정보변경</span></a></div>
+                </td>
+                <td class="right">20</td>
+                <td><input type="text" class="fText right" style="width:40px" /></td>
+                <td class="right">240,000</td>
+                <td>일반</td>
+                <td>미입고</td>
+                <td>A-12-8888</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>4</td>
+                <td>갑</td>
+                <td>02-1234-1234</td>
+                <td class="left">서울 zz구 BB동 13</td>
+                <td>OU2_121107002 <br /><span class="txtLight">100039787</span></td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p>상품명</p>
+                        <ul class="etc">
+                            <li>품목명</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="left">바지1-25</td>
+                <td class="right">12,000</td>
+                <td>
+                    <input type="text" class="fText right" style="width:74px;">
+                    <div class="gSingle"><a href="#layerInfoModify" class="btnNormal eModal"><span>상품정보변경</span></a></div>
+                </td>
+                <td class="right">20</td>
+                <td><input type="text" class="fText right" style="width:40px" /></td>
+                <td class="right">240,000</td>
+                <td>일반</td>
+                <td>미입고</td>
+                <td>A-12-8888</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>3</td>
+                <td>갑</td>
+                <td>02-1234-1234</td>
+                <td class="left">서울 zz구 BB동 13</td>
+                <td>OU2_121107002 <br /><span class="txtLight">100039787</span></td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p>상품명</p>
+                        <ul class="etc">
+                            <li>품목명</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="left">바지1-27</td>
+                <td class="right">12,000</td>
+                <td class="negative">
+                    <input type="text" class="fText right" style="width:74px;">
+                    <div class="gSingle"><a href="#layerInfoModify" class="btnNormal eModal"><span>상품정보변경</span></a></div>
+                </td>
+                <td class="right">6</td>
+                <td><input type="text" class="fText right" style="width:40px" /></td>
+                <td class="right">72,000</td>
+                <td>일반</td>
+                <td>입고취소</td>
+                <td>A-12-8999</td>
+            </tr>
+            <tr class="bgDivision">
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>2</td>
+                <td>을</td>
+                <td>02-9876-9876</td>
+                <td class="left">서울 GG구 xx동 223</td>
+                <td>OU2_121107002 <br /><span class="txtLight">100039787</span></td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p>상품명</p>
+                        <ul class="etc">
+                            <li>품목명</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="left">조끼2-파랑</td>
+                <td class="right">30,000</td>
+                <td>
+                    <input type="text" class="fText right" style="width:74px;">
+                    <div class="gSingle"><a href="#layerInfoModify" class="btnNormal eModal"><span>상품정보변경</span></a></div>
+                </td>
+                <td class="right">0</td>
+                <td><input type="text" class="fText right" style="width:40px" /></td>
+                <td class="right">150,000</td>
+                <td><span class="txtEm">추가</span></td>
+                <td>미입고</td>
+                <td>B-23-9999</td>
+            </tr>
+            <tr class="negative">
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>1</td>
+                <td>갑</td>
+                <td>02-1234-1234</td>
+                <td class="left">서울 zz구 BB동 13</td>
+                <td>-</td>
+                <td class="left">-</td>
+                <td class="left">살랄라</td>
+                <td class="right">0</td>
+                <td><input type="text" class="fText right" style="width:74px;"></td>
+                <td class="right">0</td>
+                <td><input type="text" class="fText right" style="width:40px" /></td>
+                <td class="right">-</td>
+                <td><span class="txtWarn">오입고</span></td>
+                <td>미입고</td>
+                <td>
+                    <select class="fSelect">
+                        <option>A-12-222</option>
+                        <option>A-12-223</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="16">검색결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span>입고대기처리</span></a>
+            <a href="#none" class="btnNormal"><span>미입고처리</span></a>
+            <a href="#none" class="btnNormal"><span>입고취소처리</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#layerErrorIn" class="btnNormal eModal"><span>오입고 등록</span></a>
+            <a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>추가입고 등록<em class="icoLink"></em></span></a>
+        </div>
+    </div>
+</div>
+
+<!-- 참고 : 도움말 -->
+<div class="mHelp typeInfo">
+    <h2>입고대기처리 안내</h2>
+    <div class="content">
+        <h3>1. 용어설명</h3>
+        <ol>
+            <li>1) 입고가/도착입고가
+                <ul>
+                    <li>입고가 : 입고지시서 작성시의 상품/품목의 입고가가 표시됩니다.</li>
+                    <li>
+                        도착입고가 : 입고대기처리시 입고가를 변경하여 저장할 수 있습니다.<br />
+                        상품/품목의 입고가도 변경하려면, [상품정보변경]버튼을 클릭하여 변경해야합니다.
+                    </li>
+                </ul>
+            </li>
+            <li>2) 수량 / 도착수랑/ 금액
+                <ul>
+                    <li>수량 : 입고지시서에 입력된 수량</li>
+                    <li>도착수량 : 창고에 도착한 수량을 입력합니다.</li>
+                    <li>금액 : 도착입고가 * 도착수량</li>
+                </ul>
+            </li>
+            <li>3) 구분
+                <ul>
+                    <li>일반 : 입고지시서에 입력된 상품</li>
+                    <li>
+                        추가 : 입고지시서에 없으나  등록된상품으로 일반입고와 같이 처리해야하는 상품.<br />
+                     추가등록시 등록된 상품을 선택하고, 입고가/랙위치/바코드 정보를 표시합니다.<br />
+                     만약, 등록되지 않은 상품인 경우, 상품등록 후에 처리해야합니다.
+                 </li>
+                    <li>
+                        오입고 : 입고지시서에 없는 상품으로 반송해야하는 상품.<br />
+                       입고가와 수량은 입력되지않으며, 도착수량만 입력합니다.<br />
+                       등록된 상품이라도 입고가/랙위치/바코드등의 정보를 표시하지 않습니다.
+                   </li>
+                </ul>
+            </li>
+            <li>4) 입고상태 : 상품별 입고상태를 표시한다. '미입고/ 입고취소' 가 있습니다.</li>
+            <li>5) 위치코드 : 상품에 등록된 위치코드를 표시합니다.</li>
+            <li>6) 바코드 : 상품에 매칭된 바코드를 표시합니다.</li>
+        </ol>
+        <h3>2. 상품별 입고상태 액션</h3>
+        <ol>
+            <li>1) 입고대기처리 : 입고지시서에 있는 상품 중 상품이 창고에 도착하여 수량 확인이 완료된 경우로 입고대기처리하면 '입고대기'리스트로 이동하며, 입고검수를 거처 '입고완료처리'할 수 있습니다.</li>
+            <li>2) 미입고처리 : 입고취소된 상품/품목을 미입고처리합니다.</li>
+            <li>3) 입고취소처리: 입고지시서에 있는 상품 중 입고가 취소된경우, 입고취소 처리합니다.</li>
+        </ol>
+    </div>
+</div><!-- //참고 -->
+
+<?php require_once('../../include/footer.html'); ?>

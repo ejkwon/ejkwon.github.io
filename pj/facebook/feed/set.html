@@ -1,0 +1,1733 @@
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/head.html'); ?>
+
+<div id="wrap">
+    <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/header.html'); ?>
+    <div id="container">
+        <!-- [ content ] -->
+        <section id="content">
+
+<div class="mTitle">
+    <h1>제품 피드</h1>
+</div>
+
+<div class="mTab typeNav eTab">
+    <ul>
+        <li><a href="/pj/facebook/feed/list.html">제품피드 리스트</a></li>
+        <li><a href="/pj/facebook/feed/setting.html">제품피드 설정</a></li>
+        <li class="selected"><a href="#none">제품세트 추가</a></li>
+        <li><a href="/pj/facebook/feed/except.html">제외상품 리스트</a></li>
+        <li><a href="/pj/facebook/feed/default.html">피드 기본설정</a></li>
+        <li><a href="/pj/facebook/feed/log.html">로그</a></li>
+    </ul>
+</div>
+
+<div class="mTitle">
+    <h2>제품세트 추가</h2>
+    <div class="mSummary">
+        <button type="button" class="btnSummary eSummary">요약 펼치기</button>
+        <!-- 참고: 활성화 시
+        <button type="button" class="btnSummary">요약 접기</button>
+        -->
+        <div class="dropdown">
+            <strong class="txtTitle">제품세트 조건 요약</strong>
+            <div class="summary gScroll">
+                <p>카테고리 <span class="txtEm">$반팔티$</span> 을(를) $추가$</p>
+                <p><span class="txtEm">$2017-01-18$ ~ $2017-01-20$</span> 기간의<br><span class="txtEm">$총판매수량$ $3000$ ~ $5000$</span>중<br><span class="txtEm">$상위$ $100$</span>개</p>
+                <p>메인분류는 <span class="txtEm">$전체$</span></p>
+                <p>메인페이지에 <span class="txtEm">$진열됨$</span></p>
+                <p>상품번호 <span class="txtEm">$100$, $99$</span>번을 제외</p>
+                <p>제품 세트 업데이트 시 스케줄링 기능 <span class="txtEm">$ON$</span></p>
+                <p><span class="txtEm">$매주$ $월요일$</span></p>
+                <p><span class="txtEm">$</span>1회차<span class="txtEm">(00시)$</span>에</p>
+                <p>업데이트 전 미리 알림 <span class="txtEm">$ON$</span></p>
+                <p><span class="txtEm">$상품수정일$ $2017-01-18$~$2017-01-18$</span></p>
+            </div>
+            <div class="footer">
+                <p class="guide">위 조건으로 제품 세트를 생성 합니다.<br>이대로 제품세트를 생성 하시려면 목록에서<br><strong>[제품세트추가] 버튼을 클릭</strong>하세요.</p>
+                <div class="button"><button type="button" class="btnSubmit medium">설정항목 저장</button></div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="mCtrl typeHeader gridSet gBlankL">
+    <div class="grid">
+        <strong class="txtSub">제품 세트명 : 베스트+신상_0809</strong>
+    </div>
+    <div class="grid right">
+        <div class="mSelect ePosTarget left" style="width:230px;"><!-- 참고: 활성화시, class "selected" 추가. -->
+            <div class="value ePosClick">
+                기본값 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+            </div>
+            <div class="optionLayer ePosLayer">
+                <div class="optionInput">
+                    <div class="fText">
+                        <input type="search" placeholder="검색">
+                        <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        <button type="button" class="btnSearch"><i class="icoSearch">검색</i></button>
+                    </div>
+                </div>
+                <ul class="optionSelect">
+                    <li class="gridSet">
+                        <span class="grid">장바구니 담긴 수 기준 TOP 100</span>
+                    </li>
+                    <li class="gridSet">
+                        <span class="grid">페이스북 DPA</span>
+                    </li>
+                    <li class="gridSet">
+                        <span class="grid">판매수 기준 TOP 10</span>
+                    </li>
+                    <li class="gridSet">
+                        <span class="grid">$설정항목명</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="#layerControlSetting" class="btnConfirm eLayerClick"><span>저장된 설정항목 관리</span></a>
+    </div>
+</div>
+
+<div class="mBoard typeEdit">
+    <table border="1">
+        <caption>검색</caption>
+        <colgroup>
+            <col style="width:210px;">
+            <col style="width:auto;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <select class="fSelect" style="width:150px;">
+                        <option>상품등록일</option>
+                        <option>상품수정일</option>
+                        <option>제조일자</option>
+                        <option>출시일자</option>
+                        <option>유효기간</option>
+                    </select>
+                    <select class="fSelect" style="width:150px;">
+                        <option>전체기간</option>
+                        <option>어제</option>
+                        <option>최근일수</option>
+                        <option>일간</option>
+                        <option>주간</option>
+                        <option>월간</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <select class="fSelect" style="width:150px;">
+                        <option>상품등록일</option>
+                        <option>상품수정일</option>
+                        <option>제조일자</option>
+                        <option>출시일자</option>
+                        <option>유효기간</option>
+                    </select>
+                    <select class="fSelect" style="width:150px;">
+                        <option>전체기간</option>
+                        <option selected>어제</option>
+                        <option>최근일수</option>
+                        <option>일간</option>
+                        <option>주간</option>
+                        <option>월간</option>
+                    </select>
+                    <span class="txtForm gSideS">어제 일자 : 2017-12-11</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <select class="fSelect" style="width:150px;">
+                        <option>상품등록일</option>
+                        <option>상품수정일</option>
+                        <option>제조일자</option>
+                        <option>출시일자</option>
+                        <option>유효기간</option>
+                    </select>
+                    <select class="fSelect" style="width:150px;">
+                        <option>전체기간</option>
+                        <option>어제</option>
+                        <option selected>최근일수</option>
+                        <option>일간</option>
+                        <option>주간</option>
+                        <option>월간</option>
+                    </select>
+                    <span class="txtForm gSideS">최근</span>
+                    <div class="fText gSideS" style="width:77px"><input type="text"></div>
+                    <span class="txtForm gSideS">일</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <select class="fSelect" style="width:150px;">
+                        <option>상품등록일</option>
+                        <option>상품수정일</option>
+                        <option>제조일자</option>
+                        <option>출시일자</option>
+                        <option>유효기간</option>
+                    </select>
+                    <select class="fSelect" style="width:150px;">
+                        <option>어제</option>
+                        <option>최근일수</option>
+                        <option>전체기간</option>
+                        <option selected>일간</option>
+                        <option>주간</option>
+                        <option>월간</option>
+                    </select>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <strong>&nbsp;-&nbsp;</strong>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <div class="mMethod typeToggle gSideS gBlankS">
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">금일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">7일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">30일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">금주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전월</span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <select class="fSelect" style="width:150px;">
+                        <option>상품등록일</option>
+                        <option>상품수정일</option>
+                        <option>제조일자</option>
+                        <option>출시일자</option>
+                        <option>유효기간</option>
+                    </select>
+                    <select class="fSelect" style="width:150px;">
+                        <option>어제</option>
+                        <option>최근일수</option>
+                        <option>전체기간</option>
+                        <option>일간</option>
+                        <option>주간</option>
+                        <option selected>월간</option>
+                    </select>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <strong>&nbsp;-&nbsp;</strong>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <div class="mMethod typeToggle gSideS gBlankS">
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">금월</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전월</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">1달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">3달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">6달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">9달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">12달</span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">조건</th>
+                <td>
+                    <ul class="mForm">
+                        <li>
+                            <div class="mSelect" style="width:150px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                                <div class="value">소비자가 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                <div class="optionLayer">
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <span class="grid">소비자가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">판매가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">할인가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">모바일할인가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">브랜드</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">총판매수량</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">총판매금액</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">상품후기수</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">상품상세페이지뷰</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">장바구니담기횟수</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">장바구니담긴금액</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">노출대비판매율</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="fText" style="width:100px;">
+                                <input type="text" placeholder="1000">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            ~
+                            <div class="fText" style="width:100px;">
+                                <input type="text" placeholder="5000">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            <div class="mSelect" style="width:100px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                                <div class="value">상위 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                <div class="optionLayer">
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <span class="grid">상위</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">하위</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="fText" style="width:80px;">
+                                <input type="text" placeholder="">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            개
+                            <button type="button" class="btnAdd gSideM"><i class="icoAdd">추가</i></button>
+                        </li>
+                        <li>
+                            <div class="mSelect" style="width:150px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                                <div class="value">상품후기수 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                <div class="optionLayer">
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <span class="grid">소비자가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">판매가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">할인가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">모바일할인가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">브랜드</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">총판매수량</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">총판매금액</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">상품후기수</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">상품상세페이지뷰</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">장바구니담기횟수</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">장바구니담긴금액</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">노출대비판매율</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mSelect" style="width:100px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                                <div class="value">전체기간 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                <div class="optionLayer">
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <span class="grid">전체기간</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">날짜지정</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <select class="fSelect" style="width:100px;">
+                                <option>전체기간</option>
+                            </select>
+                            <div class="fText" style="width:130px;">
+                                <input type="text" placeholder="예시) 2017-02-09">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            ~
+                            <div class="fText" style="width:130px;">
+                                <input type="text" placeholder="예시) 2017-09-01">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            <div class="mSelect" style="width:100px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                                <div class="value">상위 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                <div class="optionLayer">
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <span class="grid">상위</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">하위</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="fText" style="width:80px;">
+                                <input type="text" placeholder="">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            개
+                            <button type="button" class="btnAdd gSideM"><i class="icoAdd">추가</i></button>
+                            <button type="button" class="btnRemove"><i class="icoRemove">삭제</i></button>
+                        </li>
+                        <li>
+                            <div class="mSelect" style="width:150px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                                <div class="value">브랜드 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                <div class="optionLayer">
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <span class="grid">소비자가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">판매가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">할인가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">모바일할인가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">브랜드</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">총판매수량</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">총판매금액</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">상품후기수</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">상품상세페이지뷰</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">장바구니담기횟수</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">장바구니담긴금액</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">노출대비판매율</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mSelect" style="width:300px;">
+                                <div class="value">
+                                    전체 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+                                </div>
+                                <div class="optionLayer">
+                                    <div class="optionInput">
+                                        <div class="fText">
+                                            <input type="search" placeholder="검색">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                            <button type="button" class="btnSearch"><i class="icoSearch">검색</i></button>
+                                        </div>
+                                    </div>
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">전체</span></label>
+                                        </li>
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="btnRemove"><i class="icoRemove">삭제</i></button>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">카테고리(상품분류)</th>
+                <td>
+                    <ul class="mForm">
+                        <li>
+                            <label class="gLabel middle"><input type="radio" class="fRadio"><span class="fLabel">카테고리선택</span></label>
+                            <div class="mSelect gSideM" style="width:200px;">
+                                <div class="value">
+                                    대분류 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+                                </div>
+                                <div class="optionLayer">
+                                    <div class="optionInput">
+                                        <div class="fText">
+                                            <input type="search" placeholder="검색">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                            <button type="button" class="btnSearch"><i class="icoSearch">검색</i></button>
+                                        </div>
+                                    </div>
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mSelect" style="width:200px;">
+                                <div class="value">
+                                    중분류 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+                                </div>
+                                <div class="optionLayer">
+                                    <div class="optionInput">
+                                        <div class="fText">
+                                            <input type="search" placeholder="검색">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                            <button type="button" class="btnSearch"><i class="icoSearch">검색</i></button>
+                                        </div>
+                                    </div>
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mSelect" style="width:200px;">
+                                <div class="value">
+                                    소분류 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+                                </div>
+                                <div class="optionLayer">
+                                    <div class="optionInput">
+                                        <div class="fText">
+                                            <input type="search" placeholder="검색">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                            <button type="button" class="btnSearch"><i class="icoSearch">검색</i></button>
+                                        </div>
+                                    </div>
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mSelect" style="width:200px;">
+                                <div class="value">
+                                    상세분류 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+                                </div>
+                                <div class="optionLayer">
+                                    <div class="optionInput">
+                                        <div class="fText">
+                                            <input type="search" placeholder="검색">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                            <button type="button" class="btnSearch"><i class="icoSearch">검색</i></button>
+                                        </div>
+                                    </div>
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                        <li class="gridSet">
+                                            <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="gLabel middle"><input type="radio" class="fRadio"><span class="fLabel">검색어 입력</span></label>
+                            <div class="fText gSideL">
+                                <input type="text" placeholder="" disabled>
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            <div class="mSelect" style="width:100px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                                <div class="value">추가 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                <div class="optionLayer">
+                                    <ul class="optionSelect">
+                                        <li class="gridSet">
+                                            <span class="grid">추가</span>
+                                        </li>
+                                        <li class="gridSet">
+                                            <span class="grid">제외</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#none" class="btnConfirm"><span>추가</span></a>
+                        </li>
+                        <li>
+                            <div class="mBubbles gBlankM">
+                                <div class="box">
+                                    <ul>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자</span></li>
+                                        <li><span class="text">글자+삭제버튼</span><button type="button" class="btnDelete">삭제</button></li>
+                                        <li><input type="text" class="text" placeholder="예시) 힌트" style="width:60px;"></li>
+                                        <li><input type="text" class="text" value="글자입력 가능" style="width:80px;"></li>
+                                        <li><input type="text" class="text" value="글자입력 가능" style="width:80px;"><button type="button" class="btnDelete">삭제</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr >
+                <th scope="row">검색</th>
+                <td>
+                    <div class="mSelect" style="width:200px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                        <div class="value">상품번호 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                        <div class="optionLayer">
+                            <ul class="optionSelect">
+                                <li class="gridSet">
+                                    <span class="grid">상품번호</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">상품코드</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">상품명</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <textarea class="fTextarea" style="width:774px;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">메인분류</th>
+                <td>
+                    <div class="mSelect" style="width:100%;">
+                        <div class="value">
+                            전체 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+                        </div>
+                        <div class="optionLayer">
+                            <div class="optionInput">
+                                <div class="fText">
+                                    <input type="search" placeholder="검색">
+                                    <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                    <button type="button" class="btnSearch"><i class="icoSearch">검색</i></button>
+                                </div>
+                            </div>
+                            <ul class="optionSelect">
+                                <li class="gridSet">
+                                    <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">전체</span></label>
+                                </li>
+                                <li class="gridSet">
+                                    <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                </li>
+                                <li class="gridSet">
+                                    <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">옵션</span></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="mTitle">
+    <h2>메인분류</h2>
+</div>
+<div class="mBoard typeEdit">
+    <table border="1">
+        <caption>검색</caption>
+        <colgroup>
+            <col style="width:210px;">
+            <col style="width:auto;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">메인페이지 진열여부</th>
+                <td>
+                    <div class="mForm">
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">진열됨</span></label>
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">진열안됨</span></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">연관상품 포함 여부</th>
+                <td>
+                    <div class="mForm">
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">포함함</span></label>
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">포함안함</span></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">스케줄링 사용여부</th>
+                <td>
+                    <div class="mForm">
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">사용함</span></label>
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">사용안함</span></label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 참고: 스케줄링 사용여부 > 사용함 선택시 노출 -->
+<div class="mTitle">
+    <h2>스케줄링 사용여부</h2>
+</div>
+<div class="mBoard typeEdit">
+    <table border="1">
+        <caption>검색</caption>
+        <colgroup>
+            <col style="width:210px;">
+            <col style="width:auto;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">업데이트 일시</th>
+                <td>
+                    <div class="gridSet top">
+                        <div class="grid3">
+                            <span class="txtForm">주기 : </span>
+                            <div class="fText gSideS" style="width:100px"><input type="number" min="1" max="5"></div>
+                            <select class="fSelect" style="width:140px">
+                                <option>일 마다</option>
+                                <option>주 마다</option>
+                                <option>개월 마다</option>
+                            </select>
+                        </div>
+                        <div class="grid7">
+                            <ul class="mForm">
+                                <li>
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.06.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    -
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.07.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    <label class="gLabel middle gSideS"><input type="checkbox" class="fCheck"><span class="fLabel">종료일 없음</span></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gridSet gBlankS">
+                        <span class="txtForm">회차 : </span>
+                        <div class="mForm gSideM">
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">1회차(00시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">2회차(08시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">3회차(11시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">4회차(17시)</span></label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">업데이트 일시</th>
+                <td>
+                    <div class="gridSet top">
+                        <div class="grid3">
+                            <span class="txtForm">주기 : </span>
+                            <div class="fText gSideS" style="width:100px"><input type="number" min="1" max="5"></div>
+                            <select class="fSelect" style="width:140px">
+                                <option>일 마다</option>
+                                <option selected>주 마다</option>
+                                <option>개월 마다</option>
+                            </select>
+                        </div>
+                        <div class="grid7">
+                            <ul class="mForm">
+                                <li>
+                                    <select class="fSelect gSideS">
+                                        <option>월요일</option>
+                                        <option>화요일</option>
+                                        <option>수요일</option>
+                                        <option>목요일</option>
+                                        <option>금요일</option>
+                                        <option>토요일</option>
+                                        <option>일요일</option>
+                                    </select>
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.06.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    -
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.07.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    <label class="gLabel middle gSideS"><input type="checkbox" class="fCheck"><span class="fLabel">종료일 없음</span></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gridSet gBlankS">
+                        <span class="txtForm">회차 : </span>
+                        <div class="mForm gSideM">
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">1회차(00시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">2회차(08시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">3회차(11시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">4회차(17시)</span></label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">업데이트 일시</th>
+                <td>
+                    <div class="gridSet top">
+                        <div class="grid3">
+                            <span class="txtForm">주기 : </span>
+                            <div class="fText gSideS" style="width:100px"><input type="number" min="1" max="5"></div>
+                            <select class="fSelect" style="width:140px">
+                                <option>일 마다</option>
+                                <option>주 마다</option>
+                                <option selected>개월 마다</option>
+                            </select>
+                        </div>
+                        <div class="grid7">
+                            <ul class="mForm">
+                                <li>
+                                    <label class="gLabel middle"><input type="radio" class="fRadio"><span class="fLabel">매월</span></label>
+                                    <div class="fText gSideS" style="width:60px"><input type="number" min="1" max="5"></div> 일
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.06.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    -
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.07.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    <label class="gLabel middle gSideS"><input type="checkbox" class="fCheck"><span class="fLabel">종료일 없음</span></label>
+                                </li>
+                                <li>
+                                    <label class="gLabel middle"><input type="radio" class="fRadio"><span class="fLabel">매월</span></label>
+                                    <div class="fText gSideS" style="width:60px"><input type="number" min="1" max="5"></div> 번째
+                                    <select class="fSelect gSideS">
+                                        <option>월요일</option>
+                                        <option>화요일</option>
+                                        <option>수요일</option>
+                                        <option>목요일</option>
+                                        <option>금요일</option>
+                                        <option>토요일</option>
+                                        <option>일요일</option>
+                                    </select>
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.06.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    -
+                                    <div class="mForm typeCalendar">
+                                        <div class="fText">
+                                            <input type="text" value="2017.07.09" id="datepicker">
+                                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                        </div>
+                                        <button type="button" class="btnPrev">이전</button>
+                                        <button type="button" class="btnNext">다음</button>
+                                    </div>
+                                    <label class="gLabel middle gSideS"><input type="checkbox" class="fCheck"><span class="fLabel">종료일 없음</span></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gridSet gBlankS">
+                        <span class="txtForm">회차 : </span>
+                        <div class="mForm gSideM">
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">1회차(00시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">2회차(08시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">3회차(11시)</span></label>
+                            <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">4회차(17시)</span></label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">업데이트 전 쪽지로 알림</th>
+                <td>
+                    <div class="mForm">
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">알림함</span></label>
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">알림안함</span></label>
+                    </div>
+                    <ul class="mList">
+                        <li>제품세트 업데이트 시 업데이트 시간 n분 전에 쪽지로 알림 후 관리자가 업데이트를 승인하면 실행합니다.</li>
+                        <li>스케줄링 기능을 사용하여 제품을 업데이트 하는 경우만 알림 할 수 있습니다.</li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- //참고 -->
+        </tbody>
+    </table>
+    <!-- 참고: 내역 없을 경우 tbody의 <tr>을 제거한 후, <p class="mEmpty">내역이 없습니다.</p> 로 처리합니다 -->
+    <p class="mEmpty">제품피드가 없습니다. 제품피드 생성 후에 제품세트를 추가해주세요.<br><a href="#none" class="btnConfirm medium gBlankM">제품 피드 만들기</a></p>
+</div><!-- //참고 -->
+
+<div class="mButton justify">
+    <button type="button" class="btnNormal medium">초기화</button><button type="button" class="btnSubmit medium">검색</button>
+    <span class="gRight">
+        <a href="#layerSettingSave" class="btnNormal medium eLayerClick">설정항목 저장</a>
+    </span>
+</div>
+
+<div class="mTitle">
+    <h2>상품목록</h2>
+    <p class="txtDesc">[총 상품 <span class="txtEm">40</span>개] 검색결과 <span class="txtEm">11</span>개</p>
+    <div>
+        <button type="button" class="btnThumb selected">썸네일 진열</button>
+        <button type="button" class="btnList">목록 진열</button>
+         <select class="fSelect" style="width:190px;">
+            <option>100개씩보기</option>
+            <option>200개씩보기</option>
+            <option>300개씩보기</option>
+            <option>400개씩보기</option>
+            <option>500개씩보기</option>
+        </select>
+    </div>
+</div>
+<div class="mCtrl typeHeader gridSet center gutter">
+    이 페이지에 있는 검색 결과 <span class="txtEm gSideS">50</span>개가 모두 선택되었습니다. <a href="#none" class="txtLink gSideM eAllListChk">전체 목록 947개 선택</a>
+</div>
+<div class="mCtrl typeHeader gridSet setting">
+    <div class="grid middle">
+        <strong class="txtSub">선택한 항목을</strong>
+        <a href="#layerAddSet" class="btnConfirm small eLayerClick"><span>제품세트추가</span></a>
+        <a href="#none" class="btnBasic small gSideS">제품별 워터마크 설정</a>
+        <button type="button" class="btnBasic small gSideS">제품별 워터마크 해제</button>
+        <div class="mOpen gSideS">
+            <a href="#excludeOpen1" class="btnBasic small eOpenClick">제외상품설정 <i class="icoArrow"></i></a>
+            <div id="excludeOpen1" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">제외상품 추가</a></li>
+                        <li><a href="#none">제외상품 리스트</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mOpen gSideS">
+            <a href="#rangeSetOpen1" class="btnBasic small eOpenClick">모든제품보기 <i class="icoArrow"></i></a>
+            <div id="rangeSetOpen1" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">모든제품보기</a></li>
+                        <li><a href="#none">워터마크 적용</a></li>
+                        <li><a href="#none">워터마크 미적용</a></li>
+                        <li><a href="#none">텍스트비율 20%이상</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid right">
+        <div class="mMethod typeToggle">
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">기본값</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정1</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정2</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정3</span>
+            </label>
+        </div>
+        <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/inc_setting.html'); ?>
+    </div>
+</div>
+<ul class="mImgList">
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="mBalloon ePosTarget">
+            <div class="thumb ePosHover">
+                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" class="img" alt="">
+                <div class="button">
+                    <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                    <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+                </div>
+            </div>
+            <div class="balloon ePosLayer">
+                <strong class="txtTitle">동일한 워터마크가 포함된 제품세트</strong>
+                <ol class="mList">
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                </ol>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목">소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목</strong><!-- 참고: strong title=""에 텍스트 내용 동일하게 넣어주세요. -->
+            <div class="mTooltip ePosTarget">
+                <button type="button" class="icon icoAlert ePosHover">오류안내</button>
+                <div class="tooltip ePosLayer">
+                    <p>이미지 사이즈가 너무 작습니다. 블라블라</p>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li><!-- 참고: li title=""에 텍스트 내용 동일하게 넣어주세요. -->
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="mBalloon ePosTarget">
+            <div class="thumb ePosHover">
+                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" class="img" alt="">
+                <div class="button">
+                    <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                    <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+                </div>
+            </div>
+            <div class="balloon ePosLayer">
+                <strong class="txtTitle">동일한 워터마크가 포함된 제품세트</strong>
+                <ol class="mList">
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                </ol>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목">소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목소재제목</strong>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li>
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="mBalloon ePosTarget">
+            <div class="thumb ePosHover">
+                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" class="img" alt="">
+                <div class="button">
+                    <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                    <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+                </div>
+            </div>
+            <div class="balloon ePosLayer">
+                <strong class="txtTitle">동일한 워터마크가 포함된 제품세트</strong>
+                <ol class="mList">
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                </ol>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목">소재제목</strong>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li>
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="mBalloon ePosTarget">
+            <div class="thumb ePosHover">
+                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" class="img" alt="">
+                <div class="button">
+                    <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                    <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+                </div>
+            </div>
+            <div class="balloon ePosLayer">
+                <strong class="txtTitle">동일한 워터마크가 포함된 제품세트</strong>
+                <ol class="mList">
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                </ol>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목">소재제목</strong>
+            <div class="mTooltip ePosTarget">
+                <button type="button" class="icon icoAlert ePosHover">오류안내</button>
+                <div class="tooltip ePosLayer">
+                    <p>이미지 사이즈가 너무 작습니다. 블라블라</p>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li>
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="mBalloon ePosTarget">
+            <div class="thumb ePosHover">
+                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" class="img" alt="">
+                <div class="button">
+                    <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                    <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+                </div>
+            </div>
+            <div class="balloon ePosLayer">
+                <strong class="txtTitle">동일한 워터마크가 포함된 제품세트</strong>
+                <ol class="mList">
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                </ol>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목">소재제목</strong>
+            <div class="mTooltip ePosTarget">
+                <button type="button" class="icon icoAlert ePosHover">오류안내</button>
+                <div class="tooltip ePosLayer">
+                    <p>이미지를 넣어주세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li>
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="mBalloon ePosTarget">
+            <div class="thumb ePosHover">
+                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" class="img" alt="">
+                <div class="button">
+                    <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                    <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+                </div>
+            </div>
+            <div class="balloon ePosLayer">
+                <strong class="txtTitle">동일한 워터마크가 포함된 제품세트</strong>
+                <ol class="mList">
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                </ol>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목">소재제목</strong>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li>
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="mBalloon ePosTarget">
+            <div class="thumb ePosHover">
+                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" class="img" alt="">
+                <div class="button">
+                    <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                    <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+                </div>
+            </div>
+            <div class="balloon ePosLayer">
+                <strong class="txtTitle">동일한 워터마크가 포함된 제품세트</strong>
+                <ol class="mList">
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                    <li>$세트이름$</li>
+                </ol>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목">소재제목</strong>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li>
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+        <div class="thumb">
+            <div class="button">
+                <a href="#none" title="이미지 편집" class="btnEdit">편집</a>
+                <a href="#none" title="이미지 삭제" class="btnDelete">삭제</a>
+            </div>
+        </div>
+        <div class="head">
+            <strong class="title txtEllipsis" title="소재제목">소재제목</strong>
+        </div>
+        <div class="body">
+            <ul>
+                <li title="목표: $목표"><strong class="title">목표</strong> $목표</li>
+                <li title="목표: $유형"><strong class="title">목표</strong> $유형</li>
+                <li title="입력된 내용이 노출되며 수정이 불가합니다."><strong class="blind">입력된 내용</strong> <textarea class="fTextarea full" readonly>입력된 내용이 노출되며 수정이 불가합니다.</textarea></li>
+                <li title="생성일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">생성일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+                <li title="업데이트일시: $YYYY-MM-DD hh:mm:ss"><strong class="title">업데이트일시</strong> $YYYY-MM-DD hh:mm:ss</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+<div class="mCtrl typeFooter gridSet">
+    <div class="grid middle">
+        <strong class="txtSub">선택한 항목을</strong>
+        <a href="#layerAddSet" class="btnConfirm small eLayerClick"><span>제품세트추가</span></a>
+        <a href="#none" class="btnBasic small gSideS">제품별 워터마크 설정</a>
+        <button type="button" class="btnBasic small gSideS">제품별 워터마크 해제</button>
+        <div class="mOpen gSideS">
+            <a href="#excludeOpen2" class="btnBasic small eOpenClick">제외상품설정 <i class="icoArrow"></i></a>
+            <div id="excludeOpen2" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">제외상품 추가</a></li>
+                        <li><a href="#none">제외상품 리스트</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mOpen gSideS">
+            <a href="#rangeSetOpen2" class="btnBasic small eOpenClick">모든제품보기 <i class="icoArrow"></i></a>
+            <div id="rangeSetOpen2" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">모든제품보기</a></li>
+                        <li><a href="#none">워터마크 적용</a></li>
+                        <li><a href="#none">워터마크 미적용</a></li>
+                        <li><a href="#none">텍스트비율 20%이상</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid right">
+        <div class="mMethod typeToggle">
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">기본값</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정1</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정2</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정3</span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="mTitle">
+    <h2>상품목록</h2>
+    <p class="txtDesc">[총 상품 <span class="txtEm">40</span>개] 검색결과 <span class="txtEm">11</span>개</p>
+    <div>
+        <button type="button" class="btnThumb">썸네일 진열</button>
+        <button type="button" class="btnList selected">목록 진열</button>
+        <select class="fSelect" style="width:190px;">
+            <option>100개씩보기</option>
+            <option>200개씩보기</option>
+            <option>300개씩보기</option>
+            <option>400개씩보기</option>
+            <option>500개씩보기</option>
+        </select>
+    </div>
+</div>
+<div class="mCtrl typeHeader gridSet center gutter">
+    이 페이지에 있는 검색 결과 <span class="txtEm gSideS">50</span>개가 모두 선택되었습니다. <a href="#none" class="txtLink gSideM eAllListChk">전체 목록 947개 선택</a>
+</div>
+<div class="mCtrl typeHeader gridSet setting">
+    <div class="grid middle">
+        <strong class="txtSub">선택한 항목을</strong>
+        <a href="#layerAddSet" class="btnConfirm small eLayerClick"><span>제품세트추가</span></a>
+        <a href="#none" class="btnBasic small gSideS">제품별 워터마크 설정</a>
+        <button type="button" class="btnBasic small gSideS">제품별 워터마크 해제</button>
+        <div class="mOpen gSideS">
+            <a href="#excludeOpen3" class="btnBasic small eOpenClick">제외상품설정 <i class="icoArrow"></i></a>
+            <div id="excludeOpen3" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">제외상품 추가</a></li>
+                        <li><a href="#none">제외상품 리스트</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mOpen gSideS">
+            <a href="#rangeSetOpen3" class="btnBasic small eOpenClick">모든제품보기 <i class="icoArrow"></i></a>
+            <div id="rangeSetOpen3" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">모든제품보기</a></li>
+                        <li><a href="#none">워터마크 적용</a></li>
+                        <li><a href="#none">워터마크 미적용</a></li>
+                        <li><a href="#none">텍스트비율 20%이상</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid right">
+        <div class="mMethod typeToggle">
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">기본값</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정1</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정2</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정3</span>
+            </label>
+        </div>
+        <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/inc_setting.html'); ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#eMultiTable').fixResize({ scrollWidth:5 });
+    });
+</script>
+<div class="mBoard typeView">
+    <table border="1" id="eMultiTable" class="eChkColor">
+        <caption>상품목록</caption>
+        <thead>
+            <tr>
+                <th scope="col" style="width:52px;"><label class="gLabel"><input type="checkbox" class="fCheck allChk"><span class="fLabel"></span></label></th>
+                <th scope="col" class="array ascend" style="width:130px;">상품번호<button type="button">오름차순 정렬</button></th>
+                <th scope="col" style="width:110px;">기본설정<br>이미지</th>
+                <th scope="col" class="array ascend" style="width:200px;">상품명<button type="button">오름차순 정렬</button></th>
+                <th scope="col" style="width:100px;">상품<br>상세설명</th>
+                <th scope="col" style="width:260px;">상품상세링크</th>
+                <th scope="col" class="array ascend" style="width:140px;">판매가<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:140px;">할인가<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:119px;">총 판매수량<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:140px;">총 판매금액<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:105px;">상품상세페이지뷰<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:100px;">노출대비판매율<button type="button">오름차순 정렬</button></th>
+                <th scope="col" style="width:240px;">상품분류</th>
+                <th scope="col" style="width:119px;">메인분류</th>
+                <th scope="col" style="width:260px;">관련상품<br>(상품번호)</th>
+                <th scope="col" class="array" style="width:119px;">상품등록일<button type="button">내림차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:119px;">상품수정일<button type="button">오름차순 정렬</button></th>
+                <th scope="col" style="width:119px;">상품코드</th>
+                <th scope="col" style="width:119px;">브랜드</th>
+                <th scope="col" class="array ascend" style="width:140px;">소비자가<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:140px;">모바일 할인가<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:119px;">제조일자<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:119px;">출시일자<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:119px;">유효기간<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:119px;">상품후기 수<button type="button">오름차순 정렬</button></th>
+                <th scope="col" style="width:260px;">상품상세 링크 모바일</th>
+                <th scope="col" class="array ascend" style="width:120px;">장바구니에<br>담긴 횟수<button type="button">오름차순 정렬</button></th>
+                <th scope="col" class="array ascend" style="width:150px;">장바구니에<br>담긴 금액<button type="button">오름차순 정렬</button></th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><label class="gLabel"><input type="checkbox" class="fCheck rowChk"><span class="fLabel"></span></label></td>
+                <td>1001-00100</td>
+                <td><a href="#layerImagepreview" class="eLayerClick"><img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" width="79" class="img" alt=""></a></td>
+                <td class="left">그래픽 반팔티</td>
+                <td><a href="#layerWriteProduct" target="_blank" class="btnBasic small eLayerClick"><span>확인</span></a></td>
+                <td class="left">http://m.66girls.co.kr/product/detail.html?product_no=69021&cate_no</td>
+                <td class="right">10,000 KRW</td>
+                <td class="right">9,000 KRW</td>
+                <td>13,223</td>
+                <td class="right">9,000,000 KRW</td>
+                <td>13,223</td>
+                <td>2.4%</td>
+                <td class="left">
+                    탑 &gt; 티 &gt; 반팔티 &gt; 그래픽티 &gt; 내용내용내용내용
+                </td>
+                <td>
+                    <div class="mBalloon ePosTarget">
+                        <span class="txtBalloon ePosHover">신상품</span>
+                        <div class="balloon ePosLayer">
+                            <ul>
+                                <li>Best</li>
+                                <li>Hot</li>
+                                <li>신상품</li>
+                                <li>추천상품</li>
+                                <li>Best</li>
+                                <li>Hot</li>
+                                <li>신상품</li>
+                                <li>추천상품</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+                <td class="left">관련상품1 (11)<br>관련상품2 (12)<br>관련상품3 (13)</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>P000000K</td>
+                <td>자체브랜드</td>
+                <td class="right">9,000,000 KRW</td>
+                <td class="right">9,000,000 KRW</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>1,213,223</td>
+                <td class="left">http://m.66girls.co.kr/product/detail.html?product_no=69021&cate_no</td>
+                <td>13,223</td>
+                <td class="right">19,000,000 USD</td>
+            </tr>
+            <tr>
+                <td><label class="gLabel"><input type="checkbox" class="fCheck rowChk"><span class="fLabel"></span></label></td>
+                <td>1001-00100</td>
+                <td><a href="#layerImagepreview" class="eLayerClick"><img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" width="79" class="img" alt=""></a></td>
+                <td class="left">그래픽 반팔티</td>
+                <td><a href="#layerWriteProduct" target="_blank" class="btnBasic small eLayerClick"><span>확인</span></a></td>
+                <td class="left">http://m.66girls.co.kr/product/detail.html?product_no=69021&cate_no</td>
+                <td class="right">10,000 KRW</td>
+                <td class="right">9,000 KRW</td>
+                <td>13,223</td>
+                <td class="right">9,000,000 KRW</td>
+                <td>13,223</td>
+                <td>2.4%</td>
+                <td class="left">
+                    탑 &gt; 티 &gt; 반팔티 &gt; 그래픽티  &gt; 내용내용내용내용
+                </td>
+                <td>
+                    <div class="mBalloon ePosTarget">
+                        <span class="txtBalloon ePosHover">신상품</span>
+                        <div class="balloon ePosLayer">
+                            <ul>
+                                <li>Best</li>
+                                <li>Hot</li>
+                                <li>신상품</li>
+                                <li>추천상품</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+                <td class="left">관련상품1 (11)<br>관련상품2 (12)<br>관련상품3 (13)</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>P000000K</td>
+                <td>자체브랜드</td>
+                <td class="right">9,000,000 KRW</td>
+                <td class="right">9,000,000 KRW</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>1,213,223</td>
+                <td class="left">http://m.66girls.co.kr/product/detail.html?product_no=69021&cate_no</td>
+                <td>13,223</td>
+                <td class="right">19,000,000 USD</td>
+            </tr>
+            <tr>
+                <td><label class="gLabel"><input type="checkbox" class="fCheck rowChk"><span class="fLabel"></span></label></td>
+                <td>1001-00100</td>
+                <td><a href="#layerImagepreview" class="eLayerClick"><img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.jpg" width="79" class="img" alt=""></a></td>
+                <td class="left">그래픽 반팔티</td>
+                <td><a href="#layerWriteProduct" target="_blank" class="btnBasic small eLayerClick"><span>확인</span></a></td>
+                <td class="left">http://m.66girls.co.kr/product/detail.html?product_no=69021&cate_no</td>
+                <td class="right">10,000 KRW</td>
+                <td class="right">9,000 KRW</td>
+                <td>13,223</td>
+                <td class="right">9,000,000 KRW</td>
+                <td>13,223</td>
+                <td>2.4%</td>
+                <td class="left">
+                    탑 &gt; 티 &gt; 반팔티 &gt; 그래픽티  &gt; 내용내용내용내용
+                </td>
+                <td>
+                    <div class="mBalloon ePosTarget">
+                        <span class="txtBalloon ePosHover">신상품</span>
+                        <div class="balloon ePosLayer">
+                            <ul>
+                                <li>Best</li>
+                                <li>Hot</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+                <td class="left">관련상품1 (11)<br>관련상품2 (12)<br>관련상품3 (13)</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>P000000K</td>
+                <td>자체브랜드</td>
+                <td class="right">9,000,000 KRW</td>
+                <td class="right">9,000,000 KRW</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>2017-08-02</td>
+                <td>1,213,223</td>
+                <td class="left">http://m.66girls.co.kr/product/detail.html?product_no=69021&cate_no</td>
+                <td>13,223</td>
+                <td class="right">19,000,000 USD</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 참고: 내역 없을 경우 tbody의 <tr>을 제거한 후, <p class="mEmpty">내역이 없습니다.</p> 로 처리합니다 -->
+    <!--<p class="mEmpty">내역이 없습니다.</p>-->
+</div>
+<div class="mCtrl typeFooter gridSet">
+    <div class="grid middle">
+        <strong class="txtSub">선택한 항목을</strong>
+        <a href="#layerAddSet" class="btnConfirm small eLayerClick"><span>제품세트추가</span></a>
+        <a href="#none" class="btnBasic small gSideS">제품별 워터마크 설정</a>
+        <button type="button" class="btnBasic small gSideS">제품별 워터마크 해제</button>
+        <div class="mOpen gSideS">
+            <a href="#excludeOpen4" class="btnBasic small eOpenClick">제외상품설정 <i class="icoArrow"></i></a>
+            <div id="excludeOpen4" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">제외상품 추가</a></li>
+                        <li><a href="#none">제외상품 리스트</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mOpen gSideS">
+            <a href="#rangeSetOpen4" class="btnBasic small eOpenClick">모든제품보기 <i class="icoArrow"></i></a>
+            <div id="rangeSetOpen4" class="open">
+                <div class="gScroll">
+                    <ul class="default">
+                        <li><a href="#none">모든제품보기</a></li>
+                        <li><a href="#none">워터마크 적용</a></li>
+                        <li><a href="#none">워터마크 미적용</a></li>
+                        <li><a href="#none">텍스트비율 20%이상</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid right">
+        <div class="mMethod typeToggle">
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">기본값</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정1</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정2</span>
+            </label>
+            <label class="btnMethod">
+                <input type="radio" name="test1">
+                <span class="fLabel">설정3</span>
+            </label>
+        </div>
+        <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/inc_setting.html'); ?>
+    </div>
+</div>
+
+<div class="mPaginate">
+    <a href="#none" class="btnPrev disabled">이전페이지</a><!-- 참고: 이전,다음 페이지가 없는 경우, class "disabled" 추가. -->
+    <span class="page">
+        <a href="#none" class="selected" title="현재페이지">1</a>
+        <a href="#none">2</a>
+        <a href="#none">3</a>
+        <a href="#none">4</a>
+        <a href="#none">5</a>
+        <a href="#none">6</a>
+        <a href="#none">7</a>
+        <a href="#none">8</a>
+        <a href="#none">9</a>
+        <a href="#none">10</a>
+    </span>
+    <a href="#none" class="btnNext">다음페이지</a>
+</div>
+
+<div class="mHelp">
+    <h2>도움말 </h2>
+    <div class="content">
+        <p>도움말 내용이 없습니다.</p>
+            <a href="#none" class="btnBasic small gBlankM">수정</a>
+    </div>
+</div>
+
+    </section><!-- //[ content ] -->
+
+</div>
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/footer.html'); ?>

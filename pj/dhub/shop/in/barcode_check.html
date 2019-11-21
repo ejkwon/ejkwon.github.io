@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>바코드 검수</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="800, 700"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>바코드 검수</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>바코드 스캔 검수</h2>
+            <a href="#layerSoundSet" class="btnNormal eLayerClick"><span>효과음설정</span></a>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption>바코드 스캔 검수</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">입고지시번호</th>
+                    <td>20140305-31AA123456</td>
+                </tr>
+                <tr>
+                    <th scope="row">검수결과</th>
+                    <td>
+                        <label class="gLabel"><input type="radio" name="radio1" checked="checked" class="fChk" /> 불량</label>
+                        <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 정상</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수량입력</th>
+                    <td><input type="text" class="fText right" style="width:50px;" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">바코드스캔</th>
+                    <td><input type="text" class="fText" style="width:300px;" /></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>처리결과</h2>
+        </div>
+        <div class="mBox typeBorder">
+            <!-- 참고 : 정상 -->
+            <strong>입고정상</strong>
+            <p>(바코드 : 123456789)</p>
+            <p>상품명 : 땡땡이스카프 빨강 FREE</p>
+            <p>옵션 : 단일옵션</p>
+            <p>공급처 : 대한상사</p>
+            <p>공급처 상품명 : 떙떙빨강S</p>
+            <p>수량 : 1개</p>
+
+            <!-- 참고 : 오류 -->
+            <strong>입고오류</strong>
+            <p>(바코드 : 123456789)</p>
+            <p><span class="txtWarn">입고지시서의 상품이 아닙니다.</span></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>바코드 스캔 내역</h2>
+        </div>
+
+        <div class="mBoardArea">
+            <div class="mBoard typeHead">
+                <table border="1" summary="">
+                <caption>바코드 스캔 내역</caption>
+                <colgroup>
+                    <col class="time" />
+                    <col style="width:80px;" />
+                    <col style="width:200px;" />
+                    <col style="width:200px;" />
+                    <col style="width:60px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col">일시</th>
+                        <th scope="col">바코드번호</th>
+                        <th scope="col">공급사명/공급사 상품명</th>
+                        <th scope="col">상품정보/품목명</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">수량</th>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="mBoard typeBody">
+                <table border="1" summary="">
+                <caption>바코드 스캔 내역</caption>
+                <colgroup>
+                    <col class="time" />
+                    <col style="width:80px;" />
+                    <col style="width:200px;" />
+                    <col style="width:200px;" />
+                    <col style="width:60px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody class="center">
+                    <tr>
+                        <td>2012-12-12 15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>갑</p>
+                                <ul class="etc">
+                                    <li>빨간바지 XL</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>너무 멋진 디올 더블 바지</p>
+                                <ul class="etc">
+                                    <li>블랙,L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>불량</td>
+                        <td class="right">1</td>
+                    </tr>
+                    <tr>
+                        <td>2012-12-12 15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">-</td>
+                        <td class="left"><span class="txtWarn">입고지시서 상품 아님</span></td>
+                        <td>-</td>
+                        <td class="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>2012-12-12 15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>갑</p>
+                                <ul class="etc">
+                                    <li>빨간가디건 L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>너무 멋진 디올 더블 바지</p>
+                                <ul class="etc">
+                                    <li>빨간가디건 L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>불량</td>
+                        <td class="right">2</td>
+                    </tr>
+                    <tr>
+                        <td>2012-12-12 15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>갑</p>
+                                <ul class="etc">
+                                    <li>빨간가디건 L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>너무 멋진 디올 더블 바지</p>
+                                <ul class="etc">
+                                    <li>블랙,L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>불량</td>
+                        <td class="right">2</td>
+                    </tr>
+                    <tr>
+                        <td>2012-12-12 15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>갑</p>
+                                <ul class="etc">
+                                    <li>빨간가디건 L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="left">
+                            <div class="gGoods">
+                                <p>너무 멋진 디올 더블 바지</p>
+                                <ul class="etc">
+                                    <li>블랙,L</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>불량</td>
+                        <td class="right">3</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>등록</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+
+<?php require_once('../../include/layer.html'); ?>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

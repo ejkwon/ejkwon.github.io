@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>리스트</title>
+<link rel="stylesheet" type="text/css" href="/css/module.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/uitest.css" media="all" /><!-- 테스트용 CSS -->
+<link rel="stylesheet" type="text/css" href="/guide/ui/import.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>리스트</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>매뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <div class="mGuideBox">
+                <h2>주의사항</h2>
+                <ul>
+                    <li>목록과 동일한 디자인을 가지고 있으나, 한가지의 항목만 노출 할 경우 ul 이 아닌, p로 마크업합니다.</li>
+                    <li>mList의 기본형에 디자인형태에 따라 type이나 grid를 적용합니다.</li>
+                    <li>대부분 table cell 밖에서 사용됩니다.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[p.mList]</h2>
+                </div>
+
+                <p class="mList">1줄일 경우 </p>
+
+                <div class="mTitle">
+                    <h2>[ul.mList] 일반적으로 쓰이는 목록</h2>
+                    <p>사용예 : 상점관리 &gt; 기본정보 설정 &gt; <a href="/smartAdmin/shop/info/mall_email.html" target="_blank">이메일 본인확인</a></p>
+                </div>
+
+                <ul class="mList">
+                    <li>2줄 이상일 경우 일반적으로 쓰이는 목록</li>
+                    <li>2줄 이상일 경우 일반적으로 쓰이는 목록</li>
+                </ul>
+
+                <div class="mBoard type2">
+                    <table border="1" summary="">
+                    <caption>아이콘 꾸미기</caption>
+                    <colgroup><col width="26%" /><col width="auto" /></colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">테이틀안에 단독으로 있을 경우</th>
+                        <td>
+                            <ul class="mList">
+                                <li>2줄 이상일 경우 일반적으로 쓰이는 목록</li>
+                                <li>2줄 이상일 경우 일반적으로 쓰이는 목록</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">form 요소등과 같이사용 될 경우에는 txtInfo를 사용한다.</th>
+                        <td>
+                            <ul class="txtInfo">
+                                <li>2줄 이상일 경우 일반적으로 쓰이는 목록</li>
+                                <li>2줄 이상일 경우 일반적으로 쓰이는 목록</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <div style="position:relative; height:163px;">
+                <div class="mLayer gSmall" style="display:block; margin:20px 0 0;">
+                    <div class="gTop">
+                        <h6>레이어팝업일 경우</h6>
+                    </div>
+                    <div class="gMiddle">
+                        <ul class="mList">
+                            <li>예 : 전체 다운로드</li>
+                            <li>아니오 : 선택 다운로드</li>
+                        </ul>
+                        <div class="mButton">
+                            <a href="#none" class="btnEm"><span>예</span></a>
+                            <a href="#none" class="btnEm"><span>아니오</span></a>
+                            <a href="#none" class="btnEm eLyrClose"><span>닫기</span></a>
+                        </div>
+                    </div>
+                    <a href="#none" class="btnClose eClose"><span>레이어 닫기</span></a>
+                </div>
+                </div>
+
+                <div class="mTitle">
+                    <h2>[ol.mList] 순서가 있는 목록일 경우 사용</h2>
+                    <p>사용예 :  상품관리 &gt; 상품등록 &gt; <a href="/smartAdmin/product/registration/basic_guide.html" target="_blank">공정거래위원회 상품등록 가이드라인</a> 에서만 쓰임.</p>
+                </div>
+
+                <ol class="mList">
+                    <li>여행사</li>
+                    <li>이용항공편</li>
+                    <li>여행기간</li>
+                    <li>총 예정 인원 (출발가능 인원)</li>
+                    <li>호텔정보</li>
+                    <li>포함내역 -유류할증료, 식사, 인솔자, 안내원 수수료, 관광지 입장료 등<br />
+                        추가경비 -공항이용료, 관광진흥기금 등</li>
+                    <li>취소 및 환불규정 (위약금 규정 포함)</li>
+                    <li>예약담당 연락처</li>
+                </ol>
+
+                <!--div class="mTitle">
+                    <h2>[mList + agree] </h2>
+                    <p>상점관리 &gt; <a href="/smartAdmin/shop/info/agreement_privacy.html" target="_blank">쇼핑몰이용약관</a> 에서만 쓰임.</p>
+                </div>
+
+                <ul class="mList agree">
+                    <li><strong class="txtWarn">개인정보취급방침 글자크기, 색상 등으로 쉽게 찾을 수 있도록 표시합니다.</strong><br/>
+                        <img alt="" src="/smAdmin/images/ec_admin/sharedocs/u295_original.png">
+                    </li>
+                </ul-->
+
+                <div class="mTitle">
+                    <h2>[mList + typeIcon] 아이콘 정렬용으로 사용</h2>
+                    <p>사용예 : 상품관리 &gt; 상품등록 &gt; <a href="/smartAdmin/product/registration/basic.html" target="_blank">일반정보 입력</a></p>
+                </div>
+
+                <div class="mBoard type2">
+                    <table border="1" summary="">
+                    <caption>아이콘 꾸미기</caption>
+                    <colgroup><col width="20%" /><col width="auto" /></colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">아이콘 꾸미기</th>
+                        <td>
+                            <div class="mList typeIcon">
+                                <ul>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd1.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd2.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd3.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd4.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd5.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd6.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd7.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd8.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd9.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd10.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd11.gif" alt="" /></label></li>
+                                <li><label class="fChk"><input type="checkbox" /> <img src="//img.echosting.cafe24.com/smartAdmin/img/product/ico_prd12.gif" alt="" /></label></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <!--div class="mTitle">
+                    <h2>[mList6] 아웃룻 설정 팝업에서만 한번 쓰임</h2>
+                    <p>현재 적용된 페이지 없으며, 스마트어드민의 가이드 참고용으로 삽입함. 추후 페이지 적용시 클래스명,정렬 수정되어야 함.</p>
+                </div>
+
+                <div class="mList6">
+                    <ol>
+                    <li class="icoNum1">
+                        <p><strong>아웃룩을 실행하신 후에 [도구]-[계정] 을 누르세요.</strong></p>
+                        <p class="img"><img src="/smAdmin/images/ec_admin/customer/img_pop01.gif" /></p>
+                    </li>
+                    <li class="icoNum2">
+                        <p><strong>    [추가]-[메일] 을 누르시면 새 메일계정을 설정하게 됩니다.</strong></p>
+                        <p class="img"><img src="/smAdmin/images/ec_admin/customer/img_pop02.gif" /></p>
+                    </li>
+
+                    <li class="icoNum3">
+                        <p><strong>메일을 주고 받을 때 표시될 [사용자 이름]을 입력하신 후 다음을 클릭합니다.</strong></p>
+                        <p class="img"><img src="/smAdmin/images/ec_admin/customer/img_pop03.gif" /></p>
+                    </li>
+
+                    <li class="icoNum4">
+                        <p><strong>    [메일 주소]를 입력합니다.</strong></p>
+                        <p class="img"><img src="/smAdmin/images/ec_admin/customer/img_pop04.gif" /></p>
+                    </li>
+
+                    <li class="icoNum5">
+                        <p><strong>[받는 메일 서버 종류]는 POP3 로 설정하시고, [받는 메일서버]와 [보내는 메일서버]에 <em class="txtWarn">고객님의 도메인</em>을 입력하세요.</strong></p>
+                        <p class="img"><img src="/smAdmin/images/ec_admin/customer/img_pop05.gif" /></p>
+                    </li>
+
+                    <li class="icoNum6">
+                        <p>
+                            <strong>[계정 이름]은 반드시! <em class="txtWarn">아이디@도메인 형태로 입력</em>해주세요. 아이디만 입력하면 메일서버에 연결이 되지 않습니다.</strong><br />
+                            아이디만 입력하시면 메일서버에 연결이 되지않습니다.아이디는 메일등록시 고객님께 새로생성하신 임의의 아이디 입니다.<br />
+                            일반적으로 많은 고객님께서 webmaster 혹은 help 혹은 cs 등으로 메일 아이디를 만듭니다.<br />
+                            아이디를 만들 때 입력하는 비밀번호를 꼭 메모해두시기 바랍니다.<br /><br />
+                            예를 들어 고객님의 도메인이 www.simplexi.com 라고 한다면, 메일 추가하실 때 webmaster라고 하셨거나,help 로 메일 아이디를 만드셨다면, webmaster@simplexi.com 로 혹은 help@simplexi.com 으로 입력하시면 됩니다.<br />
+                            그리고 메일 아이디를 생성할 때 입력한 비밀번호를 입력 하시면 됩니다.
+                        </p>
+                        <p class="img"><img src="/smAdmin/images/ec_admin/customer/img_pop06.gif" /></p>
+                    </li>
+
+                    <li class="icoNum7">
+                        <p><strong>마침을 누르시면 메일설정이 완료됩니다.</strong></p>
+                        <p class="img"><img src="/smAdmin/images/ec_admin/customer/img_pop07.gif" /></p>
+                    </li>
+                    </ol>
+                </div-->
+            </div>
+
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

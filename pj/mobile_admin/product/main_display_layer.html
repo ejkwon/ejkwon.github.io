@@ -1,0 +1,234 @@
+<!-- 참고: 상품 추가 레이어 -->
+        <div id="add_product" class="mPopup" style="display:none;">
+            <div id="header">
+                <h1>상품 추가</h1>
+            </div>
+            <div id="content">
+                <div class="mSelect">
+                    <div class="select eToggle">
+                        <button type="button" class="button eButton">진열/판매상태 : <strong>전체</strong></button>
+                        <ul class="list">
+                            <li><strong>전체</strong></li>
+                            <li>판매함</li>
+                            <li>판매안함</li>
+                            <li>진열함</li>
+                            <li>진열안함</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mSearch eToggle">
+                    <fieldset>
+                        <legend>검색조건</legend>
+                        <table border="1">
+                            <caption>검색조건</caption>
+                            <colgroup>
+                                <col style="width:116px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">진열/판매상태</th>
+                                    <td>
+                                        <select class="fSelect full">
+                                            <option selected="selected">전체</option>
+                                            <option>판매함</option>
+                                            <option>판매안함</option>
+                                            <option>진열함</option>
+                                            <option>진열안함</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <select class="fSelect full">
+                                            <option> 상품코드</option>
+                                            <option selected="selected"> 상품명</option>
+                                            <option> 판매가</option>
+                                        </select>
+                                    </th>
+                                    <td>
+                                        <div class="keyword">
+                                            <input type="text" class="fText">
+                                            <button type="button" class="btnClear">검색어삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 참고 : 셀렉트 '판매가'로 변경시 -->
+                                <tr style="display:none">
+                                    <th scope="row">
+                                        <select class="fSelect full">
+                                            <option> 상품코드</option>
+                                            <option> 상품명</option>
+                                            <option selected="selected"> 판매가</option>
+                                        </select>
+                                    </th>
+                                    <td>
+                                        <input type="text" class="fText right" style="width:80px;" value="0"> KRW ~ <input type="text" class="fText right" style="width:80px;" value="1,000,000"> KRW
+                                    </td>
+                                </tr>
+                                <!-- // 참고 -->
+                                <tr>
+                                    <th scope="row">
+                                        <select class="fSelect full">
+                                            <option selected="selected">상품등록일</option>
+                                            <option>상품최종수정일</option>
+                                        </select>
+                                    </th>
+                                    <td>
+                                        <div class="btnToggle">
+                                            <button type="button" class="selected">전체</button>
+                                            <button type="button">1개월</button>
+                                            <button type="button">7일</button>
+                                            <button type="button">직접입력</button>
+                                        </div>
+                                        <!-- 직접입력 선택시 날짜선택용 버튼노출 -->
+                                        <p class="selectDate" style="display:none;">
+                                            <a href="#none">2015.03.23(월)</a>
+                                            <a href="#none">2015.05.23(수)</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품분류</th>
+                                    <td>
+                                        <select class="fSelect half">
+                                            <option selected="selected">대분류</option>
+                                            <option>Top &amp; Tee</option>
+                                        </select>
+                                        <select class="fSelect half">
+                                            <option selected="selected">중분류</option>
+                                            <option>반팔</option>
+                                        </select>
+                                        <span class="gSingle">
+                                            <select class="fSelect half">
+                                                <option selected="selected">소분류</option>
+                                                <option>캐릭터</option>
+                                            </select>
+                                            <select class="fSelect half">
+                                                <option selected="selected">상세분류</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mButton">
+                            <a href="#none" class="btnSubmit">검색</a>
+                            <a href="#none" class="btnNormal">초기화</a>
+                        </div>
+                    </fieldset>
+                    <a href="#none" class="btnDetail eButton"><span>상세검색</span></a>
+                </div>
+                <div class="searchArea">
+                    <div class="mCtrl typeHeader">
+                        <div class="gLeft">
+                            <input type="checkbox" class="fChk">
+                        </div>
+                    </div>
+
+                    <ul class="mIndex">
+                        <li>
+                            <div class="mSummary">
+                                <div class="cell chk"><input type="checkbox" class="fChk"></div>
+                                <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                                <div class="info">
+                                    <span class="heading">[P00000BR] 런체-카미원피스카미원피스카미원피스카미원피스</span>
+                                    <p class="txtNormal">15,000원</p>
+                                    <p class="txtLess"><span class="txtEm">진열함</span> / <span class="txtEm">판매함</span> / <span class="txtWarn">품절</span></p>
+                                    <a href="./detail.html" class="btnLink">자세히 보기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mSummary">
+                                <div class="cell chk"><input type="checkbox" class="fChk"></div>
+                                <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                                <div class="info">
+                                    <span class="heading">[P00000BR] 런체-카미원피스카미원피스</span>
+                                    <p class="txtNormal">15,000원</p>
+                                    <p class="txtLess">진열안함 / 판매안함</p>
+                                    <a href="./detail.html" class="btnLink">자세히 보기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mSummary">
+                                <div class="cell chk"><input type="checkbox" class="fChk"></div>
+                                <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                                <div class="info">
+                                    <span class="heading">[P00000BR] 런체-카미원피스카미원피스</span>
+                                    <p class="txtNormal">15,000원</p>
+                                    <p class="txtLess">진열안함 / <span class="txtEm">판매함</span> / <span class="txtWarn">품절</span></p>
+                                    <a href="./detail.html" class="btnLink">자세히 보기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mSummary">
+                                <div class="cell chk"><input type="checkbox" class="fChk"></div>
+                                <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                                <div class="info">
+                                    <span class="heading">[P00000BR] ] pure embroidery (bl) - 이번 대박상품 놓치지 마세요~</span>
+                                    <p class="txtNormal">15,000원</p>
+                                    <p class="txtLess"><span class="txtEm">진열함</span> / <span class="txtEm">판매함</span></p>
+                                    <a href="./detail.html" class="btnLink">자세히 보기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mSummary">
+                                <div class="cell chk"><input type="checkbox" class="fChk"></div>
+                                <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                                <div class="info">
+                                    <span class="heading">[P00000BR] 런체-카미원피스카미원피스</span>
+                                    <p class="txtNormal">15,000원</p>
+                                    <p class="txtLess">진열안함 / 판매안함</p>
+                                    <a href="./detail.html" class="btnLink">자세히 보기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mSummary">
+                                <div class="cell chk"><input type="checkbox" class="fChk"></div>
+                                <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                                <div class="info">
+                                    <span class="heading">[P00000BR] 런체-카미원피스카미원피스</span>
+                                    <p class="txtNormal">15,000원</p>
+                                    <p class="txtLess">진열안함 / <span class="txtEm">판매함</span></p>
+                                    <a href="./detail.html" class="btnLink">자세히 보기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mSummary">
+                                <div class="cell chk"><input type="checkbox" class="fChk"></div>
+                                <div class="cell thumb"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.gif" width="50" alt=""></div>
+                                <div class="info">
+                                    <span class="heading">[P00000BR] 런체-카미원피스카미원피스</span>
+                                    <p class="txtNormal">15,000원</p>
+                                    <p class="txtLess">진열안함 / <span class="txtEm">판매함</span></p>
+                                    <a href="./detail.html" class="btnLink">자세히 보기</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <p class="mEmpty">검색된 상품내역이 없습니다.</p>
+
+                    <div class="mPaginate typeMoreview">
+                        <button type="button" class="">더보기 (<span>1</span>/<span>9</span>)<span class="icoSpread"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="mButton">
+                <a href="#none" onclick="$('.mPopup').hide();" class="btnStrong">선택</a>
+                <a href="#none" onclick="$('.mPopup').hide();" class="btnNormal">닫기</a>
+            </div>
+            <button type="button" class="btnPopupClose" onclick="$('.mPopup').hide();">닫기</button>
+        </div><!-- //참고: 상품 추가 레이어 -->
+
+        <!-- 참고: 하단 고정 버튼 레이어 -->
+        <div class="mButton typeFooter grid2">
+            <a href="#none" class="btnSave">저장</a>
+            <a href="#none" class="btnCancel">취소</a>
+        </div><!-- //참고: 하단 고정 버튼 레이어 -->

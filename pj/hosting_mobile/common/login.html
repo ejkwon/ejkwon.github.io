@@ -1,0 +1,23 @@
+<?php require_once('../include/header.html'); ?>
+    <div id="container">
+        <div class="mTitle">
+            <h1>로그인</h1>
+        </div>
+        <div class="loginArea">
+            <label for="id" class="blind">아이디</label>
+            <input type="text" name="id" class="fText" placeholder="아이디">
+            <label for="password" class="blind">비밀번호</label>
+            <input type="password" name="password" class="fText gBlank" placeholder="비밀번호">
+            <div class="option">
+                <label class="gLabel"><input type="checkbox" class="fChk"> <span class="fLabel">아이디 저장</span></label>
+                <span class="state"><span class="icoLock">보안상태</span> 보안접속</span>
+            </div>
+            <div class="mButton gFull">
+                <button type="submit" class="btnEm">로그인</button>
+            </div>
+            <div class="link">
+                <a href="#none">아이디 찾기</a><span class="icoBar"></span><a href="#none">비밀번호 찾기</a><span class="icoBar"></span><a href="#none">회원가입</a>
+            </div>
+        </div>
+    </div>
+<?php require_once('../include/footer.html'); ?>

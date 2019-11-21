@@ -1,0 +1,21 @@
+<?php include('./include/top.html'); ?>
+    <div id="guideSnb">
+        <h2>코딩가이드</h2>
+        <div class="guideTreeControl">
+            <a href="#none" class="allCollapse">메뉴 모두 닫힘</a>
+            <a href="#none" class="allExpand">메뉴 모두 펼침</a>
+            <a href="#none" class="allToggle">트리메뉴 모두 열기/닫기 전환</a>
+        </div>
+        <div class="guideFoldBar">
+            <button type="button">메뉴 숨김</button>
+        </div>
+        <ul class="treeview" id="guideTree"><li data-id="projectName" class="last collapsable"><span class="hitarea"></span><a class="vFrame selected" href="#none">프로젝트명</a><ul><li class="information"><a class="vFrame selected" href="/guide/pc/projectName/index.html">기본 정보</a><a target="_blank" class="vTab" href="/guide/pc/projectName/index.html">[새창]</a></li><li class="ia"><a class="vFrame" href="/guide/pc/projectName/ia.html">IA</a><a target="_blank" class="vTab" href="/guide/pc/projectName/ia.html">[새창]</a></li><li class="structure"><a class="vFrame" href="/guide/pc/projectName/structure.html">파일 및 디렉토리 구조</a><a target="_blank" class="vTab" href="/guide/pc/projectName/structure.html">[새창]</a></li><li class="layout"><a class="vFrame" href="/guide/pc/projectName/layout.html">레이아웃</a><a target="_blank" class="vTab" href="/guide/pc/projectName/layout.html">[새창]</a></li><li class="common"><a class="vFrame" href="/guide/pc/projectName/common.html">공통UI</a><a target="_blank" class="vTab" href="/guide/pc/projectName/common.html">[새창]</a></li><li class="function"><a class="vFrame" href="/guide/pc/projectName/function.html">기능별 UI</a><a target="_blank" class="vTab" href="/guide/pc/projectName/function.html">[새창]</a></li><li class="manage last"><a class="vFrame" href="/guide/pc/projectName/manage.html">운영/관리 정보</a><a target="_blank" class="vTab" href="/guide/pc/projectName/manage.html">[새창]</a></li></ul></li></ul>
+        <script type="text/javascript">
+            $('#guideTree').html(treeMenu);
+        </script>
+    </div>
+    <hr class="guideLayout" />
+    <div id="guideContent">
+        <iframe src="" id="contentFrame" frameborder="0"></iframe>
+    </div><!-- //content -->
+<?php include('./include/bottom.html'); ?>

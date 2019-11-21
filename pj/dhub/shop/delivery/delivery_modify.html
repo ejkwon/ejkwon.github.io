@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>배송정보 변경</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="600,600"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>배송정보 변경</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>변경사유</h2>
+        </div>
+        <div class="mBoard gMedium">
+            <table border="1" summary="">
+            <caption>변경사유</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">구분</th>
+                    <td>
+                        <label class="gLabel"><input type="radio" class="fChk" name="radio1" checked="checked" /> 상점요청</label>
+                        <label class="gLabel"><input type="radio" class="fChk" name="radio1" /> 기타</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">사유 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                        <p class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 500 ]</p>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>배송정보</h2>
+        </div>
+        <div class="mBoard gMedium">
+            <table border="1" summary="">
+            <caption>배송정보</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">배송국가 </th>
+                    <td>
+                        <select class="fSelect">
+                            <option>가나[GH]</option>
+                            <option>가봉[GA]</option>
+                            <option>가이아나[GY]</option>
+                            <option>감비아[GM]</option>
+                            <option>과들루프섬[GP]</option>
+                            <option>과테말라[GT]</option>
+                            <option>괌[GU]</option>
+                            <option>그레나다[GD]</option>
+                            <option>그루지야[GE]</option>
+                            <option>그리스[GR]</option>
+                            <option>그린란드[GL]</option>
+                            <option>기니[GN]</option>
+                            <option>기니비사우[GW]</option>
+                            <option>나미비아[NA]</option>
+                            <option>나우루[NR]</option>
+                            <option>나이지리아[NG]</option>
+                            <option>남극대륙[AQ]</option>
+                            <option>남아프리카[ZA]</option>
+                            <option>네덜란드[NL]</option>
+                            <option>네덜란드령 안틸레스[AN]</option>
+                            <option>네팔[NP]</option>
+                            <option>노르웨이[NO]</option>
+                            <option>노르폭섬[NF]</option>
+                            <option>뉴질랜드[NZ]</option>
+                            <option>뉴칼레도니아[NC]</option>
+                            <option>니우에[NU]</option>
+                            <option>니제르[NE]</option>
+                            <option>니카라과[NI]</option>
+                            <option selected="selected">대한민국[KR]</option>
+                            <option>덴마크[DK]</option>
+                            <option>도미니카공화국[DO]</option>
+                            <option>도미니카연방[DM]</option>
+                            <option>독일[DE]</option>
+                            <option>라오스[LA]</option>
+                            <option>라이베리아[LR]</option>
+                            <option>라트비아[LV]</option>
+                            <option>러시아[RU]</option>
+                            <option>레바논[LB]</option>
+                            <option>레소토[LS]</option>
+                            <option>레위니옹[RE]</option>
+                            <option>루마니아[RO]</option>
+                            <option>룩셈부르크[LU]</option>
+                            <option>르완다[RW]</option>
+                            <option>리비아[LY]</option>
+                            <option>리투아니아[LT]</option>
+                            <option>리히텐슈타인[LI]</option>
+                            <option>마다가스카르[MG]</option>
+                            <option>마르티니크[MQ]</option>
+                            <option>마샬군도[MH]</option>
+                            <option>마요트[YT]</option>
+                            <option>마카오[MO]</option>
+                            <option>마케도니아[MK]</option>
+                            <option>말라위[MW]</option>
+                            <option>말레이시아[MY]</option>
+                            <option>말리[ML]</option>
+                            <option>멕시코[MX]</option>
+                            <option>모나코[MC]</option>
+                            <option>모로코[MA]</option>
+                            <option>모리셔스[MU]</option>
+                            <option>모리타니[MR]</option>
+                            <option>모잠비크[MZ]</option>
+                            <option>몬서래트[MS]</option>
+                            <option>몬테네그로[ME]</option>
+                            <option>몰도바[MD]</option>
+                            <option>몰디브[MV]</option>
+                            <option>몰타[MT]</option>
+                            <option>몽골[MN]</option>
+                            <option>미국[US]</option>
+                            <option>미국인근섬[UM]</option>
+                            <option>미령버진아일랜드[VI]</option>
+                            <option>미령사모아[AS]</option>
+                            <option>미얀마[MM]</option>
+                            <option>미이크로네시아[FM]</option>
+                            <option>바누아투[VU]</option>
+                            <option>바레인[BH]</option>
+                            <option>바베이도스[BB]</option>
+                            <option>바티칸시국[VA]</option>
+                            <option>바하마[BS]</option>
+                            <option>방글라데시[BD]</option>
+                            <option>버뮤다[BM]</option>
+                            <option>베냉[BJ]</option>
+                            <option>베네수엘라[VE]</option>
+                            <option>베트남[VN]</option>
+                            <option>벨기에[BE]</option>
+                            <option>벨로루시[BY]</option>
+                            <option>벨리즈[BZ]</option>
+                            <option>보스니아-헤르체고비나[BA]</option>
+                            <option>보츠와나[BW]</option>
+                            <option>볼리비아[BO]</option>
+                            <option>부룬디[BI]</option>
+                            <option>부르키나파소[BF]</option>
+                            <option>부베트[BV]</option>
+                            <option>부탄[BT]</option>
+                            <option>북마리아나군도[MP]</option>
+                            <option>북한[KP]</option>
+                            <option>불가리아[BG]</option>
+                            <option>불령가이아나[GF]</option>
+                            <option>불령남태평양섬[TF]</option>
+                            <option>불령폴리네시아[PF]</option>
+                            <option>브라질[BR]</option>
+                            <option>브루나이[BN]</option>
+                            <option>사모아[WS]</option>
+                            <option>사우디아라비아[SA]</option>
+                            <option>사우스조지아 사우스센드위치제도 (영국령)[GS]</option>
+                            <option>산마리노[SM]</option>
+                            <option>상투메프린시페[ST]</option>
+                            <option>상피에르미클롱[PM]</option>
+                            <option>서사하라[EH]</option>
+                            <option>세네갈[SN]</option>
+                            <option>세르비아[RS]</option>
+                            <option>세이셸[SC]</option>
+                            <option>세인트루시아[LC]</option>
+                            <option>세인트빈센트그레나딘[VC]</option>
+                            <option>세인트크리스토퍼네비스[KN]</option>
+                            <option>세인트헬레나[SH]</option>
+                            <option>소말리아[SO]</option>
+                            <option>솔로몬군도[SB]</option>
+                            <option>수단[SD]</option>
+                            <option>수리남[SR]</option>
+                            <option>스리랑카[LK]</option>
+                            <option>스발바르[SJ]</option>
+                            <option>스와질란드[SZ]</option>
+                            <option>스웨덴[SE]</option>
+                            <option>스위스[CH]</option>
+                            <option>스페인[ES]</option>
+                            <option>슬로바크[SK]</option>
+                            <option>슬로베니아[SI]</option>
+                            <option>시리아[SY]</option>
+                            <option>시에라리온[SL]</option>
+                            <option>싱가폴[SG]</option>
+                            <option>아랍에미리트연합[AE]</option>
+                            <option>아루바[AW]</option>
+                            <option>아르메니아[AM]</option>
+                            <option>아르헨티나[AR]</option>
+                            <option>아이슬랜드[IS]</option>
+                            <option>아이티[HT]</option>
+                            <option>아일랜드[IE]</option>
+                            <option>아제르바이잔[AZ]</option>
+                            <option>아프가니스탄[AF]</option>
+                            <option>안도라[AD]</option>
+                            <option>알바니아[AL]</option>
+                            <option>알제리[DZ]</option>
+                            <option>앙골라[AO]</option>
+                            <option>앤티가바부다[AG]</option>
+                            <option>앵귈라[AI]</option>
+                            <option>에리트레아[ER]</option>
+                            <option>에스토니아[EE]</option>
+                            <option>에콰도르[EC]</option>
+                            <option>에티오피아[ET]</option>
+                            <option>엘살바도르[SV]</option>
+                            <option>영국[GB]</option>
+                            <option>영령버진아일랜드[VG]</option>
+                            <option>영령인도양섬[IO]</option>
+                            <option>예멘공화국[YE]</option>
+                            <option>오만[OM]</option>
+                            <option>오스트리아[AT]</option>
+                            <option>온두라스[HN]</option>
+                            <option>요르단[JO]</option>
+                            <option>우간다[UG]</option>
+                            <option>우루과이[UY]</option>
+                            <option>우즈베키스탄[UZ]</option>
+                            <option>우크라이나[UA]</option>
+                            <option>월리스푸투나[WF]</option>
+                            <option>이라크[IQ]</option>
+                            <option>이란[IR]</option>
+                            <option>이스라엘[IL]</option>
+                            <option>이집트[EG]</option>
+                            <option>이탈리아[IT]</option>
+                            <option>인도[IN]</option>
+                            <option>인도네시아[ID]</option>
+                            <option>일본[JP]</option>
+                            <option>자메이카[JM]</option>
+                            <option>잠비아[ZM]</option>
+                            <option>적도기니[GQ]</option>
+                            <option>중앙아프리카공화국[CF]</option>
+                            <option>지부티[DJ]</option>
+                            <option>지브롤터[GI]</option>
+                            <option>짐바브웨[ZW]</option>
+                            <option>차드[TD]</option>
+                            <option>체코[CZ]</option>
+                            <option>칠레[CL]</option>
+                            <option>카메룬[CM]</option>
+                            <option>카보베르데[CV]</option>
+                            <option>카자흐스탄[KZ]</option>
+                            <option>카타르[QA]</option>
+                            <option>캄보디아[KH]</option>
+                            <option>캐나다[CA]</option>
+                            <option>케냐[KE]</option>
+                            <option>케이맨제도[KY]</option>
+                            <option>코모로[KM]</option>
+                            <option>코스타리카[CR]</option>
+                            <option>코코스[CC]</option>
+                            <option>코트디부아르[CI]</option>
+                            <option>콜롬비아[CO]</option>
+                            <option>콩고[CG]</option>
+                            <option>콩고민주공화국[CD]</option>
+                            <option>쿠바[CU]</option>
+                            <option>쿠웨이트[KW]</option>
+                            <option>쿡아일랜드[CK]</option>
+                            <option>크로아티아[HR]</option>
+                            <option>크리스마스[CX]</option>
+                            <option>키르기스스탄[KG]</option>
+                            <option>키리바시[KI]</option>
+                            <option>키프로스[CY]</option>
+                            <option>타이완[TW]</option>
+                            <option>타지키스탄[TJ]</option>
+                            <option>탄자니아[TZ]</option>
+                            <option>태국[TH]</option>
+                            <option>터크스케이커스[TC]</option>
+                            <option>터키[TR]</option>
+                            <option>토고[TG]</option>
+                            <option>토켈라우[TK]</option>
+                            <option>통가[TO]</option>
+                            <option>투르크메니스탄[TM]</option>
+                            <option>투발루[TV]</option>
+                            <option>튀니지[TN]</option>
+                            <option>트리니다드토바고[TT]</option>
+                            <option>티모르민주공화국[TL]</option>
+                            <option>파나마[PA]</option>
+                            <option>파라과이[PY]</option>
+                            <option>파로에[FO]</option>
+                            <option>파키스탄[PK]</option>
+                            <option>파푸아뉴기니[PG]</option>
+                            <option>팔라우[PW]</option>
+                            <option>팔레스타인[PS]</option>
+                            <option>페루[PE]</option>
+                            <option>포르투갈[PT]</option>
+                            <option>포클랜드[FK]</option>
+                            <option>폴란드[PL]</option>
+                            <option>푸에르토리코[PR]</option>
+                            <option>프랑스[FR]</option>
+                            <option>피지[FJ]</option>
+                            <option>핀란드[FI]</option>
+                            <option>필리핀[PH]</option>
+                            <option>핏캐른[PN]</option>
+                            <option>허드맥도날드[HM]</option>
+                            <option>헝가리[HU]</option>
+                            <option>호주[AU]</option>
+                            <option>홍콩[HK]</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수령자명 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <input type="text" value="김배송" class="fText" style="width:120px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수령자명2</th>
+                    <td>
+                        <input type="text" value="김배송" class="fText" style="width:120px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수령자 일반전화</th>
+                    <td>
+                        <select class="fSelect">
+                          <option>- 선택 -</option>
+                          <option selected="selected">02</option>
+                          <option>051</option>
+                          <option>053</option>
+                          <option>032</option>
+                          <option>062</option>
+                          <option>042</option>
+                          <option>052</option>
+                          <option>031</option>
+                          <option>033</option>
+                          <option>043</option>
+                          <option>041</option>
+                          <option>063</option>
+                          <option>061</option>
+                          <option>054</option>
+                          <option>055</option>
+                          <option>064</option>
+                        </select>
+                         - <input type="text" value="0000" class="fText" style="width: 40px;" />
+                         - <input type="text" value="0000" class="fText" style="width: 40px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수령자 휴대전화</th>
+                    <td>
+                        <select class="fSelect">
+                          <option>- 선택 - </option>
+                          <option selected="selected">010</option>
+                          <option>011</option>
+                          <option>016</option>
+                          <option>017</option>
+                          <option>018</option>
+                          <option>019</option>
+                          <option>070</option>
+                          <option>없음</option>
+                        </select>
+                         - <input type="text" value="0000" class="fText" style="width: 40px;" />
+                         - <input type="text" value="0000" class="fText" style="width: 40px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수령자 E-mail</th>
+                    <td><input type="text" value="0000" class="fText" style="width: 200px;" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">배송지 주소 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <ul class="mForm typeVer">
+                            <li>
+                                <input type="text" readonly="readonly" class="fText" style="width:39px;" value="132" /> -
+                                <input type="text" readonly="readonly" class="fText" style="width:39px;" value="222" />
+                                <a href="#none" class="btnNormal"><span>우편번호 검색</span></a>
+                            </li>
+                            <li><input type="text" readonly="readonly" class="fText" style="width:250px;" value="서울 동작구 신대방2동" /></li>
+                            <li><input type="text" class="fText" style="width:250px;" value="81번지 전문건설회관 28층" /></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">배송 메시지</th>
+                    <td>
+                        <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>닫기</span></a>
+</div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

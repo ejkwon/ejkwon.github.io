@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/pj/suio/css/suio.css" media="screen">
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지(★개발 작업시 삭제해주세요.) -->
+    <script>
+        $(document).ready(function(){
+/*            // 로컬 내부에서만 동작하는 디버깅js
+            var localServer = window.location.hostname.indexOf("cafe24test.com");
+            if(localServer > 0){
+                $.getScript("//fe-front.cafe24test.com/debugging/js/common.js");
+                $.getScript("/debugging/js/debug.js");
+            }
+*/
+            $.getScript("js/common.js");
+            $.getScript("js/debug.js");
+        });
+    </script><!-- //참고 -->
+</head>
+<body id="us">
+<br /><br /><br /><br />
+[체크대상]<br />
+1. body 태그에 언어별 id나 class를 추가한 경우<br />
+2. 언어별 css 파일을 추가한 경우
+
+<br /><br /><br /><br />
+한국어 : &lt;html lang="ko"&gt;<br />
+영어 : &lt;html lang="en"&gt;<br />
+일본어 : &lt;html lang="ja"&gt;<br />
+중국어 : &lt;html lang="zh"&gt;
+</body>
+</html>

@@ -1,0 +1,732 @@
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/head.html'); ?>
+
+<div id="wrap">
+    <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/header.html'); ?>
+    <div id="container">
+        <!-- [ content ] -->
+        <section id="content">
+
+<div class="mTitle">
+    <h1>타겟</h1>
+</div>
+
+<div class="mSearchEngine">
+    <div class="mBoard typeEdit">
+        <table border="1">
+            <caption>검색</caption>
+            <colgroup>
+                <col style="width:190px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr class="rowFix">
+                    <th scope="row">타겟 설정 기간
+                        <div class="mTooltip ePosTarget">
+                            <button type="button" class="icon icoHelp ePosHover">도움말</button>
+                            <div class="tooltip ePosLayer">
+                                <p>툴팁 내용</p>
+                            </div>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="mMethod typeToggle theme1">
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">30</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">60</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">90</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">120</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">180</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">365</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">그 외</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="rowFix">
+                    <th scope="row">기준값 / 이벤트
+                        <div class="mTooltip ePosTarget">
+                            <button type="button" class="icon icoHelp ePosHover">도움말</button>
+                            <div class="tooltip ePosLayer">
+                                <p>툴팁 내용</p>
+                            </div>
+                        </div>
+                    </th>
+                    <td>
+                        <select class="fSelect" style="width:49%;">
+                            <option>기준값을 선택해주세요</option>
+                            <option>픽셀($픽셀명$-$픽셀ID$)</option>
+                        </select>
+                        <div class="mSelect gSideS ePosTarget" style="width:49%;">
+                            <div class="value ePosClick">
+                                이벤트를 선택해주세요 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button>
+                            </div>
+                            <div class="optionLayer ePosLayer">
+                                <ul class="optionSelect">
+                                    <li class="gridSet">
+                                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">전체 선택 / 해제</span></label>
+                                    </li>
+                                    <li class="gridSet">
+                                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">모든 웹사이트 방문자</span></label>
+                                    </li>
+                                    <li class="gridSet">
+                                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">특정 웹페이지를 방문한 사람</span></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="rowFix">
+                    <th scope="row">유형</th>
+                    <td>
+                        <div class="mMethod typeToggle theme1">
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">맞춤타겟</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">유사타겟</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">조합타겟</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">저장된타겟</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="rowFix">
+                    <th scope="row">자동생성 여부</th>
+                    <td>
+                        <div class="mMethod typeToggle theme1">
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">자동 생성 타겟</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">수동 생성 타겟</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="rowFix">
+                    <th scope="row">타겟명
+                        <div class="mTooltip ePosTarget">
+                            <button type="button" class="icon icoHelp ePosHover">도움말</button>
+                            <div class="tooltip ePosLayer">
+                                <p>툴팁 내용</p>
+                            </div>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="fText full">
+                            <input type="text" placeholder="타겟명을 입력해서 검색 가능합니다.">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">기간</th>
+                    <td>
+                        <select class="fSelect" style="width:150px;">
+                            <option>일간</option>
+                            <option>주간</option>
+                            <option>월간</option>
+                        </select>
+                        <div class="mForm typeCalendar">
+                            <div class="fText">
+                                <input type="text" value="2017.06.09" id="datepicker">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            <button type="button" class="btnPrev">이전</button>
+                            <button type="button" class="btnNext">다음</button>
+                        </div>
+                        <strong>&nbsp;-&nbsp;</strong>
+                        <div class="mForm typeCalendar">
+                            <div class="fText">
+                                <input type="text" value="2017.06.09" id="datepicker">
+                                <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                            </div>
+                            <button type="button" class="btnPrev">이전</button>
+                            <button type="button" class="btnNext">다음</button>
+                        </div>
+                        <div class="mMethod typeToggle gSideS gBlankS">
+                            <label class="btnMethod">
+                                <input type="radio" name="test1">
+                                <span class="fLabel">금일</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="radio" name="test1">
+                                <span class="fLabel">전일</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="radio" name="test1">
+                                <span class="fLabel">7일</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="radio" name="test1">
+                                <span class="fLabel">30일</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="radio" name="test1">
+                                <span class="fLabel">금주</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="radio" name="test1">
+                                <span class="fLabel">전주</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="radio" name="test1">
+                                <span class="fLabel">전월</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">평가지수 기준
+                        <div class="mTooltip ePosTarget">
+                            <button type="button" class="icon icoHelp ePosHover">도움말</button>
+                            <div class="tooltip ePosLayer">
+                                <p>툴팁 내용</p>
+                            </div>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="mMethod typeToggle theme1">
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">규모</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">클릭</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">클릭률</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">전환</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">전환율</span>
+                            </label>
+                            <label class="btnMethod">
+                                <input type="checkbox">
+                                <span class="fLabel">광고비</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">항목 세부 선택</th>
+                    <td>
+
+                        <div class="gridSet top">
+                            <select class="fSelect" style="width:190px">
+                                <option>규모</option>
+                                <option>클릭</option>
+                                <option>클릭률</option>
+                                <option>CPC</option>
+                                <option>전환</option>
+                                <option>전환매출</option>
+                                <option>전환율</option>
+                            </select>
+                            <button type="button" class="btnBasic">직접입력</button>
+                            <div class="mRange" style="width:639px;">
+                                <span class="number">0</span>
+                                <div class="range"></div>
+                                <span class="number">99,999</span>
+                            </div>
+                            <!-- 참고: UI확인용으로 퍼블리싱 미리보기용입니다. -->
+                            <script>
+                                function collision($div1, $div2) {
+                                    var x1 = $div1.offset().left;
+                                    var w1 = 40;
+                                    var r1 = x1 + w1;
+                                    var x2 = $div2.offset().left;
+                                    var w2 = 40;
+                                    var r2 = x2 + w2;
+                                    if (r1 < x2 || x1 > r2) return false;
+                                    return true;
+                                }
+
+                                $('.mRange .range').slider({
+                                    range: true,
+                                    min: 0,
+                                    max: 99999,
+                                    values: [ 10000, 45670 ],
+                                    slide: function(event, ui) {
+
+                                        $('.ui-slider-handle:eq(0) .price-range-min').html( ui.values[ 0 ]);
+                                        $('.ui-slider-handle:eq(1) .price-range-max').html( ui.values[ 1 ]);
+                                        $('.price-range-both').html('<i>' + ui.values[ 0 ] + ' - </i>' + ui.values[ 1 ] );
+
+                                        if ( ui.values[0] == ui.values[1] ) {
+                                            $('.price-range-both i').css('display', 'none');
+                                        } else {
+                                            $('.price-range-both i').css('display', 'inline');
+                                        }
+
+                                        if (collision($('.price-range-min'), $('.price-range-max')) == true) {
+                                            $('.price-range-min, .price-range-max').css('opacity', '0');
+                                            $('.price-range-both').css('display', 'block');
+                                        } else {
+                                            $('.price-range-min, .price-range-max').css('opacity', '1');
+                                            $('.price-range-both').css('display', 'none');
+                                        }
+                                    }
+                                });
+
+                                $('.ui-slider-range').append('<span class="price-range-both value"><i>' + $('.mRange .range').slider('values', 0 ) + ' - </i>' + $('.mRange .range').slider('values', 1 ) + '</span>');
+                                $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">' + $('.mRange .range').slider('values', 0 ) + '</span>');
+                                $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">' + $('.mRange .range').slider('values', 1 ) + '</span>');
+                            </script><!-- //참고 -->
+                            <div class="grid">
+                                <button type="button" class="btnAdd"><span class="icoAdd">추가</span></button>
+                                <!-- 참고: 삭제 버튼 필요시
+                                <button type="button" class="btnRemove"><span class="icoRemove">삭제</span></button> -->
+                            </div>
+                        </div>
+
+                        <!-- 참고: 직접입력 버튼 클릭 시 -->
+                        <div class="gridSet top">
+                            <select class="fSelect" style="width:190px">
+                                <option>규모</option>
+                                <option>클릭</option>
+                                <option>클릭률</option>
+                                <option>CPC</option>
+                                <option>전환</option>
+                                <option>전환매출</option>
+                                <option>전환율</option>
+                            </select>
+                            <button type="button" class="btnBasic">직접입력</button>
+                            <div class="grid" style="width:639px;">
+                                <span class="txtForm right" style="width:57px;">최소</span>
+                                <div class="fText gSideS" style="width:253px">
+                                    <input type="text">
+                                    <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                </div>
+                                <span class="txtForm right" style="width:45px;">최대</span>
+                                <div class="fText gSideS" style="width:253px">
+                                    <input type="text">
+                                    <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <button type="button" class="btnAdd"><span class="icoAdd">추가</span></button>
+                                <button type="button" class="btnRemove"><span class="icoRemove">삭제</span></button>
+                            </div>
+                        </div><!-- //참고 -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btnExpand eExpand"><span>상세검색 열기</span><i class="icoArrow"></i></button>
+</div>
+
+<div class="mButton justify">
+    <button type="button" class="btnNormal medium">초기화</button><button type="button" class="btnSubmit medium">검색</button>
+</div>
+
+<div class="mTitle">
+    <h2>타겟 목록</h2>
+     <p class="txtDesc">[총 상품 <span class="txtEm">40</span>개] 검색결과 <span class="txtEm">11</span>개  * 최종 업데이트 일시 : 2017-09-08 13:02:11  /  다음 업데이트 시각 : 2017-09-08 17:00</p>
+    <select class="fSelect" style="width:190px">
+        <option>평가지수 기준 내림차순</option>
+        <option>규모 내림차순</option>
+        <option>클릭 내림차순</option>
+        <option>클릭률 내림차순</option>
+        <option>CPC 내림차순</option>
+        <option>전환 내림차순</option>
+        <option>전환매출 내림차순</option>
+        <option>전환율 내림차순</option>
+        <option>생성일자 내림차순</option>
+    </select>
+    <select class="fSelect gSideM" style="width:190px">
+        <option>100개씩보기</option>
+        <option>200개씩보기</option>
+        <option>300개씩보기</option>
+        <option>400개씩보기</option>
+        <option>500개씩보기</option>
+    </select>
+</div>
+<div class="gridSet">
+    <div class="grid">
+        <a href="#none" class="btnConfirm small">유사타겟 생성</a>
+        <a href="#none" class="btnBasic small">맞춤타겟 생성</a>
+        <a href="#none" class="btnBasic small">타겟리스트 다운로드</a>
+    </div>
+    <div class="grid right">
+        <i class="icoDot green" title="사용가능">사용가능</i> <span class="txtDesc">사용가능</span>
+        <i class="icoDot red gSideL" title="사용불가능">사용불가능</i> <span class="txtDesc">불가능</span>
+    </div>
+</div>
+
+<ul class="mTargetList">
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">15,000,000</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람<br>
+                최대 50자인경우에는 세줄로 표현</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:40%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">40</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">2,400</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:15%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">15</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot red" title="사용불가능">사용불가능</i>
+            <strong class="number">76,000</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람<br>
+                최대 50자인경우에는 세줄로 표현</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:40%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">40</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">15,000,000</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람<br>
+                최대 50자인경우에는 세줄로 표현</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:40%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">40</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">40,000</strong>
+            <p class="desc">한줄일때 표현</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:40%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">40</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot red" title="사용불가능">사용불가능</i>
+            <strong class="number">2,400</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:10%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">10</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">140,000</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:58%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">58</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">300,000</strong>
+            <p class="desc">SMM_미아마스빈_110712</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:95%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">95</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">15,000,000</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람<br>
+                최대 50자인경우에는 세줄로 표현</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:40%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">40</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">2,400</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:15%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">15</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot red" title="사용불가능">사용불가능</i>
+            <strong class="number">76,000</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람<br>
+                최대 50자인경우에는 세줄로 표현</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:40%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">40</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#layerTheme1" class="eModal">
+            <i class="icoDot green" title="사용가능">사용가능</i>
+            <strong class="number">15,000,000</strong>
+            <p class="desc">30일간 1회 이상 구매자 중 구매금액이<br>
+                5,000,000원  이상인 사람<br>
+                최대 50자인경우에는 세줄로 표현</p>
+            <span class="mChart theme1">
+                <span class="bar"><span class="percent" style="width:40%"></span><!-- 참고: 퍼센트와 동일한 값을 width에 넣어주세요. --></span>
+                <span class="text">40</span>
+            </span>
+        </a>
+    </li>
+</ul>
+
+<div class="mPaginate">
+    <a href="#none" class="btnPrev disabled">이전페이지</a><!-- 참고: 이전,다음 페이지가 없는 경우, class "disabled" 추가. -->
+    <span class="page">
+        <a href="#none" class="selected" title="현재페이지">1</a>
+        <a href="#none">2</a>
+        <a href="#none">3</a>
+        <a href="#none">4</a>
+        <a href="#none">5</a>
+        <a href="#none">6</a>
+        <a href="#none">7</a>
+        <a href="#none">8</a>
+        <a href="#none">9</a>
+        <a href="#none">10</a>
+    </span>
+    <a href="#none" class="btnNext">다음페이지</a>
+</div>
+
+<div class="mHelp">
+    <h2>도움말 </h2>
+    <div class="content">
+        <p>도움말 내용이 없습니다.</p>
+        <a href="#none" class="btnBasic small gBlankM">수정</a>
+    </div>
+</div>
+
+<section id="layerTheme1" class="mLayer theme1" style="display:none; width:1238px">
+    <header class="header">
+        <i class="icoDot green" title="사용가능">사용가능</i>
+        <h1 class="title">[맞춤타겟 / 픽셀] 30일간 1회 이상 구매자 중 구매금액이  5,000,000원  이상인 사람 최대 50자까지 표현될수있을까</h1>
+        <button type="button" class="btnCopy" title="복사">복사</button>
+        <a href="#none" class="btnConfirm small gRight">유사타겟 생성</a>
+    </header>
+    <div class="wrap">
+        <div class="mTitle">
+            <h3>상세 설정값</h3>
+        </div>
+        <div class="mBoard typeView">
+            <table border="1">
+                <caption>상세 설정값</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                    </tr>
+                </thead>
+                <tbody class="center">
+                    <tr>
+                        <td>타겟명칭</td>
+                        <td>저장된 타겟</td>
+                        <td>웹사이트</td>
+                        <td class="right">100,000</td>
+                        <td>가능</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2384259075760</td>
+                    </tr>
+                    <tr>
+                        <td>타겟명칭</td>
+                        <td>저장된 타겟</td>
+                        <td>웹사이트</td>
+                        <td class="right">100,000</td>
+                        <td>가능</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2384259075760</td>
+                    </tr>
+                    <tr>
+                        <td>타겟명칭</td>
+                        <td>저장된 타겟</td>
+                        <td>웹사이트</td>
+                        <td class="right">100,000</td>
+                        <td>가능</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2384259075760</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mTitle">
+            <h3>규모 및 성과</h3>
+        </div>
+        <div class="mBoard typeView">
+            <table border="1">
+                <caption>규모 및 성과</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                        <th scope="col">타이틀</th>
+                    </tr>
+                </thead>
+                <tbody class="center">
+                    <tr>
+                        <td>타겟명칭</td>
+                        <td>저장된 타겟</td>
+                        <td>웹사이트</td>
+                        <td class="right">100,000</td>
+                        <td>가능</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2017.07.10 14:30</td>
+                        <td>2384259075760</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mBoard typeView gMerge">
+            <table border="1">
+                <caption>규모 및 성과</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                    <col style="width:auto;">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">타이틀</th>
+                    <th scope="col">타이틀</th>
+                    <th scope="col">타이틀</th>
+                    <th scope="col">타이틀</th>
+                    <th scope="col">타이틀</th>
+                    <th scope="col">타이틀</th>
+                    <th scope="col">타이틀</th>
+                    <th scope="col">타이틀</th>
+                </tr>
+                </thead>
+                <tbody class="center">
+                <tr>
+                    <td>타겟명칭</td>
+                    <td>저장된 타겟</td>
+                    <td>웹사이트</td>
+                    <td class="right">100,000</td>
+                    <td>가능</td>
+                    <td>2017.07.10 14:30</td>
+                    <td>2017.07.10 14:30</td>
+                    <td>2384259075760</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="gridSet gBlankM">
+            <div class="grid right">
+                <p class="txtDesc">생성 일자 : 2018-05-14 14:00:24 <i class="icoBar">|</i> 생성자 : 권오순(oskwon)</p>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btnClose eClose">닫기</button>
+</section>
+
+        </section><!-- //[ content ] -->
+
+    </div>
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/footer.html'); ?>

@@ -1,0 +1,72 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>개발지원</li>
+                <li>개발사 고객지원</li>
+                <li class="now" title="현재 페이지">문의등록</li>
+            </ol>
+            <div class="mTitle">
+                <h1>문의등록</h1>
+            </div>
+
+            <div class="sectionArea">
+                <section class="section">
+                    <div class="mBoard gSmall">
+                        <table border="1">
+                            <caption>문의등록</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">문의유형</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>이용문의</option>
+                                            <option>오류신고</option>
+                                            <option>건의사항 (API요청 등)</option>
+                                            <option>기술지원</option>
+                                            <option>법률상담 (라이센스/상표권 등)</option>
+                                            <option>기타문의</option>
+                                        </select>
+                                        <label class="gSingleSide"><input type="checkbox" class="fChk"> 답변을 등록된 이메일로 받겠습니다.</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">제목 <strong class="icoRequired">필수</strong></th>
+                                    <td><input type="text" class="fText" style="width:100%;"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문의내용 <strong class="icoRequired">필수</strong></th>
+                                    <td>
+                                        <textarea cols="80" rows="15" class="fTextarea" style="width:100%;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">첨부파일</th>
+                                    <td>
+                                        <input type="file" class="fFile"> <a href="#none" class="btnCtrl">등록</a>
+                                        <ul class="txtInfo">
+                                            <li>첨부파일: 2M 이하/ 파일명 영문으로 등록</li>
+                                            <li>최대 5개까지 등록가능합니다.</li>
+                                        </ul>
+                                        <ul class="mAttach typeFile">
+                                            <li><a href="파일명.xls" class="attached">파일명.xls</a> <button type="button" class="btnIcon icoDel"><span>삭제</span></button></li>
+                                            <li><a href="파일명.doc" class="attached">파일명.doc</a> <button type="button" class="btnIcon icoDel"><span>삭제</span></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="mButton gFooter gCenter">
+                <button type="button" class="btnSubmit">저장</button>
+                <a href="#none" class="btnEm">목록</a>
+            </div>
+        </section><!-- //[ contents ] -->
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>
+

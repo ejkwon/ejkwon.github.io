@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>카페24 쇼핑몰 :: 창업자의 꿈이 시작되는 곳</title>
+    <link rel="Shortcut Icon" href="http://echosting.cafe24.com/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://img.cafe24.com/css/common30.css" type="text/css">
+    <link rel="stylesheet" href="http://echosting.cafe24.com/css/echosting_http.css?20111004r" type="text/css">
+    <link rel="stylesheet" href="http://echosting.cafe24.com/css/ec_main_v3_http.css" type="text/css">
+
+    <link rel="stylesheet" href="//img.cafe24.com/img/ec/css/common.css" type="text/css">
+    <link rel="stylesheet" href="//img.cafe24.com/img/ec/css/global.css" type="text/css">
+
+    <script type="text/javascript" src="http://img.cafe24.com/js/nxtt.js"></script>
+    <script type="text/javascript" src="http://img.cafe24.com/js/ec_main_v3.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://echosting.cafe24.com/_scripts/js_rolling.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://echosting.cafe24.com/_scripts/common.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://echosting.cafe24.com/_scripts/ajax.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://echosting.cafe24.com/_scripts/divShadow_http.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://echosting.cafe24.com/_scripts/jquery.js" charset="UTF-8"></script>
+    <script type="text/javascript">jQuery.noConflict();</script>
+    <script type="text/javascript" src="http://echosting.cafe24.com/_scripts/ec_re09.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://echosting.cafe24.com/_scripts/prototype.js" charset="UTF-8"></script>
+</head>
+<body id="shopCenterBody">
+<div class="wrap">
+    <!-- head -->
+    <div class="head_cmm">
+        <div class="head_cmm_w">
+            <div class="h_cmm_c1">
+                <ul class="t_btn_list">
+                    <li class="fst"><a href="http://www.cafe24.com" target="_blank">카페24</a></li>
+                    <li><a href="http://hosting.cafe24.com" target="_blank">호스팅센터</a></li>
+                    <li><a href="http://echosting.cafe24.com" target="_self">쇼핑몰센터</a></li>
+                    <li><a href="http://cmc.cafe24.com" target="_blank">마케팅센터</a></li>
+                    <li class="t_more_view">
+                        <span onmouseover="viewLayer2('more_view')">더보기</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="h_cmm_c2">
+                <span class="t_btn_login" title="로그인" onClick="isLogin('script','top.location.reload();', false);"><a>로그인</a></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="head_c1">
+        <a href="http://echosting.cafe24.com/"><img src="//img.cafe24.com/images/ec_re09/common/h1_logo.png" alt="cafe24™ 쇼핑몰센터" /></a>
+    </div>
+    <div  class="head_c2">
+        <ul>
+            <li class="fst"><a href="http://d.cafe24.com" target="_blank"><img src="http://img.cafe24.com/images/ec_re09/common/t_btn_1.gif" alt="디자인센터"></a></li>
+            <li><a href="http://cmc.cafe24.com" target="_blank"><img src="http://img.cafe24.com/images/ec_re09/common/t_btn_2.gif" alt="마케팅센터"></a></li>
+            <li><a href="http://edu.cafe24.com" target="_blank"><img src="http://img.cafe24.com/images/ec_re09/common/t_btn_3.gif" alt="교육센터"></a></li>
+            <li><a href="http://shop.cafe24.com" target="_blank"><img src="http://img.cafe24.com/images/ec_re09/common/t_btn_4.gif" alt="오픈마켓센터"></a></li>
+            <li class="bgn"><a href="http://global.cafe24.com/Globalcenter/" target="_blank"><img src="http://img.cafe24.com/images/ec_re09/common/t_btn_5.gif" alt="글로벌센터"></a></li>
+        </ul>
+    </div>
+    <div class="head_c3">
+        <form method="GET" id="frm_search" action="/Search">
+            <input type="text" name="word" value="" class="h_sch_box" onfocus="this.style.backgroundImage='none';" onblur="if(this.value=='') this.style.backgroundImage='url(http://img.cafe24.com/images/ec_re09/common/txt_ipt_sch.gif)'" title="검색어 입력">
+            <input type="image" src="http://img.cafe24.com/images/ec_re09/common/btn_search2.gif" alt="검색" style="vertical-align:top;" />
+        </form>
+    </div>
+    <div class="clear"></div>
+
+    <!-- 20111110_수정 더보기_layer (이 부분 모두 새로 적용해주세요, 리스트에서 마우스오버시 변경되는건 css로 처리함) -->
+    <div style="position:relative; z-index:9999;">
+        <div id="more_view" onmouseover="viewLayer2('more_view')" onmouseout="hideLayer2('more_view')" class="layer_mv" style="display:none;">
+            <div class="lmv_w">
+                <div class="lmv_tle">
+                    <span>더보기</span>
+                </div>
+                <ul class="lmv_list"> <!-- ※ 마지막줄 li 에만 class="line_none" 들어감 -->
+                    <li>
+                        <div><a href="http://hosting.cafe24.com" target="_blank">호스팅센터</a></div>
+                        <div><a href="http://www.cafe24.com/?controller=domain_main" target="_blank">도메인센터</a></div>
+                    </li>
+                    <li>
+                        <div><a href="http://echosting.cafe24.com" target="_self">쇼핑몰센터</a></div>
+                        <div><a href="http://shop.cafe24.com" target="_blank">오픈마켓센터</a></div>
+                        <div><a href="http://soho.cafe24.com" target="_blank">창업센터</a></div>
+                        <div><a href="http://edu.cafe24.com" target="_blank">교육센터</a></div>
+                        <div><a href="http://global.cafe24.com" target="_blank">글로벌센터</a></div>
+                    </li>
+                    <li>
+                        <div><a href="http://cmc.cafe24.com" target="_blank">마케팅센터</a></div>
+                        <div><a href="http://d.cafe24.com" target="_blank">디자인센터</a></div>
+                        <div><a href="http://dbank.cafe24.com" target="_blank">디자인뱅크</a></div>
+                        <div><a href="http://home.cafe24.com" target="_blank">홈페이지제작센터</a></div>
+                        <div><a href="http://biz.cafe24.com" target="_blank">BIZ솔루션</a></div>
+                    </li>
+                    <li class="line_none"> <!-- ※ 마지막줄 li 에만 class="line_none" 들어감 -->
+                        <div><a href="http://reseller.cafe24.com" target="_blank">리셀러</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //20111110_수정 더보기_layer (이 부분 모두 새로 적용해주세요, 리스트에서 마우스오버시 변경되는건 css로 처리함) -->
+</div>
+
+<!-- ************************** GNB ********************************** -->
+<div class="gnb">
+    <div class="wrap">
+        <ul class="gnb_x1">
+            <li onmouseout="this.className=''" onmousedown="this.className='on'" class="first"><a href="http://echosting.cafe24.com/Main/"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_01.png" alt="쇼핑몰센터 홈" /></a></li>
+            <li onmouseout="this.className=''" onmousedown="this.className='on'"><a href="#none"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_09.png" alt="글로벌 쇼핑몰" /></a><span class="icoHot">HOT</span></li>
+            <li onmouseout="this.className=''" onmousedown="this.className='on'"><a href="http://echosting.cafe24.com/Info/"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_02.png" alt="쇼핑몰센터 안내" /></a></li>
+            <li onmouseout="this.className=''" onmousedown="this.className='on'"><a href="http://echosting.cafe24.com/Skill/"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_03.png" alt="파워기능 소개" /></a></li>
+            <li onmouseout="this.className=''" onmousedown="this.className='on'"><a href="http://echosting.cafe24.com/Addsvc/"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_04.png" alt="부가서비스" /></a></li>
+            <li onmousedown="this.className='on'" class="on"><a href="#none"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_08.png" alt="모바일쇼핑몰" /></a><span class="icoHot">HOT</span></li>
+            <li onmouseout="this.className=''" onmousedown="this.className='on'"><a href="http://echosting.cafe24.com/Popular/"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_05.png" alt="인기쇼핑몰" /></a></li>
+            <li onmouseout="this.className=''" onmousedown="this.className='on'"><a href="http://echosting.cafe24.com/Biz/"><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_06b.png" alt="창업매니저" /></a></li>
+        </ul>
+
+        <ul class="gnb_x2">
+            <li onmouseout="this.className=''" onmousedown="this.className='on'" class="first"><a href="http://echosting.cafe24.com/Cs/?url=Faq&mode=sub&list=0&social="><img src="http://img.cafe24.com/images/ec_re09/main_v3/tmenu_21.png" alt="쇼핑몰센터 홈" /></a></li>
+            <li><a href="javascript:isLogin('location','/Cs/?url=Csboard', true);" class="za">1:1 고객센터</a></li>
+            <!--li class="last"><a href="http://echosting.cafe24.com/Socialinfo/?url=Info" class="zb">소셜커머스<img src="http://img.cafe24.com/images/ec_re09/main_v3/icon_new.png" alt="NEW" class="new" /></a></li-->
+        </ul>
+    </div>
+</div>
+<!-- ************************** //GNB ********************************** -->
+
+<div id="container" class="globalShop">
+    <div id="sidebar" data-layout="red">
+        <div id="snb">
+            <h1>
+                <span><img src="//img.cafe24.com/img/ec/global/txt_snb.gif" alt="Global Shoppingmall" /></span>
+                <img src="//img.cafe24.com/img/ec/global/h1_snb.gif" alt="글로벌 쇼핑몰" />
+            </h1>
+            <!-- 참고 : 상태별 클래스명
+                li : 기본
+                li.selected : 하위메뉴 없고 선택 되었을 때
+                li.collapsable.selected : 하위메뉴 있고 선택 되었을 때
+            //참고 -->
+            <div class="navigation">
+                <ul>
+                    <li><a href="#none">글로벌 원스톱 서비스</a></li>
+                    <li class="selected"><a href="#none">글로벌 쇼핑몰 만들기</a></li>
+                    <li class="collapsable selected">
+                        <a href="#none">글로벌 쇼핑몰 운영</a>
+                        <ul>
+                            <li><a href="#none">해외 운영 대행</a></li>
+                            <li class="selected"><a href="#none">해외 결제</a></li>
+                            <li><a href="#none">해외 번역</a></li>
+                            <li><a href="#none">해외 배송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">글로벌 쇼핑몰 마케팅<span class="icoHot">HOT</span></a>
+                        <ul>
+                            <li><a href="#none">해외 오픈마켓</a></li>
+                            <li><a href="#none">해외 광고 마케팅</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#none">글로벌 시장 진출</a></li>
+                    <li><a href="#none">대표 쇼핑몰</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner">
+            <a href="#none"><img src="//img.cafe24.com/img/ec/common/img_banner.gif" alt="" /></a>
+            <a href="#none"><img src="//img.cafe24.com/img/ec/common/img_banner.gif" alt="" /></a>
+        </div>
+    </div>
+
+    <div id="content" data-layout="blue">
+        컨텐츠 <br /><br /><br /><br /><br />
+    </div>
+</div>
+
+<div class="footer"><div class="area"><img src="//img.cafe24.com/img/ec/temp/@footer.gif" alt="" /></div></div>
+
+<!-- LAYOUT ID VIEW -->
+<script type="text/javascript" src="/guide/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/guide/js/project_ui.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $.fn.layoutView();
+    });
+</script>
+<!-- //LAYOUT ID VIEW -->
+</body>
+</html>

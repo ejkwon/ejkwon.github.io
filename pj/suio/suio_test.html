@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>suio test</title>
+    <link rel="stylesheet" type="text/css" href="/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="//img.echosting.cafe24.com/css/layout.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="//img.echosting.cafe24.com/css/ec/product.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/suio.js" charset="utf-8"></script>
+</head>
+<body style="width:auto; height:auto; padding:20px;">
+<form action="#none">
+    <label class="gLabel"><input type="checkbox" class="fChk" checked="checked" id="test2" /> checkbox</label>
+    <label class="gLabel"><input type="checkbox" class="fChk" /> checkbox</label>
+    <label class="gLabel"><input type="checkbox" class="fChk" /> checkbox</label> <br /><br /><br />
+
+    <label class="gLabel"><input type="checkbox" class="fChk" /> checkbox 임의</label>
+
+    <label class="gLabel"><input type="radio" name="test" class="fChk" checked="checked" /> 222</label>
+    <label class="gLabel"><input type="radio" name="test" class="fChk" id="test1" /> 222</label>
+    <label class="gLabel"><input type="radio" name="test" class="fChk" /> 222</label>
+
+    <button type="button" id="button" style="border:5px solid red;">Click Button</button>
+</form>
+    <script type="text/javascript">
+        $(function(){
+            // 버튼클릭시 #test1, #test2 를 click();
+            $('#button').click(function(event){
+                $('#test1').click();
+                $('#test2').click();
+            });
+        });
+
+
+    </script>
+</body>
+</html>

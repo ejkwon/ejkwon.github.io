@@ -1,0 +1,848 @@
+<?php include('../layout/header_sub.html'); ?>
+    <!-- content -->
+    <div id="contents">
+        <!-- 주문정보 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>주문정보</h3>
+            </div>
+            <div class="contents">
+                <div class="mBoard typeRow">
+                    <table border="1">
+                        <caption>주문정보</caption>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">쇼핑몰</th>
+                                <td>기본 (디폴트) (한국어)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주문번호</th>
+                                <td>20121204-204602</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">에스크로 상태</th>
+                                <td>배송정보 전송전</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">판매처/유입경로</th>
+                                <td>모바일</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주문일자</th>
+                                <td>2014-02-25 15:30:12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 주문내역 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>주문내역 <span class="count">(2건)</span></h3>
+            </div>
+            <div class="contents">
+                <div class="orderInfo">
+                    <ul class="mList typeBullet">
+                        <li><span>품목별 주문번호 : </span>20150213-0000014-02</li>
+                        <li><span>배송번호 : </span>D-20150219-0000421-02</li>
+                    </ul>
+                    <div class="mSummary">
+                        <div class="cell thumb top"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.png" class="frame" width="71" alt=""></div>
+                        <div class="info">
+                            <strong class="heading"><span class="txtSFIX icoSetAll">세트(일체형)</span> 일체세트상품명</strong>
+                            <ul class="set">
+                                <li>
+                                    <strong>1번 상품 (1개)</strong>
+                                    <ul class="etc">
+                                        <li>색상 : red</li>
+                                        <li>사이즈 : M</li>
+                                        <li>공급사 : 자체공급</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>2번 상품 (1개)</strong>
+                                    <ul class="etc">
+                                        <li>색상 : red</li>
+                                        <li>사이즈 : M</li>
+                                        <li>공급사 : 자체공급</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="gDouble"><strong class="txtNormal">105,500원</strong><span class="bar"></span>2개</p>
+                            <a href="#none" class="btnLink">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="mBoard typeSub gCell">
+                        <table border="1">
+                            <caption>품목별 주문내역</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody class="right">
+                                <tr>
+                                    <th scope="row">상품구매금액</th>
+                                    <td>12,200,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품별할인금액</th>
+                                    <td>12,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">배송비</th>
+                                    <td>2,500 (기본)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mTotal">주문상태 : <strong>배송준비중</strong></div>
+                </div>
+                <!-- 참고: 분리형 세트일 경우, 세트상품명과 구성상품명 링크 분리 -->
+                <div class="orderInfo">
+                    <ul class="mList typeBullet">
+                        <li><span>품목별 주문번호 : </span>20150213-0000014-02</li>
+                        <li><span>배송번호 : </span>D-20150219-0000421-02</li>
+                    </ul>
+                    <div class="mSummary">
+                        <div class="cell thumb top"><a href="#none"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.png" class="frame" width="71" alt=""></a></div>
+                        <div class="info">
+                            <strong class="heading"><a href="#none"><span class="txtSFIX icoSetSplit">세트(분리형)</span> 분리세트상품명</a></strong>
+                            <ul class="set">
+                                <li>
+                                    <strong><a href="#none">구성상품명1</a></strong>
+                                    <ul class="etc">
+                                        <li><a href="#none">색상 : red</a></li>
+                                        <li><a href="#none">사이즈 : M</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="gDouble"><a href="#none"><strong class="txtNormal">105,500원</strong><span class="bar"></span>2개</a></p>
+                        </div>
+                    </div>
+                    <div class="mBoard typeSub gCell">
+                        <table border="1">
+                            <caption>품목별 주문내역</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody class="right">
+                                <tr>
+                                    <th scope="row">상품구매금액</th>
+                                    <td>12,200,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품별할인금액</th>
+                                    <td>12,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">배송비</th>
+                                    <td>2,500 (기본)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mTotal">주문상태 : <strong>배송준비중</strong></div>
+                </div><!-- //참고 -->
+                <div class="deliveryInfo"><span>배송정보</span>우체국택배 / 620456512365468</div>
+            </div>
+            <div class="contents">
+                <div class="orderInfo">
+                    <ul class="mList typeBullet">
+                        <li><span>품목별 주문번호 : </span>20150213-0000014-01</li>
+                        <li><span>배송번호 : </span>D-20150219-0000421-00</li>
+                    </ul>
+                    <div class="mSummary">
+                        <div class="cell thumb top"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.png" class="frame" width="71" alt=""></div>
+                        <div class="info">
+                            <strong class="heading">[이브수]달콤살벌 신혼 침구 세트 달콤살벌 신혼 침구 세트</strong>
+                            <ul class="etc">
+                                <li>색상 : red</li>
+                                <li>사이즈 : M</li>
+                                <li>공급사 : 자체공급</li>
+                            </ul>
+                            <p class="gDouble"><strong class="txtNormal">100,000원</strong><span class="bar"></span>1개</p>
+                            <a href="#none" class="btnLink">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="mBoard typeSub gCell">
+                        <table border="1">
+                            <caption>품목별 주문내역</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody class="right">
+                                <tr>
+                                    <th scope="row">상품구매금액</th>
+                                    <td>12,200,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품별할인금액</th>
+                                    <td>12,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">배송비</th>
+                                    <td>2,500원</td>
+                                </tr>
+                                <tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mTotal">주문상태 : <strong>배송준비중(후불입금완료)</strong></div>
+                </div>
+                <div class="orderInfo">
+                    <ul class="mList typeBullet">
+                        <li><span>품목별 주문번호 : </span>20150213-0000014-02</li>
+                        <li><span>배송번호 : </span>D-20150219-0000421-02</li>
+                    </ul>
+                    <div class="mSummary">
+                        <div class="cell thumb top"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.png" class="frame" width="71" alt=""></div>
+                        <div class="info">
+                            <strong class="heading"><span class="icoSetProduct">세트</span> 세트상품 세트상품 세트상품 세트상품 세트상품 세트상품 세트상품</strong>
+                            <ul class="set">
+                                <li>
+                                    <strong>1번 상품 (1개)</strong>
+                                    <ul class="etc">
+                                        <li>색상 : red</li>
+                                        <li>사이즈 : M</li>
+                                        <li>공급사 : 자체공급</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>2번 상품 (1개)</strong>
+                                    <ul class="etc">
+                                        <li>색상 : red</li>
+                                        <li>사이즈 : M</li>
+                                        <li>공급사 : 자체공급</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="gDouble"><strong class="txtNormal">105,500원</strong><span class="bar"></span>2개</p>
+                            <a href="#none" class="btnLink">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="mBoard typeSub gCell">
+                        <table border="1">
+                            <caption>품목별 주문내역</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody class="right">
+                                <tr>
+                                    <th scope="row">상품구매금액</th>
+                                    <td>12,200,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품별할인금액</th>
+                                    <td>12,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">배송비</th>
+                                    <td>2,500 (기본)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mTotal">주문상태 : <strong>배송준비중</strong></div>
+                </div>
+                <div class="deliveryInfo"><span>배송정보</span>우체국택배 / 620456512365468</div>
+            </div>
+        </div>
+
+        <!-- 취소 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>취소 <span class="count">(1건)</span></h3>
+            </div>
+            <div class="contents">
+                <div class="orderInfo">
+                    <ul class="mList typeBullet">
+                        <li><span>품목별 주문번호 : </span>20150213-0000014-01</li>
+                        <li><span>배송번호 : </span>D-20150219-0000421-00</li>
+                        <li><span>취소번호 : </span>C20150303-123456789</li>
+                    </ul>
+                    <div class="mSummary">
+                        <div class="cell thumb top"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.png" class="frame" width="71" alt=""></div>
+                        <div class="info">
+                            <strong class="heading">런체-카미원피스 런체-카미원피스 런체-카미원피스 런체-카미원피스 이뻐요~!</strong>
+                            <ul class="etc">
+                                <li>색상 : red</li>
+                                <li>사이즈 : M</li>
+                                <li>공급사 : 자체공급</li>
+                            </ul>
+                            <p class="gDouble"><strong class="txtNormal">5,000원</strong><span class="bar"></span>1개</p>
+                            <a href="#none" class="btnLink">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="mBoard typeSub gCell">
+                        <table border="1">
+                            <caption>품목별 주문내역</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody class="right">
+                                <tr>
+                                    <th scope="row">상품구매금액</th>
+                                    <td>12,200,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품별할인금액</th>
+                                    <td>12,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">운송장번호</th>
+                                    <td>123456789</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">환불내역</th>
+                                    <td>우리은행(999-999-9999 홍길동)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mTotal">주문상태 : <strong>입금전취소(시스템)</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 교환 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>교환 <span class="count">(1건)</span></h3>
+            </div>
+            <div class="contents">
+                <div class="orderInfo">
+                    <ul class="mList typeBullet">
+                        <li><span>품목별 주문번호 : </span>20150213-0000014-01</li>
+                        <li><span>배송번호 : </span>D-20150219-0000421-00</li>
+                        <li><span>교환번호 : </span>C20150303-123456789</li>
+                    </ul>
+                    <div class="mSummary">
+                        <div class="cell thumb top"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.png" class="frame" width="71" alt=""></div>
+                        <div class="info">
+                            <strong class="heading">런체-카미원피스 런체-카미원피스 런체-카미원피스 이뻐요~!</strong>
+                            <ul class="etc">
+                                <li>색상 : red</li>
+                                <li>사이즈 : M</li>
+                                <li>공급사 : 자체공급</li>
+                            </ul>
+                            <p class="gDouble"><strong class="txtNormal">5,000원</strong><span class="bar"></span>1개</p>
+                            <a href="#none" class="btnLink">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="mBoard typeSub gCell">
+                        <table border="1">
+                            <caption>품목별 주문내역</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody class="right">
+                                <tr>
+                                    <th scope="row">상품구매금액</th>
+                                    <td>12,200,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품별할인금액</th>
+                                    <td>12,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">운송장번호</th>
+                                    <td>123456789</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mTotal">주문상태 : <strong>교환처리중</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 반품 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>반품 <span class="count">(1건)</span></h3>
+            </div>
+            <div class="contents">
+                <div class="orderInfo">
+                    <ul class="mList typeBullet">
+                        <li><span>품목별 주문번호 : </span>20150213-0000014-01</li>
+                        <li><span>배송번호 : </span>D-20150219-0000421-00</li>
+                        <li><span>반품번호 : </span>C20150303-123456789</li>
+                    </ul>
+                    <div class="mSummary">
+                        <div class="cell thumb top"><img src="//img.echosting.cafe24.com/mobile/@img_thumb.png" class="frame" width="71" alt=""></div>
+                        <div class="info">
+                            <strong class="heading">런체-카미원피스 런체-카미원피스 런체-카미원피스 이뻐요~!</strong>
+                            <ul class="etc">
+                                <li>색상 : red</li>
+                                <li>사이즈 : M</li>
+                                <li>공급사 : 자체공급</li>
+                            </ul>
+                            <p class="gDouble"><strong class="txtNormal">5,000원</strong><span class="bar"></span>1개</p>
+                            <a href="#none" class="btnLink">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="mBoard typeSub gCell">
+                        <table border="1">
+                            <caption>품목별 주문내역</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody class="right">
+                                <tr>
+                                    <th scope="row">상품구매금액</th>
+                                    <td>12,200,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상품별할인금액</th>
+                                    <td>12,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">운송장번호</th>
+                                    <td>123456789</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mTotal">주문상태 : <strong>반품완료</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 환불 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>환불 <span class="count">(1건)</span></h3>
+            </div>
+            <div class="contents">
+                <div class="mBoard typeRow">
+                    <table border="1">
+                        <caption>환불정보</caption>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">환불신청일</th>
+                                <td>2015-03-02</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">환불처리<br>완료일</th>
+                                <td>2015-03-02</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">환불번호</th>
+                                <td>B20150303-123456789</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상품수</th>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">총환불액</th>
+                                <td>50,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">실환불액<br><span class="txtLight">(적립금/예치금)</span></th>
+                                <td>50,000 (5,000/250)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사용한 적립금 / 예치금 환불</th>
+                                <td>1,500/30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사용한<br>통합포인트 환불</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">반송비</th>
+                                <td>5,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">재발송배송비</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">해외배송<br>부가금액</th>
+                                <td>35,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">환불정보</th>
+                                <td>우리은행(123-456-7890 홍길동)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mTotal">주문상태 : <strong>환불완료</strong></div>
+            </div>
+        </div>
+
+        <!-- 결제정보 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>결제정보</h3>
+            </div>
+            <div class="contents">
+                <div class="mBoard typeRow">
+                    <table border="1">
+                        <caption>결제정보</caption>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">상품구매금액</th>
+                                <td>5,500</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">할인</th>
+                                <td>2,500</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">적립</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">부가결제</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송비</th>
+                                <td>5,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">해외배송<br>부가금액</th>
+                                <td>35,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제예정금액</th>
+                                <td>8,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">총 실결제금액</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 결제수단 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>결제수단</h3>
+            </div>
+            <div class="contents">
+                <div class="mBoard typeRow">
+                    <table border="1">
+                        <caption>결제수단</caption>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">결제(입금)자</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전자보증보험</th>
+                                <td>123456789456789</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제수단</th>
+                                <td><img src="//img.echosting.cafe24.com/icon/ico_pay_gmo.gif" alt="GMO後払い" title="GMO後払い" height="13"> GMO후불 <img src="//img.echosting.cafe24.com/icon/ico_pay_bankbook2.gif" alt="무통장입금" height="13"> 무통장입금 <img src="//img.echosting.cafe24.com/icon/ico_pay_mileage2.gif" alt="적립금" height="13"> 적립금 <img src="//img.echosting.cafe24.com/icon/ico_pay_ecpay.gif" alt="ECPay" title="ECPay" height="13"> EC페이 <img src="//img.echosting.cafe24.com/icon/ico_pay_membership.gif" alt="통합포인트" height="13"> 통합포인트</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제PG정보</th>
+                                <td>
+                                    <ul class="mList typeBullet">
+                                        <li><span>결제 : </span>신용카드</li>
+                                        <li><span>TID : </span>150303154821-81719502799</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제상세내역</th>
+                                <td>
+                                    <ul class="mList typeBullet">
+                                        <li><span>결제 : </span>2015-02-19 17:24:15 / 0.03</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제은행정보</th>
+                                <td>
+                                    신한은행/123456789/오로라닷컴
+                                    <span class="gSingle"><a href="#none" class="btnBasic gMini">입금확인</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제(입금)확인일</th>
+                                <td>2015-02-19 18:39:59</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금확인정보</th>
+                                <td>system / 자동입금확인</td>
+                            </tr>
+                            <!-- 참고: 연동처리성공 -->
+                            <tr>
+                                <th scope="row">연동 처리 정보</th>
+                                <td>
+                                    <ul class="mList typeBullet">
+                                        <li><span>배송완료처리 : </span>2015-01-25 11:30:35 / 성공</li>
+                                        <li><span>주문상품추가 : </span>2015-01-25 11:30:35 / 성공</li>
+                                        <li><span>상품교환 : </span>2015-01-25 11:30:35 / 성공</li>
+                                        <li><span>상품반품 : </span>2015-01-25 11:30:35 / 성공</li>
+                                        <li><span>상품취소 : </span>2015-01-25 11:30:35 / 성공</li>
+                                    </ul>
+                                </td>
+                            </tr><!-- //참고 -->
+                            <!-- 참고: 연동처리실패 -->
+                            <tr>
+                                <th scope="row">연동 처리 정보</th>
+                                <td>
+                                    <ul class="mList typeBullet">
+                                        <li>
+                                            <span>배송완료처리 : </span>2015-01-25 11:30:35 / 실패<br>
+                                            <a href="#layerCauseFail" class="eLayerClick"><img src="//img.cafe24.com/img1/ec_admin/btn/btn_cause_fail.gif" height="16" alt="실패사유" /></a>
+                                        </li>
+                                        <li>
+                                            <span>배송완료처리 : </span>2015-01-25 11:30:35 / 실패<br>
+                                            <a href="#layerCauseFail" class="eLayerClick"><img src="//img.cafe24.com/img1/ec_admin/btn/btn_cause_fail.gif" height="16" alt="실패사유" /></a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr><!-- //참고 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 주문자정보 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>주문자정보</h3>
+            </div>
+            <div class="contents">
+                <div class="mBoard typeRow">
+                    <table border="1">
+                        <caption>주문자정보</caption>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">주문자명(ID)</th>
+                                <td>홍길동(hong)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">회원등급</th>
+                                <td><span class="txtSFIX icoMembership">통합멤버십</span> 일반회원</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">일반전화</th>
+                                <td><a href="tel:02-9999-9999" class="btnBasic gMini icoTel">02-9999-9999</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대전화</th>
+                                <td><a href="tel:010-9999-9999" class="btnBasic gMini icoPhone">010-9999-9999</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">이메일</th>
+                                <td><a href="#none" class="btnBasic gMini icoEmail">hong@cafe24.com</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">구매자아이피</th>
+                                <td>123.456.789.123</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 수령자정보 -->
+        <div class="mToggle eToggle selected">
+            <div class="heading eButton">
+                <h3>수령자정보</h3>
+            </div>
+            <div class="contents">
+                <div class="mBoard typeRow">
+                    <table border="1">
+                        <caption>수령자정보</caption>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr class="section">
+                                <th scope="row"><span class="txtEm">배송번호</span></th>
+                                <td>D-20130511-2035487243-00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송구분</th>
+                                <td>국내배송</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수령자명</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">일반전화</th>
+                                <td><a href="tel:02-9999-9999" class="btnBasic gMini icoTel">02-9999-9999</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대전화</th>
+                                <td><a href="tel:010-9999-9999" class="btnBasic gMini icoPhone">010-9999-9999</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송지주소</th>
+                                <td>(138-170)<span class="gSingle">서울특별시 송파구 송파동 123</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송지메시지</th>
+                                <td>빠른배송 부탁드립니다.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">희망배송일</th>
+                                <td>2015-02-13<span class="gSingle">(가능한 빠른 배송 요망)</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">희망배송시간</th>
+                                <td>04:00 ~ 18:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">희망배송업체/<br>방식</th>
+                                <td>퀵배송</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mBoard typeRow">
+                    <table border="1">
+                        <caption>수령자정보</caption>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr class="section">
+                                <th scope="row"><span class="txtEm">배송번호</span></th>
+                                <td>D-20130511-2035487243-01</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송구분</th>
+                                <td>해외배송</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수령자명</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수령자(영문)</th>
+                                <td>honggildong</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">일반전화</th>
+                                <td><a href="tel:02-9999-9999" class="btnBasic gMini icoTel">02-9999-9999</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대전화</th>
+                                <td><a href="tel:010-9999-9999" class="btnBasic gMini icoPhone">010-9999-9999</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수령자명<br>(발음기호)</th>
+                                <td>honggildong</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송국가</th>
+                                <td>미국 (U.S.A)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">시/군/도시</th>
+                                <td>City</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주/도</th>
+                                <td>State / Prov</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주소</th>
+                                <td>(123456)<span class="gSingle">Construction Financial Bldg., Sindaebang 2-dong, Dongjak-gu, Seoul, Korea</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">시/군/도시(영문)</th>
+                                <td>미국 (U.S.A)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주/도(영문)</th>
+                                <td>City</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주소(영문)</th>
+                                <td>State / Prov</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송지메시지</th>
+                                <td>빠른배송 부탁드립니다.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">희망배송일</th>
+                                <td>2015-02-13<span class="gSingle">(가능한 빠른 배송 요망)</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">희망배송시간</th>
+                                <td>04:00 ~ 18:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">청구서발송일</th>
+                                <td>2015-02-13<span class="gSingle">(배송완료처리 후에 결제 청구서가 수령지 주소로 발송됩니다.)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!-- //content -->
+
+    <!-- 참고 : GMO후불 실패사유 -->
+    <div id="layerCauseFail" class="mLayer" style="display:none;">
+        <h2>실패사유</h2>
+        <div class="content">
+            <div class="mBox typeBorder gScroll">
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D),<br />
+                인증키 글자수 오류(SP0003D)
+            </div>
+        </div>
+        <div class="mButton">
+            <a href="#none" onclick="$('.mLayer').hide();" class="btnNormal">닫기</a>
+        </div>
+        <button type="button" class="btnLayerClose" onclick="$('.mLayer').hide();">닫기</button>
+    </div><!-- //참고 -->
+
+<?php include('../layout/footer.html'); ?>

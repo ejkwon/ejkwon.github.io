@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
+<!-- 참고: 사용자 스타일 수정이 필요한 경우, #userStyle #mCafe24Order { } 셀렉터로 추가하여 처리 가능합니다. -->
+<!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+<link rel="canonical" href="http://ejkwon9811.cafe24.com/order/order_result.html" />
+<meta property="og:url" content="http://ejkwon9811.cafe24.com/order/order_result.html" />
+<meta property="og:site_name" content="궈넌덩몰" />
+<meta property="og:type" content="website" />
+<script type="text/javascript" src="/app/Eclog/js/cid.generate.js?vs=3d0b473968a0ec4ec41e3bf59df3aa51"></script>
+            <script type='text/javascript'>
+                var EC_FRONT_EXTERNAL_SCRIPT_VARIABLE_DATA = {"total_basic_ship_fee":0,"payed_amount":20000,"order_id":"20190731-0000010","order_product":[{"product_name":"\ubbf8\ub2c8 \uc6d0\ud53c\uc2a4","product_price":10000,"quantity":2,"product_no":28,"product_code":"P00000BB","sub_total_price":20000,"category_no_1":42,"category_name_1":"Dress","category_no_2":44,"category_name_2":"depth2_\uce74\ud14c\uace0\ub9ac1","sum_total_opt_price":10000}],"member_id_crypt":"47d01a3655465c15f2bf538d28fdaf30646a38926b0f07b0fae4e6439e5d3760","common_member_id_crypt":"47d01a3655465c15f2bf538d28fdaf30646a38926b0f07b0fae4e6439e5d3760"};
+            </script>
+            
+<script type="text/javascript">var EC_SDE_SHOP_NUM = 1;var SHOP = {getLanguage : function() { return "ko_KR"; },getCurrency : function() { return "KRW"; },getFlagCode : function() { return "KR"; },isMultiShop : function() { return true; },isDefaultShop : function() { return true; },isDefaultLanguageShop : function(sLanguageCode) { return SHOP.isDefaultShop() && SHOP.isLanguageShop(sLanguageCode); },isKR : function() { return true; },isUS : function() { return false; },isJP : function() { return false; },isCN : function() { return false; },isTW : function() { return false; },isES : function() { return false; },isPT : function() { return false; },isVN : function() { return false; },isLanguageShop : function(sLanguageCode) { return sLanguageCode === "ko_KR"; },getDefaultShopNo : function() { return 1; },getProductVer : function() { return 2; },isSDE : function() { return true; },isMode : function() {return false; },getAdminID : function() {return 'ejkwon9811'},getMallID : function() {return 'ejkwon9811'}};var EC_COMMON_UTIL = {convertSslForString : function(sString) { return sString.replace(/http:/gi, '');},convertSslForHtml : function(sHtml) { return sHtml.replace(/((?:src|href)\s*=\s*['"])http:(\/\/(?:[a-z0-9\-_\.]+)\/)/ig, '$1$2');},getProtocol : function() { return 'http'; },moveSsl : function() { if (EC_COMMON_UTIL.getProtocol() === 'http') { var oLocation = jQuery(window.location); var sUrl = 'https://' + oLocation.attr('host') + oLocation.attr('pathname') + oLocation.attr('search'); window.location.replace(sUrl); } }};</script><script type="text/javascript">            var EC_ROOT_DOMAIN = "cafe24.com";
+            var EC_GLOBAL_INFO = (function() {
+                var oData = {"base_domain":"ejkwon9811.cafe24.com","root_domain":"cafe24.com","is_global":false,"country_code":"KR","language_code":"ko_KR"};
+                
+                return {
+                    getBaseDomain: function() {
+                        return oData['base_domain'];
+                    },
+
+                    getRootDomain: function() {
+                        return oData['root_domain'];
+                    },
+
+                    isGlobal: function() {
+                        return oData['is_global'];
+                    },
+
+                    getCountryCode: function() {
+                        return oData['country_code'];
+                    },
+
+                    getLanguageCode: function() {
+                        return oData['language_code'];
+                    }
+                };
+            })();</script><script type="text/javascript">            var EC_GLOBAL_DATETIME = (function() {
+                var oConstants = {"STANDARD_DATE_REGEX":"\/([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))\/","IN_ZONE":"inZone","OUT_ZONE":"outZone","IN_FORMAT":"inFormat","OUT_FORMAT":"outFormat","IN_DATE_FORMAT":"inDateFormat","IN_TIME_FORMAT":"inTimeFormat","OUT_DATE_FORMAT":"outDateFormat","OUT_TIME_FORMAT":"outTimeFormat","IN_FORMAT_DATE_ONLY":1,"IN_FORMAT_TIME_ONLY":2,"IN_FORMAT_ALL":3,"OUT_FORMAT_DATE_ONLY":1,"OUT_FORMAT_TIME_ONLY":2,"OUT_FORMAT_ALL":3,"DATE_ONLY":"YYYY-MM-DD","TIME_ONLY":"HH:mm:ss","FULL_TIME":"YYYY-MM-DD HH:mm:ss","ISO_8601":"YYYY-MM-DD[T]HH:mm:ssZ","YEAR_ONLY":"YYYY","MONTH_ONLY":"MM","DAY_ONLY":"DD","WEEK_ONLY":"e","SEOUL":"Asia\/Seoul","TOKYO":"Asia\/Tokyo","SHANGHAI":"Asia\/Shanghai","TAIPEI":"Asia\/Taipei","HANOI":"Asia\/Bangkok","LOS_ANGELES":"America\/Los_Angeles","LISBON":"Europe\/Lisbon","MADRID":"Europe\/Madrid","UTC":"Etc\/UTC"};
+                var oOptions = {"inZone":"Asia\/Seoul","inFormat":"YYYY-MM-DD HH:mm:ss","inDateFormat":"YYYY-MM-DD","inTimeFormat":"HH:mm:ss","outZone":"Asia\/Seoul","outFormat":"YYYY-MM-DD HH:mm:ss","outDateFormat":"YYYY-MM-DD","outTimeFormat":"HH:mm:ss"};
+                var oPolicies = [];
+                var sOverrideTimezone = '';
+                var sMomentNamespace = 'EC_GLOBAL_MOMENT';
+                
+                var fMomentLoaded = function() {
+                    var bMomentLoaded = !!window[sMomentNamespace];
+                    var bMomentTZLoaded = false;
+                    if (bMomentLoaded) {
+                        bMomentTZLoaded = !!window[sMomentNamespace].tz;
+                    }
+                    
+                    return bMomentLoaded && bMomentTZLoaded;
+                };
+                
+                var fMomentWrapper = function() {
+                    return window[sMomentNamespace];
+                };
+                
+                var fShallowMerge = function(oTarget, oSource) {
+                    oSource = oSource || {};
+                    for (var sKey in oSource) {
+                        if (oSource.hasOwnProperty(sKey)) {
+                            oTarget[sKey] = oSource[sKey];
+                        }
+                    }
+                    
+                    return oTarget;
+                };
+                
+                var getFormatFromFlag = function(oOptions, iFlag, bOpposite) {
+                    if (bOpposite) {
+                        switch (iFlag) {
+                            case 1:
+                                return oOptions[oConstants.IN_DATE_FORMAT];
+                            case 2:
+                                return oOptions[oConstants.IN_TIME_FORMAT];
+                            default:
+                                return oOptions[oConstants.IN_FORMAT];    
+                        }
+                    }
+                    
+                    switch (iFlag) {
+                        case 1:
+                            return oOptions[oConstants.OUT_DATE_FORMAT];
+                        case 2:
+                            return oOptions[oConstants.OUT_TIME_FORMAT];
+                        default:
+                            return oOptions[oConstants.OUT_FORMAT];
+                    }
+                };
+                              
+                return {
+                    const: oConstants,
+                    
+                    init: function(fCallback) {
+                        if (fMomentLoaded()) {
+                            if (typeof fCallback === 'function') {
+                                fCallback();
+                            }
+                            
+                            return;
+                        }
+                        
+                        var oScript = document.createElement('script');
+                        oScript.type = 'text/javascript';
+                        oScript.async = true;
+                        oScript.src = '/ind-script/moment.php?convert=T';
+                        oScript.onload = oScript.onreadystatechange = function () {
+                            fMomentWrapper().defaultFormat = oOptions[oConstants.OUT_FORMAT];
+                            fMomentWrapper().tz.setDefault(oOptions[oConstants.IN_ZONE]);
+                            
+                            if (typeof fCallback === 'function') {
+                                fCallback();
+                            }
+                        };
+                        
+                        var oFirstScript = document.getElementsByTagName('script')[0];
+                        oFirstScript.parentNode.insertBefore(oScript, oFirstScript);
+                    },
+                    
+                    initPromise: function() {
+                        if (!window.Promise) {
+                            return;
+                        }
+                        
+                        return new Promise(function(resolve) {
+                            this.init(resolve);
+                        }.bind(this));
+                    },
+                    
+                    isLoaded: function() {
+                        return fMomentLoaded();
+                    },
+                                    
+                    setOptions: function(oNewOptions) {
+                         if (typeof oNewOptions === 'object') {
+                             for (var sKey in oNewOptions) {
+                                 if (oNewOptions.hasOwnProperty(sKey) && oOptions.hasOwnProperty(sKey)) {
+                                     oOptions[sKey] = oNewOptions[sKey];
+                                 }
+                             }
+                         }
+                         
+                         return this;
+                    },
+                    
+                    now: function(mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            return Math.floor(new Date().getTime() / 1000);
+                        }
+                        
+                        var oFormatOptions = this.getOptions(mOptions);
+                        return fMomentWrapper()()
+                            .tz(oFormatOptions.outZone)
+                            .format(getFormatFromFlag(oFormatOptions, iFlag));
+                    },
+                    
+                    format: function(sTime, mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            return sTime;
+                        }
+                        
+                        var oFormatOptions = this.getOptions(mOptions);
+                        return fMomentWrapper()
+                            .tz(sTime, oFormatOptions.inZone)
+                            .tz(oFormatOptions.outZone)
+                            .format(getFormatFromFlag(oFormatOptions, iFlag));
+                    },
+                    
+                    parse: function(sTime, mOptions) {
+                        if (fMomentLoaded() === false) {
+                            return sTime;
+                        }
+                        
+                        var oParseOptions = this.getOptions(mOptions);
+                        return fMomentWrapper().tz((sTime || new Date()), oParseOptions.inZone).tz(oParseOptions.outZone);
+                    },
+                    
+                    getOptions: function(mOptions, iFlag) {
+                        mOptions = mOptions || {};
+                      
+                        var oMergedOptions = fShallowMerge({}, oOptions);
+                        if (typeof mOptions === 'string' && oPolicies[mOptions]) {
+                            oMergedOptions = fShallowMerge(oMergedOptions, oPolicies[mOptions]);
+                        } else if (typeof mOptions === 'object') {
+                            oMergedOptions = fShallowMerge(oMergedOptions, mOptions);
+                        }
+                        
+                        if (sOverrideTimezone) {
+                            if ((typeof mOptions === 'string' && mOptions === 'shop') || (typeof mOptions === 'object' && !mOptions[oConstants.OUT_ZONE])) {
+                                oMergedOptions[oConstants.OUT_ZONE] = sOverrideTimezone;
+                            }
+                        }
+                        
+                        return oMergedOptions;
+                    },
+                    
+                    getRevertOptions: function(mOptions) {
+                        var oCurrentOptions = this.getOptions(mOptions);
+                        var oMergedOptions = fShallowMerge({}, oOptions);
+                        oMergedOptions[oConstants.IN_ZONE] = oCurrentOptions[oConstants.OUT_ZONE];
+                        oMergedOptions[oConstants.IN_FORMAT] = oCurrentOptions[oConstants.OUT_FORMAT];
+                        oMergedOptions[oConstants.IN_DATE_FORMAT] = oCurrentOptions[oConstants.OUT_DATE_FORMAT];
+                        oMergedOptions[oConstants.IN_TIME_FORMAT] = oCurrentOptions[oConstants.OUT_TIME_FORMAT];
+                        
+                        return oMergedOptions;
+                    },
+                    
+                    today: function(sTime, mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            throw new Error('MomentJS didnt initialize');
+                        }
+                        
+                        mOptions = mOptions || 'shop';
+                        var oRevertOptions = this.getRevertOptions(mOptions);
+                        var oToday;
+                        if (!sTime || sTime === 'now') {
+                            oToday = this.parse('', mOptions);
+                        } else {
+                            iFlag = iFlag || oConstants.IN_FORMAT_ALL || 3;
+                            oToday = fMomentWrapper().tz(sTime, getFormatFromFlag(oRevertOptions, iFlag, true), oRevertOptions[oConstants.IN_ZONE]);
+                            if (oToday.isValid() === false) {
+                                var oStandardDateRegex = new RegExp(oConstants.STANDARD_DATE_REGEX.replace(/\//g, ''));
+                                if (oStandardDateRegex.test(sTime) === true) {
+                                    oToday = fMomentWrapper().tz(sTime, oRevertOptions[oConstants.IN_ZONE]);
+                                } else {
+                                    oToday = fMomentWrapper()();
+                                }
+                            }
+                        }
+                        
+                        var oStartOfDay = oToday.clone().startOf('day');
+                        var oEndOfDay = oToday.clone().endOf('day');
+                        
+                        var sStartOfDayInSeoul = oStartOfDay.tz(oConstants.SEOUL).format(oConstants.FULL_TIME);
+                        var sEndOfDayInSeoul = oEndOfDay.tz(oConstants.SEOUL).format(oConstants.FULL_TIME);
+                        
+                        return [sStartOfDayInSeoul, sEndOfDayInSeoul];
+                    },
+                    
+                    parseFromFormat: function(sTime, mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            return sTime;
+                        }
+                        
+                        mOptions = mOptions || 'shop';
+                        iFlag = iFlag || oConstants.IN_FORMAT_ALL || 3;
+                        
+                        var oRevertOptions = {};
+                        if (typeof mOptions === 'string') {
+                            oRevertOptions = this.getRevertOptions(mOptions);
+                        } else {
+                            oRevertOptions = this.getOptions(mOptions);
+                        }
+                        
+                        return fMomentWrapper()(sTime, getFormatFromFlag(oRevertOptions, iFlag, true));
+                    }
+                };
+            })();</script>
+<!--
+<link rel="stylesheet" type="text/css" href="/ind-script/optimizer.php?filename=nY05EsIwEARzi5R3bNkRPEfH2BZota5dqcC_54gIKadT3T20CoPGSWlTWdQzKUy6RlA0o1mlNorCLPX0Hs70D484mJTestQhyPOg2Fs7elr8Dj2mNh8KflRE1w1qhNv9IfV6GUfaeig5urVxIUtwCZaXSiwhF0zTt8ySegGJJijNouzgbf-EXw&type=css&k=5918c9ba9bc88dfb5fd65dc939654c06da6c239d&t=1526617563" />-->
+
+<title>주문완료 - 즐거운 온라인 쇼핑공간에 오신 것을 환영합니다!</title>
+<link rel="stylesheet" type="text/css" href="order.css" media="all">
+<meta name="path_role" content="ORDER_ORDERRESULT" />
+<meta name="keywords" content="궈넌덩몰" /></head>
+<body id="userStyle">
+    <div id="titleArea">
+        <h1>주문완료</h1>
+        <span class="xans-element- xans-layout xans-layout-mobileaction btnBack "><a href="#none" onclick="history.go(-1);return false;">뒤로가기</a></span>
+    </div>
+    <form id="frm_order_result" name="frm_order_result" action="" method="post" target="_self" enctype="multipart/form-data" >
+    <input id="order_id" name="order_id" value="20190731-0000010" type="hidden"  />
+    <input id="bank_url_hidden" name="bank_url_hidden" value="www.keb.co.kr" type="hidden"  />
+    
+    <div id="mCafe24Order" class="xans-element- xans-order xans-order-result xans-record-">
+    <!-- [주문완료정보] -->
+        <div class="resultArea">
+            <p class="message"><strong>고객님의 주문이<br>정상적으로 완료되었습니다.</strong></p>
+            <div class="resultInfo">
+                <div class="ec-base-table gCellNarrow">
+                    <table border="1" summary="">
+                        <caption>주문정보</caption>
+                        <colgroup>
+                            <col style="width:94px">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">주문번호</th>
+                                <td class="right"><span class="txtEm">20190731-0000010</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제금액</th>
+                                <td class="right">
+                                    <span class="txtEm">
+                                        20,000원                                        <span class="refer displaynone">()</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- [결제수단] -->
+        <div class="pannelArea">
+            <div class="title">
+                <h2>결제수단</h2>
+            </div>
+            <div class="contents">
+                <div class="segment">
+                    <div class="ec-base-table typeView">
+                        <table border="1" summary="">
+                            <caption>결제수단</caption>
+                            <colgroup>
+                                <col style="width:94px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">결제수단</th>
+                                    <td>
+                                        <span>무통장 입금</span> 
+                                        <div class="methodDetail"><span>입금자 : test, 계좌번호 : 외환은행 123-12-1259 (홍길동)</span></div>
+                                        <span class="methodButton">
+                                            <a href="#none" onclick="" class="btnNormal mini displaynone">현금영수증 신청</a>
+                                            <a href="#none" onclick="window.open('/myshop/order/issue/tax.html?order_id=20190731-0000010', '', 'scrollbars=yes, resizeable=0, status=0, directories=0, toolbar=0'); return false;" class="btnNormal mini ">세금계산서 신청</a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="displaynone">
+                                    <th scope="row">전자보증보험</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [배송지정보] -->
+        <div class="pannelArea">
+            <div class="title">
+                <h2>배송지</h2>
+            </div>
+            <div class="contents">
+                <div class="segment">
+                    <div class="ec-base-table typeView">
+                        <table border="1" summary="">
+                            <caption>배송지정보</caption>
+                            <colgroup>
+                                <col style="width:94px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">받는사람</th>
+                                    <td><span>궈넌덩</span>(gogo@naver.com)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주소</th>
+                                    <td>
+                                         <div class="">
+                                            강남점에서 수령예정
+                                            <span class="gBlank5">서울특별시 강남구 역삼동 134</span>
+                                            <p class="ec-base-help "><span class="txtNormal">(2019년 08월 04일 부터 수령 가능부터 수령 가능)</span></p>
+                                            <span class="gBlank5"><button type="button" onclick="window.open('/order/store_pickup_shop.html?store_no=1', '', 'scrollbars=yes, resizeable=0, status=0, directories=0, toolbar=0'); return false;" class="btnNormal mini">수령지 안내</button></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="displaynone">
+                                    <th scope="row">국가</th>
+                                    <td></td>
+                                </tr>
+                                <tr class="displaynone">
+                                    <th scope="row">도시</th>
+                                    <td></td>
+                                </tr>
+                                <tr class="displaynone">
+                                    <th scope="row">주/지방</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">연락처</th>
+                                    <td><span>010-4720-9811</span> / <span>010-4720-9811</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">배송요청</th>
+                                    <td>
+                                        강남점                                        <span class="gBlank5"></span>
+                                        <span class="gBlank5"></span>
+                                        <span class="gBlank5"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [주문상품] -->
+        <div class="pannelArea">
+            <div class="title">
+                <h2>주문상품</h2>
+            </div>
+            <div class="contents">
+                <!-- 국내배송상품 주문내역 -->
+                <div class="orderArea">
+                    <!-- 기본배송 -->
+                    <div class="" nspace="normal">
+                        <div class="xans-element- xans-order xans-order-normalresultlist">
+                            <!-- 참고: 상품반복 -->
+                            <div class="ec-base-prdInfo xans-record-">
+                                <div class="prdBox">
+                                    <div class="thumbnail"><a href="/product/detail.html?product_no=28&cate_no=1"><img src="//skin-mobile22.ejkwon9811.cafe24.com/web/product/tiny/201705/28_shop1_172066.jpg" alt="" width="90" height="90"></a></div>
+                                    <div class="description">
+                                        <strong class="prdName" title="상품명"><a href = "/product/미니-원피스/28/category/1/" class="ec-product-name" >미니 원피스</a></strong>
+                                        <ul class="info">
+                                            <li class="displaynone">무이자할부 상품</li>
+                                            <li title="옵션">
+                                                <p class="option ">[옵션: 빨강/M]</p>
+                                                </li>
+                                            <li class="price">
+                                                <span class="priceValue " title="판매가">
+                                                    10,000원                                                    <span class="refer displaynone">()</span>
+                                                </span>
+                                                <span class="displaynone" title="할인판매가">10,000원 <span class="refer displaynone">()</span></span>
+                                                <span title="수량" class="quantity">2개</span>
+                                            </li>
+                                            <li title="배송">기본배송 <span class="displaynone">(해외배송가능)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="prdFoot" title="합계">
+                                    <span class="gLeft">합계</span>
+                                    <span class="txtStrong gRight">
+                                        20,000원 <span class="refer displaynone">()</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- //참고 -->
+                            <!-- 참고: 품절상품 -->
+                            <div class="ec-base-prdInfo soldout">
+                                <div class="prdBox">
+                                    <div class="thumbnail"><a href="/product/detail.html?product_no=34&amp;cate_no=1"><img src="//skin-mobile22.ejkwon9811.cafe24.com/web/product/tiny/201705/34_shop1_978727.jpg" alt="" width="90" height="90"></a></div>
+                                    <div class="description">
+                                        <strong class="prdName" title="상품명"><a href="/product/%EC%83%81%ED%92%88%EC%98%B5%EC%85%98-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0/34/category/1/" class="ec-product-name">상품옵션 이미지미리보기</a></strong>
+                                        <ul class="info">
+                                            <li class="displaynone">무이자할부 상품</li>
+                                            <li title="옵션">
+                                                <p class="option ">[옵션: sdfsd/sdfsdfd]</p>
+                                            </li>
+                                            <li class="price">
+                                                <span class="priceValue" title="판매가">
+                                                    20,000원 <span class="refer displaynone"></span>
+                                                </span>
+                                                <span class="displaynone" title="할인판매가">20,000원 <span class="refer displaynone"></span></span>
+                                                <span title="수량" class="quantity">1개</span>
+                                            </li>
+                                            <li title="배송">기본배송 <span class="">(해외배송가능)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="prdFoot">
+                                    <strong class="txtWarn">
+                                        품절된 상품입니다.
+                                    </strong>
+                                </div>
+                            </div>
+                        <!-- //참고 -->
+                        </div>
+                        <div class="totalPrice ec-base-fold eToggle">
+                            <div class="title">
+                                <h3>[기본배송]</h3>
+                            </div>
+                            <div class="contents">
+                                <div class="ec-base-table gCellNarrow">
+                                    <table border="1" summary="">
+                                        <caption>금액정보</caption>
+                                        <colgroup>
+                                            <col style="width:122px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">상품구매금액</th>
+                                                <td class="right"><span class="txtStrong">20,000원<span class="displaynone"> (0)</span></span></td>
+                                            </tr>
+                                            <tr class="displaynone">
+                                                <th scope="row">부가세</th>
+                                                <td class="right"><span class="txtStrong">1,818원</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">배송비</th>
+                                                <td class="right"><span class="txtStrong">0원</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">지역별배송비</th>
+                                                <td class="right"><span class="txtStrong">0원</span></td>
+                                            </tr>
+                                            <tr class="displaynone">
+                                                <th scope="row">할인금액</th>
+                                                <td class="right"><span class="txtStrong">0원</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">합계</th>
+                                                <td class="right"><span class="txtStrong">20,000원 <span class="refer displaynone">()</span></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 개별배송 -->
+                    <div class="displaynone" nspace="individual">
+                        <div class="xans-element- xans-order xans-order-individualresultlist">
+                            <!-- 참고: 상품반복 -->
+                            <div class="ec-base-prdInfo ">
+                                <div class="prdBox">
+                                    <div class="thumbnail"><a href="/product/detail.html"><img src="" alt="" width="90" height="90"></a></div>
+                                    <div class="description">
+                                        <strong class="prdName" title="상품명"></strong>
+                                        <ul class="info">
+                                            <li class="displaynone">무이자할부 상품</li>
+                                            <li title="옵션">
+                                                <p class="option displaynone"></p>
+                                                <ul class="xans-element- xans-order xans-order-optionset option">
+                                                    <li class=""> -  (개)</li>
+                                                </ul>
+                                            </li>
+                                            <li class="price">
+                                                <span class="priceValue " title="판매가">
+                                                    <span class="refer displaynone">()</span>
+                                                </span>
+                                                <span class="displaynone" title="할인판매가"> <span class="refer displaynone">()</span></span>
+                                                <span title="수량" class="quantity">개</span>
+                                            </li>
+                                            <li title="배송">개별배송 <span class="displaynone">(해외배송가능)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="prdFoot" title="합계">
+                                    <span class="gLeft">합계</span>
+                                    <span class="txtStrong gRight"><span class="refer displaynone">()</span></span>
+                                </div>
+                            </div>
+                        <!-- //참고 -->
+                        </div>
+                        <div class="totalPrice ec-base-fold eToggle">
+                            <div class="title">
+                                <h3>[개별배송]</h3>
+                            </div>
+                            <div class="contents">
+                                <div class="ec-base-table gCellNarrow">
+                                    <table border="1" summary="">
+                                        <caption>금액정보</caption>
+                                        <colgroup>
+                                            <col style="width:122px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">상품구매금액</th>
+                                                <td class="right"><span class="txtStrong"><span class="displaynone"> ()</span></span></td>
+                                            </tr>
+                                            <tr class="displaynone">
+                                                <th scope="row">부가세</th>
+                                                <td class="right"><span class="txtStrong"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">배송비</th>
+                                                <td class="right"><span class="txtStrong"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">지역별배송비</th>
+                                                <td class="right"><span class="txtStrong"></span></td>
+                                            </tr>
+                                            <tr class="displaynone">
+                                                <th scope="row">할인금액</th>
+                                                <td class="right"><span class="txtStrong"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">합계</th>
+                                                <td class="right"><span class="txtStrong"> <span class="refer displaynone">()</span></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 해외배송상품 주문내역 -->
+                <div class="orderArea displaynone" nspace="oversea">
+                    <div class="xans-element- xans-order xans-order-oversearesultlist">
+                        <!-- 참고: 상품반복 -->
+                        <div class="ec-base-prdInfo ">
+                            <div class="prdBox">
+                                <div class="thumbnail"><a href="/product/detail.html"><img src="" alt="" width="90" height="90"></a></div>
+                                <div class="description">
+                                    <strong class="prdName" title="상품명"></strong>
+                                    <ul class="info">
+                                        <li class="displaynone">무이자할부 상품</li>
+                                        <li title="옵션">
+                                            <p class="option displaynone"></p>
+                                            <ul class="xans-element- xans-order xans-order-optionset option">
+                                                <li class=""><strong></strong> (개)</li>
+                                            </ul>
+                                        </li>
+                                        <li class="price">
+                                            <span class="priceValue " title="판매가"><span class="refer displaynone">()</span></span>
+                                            <span class="displaynone" title="할인판매가"> <span class="refer displaynone">()</span></span>
+                                            <span title="수량" class="quantity">개</span>
+                                        </li>
+                                        <li title="배송">해외배송</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="prdFoot" title="합계">
+                                <span class="gLeft">합계</span>
+                                <span class="txtStrong gRight"><span class="refer displaynone">()</span></span>
+                            </div>
+                        </div>
+                    <!-- //참고 -->
+                    </div>
+                    <div class="totalPrice ec-base-fold eToggle">
+                        <div class="title">
+                            <h3>[해외배송]</h3>
+                        </div>
+                        <div class="contents">
+                            <div class="ec-base-table gCellNarrow">
+                                <table border="1" summary="">
+                                    <caption>금액정보</caption>
+                                    <colgroup>
+                                        <col style="width:122px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">상품구매금액</th>
+                                            <td class="right"><span class="txtStrong"><span class="displaynone"> ()</span></span></td>
+                                        </tr>
+                                        <tr class="displaynone">
+                                            <th scope="row">부가세</th>
+                                            <td class="right"><span class="txtStrong">원</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">배송비</th>
+                                            <td class="right"><span class="txtStrong">원</span></td>
+                                        </tr>
+                                        <tr class="displaynone">
+                                            <th scope="row">할인금액</th>
+                                            <td class="right"><span class="txtStrong">원</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">합계</th>
+                                            <td class="right">
+                                                <span class="txtStrong"><span class="refer displaynone">()</span></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [사은품] -->
+        <div class="pannelArea displaynone" nspace="gift">
+            <div class="title">
+                <h2>사은품</h2>
+            </div>
+            <div class="contents">
+                <div class="orderArea">
+                    <div class="xans-element- xans-order xans-order-giftresultlist">
+                        <!-- 참고: 상품반복 -->
+                        <div class="ec-base-prdInfo ">
+                            <div class="prdBox">
+                                <div class="thumbnail"><img src="" alt="" width="90" height="90"></div>
+                                <div class="description">
+                                    <strong class="prdName" title="상품명"><span class="displaynone"><img src=""></span> </strong>
+                                    <ul class="info">
+                                        <li title="옵션">
+                                            <p class="option displaynone"></p>
+                                        </li>
+                                        <li class="price">
+                                            <span class="priceValue " title="판매가"><span class="refer displaynone">()</span></span>
+                                            <span title="수량" class="quantity">개</span>
+                                        </li>
+                                        <li title="배송">개별배송</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="prdFoot" title="합계">
+                                <span class="gLeft">합계</span>
+                                <span class="txtStrong gRight"></span>
+                            </div>
+                        </div>
+                        <!-- //참고 -->
+                    </div>
+                    <div class="totalPrice ec-base-fold eToggle">
+                        <div class="title">
+                            <h3>[사은품]</h3>
+                        </div>
+                        <div class="contents">
+                            <div class="ec-base-table gCellNarrow">
+                                <table border="1" summary="">
+                                    <caption>금액정보</caption>
+                                    <colgroup>
+                                        <col style="width:122px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">상품구매금액</th>
+                                            <td class="right"><span class="txtStrong">0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">배송비</th>
+                                            <td class="right"><span class="txtStrong">0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">지역별배송비</th>
+                                            <td class="right"><span class="txtStrong">0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">합계</th>
+                                            <td class="right"><span class="txtStrong">0원</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [결제정보] -->
+        <div class="pannelArea">
+            <div class="title">
+                <h2>결제정보</h2>
+            </div>
+            <div class="contents">
+                <div class="segment">
+                    <div class="ec-base-table gCellNarrow">
+                        <table border="1" summary="">
+                            <caption>결제정보 상세</caption>
+                            <colgroup>
+                                <col style="width:140px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">주문상품</th>
+                                    <td class="right">20,000원</td>
+                                </tr>
+                                <tr class="displaynone">
+                                    <th scope="row">부가세</th>
+                                    <td class="right">+원</td>
+                                </tr>
+                                <tr class="ec-order-expandwrap displaynone">
+                                    <th scope="row"><strong class="ec-order-expand">할인/부가결제</strong></th>
+                                    <td class="right">
+                                        -(0+0)원(개발)
+                                    </td>
+                                </tr>
+                                <tr class="discountArea">
+                                    <td colspan="2">
+                                        <div class="ec-base-box">
+                                            <strong class="heading">상품 할인</strong>
+                                            <div class="ec-base-table gCellNarrow">
+                                                <table border="1" summary="">
+                                                    <caption>상세내역</caption>
+                                                    <colgroup>
+                                                        <col style="width:122px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr class="displaynone">
+                                                            <th>모바일할인</th>
+                                                            <td class="right">-원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>기간할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>회원할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>재구매할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>대량구매할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>바로가기(링콘)할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>어바웃pbp할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>신규상품할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>결제수단할인</th>
+                                                            <td class="right">-원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>세트할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th>배송비할인</th>
+                                                            <td class="right">-원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="ec-base-box displaynone">
+                                            <strong class="heading">회원등급 할인</strong>
+                                            <div class="ec-base-table gCellNarrow">
+                                                <table border="1" summary="">
+                                                    <caption>상세내역</caption>
+                                                    <colgroup>
+                                                        <col style="width:122px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>회원등급할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="ec-base-box displaynone">
+                                            <strong class="heading">쿠폰 할인</strong>
+                                            <div class="ec-base-table gCellNarrow">
+                                                <table border="1" summary="">
+                                                    <caption>상세내역</caption>
+                                                    <colgroup>
+                                                        <col style="width:122px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>쿠폰할인</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="ec-base-box displaynone">
+                                            <strong class="heading">부가결제</strong>
+                                            <div class="ec-base-table gCellNarrow">
+                                                <table border="1" summary="">
+                                                    <caption>상세내역</caption>
+                                                    <colgroup>
+                                                        <col style="width:122px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr class="displaynone">
+                                                            <th scope="row">적립금</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th scope="row">예치금</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                        <tr class="displaynone">
+                                                            <th scope="row">네이버 마일리지 / 캐쉬</th>
+                                                            <td class="right">-0원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">배송비</th>
+                                    <td class="right">+0원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">지역별 배송비</th>
+                                    <td class="right">+0원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="totalPay gBlank10">
+                        <h3 class="heading">결제금액</h3>
+                        <strong class="txtStrong">
+                            20,000원 <span class="refer displaynone">()</span>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [추가정보입력] -->
+        <div class="pannelArea ">
+            <div class="title">
+                <h2>추가입력</h2>
+            </div>
+            <div class="contents">
+                <div class="segment">
+                    <div class="ec-base-table typeView">
+                        <table border="1" summary="">
+                            <caption>추가입력</caption>
+                            <colgroup>
+                                <col style="width:94px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody class="xans-element- xans-order xans-order-ordadd">
+                                <tr class="xans-record-">
+                                    <th scope="row">라디오버튼</th>
+                                    <td>주황</td>
+                                </tr>
+                                <tr class="xans-record-">
+                                    <th scope="row">텍스트박스(여러줄)</th>
+                                    <td>추가 정보 1111 추가 정보 1111 추가 정보 1111 추가 정보 1111</td>
+                                </tr>
+                                <tr class="xans-record-">
+                                    <th scope="row">텍스트박스(한줄)</th>
+                                    <td>추가 정보 2222</td>
+                                </tr>
+                                <tr class="xans-record-">
+                                    <th scope="row">체크박스</th>
+                                    <td>화이트, 블랙</td>
+                                </tr>
+                                <tr class="xans-record-">
+                                    <th scope="row">셀렉트박스</th>
+                                    <td>선택3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [적립 혜택] -->
+        <div class="pannelArea" id="displaynone">
+            <div class="title">
+                <h2>적립 혜택</h2>
+            </div>
+            <div class="contents">
+                <div class="segment">
+                    <div class="ec-base-table gCellNarrow">
+                        <table border="1" summary="">
+                            <caption>적립 혜택 상세</caption>
+                            <colgroup>
+                                <col style="width:160px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr class="displaynone">
+                                    <th scope="row">상품별 적립금</th>
+                                    <td class="right">0원</td>
+                                </tr>
+                                <tr class="displaynone">
+                                    <th scope="row">회원 적립금</th>
+                                    <td class="right">0원</td>
+                                </tr>
+                                <tr class="displaynone">
+                                    <th scope="row">쿠폰 적립금</th>
+                                    <td class="right">0원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">플러스앱주문 적립금</th>
+                                    <td class="right">개발 필요</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="totalPay">
+                    <h3 class="heading">적립 예정금액</h3>
+                    <strong class="txtEm">0원</strong>
+                </div>
+            </div>
+        </div>
+        <div class="ec-base-button gColumn">
+            <a href="#" onclick="javascript:window.close()" class="btnEm">주문확인하기</a>
+            <a href="#" onclick="javascript:window.close()" class="btnSubmit">쇼핑계속하기</a>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" src="../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="order.js"></script>
+<!--
+<script type="text/javascript">var sAuthSSLDomain = "login2.cafe24ssl.com";</script><script type="text/javascript" src="https://login2.cafe24ssl.com/crypt/AuthSSLManager.js"></script><script type="text/javascript" src="https://login2.cafe24ssl.com/crypt/AuthSSLManager.plugin.js"></script>
+<script type="text/javascript" src="//skin-mobile22.ejkwon9811.cafe24.com/ind-script/i18n.php?lang=ko_KR&domain=front&v=1907311070" charset="utf-8"></script>
+
+<script type="text/javascript" src="/ind-script/optimizer.php?filename=tVXNbtswDH6A-rrnEDLs0OsWoLehQIs-ACPTsRJKVCmqqff0Y9p0SJA6mZEGPgiWvx_KJEXXc0Q3-y6uE4i4YVk7wcJVPLpVcWF2m5pV-eZO4WrI4Ndu9VxRht0ya37Yc8DMwksjH-iXLCFpdx7Ysq8Rk96xxDknFSZCOc_rxMDuFZKdJSlKFtSJPMWYCRQ_J0HO7jcvAqF72ON7jpGTqxpoEi9yW22rbEKeZtjV5DWYpeHa6rWJLBcqnAiCwsI9vad9X4Lgz0AM7SRSrApb3_tFQXkZS84IOTMNXSD634y22EEl3f6CEkH0F6Q0ZrkFPfacDwzv3mTmb-l9Osru2e7IVJfBiuoFKLSgLLsPzb-NiwXxVTG15VjYFDKngtdz6JEyXvEEPaSWrmlg5Re64Xr6Vqr6BfETe7DuXfP5sh-pq8-gULUvhT5Wy-ZYJ2874-cO_XCs0BQ_uaPupUWxbWvOE7cWJFge3lobXBAvJ90Z8yqCyQ-uWCg3NoE8XsD3u7ebzkYT6KWRfJXM-OTZT3mvkWyqBg1YDP0X&type=js&k=1163c151845236799fcddcc4cd5a239332e92992&t=1564511918"></script>
+<script type="text/javascript" src="/ind-script/optimizer.php?filename=tZSxTgMxDIYf4Fh5DqudYIQiwdCKqiAx-xLTcy-JIydpdW_PtWVAbCRi8RL9X347fwyDeILFUiGq7BU9YIywwYB7gh0lKWoIDgkwTcFc680h3UKNzpPvSavlr2pJTcjVgEdMI-V2QlQ21MjYqthi6p2spEQJLb1s2NF8Xq1_oiiJ6-__4DQYKQ0dKBlqkO8u8nfJ6FZNPi7BrM8DBfrk1kyucWrw8Kxo65PwULJ4zGwumLdBTvWhLC7zVmKJ9YhpzSN9_6-2h13zkRyHUUJbNl44ZdGp1kzEPKg46o7o2OKMqu9I0P5JHH_vKTJdSaQJ6DCeJNzfLRYQS-_YdEP2DpKlzlLifQAv_bxjlktwOEnJ0GNic4Ya8f7nTGuYM8bP1hyBnEd8rd2nqP8H7oz8Ag&type=js&k=65babd3c9f8cfa35db703d059ca3ba4cb9078309&t=1561486647"></script>-->
+<script type="text/javascript">
+var EC_MOBILE = true;
+var EC_MOBILE_DEVICE = false;
+var EC_MOBILE_USE = true;
+var mobileWeb = true;
+AUTHSSL_SC.setAppAction('OrderResult');
+AUTHSSL_SC.decrypt("Mhn0xISVmdQzRI0x5kcGZjj9hYPo8qfl6PoJ9r4G2oAjDP6SObnHRmsShRI6XXxG22uBDFnuILLbxyEFo\/6xoRXv7Ih12EHNbAeGPLWV8Q4\/6b4GZYwABY4vB2sGk+\/rkK5LjFf+Fdl4Z9YgNemKZJGLXdpwrUA1HVi90ogLA74Zq18b02yVJfx8n4CJtvk0Xh40B6awhQ8Zap3rBOEyPNKlsCUO6r7KixLrD4xE1wO9VRtIzNOR8OYNqvMh8OuqTq3Ib7IzaEAAier\/6V27WOzkHOVOIz7DyMQIf\/ncAx\/l0yn\/miclKYG3l7PbQPNfy\/co8c3FYVidmr4UTC8ar1DQLy+cHNobLx8T2TfPXNmzU6YNQYgXH0LnjyJUKv\/OwIGuWthptzkcrwkVQRMbXeg1RFtqiqAfsV9DZd1cyHrg58y4yG6NPjShFeUI45ub\/ediJPjJVY3WFpkv+SOLnNpe3bv5ygU0LIxbt2XcybfHdp33stf0\/4sh6OHSzMBRllWGm6Vywpq0SPsGiliYxl5NJKmU\/WeIbqg19XVsSFJK20aW2pwz3fyuOkTernjXBwEv0WN\/1iC1BHFn1nHXAkezlaA7daJ5chloI4D5XRCbJ+1o0poOvPORYjfVB0NdusxRiwJ6Yxrrf9Pc+QdzEGufWlUjxBTiB+xvO5GilJ2XFgNH2tCWhyn7OjMfJOj9fQzXoMRb9O1fG55CuH8oFB8G2UOong+X194bEBFHjekmDNooE3HPqQCFVSJod92uUPgnnllTxiECCzXrHiJ\/Io068ntvCx9\/VAbJOwvKADzcGbd9AYNLcCifcYbkmq7tGA7fV\/FavexL73Fzd4yCMx1IcwFJnaUZS\/QmSaS0NXY1CO6OCPSYLg2ZD6ADtVGnK\/jw7wUUEx9+Mn2xanIBRkJMswo6WB28sSeH1VVlGdomcXDnrz2RGlwpDf4h0dmwyC8mxypeSxFtw185PmdjWfvuVWY2i73NkOSk7StttD0JIfCw1GNBGxca\/1SHHMF3RbHyR3oFgUfWaxWcjME5WeHoIhdUZ5DRE1lsUH2U4HNP\/seCdowheJHUIdHhk2\/P8JB0Tj6heBwNF0Ek6smCTEjTgM0+BhZn\/DWSXUXufV+ffSzmwSlcdiaTRQ6JikzKOEBuflqxn4lr7edZ6tdDxOygSnxqOjt6by5F070mAuUn7HRsEtI\/5CYQ0jFklStNH5m+PNJshpciBUXpbGcY5THQCJvn+hxkLM3tamzUVd5hIAE3oKvo2rGziLCwEMgoeMgDW6nTDWHCEj9ZCT6ZYnKGUCCiM8SqLejNwm7SY7CVob\/920D9rwcnVIzYpuyNN2cadHzIc1hRuWmTBID5WA==");
+var aLogData = {"log_server1":"eclog2-131.cafe24.com","log_server2":"eclog2-131.cafe24.com","mid":"ejkwon9811","stype":"e","domain":"","shop_no":1,"etc":""};
+var sMileageName = '적립금';
+var sMileageUnit = '[:PRICE:]원';
+var sDepositName = '예치금';
+var sDepositUnit = '원';
+var SHOP_CURRENCY_INFO = {"1":{"aShopCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"aShopSubCurrencyInfo":null,"aBaseCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"fExchangeRate":1,"fExchangeSubRate":null,"aFrontCurrencyFormat":{"head":"","tail":"\uc6d0"},"aFrontSubCurrencyFormat":{"head":"","tail":"\uc6d0"}}};
+var EC_ASYNC_LIVELINKON_ID = '';
+var REVIEW_PARAM_INFO = {"product_no":null};
+var REVIEWTALKTALK_INFO = {
+COOKIE : {"env_type":"pmdp","cuk45":"cuk45_ejkwon9811_4e5c2303147c2007aee61c35058f8d01"}
+};
+var aReviewtt = {"env_type":"pmdp","cuk45":"cuk45_ejkwon9811_4e5c2303147c2007aee61c35058f8d01"};
+if ($('.reviewArea').length > 0) {
+$('.reviewArea').addClass('notranslate');
+}
+if ($('.ec-board-list-items-template').length > 0) {
+$('.ec-board-list-items-template').addClass('notranslate');
+}
+if ($('.ec-board-list-item').length > 0) {
+$('.ec-board-list-item').addClass('notranslate');
+}
+; if ($('[async_module]').length > 0) {
+(function() {
+var oAsyncScript = document.createElement('script');
+oAsyncScript.async = true;
+oAsyncScript.src = 'https://smartreview.cafe24.com/js/async_smartreview.js';
+var oFirstScript = document.getElementsByTagName('script')[0];
+oFirstScript.parentNode.insertBefore(oAsyncScript, oFirstScript);
+}());
+}
+; if (typeof REVIEWTALKTALK_INFO !== 'undefined') {
+REVIEWTALKTALK_INFO.HTML_CACHE = 0;
+}
+var EC_FRONT_JS_CONFIG_MANAGE = {"sSmartBannerScriptUrl":"https:\/\/app4you.cafe24.com\/SmartBanner\/tunnel\/scriptTags?vs=1563164396689206","sMallId":"ejkwon9811","sWebLogEventFlag":"F"};
+</script>
+</body>
+</html>

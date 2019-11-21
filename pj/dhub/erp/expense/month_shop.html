@@ -1,0 +1,348 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>상점별 월 배송비 현황</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">배송비현황</a></li>
+            <li class="now" title="현재 페이지">상점별 월 배송비현황</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>배송비 검색</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>배송비 검색</caption>
+        <tbody>
+            <tr>
+                <th scope="row">상점</th>
+                <td>
+                    <select class="chosen-select" multiple="multiple">
+                        <option>MIXXMIX</option>
+                        <option>zemmaworld-카페24</option>
+                        <option>DABAGIRL-티몰유니버스</option>
+                        <option>MIXXMIX-카페24(영문)</option>
+                        <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                        <option>MIXXMIX</option>
+                        <option>zemmaworld-카페24</option>
+                        <option>DABAGIRL-티몰유니버스</option>
+                        <option>MIXXMIX-카페24(영문)</option>
+                        <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <select class="fSelect">
+                        <option>2015</option>
+                        <option>2016</option>
+                    </select> 년
+                    <select class="fSelect">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select> 월
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>상점별 배송비 현황</h2>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gRight">
+            <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+            <div class="mOpen">
+                <a href="#excelOpen1" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+                <div id="excelOpen1" class="open" style="width:120px;">
+                    <div class="wrap">
+                        <ul class="default">
+                            <li><a href="#none">기본양식</a></li>
+                            <li><a href="#none">사용자 입력 양식1</a></li>
+                            <li><a href="#none">사용자 입력 양식2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mBoard gScroll">
+        <table border="1" summary="">
+        <caption>상점별 배송비 현황</caption>
+        <colgroup>
+            <col style="width:55px" />
+            <col style="width:110px;" />
+            <col style="width:100px;" />
+            <col style="width:80px;" />
+            <col style="width:125px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">기간</th>
+                <th scope="col">상점</th>
+                <th scope="col">카페24아이디</th>
+                <th scope="col">주문상태</th>
+                <th scope="col">배송사</th>
+                <th scope="col">출고주문건수</th>
+                <th scope="col">출고상품수량</th>
+                <th scope="col">배송비용</th>
+                <th scope="col">기타비용</th>
+                <th scope="col">비용합계</th>
+                <th scope="col">공급원가</th>
+                <th scope="col">창고수익</th>
+                <th scope="col">마진율</th>
+            </tr>
+        </thead>
+        <tbody class="right">
+            <tr>
+                <td class="center" rowspan="20"><a href="#none">5월</a></td>
+                <td class="left" rowspan="5">MIXXMIX</td>
+                <td class="left" rowspan="4">()</td>
+                <td class="center">출고완료</td>
+                <td class="left">차이냐오</td>
+                <td>200</td>
+                <td>423</td>
+                <td>1,000,000</td>
+                <td>40,000</td>
+                <td>1,040,000</td>
+                <td>800,000</td>
+                <td>240,000</td>
+                <td>23%</td>
+            </tr>
+            <tr>
+                <td class="center">출고완료</td>
+                <td class="left">사가와</td>
+                <td>100</td>
+                <td>321</td>
+                <td>500,000</td>
+                <td>40,000</td>
+                <td>540,000</td>
+                <td>400,000</td>
+                <td>140,000</td>
+                <td>26%</td>
+            </tr>
+            <tr>
+                <td class="center">출고완료</td>
+                <td class="left">범한 판토스</td>
+                <td>100</td>
+                <td>213</td>
+                <td>500,000</td>
+                <td>40,000</td>
+                <td>540,000</td>
+                <td>450,000</td>
+                <td>90,000</td>
+                <td>17%</td>
+            </tr>
+            <tr>
+                <td class="center">출고완료</td>
+                <td class="left">린코스</td>
+                <td>100</td>
+                <td>123</td>
+                <td>500,000</td>
+                <td>40,000</td>
+                <td>540,000</td>
+                <td>400,000</td>
+                <td>140,000</td>
+                <td>26%</td>
+            </tr>
+            <tr class="tfoot">
+                <th scope="row" colspan="3">상점 합계</th>
+                <td>500</td>
+                <td>1,080</td>
+                <td>2,500,000</td>
+                <td>16,0000</td>
+                <td>2,660,000</td>
+                <td>2,050,000</td>
+                <td>610,000</td>
+                <td>22%</td>
+            </tr>
+            <tr>
+                <td class="left" rowspan="3">OHOTORO</td>
+                <td class="left" rowspan="2">()</td>
+                <td class="center">출고완료</td>
+                <td class="left">범한 판토스</td>
+                <td>100</td>
+                <td>213</td>
+                <td>500,000</td>
+                <td>100,000</td>
+                <td>600,000</td>
+                <td>450,000</td>
+                <td>150,000</td>
+                <td>25%</td>
+            </tr>
+            <tr>
+                <td class="center">반송완료</td>
+                <td class="left">우체국</td>
+                <td>10</td>
+                <td>20</td>
+                <td>50,000</td>
+                <td>0</td>
+                <td>50,000</td>
+                <td>4,5000</td>
+                <td>5,000</td>
+                <td>10%</td>
+            </tr>
+            <tr class="tfoot">
+                <th scope="row" colspan="3">상점 합계</th>
+                <td>110</td>
+                <td>233</td>
+                <td>550,000</td>
+                <td>100,000</td>
+                <td>650,000</td>
+                <td>500,000</td>
+                <td>155,000</td>
+                <td>24%</td>
+            </tr>
+            <tr>
+                <td class="left" rowspan="6">샵인샵</td>
+                <td class="left" rowspan="2">미건스타일</td>
+                <td class="center">출고완료</td>
+                <td class="left">차이냐오</td>
+                <td>23</td>
+                <td>32</td>
+                <td>100,000</td>
+                <td>40,000</td>
+                <td>140,000</td>
+                <td>120,000</td>
+                <td>20,000</td>
+                <td>14%</td>
+            </tr>
+            <tr>
+                <td class="center">반송완료</td>
+                <td class="left">우체국</td>
+                <td>12</td>
+                <td>12</td>
+                <td>24,000</td>
+                <td>0</td>
+                <td>24,000</td>
+                <td>20,000</td>
+                <td>4,000</td>
+                <td>17%</td>
+            </tr>
+            <tr class="tfoot">
+                <th scope="row" colspan="3">상점 합계</th>
+                <td>35</td>
+                <td>34</td>
+                <td>124,000</td>
+                <td>400,000</td>
+                <td>164,000</td>
+                <td>140,000</td>
+                <td>24,000</td>
+                <td>16%</td>
+            </tr>
+            <tr>
+                <td class="left" rowspan="2">엔비룩</td>
+                <td class="center">출고완료</td>
+                <td class="left">차이냐오</td>
+                <td>14</td>
+                <td>20</td>
+                <td>50,000</td>
+                <td>30,000</td>
+                <td>80,000</td>
+                <td>60,000</td>
+                <td>20,000</td>
+                <td>25%</td>
+            </tr>
+            <tr>
+                <td class="center">반송완료</td>
+                <td class="left">우체국</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7,000</td>
+                <td>0</td>
+                <td>7,000</td>
+                <td>6,000</td>
+                <td>1,000</td>
+                <td>14%</td>
+            </tr>
+            <tr class="tfoot">
+                <th scope="row" colspan="3">상점 합계</th>
+                <td>19</td>
+                <td>26</td>
+                <td>57,000</td>
+                <td>30,000</td>
+                <td>87,000</td>
+                <td>66,000</td>
+                <td>21,000</td>
+                <td>22%</td>
+            </tr>
+            <tr class="tfoot">
+                <th scope="row" colspan="4">총 합계</th>
+                <td>664</td>
+                <td>1,383</td>
+                <td>3,231,000</td>
+                <td>330,000</td>
+                <td>3,561,000</td>
+                <td>2,751,000</td>
+                <td>810,000</td>
+                <td>20%</td>
+            </tr>
+        </tbody>
+        </table>
+        <p class="empty">리스트가 없습니다.</p>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gRight">
+            <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+            <div class="mOpen">
+                <a href="#excelOpen2" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+                <div id="excelOpen2" class="open" style="width:120px;">
+                    <div class="wrap">
+                        <ul class="default">
+                            <li><a href="#none">기본양식</a></li>
+                            <li><a href="#none">사용자 입력 양식1</a></li>
+                            <li><a href="#none">사용자 입력 양식2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/scm/dhub/chosen.jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {width:"100%"},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+</script>
+
+<?php require_once('../../include/footer.html'); ?>

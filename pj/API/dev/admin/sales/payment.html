@@ -1,0 +1,258 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>매출관리</li>
+                <li class="now" title="현재 페이지">결제내역</li>
+            </ol>
+            <div class="mTitle">
+                <h1>결제내역</h1>
+            </div>
+
+            <div class="sectionArea">
+                <section class="section">
+                    <div class="mBoard gSmall">
+                        <table border="1">
+                            <caption>결제내역</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">검색기간</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>구입일시</option>
+                                            <option>결제완료일시</option>
+                                        </select>
+                                        <span class="btnDate">
+                                            <button type="button" class="button">오늘</button>
+                                            <button type="button" class="button">3일</button>
+                                            <button type="button" class="button">7일</button>
+                                            <button type="button" class="button">1개월</button>
+                                            <button type="button" class="button">3개월</button>
+                                            <button type="button" class="button">1년</button>
+                                        </span>
+                                        <input type="text" class="fText gDate" value="2016-07-01">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button> -
+                                        <input type="text" class="fText gDate" value="2016-07-01">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제구분</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>결제구분 전체</option>
+                                            <option>유료</option>
+                                            <option>무료</option>
+                                        </select>
+                                        <select class="fSelect">
+                                            <option>결제상태 전체</option>
+                                            <option>입금확인중</option>
+                                            <option>결제완료</option>
+                                            <option>취소 / 환불</option>
+                                        </select>
+                                        <select class="fSelect">
+                                            <option>결제수단 전체</option>
+                                            <option>무통장입금</option>
+                                            <option>신용카드</option>
+                                            <option>가상계좌</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">검색어</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>App 명</option>
+                                            <option>App ID</option>
+                                            <option>쇼핑몰 ID</option>
+                                            <option>개발사 ID</option>
+                                            <option>개발사명</option>
+                                        </select>
+                                        <input type="text" class="fText" style="width:500px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mButton gCenter">
+                        <a href="#none" class="btnSubmit">검색</a>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>결제내역</h2>
+                    </div>
+                    <div class="mState">
+                        <div class="gLeft">
+                            <p class="total">[총 <strong class="txtEm">40</strong>명] 검색결과 <strong class="txtEm">4</strong>개</p>
+                        </div>
+                        <div class="gRight">
+                            <select class="fSelect">
+                                <option>10개씩보기</option>
+                                <option>20개씩보기</option>
+                                <option>30개씩보기</option>
+                                <option>40개씩보기</option>
+                                <option>50개씩보기</option>
+                                <option>100개씩보기</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mCtrl typeHeader">
+                        <div class="gLeft">
+                            <a href="#none" class="btnNormal mini">엑셀 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="mBoard gScroll">
+                        <table border="1">
+                            <caption>결제내역</caption>
+                            <colgroup>
+                                <col style="width:55px;">
+                                <col style="width:130px;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
+                                <col style="width:150px;">
+                                <col style="width:130px;">
+                                <col style="width:100px;">
+                                <col style="width:100px;">
+                                <col style="width:200px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">구입(환불)일시</th>
+                                    <th scope="col">App 명</th>
+                                    <th scope="col">설치쇼핑몰 ID</th>
+                                    <th scope="col">입금(환불)완료일시</th>
+                                    <th scope="col">판매금액</th>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">상태</th>
+                                    <th scope="col">이용기간</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tfoot center">
+                                <tr>
+                                    <th scope="row" colspan="5" class="center">합계</th>
+                                    <td class="right">999,999,999</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tbody class="center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>2017-10-18 11:43:52</td>
+                                    <td class="left"><a href="#none" class="txtLink" target="_blank" title="새창 열림">페이스북 리뷰</a></td>
+                                    <td class="left"><a href="#none" class="txtLink">shop1234</a></td>
+                                    <td>2017-10-18 11:43:52</td>
+                                    <td class="right"><a href="#layerDel" class="txtLink eLayerClick">2,000</a></td>
+                                    <td>유료</td>
+                                    <td>결제완료</td>
+                                    <td>2017-10-18 ~ 2017-11-18</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2017-10-18 11:43:52</td>
+                                    <td class="left"><a href="#none" class="txtLink" target="_blank" title="새창 열림">멀티팝업</a></td>
+                                    <td class="left"><a href="#none" class="txtLink">test5555</a></td>
+                                    <td>2017-10-18 11:43:52</td>
+                                    <td class="right"><a href="#layerDel" class="txtLink eLayerClick">0</a></td>
+                                    <td>무료</td>
+                                    <td>결제완료</td>
+                                    <td>2017-10-18 ~ 2017-11-18</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2017-10-18 11:43:52</td>
+                                    <td class="left"><a href="#none" class="txtLink" target="_blank" title="새창 열림">페이스북 리뷰</a></td>
+                                    <td class="left"><a href="#none" class="txtLink">aaa1111</a></td>
+                                    <td>2017-10-18 11:43:52</td>
+                                    <td class="right"><a href="#layerDel" class="txtWarn eLayerClick">-2,000</a></td>
+                                    <td><span class="txtWarn">환불</span></td>
+                                    <td>환불완료</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>[신청일시]</td>
+                                    <td class="left"><a href="#none" class="txtLink" target="_blank" title="새창 열림">[App 명]</a></td>
+                                    <td class="left"><a href="#none" class="txtLink">[설치쇼핑몰 ID]</a></td>
+                                    <td>[처리일시]</td>
+                                    <td class="right"><a href="#layerDel" class="txtLink eLayerClick">[앱가격]</a></td>
+                                    <td>[결제구분]</td>
+                                    <td>[결제상태]</td>
+                                    <td>[이용기간]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--p class="empty">검색된 결과가 없습니다.</p-->
+                    </div>
+                    <div class="mCtrl typeFooter">
+                        <div class="gLeft">
+                            <a href="#none" class="btnNormal mini">엑셀 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="mPaginate">
+                        <!-- 참고: 이전/다음 페이지가 없는 경우, disabled 클래스 추가 -->
+                        <a href="#none" class="btnPrev">이전 페이지</a>
+                        <span class="page">
+                            <a href="#none">1</a>
+                            <a href="#none" class="selected" title="현재 페이지">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btnNext">다음 페이지</a>
+                    </div>
+                </section>
+            </div>
+        </section><!-- //[ contents ] -->
+        <!-- 참고 : 결제(환불) 상세내역 -->
+        <div id="layerDel" class="mLayer gMedium">
+            <h2>결제(환불) 상세내역</h2>
+            <div class="wrap">
+                <div class="mBoard gLarge">
+                    <table border="1">
+                        <caption>결제(환불) 상세내역</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">결제(환불)일자</th>
+                                <td>2017-11-16 10:35:24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제(환불)수단</th>
+                                <td>신용카드 (자동결제)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제(환불)금액</th>
+                                <td>3,000 KRW</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">할인금액</th>
+                                <td>1,000 KRW</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">실 결제(환불)금액</th>
+                                <td>2,000 KRW</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제(환불)사유</th>
+                                <td>신규 결제 / 자동연장결제 / [환불사유]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button type="button" class="btnClose eClose">닫기</button>
+        </div><!-- //참고 -->
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>
+

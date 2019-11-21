@@ -1,0 +1,366 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+<!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>Apps</li>
+                <li>App 관리</li>
+                <li class="now" title="현재 페이지">App 기본정보등록 ([[앱 이름]])</li>
+            </ol>
+
+            <div class="mTitle">
+                <h1>App 기본정보등록</h1>
+            </div>
+
+            <div class="mProcess">
+                <ol>
+                    <li class="selected">01. App 기본정보등록</li>
+                    <li>02. App Store 판매정보등록</li>
+                    <li>03. 테스트 및 심사요청</li>
+                </ol>
+                <ul class="desc">
+                    <li>App의 기본정보(이름, 서비스URL)과 API를 사용하기 위해 필요한 정보(Redirect URL(s), 권한(Scope) 등)을 입력하거나 수정할 수 있습니다.</li>
+                    <li>App의 인증정보 (API key, API secret key, API token 정보는 App의 인증 및 동작에 중요한 정보이오니 관리에 주의해야 합니다.</li>
+                </ul>
+            </div>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>기본정보</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit gSmall">
+                        <table border="1">
+                            <caption>기본정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">App 이름</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:540px;" value="멀티 팝업 배너">
+                                        <ul class="txtInfo">
+                                            <li>App 이름은 App이 판매되기 전까지 수정이 가능합니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">App URL</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:540px;" placeholder="http://www.cafe24.com">
+                                        <ul class="txtInfo">
+                                            <li>App을 서비스하기 위한 URL을 입력해 주세요. (프로토콜, 포트의 지정이 필요한 경우 함께 입력해야 합니다.)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Redirect URL(s)
+                                        <div class="mTooltip gLarge">
+                                            <button type="button" class="icon eTip">도움말</button>
+                                            <div class="tooltip">
+                                                <div class="content">
+                                                    <strong class="titleEm">Redirect URL(s)</strong>
+                                                    <ul class="mList">
+                                                        <li>App이 인증 후 redirect_uri 로 전달될 URL을 입력할 수 있습니다.</li>
+                                                        <li>URL의 구분은 엔터(enter)로 구분하여 입력합니다. (최대 10개 / 200byte 이내)</li>
+                                                        <li>보안정책 기준으로 https를 반드시 사용해야 합니다. (http는 지원되지 않습니다.)</li>
+                                                        <li>서브 도메인이 있으면 대표 도메인명만 입력해 주세요. (예: http://cafe24.com)</li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="close eClose">닫기</button>
+                                                <span class="edge"></span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td><textarea cols="40" rows="4" class="fTextarea" style="width:540px;"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">App 대표아이콘</th>
+                                    <td>
+                                        <input type="file" class="fFile">
+                                        <ul class="txtInfo">
+                                            <li>App 대표아이콘은 사용자들이 App을 구분할 수 있고 홍보하는데 도움이 됩니다.</li>
+                                            <li>권장(등록) 이미지: 512px * 512px / 500KB이하 / png, jpg(jpeg)</li>
+                                        </ul>
+                                        <p class="gSingle"><img src="//img.echosting.cafe24.com/api/dev/admin/thumb_100x100.png" alt="" width="100" height="100"></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>사용권한정보</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit gSmall">
+                        <table border="1">
+                            <caption>사용권한정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">권한관리
+                                        <div class="mTooltip gLarge">
+                                            <button type="button" class="icon eTip">도움말</button>
+                                            <div class="tooltip">
+                                                <div class="content">
+                                                    <strong class="titleEm">권한 관리 도움말</strong>
+                                                    <strong class="title">권한 설정</strong>
+                                                    <ul class="mList">
+                                                        <li>App에서 사용할 권한을 선택하여 추가할 수 있습니다.</li>
+                                                        <li>App의 권한 취득 및 사용에 대한 책임은 개발사(자)와 구매자에게 있습니다.</li>
+                                                    </ul>
+                                                    <strong class="title">권한 범위</strong>
+                                                    <div class="mBoard">
+                                                        <table border="1">
+                                                            <caption>권한 범위</caption>
+                                                            <colgroup>
+                                                                <col style="width:100px;">
+                                                                <col style="width:auto;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">구분</th>
+                                                                    <th scope="col">범위</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>상품분류</td>
+                                                                    <td>상품분류, 메인진열, 기획전</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>상품</td>
+                                                                    <td>상품</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>판매분류</td>
+                                                                    <td>브랜드, 자체분류, 제조사, 원산지, 트렌드</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급사</td>
+                                                                    <td>공급사, 공급사 운영자</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>개인화정보</td>
+                                                                    <td>좋아요, 관심상품, 장바구니</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>주문</td>
+                                                                    <td>주문</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>게시판</td>
+                                                                    <td>리뷰톡톡, 덧글, 긴급문의</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>고객</td>
+                                                                    <td>회원, 회원등급, 적립금, 예치금, 배송주소록</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>알림</td>
+                                                                    <td>메일, SMS</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>상점</td>
+                                                                    <td>상점</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>프로모션</td>
+                                                                    <td>고객혜택, 쿠폰, 시리얼쿠폰</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>디자인</td>
+                                                                    <td>디자인, 화면</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="close eClose">닫기</button>
+                                                <span class="edge"></span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <strong>권한선택</strong>
+                                        <div class="gSingle">
+                                            <select class="fSelect">
+                                                <option>상품분류(Categories)</option>
+                                                <option>상품(Product)</option>
+                                                <option>판매분류(Collection)</option>
+                                                <option>공급사(Supply)</option>
+                                                <option>개인화정보(Personal)</option>
+                                                <option>주문(Order)</option>
+                                                <option>게시판(Community)</option>
+                                                <option>고객(Customer)</option>
+                                                <option>알림(Notification)</option>
+                                                <option>상점(Store)</option>
+                                                <option>프로모션(Promotion)</option>
+                                                <option>디자인(Design)</option>
+                                            </select>
+                                            <button type="button" class="btnNormal">추가</button>
+                                        </div>
+                                        <p class="gDouble"><strong>선택된 권한</strong></p>
+                                        <div class="mBoard gSingle">
+                                            <table border="1">
+                                                <caption>선택된 권한</caption>
+                                                <colgroup>
+                                                    <col style="width:50px;">
+                                                    <col style="width:120px;">
+                                                    <col style="width:160px;">
+                                                    <col style="width:auto;">
+                                                    <col style="width:90px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No</th>
+                                                        <th scope="col">분류</th>
+                                                        <th scope="col">권한</th>
+                                                        <th scope="col">적용범위</th>
+                                                        <th scope="col">설정</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="center">
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>앱</td>
+                                                        <td>읽기 + 쓰기권한</td>
+                                                        <td class="left">앱 설치와 관련된 정보를 조회할 수 있습니다.</td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>상품</td>
+                                                        <td>
+                                                            <select class="fSelect">
+                                                                <option>읽기권한</option>
+                                                                <option>읽기 + 쓰기권한</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="left">상품(Products) 정보</td>
+                                                        <td><button type="button" class="btnText">삭제</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="txtInfo">
+                                            <li>App이 동작하는데 필요한 API 권한을 체크하여 획득할 수 있습니다. (권한사용에 대한 법적 책임은 App 개발사(자)와 구매자에게 있습니다.)</li>
+                                            <li>App의 동작과 무관한 권한을 획득하는 경우 App의 심사나 판매를 거부할 수 있으니 꼭 필요한 권한만 선택하여야 합니다.</li>
+                                            <li>선택된 권한은 App 구매시 구매자의 동의를 받게되며, 구매자가 권한사용을 동의하지 않는 경우 App은 설치/판매되지 않습니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">운영자 권한확인 URI</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:540px;" placeholder="APP의 운영자 권한을 확인할 수 있는 URL">
+                                        <ul class="txtInfo">
+                                            <li>쇼핑몰의 운영자/부운영자가 제어할 수 있는 App의 화면 또는 기능의 권한을 확인할 수 있는 URL을 입력할 수 있습니다.</li>
+                                            <li>URI을 통해 전달된 App의 권한 내역은 쇼핑몰 솔루션에서 운영자 설정 권한으로 제공되며, App에서 운영자별 권한을 제어할 수 있도록 제공됩니다.</li>
+                                            <li>자세한 권한 설정 URL을 생성하기 위한 방법은 'App 개발가이드'를 참고하여 주시기 바랍니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="mToggleBar eToggle selected">
+                    <h2>인증정보</h2>
+                    <div class="ctrl">
+                        <span><button type="button"><em>접기</em></button></span>
+                    </div>
+                </div>
+                <div class="toggleArea" style="display:block;">
+                    <div class="mBoard typeEdit gSmall">
+                        <table border="1">
+                            <caption>인증정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">App 유형</th>
+                                    <td>WEB Application</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">App key</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:350px;">
+                                        <button type="button" class="btnNormal">복사</button><span class="txtInfo">(2017-08-30 12:30 생성)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">App secret key</th>
+                                    <td>
+                                        <input type="text" class="fText" style="width:350px;">
+                                        <button type="button" class="btnNormal">복사</button>
+                                        <a href="#none" class="btnCtrl">재발급</a><span class="txtInfo">(2017-08-30 12:30 생성)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div class="mButton gFooter gCenter">
+                <button type="button" class="btnSubmit">저장</button>
+                <a href="#none" class="btnEm">목록</a>
+                <span class="gLeft">
+                    <button type="button" class="btnNormal">App 삭제</button>
+                </span>
+                <span class="gRight">
+                    <a href="#none" class="btnBasic">step2. App Store 정보등록<i class="icoArrow"></i></a>
+                </span>
+            </div>
+            <div class="mButton gFooter">
+                <a href="#none" class="btnPrimary">step3. 테스트 및 심사요청<i class="icoArrow"></i></a>
+            </div>
+        </section><!-- //[ contents ] -->
+
+<div id="layerExcelUpload" class="mLayer gMedium">
+    <h2>FAQ 엑셀 업로드</h2>
+    <div class="wrap">
+        <ul class="mList">
+            <li>FAQ 내용을 쉽게 엑셀로 업로드 할 수 있습니다.</li>
+            <li>지정된 엑셀 양식을 다운받아 FAQ 작성 후 업로드 해주시면 FAQ가 등록됩니다.</li>
+            <li>엑셀 파일의 형식은 *.xls, *.xlsx 파일만 등록이 가능합니다.</li>
+        </ul>
+        <div class="mBoard gSmall gSingle">
+            <table border="1">
+                <caption>FAQ 엑셀 업로드</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">양식 다운로드</th>
+                        <td>
+                            <a href="#none" class="btnNormal" target="_blank" title="새창 열림">양식 다운로드</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">엑셀파일 등록</th>
+                        <td>
+                            <input type="file" class="fFile">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#none" class="btnSubmit">엑셀 업로드</a>
+        <a href="#none" class="btnEm eClose">닫기</a>
+    </div>
+    <button type="button" class="btnClose eClose">닫기</button>
+</div>
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>
+

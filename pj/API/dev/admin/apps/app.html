@@ -1,0 +1,196 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>Apps</li>
+                <li class="now" title="현재 페이지">App 관리</li>
+            </ol>
+            <div class="mTitle">
+                <h1>App 관리</h1>
+            </div>
+
+            <section class="section">
+                <!-- 참고: 탭메뉴 클릭시, 아래 목록의 숨김처리 필요한 li 태그들에 class="hide" 추가/삭제 스크립트 처리 해주세요. -->
+                <ul class="mTab typeAppManager eTab">
+                    <li class="all selected"><a href="#none">All</a></li>
+                    <li><a href="#none"><span class="icoStatus production"></span> In production</a></li>
+                    <li><a href="#none"><span class="icoStatus underReview"></span> Under review</a></li>
+                    <li><a href="#none"><span class="icoStatus requestReview"></span> Request for review</a></li>
+                    <li><a href="#none"><span class="icoStatus onSale"></span> On sale</a></li>
+                    <li><a href="#none"><span class="icoStatus endSale"></span> End of sale</a></li>
+                </ul>
+                <div class="mAppManager">
+                    <ul class="list">
+                        <li>
+                            <a href="#layerAddApps" class="item btnAddApps eModal">
+                                <span class="addApps"><span class="icoPlus"></span>ADD APPS</span>
+                            </a>
+                        </li>
+                        <!-- 참고: 숨김처리 필요한 li 태그들에 class="hide" 추가/삭제 -->
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage1.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus onSale">판매중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage2.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus underReview">심사중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage3.png" class="thumb" alt="">
+                                <p class="name">페이스북 페이지플러그인 페이스북 페이지플러그인</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus production">제작중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage4.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus endSale">판매종료</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage5.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus onSale">판매중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_120x120.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus requestReview">심사반려</span>
+                            </a>
+                            <a href="#layerRequestReview" class="icoRequestReview eModal">심사반려 사유 보기</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage6.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus onSale">On sale</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage7.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus requestReview">Request for review</span>
+                            </a>
+                            <a href="#layerRequestReview" class="icoRequestReview eModal">Request for review</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="date">2017.08.16</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage8.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <p class="price">9,999,999 KRW</p>
+                                <span class="icoStatus endSale">End of sale</span>
+                            </a>
+                        </li><!-- //참고 -->
+                    </ul>
+                </div>
+            </section>
+
+            <?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/quick.html'); ?>
+        </section><!-- //[ contents ] -->
+
+        <!-- 참고: App 관리 목록 > ADD APPS 버튼 클릭시 노출되는 레이어팝업 -->
+        <div id="layerAddApps" class="mLayer gLarge">
+            <h2>App 등록</h2>
+            <div class="wrap">
+                <div class="mBoard gSmall">
+                    <table border="1">
+                        <caption>App 등록</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">App 이름</th>
+                                <td><input type="text" class="fText" style="width:97%;"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">App URL</th>
+                                <td>
+                                    <input type="text" class="fText" style="width:97%;">
+                                    <ul class="txtInfo">
+                                        <li>App을 서비스하기 위한 URL을 입력해 주세요.</li>
+                                        <li>프로토콜, 포트의 지정이 필요한 경우 함께 입력해야 합니다.(예: https://www.cafe24.com:8888)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">App 유형</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li><label class="gLabel"><input type="radio" class="fChk"> Web Application</label></li>
+                                        <li><label class="gLabel"><input type="radio" class="fChk"> Android Application</label></li>
+                                        <li><label class="gLabel"><input type="radio" class="fChk"> IOS Application</label></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#none" class="btnCtrl"><span>저장</span></a>
+                <a href="#none" class="btnNormal eClose"><span>취소</span></a>
+            </div>
+            <button type="button" class="btnClose eClose">닫기</button>
+        </div>
+
+        <!-- 참고: App 관리 목록 > 심사반려 아이콘 클릭시 노출되는 레이어팝업 -->
+        <div id="layerRequestReview" class="mLayer gMedium">
+            <h2>App 심사 반려 사유</h2>
+            <div class="wrap">
+                <div class="mBoard gLarge">
+                    <table border="1">
+                        <caption>App 심사 반려 사유</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">반려 사유</th>
+                                <td>
+                                    <select class="fSelect full">
+                                        <option>App이 정상적으로 동작하지 않습니다.</option>
+                                        <option>App이 정상적으로 동작하지 않습니다.</option>
+                                        <option>App이 정상적으로 동작하지 않습니다.</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">반려 사유 상세설명</th>
+                                <td>
+                                    <textarea class="fTextarea" cols="46" rows="4" style="width:100%;" disabled="disabled">App의 링크가 적용되지 않으며 이미지가 찌그러져 보입니다.</textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button type="button" class="btnClose eClose">닫기</button>
+        </div>
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer.html'); ?>
+

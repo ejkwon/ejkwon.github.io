@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>바코드 주문입고</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="700, 600"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>바코드 주문입고</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>바코드 스캔</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption>바코드 스캔</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">배송지시번호</th>
+                    <td>20140305-31AA123456</td>
+                </tr>
+                <tr>
+                    <th scope="row">음성안내</th>
+                    <td>
+                        <label class="gLabel"><input type="radio" name="radio1" checked="checked" class="fChk" /> 설정함</label>
+                        <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 설정안함</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">처리조건</th>
+                    <td>
+                        <label class="gLabel"><input type="radio" name="radio1" checked="checked" class="fChk" /> 상품 바코드&amp;위치코드 스캔</label>
+                        <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 상품 바코드 스캔</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상품바코트/위치코드</th>
+                    <td><input type="text" class="fText" style="width:300px;" value="상품 바코드번호 또는 위치코드" /></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>처리결과</h2>
+        </div>
+        <div class="mBox typeBorder">
+            <!-- 참고 : 정상 -->
+            <strong>입고정상</strong>
+            <p>(바코드 : 123456789)</p>
+            <p>상품명 : 땡땡이스카프 빨강 FREE</p>
+            <p>옵션 : 단일옵션</p>
+            <p>공급처 : 대한상사</p>
+            <p>공급처 상품명 : 떙떙빨강S</p>
+            <p>수량 : 1개</p>
+
+            <!-- 참고 : 오류 -->
+            <strong>입고오류</strong>
+            <p>(바코드 : 123456789)</p>
+            <p><span class="txtWarn">입고지시서의 상품이 아닙니다.</span></p>
+
+            <!-- 참고 : 바코드 정상 -->
+            <p><strong>AZ-123-123</strong></p>
+            <p>상품명 : 떙떙이스카프 빨강 FREE</p>
+            <p>판매사 주문번호 : 20140314-85664</p>
+
+            <!-- 참고 : 바코드 오류 -->
+            <p><strong>매칭 주문없음</strong></p>
+
+            <!-- 참고 : 위치코드 정상 -->
+            <p><strong>위치코드 정상</strong></p>
+
+            <!-- 참고 : 위치코드 오류 -->
+            <p><strong>위치코드 오류</strong></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>바코드 스캔 내역</h2>
+        </div>
+        <div class="mBoardArea">
+            <div class="mBoard typeHead">
+                <table border="1" summary="">
+                <caption>바코드 스캔 내역</caption>
+                <colgroup>
+                    <col class="date" />
+                    <col style="width:120px" />
+                    <col style="width:auto" />
+                    <col style="width:auto" />
+                    <col style="width:147px" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col">일시</th>
+                        <th scope="col">바코드번호</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">판매사 주문번호</th>
+                        <th scope="col">위치코드</th>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="mBoard typeBody" style="max-height:700px;">
+                <table border="1" summary="" class="eChkColor">
+                <caption>바코드 스캔 내역</caption>
+                <colgroup>
+                    <col class="date" />
+                    <col style="width:120px" />
+                    <col style="width:auto" />
+                    <col style="width:auto" />
+                    <col style="width:130px" />
+                </colgroup>
+                <tbody class="center middle">
+                    <tr>
+                        <td>2012-12-12<br />15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">땡땡이스카프 빨강 Free</td>
+                        <td class="left">20140314-85664</td>
+                        <td>A-가-123</td>
+                    </tr>
+                    <tr class="positive">
+                        <td>2012-12-12<br />15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">땡땡이스카프 빨강 Free</td>
+                        <td class="left">20140314-85664</td>
+                        <td>A-가-123</td>
+                    </tr>
+                    <tr class="positive">
+                        <td>2012-12-12<br />15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">땡땡이스카프 빨강 Free</td>
+                        <td class="left">20140314-85664</td>
+                        <td>A-가-123</td>
+                    </tr>
+                    <tr class="positive">
+                        <td>2012-12-12<br />15:00:32</td>
+                        <td>1000355214</td>
+                        <td class="left">땡땡이스카프 빨강 Free</td>
+                        <td class="left">20140314-85664</td>
+                        <td>A-가-123</td>
+                    </tr>
+                </tbody>
+                <tbody class="empty">
+                    <tr>
+                        <td colspan="5">내역이 없습니다.</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mHelp typeInfo">
+        <h2>배송지시 - 바코드 주문입고 안내</h2>
+        <div class="content">
+            <ul>
+                <li>상품 바코드를 스캔하면 '처리결과'화면에 위치코드와 상품명/품목명, 판매사주문번호가 표시됩니다.</li>
+                <li>'상품바코드&위치코드스캔'을 선택하면, 상품바코드 스캔시 '바코드 스캔내역'에 행이 추가되며,<br /> 위치코드 스캔시 행이 노랑색으로 반전처리됩니다.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <a href="#none" class="btnEm"><span>작업완료</span></a>
+</div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

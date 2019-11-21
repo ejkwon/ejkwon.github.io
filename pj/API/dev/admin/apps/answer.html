@@ -1,0 +1,245 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li>Apps</li>
+                <li class="now" title="현재 페이지">구매자 문의/답변 관리</li>
+            </ol>
+            <div class="mTitle">
+                <h1>구매자 문의/답변 관리</h1>
+            </div>
+
+            <div class="sectionArea">
+                <section class="section">
+                    <div class="mBoard gSmall">
+                        <table border="1">
+                            <caption>구매자 문의/답변 관리</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">등록일자</th>
+                                    <td>
+                                        <span class="btnDate">
+                                            <button type="button" class="button">오늘</button>
+                                            <button type="button" class="button">3일</button>
+                                            <button type="button" class="button selected">7일</button>
+                                            <button type="button" class="button">1개월</button>
+                                        </span>
+                                        <input type="text" class="fText gDate" value="2017-12-07">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button> -
+                                        <input type="text" class="fText gDate" value="2017-12-07">
+                                        <button type="button" class="btnIcon icoCal">달력보기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">답변여부</th>
+                                    <td>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 답변</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 미답변</label>
+                                        <label class="gLabel"><input type="checkbox" class="fChk"> 답변지연</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">검색어</th>
+                                    <td>
+                                        <select class="fSelect">
+                                            <option>내용</option>
+                                            <option>문의자명</option>
+                                            <option>앱 이름</option>
+                                            <option>앱 ID</option>
+                                        </select>
+                                        <input type="text" class="fText" style="width:500px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mButton gCenter">
+                        <a href="#none" class="btnSubmit">검색</a>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>검색결과</h2>
+                    </div>
+                    <div class="mState">
+                        <div class="gLeft">
+                            <p class="total">[총 등록 <strong class="txtEm">40</strong>명] 검색결과 <strong class="txtEm">4</strong>명</p>
+                        </div>
+                    </div>
+                    <div class="mCtrl typeHeader">
+                        <div class="gLeft">
+                            <a href="#none" class="btnNormal mini">다운로드</a>
+                        </div>
+                    </div>
+                    <div class="mBoard">
+                        <table border="1" class="eChkColor">
+                            <caption>검색결과</caption>
+                            <colgroup>
+                                <col class="chk">
+                                <col style="width:55px;">
+                                <col class="date">
+                                <col style="width:120px;">
+                                <col style="width:120px;">
+                                <col style="width:110px;">
+                                <col style="width:auto;">
+                                <col class="date">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox" class="allChk"></th>
+                                    <th scope="col">No</th>
+                                    <th scope="col">등록일자</th>
+                                    <th scope="col">문의자</th>
+                                    <th scope="col">앱 이름</th>
+                                    <th scope="col">문의유형</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">답변일시</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>1</td>
+                                    <td>2017-10-19</td>
+                                    <td class="left">asd</td>
+                                    <td>페이스북 리뷰</td>
+                                    <td>[설치/삭제]</td>
+                                    <td class="left"><a href="#none" class="txtLink txtEllipsis">설치 후 동작이 잘 안되는것 같은데 어떻게 조치해야</a></td>
+                                    <td>2017-10-20 08:30:54</td>
+                                </tr>
+                                <tr class="negative">
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>2</td>
+                                    <td>[등록일자]</td>
+                                    <td class="left">asdafasfdad</td>
+                                    <td>타임세일</td>
+                                    <td>[사용문의]</td>
+                                    <td class="left"><a href="#none" class="txtLink txtEllipsis">타임 기간을 변경하고 싶은데 어떻게 해야하나요?</a></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="rowChk"></td>
+                                    <td>3</td>
+                                    <td>[등록일자]</td>
+                                    <td class="left">[작성자]</td>
+                                    <td>[앱 이름]</td>
+                                    <td>[문의유형]</td>
+                                    <td class="left" class="txtLink"><a href="#none" class="txtLink txtEllipsis">[제목]</a></td>
+                                    <td>[답변일시]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--p class="empty">검색된 결과가 없습니다.</p-->
+                    </div>
+                    <div class="mCtrl typeFooter">
+                        <div class="gLeft">
+                            <a href="#none" class="btnNormal mini">다운로드</a>
+                        </div>
+                    </div>
+                    <div class="mPaginate">
+                        <!-- 참고: 이전/다음 페이지가 없는 경우, disabled 클래스 추가 -->
+                        <a href="#none" class="btnPrev">이전 페이지</a>
+                        <span class="page">
+                            <a href="#none">1</a>
+                            <a href="#none" class="selected" title="현재 페이지">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btnNext">다음 페이지</a>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>문의 상세조회</h2>
+                    </div>
+                    <div class="mBoard">
+                        <table border="1">
+                            <caption>문의/답변 관리</caption>
+                            <colgroup>
+                                <col style="width:195px;">
+                                <col style="width:auto;">
+                                <col style="width:195px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">문의일시</th>
+                                    <td>2017-10-19 10:35:45</td>
+                                    <th scope="row">문의자</th>
+                                    <td>홍길동 (카페24 ID) / (이메일)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문의유형</th>
+                                    <td>설치/삭제</td>
+                                    <th scope="row">앱 이름 (ID)</th>
+                                    <td>페이스북 리뷰 (앱 ID)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">제목</th>
+                                    <td colspan="3">설치 후 동작이 잘 안되는것 같은데 어떻게 조치해야 하나요?</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문의내용</th>
+                                    <td colspan="3">어쩌구<br>저쩌구<br>그래서<br>저래서<br>이렇게 하고 싶은데<br>어떻게 해야됨?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="mTitle">
+                        <h2>답변 입력/수정</h2>
+                    </div>
+                    <div class="mBoard">
+                        <table border="1">
+                            <caption>답변 입력/수정</caption>
+                            <colgroup>
+                                <col style="width:195px;">
+                                <col style="width:auto;">
+                                <col style="width:195px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">답변일시</th>
+                                    <td>2017-10-19 10:35:45</td>
+                                    <th scope="row">답변자</th>
+                                    <td>임꺽정 (개발자센터 ID)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">답변내용</th>
+                                    <td colspan="3"><textarea cols="100" rows="8" class="fTextarea" style="width:100%;">이렇게 저렇게 하면 됩니다.</textarea></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">자주쓰는 답변</th>
+                                    <td colspan="3">
+                                        <button href="#none" type="button" class="btnNormal">기본답변</button>
+                                        <button href="#none" type="button" class="btnNormal">환불답변</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mButton">
+                        <a href="#none" class="btnNormal">자주쓰는 답변 관리</a>
+                    </div>
+                </section>
+            </div>
+            <div class="mButton gCenter gFooter">
+                <a href="#none" class="btnSubmit">저장</a>
+            </div>
+        </section><!-- //[ contents ] -->
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer_suio.html'); ?>
+

@@ -1,0 +1,189 @@
+<?php require_once('../include/header.html'); ?>
+    <div id="container">
+        <div class="mTitle">
+            <h1>서버호스팅/IDC 신청</h1>
+        </div>
+        <div class="mProcess">
+            <ol>
+                <li class="done"><span>아이디등록</span></li><!-- 참고: 완료된 단계에 class="done" 추가-->
+                <li class="selected"><span>정보입력</span></li><!-- 참고: 활성화시, class="selected" 추가-->
+                <li><span>결제</span></li>
+                <li><span>신청완료</span></li>
+            </ol>
+        </div>
+        <section class="mBoxThin">
+            <div class="mTitle">
+                <h3>신청정보</h3>
+            </div>
+            <div class="mBoard typeRow">
+                <table border="1">
+                    <caption>신청정보</caption>
+                    <colgroup>
+                        <col style="width:30%;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">신청서비스</th>
+                            <td>리눅스단독웹 스탠다드</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이용기간</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option>1개월</option>
+                                    <option>3개월</option>
+                                    <option>6개월 (5%할인)</option>
+                                    <option>1년 (10%할인)</option>
+                                    <option>2년 (12%할인)</option>
+                                    <option>3년 (15%할인)</option>
+                                    <option>10년 (20%할인)</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mTotal">
+                <dl class="total">
+                    <dt>서버호스팅/IDC (1)</dt>
+                    <dd><em>10,400</em>원</dd>
+                </dl>
+            </div>
+            <div class="mTitle">
+                <h3>서버 환경설정</h3>
+            </div>
+            <!-- 참고: 리눅스 상품인 경우 -->
+            <ul class="mSetList">
+                <li>
+                    서버환경
+                    <ul class="mForm typeVer">
+                        <li><label class="gLabel"><input type="radio" name="radio1" class="fRadio"> <span class="fLabel">PHP7 + Mariadb-10.x UTF-8</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio1" class="fRadio"> <span class="fLabel">PHP5 / MySQL 5.x UTF-8</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio1" class="fRadio"> <span class="fLabel">PHP5 / MySQL 5.x EUC-KR</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio1" class="fRadio"> <span class="fLabel">PHP4 / MySQL 4.x EUC-KR</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio1" class="fRadio"> <span class="fLabel">이미지호스팅 전용</span></label></li>
+                    </ul>
+                    <p class="mGuide">제로보드XE, 워드프레스 자동설치 제공, 다국어 사이트에 적합</p><!-- 참고: 서버환경 선택에 따라서 문구 변경 필요. -->
+                </li>
+                <li>
+                    서버구성
+                    <ul class="mForm typeVer">
+                        <li><label class="gLabel"><input type="radio" name="radio2" class="fRadio"> <span class="fLabel">Apache+PHP+MySQL</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio2" class="fRadio"> <span class="fLabel">Apache+PHP+MySQL(InnoDB)</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio2" class="fRadio"> <span class="fLabel">Apache+Tomcat7+PHP+MySQL</span></label></li>
+                    </ul>
+                </li>
+                <li>
+                    Disk
+                    <ul class="mForm typeVer">
+                        <li><label class="gLabel"><input type="radio" name="radio3" class="fRadio"> <span class="fLabel">SATA2 500GB (백업 SATA2 500GB)</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio3" class="fRadio"> <span class="fLabel">SSD 120GB (백업 SATA2 500GB)</span></label></li>
+                    </ul>
+                    <p class="mGuide">OS설치 및 기타 시스템 할당을 제외하면 실제 가용용량은 약 160GB입니다.</p>
+                </li>
+                <li class="gColumn">
+                    <div class="left w30">DB 서버추가</div>
+                    <div class="left">
+                        <select class="fSelect full">
+                            <option>선택안함</option>
+                            <option>DB서버 스탠다드</option>
+                            <option>DB서버 프리미엄</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <!-- //참고 -->
+            <!-- 참고: 윈도우 상품인 경우 -->
+            <ul class="mSetList">
+                <li>
+                    OS&DB
+                    <ul class="mForm typeVer">
+                        <li><label class="gLabel"><input type="checkbox" class="fChk"> <span class="fLabel">Windows Server 2008 R2 Standard Edition (64bit) + MSSQL 2008 R2 (공용DB)</span></label></li>
+                    </ul>
+                </li>
+                <li>
+                    Disk
+                    <ul class="mForm typeVer">
+                        <li><label class="gLabel"><input type="radio" name="radio3" class="fRadio"> <span class="fLabel">SATA2 500GB (백업 SATA2 500GB)</span></label></li>
+                        <li><label class="gLabel"><input type="radio" name="radio3" class="fRadio"> <span class="fLabel">SSD 120GB (백업 SATA2 500GB)</span></label></li>
+                    </ul>
+                    <p class="mGuide">OS설치 및 기타 시스템 할당을 제외하면 실제 가용용량은 약 160GB입니다.</p>
+                </li>
+            </ul>
+            <!-- //참고 -->
+            <div class="mTitle">
+                <h3>도메인 선택</h3>
+            </div>
+            <ul class="mForm typeVer">
+                <li><label class="gLabel"><input type="radio" name="radio2" class="fRadio"> <span class="fLabel">카페24 호스팅 무료 도메인</span></label></li>
+                <li><label class="gLabel"><input type="radio" name="radio2" class="fRadio"> <span class="fLabel">보유 도메인</span></label></li>
+                <li><label class="gLabel"><input type="radio" name="radio2" class="fRadio"> <span class="fLabel">신규 도메인 등록</span></label></li>
+            </ul>
+            <!-- 참고: 카페24 호스팅 무료 도메인 선택 시 -->
+            <ul class="mHelp em">
+                <li>기본 제공되는 무료 도메인입니다. 도메인이 없거나 구입하지 않을 경우 선택하십시오.</li>
+                <li>하단의 보유 및 신규 도메인으로 선택하신다면 서비스 신청/결제 후 [나의서비스관리] 내 좌측 매뉴의 [호스팅관리 > 도메인 연결관리]에서 등록 후 사용하실 수 있습니다.</li>
+            </ul><!-- //참고 -->
+            <!-- 참고: 보유 도메인 선택 시 -->
+            <p class="gBlank">
+                <select class="fSelect full">
+                    <option>도메인 직접 입력</option>
+                    <option>카페24에서 구매한 도메인</option>
+                </select>
+            </p>
+            <p class="gBlank"><input type="text" class="fText" placeholder="ex) mynameis.co.kr"></p><!-- //참고 -->
+            <!-- 참고: 신규 도메인 등록 선택 시: 신규 도메인 등록하지 않은 상태 -->
+            <div class="mButton">
+                <a href="apply_web_step1.html" target="_blank" title="새창 열림" class="btnEm mini">도메인 검색</a>
+            </div><!-- //참고 -->
+            <!-- 참고: 신규 도메인 등록 선택 시: 신규 도메인 등록한 상태 -->
+            <ul class="mSetList typeRadio g2nd">
+                <li>
+                    <label class="gLabelClear"><input type="radio" class="fRadio" name="radio3"> <span class="fLabel txtEng">cafe24.mobilebusiness.com</span></label>
+                    <div class="gColumn">
+                        <em class="icoText">대표 도메인</em>2년 <span class="icoBar"></span> 44,000원
+                    </div>
+                </li>
+                <li>
+                    <label class="gLabelClear"><input type="radio" class="fRadio" name="radio3"> <span class="fLabel txtEng">cafe24.mobilebusiness.com</span></label>
+                    <div class="gColumn">
+                        2년 <span class="icoBar"></span> 44,000원
+                    </div>
+                </li>
+                <li>
+                    <label class="gLabelClear"><input type="radio" class="fRadio" name="radio3"> <span class="fLabel txtEng">cafe24.mobilebusiness.com</span></label>
+                    <div class="gColumn">
+                        2년 <span class="icoBar"></span> 44,000원
+                    </div>
+                </li>
+            </ul>
+            <div class="mButton">
+                <button type="button" class="btnEm mini">다시 등록하기</button>
+            </div><!-- //참고 -->
+            <div class="mTotal">
+                <dl class="sum">
+                    <dt>추가옵션</dt>
+                    <dd>220,000원</dd>
+                </dl>
+                <dl class="detail">
+                    <dt>DB서버: $스탠다드</dt>
+                    <dd>28,000원</dd>
+                    <dt>신규 도메인</dt>
+                    <dd>44,000원</dd>
+                </dl>
+            </div>
+            <div class="mTotal">
+                <dl class="total">
+                    <dt>합계</dt>
+                    <dd><em>987,400</em>원</dd>
+                </dl>
+            </div>
+        </section>
+        <div class="mButton gFlex">
+            <a href="#none" class="btnNormal">이전단계</a>
+            <a href="#none" class="btnSubmit">다음단계</a>
+        </div>
+    </div>
+
+<?php require_once('../include/footer.html'); ?>

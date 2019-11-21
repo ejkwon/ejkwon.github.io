@@ -1,0 +1,216 @@
+<?php require_once('../../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>배송사</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li><a href="#none">창고운영</a></li>
+                        <li class="now" title="현재 페이지">배송사</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>배송사 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[총 <strong>40</strong>건] 검색결과 <strong>15</strong>건</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option>20개씩보기</option>
+                            <option>30개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                        <select class="fSelect">
+                            <option>-서비스상태 선택-</option>
+                            <option>대기</option>
+                            <option>이용중</option>
+                            <option>일시중지</option>
+                        </select>
+                        <a href="#none" class="btnNormal"><span>일괄적용</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 배송비 엑셀바다운로드</span></a>
+                        <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                        <a href="#none" class="btnCtrl"><span>등록</span></a>
+                    </div>
+                </div>
+                <div class="mBoard gScroll">
+                    <table border="1" summary="" class="eChkTr">
+                    <caption>배송사 목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col style="width:50px;" />
+                        <col style="width:70px;" />
+                        <col style="width:100px;" />
+                        <col style="width:200px;" />
+                        <col style="width:100px;" />
+                        <col style="width:90px;" />
+                        <col style="width:90px;" />
+                        <col style="width:100px;" />
+                        <col style="width:100px;" />
+                        <col style="width:120px;" />
+                        <col style="width:85px;" />
+                        <col class="date" />
+                        <col style="width:70px;" />
+                    </colgroup>
+                    <thead>
+                        <!--
+                            ※ 참고: 소팅 아이콘 가이드 : http://fe.cafe24.com/suio/include/layout.php?MODULE=board_col_list
+                        -->
+                        <tr>
+                            <th scope="col"><input type="checkbox" class="allChk" /></th>
+                            <th scope="col">No</th>
+                            <th scope="col">배송구분</th>
+                            <th scope="col"><strong class="array ascending">배송사명<button type="button">정렬선택</button></strong></th>
+                            <th scope="col">배송사URL</th>
+                            <th scope="col"><strong class="array"><span>배송사단가</span><button type="button">정렬선택</button></strong></th>
+                            <th scope="col">서비스상태</th>
+                            <th scope="col">담당자명</th>
+                            <th scope="col">연락처</th>
+                            <th scope="col">송장 엑셀양식</th>
+                            <th scope="col">배송사 청구배송비 엑셀양식</th>
+                            <th scope="col">반송 송장 엑셀양식</th>
+                            <th scope="col"><strong class="array descend">등록일시<button type="button">내림차순 정렬</button></strong></th>
+                            <th scope="col">메모</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>5</td>
+                            <td>해외</td>
+                            <td class="left"><a href="#none" class="txtLink">한진</a></td>
+                            <td class="left"><a href="#none" class="txtLink">http://hanjin.co.kr</a></td>
+                            <td class="right">17,100원</td>
+                            <td>대기</td>
+                            <td>John Doe</td>
+                            <td>010-4654-4565</td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>등록<em class="icoLink"></em></span></a></td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>등록<em class="icoLink"></em></span></a></td>
+                            <td>-</td>
+                            <td>2014-03-04 14:42:58</td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>메모<em class="icoLink"></em></span></a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>4</td>
+                            <td>해외</td>
+                            <td class="left"><a href="#none" class="txtLink">우정글로벌</a></td>
+                            <td class="left"><a href="#none" class="txtLink"></a></td>
+                            <td class="right">17,100원</td>
+                            <td>이용중</td>
+                            <td>다나카</td>
+                            <td>010-4654-4565</td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>등록<em class="icoLink"></em></span></a></td>
+                            <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">한진Fedex(Home delivery)</a></td>
+                            <td>-</td>
+                            <td>2014-03-04 14:42:58</td>
+                            <td><a href="#none" class="txtLink">메모(<span class="txtWarn">3</span>)</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>3</td>
+                            <td>해외</td>
+                            <td class="left"><a href="#none" class="txtLink">우체국EMS</a></td>
+                            <td class="left"><a href="#none" class="txtLink">http://ems.epost.go.kr/</a></td>
+                            <td class="right">17,100원</td>
+                            <td>이용중지</td>
+                            <td>홍길동</td>
+                            <td>010-4654-4565</td>
+                            <td>-</td>
+                            <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">사가와</a></td>
+                            <td>-</td>
+                            <td>2014-03-04 14:42:58</td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>메모<em class="icoLink"></em></span></a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>2</td>
+                            <td>국내</td>
+                            <td class="left"><a href="#none" class="txtLink">우체국</a></td>
+                            <td class="left"><a href="#none" class="txtLink">http://biz.epost.go.kr/</a></td>
+                            <td class="right">2,000원</td>
+                            <td>이용중</td>
+                            <td>홍길동</td>
+                            <td>010-4654-4565</td>
+                            <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">우체국EMS</a></td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>등록<em class="icoLink"></em></span></a></td>
+                            <td>-</td>
+                            <td>2014-03-04 14:42:58</td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>메모<em class="icoLink"></em></span></a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>1</td>
+                            <td>국내</td>
+                            <td class="left"><a href="#none" class="txtLink">CJ대한통운</a></td>
+                            <td class="left"><a href="#none" class="txtLink">https://www.doortodoor.co.kr//</a></td>
+                            <td class="right">1,800원</td>
+                            <td>이용중</td>
+                            <td>홍길동</td>
+                            <td>02-2250-2244 <br />010-4654-4565</td>
+                            <td>-</td>
+                            <td><a href="#none" target="_blank" title="새창 열림" class="txtLink">K-Packet</a></td>
+                            <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>등록<em class="icoLink"></em></span></a></td>
+                            <td>2014-03-04 14:42:58</td>
+                            <td><a href="#none" class="txtLink">메모(<span class="txtWarn">1</span>)</a></td>
+                        </tr>
+                    </tbody>
+                    <tbody class="empty">
+                        <tr>
+                            <td colspan="14">검색결과가 없습니다.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+                        <select class="fSelect">
+                            <option>-서비스상태 선택-</option>
+                            <option>대기</option>
+                            <option>이용중</option>
+                            <option>일시중지</option>
+                        </select>
+                        <a href="#none" class="btnNormal"><span>일괄적용</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 배송비 엑셀바다운로드</span></a>
+                        <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                        <a href="#none" class="btnCtrl"><span>등록</span></a>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+<?php require_once('../../include/footer.html'); ?>

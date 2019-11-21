@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>debug</title>
+    <link rel="stylesheet" type="text/css" href="//img.echosting.cafe24.com/css/layout.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/suio.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="http://fe.cafe24test.com/js/suio.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <style type="text/css">
+        hr { display:block; margin:70px 0; height:2px; background:#000; }
+        .qaSection { padding:20px; }
+        .section .mForm { margin:0 0 10px; }
+    </style>
+</head>
+<body style="width:auto; height:auto; padding:0 20px 20px;">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>SUIO validation Check</h1>
+        </div>
+    </div>
+
+    <div id="aaQA_1" class="section qaSection">
+        <div class="mTitle">
+           <h2>QA 자동화</h2>
+           <p>ID가 QA_로 시작되는지확인</p>
+        </div>
+    </div>
+    <hr />
+
+    <div id="" class="section qaSection">
+        <div class="mTitle">
+           <h2>QA 자동화</h2>
+           <p>ID가 존재하는지 확인</p>
+        </div>
+    </div>
+    <hr />
+
+    <div id="QA_text" class="section">
+        <div class="mTitle">
+            <h2>txtEm > strong, txtWarn > strong </h2>
+        </div>
+        <p class="gTriple">txtWarn 잘못된예1 : <span class="txtWarn"><strong>텍스트</strong></span></p>
+        <p class="gTriple">txtWarn 올바른예 : <span class="txtWarn"><strong>텍스트</strong> 이런식으로?</span></p>
+        <p class="gTriple">txtWarn 올바른예 : <strong class="txtWarn">텍스트</strong></p>
+        <p class="gTriple">txtEm 잘못된예1 : <span class="txtEm"><strong>텍스트</strong></span></p>
+        <p class="gTriple">txtEm 올바른예 : <span class="txtEm"><strong>텍스트</strong> 이런식으로?</span></p>
+        <p class="gTriple">txtEm 올바른예 : <strong class="txtEm">텍스트</strong></p>
+        <p class="gTriple">txtNormal 잘못된예1 : <span class="txtNormal"><strong>텍스트</strong></span></p>
+        <p class="gTriple">txtNormal 올바른예 : <span class="txtNormal"><strong>텍스트</strong> 이런식으로?</span></p>
+        <p class="gTriple">txtNormal 올바른예 : <strong class="txtNormal">텍스트</strong></p>
+    </div>
+    <hr />
+
+    <div id="QA_automation1" class="section">
+        <div class="mTitle">
+           <h2>mForm</h2>
+        </div>
+        <div class="mForm">
+            <label class="gLabel"><input type="checkbox" class="fChk" checked="checked" /> c</label>
+            <label class="gLabel"><input type="checkbox" class="fChk" /> c</label>
+            <label class="gLabel"><input type="checkbox" class="fChk" /> h</label>
+        </div>
+    </div>
+    <hr />
+
+    <div id="QA_keyword" class="section">
+        <div class="mTitle">
+            <h2>올바른 / 잘못된 문구</h2>
+        </div>
+        <p class="gSingle">
+            올바른 : 이메일<br />
+            잘못된 : / E-Mail / E-mail / e-mail / email / Email /
+        </p>
+        <p class="gSingle">
+            올바른 : 이메일<br />
+            잘못된: HS 코드 / HS CODE / HS Code / HSCODE / HSCode / HS code
+        </p>
+        <p class="gSingle">
+            올바른 : 휴대전화 <br />
+            잘못된 : 휴대폰 / 핸드폰
+        </p>
+        <p class="gSingle">
+             올바른 : 일반전화 <br />
+             잘못된 : 유선전화
+        </p>
+    </div>
+    <hr />
+
+    <div id="QA_blank" class="section">
+        <div class="mTitle">
+           <h2>버튼 새창 열림</h2>
+        </div>
+        <p class="gTriple">
+            <a href="#none" class="btnNormal" title="새창 열림" target="_blank"><span>아이콘없음</span></a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" class="btnNormal" title="새창 열림"><span>타이틀만 <em class="icoLink"></em></span></a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" class="btnNormal"><span>둘다없음 <em class="icoLink"></em></span></a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" class="btnNormal" target="_blank"><span>타겟만 <em class="icoLink"></em></span></a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" class="btnNormal" target="_blank" title="새창열림"><span>타이틀오타 <em class="icoLink"></em></span></a>
+        </p>
+        <p class="gTriple">
+            <a href="#none">둘다없음</a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" title="새창 열림">타이틀만</a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" target="_blank">타겟만</a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" target="_blank" title="새창열림">타이틀오타</a>
+        </p>
+        <p class="gTriple">
+    </div>
+    <hr />
+
+    <div id="QA_btnLink" class="section">
+        <div class="mTitle">
+           <h2>btnLink 괄호("[]")</h2>
+        </div>
+        <p class="gTriple">
+            <a href="#none" class="btnLink"><span>[괄호가있음]</span></a>
+        </p>
+        <p class="gTriple">
+            <a href="#none" class="btnLink"><span>괄호가없음</span></a>
+        </p>
+    </div>
+    <hr />
+
+    <div id="QA_mCtrl" class="section">
+        <div class="mTitle">
+           <h2>mCtrl 등록 버튼 아이콘</h2>
+        </div>
+        <div class="mCtrl typeHeader">
+            <div class="gLeft">
+                <span class="txtLess">선택한 상품을</span>
+                <a href="#none" class="btnNormal"><span>진열상태 변경</span></a>
+                <a href="#none" class="btnNormal"><span><em class="icoPlus"></em> 복사</span></a>
+                <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+            </div>
+            <div class="gRight">
+                <a href="#none" class="btnCtrl"><span><em class="icoPlus"></em> 등록</span></a>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="mHelp typeInfo">
+        <h2>도움말</h2>
+        <div class="content">
+            <p>결제 수단이 에스크로인 경우에는 몰 어드민에서 배송시작 처리를 먼저 해야 합니다.</p>
+            <h3>1. 에스크로 결제수단</h3>
+            <p>결제 수단이 에스크로인 경우에는 몰 어드민에서 배송시작 처리를 먼저 해야 합니다.</p>
+            <p class="empty">
+                <span class="txtIcon">※</span>
+                P에 들어가는 당구장
+            </p>
+            <ol>
+                <li>
+                    1) 처리방법
+                    <ol>
+                        <li>(1) 결제 수단이 에스크로인 경우에는 몰 어드민에서 배송시작 처리를 먼저 해야 합니다.</li>
+                        <li>
+                            (2) PG사 어드민에서 배송정보를 다시 꼭! 등록해야 합니다.
+                            <p>필요에 따라 등록해야 합니다.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    2) 정산처리
+                    <p>에스크로의 경우 배송정보 등록일 기준 처리 됩니다. <a href="#none" class="btnLink"><strong>[처리방법 바로가기<em class="icoLink"></em>]</strong></a></p>
+                </li>
+                <li>
+                     <span class="txtIcon">※</span> LI에 들어가는 당구장
+                </li>
+            </ol>
+        </div>
+        <h2 class="tip">관련 팁</h2>
+        <div class="content">
+            <h3>1. 에스크로 결제수단</h3>
+            <ol>
+                <li>
+                    1) 처리방법
+                    <ol>
+                        <li>(1) 결제 수단이 에스크로인 경우에는 몰 어드민에서 배송시작 처리를 먼저 해야 합니다.</li>
+                        <li>
+                            (2) PG사 어드민에서 배송정보를 다시 꼭! 등록해야 합니다.
+                            <p>필요에 따라 등록해야 합니다.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    2) 정산처리
+                    <p>에스크로의 경우 배송정보 등록일 기준 처리 됩니다. <a href="#none" class="btnLink"><strong>[처리방법 바로가기<em class="icoLink"></em>]</strong></a></p>
+                </li>
+            </ol>
+            <div class="law">
+                <div class="title">
+                    <h3>해외배송 사전통관 정보제공을 위한 법률안내</h3>
+                    <span class="txtLaw">법적고지</span>
+                </div>
+                <ul>
+                    <li>기본제공정보(필수사항) / 수취인정보 : 전화, 이름, 우편번호, 국가명 / 발송상품정보 : 내용품명</li>
+                    <li>수취인 주소 3단 입력(Zip코드필수), 해외배송시 전화번호는 국가번호 포함, 생산지 코드 영문 2자리 입력</li>
+                </ul>
+            </div>
+        </div>
+        <h2 class="tip">관련 팁</h2>
+        <div class="content">
+            <h3>1. 에스크로 결제수단</h3>
+            <ul>
+                <li>필요에 따라 등록해야 합니다.</li>
+                <li>필요에 따라 등록해야 합니다.</li>
+                <li class="empty"><span class="txtIcon">※</span> LI에 들어가는 당구장</li>
+                <li>필요에 따라 등록해야 합니다.</li>
+            </ul>
+            <ul class="empty">
+                <li><span class="txtIcon">※</span> LI에 들어가는 당구장</li>
+                <li>ul class="empty"</li>
+            </ul>
+            <h3>2. 에스크로 결제수단</h3>
+            <ol>
+                <li>1) 필요에 따라 등록해야 합니다.</li>
+                <li>2) 필요에 따라 등록해야 합니다.</li>
+                <li>3) 필요에 따라 등록해야 합니다.</li>
+                <li>4) 필요에 따라 등록해야 합니다.</li>
+                <li>
+                     <span class="txtIcon">※</span> LI에 들어가는 당구장
+                </li>
+            </ol>
+            <h3>2. 에스크로 결제수단</h3>
+            <p>필요에 따라 등록해야 합니다.</p>
+            <p class="empty">
+                <span class="txtIcon">※</span>
+                P에 들어가는 당구장
+            </p>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>체크박스 테이블 : eChkBody가 아닐때</h2>
+        </div>
+        <div class="mBoard typeOrder gScroll">
+            <table border="1" summary="" class="eChkTr">
+            <caption>입금대기 관리 목록</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:140px" />
+                <col class="time" />
+                <col style="width:140px" />
+                <col style="width:100px" />
+                <col style="width:100px" />
+                <col style="width:250px" />
+                <col style="width:50px" />
+                <col style="width:100px" />
+                <col style="width:100px" />
+                <col style="width:80px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">
+                        <select class="fSelect" style="width:120px;">
+                            <option>전체</option>
+                            <option>샵1(국문)[기본]</option>
+                            <option>샵2(영문)</option>
+                        </select>
+                    </th>
+                    <th scope="col">주문일</th>
+                    <th scope="col">품목별 주문번호</th>
+                    <th scope="col">주문자</th>
+                    <th scope="col">공급사유형/<br />공급사명(ID)</th>
+                    <th scope="col">상품명/옵션</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">입금액</th>
+                    <th scope="col">입금은행</th>
+                    <th scope="col">메모</th>
+                </tr>
+            </thead>
+            <tbody class="center">
+                <tr>
+                    <td rowspan="2"><input type="checkbox" class="rowChk" /></td>
+                    <td rowspan="2" class="left">샵1(국문)</td>
+                    <td rowspan="2">2013-04-09 14:02:00</td>
+                    <td class="orderNum">
+                        <img src="//img.echosting.cafe24.com/icon/ico_route_cafe24.gif" alt="카페24" title="카페24" />
+                        <a href="#none">20121211-0000035</a>
+                    </td>
+                    <td rowspan="2">
+                        <a href="#none">홍길동</a><br />(ID)<br />[회원등급]<br />
+                        <a href="#none" class="btnIcon icoSms"><span>SMS</span></a>
+                        <a href="#none" class="btnIcon icoMail"><span>MAIL</span></a>
+                    </td>
+                    <td>도매<br />공급사명</td>
+                    <td>
+                        <div class="gGoods gMedium">
+                            <span class="frame"><img src="//img.echosting.cafe24.com/thumb/44x44.gif" alt="" /></span>
+                            <p><a href="#none">테스트 상품 A</a></p>
+                            <ul class="etc">
+                                <li>색상 : 블랙</li>
+                                <li>사이즈 : M</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="right">2</td>
+                    <td rowspan="2" class="right">KRW 13,500<br />(USD 10.15)</td>
+                    <td rowspan="2">기업은행</td>
+                    <td rowspan="2">
+                        <div class="gImg">
+                            <a href="#none" class="btnOrdIcon icoUser"><span>USER</span></a>
+                            <a href="#none" class="btnOrdIcon icoAdmin"><span>ADMIN</span></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="orderNum">
+                        <img src="//img.echosting.cafe24.com/icon/ico_route_cafe24.gif" alt="카페24" title="카페24" />
+                        <a href="#none">20121211-0000035</a>
+                    </td>
+                    <td>도매<br />공급사명</td>
+                    <td>
+                        <div class="gGoods gMedium">
+                            <span class="frame"><img src="//img.echosting.cafe24.com/thumb/44x44.gif" alt="" /></span>
+                            <p><a href="#none">테스트 상품 A</a></p>
+                            <ul class="etc">
+                                <li>색상 : 블랙</li>
+                                <li>사이즈 : M</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="right">2</td>
+                </tr>
+            </tbody>
+            <tbody class="center even">
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td class="left">샵1(국문)</td>
+                    <td>2013-04-09 14:02:00</td>
+                    <td class="orderNum">
+                        <img src="//img.echosting.cafe24.com/icon/ico_route_cafe24.gif" alt="카페24" title="카페24" />
+                        <a href="#none">20121211-0000035</a>
+                    </td>
+                    <td>
+                        <a href="#none">홍길동</a><br />(ID)<br />[회원등급]<br />
+                        <a href="#none" class="btnIcon icoSms"><span>SMS</span></a>
+                        <a href="#none" class="btnIcon icoMail"><span>MAIL</span></a>
+                    </td>
+                    <td>도매<br />공급사명</td>
+                    <td>
+                        <div class="gGoods gMedium">
+                            <span class="frame"><img src="//img.echosting.cafe24.com/thumb/44x44.gif" alt="" /></span>
+                            <p><a href="#none">테스트 상품 A</a></p>
+                            <ul class="etc">
+                                <li>색상 : 블랙</li>
+                                <li>사이즈 : M</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="right">2</td>
+                    <td class="right">KRW 13,500<br />(USD 10.15)</td>
+                    <td>기업은행</td>
+                    <td>
+                        <div class="gImg">
+                            <a href="#none" class="btnOrdIcon icoUser"><span>USER</span></a>
+                            <a href="#none" class="btnOrdIcon icoAdmin"><span>ADMIN</span></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="center">
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td class="left">샵1(국문)</td>
+                    <td>2013-04-09 14:02:00</td>
+                    <td class="orderNum">
+                        <img src="//img.echosting.cafe24.com/icon/ico_route_cafe24.gif" alt="카페24" title="카페24" />
+                        <a href="#none">20121211-0000035</a>
+                    </td>
+                    <td>
+                        <a href="#none">홍길동</a><br />(ID)<br />[회원등급]<br />
+                        <a href="#none" class="btnIcon icoSms"><span>SMS</span></a>
+                        <a href="#none" class="btnIcon icoMail"><span>MAIL</span></a>
+                    </td>
+                    <td>도매<br />공급사명</td>
+                    <td>
+                        <div class="gGoods gMedium">
+                            <span class="frame"><img src="//img.echosting.cafe24.com/thumb/44x44.gif" alt="" /></span>
+                            <p><a href="#none">테스트 상품 A</a></p>
+                            <ul class="etc">
+                                <li>색상 : 블랙</li>
+                                <li>사이즈 : M</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="right">2</td>
+                    <td class="right">KRW 13,500<br />(USD 10.15)</td>
+                    <td>기업은행</td>
+                    <td>
+                        <div class="gImg">
+                            <a href="#none" class="btnOrdIcon icoUser"><span>USER</span></a>
+                            <a href="#none" class="btnOrdIcon icoAdmin"><span>ADMIN</span></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="empty">
+                <tr>
+                    <td colspan="11">검색된 주문내역이 없습니다.</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>체크박스 테이블 : 체크박스 가 아닐때 class가 있으면</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>제목</caption>
+            <colgroup>
+                <col style="width:50px" />
+                <col class="date" />
+                <col class="time" />
+                <col style="width:auto" />
+                <col style="width:8%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col"><strong class="array descend">등록일<button type="button">내림차순 정렬</button></strong></th>
+                    <th scope="col"><strong class="array ascend">등록일시<button type="button">오름차순 정렬</button></strong></th>
+                    <th scope="col"><strong class="array">제목<button type="button">정렬선택</button></strong></th>
+                    <th scope="col">작성자</th>
+                </tr>
+            </thead>
+            <tbody class="empty">
+                <tr>
+                    <td colspan="5">내역이 없습니다.</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>[올바름]테이블정렬 : tbody, td 정렬없음</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:auto" />
+                <col class="time" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">요청양식</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">다운로드 기간</th>
+                </tr>
+            </thead>
+            <tbody class="middle">
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td>양식명2</td>
+                    <td>20130327 15:30:49</td>
+                    <td>~ 20130327 (14일)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>[올바름]테이블정렬 : 상속정렬 2개 td선언 정렬2개</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:auto" />
+                <col class="time" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">요청양식</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">다운로드 기간</th>
+                </tr>
+            </thead>
+            <tbody class="middle right">
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td class="center">양식명2</td>
+                    <td class="">20130327 15:30:49</td>
+                    <td class="">~ 20130327 (14일)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>[올바름]테이블정렬 : tbody 정렬없음 td 정렬2개</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:auto" />
+                <col class="time" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">요청양식</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">다운로드 기간</th>
+                </tr>
+            </thead>
+            <tbody class="middle">
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td class="center">양식명2</td>
+                    <td class="">20130327 15:30:49</td>
+                    <td class="">~ 20130327 (14일)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>테이블정렬 : tbody에 선언한 정렬을 td에 재선언</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:auto" />
+                <col class="time" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">요청양식</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">다운로드 기간</th>
+                </tr>
+            </thead>
+            <tbody class="middle right">
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td>양식명2</td>
+                    <td>20130327 15:30:49</td>
+                    <td class="right">~ 20130327 (14일)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>테이블정렬 :<br /> 1. tbody의 상속정렬 td보다 td에 선언된 정렬이 더 큼 <br />2. tbody에 선언한 정렬을 td에 재선언</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:auto" />
+                <col class="time" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">요청양식</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">다운로드 기간</th>
+                </tr>
+            </thead>
+            <tbody class="middle right">
+                <tr>
+                    <td class="left"><input type="checkbox" class="rowChk" /></td>
+                    <td class="left">양식명2</td>
+                    <td class="left">20130327 15:30:49</td>
+                    <td class="right">~ 20130327 (14일)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>테이블정렬 : tbody에 정렬 여러개 사용(예:tbody class="center right")</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:auto" />
+                <col class="time" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">요청양식</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">다운로드 기간</th>
+                </tr>
+            </thead>
+            <tbody class="middle center right">
+                <tr>
+                    <td><input type="checkbox" class="rowChk" /></td>
+                    <td>양식명2</td>
+                    <td>20130327 15:30:49</td>
+                    <td class="center">~ 20130327 (14일)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+           <h2>테이블정렬 : tbody에 정렬선언이 없고 td에 선언된 정렬갯수가 똑같음</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:auto" />
+                <col class="time" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">요청양식</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">다운로드 기간</th>
+                </tr>
+            </thead>
+            <tbody class="middle">
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td class="center">양식명2</td>
+                    <td class="right">20130327 15:30:49</td>
+                    <td class="right">~ 20130327 (14일)</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>gEditor</h2>
+        </div>
+        <div class="mTitle">
+            <h3>올바름</h3>
+        </div>
+        <div class="gEditor"><img src="//img.echosting.cafe24.com/suio/@editor.gif" alt="" /></div>
+        <div class="gEditor gTriple"><img src="//img.echosting.cafe24.com/suio/@editor_mini.gif" alt="" /></div>
+        <div class="mTitle">
+            <h3>잘못됨 : @editor.gif를 감싸는 부모(DIV)에게 class="gEidtor"가 없음</h3>
+        </div>
+        <div><img src="//img.echosting.cafe24.com/suio/@editor.gif" alt="" /></div>
+        <div class="gTriple"><img src="//img.echosting.cafe24.com/suio/@editor_mini.gif" alt="" /></div>
+    </div>
+    <hr />
+
+    <div id="requireTest" class="section">
+        <div class="mTitle">
+            <h2><strong class="icoRequired">필수</strong> 확인</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th scope="row">라디오만 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <label class="gLabel"><input type="radio" name="rdo_require" class="fChk" checked="checked" /> </label>
+                        <label class="gLabel"><input type="radio" name="rdo_require" class="fChk" /> </label>
+                        <label class="gLabel"><input type="radio" name="rdo_require" class="fChk" /> </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">체크박스 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <label class="gLabel"><input type="checkbox" class="fChk" checked="checked" /> </label>
+                        <label class="gLabel"><input type="checkbox" class="fChk" /> </label>
+                        <label class="gLabel"><input type="checkbox" class="fChk" /> </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">라디오 + 인풋 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <label class="gLabel"><input type="radio" name="rdo_require2" class="fChk" checked="checked" /> </label>
+                        <label class="gLabel"><input type="radio" name="rdo_require2" class="fChk" /> </label>
+                        <label class="gLabel"><input type="radio" name="rdo_require2" class="fChk" /> </label>
+                        <input type="text" class="fText" style="width:px;" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">텍스트 <strong class="icoRequired">필수</strong></th>
+                    <td>응? <input type="text" class="fText" style="width:px;" value="" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">셀렉트 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <select class="fSelect">
+                            <option selected="selected">10개씩보기</option>
+                            <option>20개씩보기</option>
+                            <option>30개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">에어리어 <strong class="icoRequired">필수</strong></th>
+                    <td><textarea rows="3" cols="20" class="fTextarea" style="width:98%; height:150px;"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">패스워드 <strong class="icoRequired">필수</strong></th>
+                    <td><input type="password" class="fText" style="width:px;" value="" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">아무것도없음 <strong class="icoRequired">필수</strong></th>
+                    <td>응?</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+    <div id="placeholderTest" class="section">
+        <div class="mTitle">
+            <h2>placeholder 넓이 %지정</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th scope="row">%로 지정한 경우 <strong class="icoRequired">필수</strong></th>
+                    <td><textarea rows="3" cols="20" class="fTextarea" style="width:98%; height:150px;" placeholder="%로 지정한 경우"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">px로 지정한 경우 <strong class="icoRequired">필수</strong></th>
+                    <td><input type="password" class="fText" style="width: 100px;" value="" placeholder="px로 지정한 경우" /></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <!-- 참고 : UI 체크용 JS 입니다 -->
+    <script type="text/javascript" src="/suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+
+</body>
+</html>

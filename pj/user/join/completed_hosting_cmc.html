@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>CAFE24 회원가입</title>
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="screen">
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/ui.js" charset="utf-8"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="skipNavigation">
+        <p><a href="#contents">본문 바로가기</a></p>
+    </div>
+    <div id="wrap">
+        <?php require('../include/header.html'); ?>
+
+        <div id="container">
+            <div class="mStep step3">
+                <ol>
+                    <li class="first"><strong>약관동의</strong></li>
+                    <li class="second"><strong>회원정보 입력</strong></li>
+                    <li class="third selected"><strong>가입완료</strong></li>
+                </ol>
+            </div>
+            <!-- contents -->
+            <div id="contents">
+                <div class="mTitle">
+                    <h2>회원가입완료</h2>
+                </div>
+
+                <div class="mComplete">
+                    <h3>카페24 회원가입을 환영합니다.</h3>
+                    <p>
+                        <span class="txtEm"><strong>홍길동님,</strong>카페24 회원가입이 완료되었습니다.</span><br>
+                        가입된 아이디로 로그인하신 후 카페24 서비스를 이용해주세요.
+                    </p>
+                    <div class="mBox">
+                        <span class="icoMember"></span>가입하신 아이디<strong class="memberId">honggildong</strong>
+                    </div>
+                    <div class="mGuide">
+                        <h2 class="blind">안내사항</h2>
+                        <ul>
+                            <li>법인사업자 회원은 사업자 인증과 대표자 인증을 해주셔야 서비스 이용이 가능합니다.
+                                <dl>
+                                    <dt>인증방법 : </dt>
+                                    <dd>사업자등록증 또는 법인등기부등본 사본을 보내주세요.(상단에 가입한 아이디 기재)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>접수방법 : </dt>
+                                    <dd>이메일 hosting@cafe24.com, <br class="RMB">팩스 02-6280-0331</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mButton">
+                    <a href="#none" class="btnSubmit">홈으로 가기</a>
+                </div>
+            </div><!-- //contents -->
+        </div>
+
+        <?php require('../include/footer.html'); ?>
+    </div>
+</body>
+</html>

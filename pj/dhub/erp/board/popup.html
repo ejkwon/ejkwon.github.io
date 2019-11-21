@@ -1,0 +1,222 @@
+<?php require_once('../../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>팝업 관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li><a href="#none">게시판</a></li>
+                        <li class="now" title="현재 페이지">팝업관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>팝업 검색</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>팝업 검색</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기간</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>작성일</option>
+                                        <option>게시일</option>
+                                        <option>종료일</option>
+                                    </select>
+                                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                                    <a href="#none" class="btnDate"><span>3일</span></a>
+                                    <a href="#none" class="btnDate"><span>7일</span></a>
+                                    <a href="#none" class="btnDate"><span>5일</span></a>
+                                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                                    <a href="#none" class="btnDate"><span>3개월</span></a>
+                                    <a href="#none" class="btnDate"><span>1년</span></a>
+                                    <a href="#none" class="btnDate"><span>전체</span></a>
+                                    <input type="text" id="pr_start_date" name="start_date" value="2016-07-29" class="fText gDate" />
+                                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                                    <input type="text" id="pr_end_date" name="end_date" value="2016-08-04" class="fText gDate" />
+                                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">공개설정</th>
+                                <td>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 공개</label>
+                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 비공개</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>제목+내용</option>
+                                        <option>제목</option>
+                                        <option>내용</option>
+                                        <option>작성자명</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:480px;" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>팝업 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩 보기</option>
+                            <option>50개씩 보기</option>
+                            <option>100개씩 보기</option>
+                            <option>300개씩 보기</option>
+                            <option>500개씩 보기</option>
+                            <option>1000개씩 보기</option>
+                            <option>2000개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gRight">
+                        <a href="#none" class="btnNormal"><span>팝업 등록</span></a>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                        <caption>공지사항 목록</caption>
+                        <colgroup>
+                            <col style="width:50px;" />
+                            <col style="width:auto;" />
+                            <col style="width:80px;" />
+                            <col class="date" />
+                            <col class="date" />
+                            <col class="date" />
+                            <col style="width:70px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                                <th scope="col">게시일</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">공개상태</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td>10</td>
+                                <td class="left"><a href="#none">예치금 등록 요청</a></td>
+                                <td>홍길동</td>
+                                <td>2016-08-10</td>
+                                <td>2016-08-10</td>
+                                <td>2016-08-16</td>
+                                <td>공개</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td class="left"><a href="#none">팝업목록 9</a></td>
+                                <td>홍길동</td>
+                                <td>2016-08-09</td>
+                                <td>2016-08-09</td>
+                                <td>2016-08-15</td>
+                                <td>공개</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="left"><a href="#none">팝업목록 8</a></td>
+                                <td>홍길동</td>
+                                <td>2016-08-08</td>
+                                <td>2016-08-08</td>
+                                <td>2016-08-14</td>
+                                <td>공개</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="left"><a href="#none">팝업목록 7</a></td>
+                                <td>홍길동</td>
+                                <td>2016-08-07</td>
+                                <td>2016-08-07</td>
+                                <td>2016-08-13</td>
+                                <td>공개</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="left"><a href="#none">팝업목록 6</a></td>
+                                <td>홍길동</td>
+                                <td>2016-08-06</td>
+                                <td>2016-08-06</td>
+                                <td>2016-08-12</td>
+                                <td>공개</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="left"><a href="#none">팝업목록 5</a></td>
+                                <td>홍길동</td>
+                                <td>2016-08-05</td>
+                                <td>2016-08-05</td>
+                                <td>2016-08-11</td>
+                                <td>공개</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="left"><a href="#none">팝업목록 4</a></td>
+                                <td>홍길동</td>
+                                <td>2016-08-04</td>
+                                <td>2016-08-04</td>
+                                <td>2016-08-10</td>
+                                <td>공개</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gRight">
+                        <a href="#none" class="btnNormal"><span>팝업 등록</span></a>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>팝업 관리 안내</h2>
+                <div class="content">
+                    <ul>
+                        <li>디허브 상점 어드민에 표시되는 팝업 내용을 등록합니다.</li>
+                        <li>상단 검색 옵션들 (기간, 공개설정, 검색어)을 통해 등록된 팝업 내용을 조회할 수 있습니다.</li>
+                        <li>팝업 목록에서 제목을 클릭하면 상세 내용을 조회할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+<?php require_once('../../include/footer.html'); ?>

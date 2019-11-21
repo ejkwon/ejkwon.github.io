@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* 디버깅 공통 */
+  *[class*="eDebug"] { position:relative; outline:2px solid #c75c5c; }
+  *[class*="eVirtual"] { display:inline-block; margin:-2px 4px 0; padding:2px 7px; vertical-align:top; font-size:12px; white-space:nowrap; color:#fff; background:#c75c5c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+  *[class*="eDebug"] + *[class*="eVirtual"] { margin:-2px 0 0; }
+
+/* 오류용 디버깅 */
+  /* tfoot 태그가 tbody 아래에 위치하는 경우 */
+    table tbody + tfoot th + td,
+    table tbody + tfoot td:first-child { position:relative; }
+    table tbody + tfoot th + td:before,
+    table tbody + tfoot td:first-child:before { position:absolute; left:0; top:0; padding:3px 10px; content:"tfoot 태그는 tbody 태그 앞에 위치"; color:#fff; text-align:left; background:#c75c5c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+
+  /* th 태그 scope 속성이 누락되었거나, 속성값(col/row/colgroup/rowgroup) 이외의 값을 적용한 경우 */
+    table .scopenone:before { position:absolute; left:0; top:0; padding:3px 10px; content:"th 태그 scope 필수"; white-space:nowrap; color:#fff; text-align:left; background:#c75c5c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+    table .scopeerror:before { position:absolute; left:0; top:0; padding:3px 10px; content:"scope 속성값 확인"; white-space:nowrap; color:#fff; text-align:left; background:#c75c5c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+
+  /* lable 안에 label 이나 a 태그가 들어갈 경우 */
+    label label,
+    label a { position:relative; outline:2px solid #c75c5c; }
+    label label:after { position:absolute; left:100%; top:-2px; padding:2px 7px; content:"label 안에 label 중복 불가"; font-size:12px; white-space:nowrap; color:#fff; text-align:left; background:#c75c5c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+    label a:after { position:absolute; left:100%; top:-2px; padding:2px 7px; content:"label 안에 a 태그 불가"; font-size:12px; white-space:nowrap; color:#fff; text-align:left; background:#c75c5c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+
+  /* mBreadcrumb 클래스 내에 ol 태그 사용하지 않은 경우 */
+    ul.mBreadcrumb,
+    .mBreadcrumb ul { outline:2px solid #c75c5c; }
+    ul.mBreadcrumb:before,
+    .mBreadcrumb ul:before { z-index:1; position:absolute; left:-2px; top:100%; padding:2px 7px; content:"mBreadcrumb는 ol tag 사용 필수"; font-size:12px; white-space:nowrap; color:#fff; text-align:left; background:#c75c5c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+    ol.mBreadcrumb { outline:0; }
+    ol.mBreadcrumb:before { display:none; }
+
+/* 확인용 디버깅 */
+  .eDebugView { outline:2px solid #369966;}
+  .eDebugView.eLayer { outline-color:#e5c40b; }
+  .eViewMessage,
+  .eVirtualView { margin:0; padding:5px; text-align:left; color:#fff; font-size:12px; line-height:1.2; font-weight:normal; background:#369966; }
+  .eVirtualView.eLayer { background:#e5c40b; }
+    caption.eViewMessage { visibility:visible; width:auto; height:auto; display:table-caption; text-indent:initial; }
+    caption.eViewMessage:before { content:"caption :"; display:inline-block; margin:0 5px 0 0; font-weight:bold; font-size:13px; color:#add1b5; }
+    .blind.eViewMessage { visibility:visible; position:static; left:initial; width:auto; height:auto; text-indent:initial; }
+    .blind.eViewMessage:before { content:"대체텍스트 :"; display:inline-block; margin:0 5px 0 0; font-weight:bold; font-size:13px; color:#add1b5; }

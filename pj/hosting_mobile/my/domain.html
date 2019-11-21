@@ -1,0 +1,118 @@
+<?php require_once('../include/header.html'); ?>
+    <div id="container">
+        <div class="mTitle">
+            <h1>나의 서비스 관리</h1>
+        </div>
+        <div class="mTab typeNav gScroll">
+            <div>
+                <ul>
+                    <li><a href="state.html">사용현황</a></li>
+                    <li><a href="hosting_state.html">호스팅 관리</a></li>
+                    <li class="selected"><a href="domain.html">도메인 관리</a></li>
+                    <li><a href="cash.html">마이캐쉬</a></li>
+                    <li><a href="deposit_apply.html">입금조회</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btnSwipePrev">이전 메뉴</button>
+            <button type="button" class="btnSwipeNext">다음 메뉴</button>
+        </div>
+
+        <section class="bgSection">
+            <!--<div class="mTitle">
+                <h2>내가 신청한 아이디 목록</h2>
+            </div>-->
+            <div class="subId">
+                <span class="domain"><strong>hostingmobile</strong></span>
+                <p class="status"><strong class="txtEm">사용중</strong></p>
+                <!--<p class="status"><strong class="txtWarn">15일 이내 만료에정</strong></p>
+                <p class="status"><strong class="txtInfo">사용만료</strong></p>-->
+            </div>
+
+            <div class="fSelect">
+                <select>
+                    <option>10G 광아우토반 FullSDD 절약형</option>
+                    <option>무료 웹메일 100MB</option>
+                    <option>SMS호스팅 비즈니스</option>
+                </select>
+            </div>
+        </section>
+
+        <div class="mTitle">
+            <h2>서비스 사용현황</h2>
+        </div>
+        <div class="mBoard typeRow gSide">
+            <table border="1">
+                <caption>서비스 사용현황</caption>
+                <colgroup>
+                    <col style="width:30%;">
+                    <col style="width:auto;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">대표도메인</th>
+                        <td><strong>hostingmobile.com</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">서비스명</th>
+                        <td>64bit 광 아우토반 빌더호스팅 절약형</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">시작일</th>
+                        <td>2016-00-00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">만료일</th>
+                        <td>2017-00-00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="mBox">
+            <div class="mTitle">
+                <h3>도메인 목록</h3>
+            </div>
+            <label class="allChk"><input type="checkbox" class="fChk"> <span class="fLabel">전체선택</span></label>
+            <ul class="mSetList typeCheck">
+                <li>
+                    <label class="gLabelClear"><input type="checkbox" class="fChk"> <span class="fLabel txtEng">cafe24.mobilebusiness.com</span></label>
+                    <div class="gColumn">
+                        <div class="left">
+                            <span class="txtInfo">만료일 : </span>2017-00-00
+                        </div>
+                        <div class="right">
+                            <a href="#none" class="btnSubmit mini">연장</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="disabled">
+                    <label class="gLabelClear"><input type="checkbox" class="fChk" disabled="disabled"> <span class="fLabel txtEng">cafe24.mobilebusiness.com</span></label>
+                    <div class="gColumn">
+                        <div class="left">
+                            <span class="txtInfo">만료일 : </span>2017-00-00
+                        </div>
+                        <div class="right">
+                            <a href="#none" class="btnSubmit mini">연장</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label class="gLabelClear"><input type="checkbox" class="fChk"> <span class="fLabel txtEng">cafe24.mobilebusiness.com</span></label>
+                    <div class="gColumn">
+                        <div class="left">
+                            <span class="txtInfo">만료일 : </span>2017-00-00
+                        </div>
+                        <div class="right">
+                            <a href="#none" class="btnNormal mini">복구</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="btnMore"><span class="icoArrow"></span> 더 보기</button>
+        </section>
+
+        <div class="mButton gFull">
+            <a href="#none" class="btnSubmit">도메인 연장/복구 신청하기</a>
+        </div>
+    </div>
+<?php require_once('../include/footer.html'); ?>

@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FB송장출력 1/1</title>
+    <style type="text/css">
+        @charset "utf-8";
+        /* Reset */
+        html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img { margin:0; padding:0; }
+        li { list-style:none; }
+        img { border:0; vertical-align:top; }
+        table { table-layout:fixed; width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+        table img { vertical-align:middle; }
+        caption { display:none; }
+        /* 송장출력 */
+        body { outline:1px dashed red; outline-offset:-1px; }
+        .printArea { display:table; overflow:hidden; height:100%; padding:5px 17px 0; overflow:hidden; }
+        .printArea .print { display:table-cell; vertical-align:middle; }
+        .printArea .txtMore { display:block; font-size:16px; }
+        .mPaper th { text-align:left; }
+        .mPaper td { word-break:break-all; }
+        .mPaper .txtEllipsis { display:block; overflow:hidden; width:100%; height:14px; }
+        .mPaper th, .mPaper td { padding:5px; font-size:12px; line-height:1.15; border:1px solid #000; vertical-align:top; }
+        .mPaper .center td, .mPaper .center th { text-align:center; }
+        .mPaper .right { text-align:right; }
+        .mPaper.typeHead { margin:0 0 5px; }
+        .mPaper.typeHead table { border-top:0; }
+        .mPaper.typeHead td { border-width:0; padding:0; outline-width:0px; vertical-align:middle; }
+        .mPaper + .mPaper { margin-top:-1px; }
+        @media print {
+            body { outline:none; -webkit-print-color-adjust:exact; }
+            .printArea + .printArea { page-break-before:always; }
+        }
+    </style>
+    <!-- 작업시 주의사항 : 해당 페이지는 PDF 인쇄됨, 크롬에서 인쇄 > 설정더보기 > 여백 > 없음으로 설정 후 보이는 화면에 최적화 되어있음 -->
+</head>
+<body id="popup" style="width:10.16cm; height:15.24cm;">
+
+<div class="printArea">
+    <div class="print">
+        <div class="mPaper typeHead">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:40px;" />
+                            <strong class="txtMore">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mPaper">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:68px;" />
+                    <col style="width:130px;" />
+                    <col style="width:68px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row"><strong>상점명</strong></th>
+                        <td><strong>$등록된 상점명</strong></td>
+                        <th scope="row" ><strong>위치코드</strong></th>
+                        <td><strong>BLG-01-008</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>합포번호</strong></th>
+                        <td><strong>20150605-12345678</strong></td>
+                        <th scope="row"><strong>수량합계</strong></th>
+                        <td><strong>12</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mPaper">
+            <table border="1" summary="">
+                <caption>상품정보</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:35px;" />
+                </colgroup>
+                <tbody>
+                <tr class="center">
+                    <td><strong>상품명/품목명</strong></td>
+                    <td><strong>수량</strong></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSTie-Front Cropped Top / Color=IVORY /SIZE=M</span></td>
+                    <td class="right">100</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">HIDE AND SEEKHeart Cut Out Crop Top / Color=BLAC</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">[M-01-03] [9-3-3] 11-데님 언발란스 미니 청 스커트 / 중청,S</span></td>
+                    <td class="right">2</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">[M-01-03/S2134554H] [4-1] 760-챠밍 데일리 원피스 / Navy</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Loose Denim Cuffed Shorts / Color=LIGHT BLUE, Size</span></td>
+                    <td class="right">2</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=IVORY</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Loose Fit Button-Down Shirt / Color=KHAKI</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=SKY B</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSLace-Up Neck Half Sleeve T-Shirt /Color=W</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Ruffled Collar Button-Front Off-Shoulder Blouse / Co</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=SKY B</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSLace-Up Neck Half Sleeve T-Shirt /Color=W</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Ruffled Collar Button-Front Off-Shoulder Blouse / Co</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=IVORY</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Loose Fit Button-Down Shirt / Color=KHAKI</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSTie-Front Cropped Top / Color=IVORY</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">HIDE AND SEEKHeart Cut Out Crop Top / Color=BLAC</span></td>
+                    <td class="right">1</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="printArea">
+    <div class="print">
+        <div class="mPaper typeHead">
+            <table border="1" summary="">
+                <caption>송장번호</caption>
+                <tbody class="center">
+                    <tr>
+                        <td>
+                            <img src="../../img/admin/img_barcode.png " alt="" style="max-width:96%; max-height:40px;" />
+                            <strong class="txtMore">FB1602120001000056</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mPaper">
+            <table border="1" summary="">
+                <caption>상점명</caption>
+                <colgroup>
+                    <col style="width:68px;" />
+                    <col style="width:130px;" />
+                    <col style="width:68px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row"><strong>상점명</strong></th>
+                        <td><strong>$등록된 상점명</strong></td>
+                        <th scope="row" ><strong>위치코드</strong></th>
+                        <td><strong>BLG-01-008</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" ><strong>합포번호</strong></th>
+                        <td><strong>20150605-12345678</strong></td>
+                        <th scope="row"><strong>수량합계</strong></th>
+                        <td><strong>12</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mPaper">
+            <table border="1" summary="">
+                <caption>상품정보</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:35px;" />
+                </colgroup>
+                <tbody>
+                <tr class="center">
+                    <td><strong>상품명/품목명</strong></td>
+                    <td><strong>수량</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSTie-Front Cropped Top / Color=IVORY /SIZE=M</span></td>
+                    <td class="right">100</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">HIDE AND SEEKHeart Cut Out Crop Top / Color=BLAC</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">[M-01-03] [9-3-3] 11-데님 언발란스 미니 청 스커트 / 중청,S</span></td>
+                    <td class="right">2</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">[M-01-03/S2134554H] [4-1] 760-챠밍 데일리 원피스 / Navy</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Loose Denim Cuffed Shorts / Color=LIGHT BLUE, Size</span></td>
+                    <td class="right">2</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=IVORY</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Loose Fit Button-Down Shirt / Color=KHAKI</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=SKY B</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSLace-Up Neck Half Sleeve T-Shirt /Color=W</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Ruffled Collar Button-Front Off-Shoulder Blouse / Co</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=SKY B</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSLace-Up Neck Half Sleeve T-Shirt /Color=W</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Ruffled Collar Button-Front Off-Shoulder Blouse / Co</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Off-Shoulder Blouse With Tied Sleeves / Color=IVORY</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">Loose Fit Button-Down Shirt / Color=KHAKI</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">BAUHAUSTie-Front Cropped Top / Color=IVORY</span></td>
+                    <td class="right">1</td>
+                </tr>
+                <tr>
+                    <td><span class="txtEllipsis">HIDE AND SEEKHeart Cut Out Crop Top / Color=BLAC</span></td>
+                    <td class="right">1</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

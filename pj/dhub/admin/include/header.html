@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>디허브 상점 ADMIN</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/admin.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/chosen.css" />
+    <link rel="stylesheet" href="../../css/select2.css" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/layout.js"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#content">메뉴 건너 뛰기</a></p>
+</div>
+<hr class="layout" />
+<!-- wrap -->
+<div id="wrap" class="open"><!-- 참고 : LNB On/Off class : open, close -->
+    <!-- header -->
+    <div id="header">
+        <div class="header">
+            <h1><a href="#none"><img src="../../img/admin/h1_logo.png" alt="FASTBOX 디허브(D-HUB) 상점 Admin" /></a></h1>
+            <div class="topMenu">
+                <div class="member">
+                    <strong><a href="#layerUserInfo" class="eLayerClick">Miso0428날다 님</a></strong>
+                    <a href="#none" class="logout">로그아웃</a>
+                    <!-- a href="#none" class="login">로그인</a --><!-- 참고 : 로그인 버튼 -->
+                    <ul class="util">
+                        <li class="hscode"><a href="#none">HS코드검색</a></li>
+                        <li><a href="#none">상품영문표기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- //header -->
+    <hr class="layout" />
+
+    <!-- container -->
+    <div id="container">
+        <div class="contentWrap">
+        <!-- sidebar -->
+        <div id="sidebar">
+            <div id="snb" class="eSnb">
+                <div class="title">
+                    <h2>상점명(상점아이디)</h2>
+                </div>
+                <!--
+                    하위메뉴 있고 선택된 상태 class="collapsable"
+                    하위메뉴 없고 선택된 상태 class="selected"
+                    하위메뉴 있을시 기본 상태 class="expandable"
+                -->
+                <ul class="sideMenu">
+                    <li class="collapsable">
+                        <a href="#none">주문관리</a>
+                        <ul>
+                            <li class="selected"><a href="#none">주문접수관리</a></li>
+                            <li><a href="#none">접수확정관리</a></li>
+                            <li><a href="#none">배송지시관리</a></li>
+                            <li><a href="#none">반송관리</a></li>
+                            <li><a href="#none">전체주문현황</a></li>
+                            <li><a href="#none">수출신고관리</a></li>
+                        </ul></li>
+                    <li class="collapsable">
+                        <a href="#none">게시판</a>
+                        <ul>
+                            <li><a href="#none">질문게시판</a></li>
+                            <li><a href="#none">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="collapsable">
+                        <a href="#none">거래처관리</a>
+                        <ul>
+                            <li><a href="#none">판매사</a></li>
+                        </ul>
+                    </li>
+                    <li class="collapsable">
+                        <a href="#none">기본정보</a>
+                        <ul>
+                            <li><a href="#none">상점정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="collapsable">
+                        <a href="#none">예치금</a>
+                        <ul>
+                            <li><a href="#none">예치금 충전 관리</a></li>
+                            <li><a href="#none">예치금 환불 관리</a></li>
+                            <li><a href="#none">일자별예치금현황</a></li>
+                            <li><a href="#none">주문별예치금현황</a></li>
+                            <li><a href="#none">예치금 상세현황</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="sideExchange">
+                <h3 class="heading">환율정보 <span class="date">[17.06.26]</span></h3>
+                <dl class="info">
+                    <dt><img src="//img.cafe24.com/img/common/global/en_US_16x12.png" alt="" /> 미국(USD)</dt>
+                    <dd>1,135.40</dd>
+                    <dt><img src="//img.cafe24.com/img/common/global/ja_JP_16x12.png" alt="" /> 일본(JPY)</dt>
+                    <dd>1,020.13</dd>
+                    <dt><img src="//img.cafe24.com/img/common/global/zh_CN_16x12.png" alt="" /> 중국(CNY)</dt>
+                    <dd>165.99</dd>
+                    <dt><img src="//img.cafe24.com/img/common/global/zh_TW_16x12.png" alt="" /> 대만(TWD)</dt>
+                    <dd>859.27</dd>
+                    <dt><img src="//img.cafe24.com/img/common/global/eu_16x12.png" alt="" /> 유럽(EUR)</dt>
+                    <dd>1,271.08</dd>
+                </dl>
+                <a href="#none" class="btnMore" target="_blank" title="새창 열림"><img src="../../img/admin/btn_exchange_more.gif" alt="더보기" /></a>
+            </div>
+            <div class="customerCenter">
+                <h3>고객센터</h3>
+                <ul>
+                    <li class="tel">02-6296-8973</li>
+                    <li>
+                        <strong>팩스 :</strong>
+                        <span>02-6008-1758</span>
+                    </li>
+                    <li class="email">
+                        <strong>메일 :</strong>
+                        <a href="mailto:manager@fastbox.kr">manager@fastbox.kr</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="toggle">
+            <button type="button" id="btnSidebarTop"><span>화면 상단으로 이동</span></button>
+            <button type="button" id="btnSidebarToggle" onclick="$('#wrap').addClass('close').removeClass('open')"><span>사이드바 숨기기/펼치기</span></button>
+            <button type="button" id="btnSidebarBottom"><span>화면 하단으로 이동</span></button>
+        </div>
+        <!-- //sidebar -->
+        <hr class="layout" />
+
+        <!-- content -->
+        <div id="content">

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="copyright" content="Copyright&copy; Cafe24 Corp. All Rights Reserved." />
+ <title>버튼 등록</title>
+ <link rel="stylesheet" type="text/css" href="/css/suio.css" media="all" charset="utf-8" />
+ <link rel="stylesheet" type="text/css" href="/css/etc/lm.css" />
+ <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+ <script type="text/javascript" src="//img.echosting.cafe24.com/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup">
+ <!-- 팝업 사이즈 : 800 * 700 -->
+ <div id="wrap">
+     <div class="headingArea">
+         <div class="mTitle">
+             <h1>버튼 등록</h1>
+         </div>
+     </div>
+     <div class="section">
+         <div class="mBoard gLarge">
+             <table border="1" summary="">
+             <caption>버튼 상세정보</caption>
+             <tbody>
+                 <tr>
+                     <th scope="row">버튼명 <strong class="icoRequired">필수</strong></th>
+                     <td><input type="text" class="fText" style="width:90%;" /></td>
+                 </tr>
+                 <tr>
+                     <th scope="row">설명 레이어 문구 <strong class="icoRequired">필수</strong></th>
+                     <td>
+                         <input type="text" class="fText" style="width:90%;" />
+                         <p class="mList">버튼에 마우스오버 하면 나타나는 설명입니다.</p>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">위치</th>
+                     <td>
+                         <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked" /> 1영역</label>
+                         <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 2영역</label>
+                         <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked" /> 3영역</label>
+                         <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 4영역</label>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">자동 로그인 사용 여부</th>
+                     <td>
+                         <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked" /> 사용</label>
+                         <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 사용안함</label>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">자동 로그인 도메인 <strong class="icoRequired">필수</strong></th>
+                     <td>
+                         <input type="text" class="fText" style="width:90%;" />
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">자동 로그인 URL <strong class="icoRequired">필수</strong></th>
+                     <td>
+                         <input type="text" class="fText" style="width:90%;" />
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">자동 로그인 방식 <strong class="icoRequired">필수</strong></th>
+                     <td>
+                         <input type="text" class="fText" style="width:90%;" />
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">자동 로그인 종류 <strong class="icoRequired">hostingCafe24</strong></th>
+                     <td>
+                         <input type="text" class="fText" style="width:90%;" />
+                     </td>
+                 </tr>
+                 <tr>
+                     <th scope="row">접속 차단 고객 아이디</th>
+                     <td>
+                         <textarea rows="3" cols="20" class="fTextarea" style="width:90%;height:50px;"></textarea>
+                         <p class="mList">LM을 통한 자동로그인을 차단할 고객아이디를 입력해주세요.</p>
+                     </td>
+                 </tr>
+             </tbody>
+             </table>
+         </div>
+     </div>
+ </div>
+ <div id="footer">
+     <a href="#none" class="btnSubmit"><span>저장</span></a>
+     <a href="#none" class="btnEm" onclick="window.close();"><span>닫기</span></a>
+ </div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/pj/suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

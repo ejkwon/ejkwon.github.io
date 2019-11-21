@@ -1,0 +1,210 @@
+<?php include('./include/head.html'); ?>
+<body>
+<div id="top">
+    <h1>[퍼블리싱 가이드]</h1>
+    <a href="../index.php" target="_blank">- 모바일어드민 IA 바로가기▶</a>
+    <div class="tab gExtend">
+        <ul>
+            <li><a href="./icon.html">object</a></li>
+            <li class="selected">
+                <a href="./title.html">module</a>
+                <ul>
+                    <li><a href="./title.html">mTitle</a></li>
+                    <li><a href="./tab.html">mTab</a></li>
+                    <li><a href="./toggle.html">mToggle</a></li>
+                    <li><a href="./board.html">mBoard</a></li>
+                    <li class="selected"><a href="./search.html">mSearch</a></li>
+                    <li><a href="./searcharea.html">searchArea</a></li>
+                    <li><a href="./paginate.html">mPaginate</a></li>
+                    <li><a href="./index.html">mIndex</a></li>
+                    <li><a href="./summary.html">mSummary</a></li>
+                    <li><a href="./list.html">mList</a></li>
+                    <li><a href="./total.html">mTotal/deliveryInfo</a></li>
+                </ul>
+            </li>
+            <li><a href="./popup.html">popup</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="guide">
+    <h1>검색단</h1>
+    <h2>mSearch</h2>
+    <h3>목록의 상단 검색단으로, mSelect / mSearch 한 셋트로 포함한다.</h3>
+    <ul class="info">
+        <li>상세검색 펼침시 mSelect는 숨기고, 검색 테이블 내에 하나의 행으로 맨 위에 추가된다.</li>
+        <li>상세검색 닫기시 mSelect는 노출되고, 검색 테이블을 숨긴다.</li>
+    </ul>
+
+    <!-- 예시화면 -->
+    <div class="guideArea">
+        <a href="#none" class="btnHide">Hide</a>
+
+        <div id="contents">
+            <div class="mSelect">
+                <div class="select eToggle">
+                    <button type="button" class="button eButton">주문상태 : <strong>전체</strong></button>
+                    <ul class="list">
+                        <li><strong>전체</strong></li>
+                        <li>입금전</li>
+                        <li>상품준비중</li>
+                        <li>배송준비중</li>
+                        <li>배송보류</li>
+                        <li>배송대기</li>
+                        <li>배송중</li>
+                        <li>배송완료</li>
+                        <li>취소</li>
+                        <li>교환</li>
+                        <li>반품</li>
+                        <li>환불</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mSearch eToggle">
+                <fieldset>
+                    <legend>검색조건</legend>
+                    <table border="1">
+                        <caption>검색조건</caption>
+                        <colgroup>
+                            <col style="width:116px">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">주문상태</th>
+                                <td>
+                                    <select class="fSelect full">
+                                        <option selected="selected">전체</option>
+                                        <option>입금전</option>
+                                        <option>상품준비중</option>
+                                        <option>배송준비중</option>
+                                        <option>배송보류</option>
+                                        <option>배송대기</option>
+                                        <option>배송중</option>
+                                        <option>배송완료</option>
+                                        <option>취소</option>
+                                        <option>교환</option>
+                                        <option>반품</option>
+                                        <option>환불</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <select class="fSelect full">
+                                        <option selected="selected">주문번호</option>
+                                        <option>주문자명</option>
+                                        <option>주문자아이디</option>
+                                        <option>입금자명</option>
+                                        <option>상품코드</option>
+                                        <option>상품명</option>
+                                    </select>
+                                </th>
+                                <td>
+                                    <div class="keyword">
+                                        <input type="text" class="fText">
+                                        <button type="button" class="btnClear">검색어삭제</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <select class="fSelect full">
+                                        <option selected="selected">주문일</option>
+                                        <option>결제일</option>
+                                    </select>
+                                </th>
+                                <td>
+                                    <div class="btnToggle">
+                                        <button type="button">6개월</button>
+                                        <button type="button">1개월</button>
+                                        <button type="button" class="selected">7일</button>
+                                        <button type="button">직접입력</button>
+                                    </div>
+                                    <!-- 직접입력 선택시 날짜선택용 버튼노출 -->
+                                    <p class="selectDate" style="display:none;">
+                                        <a href="#none">2015.03.23(월)</a>
+                                        <a href="#none">2015.05.23(수)</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금/결제상태</th>
+                                <td>
+                                    <select class="fSelect full">
+                                        <option selected="selected">전체</option>
+                                        <option>입금전</option>
+                                        <option>추가입금대기</option>
+                                        <option>입금완료(수동)</option>
+                                        <option>입금완료(자동)</option>
+                                        <option>결제완료</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mButton">
+                        <a href="#none" class="btnSubmit">검색</a>
+                        <a href="#none" class="btnNormal">초기화</a>
+                    </div>
+                </fieldset>
+                <a href="#none" class="btnDetail eButton"><span>상세검색</span></a>
+            </div>
+
+            <div class="dimmedArea" style="display:none;">
+                <div class="mLayer typeDate">
+                    <h2>2015년 6월 1일 월요일</h2>
+                    <div class="content">
+                        <div class="mCalendar">
+                            <select class="fSelect">
+                                <option>2014년</option>
+                                <option selected="selected">2015년</option>
+                                <option>2016년</option>
+                                <option>2017년</option>
+                                <option>2018년</option>
+                                <option>2019년</option>
+                                <option>2020년</option>
+                            </select>
+
+                            <select class="fSelect">
+                                <option>1월</option>
+                                <option selected="selected">2월</option>
+                                <option>3월</option>
+                                <option>4월</option>
+                                <option>5월</option>
+                                <option>6월</option>
+                                <option>7월</option>
+                                <option>8월</option>
+                                <option>9월</option>
+                                <option>10월</option>
+                                <option>11월</option>
+                                <option>12월</option>
+                            </select>
+
+                            <select class="fSelect">
+                                <option>23일</option>
+                                <option selected="selected">24일</option>
+                                <option>25일</option>
+                                <option>26일</option>
+                                <option>27일</option>
+                                <option>28일</option>
+                                <option>29일</option>
+                                <option>30일</option>
+                                <option>31일</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mButton">
+                        <a href="#none" onclick="$('.dimmedArea').hide();" class="btnNormal">취소</a>
+                        <a href="#none" onclick="$('.dimmedArea').hide();" class="btnStrong">확인</a>
+                    </div>
+                </div>
+                <div class="dimmed"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

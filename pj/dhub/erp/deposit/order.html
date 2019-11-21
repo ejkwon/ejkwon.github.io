@@ -1,0 +1,190 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>주문별 예치금 현황</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">예치금</a></li>
+            <li class="now" title="현재 페이지">주문별 예치금 현황</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>예치금 검색</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>예치금 검색</caption>
+        <tbody>
+            <tr>
+                <th scope="row">기간</th>
+                <td>
+                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                    <a href="#none" class="btnDate"><span>3일</span></a>
+                    <a href="#none" class="btnDate"><span>7일</span></a>
+                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                    <a href="#none" class="btnDate"><span>3개월</span></a>
+                    <a href="#none" class="btnDate"><span>1년</span></a>
+                    <input type="text" id="pr_start_date" name="start_date" value="2013-04-03" class="fText" style="width:65px;" />
+                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                    ~
+                    <input type="text" id="pr_end_date" name="end_date" value="2013-04-03" class="fText" style="width:65px;" />
+                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">상점</th>
+                <td>
+                    <select class="fSelect">
+                        <option>MIXXMIX</option>
+                        <option>DABAGIRL</option>
+                        <option>OHOTORO</option>
+                        <option>LOVELOVEME</option>
+                        <option>List Item6</option>
+                        <option>List Item7</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>예치금 현황</h2>
+    </div>
+    <div class="mState gMerge">
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩 보기</option>
+                <option>50개씩 보기</option>
+                <option>100개씩 보기</option>
+                <option>300개씩 보기</option>
+                <option>500개씩 보기</option>
+                <option>1000개씩 보기</option>
+                <option>2000개씩 보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gRight">
+            <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+        </div>
+    </div>
+    <div class="mBoard gScroll">
+        <table border="1" summary="">
+        <caption>예치금 현황</caption>
+        <colgroup>
+            <col class="date" />
+            <col style="width:100px;" />
+            <col style="width:150px;" />
+            <col style="width:150px;" />
+            <col style="width:110px;" />
+            <col style="width:100px;" />
+            <col style="width:80px;" />
+            <col style="width:80px;" />
+            <col style="width:80px;" />
+            <col style="width:110px;" />
+            <col style="width:110px;" />
+            <col style="width:110px;" />
+            <col style="width:120px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">출고완료 일자</th>
+                <th scope="col">판매사</th>
+                <th scope="col">출고지시번호</th>
+                <th scope="col">합포번호</th>
+                <th scope="col">배송국가</th>
+                <th scope="col">배송사</th>
+                <th scope="col">무게 (Kg)</th>
+                <th scope="col">용적중량</th>
+                <th scope="col">배송비기준</th>
+                <th scope="col">배송사 배송비</th>
+                <th scope="col">작업비</th>
+                <th scope="col">기타비용</th>
+                <th scope="col">예치금 차감 금액</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td>2016-06-20</td>
+                <td>카페(일문)</td>
+                <td>20161201-2KR004002180</td>
+                <td>20160615-00000124</td>
+                <td class="left">일본</td>
+                <td>사가와</td>
+                <td class="right">1.2</td>
+                <td class="right">0.00</td>
+                <td>무게</td>
+                <td class="right">12,213</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">12,213</td>
+            </tr>
+            <tr>
+                <td>2016-06-20</td>
+                <td>카페(일문)</td>
+                <td>20161201-2KR004002179</td>
+                <td>20160615-00003218</td>
+                <td class="left">일본</td>
+                <td>사가와</td>
+                <td class="right">0.4</td>
+                <td class="right">0.5</td>
+                <td>부피</td>
+                <td class="right">9,320</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">9,320</td>
+            </tr>
+            <tr>
+                <td>2016-06-20</td>
+                <td>카페(일문)</td>
+                <td>20161201-2KR004002178</td>
+                <td>20160615-00003020</td>
+                <td class="left">중화인민공화국</td>
+                <td>차이냐오</td>
+                <td class="right">0.7</td>
+                <td class="right">0.7</td>
+                <td>무게</td>
+                <td class="right">14,654</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">14,654</td>
+            </tr>
+        </tbody>
+        </table>
+        <p class="empty">리스트가 없습니다.</p>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gRight">
+            <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

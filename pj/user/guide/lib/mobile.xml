@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+    <project>
+        <name>마케팅센터</name>
+        <folder>cmc</folder>
+        <menu>
+            <information>index.html</information>
+            <ia>ia.html</ia>
+            <structure>structure.html</structure>
+            <layout>layout.html</layout>
+            <common>common.html</common>
+        </menu>
+    </project>
+    <project>
+        <name>EC 뉴모바일웹</name>
+        <folder>ecmobile</folder>
+        <menu>
+            <information>index.html</information>
+            <ia>ia.html</ia>
+            <structure>structure.html</structure>
+            <layout>layout.html</layout>
+            <common>common.html</common>
+            <function>function.html</function>
+        </menu>
+    </project>
+</list>

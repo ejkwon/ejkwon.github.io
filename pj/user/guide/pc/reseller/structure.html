@@ -1,0 +1,126 @@
+<?php include("../../include/project_top.html"); ?>
+    <div class="guideBody">
+        <div class="guideTitle">
+            <h2>파일 및 디렉토리 구조</h2>
+        </div>
+
+        <div class="guideTitle">
+            <h3>Include 구조</h3>
+        </div>
+        <div class="guideBoard">
+            <table border="1" summary="">
+            <caption></caption>
+            <colgroup>
+                <col style="width:15%;" />
+                <col style="width:60%;" />
+                <col style="width:25%;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">Include 파일</th>
+                    <th scope="col">Include 사용 페이지 (확장자 html)</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/include/header.html</td>
+                    <td>공통</td>
+                    <td>서브페이지</td>
+                </tr>
+                <tr>
+                    <td>/include/footer.html</td>
+                    <td>공통</td>
+                    <td>서브페이지</td>
+                </tr>
+                <tr>
+                    <td>/include/header_full.html</td>
+                    <td>
+                        <ul class="fileList">
+                            <li>/etc/login</li>
+                            <li>/join/agree</li>
+                            <li>/join/complete</li>
+                            <li>/join/id</li>
+                            <li>/join/join</li>
+                        </ul>
+                    </td>
+                    <td>sidebar가 없는 서브페이지</td>
+                </tr>
+                <tr>
+                    <td>/include/header_main.html</td>
+                    <td>
+                        <ul class="fileList">
+                            <li>main</li>
+                        </ul>
+                    </td>
+                    <td>메인페이지</td>
+                </tr>
+                <tr>
+                    <td>/include/footer_main.html</td>
+                    <td>
+                        <ul class="fileList">
+                            <li>main</li>
+                        </ul>
+                    </td>
+                    <td>메인페이지</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div class="guideTitle">
+            <h3>Image 구조</h3>
+        </div>
+        <div class="guideBoard">
+            <table border="1" summary="">
+            <caption></caption>
+            <colgroup>
+                <col style="width:15%;" />
+                <col style="width:atuo;" />
+                <col style="width:25%;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2">디렉토리</th>
+                    <th scope="col">설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="8">/reseller</td>
+                    <td>/common</td>
+                    <td>레이아웃 및 공통 이미지</td>
+                </tr>
+                <tr>
+                    <td>/main</td>
+                    <td>메인 이미지</td>
+                </tr>
+                <tr>
+                    <td>/intro</td>
+                    <td>리셀러소개 이미지</td>
+                </tr>
+                <tr>
+                    <td>/product</td>
+                    <td>상품소개 이미지</td>
+                </tr>
+                <tr>
+                    <td>/customer</td>
+                    <td>고객센터 이미지</td>
+                </tr>
+                <tr>
+                    <td>/join</td>
+                    <td>신청하기 이미지</td>
+                </tr>
+                <tr>
+                    <td>/etc</td>
+                    <td>로그인, 사이트맵 이미지</td>
+                </tr>
+                <tr>
+                    <td>/temp</td>
+                    <td>임시 이미지</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>

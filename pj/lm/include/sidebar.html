@@ -1,0 +1,36 @@
+        <!-- sidebar -->
+        <div id="sidebar">
+            <div id="snb">
+                <h2 class="title">타이틀</h2>
+                <!-- 참고 : ul.menu li 상태별 클래스명
+                    li : 기본
+                    li.selected : 하위메뉴 없고 선택 되었을 때
+                    li.expandable : 하위메뉴 있고 선택 안되었을 때
+                    li.collapsable : 하위 메뉴 있고 선택 되었을 때
+                    li.disabled : 비활성
+                //참고 -->
+                <ul class="menu">
+                    <li class="disabled"><a href="#none">1 비활성<span class="more">하위 리스트 닫힘</span></a></li>
+                    <li class="selected"><a href="#none">1 하위메뉴 없고 선택<span class="more">페이지 보기</span></a></li><!-- 1depth 하위메뉴 없을 경우 span.more에 '페이지 보기'  -->
+                    <li class="expandable">
+                        <a href="#none">1 하위메뉴 있고 닫힘 <span class="more">하위 리스트 닫힘</span></a>
+                        <ul>
+                            <li><a href="#none">2 뎁스</a></li>
+                            <li><a href="#none">2 뎁스</a></li>
+                            <li><a href="#none">2 뎁스</a></li>
+                        </ul>
+                    </li>
+                    <li class="collapsable">
+                        <a href="#none">1 하위메뉴 있고 선택 <span class="more">하위 리스트 열림</span></a><!-- li.collapsable 일 경우 span.more에 '하위 리스트 열림' -->
+                        <ul>
+                            <li><a href="#none">2 뎁스</a></li>
+                            <li><a href="#none">2 뎁스</a></li>
+                            <li><a href="#none">2 뎁스</a></li>
+                            <li class="selected"><a href="#none">2 선택</a></li>
+                            <li class="disabled"><a href="#none">2 비활성</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- //sidebar -->
+        <hr class="layout" />

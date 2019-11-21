@@ -1,0 +1,441 @@
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/alliance_chart/layout/header.html'); ?>
+
+<!-- container -->
+<div id="container" class="divide">
+    <!-- sidebar -->
+    <div id="sidebar">
+        <h2 class="blind">사이드바 메뉴</h2>
+        <ul class="menu">
+            <li>
+                <a href="/pj/alliance_chart/chart/data.html">
+                    <span class="icoSFIX icoData"></span>
+                    <span class="heading">Data</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pj/alliance_chart/chart/chart.html">
+                    <span class="icoSFIX icoChart"></span>
+                    <span class="heading">Chart</span>
+                </a>
+            </li>
+            <li class="selected">
+                <a href="#none">
+                    <span class="icoSFIX icoFormat"></span>
+                    <span class="heading">Format</span>
+                </a>
+            </li>
+        </ul>
+    </div><!-- //sidebar -->
+
+    <hr class="layout" />
+
+    <!-- content -->
+    <div id="content">
+        <div class="leftArea">
+            <div class="section">
+                <div class="mTitle">
+                    <h2>그래프 제목 (Graph Title)</h2>
+                    <select class="fSelect gRight">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>Format</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Title</th>
+                            <td><input type="text" class="fText full" value="티셔츠" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Position</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option>Top left</option>
+                                    <option selected="selected">Top center</option>
+                                    <option>Top right</option>
+                                    <option>Bottom left</option>
+                                    <option>Bottom center</option>
+                                    <option>Bottome right</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>범례 (legend)</h2>
+                    <select class="fSelect gRight">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>Format</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td>
+                                <input type="text" class="fText full" value="방문자수" />
+                                <input type="text" class="fText full gSingle" value="" />
+                                <input type="text" class="fText full gSingle" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Position</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option>Top left</option>
+                                    <option selected="selected">Top center</option>
+                                    <option>Top right</option>
+                                    <option>Bottom left</option>
+                                    <option>Bottom center</option>
+                                    <option>Bottome right</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>X축</h2>
+                    <select class="fSelect gRight">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>Format</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">value format</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option selected="selected">Automatic</option>
+                                    <option>Number</option>
+                                    <option>&nbsp; 1000</option>
+                                    <option>&nbsp; 1000.0</option>
+                                    <option>&nbsp; 1000.00</option>
+                                    <option>&nbsp; 10%</option>
+                                    <option>Date</option>
+                                    <option>&nbsp;&nbsp; YYYY-MM-DD</option>
+                                    <option>&nbsp;&nbsp; MM-DD</option>
+                                    <option>&nbsp;&nbsp; DD/MM/YYYY</option>
+                                    <option>&nbsp;&nbsp; YYYY년MM월DD일</option>
+                                    <option>Currency</option>
+                                    <option>&nbsp; ₩</option>
+                                    <option>&nbsp; $</option>
+                                    <option>&nbsp; 元 </option>
+                                    <option>&nbsp; ¥</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Title</th>
+                            <td><input type="text" class="fText full" value="X축 제목" /></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>Y축</h2>
+                    <select class="fSelect gRight">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>Format</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">value format</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option selected="selected">Automatic</option>
+                                    <option>Number</option>
+                                    <option>&nbsp; 1000</option>
+                                    <option>&nbsp; 1000.0</option>
+                                    <option>&nbsp; 1000.00</option>
+                                    <option>&nbsp; 10%</option>
+                                    <option>Date</option>
+                                    <option>&nbsp;&nbsp; YYYY-MM-DD</option>
+                                    <option>&nbsp;&nbsp; MM-DD</option>
+                                    <option>&nbsp;&nbsp; DD/MM/YYYY</option>
+                                    <option>&nbsp;&nbsp; YYYY년MM월DD일</option>
+                                    <option>Currency</option>
+                                    <option>&nbsp; ₩</option>
+                                    <option>&nbsp; $</option>
+                                    <option>&nbsp; 元 </option>
+                                    <option>&nbsp; ¥</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Title</th>
+                            <td><input type="text" class="fText full" value="Y축 제목" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Unit(단위)</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option selected="selected">Automatic</option>
+                                    <option>백</option>
+                                    <option>100</option>
+                                    <option>천</option>
+                                    <option>1000</option>
+                                    <option>만</option>
+                                    <option>10000</option>
+                                    <option>십만</option>
+                                    <option>100000</option>
+                                    <option>10억</option>
+                                    <option>조</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Second axis</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" class="fChk" /> Disable</label>
+                                <label class="gLabel"><input type="radio" class="fChk" /> Enable</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>레이블(labels)</h2>
+                    <select class="fSelect gRight">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <div class="mTitle">
+                    <h3>방문자수</h3>
+                    <select class="fSelect">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>Format</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Position</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option>Top left</option>
+                                    <option selected="selected">Top center</option>
+                                    <option>Top right</option>
+                                    <option>Bottom left</option>
+                                    <option>Bottom center</option>
+                                    <option>Bottome right</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">value format</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option selected="selected">Automatic</option>
+                                    <option>Number</option>
+                                    <option>&nbsp; 1000</option>
+                                    <option>&nbsp; 1000.0</option>
+                                    <option>&nbsp; 1000.00</option>
+                                    <option>&nbsp; 10%</option>
+                                    <option>Date</option>
+                                    <option>&nbsp;&nbsp; YYYY-MM-DD</option>
+                                    <option>&nbsp;&nbsp; MM-DD</option>
+                                    <option>&nbsp;&nbsp; DD/MM/YYYY</option>
+                                    <option>&nbsp;&nbsp; YYYY년MM월DD일</option>
+                                    <option>Currency</option>
+                                    <option>&nbsp; ₩</option>
+                                    <option>&nbsp; $</option>
+                                    <option>&nbsp; 元 </option>
+                                    <option>&nbsp; ¥</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <div class="mTitle">
+                    <h3>주문건수</h3>
+                    <select class="fSelect">
+                        <option>Enabled</option>
+                        <option selected="selected">Disabled</option>
+                    </select>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>Format</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Position</th>
+                            <td>
+                                <select class="fSelect full disabled" disabled="disabled">
+                                    <option>Top left</option>
+                                    <option selected="selected">Top center</option>
+                                    <option>Top right</option>
+                                    <option>Bottom left</option>
+                                    <option>Bottom center</option>
+                                    <option>Bottome right</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">value format</th>
+                            <td>
+                                <select class="fSelect full disabled" disabled="disabled">
+                                    <option selected="selected">Automatic</option>
+                                    <option>Number</option>
+                                    <option>&nbsp; 1000</option>
+                                    <option>&nbsp; 1000.0</option>
+                                    <option>&nbsp; 1000.00</option>
+                                    <option>&nbsp; 10%</option>
+                                    <option>Date</option>
+                                    <option>&nbsp;&nbsp; YYYY-MM-DD</option>
+                                    <option>&nbsp;&nbsp; MM-DD</option>
+                                    <option>&nbsp;&nbsp; DD/MM/YYYY</option>
+                                    <option>&nbsp;&nbsp; YYYY년MM월DD일</option>
+                                    <option>Currency</option>
+                                    <option>&nbsp; ₩</option>
+                                    <option>&nbsp; $</option>
+                                    <option>&nbsp; 元 </option>
+                                    <option>&nbsp; ¥</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <div class="mTitle">
+                    <h3>판매금액</h3>
+                    <select class="fSelect">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>Format</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Position</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option>Top left</option>
+                                    <option selected="selected">Top center</option>
+                                    <option>Top right</option>
+                                    <option>Bottom left</option>
+                                    <option>Bottom center</option>
+                                    <option>Bottome right</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">value format</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option selected="selected">Automatic</option>
+                                    <option>Number</option>
+                                    <option>&nbsp; 1000</option>
+                                    <option>&nbsp; 1000.0</option>
+                                    <option>&nbsp; 1000.00</option>
+                                    <option>&nbsp; 10%</option>
+                                    <option>Date</option>
+                                    <option>&nbsp;&nbsp; YYYY-MM-DD</option>
+                                    <option>&nbsp;&nbsp; MM-DD</option>
+                                    <option>&nbsp;&nbsp; DD/MM/YYYY</option>
+                                    <option>&nbsp;&nbsp; YYYY년MM월DD일</option>
+                                    <option>Currency</option>
+                                    <option>&nbsp; ₩</option>
+                                    <option>&nbsp; $</option>
+                                    <option>&nbsp; 元 </option>
+                                    <option>&nbsp; ¥</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>Note</h2>
+                    <select class="fSelect gRight">
+                        <option selected="selected">Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+                <select class="fSelect gSingleBreak">
+                    <option selected="">HTML</option>
+                    <option>Text</option>
+                </select>
+                <textarea rows="6" cols="58" class="fTextarea full">그래프에 대한 간단한 Description을 작성할 수 있습니다.<font color=red> html 지원 </font></textarea>
+            </div>
+        </div>
+        <div class="innerArea">
+            <div class="section">
+                <div class="mTitle">
+                    <h1>Creating New Chart</h1>
+                </div>
+                <div class="chartPreview">
+                    개발영역
+                </div>
+            </div>
+            <div class="mButton gCenter">
+                <a href="#none" class="btnSubmit"><span>Save Chart</span></a>
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //container -->
+
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/alliance_chart/layout/footer.html'); ?>

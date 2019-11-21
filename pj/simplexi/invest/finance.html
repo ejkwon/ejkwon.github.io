@@ -1,0 +1,368 @@
+<?php require('../include/header.html'); ?>
+    <div id="container" class="investArea">
+        <!-- contents -->
+        <div id="contents">
+            <div class="headingArea">
+                <h1>투자정보</h1>
+                <p class="mDesc">투명경영, 책임경영을 실천하고 있습니다.</p>
+            </div>
+            <ol class="mBreadcrumb">
+                <li>HOME</li>
+                <li>투자정보</li>
+                <li title="현재 위치"><strong>재무정보</strong></li>
+            </ol>
+            <section class="section">
+                <div class="mTitle">
+                    <h2>재무정보</h2>
+                    <p class="mDesc">투명한 경영을 위해 최선을 다하겠습니다.</p>
+                </div>
+                <div class="mBrdList typeLine finance"><!-- 참고: 한국/미국에만 typeLine 클래스 추가 -->
+                    <div class="mCtrl finance">
+                        <div class="left">
+                            <strong class="title">재무상태표</strong>
+                        </div>
+                        <div class="right">
+                            단위 : 백만원, %
+                            <select>
+                                <option>2018</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table border="1" summary="">
+                        <caption>재무상태표</caption>
+                        <colgroup>
+                            <col style="width:auto;" />
+                            <col class="gYear" />
+                            <col class="gYear" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                        </colgroup>
+                        <thead class="middle">
+                            <tr>
+                                <th scope="col" rowspan="2">항목</th>
+                                <th scope="col" colspan="2">연간</th>
+                                <th scope="col" colspan="4">2018년</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">2017년</th>
+                                <th scope="col">2018년</th>
+                                <th scope="col">1Q</th>
+                                <th scope="col">2Q</th>
+                                <th scope="col">3Q</th>
+                                <th scope="col">4Q</th>
+                            </tr>
+                        </thead>
+                        <tbody class="right">
+                            <tr>
+                                <td class="left">유동자산</td>
+                                <td class="selected">53,439,669</td>
+                                <td>25,654,128</td>
+                                <td>15,650,909</td>
+                                <td>13,404,751</td>
+                                <td>14,692,018</td>
+                                <td>14,692,018</td>
+                            </tr>
+                            <tr>
+                                <td class="left">비유동자산</td>
+                                <td class="selected">18,478,254</td>
+                                <td>20,199,492</td>
+                                <td>18,660,780</td>
+                                <td>18,031,256</td>
+                                <td>17,891,641</td>
+                                <td>17,891,641</td>
+                            </tr>
+                            <tr class="total">
+                                <td class="left">자산총계</td>
+                                <td class="selected">71,917,923</td>
+                                <td>45,853,620</td>
+                                <td>34,311,689</td>
+                                <td>31,436,008</td>
+                                <td>32,583,660</td>
+                                <td>32,583,660</td>
+                            </tr>
+                            <tr>
+                                <td class="left">유동부채</td>
+                                <td class="selected">29,500,928</td>
+                                <td>24,458,569</td>
+                                <td>21,440,935</td>
+                                <td>16,041,744</td>
+                                <td>13,194,105</td>
+                                <td>13,194,105</td>
+                            </tr>
+                            <tr>
+                                <td class="left">비유동부채</td>
+                                <td class="selected">28,692,852</td>
+                                <td>12,619,662</td>
+                                <td>2,650,607</td>
+                                <td>3,311,546</td>
+                                <td>3,405,703</td>
+                                <td>3,405,703</td>
+                            </tr>
+                            <tr class="total">
+                                <td class="left">부채총계</td>
+                                <td class="selected">58,193,780</td>
+                                <td>37,078,230</td>
+                                <td>24,091,543</td>
+                                <td>19,353,290</td>
+                                <td>16,599,809</td>
+                                <td>16,599,809</td>
+                            </tr>
+                            <tr>
+                                <td class="left">자본금</td>
+                                <td class="selected">3,970,307</td>
+                                <td>3,970,307</td>
+                                <td>3,970,307</td>
+                                <td>3,970,307</td>
+                                <td>3,970,307</td>
+                                <td>3,970,307</td>
+                            </tr>
+                            <tr>
+                                <td class="left">자본잉여금</td>
+                                <td class="selected">12,348,258</td>
+                                <td>12,348,258</td>
+                                <td>12,348,258</td>
+                                <td>12,348,257</td>
+                                <td>12,348,257</td>
+                                <td>12,348,257</td>
+                            </tr>
+                            <tr>
+                                <td class="left">자본조정</td>
+                                <td class="selected">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="left">이익잉여금</td>
+                                <td class="selected">-2,423,336</td>
+                                <td>-7,514,461</td>
+                                <td>-6,045,988</td>
+                                <td>-4,164,837</td>
+                                <td>-247,417</td>
+                                <td>-247,417</td>
+                            </tr>
+                            <tr>
+                                <td class="left">기타</td>
+                                <td class="selected">-171,086</td>
+                                <td>-28,714</td>
+                                <td>-52,431</td>
+                                <td>-71,010</td>
+                                <td>-87,296</td>
+                                <td>-87,296</td>
+                            </tr>
+                            <tr class="total">
+                                <td class="left">자본총계</td>
+                                <td class="selected">13,724,143</td>
+                                <td>8,775,390</td>
+                                <td>10,220,146</td>
+                                <td>12,082,717</td>
+                                <td>15,983,851</td>
+                                <td>15,983,851</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mBrdList typeLine finance"><!-- 참고: 한국/미국에만 typeLine 클래스 추가 -->
+                    <div class="mCtrl finance">
+                        <div class="left">
+                            <strong class="title">손익계산서</strong>
+                        </div>
+                        <div class="right">
+                            단위 : 백만원, %
+                        </div>
+                    </div>
+                    <table border="1" summary="">
+                        <caption>손익계산서</caption>
+                        <colgroup>
+                            <col style="width:auto;" />
+                            <col class="gYear" />
+                            <col class="gYear" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                        </colgroup>
+                        <thead class="middle">
+                        <tr>
+                            <th scope="col" rowspan="2">항목</th>
+                            <th scope="col" colspan="2">연간</th>
+                            <th scope="col" colspan="4">2018년</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2017년</th>
+                            <th scope="col">2018년</th>
+                            <th scope="col">1Q</th>
+                            <th scope="col">2Q</th>
+                            <th scope="col">3Q</th>
+                            <th scope="col">4Q</th>
+                        </tr>
+                        </thead>
+                        <tbody class="right">
+                        <tr>
+                            <td class="left">영업수익</td>
+                            <td class="selected">53,439,669</td>
+                            <td>25,654,128</td>
+                            <td>15,650,909</td>
+                            <td>13,404,751</td>
+                            <td>14,692,018</td>
+                            <td>14,692,018</td>
+                        </tr>
+                        <tr>
+                            <td class="left">영업비용</td>
+                            <td class="selected">18,478,254</td>
+                            <td>20,199,492</td>
+                            <td>18,660,780</td>
+                            <td>18,031,256</td>
+                            <td>17,891,641</td>
+                            <td>17,891,641</td>
+                        </tr>
+                        <tr>
+                            <td class="left">영업이익(손실)</td>
+                            <td class="selected">71,917,923</td>
+                            <td>45,853,620</td>
+                            <td>34,311,689</td>
+                            <td>31,436,008</td>
+                            <td>32,583,660</td>
+                            <td>32,583,660</td>
+                        </tr>
+                        <tr>
+                            <td class="left">영업외수익</td>
+                            <td class="selected">29,500,928</td>
+                            <td>24,458,569</td>
+                            <td>21,440,935</td>
+                            <td>16,041,744</td>
+                            <td>13,194,105</td>
+                            <td>13,194,105</td>
+                        </tr>
+                        <tr>
+                            <td class="left">영업외비용</td>
+                            <td class="selected">28,692,852</td>
+                            <td>12,619,662</td>
+                            <td>2,650,607</td>
+                            <td>3,311,546</td>
+                            <td>3,405,703</td>
+                            <td>3,405,703</td>
+                        </tr>
+                        <tr>
+                            <td class="left">당기순이익(손실)</td>
+                            <td class="selected">58,193,780</td>
+                            <td>37,078,230</td>
+                            <td>24,091,543</td>
+                            <td>19,353,290</td>
+                            <td>16,599,809</td>
+                            <td>16,599,809</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mBrdList typeLine finance"><!-- 참고: 한국/미국에만 typeLine 클래스 추가 -->
+                    <div class="mCtrl finance">
+                        <div class="left">
+                            <strong class="title">현금흐름표</strong>
+                        </div>
+                        <div class="right">
+                            단위 : 백만원, %
+                        </div>
+                    </div>
+                    <table border="1" summary="">
+                        <caption>현금흐름표</caption>
+                        <colgroup>
+                            <col style="width:auto;" />
+                            <col class="gYear" />
+                            <col class="gYear" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                            <col style="width:13%" />
+                        </colgroup>
+                        <thead class="middle">
+                        <tr>
+                            <th scope="col" rowspan="2">항목</th>
+                            <th scope="col" colspan="2">연간</th>
+                            <th scope="col" colspan="4">2018년</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2017년</th>
+                            <th scope="col">2018년</th>
+                            <th scope="col">1Q</th>
+                            <th scope="col">2Q</th>
+                            <th scope="col">3Q</th>
+                            <th scope="col">4Q</th>
+                        </tr>
+                        </thead>
+                        <tbody class="right">
+                        <tr>
+                            <td class="left">영업활동현금흐름</td>
+                            <td class="selected">53,439,669</td>
+                            <td>25,654,128</td>
+                            <td>15,650,909</td>
+                            <td>13,404,751</td>
+                            <td>14,692,018</td>
+                            <td>14,692,018</td>
+                        </tr>
+                        <tr>
+                            <td class="left">투자활동현금흐름</td>
+                            <td class="selected">18,478,254</td>
+                            <td>20,199,492</td>
+                            <td>18,660,780</td>
+                            <td>18,031,256</td>
+                            <td>17,891,641</td>
+                            <td>17,891,641</td>
+                        </tr>
+                        <tr>
+                            <td class="left">재무활동현금흐름</td>
+                            <td class="selected">71,917,923</td>
+                            <td>45,853,620</td>
+                            <td>34,311,689</td>
+                            <td>31,436,008</td>
+                            <td>32,583,660</td>
+                            <td>32,583,660</td>
+                        </tr>
+                        <tr>
+                            <td class="left">현금에대한환율변동</td>
+                            <td class="selected">29,500,928</td>
+                            <td>24,458,569</td>
+                            <td>21,440,935</td>
+                            <td>16,041,744</td>
+                            <td>13,194,105</td>
+                            <td>13,194,105</td>
+                        </tr>
+                        <tr>
+                            <td class="left">현금의순증가(감소)</td>
+                            <td class="selected">28,692,852</td>
+                            <td>12,619,662</td>
+                            <td>2,650,607</td>
+                            <td>3,311,546</td>
+                            <td>3,405,703</td>
+                            <td>3,405,703</td>
+                        </tr>
+                        <tr>
+                            <td class="left">기초현금</td>
+                            <td class="selected">58,193,780</td>
+                            <td>37,078,230</td>
+                            <td>24,091,543</td>
+                            <td>19,353,290</td>
+                            <td>16,599,809</td>
+                            <td>16,599,809</td>
+                        </tr>
+                        <tr>
+                            <td class="left">기말현금</td>
+                            <td class="selected">3,970,307</td>
+                            <td>3,970,307</td>
+                            <td>3,970,307</td>
+                            <td>3,970,307</td>
+                            <td>3,970,307</td>
+                            <td>3,970,307</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </div><!-- //contents -->
+    </div>
+<?php require('../include/footer.html'); ?>

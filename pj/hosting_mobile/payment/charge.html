@@ -1,0 +1,75 @@
+<?php require_once('../include/header.html'); ?>
+<div id="container">
+    <div class="mTitle">
+        <h1>마이캐쉬 충전</h1>
+    </div>
+    <div class="mProcess">
+        <ol>
+            <li class="selected"><span>신청정보입력</span></li><!-- 참고: 활성화시, class="selected" 추가-->
+            <li><span>결제</span></li>
+            <li><span>신청완료</span></li>
+        </ol>
+    </div>
+    <section class="mBoxThin">
+        <div class="mTitle">
+            <h3>충전금액 선택</h3>
+        </div>
+        <div class="mBoard typeRow">
+            <table border="1">
+                <caption>충전금액 선택</caption>
+                <colgroup>
+                    <col style="width:30%;">
+                    <col style="width:auto;">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row">충전하실 금액</th>
+                    <td>
+                        <select class="fSelect full">
+                            <option>선택해주세요.</option>
+                            <option>3,000원</option>
+                            <option>5,000원</option>
+                            <option>15,000원</option>
+                            <option>20,000원</option>
+                            <option>30,000원</option>
+                            <option>50,000원</option>
+                            <option>100,000원</option>
+                            <option>200,000원</option>
+                            <option>300,000원</option>
+                            <option>500,000원</option>
+                            <option>직접입력</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">충전 전 금액</th>
+                    <td>000,000,000원</td>
+                </tr>
+                <tr>
+                    <th scope="row">충전 후 금액</th>
+                    <td>000,000,000원</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul class="mHelp">
+                            <li>최소 충전금액 : 1,000원</li>
+                            <li>최대 충전금액 : 500,000원</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mTotal">
+            <dl class="total">
+                <dt>마이캐쉬 충전금액</dt>
+                <dd><em>10,000</em>원</dd>
+            </dl>
+        </div>
+    </section>
+    <div class="mButton gFlex">
+        <a href="#none" class="btnNormal">취소</a>
+        <a href="#none" class="btnSubmit">다음단계</a>
+    </div>
+</div>
+<?php require_once('../include/footer.html'); ?>

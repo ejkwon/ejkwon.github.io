@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>사가와 주소실패건 수정</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="900, 600"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>사가와 주소실패건 수정</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>주소 실패건 리스트</h2>
+        </div>
+        <div class="mState gMerge">
+            <div class="gRight">
+                    <a href="#none" class="btnNormal"><span>구글맵</span></a>
+                    <a href="#none" class="btnNormal"><span>일본우편번호조회</span></a>
+            </div>
+        </div>
+
+        <div class="mCtrl typeHeader">
+            <div class="gLeft">
+                <span class="txtLess">선택한 항목을</span>
+                <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+            </div>
+        </div>
+
+        <div class="mBoard gScroll">
+        <table border="1" summary="" class="eChkColor">
+        <caption>주소 실패건 리스트</caption>
+        <colgroup>
+            <col class="chk" />
+            <col style="width:130px;" />
+            <col style="width:290px" />
+            <col style="width:290px" />
+            <col style="width:290px" />
+            <col style="width:290px" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                <th scope="col">우편번호</th>
+                <th scope="col">사가와주소</th>
+                <th scope="col">수령자주소1</th>
+                <th scope="col">수령자주소2</th>
+                <th scope="col">수령자주소3</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+                <td><input type="text" class="fText" style="width:95%;" /></td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+
+        <div class="mCtrl typeFooter">
+            <div class="gLeft">
+                <span class="txtLess">선택한 항목을</span>
+                <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>닫기</span></a>
+</div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

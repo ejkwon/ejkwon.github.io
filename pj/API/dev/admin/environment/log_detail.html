@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API 상세로그</title>
+    <link rel="stylesheet" type="text/css" href="/pj/API/css/font/notosans.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/pj/API/css/dev_admin.css" media="all">
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="800,700"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="popupWrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>API 상세로그</h1>
+        </div>
+    </div>
+    <section class="section">
+        <div class="mTitle">
+            <h2>공통 응답 메타데이터</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1">
+                <caption>공통 응답 메타데이터</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">Code</th>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Message</th>
+                        <td>success</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trace_id</th>
+                        <td>a8a2bbf2be7ba412c5f74eac234a5c1d</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="section">
+        <div class="mTitle">
+            <h2>요청정보</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1">
+                <caption>요청정보</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">PATH</th>
+                        <td>/openapi/v2/admin/events/factories</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mall_id</th>
+                        <td>ectlocal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shop_no</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Request IP</th>
+                        <td>123.123.123.123</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Time</th>
+                        <td>2017-08-18 14:06:10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="section">
+        <div class="mTitle">
+            <h2>요청/응답데이터</h2>
+        </div>
+        <div class="mBox typeBorder gScroll" style="height:400px;">
+            <pre style="font-size:12px; white-space:pre-wrap;">
+tdClass Object
+(
+    [host] => u0000-b.echosting.cafe24test.com
+    [time] => 2017-08-18 14:14:25
+    [type] => response
+    [data] => stdClass Object
+        (
+            [__MALL_ID__] => ectlocal
+            [__SHOP_NO__] => 1
+            [URL] => /events/factories
+            [METHOD] => POST
+            [HTTP_REFERER] =>
+            [REMOTE_ADDR] => 10.0.2.2
+            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36
+            [CONTENT_TYPE] => application/json
+            [CONTENT_LENGTH] => 326
+            [QUERY] => stdClass Object
+                (
+                    [aver] => 2
+                )
+            [DATA] => stdClass Object
+                (
+                    [shop_no] => 1
+                    [request] => Array
+                        (
+                            [0] => stdClass Object
+                                (
+                                    [event_no] => 827
+                                    [item_code] => AUTHCODE
+                                    [item_value] => test111
+                                    [ins_timestamp] => 2016-06-15
+                                )
+                            [1] => stdClass Object
+                                (
+                                    [event_no] => 103
+                                    [item_code] => AUTHCODE
+                                    [item_value] => test111
+                                    [ins_timestamp] => 2016-06-15
+                                )
+                       )
+                 )
+        [FILES] => stdClass Object
+                (
+                )
+            [TRACE_ID] => 82eadd966b726ebb884035dc79c39013
+            [RESPONSE] => stdClass Object
+                (
+                    [factories] => Array
+                        (
+                            [0] => stdClass Object
+                                (
+                                    [event_no] => 827
+                                    [item_code] => AUTHCODE
+                                    [item_value] => test111
+                                    [ins_timestamp] => 2016-06-15
+                                )
+                             [1] => stdClass Object
+                                 (
+                                    [event_no] => 103
+                                    [item_code] => AUTHCODE
+                                    [item_value] => test111
+                                    [ins_timestamp] => 2016-06-15
+                                 )
+                         )
+                )
+        )
+)</pre>
+        </div>
+    </section>
+</div>
+<div id="footer">
+    <a href="#none" class="btnEm">닫기</a>
+</div>
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/suio/js/debug.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(this).eDebugBot({eQaId:false, eCss:false});
+    });
+</script><!-- //참고 -->
+</body>
+</html>

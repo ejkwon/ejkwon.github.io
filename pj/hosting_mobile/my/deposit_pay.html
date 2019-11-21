@@ -1,0 +1,108 @@
+<?php require_once('../include/header.html'); ?>
+    <div id="container">
+        <div class="mTitle">
+            <h1>나의 서비스 관리</h1>
+        </div>
+        <div class="mTab typeNav gScroll">
+            <div>
+                <ul>
+                    <li><a href="state.html">사용현황</a></li>
+                    <li><a href="hosting_state.html">호스팅 관리</a></li>
+                    <li><a href="domain.html">도메인 관리</a></li>
+                    <li><a href="cash.html">마이캐쉬</a></li>
+                    <li class="selected"><a href="deposit_apply.html">입금조회</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btnSwipePrev">이전 메뉴</button>
+            <button type="button" class="btnSwipeNext">다음 메뉴</button>
+        </div>
+
+        <div class="mTab typeBasic">
+            <ul>
+                <li><a href="deposit_apply.html">신청내역</a></li>
+                <li class="selected"><a href="#none">결제내역</a></li>
+            </ul>
+        </div>
+
+        <!-- 참고: 내역 있는 경우 -->
+        <div class="mBox">
+            <div class="mBoard typeRow gClear">
+                <table border="1">
+                    <caption>결제내역</caption>
+                    <colgroup>
+                        <col style="width:38%;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">결제일시</th>
+                            <td>2016-10-10 12:22:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">아이디</th>
+                            <td>hostest01</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">서비스명</th>
+                            <td><strong class="txtNormal">HDD 용량추가(100M)</strong></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">결제금액/수단</th>
+                            <td><span class="txtNum"><em>44,000</em>원</span> <br class="RMB">(공용계좌)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금자</th>
+                            <td>홍길동</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mBox">
+            <div class="mBoard typeRow gClear">
+                <table border="1">
+                    <caption>결제내역</caption>
+                    <colgroup>
+                        <col style="width:38%;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">결제일시</th>
+                            <td>2016-10-10 12:22:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">아이디</th>
+                            <td>hostest01</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">서비스명</th>
+                            <td><strong class="txtNormal">HDD 용량추가(100M)</strong></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">결제금액/수단</th>
+                            <td><span class="txtNum"><em>44,000</em>원</span> <br class="RMB">(공용계좌)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금자</th>
+                            <td>홍길동</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button type="button" class="btnMore"><span class="icoArrow"></span> 더 보기</button><!-- //참고 -->
+
+        <!-- 참고: 내역 없는 경우 -->
+        <p class="mEmpty">최근 1개월간 무통장 결제 내역이 없습니다.</p><!-- //참고 -->
+
+        <section class="mBox">
+            <div class="mTitle"><h3>결제내역 안내</h3></div>
+            <ul class="mList typeDash">
+                <li>무통장(공용계좌)로 결제하신 고객님의 입금확인은 입금 후 약 5분 내로 확인되어 결제됩니다.</li>
+                <li>결제가 완료되면 관리자 휴대폰과 이메일로 결제완료 SMS와 메일이 발송됩니다.</li>
+                <li>최근 1개월 내 결제된 내용입니다.</li>
+            </ul>
+        </section>
+    </div>
+<?php require_once('../include/footer.html'); ?>

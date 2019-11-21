@@ -1,0 +1,2040 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>입력폼</title>
+<link rel="stylesheet" type="text/css" href="/css/module2.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<!-- 테스트용 CSS <link rel="stylesheet" type="text/css" href="/css/uitest.css" media="all" /> -->
+<link rel="stylesheet" type="text/css" href="/guide/ui/import.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+<script type="text/javascript" src="/js/colorpicker.js"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>입력폼</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>매뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <div class="mGuideBox">
+                <h2>공지</h2>
+                <ul>
+                    <li>2015-10-28 부터 suio의 mForm도 사용 할 수 있도록 개선되었습니다.</li>
+                    <li>신규페이지일때는 suio 가이드를 따르고, 기존 페이지인경우 As-Is 사양을 따르는 것을 권장합니다.</li>
+                </ul>
+            </div>
+
+            <script type="text/javascript">
+            //<![CDATA[
+                $(function() {
+                    $( ".eTabs" ).tabs();
+                });
+            //]]>
+            </script>
+            <div class="gTabMerge eTabs">
+                <div class="mTab typeNav">
+                    <ul>
+                        <li><a href="#tabs-1">Module Form</a></li>
+                        <li><a href="#tabs-2">mForm</a></li>
+                        <li><a href="#tabs-3">mMultiple/mMultiSelect</a></li>
+                        <li><a href="#tabs-4">파일첨부/Favicon</a></li>
+                        <li><a href="#tabs-5">Placeholder/ColorPicker</a></li>
+                        <li><a href="#tabs-6">여러가지 조합</a></li>
+                    </ul>
+                </div>
+                <div id="tabs-1">
+                    <div class="mGuideBox">
+                        <h2>주의사항</h2>
+                        <ul>
+                            <li>selectbox 속성이 multiple일 경우 .fMultiple 추가</li>
+                            <li>input 타입텍스트 일 경우 .fText 클래스 사용. 오른쪽 정렬필요시 .right, 중앙 정렬 필요시 .center 추가</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>[gSelectList] 테이블에서 사용된 입력폼 리스트</h2>
+                            <ul>
+                                <li>radio나 checkbox를 이용해서 데이타를 정렬할때만 사용됨. 표 이외에선 사용 절대 금지 합니다.</li>
+                                <li>선택값이 가로로 배열 될때는 label 로만 묶어주며, 화면 정렬을 위해 가로폭을 고정 시켜 할 경우 &lt;span class="gWidth"&gt;로 감싸줍니다.</li>
+                                <li>세로형에서도 필요에 따라 &lt;span class="gWidth"&gt; 사용이 가능합니다.</li>
+                            </ul>
+                        </div>
+
+                        <h3>가로형 Type1. 단순 배치</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>표시 기능 설정</caption>
+                            <colgroup><col width="16%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <label class="fChk"><input type="radio" name="radio2_10" checked="checked" /> 회원 + 비회원 모두 표시</label>
+                                    <label class="fChk"><input type="radio" name="radio2_10" /> 회원전용 표시</label>
+                                    <label class="fChk"><input type="radio" name="radio2_10" disabled="disabled" /> 회원 + 비회원 모두 표시</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <label class="fChk"><input type="checkbox" name="check2_1" checked="checked" /> 회원 + 비회원 모두 표시</label>
+                                    <label class="fChk"><input type="checkbox" name="check2_1" /> 회원 + 비회원 모두 표시</label>
+                                    <label class="fChk"><input type="checkbox" name="check2_1" disabled="disabled" /> 회원전용 표시</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <label class="fChk"><input type="checkbox" /> 고객주문 (카페24몰 결제완료건)</label>
+                                    <select class="fChk gLabel">
+                                        <option>- 전체 -</option>
+                                        <option>$까페24몰1</option>
+                                        <option>$까페24몰2</option>
+                                    </select>
+                                    <label class="fChk"><input type="checkbox" /> 재고부족</label>
+                                    <label class="fChk"><input type="checkbox" /> 미입고상품</label>
+                                    <p class="txtInfo">label 밖의 영역에 폼이 추가 될때, 다음 엘리먼트에 gLabel을 삽입해서 여백을 재조절해준다. </p>
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <h3>가로형 Type2. 고정 배치 [span.gWidth] : 추가 디자인이 필요할경우 type class를 추가함</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>표시 기능 설정</caption>
+                            <colgroup><col width="16%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">type1: 290px</th>
+                                <td>
+                                    <span class="gWidth type1"><label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 회원 + 비회원 모두 표시</label></span>
+                                    <span class="gWidth type1"><label class="fChk"><input type="radio" name="radio2_1" /> 회원전용 표시</label></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">type2: 270px</th>
+                                <td>
+                                    <span class="gWidth type2"><label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 회원 + 비회원 모두 표시</label></span>
+                                    <span class="gWidth type2"><label class="fChk"><input type="radio" name="radio2_1" /> 회원전용 표시</label></span>
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <h3>세로형 Type1. 일반형</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>표시 기능 설정</caption>
+                            <colgroup><col width="16%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li><label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 회원 + 비회원 모두 표시</label></li>
+                                        <li><label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 회원 + 비회원 모두 표시</label></li>
+                                        <li><label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 회원 + 비회원 모두 표시</label></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <h3>세로형 Type2. 추가 선택형 [ul.addSelect] </h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>표시 기능 설정</caption>
+                            <colgroup><col width="16%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <ul class="gSelectList typeTest">
+                                        <li><label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 추가선택이 없을 경우</label></li>
+                                        <li class="single">
+                                            <label class="fChk title"><input type="radio" name="radio2_1" checked="checked" /> 추가선택이 한줄로 정리될 경우 li.single</label>
+                                            <ul class="addSelect">
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 포함</label></li>
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 제외</label></li>
+                                            </ul>
+                                        </li>
+                                        <li class="multi">
+                                            <label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 추가선택이 여러줄로 정리될 경우 li.multi</label>
+                                            <ul class="addSelect">
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 포함</label></li>
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 제외</label></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio4" checked="checked" /> 추가선택에 추가 입력폼이 하나일 경우</label>
+                                            <p class="addInput"><input type="text" class="fText" style="width:150px;" /> 0/50byte</p>
+                                        </li>
+                                        <li class="multi">
+                                            <label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 부가적인 선택폼에 추가 설명이 필요한 경우</label>
+                                            <ul class="addSelect">
+                                                <li>공급원가를 판매가의 <input type="text" class="fText" value="" style="width:70px;" /> %로 자동 설정</li>
+                                                <li> 공급원가를 <select><option>- 선택 - </option><option selected="selected">1원</option><option>10원</option><option>100원</option></select> 단위로 <select><option>- 선택 - </option><option selected="selected">내림</option><option>반올림</option><option>올림</option></select>으로 설정</li>
+                                            </ul>
+                                            <p class="txtInfo">ex) 900원에 5%를 설정하면 적립금은 45원임. 10원 단위로 내림 설정하면 0원, 1원 단위 내림 설정하면40원</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <ul class="gSelectList typeTest">
+                                        <li class="single">
+                                            <strong class="bullet title">첫번째 선택폼이 radio가 아닌 경우</strong>
+                                            <ul class="addSelect">
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 포함</label></li>
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 포함</label></li>
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 포함</label></li>
+                                            </ul>
+                                        </li>
+                                        <li class="multi">
+                                            <strong class="bullet title">첫번째 선택폼이 radio가 아닌 경우</strong>
+                                            <ul class="addSelect">
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 포함</label></li>
+                                                <li><label class="fChk"><input type="radio" name="radio2" checked="checked" /> 배송비 제외</label></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="txtInfo">
+                                        <li>strong 영역이 앱솔루트고 addSelect에서 패딩으로 밀여주는 형태 이므로 typeTest클래스를 추가하여 원하는 영역을 조정할 수 있다.</li>
+                                        <li>typeTest는 임시로 넣은 클래스로 상황에 맞게 클래스명을 수정하여 사용한다. ex) typeThumb</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <style type="text/css">
+                                td .gSelectList.typeSEO li.single ul.addSelect,
+                                td .gSelectList.typeSEO li.single .addInput { padding-left:100px; }
+                                td .gSelectList.typeSEO li.single ul.addSelect li { display:block; }
+                            </style>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <ul class="gSelectList typeSEO">
+                                        <li class="single">
+                                            <strong class="bullet title">Description</strong>
+                                            <p class="addInput"><input type="text" class="fText" /></p>
+                                        </li>
+                                        <li class="single">
+                                            <strong class="bullet title">Description</strong>
+                                            <ul class="addSelect">
+                                                <li>[추천상품] 대분류1</li>
+                                                <li>[추천상품] 대분류1</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li class="bullet">회원가입 시, 뉴스메일 수신동의하면 적립금 <input type="text" class="fText right" value="0" style="width:70px;" /> 원 적립 (회원가입 적립금 별도지급)</li>
+                                        <li class="multi">
+                                            <strong class="bullet title">회원가입 후 [뉴스메일 수신동의 해지] 가능여부 설정</strong>
+                                            <ul class="addSelect">
+                                                <li><label class="fChk"><input type="radio" name="radio6" checked="checked" /> 회원가입 후 수신동의 변경가능</label></li>
+                                                <li><label class="fChk"><input type="radio" name="radio6" /> 회원가입 후 수신동의 변경불가</label></li>
+                                                <li>
+                                                    <label class="fChk"><input type="radio" name="radio6" /> 설정 기간동안만 변경불가(가입일 기준)</label>
+                                                    <select>
+                                                    <option>1개월</option>
+                                                    <option>3개월</option>
+                                                    <option>6개월</option>
+                                                    <option>1년</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                            </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <h3>세로형 Type3. 추가 입력형 [span.addInput] or [ul.addInput]</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>표시 기능 설정</caption>
+                            <colgroup><col width="16%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li><label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 추가입력이 없을 경우</label></li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 추가입력이 한개일 경우</label>
+                                            <span class="addInput">
+                                                <input type="text" class="fText right" value="" style="width:85px;" /> 원 이상 ~
+                                                <input type="text" class="fText right" value="" style="width:85px;" /> 원 미만일 때 배송비
+                                                <input type="text" class="fText right" value="" style="width:85px;" /> 원을 추가합니다.
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio2_1" checked="checked" /> 추가입력이 여러개일 경우</label>
+                                            <ul class="addInput">
+                                                <li>
+                                                    <input type="text" class="fText right" value="" style="width:85px;" /> 원 이상 ~
+                                                    <input type="text" class="fText right" value="" style="width:85px;" /> 원 미만일 때 배송비
+                                                    <input type="text" class="fText right" value="" style="width:85px;" /> 원을 추가합니다.
+                                                </li>
+                                                <li>
+                                                    <input type="text" class="fText right" value="" style="width:85px;" /> 원 이상 ~
+                                                    <input type="text" class="fText right" value="" style="width:85px;" /> 원 미만일 때 배송비
+                                                    <input type="text" class="fText right" value="" style="width:85px;" /> 원을 추가합니다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <h3>세로형 Type4. 추가 등록형 [div.addThumb]</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>표시 기능 설정</caption>
+                            <colgroup><col width="16%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품가격 표시</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio4" /> 이미지 등록</label>
+                                            <div class="addThumb">
+                                                <input type="file" class="fFile" />
+                                                <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                                <p class="txtInfo">이미지 사이즈 : 00 x 00(pixel)  확장자 : png  권장용량 : 3kb</p>
+                                                <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods.jpg" alt="" /></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio4" /> 이미지 등록</label>
+                                            <div class="addThumb">
+                                                <input type="file" class="fFile" />
+                                                <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                                <p class="txtInfo">이미지 사이즈 : 00 x 00(pixel)  확장자 : png  권장용량 : 3kb</p>
+                                                <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods.jpg" alt="" /></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>[gInlineList]</h2>
+                            <p>인라인 형태로 항목이 나열 될 경우 사용</p>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">제목</th>
+                                <td>
+                                    <div class="gInlineList">
+                                        <p><label class="fChk"><input type="checkbox" /> 전체선택</label></p>
+                                        <ul>
+                                            <li><label class="fChk"><input type="checkbox" checked="checked" /> 등록일자</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 바코드/상품코드</label></li>
+                                            <li><label class="fChk"><input type="checkbox" checked="checked" /> 상품정보</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 입고가</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 판매가</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 현재재고</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 안전재고</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 판매수량</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 과세여부</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 판매상태</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 진열상태</label></li>
+                                            <li><label class="fChk"><input type="checkbox" checked="checked" /> 상품연결</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 부품설정</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 영수증(장끼)</label></li>
+                                            <li><label class="fChk"><input type="checkbox" /> 메모</label></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>radio</h2>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">radio 1-1</th>
+                                <td>
+                                    <label class="fChk"><input type="radio" name="radio1" checked="checked" /> 표시함</label>
+                                    <label class="fChk"><input type="radio" name="radio1" /> 표시안함</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 1-2</th>
+                                <td>
+                                    <label class="fChk"><input type="radio" name="radio2" checked="checked" /> 표시함</label>
+                                    <span class="txtInfo">라디오 버튼의 보조설명</span>
+
+                                    <label class="fChk"><input type="radio" name="radio2" /> 표시안함</label>
+                                    <span class="txtInfo">라디오 버튼의 보조설명</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 1-3</th>
+                                <td>
+                                    <label class="fChk"><input type="radio" name="radio3" checked="checked" /> 표시함</label>
+                                    <span class="gLabel"><input type="text" class="fText" value="라디오 옆의 텍스트필드" style="width:180px;" /></span>
+
+                                    <label class="fChk"><input type="radio" name="radio3" /> 표시안함</label>
+                                    <span class="gLabel">
+                                        <select style="width:180px;">
+                                        <option>라디오 옆의 텍스트필드</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 2-1</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio11" checked="checked" /> 표시함</label>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio11" /> 표시안함</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 2-2</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio4" checked="checked" /> 표시함</label>
+                                            <p class="txtInfo">라디오 버튼 아래의 설명</p>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio4" /> 표시안함</label>
+                                            <p class="txtInfo">라디오 버튼 아래의 설명</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 2-3</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <span class="gWidth type3"><label class="fChk"><input type="radio" name="radio5" checked="checked" /> 표시함</label></span>
+                                            <span class="txtInfo">라디오 버튼 우측의 설명</span>
+                                        </li>
+                                        <li>
+                                            <span class="gWidth type3"><label class="fChk"><input type="radio" name="radio5" /> 표시안함</label></span>
+                                            <span class="txtInfo">라디오 버튼 우측의 설명</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 2-4</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <span class="gWidth type3"><label class="fChk"><input type="radio" name="radio6" checked="checked" /> 표시함</label></span>
+                                            <span class="addSelect"><input type="text" class="fText" value="라디오 옆의 텍스트필드" style="width:180px;" /></span>
+                                        </li>
+                                        <li>
+                                            <span class="gWidth type3"><label class="fChk"><input type="radio" name="radio6" /> 표시안함</label></span>
+                                            <span class="addSelect"><input type="text" class="fText" value="라디오 옆의 텍스트필드" style="width:180px;" /></span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 2-5</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <span class="gWidth type3"><label class="fChk"><input type="radio" name="radio7" checked="checked" /> 표시함</label></span>
+                                            <span class="addSelect">
+                                                <select style="width:180px;">
+                                                <option>라디오 옆의 텍스트필드</option>
+                                                </select>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio7" /> 표시안함</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 3-1</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <span class="gWidth type3"><label class="fChk"><input type="radio" name="radio8" checked="checked" /> 표시함</label></span>
+                                            <span class="addSelect">
+                                                <select style="width:180px;">
+                                                <option>라디오 옆의 텍스트필드</option>
+                                                </select>
+                                                <input type="text" class="fText" value="라디오 옆의 텍스트필드" style="width:400px;" />
+                                                <a href="#none" class="btnEm"><span>취소</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio8" /> 표시안함</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 3-2</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio9" checked="checked" /> 표시함</label>
+                                        </li>
+                                        <li>
+                                            <span class="gWidth type3"><label class="fChk"><input type="radio" name="radio9" /> 표시안함</label></span>
+                                            <span class="addSelect">
+                                                <span class="txtInfo">라디오 버튼의 보조설명</span>
+                                                <input type="text" class="fText" value="라디오 옆의 텍스트필드" style="width:180px;" />
+                                                <span class="txtInfo">보조설명</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">radio 3-3</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio10" checked="checked" /> 표시함</label>
+                                        </li>
+                                        <li class="multi">
+                                            <label class="fChk"><input type="radio" name="radio10" /> 표시안함</label>
+                                            <ul class="addSelect">
+                                                <li><label><input type="checkbox" /> 고객 SMS 발송</label></li>
+                                                <li><label><input type="checkbox" /> 운영자 SMS 발송</label></li>
+                                                <li><label><input type="checkbox" /> 공급사 SMS 발송</label></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>checkbox</h2>
+                        </div>
+
+                        <p class="mRequired"><strong class="txtMust">*</strong> 필수 입력사항</p>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">checkbox 1-1 <strong class="txtMust">*</strong></th>
+                                <td>
+                                    <label class="fChk"><input type="checkbox" /> 신용카드</label>
+                                    <label class="fChk"><input type="checkbox" /> 무통장 입금</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">checkbox 1-2</th>
+                                <td>
+                                    <label class="fChk"><input type="checkbox" /> 신용카드</label>
+                                    <span class="txtInfo">체크박스의 보조설명</span>
+
+                                    <label class="fChk"><input type="checkbox" /> 무통장 입금</label>
+                                    <span class="txtInfo">체크박스의 보조설명</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">checkbox 1-3</th>
+                                <td>
+                                    <label class="fChk"><input type="checkbox" /> 신용카드</label>
+                                    <span class="gLabel"><input type="text" class="fText" value="체크박스의 텍스트필드" style="width:180px;" /></span>
+
+                                    <label class="fChk"><input type="checkbox" /> 무통장 입금</label>
+                                    <span class="gLabel">
+                                        <select style="width:180px;">
+                                        <option>체크박스 옆의 텍스트필드</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>텍스트 박스</h2>
+                        </div>
+
+                        <p class="mRequired"><strong class="txtMust">*</strong> 필수 입력사항</p>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">텍스트 필드 1-1</th>
+                                <td>
+                                    <input type="text" class="fText" style="width:180px;" />
+                                    <span class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 14 ]</span>
+                                    <p class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 14 ]</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 1-2</th>
+                                <td>
+                                    <input type="text" class="fText" style="width:400px;" />
+                                    <ul class="txtInfo">
+                                    <li>위 입력공간에 견적서 안내 문구를 등록해 주세요.</li>
+                                    <li>Html 태그 적용 가능하며 적절한 문구를 등록해 주시면 출력됩니다.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 1-3</th>
+                                <td>
+                                    <input type="text" class="fText" style="width:180px;" />
+                                    <select>
+                                    <option>저장옵션 선택</option>
+                                    <option>저장옵션 선택1</option>
+                                    <option>저장옵션 선택2</option>
+                                    <option>저장옵션 선택3</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 1-4</th>
+                                <td>
+                                    <label class="fChk bullet">가로 <input type="text" class="fText" style="width:70px;" /> px</label>
+                                    <label class="fChk bullet">세로 <input type="text" class="fText" style="width:70px;" /> px</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 2-1</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <input type="text" class="fText" style="width:180px;" />
+                                            <span class="txtInfo">텍스트 필드 보조 설명</span>
+                                        </li>
+                                        <li>
+                                            <input type="text" class="fText" style="width:180px;" />
+                                            <span class="txtInfo">텍스트 필드 보조 설명</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 2-2</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <input type="text" class="fText" style="width:180px;" />
+                                            <span class="txtInfo">텍스트 필드 보조 설명</span>
+                                        </li>
+                                        <li>
+                                            <input type="text" class="fText" style="width:180px;" />
+                                            <select>
+                                            <option>저장옵션 선택</option>
+                                            <option>저장옵션 선택1</option>
+                                            <option>저장옵션 선택2</option>
+                                            <option>저장옵션 선택3</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 2-3</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li><label class="fChk bullet">가로 <input type="text" class="fText" style="width:70px;" /> px</label></li>
+                                        <li><label class="fChk bullet">세로 <input type="text" class="fText" style="width:70px;" /> px</label></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 3-1</th>
+                                <td>
+                                    <textarea class="fTextarea" cols="20" rows="6"></textarea>
+                                    <p class="txtInfo">텍스트 필드 하단의 보조 설명</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">텍스트 필드 3-2</th>
+                                <td>
+                                    <div class="gDouble">
+                                        <textarea class="fTextarea" cols="20" rows="6"></textarea>
+                                    </div>
+                                    <label class="fChk"><input type="checkbox" /> 텍스트 필드 하단의 추가 기능</label>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>셀렉트박스</h2>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">셀렉트박스 1-1</th>
+                                <td>
+                                    <select class="fSelect" style="width:188px;">
+                                    <option>셀렉스박스</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">셀렉트박스 1-2</th>
+                                <td>
+                                    <select class="fSelect" style="width:188px;">
+                                    <option>셀렉스박스</option>
+                                    </select>
+                                    <p class="txtInfo">텍스트 필드 하단의 보조 설명</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">셀렉트박스 1-3</th>
+                                <td>
+                                    <select class="fSelect" style="width:188px;">
+                                    <option>셀렉스박스</option>
+                                    </select>
+                                    <select class="fSelect" style="width:188px;">
+                                    <option>셀렉스박스</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">셀렉트박스 1-4</th>
+                                <td>
+                                    <select class="fSelect" style="width:188px;">
+                                    <option>셀렉스박스</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:180px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">셀렉트박스 1-5</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <select class="fSelect" style="width:188px;">
+                                            <option>셀렉스박스</option>
+                                            </select>
+                                            <label class="fChk"><input type="checkbox" /> 셀렉트박스우측의 체크박스</label>
+                                        </li>
+                                        <li>
+                                            <select class="fSelect" style="width:188px;">
+                                            <option>셀렉스박스</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+
+
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tabs-2">
+                    <div class="mBoard type2">
+                        <table border="1" summary="">
+                        <caption>제목</caption>
+                        <colgroup>
+                            <col style="width:60px" />
+                            <col style="width:100px;"/>
+                            <col style="width:180px;"/>
+                            <col width="auto"/>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">한국어</th>
+                                <th scope="col">Class</th>
+                                <th scope="col">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">V-1</th>
+                                <th>기본형</th>
+                                <th>ul.mForm.typeVer</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 1</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 2</label></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V-2</th>
+                                <th>기본형 정렬</th>
+                                <th>.gWidth.w$SIZE</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li>
+                                            <span class="icoDot"></span> <span class="gWidth w70">예시입니다</span>
+                                            <input type="text" class="fText right" style="width:70px;" value="" />
+                                        </li>
+                                        <li>
+                                            <span class="icoDot"></span> <span class="gWidth w70">예시다</span>
+                                            <input type="text" class="fText right" style="width:70px;" value="" />
+                                        </li>
+                                        <li>
+                                            <span class="icoDot"></span> <span class="gWidth w70">예시</span>
+                                            <input type="text" class="fText right" style="width:70px;" value="" />
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V-3</th>
+                                <th>추가 입력형, <br />넓이 선언</th>
+                                <th>.gLabel + span.gLabel<br />.gLabel.w$SIZE</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li>
+                                            <label class="gLabel w120"><input type="radio" name="gVer1" class="fChk" /> 예시입니다</label>
+                                            <span class="gLabel"><input type="text" class="fText" style="width:150px;" value="예시" /></span>
+                                            <span class="gLabel">&lt;span.gLabel&gt; 삽입해 여백을 재조절 하고, 넓이를 선언하여 추가 입력 form의 시작점을 정렬한다.</span>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel w120"><input type="radio" name="gVer1" class="fChk" /> 예시다</label>
+                                            <span class="gLabel"><input type="text" class="fText right" style="width:50px;" value="3,000" /> 원</span>
+                                            <span class="gLabel">.fText에 right를 추가하면 오른쪽으로 정렬 할수 있다. </span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V-4</th>
+                                <th>확장형</th>
+                                <th>.addForm</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 예시</label>
+                                            <p class="addForm"><input type="text" class="fText" style="width:100px" /></p>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 예시</label>
+                                            <p class="addForm"><select><option>선택하세요</option></select></p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V-5</th>
+                                <th>확장형 <br />(가로진열)</th>
+                                <th>ul.addForm.gHor</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 예시</label>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 확장형 (가로진열)</label>
+                                            <ul class="addForm gHor">
+                                                <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시</label></li>
+                                                <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시</label></li>
+                                                <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시</label> <input type="text" class="fText" style="width:150px;" />
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V-6</th>
+                                <th>확장형 <br />(세로진열)</th>
+                                <th>ul.addForm.gVer</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 예시</label>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 확장형 (세로진열)</label>
+                                            <ul class="addForm gVer">
+                                                <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 1</label></li>
+                                                <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 2</label></li>
+                                                <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시</label> <input type="text" class="fText" style="width:150px;" /></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V-7</th>
+                                <th>확장형 <br />(다단진열)</th>
+                                <th>ul.addForm> ul.subForm</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 예시</label>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 확장형 (다단 진열)</label>
+                                            <ul class="addForm gVer">
+                                                <li>
+                                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 예시 1</label>
+                                                    <ul class="subform">
+                                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 1-1</label></li>
+                                                        <li><span class="icoDot"></span> 예시 1-2</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <label class="gLabel"><input type="checkbox" class="fChk" /> 예시 2</label>
+                                                    <p class="subform"><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 2-1</label></p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V-8</th>
+                                <th>확장형 (모듈)</th>
+                                <th>ul.addForm > m$Name</th>
+                                <td>
+                                    <ul class="mForm typeVer">
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 예시</label>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer2" class="fChk" /> 확장형 (모듈)</label>
+                                            <div class="addForm">
+                                                    <ul class="mMultiSelect">
+                                                        <li class="selected">
+                                                            <strong>버튼을 포함한 목록형 단일선택</strong>
+                                                            <button class="btnIcon icoDel"><span>삭제</span></button>
+                                                        </li>
+                                                        <li>
+                                                            <strong>버튼을 포함한 목록형 단일선택</strong>
+                                                            <button class="btnIcon icoDel"><span>삭제</span></button>
+                                                        </li>
+                                                    </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mBoard type2 gTripleTop">
+                        <table border="1" summary="">
+                        <caption>제목</caption>
+                        <colgroup>
+                            <col style="width:60px;"/>
+                            <col style="width:100px;"/>
+                            <col style="width:180px;"/>
+                            <col width="auto"/>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">한국어</th>
+                                <th scope="col">Class</th>
+                                <th scope="col">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">H-1</th>
+                                <th>기본형</th>
+                                <th>.fChk</th>
+                                <td>
+                                    <label class="fChk"><input type="checkbox" class="fChk" /> 예시 1</label>
+                                    <label class="fChk"><input type="checkbox" class="fChk" /> 예시 2</label>
+                                    <label class="fChk"><input type="checkbox" class="fChk" /> 예시 3</label>
+                                    <label class="fChk"><input type="checkbox" class="fChk" /> 예시 4</label>
+                                    <label class="fChk"><input type="checkbox" class="fChk" /> 예시 5</label>
+                                    <ul class="txtInfo">
+                                        <li>ul.mForm.typeHor 로 사용하지 않도록 유의한다.</li>
+                                        <li>module.css 의 기본가이드인 fChk 를 사용한다.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">H-2</th>
+                                <th>추가 입력형</th>
+                                <th>.gLabel + span.gLabel</th>
+                                <td>
+                                    <ul class="mForm typeHor">
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer1" class="fChk" /> 예시</label>
+                                            <span class="gLabel"><input type="text" class="fText" style="width:150px;" value="예시" /></span>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer1" class="fChk" /> 예시) 금액</label>
+                                            <span class="gLabel"><input type="text" class="fText right" style="width:50px;" value="3,000" /> 원</span>
+                                        </li>
+                                        <li>
+                                            <label class="gLabel"><input type="radio" name="gVer1" class="fChk" /> 예시) 필수선택</label>
+                                            <span class="gLabel"><select><option>선택하세요</option></select></span>
+                                        </li>
+                                    </ul>
+                                    <p class="txtInfo">추가 입력형도 가능하지만, 사용성이 직관적이지 않으므로 권장하지 않는다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">H-3</th>
+                                <th>블럭형</th>
+                                <th>ul.mForm.typeHor</th>
+                                <td>
+                                    <ul class="mForm typeHor">
+                                        <li class="block"><label class="gLabel"><input type="checkbox" class="fChk" /> 예시) 전체선택</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 1</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 2</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 3</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 4</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 5</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 6</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 7</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 8</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 9</label></li>
+                                        <li class="block"><label class="gLabel"><input type="checkbox" class="fChk" /> 예시</label> <input type="text" class="fText" style="width:100px;" /></li>
+                                    </ul>
+                                    <p class="txtInfo">전체선택과 같이 한줄을 차지하는 항목이 필요할때 li에 .block을 추가한다. .addForm.gHor과 혼선되지 않도록 주의한다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">H-4</th>
+                                <th>확장형<br />(가로진열)</th>
+                                <th> ul.addForm.gHor</th>
+                                <td>
+                                    <div class="mForm">
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (가로진열)</label>
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (가로진열)</label>
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (가로진열)</label>
+                                        <ul class="addForm gHor">
+                                            <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 1</label></li>
+                                            <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 2</label></li>
+                                            <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 3</label></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">H-5</th>
+                                <th>확장형<br />(세로진열)</th>
+                                <th> ul.addForm.gVer</th>
+                                <td>
+                                    <div class="mForm">
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (세로진열)</label>
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (세로진열)</label>
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (세로진열)</label>
+                                        <ul class="addForm gVer">
+                                            <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 1</label></li>
+                                            <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 2</label></li>
+                                            <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예시 3</label></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">H-6</th>
+                                <th>확장형<br /> (단독진열)</th>
+                                <th>p.addForm</th>
+                                <td>
+                                    <div class="mForm">
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (단독진열)</label>
+                                        <label class="gLabel"><input type="radio" name="gHor2" class="fChk" /> 확장형 (단독진열)</label>
+                                        <p class="addForm"><input type="text" class="fText" style="width:100px" /><span class="txtInfo">예시) 설명문구</span></p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">H-7</th>
+                                <th>타이틀과 조합<br />(세로형)</span></th>
+                                <th>ul.mForm.typeHor.gIndent</th>
+                                <td>
+                                    <span class="icoDot"></span> 예시) 대표문구
+                                    <ul class="mForm typeHor gIndent">
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" checked="checked" /> 전체결제</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 신용카드</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 무통장</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 에스크로/전자보증</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 실시간 계좌이체</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 휴대폰결제</label></li>
+                                        <li><label class="gLabel"><input type="checkbox" class="fChk" /> 예치금결제</label></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mBoard type2 gMedium gTripleTop">
+                        <table border="1" summary="">
+                        <caption>제목</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">div.mForm > p.addForm</th>
+                                <td>
+                                    <div class="mForm">
+                                        <select>
+                                            <option>- 선택 -</option>
+                                        </select>
+                                        <p class="addForm">
+                                            <span class="gWidth w70"><span class="icoDot"></span> 예시 </span>
+                                            <input type="text" style="width:100px" class="fText"><span class="txtInfo">예시) 설명문구</span>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="tabs-3">
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>[mMultiple] 선택/이동</h2>
+                            <ul>
+                                <li>확장 버전은 <a href="/guide/module/form_textarea.html" target="_blank">/guide/module/form_textarea.html</a>에서 확인 가능</li>
+                                <li>확장 버전은 페이지 적용 시 가이드 재검토 필요(형태만 참고 할 것)</li>
+                                <li>.type1로 버튼영역의 높이값 제어 됨</li>
+                            </ul>
+                        </div>
+
+                        <h3>페이지에서 사용 될 경우</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">mMultiple 1-1</th>
+                                <td>
+                                    <div class="mMultiple">
+                                        <div class="gFlow">
+                                            <select class="fSelect fMultiple" multiple="multiple">
+                                                <option>내용01</option>
+                                                <option>내용02</option>
+                                                <option>내용03</option>
+                                                <option>내용04</option>
+                                                <option>내용05</option>
+                                                <option>내용06</option>
+                                                <option>내용07</option>
+                                            </select>
+                                        </div>
+                                        <div class="gMove">
+                                            <p>
+                                                <a href="#none" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></a>
+                                                <a href="#none" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></a>
+                                            </p>
+                                        </div>
+                                        <div class="gReverse">
+                                            <select class="fSelect fMultiple" multiple="multiple">
+                                                <option>내용01</option>
+                                                <option>내용02</option>
+                                                <option>내용03</option>
+                                                <option>내용04</option>
+                                                <option>내용05</option>
+                                                <option>내용06</option>
+                                                <option>내용07</option>
+                                                <option>내용08</option>
+                                                <option>내용09</option>
+                                                <option>내용10</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">mMultiple 1-2 <br />(class="typeHeader")</th>
+                                <td>
+                                    <div class="mMultiple typeHeader">
+                                        <div class="gFlow">
+                                            <div class="gCtrl">
+                                                <p class="check"><strong class="bullet">상품분류 표시항목 선택</strong></p>
+                                                <p class="edit">
+                                                    <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                    <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                </p>
+                                            </div>
+                                            <select class="fSelect fMultiple" multiple="multiple">
+                                                <option>내용01</option>
+                                                <option>내용02</option>
+                                                <option>내용03</option>
+                                                <option>내용04</option>
+                                                <option>내용05</option>
+                                                <option>내용06</option>
+                                                <option>내용07</option>
+                                            </select>
+                                        </div>
+                                        <div class="gMove">
+                                            <p>
+                                                <a href="#none" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></a>
+                                                <a href="#none" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></a>
+                                            </p>
+                                        </div>
+                                        <div class="gReverse">
+                                            <div class="gCtrl">
+                                                <p class="check">
+                                                    <label class="fChk"><input type="checkbox" /> 전체선택</label>
+                                                    <label class="fChk"><input type="checkbox" /> 전체해제</label>
+                                                </p>
+                                                <p class="edit">
+                                                    <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                    <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                </p>
+                                            </div>
+                                            <select class="fSelect fMultiple" multiple="multiple">
+                                                <option>내용01</option>
+                                                <option>내용02</option>
+                                                <option>내용03</option>
+                                                <option>내용04</option>
+                                                <option>내용05</option>
+                                                <option>내용06</option>
+                                                <option>내용07</option>
+                                                <option>내용08</option>
+                                                <option>내용09</option>
+                                                <option>내용10</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3>팝업에서 사용 될 경우</h3>
+                    <div id="popup">
+                        <div id="popWrap" style="padding:0;">
+                            <div class="section" style="width:600px;">
+                                <div class="mBoard type2">
+                                    <table border="1" summary="">
+                                    <caption>테이블 제목</caption>
+                                    <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">mMultiple 1-1</th>
+                                        <td>
+                                            <div class="mMultiple">
+                                                <div class="gFlow">
+                                                    <select class="fSelect fMultiple" multiple="multiple">
+                                                        <option>내용01</option>
+                                                        <option>내용02</option>
+                                                        <option>내용03</option>
+                                                        <option>내용04</option>
+                                                        <option>내용05</option>
+                                                        <option>내용06</option>
+                                                        <option>내용07</option>
+                                                    </select>
+                                                </div>
+                                                <div class="gMove">
+                                                    <p>
+                                                        <a href="#none" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></a>
+                                                        <a href="#none" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></a>
+                                                    </p>
+                                                </div>
+                                                <div class="gReverse">
+                                                    <select class="fSelect fMultiple" multiple="multiple">
+                                                        <option>내용01</option>
+                                                        <option>내용02</option>
+                                                        <option>내용03</option>
+                                                        <option>내용04</option>
+                                                        <option>내용05</option>
+                                                        <option>내용06</option>
+                                                        <option>내용07</option>
+                                                        <option>내용08</option>
+                                                        <option>내용09</option>
+                                                        <option>내용10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">mMultiple 1-2</th>
+                                        <td>
+                                            <div class="mMultiple typeHeader">
+                                                <div class="gFlow">
+                                                    <div class="gCtrl">
+                                                        <p class="check"><strong class="bullet">상품분류 표시항목 선택</strong></p>
+                                                        <p class="edit">
+                                                            <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                            <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                        </p>
+                                                    </div>
+                                                    <select class="fSelect fMultiple" multiple="multiple">
+                                                        <option>내용01</option>
+                                                        <option>내용02</option>
+                                                        <option>내용03</option>
+                                                        <option>내용04</option>
+                                                        <option>내용05</option>
+                                                        <option>내용06</option>
+                                                        <option>내용07</option>
+                                                    </select>
+                                                </div>
+                                                <div class="gMove">
+                                                    <p>
+                                                        <a href="#none" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></a>
+                                                        <a href="#none" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></a>
+                                                    </p>
+                                                </div>
+                                                <div class="gReverse">
+                                                    <div class="gCtrl">
+                                                        <p class="check">
+                                                            <label class="fChk"><input type="checkbox" /> 전체선택</label>
+                                                            <label class="fChk"><input type="checkbox" /> 전체해제</label>
+                                                        </p>
+                                                        <p class="edit">
+                                                            <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                            <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                        </p>
+                                                    </div>
+                                                    <select class="fSelect fMultiple" multiple="multiple">
+                                                        <option>내용01</option>
+                                                        <option>내용02</option>
+                                                        <option>내용03</option>
+                                                        <option>내용04</option>
+                                                        <option>내용05</option>
+                                                        <option>내용06</option>
+                                                        <option>내용07</option>
+                                                        <option>내용08</option>
+                                                        <option>내용09</option>
+                                                        <option>내용10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>[multipleArea &gt; mMultiple] mMultiple table 밖에 단독 사용 될 경우</h2>
+                        </div>
+
+                        <h3>페이지에서 사용 될 경우</h3>
+                        <div class="multipleArea">
+                            <div class="mMultiple typeHeader">
+                                <div class="gFlow">
+                                    <div class="gCtrl">
+                                        <p class="check"><strong class="bullet">상품분류 표시항목 선택</strong></p>
+                                        <p class="edit">
+                                            <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                            <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                        </p>
+                                    </div>
+                                    <select class="fSelect fMultiple" multiple="multiple">
+                                        <option>내용01</option>
+                                        <option>내용02</option>
+                                        <option>내용03</option>
+                                        <option>내용04</option>
+                                        <option>내용05</option>
+                                        <option>내용06</option>
+                                        <option>내용07</option>
+                                    </select>
+                                </div>
+                                <div class="gMove">
+                                    <p>
+                                        <a href="#none" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></a>
+                                        <a href="#none" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></a>
+                                    </p>
+                                </div>
+                                <div class="gReverse">
+                                    <div class="gCtrl">
+                                        <p class="check">
+                                            <label class="fChk"><input type="checkbox" /> 전체선택</label>
+                                            <label class="fChk"><input type="checkbox" /> 전체해제</label>
+                                        </p>
+                                        <p class="edit">
+                                            <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                            <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                        </p>
+                                    </div>
+                                    <select class="fSelect fMultiple" multiple="multiple">
+                                        <option>내용01</option>
+                                        <option>내용02</option>
+                                        <option>내용03</option>
+                                        <option>내용04</option>
+                                        <option>내용05</option>
+                                        <option>내용06</option>
+                                        <option>내용07</option>
+                                        <option>내용08</option>
+                                        <option>내용09</option>
+                                        <option>내용10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>팝업에서 사용 될 경우</h3>
+                    <div id="popup">
+                        <div id="popWrap" style="padding:0;">
+                            <div class="section">
+                                <div class="multipleArea">
+                                    <div class="mMultiple typeHeader">
+                                        <div class="gFlow">
+                                            <div class="gCtrl">
+                                                <p class="check"><strong class="bullet">상품분류 표시항목 선택</strong></p>
+                                                <p class="edit">
+                                                    <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                    <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                </p>
+                                            </div>
+                                            <select class="fSelect fMultiple" multiple="multiple">
+                                                <option>내용01</option>
+                                                <option>내용02</option>
+                                                <option>내용03</option>
+                                                <option>내용04</option>
+                                                <option>내용05</option>
+                                                <option>내용06</option>
+                                                <option>내용07</option>
+                                            </select>
+                                        </div>
+                                        <div class="gMove">
+                                            <p>
+                                                <a href="#none" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></a>
+                                                <a href="#none" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></a>
+                                            </p>
+                                        </div>
+                                        <div class="gReverse">
+                                            <div class="gCtrl">
+                                                <p class="check">
+                                                    <label class="fChk"><input type="checkbox" /> 전체선택</label>
+                                                    <label class="fChk"><input type="checkbox" /> 전체해제</label>
+                                                </p>
+                                                <p class="edit">
+                                                    <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                    <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                </p>
+                                            </div>
+                                            <select class="fSelect fMultiple" multiple="multiple">
+                                                <option>내용01</option>
+                                                <option>내용02</option>
+                                                <option>내용03</option>
+                                                <option>내용04</option>
+                                                <option>내용05</option>
+                                                <option>내용06</option>
+                                                <option>내용07</option>
+                                                <option>내용08</option>
+                                                <option>내용09</option>
+                                                <option>내용10</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>[mMultiSelect] 멀티셀렉트</h2>
+                            <ul>
+                                <li>selectbox multiple대신 ul로 코딩 시 사용</li>
+                                <li>gWidth, gHeight로 ul의 width,height조정 가능. (불필요시 삽입하지 않음)</li>
+                            </ul>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">멀티셀렉트</th>
+                                <td>
+                                    <ul class="mMultiSelect gWidth1">
+                                        <li class="selected"><strong>index.html index.html index.html index.html index.html index.html index.html index.html index.html index.html</strong></li>
+                                        <li><strong>index.html</strong></li>
+                                        <li><strong>index.html</strong></li>
+                                        <li><strong>index.html</strong></li>
+                                        <li><strong>index.html</strong></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">멀티셀렉트<br />: 삭제기능 있을 경우<br />(+gFunction)</th>
+                                <td>
+                                    <ul class="mMultiSelect gFunction gWidth1">
+                                        <li class="selected"><strong>index.html index.html index.html index.html index.html index.html index.html index.html index.html index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                        <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                        <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                        <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                        <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">멀티셀렉트 활용<br />(+mMultiple)</th>
+                                <td>
+
+                                    <div class="mMultiple typeHeader">
+                                        <div class="gFlow">
+                                            <div class="gCtrl">
+                                                <p class="check"><strong class="bullet">상품분류 표시항목 선택</strong></p>
+                                                <p class="edit">
+                                                    <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                    <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                </p>
+                                            </div>
+                                            <ul class="mMultiSelect">
+                                                <li class="selected"><strong>index.html index.html index.html index.html index.html index.html index.html</strong></li>
+                                                <li><strong>index.html</strong></li>
+                                                <li><strong>index.html</strong></li>
+                                                <li><strong>index.html</strong></li>
+                                                <li><strong>index.html</strong></li>
+                                                <li><strong>index.html</strong></li>
+                                                <li><strong>index.html</strong></li>
+                                                <li><strong>index.html</strong></li>
+                                            </ul>
+                                        </div>
+                                        <div class="gMove">
+                                            <p>
+                                                <a href="#none" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></a>
+                                                <a href="#none" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></a>
+                                            </p>
+                                        </div>
+                                        <div class="gReverse">
+                                            <div class="gCtrl">
+                                                <p class="check">
+                                                    <label class="fChk"><input type="checkbox" /> 전체선택</label>
+                                                    <label class="fChk"><input type="checkbox" /> 전체해제</label>
+                                                </p>
+                                                <p class="edit">
+                                                    <a href="#none" class="btnMove icoPrev" ><span>이전</span></a>
+                                                    <a href="#none" class="btnMove icoNext"><span>다음</span></a>
+                                                </p>
+                                            </div>
+                                            <ul class="mMultiSelect gFunction">
+                                                <li class="selected"><strong>index.html index.html index.html index.html index.html index.html index.html index.html index.html index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                                <li><strong>index.html</strong><a href="#none" class="btnIcon icoDel"><span>삭제</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tabs-4">
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>파일첨부</h2>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">파일첨부 1-1</th>
+                                <td><input type="file" class="fFile" /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부 1-2</th>
+                                <td>
+                                    <div class="gSingle">
+                                        <label class="fChk"><input type="radio" checked="checked" /> 표시함</label>
+                                        <label class="fChk"><input type="radio" /> 표시안함</label>
+                                    </div>
+                                    <input type="file" class="fFile" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부 1-3</th>
+                                <td>
+                                    <div class="gSingle">
+                                        <input type="file" class="fFile" />
+                                        <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                    </div>
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods.jpg" alt="" /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부 1-4</th>
+                                <td>
+                                    <div class="gSingle">
+                                        <input type="file" class="fFile" />
+                                        <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                        <p class="txtInfo">파일에 관련된 긴 보조설명 (파일에 관련된 긴 보조 설명)</p>
+                                    </div>
+                                    <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods.jpg" alt="" /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부 1-5</th>
+                                <td>
+                                    <div class="gSingle">
+                                        <input type="file" value="" class="fFile" />
+                                        <a href="#none" class="btnEm"><span><em class="icoMore"></em> 등록하기</span></a>
+                                    </div>
+                                    <div class="gSingle">
+                                        <input type="file" class="fFile" />
+                                        <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                    </div>
+
+                                    <input type="file" class="fFile" />
+                                    <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부 1-6 <br />(class="gFormTxt") <br />(class="gFormImg")</th>
+                                <td>
+                                    <label class="fChk"><input type="radio" name="radio100" checked="checked" /> 텍스트</label>
+                                    <label class="fChk"><input type="radio" name="radio100" /> 이미지</label>
+
+                                    <div class="gFormTxt">
+                                        <input type="text" class="fText" style="width:490px;" />
+                                        <p class="txtInfo">[0 / 00 Byte] 한글 00자 또는 영문 00자 이내 입력</p>
+                                    </div>
+                                    <div class="gFormImg">
+                                        <input type="file" class="fFile" />
+                                        <a href="#none" class="btnEm"><span><em class="icoDel"></em> 삭제</span></a>
+                                        <p class="txtInfo">이벤트 제목 및 로고에 적용할 이미지를 첨부합니다.</p>
+                                        <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_270x80.jpg" width="270" height="80" alt="" /></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부 1-7 <br />(class="gFrame")</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li class="multi">
+                                            <label class="fChk"><input type="radio" name="radio14" checked="checked" /> 사용함</label>
+                                            <ul class="addSelect">
+                                                <li class="gFrame">
+                                                    <span class="gWidth type4 bullet">기본형태</span>
+                                                    <div class="frameSelect">
+                                                        <input type="file" class="fFile" />
+                                                        <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods3.jpg" width="194" height="194" alt="" /></span>
+                                                    </div>
+                                                </li>
+                                                <li class="gFrame">
+                                                    <span class="gWidth type4 bullet">마우스 오버시 형태</span>
+                                                    <div class="frameSelect">
+                                                        <input type="file" class="fFile" />
+                                                        <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods3.jpg" width="194" height="194" alt="" /></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio14" /> 기본 이미지 사용</label>
+                                            <p class="addSelect"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods2.jpg" width="50" height="50" alt="" /></p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부 1-8 <br />(class="gFrameSelect")</th>
+                                <td>
+                                    <ul class="gFrameSelect">
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio15" checked="checked" /> 디자인1</label>
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods3.jpg" width="194" height="194"  alt="" /></span>
+                                        </li>
+                                        <li>
+                                            <label class="fChk"><input type="radio" name="radio15" /> 디자인2</label>
+                                            <span class="frame"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@goods3.jpg" width="194" height="194"  alt="" /></span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>Favicon</h2>
+                            <ul>
+                                <li>해외몰, 디자인관리에서만 사용 : 개별 css에 들어있음</li>
+                                <li>해외몰 : <a href="http://fe.cafe24.com/global/ECGLOBAL-1039/setting/general_general.html">http://fe.cafe24.com/global/ECGLOBAL-1039/setting/general_general.html</a></li>
+                                <li>디자인관리 : <a href="http://fe.cafe24test.com/smartAdmin/design/smart/function/etc_favicon.html">http://fe.cafe24test.com/smartAdmin/design/smart/function/etc_favicon.html</a></li>
+                                <li>&lt;div class="mFavicon"&gt;와 같은 구조(<strong>BLOCK LEVEL</strong>)로 같은라인에 다른 엘리먼트를 넣을수 없음.</li>
+                                <li>frame + fFile + btnEm 조합</li>
+                                <li>frame에 삽입된 이미지 사이즈 고정 : <strong>16*16</strong> </li>
+                            </ul>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">파비콘 아이콘 파일</th>
+                                <td>
+                                    <div class="mFavicon">
+                                        <span class="frame"><img src="http://static.naver.net/www/up/2012/1010/mat_151758487c.jpg" width="16" height="16" alt="파비콘" /></span>
+                                        <input type="file" class="fFile" />
+                                        <a class="btnEm" href="#none"><span><em class="icoDel"></em> 삭제</span></a>
+                                        <p class="txtInfo">파비콘은 16px*16px 크기의 이미지를 제작하여 ico 확장자로 등록해 주세요.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tabs-5">
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>Placeholder</h2>
+                            <ul>
+                                <li>&lt;span&gt;Text&lt;/span&gt;와 &lt;input&gt;, &lt;textarea&gt;를 &lt;label class="<strong>ePlaceholder</strong>"&gt;로 묶어줍니다.</li>
+                                <li>&lt;input&gt;, &lt;textarea&gt;의 가로폭이 100%일 경우 &lt;label&gt;에 <strong>.typeFull</strong>을 추가합니다.</li>
+                                <li>&lt;span&gt;위치는 반드시 &lt;input&gt;, &lt;textarea&gt; 앞에 있어야 합니다.</li>
+                                <li>페이지 내에서 중복되는 &lt;input&gt;, &lt;textarea&gt;의 name 값이 있어서는 안됩니다. &lt;span&gt;의 <strong>id = label_ + name</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">SNS 사이트 계정</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <input type="text" value="http://www.facebook.com/아이디 입력" class="fText" style="width:250px;" />
+                                            <label class="ePlaceholder">
+                                                <span>비밀번호 입력</span>
+                                                <input type="password" name="facebook_password" title="페이스북 비밀번호 입력" class="fText" style="width:125px;" />
+                                            </label>
+                                            <a href="#none" class="btnEm"><span>등록하기</span></a>
+                                        </li>
+                                        <li>
+                                            <input type="text" value="http://twitter.com/아이디 입력" class="fText" style="width:250px;" />
+                                            <label class="ePlaceholder">
+                                                <span>비밀번호 입력</span>
+                                                <input type="password" name="twitter_password" title="트위터 비밀번호 입력" class="fText" style="width:125px;" />
+                                            </label>
+                                            <a href="#none" class="btnEm"><span>수정하기</span></a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">경품</th>
+                                <td>
+                                    <ul class="gSelectList">
+                                        <li>
+                                            <label class="ePlaceholder">
+                                                <span>경품 1</span>
+                                                <input type="text" name="gift1" class="fText" style="width:490px;" />
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="ePlaceholder">
+                                                <span>경품 2</span>
+                                                <input type="text" name="gift2" class="fText" style="width:490px;" />
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="ePlaceholder">
+                                                <span>경품 3</span>
+                                                <input type="text" name="gift3" class="fText" style="width:490px;" />
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="ePlaceholder">
+                                                <span>경품 4</span>
+                                                <input type="text" name="gift4" class="fText" style="width:490px;" />
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="ePlaceholder">
+                                                <span>경품 5</span>
+                                                <input type="text" name="gift5" class="fText" style="width:490px;" />
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">퍼가기 문구</th>
+                                <td>
+                                    <label class="ePlaceholder typeFull">
+                                        <span>SNS 사이트 연동 시 자동으로 적용되는 문구입니다. 미입력시 쇼핑몰 명, 이벤트 명, 이벤트 url 주소가 자동으로 입력됩니다.</span>
+                                        <textarea class="fTextarea" cols="20" rows="3" name="sns_sentence"></textarea>
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="mTitle">
+                            <h2>ColorPicker</h2>
+                            <ul>
+                                <li>colorpicker.js 연결시켜야 퍼블리싱페이지 확인가능.</li>
+                                <li>uitest.css 연결시켜야 퍼블리싱페이지 확인가능. 개발전달시 삭제 요청(12R에 같은 라이브러리 사용중임)</li>
+                                <li>.eColorPicker 추가</li>
+                            </ul>
+                        </div>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">컬러선택</th>
+                                <td>
+                                    <div class="mColorPicker eColorPicker">
+                                        <span class="selected" style="background-color:#ff0000"></span><input type="text" maxlength="7" readonly="readonly" value="#ff0000" class="fText" style="width:50px" />
+                                        <span class="selector">
+                                            <a href="#none">컬러선택</a>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tabs-6">
+                    <div class="section">
+                        <h3>IP추가</h3>
+
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">IP추가</th>
+                                <td>
+                                    <input type="text" class="fText" style="width:50px;" /> -
+                                    <input type="text" class="fText" style="width:50px;" /> -
+                                    <input type="text" class="fText" style="width:50px;" /> -
+                                    <input type="text" class="fText" style="width:50px;" />
+                                    <a href="#none" class="btnEm"><span><em class="icoMore"></em> IP추가</span></a>
+                                    <div class="gSingleTop">
+                                        <select class="fSelect fMultiple" multiple="multiple" size="5" style="width:600px;">
+                                        <option>1123.123.124.123</option>
+                                        </select>
+                                        <a href="#none" class="btnEm"><span><em class="icoDel"></em> 선택삭제</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>기능추가 및 삭제버튼 구성</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">기준추가/삭제 버튼</th>
+                                <td>
+                                    <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 이상 ~
+                                    <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 미만일 때, 배송료
+                                    <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 추가
+                                    <a href="#none" class="btnEm"><span><em class="icoMore"></em> 기준추가</span></a>
+
+                                    <div class="gDoubleTop">
+                                        <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 이상 ~
+                                        <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 미만일 때, 배송료
+                                        <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 추가
+                                        <a href="#none" class="btnEm"><span><em class="icoDel"></em> 기준삭제</span></a>
+                                    </div>
+                                    <div class="gDoubleTop">
+                                        <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 이상 ~
+                                        <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 미만일 때, 배송료
+                                        <input type="text" class="fText right" value="10,000" style="width:90px;" /> 원 추가
+                                        <a href="#none" class="btnEm"><span><em class="icoDel"></em> 기준삭제</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="mButton">
+                            <p><a href="#none" class="btnGeneral"><span>검색</span></a></p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>분류 설정</h3>
+                        <div class="mBoard type2">
+                            <table border="1" summary="">
+                            <caption>테이블 제목</caption>
+                            <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">분류 설정</th>
+                                <td class="gBtn">
+                                    <select>
+                                    <option>대분류 선택</option>
+                                    </select>
+                                    <select>
+                                    <option>중분류 선택</option>
+                                    </select>
+                                    <select>
+                                    <option>소분류 선택</option>
+                                    </select>
+                                    <select>
+                                    <option>세분류 선택</option>
+                                    </select>
+
+                                    <div class="gSingle gTripleTop">
+                                        <label class="fChk"><input type="radio" name="radio1" checked="checked" /> 일반상품</label>
+                                        <label class="fChk"><input type="radio" name="radio1" /> 추천상품</label>
+                                        <label class="fChk"><input type="radio" name="radio1" /> 신상품</label>
+                                        <a href="#none" class="btnEm"><span><em class="icoMore"></em> 카테고리진열 추가</span></a>
+                                    </div>
+
+                                    <select class="fSelect fMultiple" multiple="multiple" size="6">
+                                    <option>대분류1 &gt; 중분류 1-1 &gt; 소분류 1-1-1 [일반상품] </option>
+                                    <option>대분류2 &gt; 중분류 1-1 &gt; 소분류 1-1-1 &gt; 세분류 1 [추천상품] </option>
+                                    <option>대분류2 &gt; 중분류 1-1 &gt; 소분류 1-1-1 &gt; 세분류 1 [추천상품] </option>
+                                    <option>대분류2 &gt; 중분류 1-1 &gt; 소분류 1-1-1 &gt; 세분류 1 [추천상품] </option>
+                                    <option>대분류2 &gt; 중분류 1-1 &gt; 소분류 1-1-1 &gt; 세분류 1 [추천상품] </option>
+                                    <option>대분류2 &gt; 중분류 1-1 &gt; 소분류 1-1-1 &gt; 세분류 1 [추천상품] </option>
+                                    <option>대분류2 &gt; 중분류 1-1 &gt; 소분류 1-1-1 &gt; 세분류 1 [추천상품] </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="mButton">
+                            <p><a href="#none" class="btnGeneral"><span>검색</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

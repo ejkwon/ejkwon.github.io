@@ -1,0 +1,148 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>배송대행 존</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">창고운영</a></li>
+            <li class="now" title="현재 페이지">배송대행 존</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>배송대행 존 검색</caption>
+        <tbody>
+            <tr>
+                <th scope="row">창고</th>
+                <td>
+                    <select class="fSelect" style="width:140px;">
+                        <option>전체</option>
+                        <option>A창고</option>
+                        <option>B창고</option>
+                        <option>C창고</option>
+                        <option>D창고</option>
+                        <option>E창고</option>
+                    </select>
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>배송대행 존 목록</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 <strong>40</strong>건] 검색결과 <strong>15</strong>건</p>
+        </div>
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="" class="eChkTr">
+        <caption>배송대행 존 목록</caption>
+        <colgroup>
+            <col class="chk" />
+            <col style="width:50px;" />
+            <col style="width:300px;" />
+            <col style="width:auto;" />
+            <col style="width:300px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                <th scope="col">No</th>
+                <th scope="col"><strong class="array descend">배송대행 존<button type="button">내림차순 정렬</button></strong></th>
+                <!--<th scope="col"><strong class="array ascend">배송대행 존<button type="button">오름차순 정렬</button></strong></th>-->
+                <th scope="col"><strong class="array"><span>창고</span><button type="button">정렬선택</button></strong></th>
+                <!--<th scope="col"><strong class="array ascending">창고<button type="button">정렬선택</button></strong></th>-->
+                <th scope="col"><strong class="array"><span>위치코드 수</span><button type="button">정렬선택</button></strong></th>
+                <!--<th scope="col"><strong class="array ascending">위치코드 수<button type="button">정렬선택</button></strong></th>-->
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>2</td>
+                <td><a href="#zoneInfoLayer" class="txtLink eModal">AC1</a></td>
+                <td class="left">A상점</td>
+                <td class="right">0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>1</td>
+                <td><a href="#zoneInfoLayer" class="txtLink eModal">AC0</a></td>
+                <td class="left">B상점</td>
+                <td class="right">51</td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="5">검색결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<div class="mHelp typeInfo">
+    <h2>배송대행 존 안내</h2>
+    <div class="content">
+        <ul>
+            <li>배송대행 존은 3PL이 아닌 배송대행/크로스도킹 전용으로 설정된 위치코드의 존입니다.</li>
+            <li>창고별로 설정된 배송대행 존들은 해당 창고를 이용하는 모든 상점에서 공통으로 사용할 수 있습니다.</li>
+        </ul>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

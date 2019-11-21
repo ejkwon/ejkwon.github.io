@@ -1,0 +1,181 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/head_popup.html'); ?>
+
+<body id="popup" size="1147, 1134"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+    <section class="mLayer">
+        <header class="header">
+            <h1 class="title">기본 워터마크 템플릿 선택</h1>
+        </header>
+        <div class="wrap">
+            <div class="mTitle">
+                <h2>템플릿 선택</h2>
+                <p class="txtDesc">워터마크 적용대상 : 제품별 적용 <em class="txtEm">4</em>개</p>
+                <a href="#none" class="btnConfirm">템플릿 만들기</a>
+            </div>
+            <ul class="mTemplate"><!-- 참고: 목록 갯수가 1~3개까지는 mTemplate 에 grid$숫자 클래스를 추가한다. (예시 class="mTemplate gird3") -->
+                <li>
+                    <div class="box">
+                        <div class="head">
+                            <label class="gLabel selected"><input type="radio" class="fRadio eClick" checked><span class="fLabel">일반형</span></label>
+                            <div class="thumb">
+                                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.gif" class="img" alt="">
+                            </div>
+                        </div>
+                        <ul class="body">
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">할인율</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">클릭유도 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox" checked><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">투명 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox" checked><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button">
+                            <a href="#none" class="btnHoverIcon"><i class="icoEdit"></i><span class="txtHover">수정</span></a>
+                            <a href="#none" class="btnHoverIcon"><i class="icoDiscard"></i><span class="txtHover">삭제</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="head">
+                            <label class="gLabel"><input type="radio" class="fRadio eClick"><span class="fLabel">할인형</span></label>
+                            <div class="thumb">
+                                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.gif" class="img" alt="">
+                            </div>
+                        </div>
+                        <ul class="body">
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">할인율</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">투명 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button">
+                            <a href="#none" class="btnHoverIcon"><i class="icoEdit"></i><span class="txtHover">수정</span></a>
+                            <a href="#none" class="btnHoverIcon"><i class="icoDiscard"></i><span class="txtHover">삭제</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="head">
+                            <label class="gLabel"><input type="radio" class="fRadio eClick"><span class="fLabel">HOT</span></label>
+                            <div class="thumb">
+                                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.gif" class="img" alt="">
+                            </div>
+                        </div>
+                        <ul class="body">
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">할인율</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">투명 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button">
+                            <a href="#none" class="btnHoverIcon"><i class="icoEdit"></i><span class="txtHover">수정</span></a>
+                            <a href="#none" class="btnHoverIcon"><i class="icoDiscard"></i><span class="txtHover">삭제</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="head">
+                            <label class="gLabel"><input type="radio" class="fRadio eClick"><span class="fLabel">베스트</span></label>
+                            <div class="thumb">
+                                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.gif" class="img" alt="">
+                            </div>
+                        </div>
+                        <ul class="body">
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">할인율</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">클릭유도 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">투명 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button">
+                            <a href="#none" class="btnHoverIcon"><i class="icoEdit"></i><span class="txtHover">수정</span></a>
+                            <a href="#none" class="btnHoverIcon"><i class="icoDiscard"></i><span class="txtHover">삭제</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="head">
+                            <label class="gLabel"><input type="radio" class="fRadio eClick"><span class="fLabel">일반형</span></label>
+                            <div class="thumb">
+                                <img src="//img.cafe24.com/img/cmc_facebook/@img_thumb.gif" class="img" alt="">
+                            </div>
+                        </div>
+                        <ul class="body">
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">할인율</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">클릭유도 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gridSet">
+                                    <div class="grid">투명 이미지</div>
+                                    <div class="grid right equal"><label class="btnToggle"><input type="checkbox"><span class="fLabel"></span></label></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button">
+                            <a href="#none" class="btnHoverIcon"><i class="icoEdit"></i><span class="txtHover">수정</span></a>
+                            <a href="#none" class="btnHoverIcon"><i class="icoDiscard"></i><span class="txtHover">삭제</span></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p class="mEmpty" style="padding:230px 20px">기본 템플릿이 없습니다.<br>템플릿을 생성 후에 기본 템플릿을 선택해주세요.<br><a href="#none" class="btnConfirm medium gBlankM">템플릿 만들기</a></p>
+
+        </div>
+        <footer class="footer">
+            <a href="#none" class="btnNormal medium">닫기</a>
+            <a href="#none" class="btnSubmit medium">기본 워터마크 적용</a>
+        </footer>
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/footer_popup.html'); ?>

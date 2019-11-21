@@ -1,0 +1,164 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>상품엑셀수정 결과</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">상품</a></li>
+            <li><a href="#none">상품엑셀수정</a></li>
+            <li class="now" title="현재 페이지">상품엑셀수정 결과</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>엑셀업로드 내역</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>엑셀업로드 내역</caption>
+        <tbody>
+            <tr>
+                <th scope="row">구분</th>
+                <td>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 전체</label>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 성공</label>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked" /> 실패</label>
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>엑셀등록결과</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 <strong>0</strong>개] 성공 <strong>0</strong>개/ 실패 <strong>0</strong>개</p>
+        </div>
+        <div class="gRight">
+            <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>엑셀등록결과</caption>
+        <colgroup>
+            <col style="width:50px;" />
+            <col style="width:120px" />
+            <col style="width:200px;" />
+            <col style="width:80px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col"><strong class="array ascend">엑셀 행번호<button type="button">오름차순 정렬</button></strong></th>
+                <!--<th scope="col"><strong class="array descend">엑셀 행번호<button type="button">내림차순 정렬</button></strong></th>-->
+                <th scope="col">상품명/품목명</th>
+                <th scope="col">구분</th>
+                <th scope="col">결과</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td>1</td>
+                <td class="right">5</td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p><a href="#none">원피스</a></p>
+                        <ul class="etc">
+                            <li>흰색/M</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>실패</td>
+                <td class="left">존재하지 않는 공급사명</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="right">9</td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p><a href="#none">원피스</a></p>
+                        <ul class="etc">
+                            <li>흰색/L</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>실패</td>
+                <td class="left">판매가 숫자 아님</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="right">10</td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p><a href="#none">스키니롤업진</a></p>
+                        <ul class="etc">
+                            <li>생지/30/로우웨이스트</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>실패</td>
+                <td class="left">상품명 입력형식 오류</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="right">12</td>
+                <td class="left">
+                    <div class="gGoods">
+                        <p><a href="#none">스키니롤업진</a></p>
+                        <ul class="etc">
+                            <li>생지/29/로우웨이스트</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>성공</td>
+                <td class="left"></td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="5">검색결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnEm"><span>상품목록 보기</span></a>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

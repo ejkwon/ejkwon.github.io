@@ -1,0 +1,311 @@
+<?php require_once('../../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>배송정보 관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li><a href="#none">해외배송현황</a></li>
+                        <li class="now" title="현재 페이지">배송정보 관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>출고내역 검색</h2>
+                </div>
+
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>출고내역 검색</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">기간</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>출고완료일</option>
+                                    <option>공항상차</option>
+                                    <option>공항하차</option>
+                                    <option>반품진행</option>
+                                    <option>반품완료</option>
+                                    <option>통관불가</option>
+                                    <option>폐기처분</option>
+                                    <option>배송기타</option>
+                                    <option>CS기타</option>
+                                </select>
+                                <a href="#none" class="btnDate"><span>오늘</span></a>
+                                <a href="#none" class="btnDate"><span>3일</span></a>
+                                <a href="#none" class="btnDate"><span>7일</span></a>
+                                <a href="#none" class="btnDate"><span>1개월</span></a>
+                                <a href="#none" class="btnDate"><span>3개월</span></a>
+                                <a href="#none" class="btnDate"><span>1년</span></a>
+                                <input type="text" value="2013-04-03" class="fText gDate" />
+                                <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                                ~
+                                <input type="text" value="2013-04-03" class="fText gDate" />
+                                <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상점</th>
+                            <td>
+                                <select class="chosen-select" multiple="multiple">
+                                    <option>MIXXMIX</option>
+                                    <option>zemmaworld-카페24</option>
+                                    <option>DABAGIRL-티몰유니버스</option>
+                                    <option>MIXXMIX-카페24(영문)</option>
+                                    <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                                    <option>MIXXMIX</option>
+                                    <option>zemmaworld-카페24</option>
+                                    <option>DABAGIRL-티몰유니버스</option>
+                                    <option>MIXXMIX-카페24(영문)</option>
+                                    <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배송사</th>
+                            <td>
+                                <select class="chosen-select" multiple="multiple">
+                                    <option>DHL</option>
+                                    <option>WEX24(SMART POST)</option>
+                                    <option>사가와(B2B2C)</option>
+                                    <option>CJ차이냐오</option>
+                                    <option>범한(royalmail-영국)</option>
+                                    <option>한진Fedex(Home delivery)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">검색어</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>송장번호</option>
+                                    <option>FB송장번호</option>
+                                    <option>출고지시번호</option>
+                                    <option>합포번호</option>
+                                </select>
+                                <input type="text" class="fText" style="width:300px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최종 배송상태</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" class="fChk" /> 전체</label>
+                                <label class="gLabel"><input type="radio" class="fChk" /> 선택</label>
+                                <span class="gLabel">
+                                    <select class="fSelect">
+                                        <option>- 최종 배송상태 선택-</option>
+                                        <option>송장번호</option>
+                                        <option>공항상차</option>
+                                        <option>공항하차</option>
+                                        <option>반품진행</option>
+                                        <option>반품완료</option>
+                                        <option>통관불가</option>
+                                        <option>폐기처분</option>
+                                        <option>배송기타</option>
+                                        <option>CS기타</option>
+                                    </select>
+                                </span>
+                                <label class="gLabel"><input type="checkbox" class="fChk" /> 기타 메시지 등록</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩 보기</option>
+                            <option>50개씩 보기</option>
+                            <option>100개씩 보기</option>
+                            <option>300개씩 보기</option>
+                            <option>500개씩 보기</option>
+                            <option>1000개씩 보기</option>
+                            <option>2000개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <a href="#layerDeliveryStatus" class="btnNormal eLayerClick"><span>배송상태 추가</span></a>
+                        <a href="#layerDeliveryStatus" class="btnNormal eLayerClick"><span>배송상태 삭제</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+
+                <div class="mBoardArea typeDhub">
+                    <div class="mBoard gFixed gCell" style="width:600px;">
+                        <table border="1" summary="" class="eChkTr">
+                        <caption>목록</caption>
+                        <colgroup>
+                            <col class="chk" />
+                            <col style="width:37px;" />
+                            <col style="width:70px" />
+                            <col style="width:75px" />
+                            <col style="width:110px;" />
+                            <col style="width:85px;" />
+                            <col style="width:55px;" />
+                            <col style="width:75px;" />
+                            <col style="width:60px;" />
+                            <col style="width:auto;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                                <th scope="col">No</th>
+                                <th scope="col">상점</th>
+                                <th scope="col">출고<br />완료일</th>
+                                <th scope="col">출고지시번호<br />/ 합포번호</th>
+                                <th scope="col">택배사</th>
+                                <th scope="col">배송<br />국가</th>
+                                <th scope="col">FB<br />송장번호</th>
+                                <th scope="col">송장<br />번호</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>1</td>
+                                <td>66GILS</td>
+                                <td>2017-00-00 00:00</td>
+                                <td>20140315-31AA123456<br />/ 20140315-88888</td>
+                                <td>린코스<br />(린코스DHL)</td>
+                                <td>미국</td>
+                                <td><a href="#none" class="txtLink" target="_blank" title="새창 열림">FB170223015200002</a></td>
+                                <td>SR5879900482JP</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                                <td>2</td>
+                                <td>DAGAGIRL</td>
+                                <td>2017-00-00 00:00</td>
+                                <td>20140315-31AA123456<br />/ 20140315-88888</td>
+                                <td>린코스<br />(린코스DHL)</td>
+                                <td>미국</td>
+                                <td><a href="#none" class="txtLink" target="_blank" title="새창 열림">FB170223015200002</a></td>
+                                <td>SR5879900482JP</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="mBoard gScroll gCell" style="width:-moz-calc(100% - 600px); width:-webkit-calc(100% - 600px); width:calc(100% - 600px); min-width:420px;">
+                        <table border="1" summary="">
+                        <caption>목록</caption>
+                        <colgroup>
+                            <col style="width:75px;" />
+                            <col style="width:75px;" />
+                            <col style="width:75px;" />
+                            <col style="width:75px;" />
+                            <col style="width:75px;" />
+                            <col style="width:75px;" />
+                            <col style="width:75px;" />
+                            <col style="width:75px;" />
+                            <col style="width:90px;"/>
+                        </colgroup>
+                            <!--
+                                ※ 참고: 소팅 아이콘 가이드 : http://fe.cafe24.com/suio/include/layout.php?MODULE=board_col_list
+                            -->
+                        <thead>
+                            <tr>
+                                <th scope="col">공항상차<br />상태</th>
+                                <th scope="col">공항하차<br />상태</th>
+                                <th scope="col">반품진행<br />상태</th>
+                                <th scope="col">반품완료<br />상태</th>
+                                <th scope="col">통관불가<br />상태</th>
+                                <th scope="col">폐기처분<br />상태</th>
+                                <th scope="col">배송기타</th>
+                                <th scope="col">CS기타</th>
+                                <th scope="col">기타 메시지</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td><a href="#none" title="새창 열림" target="_blank" class="txtLink">메모(10)</a></td>
+                            </tr>
+                            <tr>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td>2017-04-18 00:00</td>
+                                <td><a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>메모<em class="icoLink"></em></span></a></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <p class="empty">검색결과가 없습니다.</p>
+                </div>
+
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <a href="#layerDeliveryStatus" class="btnNormal eLayerClick"><span>배송상태 추가</span></a>
+                        <a href="#layerDeliveryStatus" class="btnNormal eLayerClick"><span>배송상태 삭제</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><strong title="현재페이지">1</strong></li>
+                        <li><a href="#none">2</a></li>
+                        <li><a href="#none">3</a></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+            <script src="/js/scm/dhub/chosen.jquery.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                var config = {
+                  '.chosen-select'           : {width:"100%"},
+                  '.chosen-select-deselect'  : {allow_single_deselect:true},
+                  '.chosen-select-no-single' : {disable_search_threshold:10},
+                  '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+                  '.chosen-select-width'     : {width:"95%"}
+                }
+                for (var selector in config) {
+                  $(selector).chosen(config[selector]);
+                }
+            </script>
+
+<?php require_once('../../include/footer.html'); ?>

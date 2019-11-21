@@ -1,0 +1,373 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>배송사 정보</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">창고운영</a></li>
+            <li><a href="#none">배송사</a></li>
+            <li class="now" title="현재 페이지">배송사 정보</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>기본정보</h2>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>기본정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">배송구분</th>
+                <td>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked" /> 국내배송</label>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 해외배송</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송사명 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" class="fText" style="width:170px;" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송사URL <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" class="fText" style="width:340px;" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송사단가</th>
+                <td>
+                    <input type="text" class="fText" style="width:170px;" value="" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송사 기준통화</th>
+                <td>
+                    <select class="fSelect chosen-select2">
+                        <option>- 기준통화 선택 -</option>
+                        <option>미국(USD)</option>
+                        <option>일본(JPY)</option>
+                        <option>중국(CNY)</option>
+                        <option>대만(TWD)</option>
+                        <option>유로(EUR)</option>
+                        <option>홍콩(HKD)</option>
+                        <option>싱가포르(SGD)</option>
+                        <option>호주(AUD)</option>
+                        <option>영국(GBP)</option>
+                        <option>캐나다(CAD)</option>
+                        <option>아랍에미리트연홥(AED)</option>
+                        <option>오스트리아(ATS)</option>
+                        <option>방글라데시(BDT)</option>
+                        <option>벨기에(BEF)</option>
+                        <option>바레인(BHD)</option>
+                        <option>브루나이(BND)</option>
+                        <option>브라질(BRL)</option>
+                        <option>스위스(CHF)</option>
+                        <option>칠레(CLP)</option>
+                        <option>체코공화국(CZK)</option>
+                        <option>독일(DEM)</option>
+                        <option>덴마크(DKK)</option>
+                        <option>이집트(EGP)</option>
+                        <option>스페인(ESP)</option>
+                        <option>핀란드(FIM)</option>
+                        <option>피지(FJD)</option>
+                        <option>프랑스(FRF)</option>
+                        <option>헝가리(HUF)</option>
+                        <option>인도네시아(IDR)</option>
+                        <option>이스라엘(ILS)</option>
+                        <option>인도(INR)</option>
+                        <option>이탈리아(ITL)</option>
+                        <option>요르단(JOD)</option>
+                        <option>케냐(KES)</option>
+                        <option>캄보디아(KHR)</option>
+                        <option>쿠웨이트(KWD)</option>
+                        <option>카자흐(KZT)</option>
+                        <option>몽골(MNT)</option>
+                        <option>마카오(MOP)</option>
+                        <option>멕시코(MXN)</option>
+                        <option>말레이지아(MYR)</option>
+                        <option>네덜란드(NLG)</option>
+                        <option>노르웨이(NOK)</option>
+                        <option>네팔(NPR)</option>
+                        <option>뉴질랜드(NZD)</option>
+                        <option>오만(OMR)</option>
+                        <option>필리핀(PHP)</option>
+                        <option>파키스탄(PKR)</option>
+                        <option>폴란드(PLR)</option>
+                        <option>카타르(QAR)</option>
+                        <option>러시아 연방(RUB)</option>
+                        <option>사우디아라비아(SAR)</option>
+                        <option>스웨덴(SEK)</option>
+                        <option>슬로바키아(SKK)</option>
+                        <option>태국(THB)</option>
+                        <option>터키(TRY)</option>
+                        <option>베트남(VND)</option>
+                        <option>남아프리카공화국(ZAR)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">부피무게 기준정보</th>
+                <td>
+                    <input type="text" class="fText" style="width:170px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">서비스상태</th>
+                <td>
+                    <select class="fSelect">
+                        <option>대기</option>
+                        <option>이용중</option>
+                        <option>이용중지</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">송장번호 입력방법</th>
+                <td>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" checked="checked" /> 연동안함</label>
+                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 연동함</label>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>담당자정보</h2>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>담당자정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">담당자명 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <input type="text" name="name1" class="fText" style="width:120px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">휴대전화 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <select class="fSelect">
+                        <option>010</option>
+                        <option>011</option>
+                        <option>016</option>
+                        <option>017</option>
+                        <option>108</option>
+                        <option>109</option>
+                    </select> -
+                    <input type="text" class="fText" style="width:40px;"/> -
+                    <input type="text" class="fText" style="width:40px;"/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">일반전화</th>
+                <td>
+                    <select class="fSelect">
+                        <option>02</option>
+                        <option>051</option>
+                        <option>053</option>
+                        <option>032</option>
+                        <option>062</option>
+                        <option>042</option>
+                        <option>052</option>
+                        <option>031</option>
+                        <option>033</option>
+                        <option>043</option>
+                        <option>041</option>
+                        <option>063</option>
+                        <option>061</option>
+                        <option>054</option>
+                        <option>055</option>
+                        <option>064</option>
+                    </select> -
+                    <input type="text" class="fText" style="width:40px;"/> -
+                    <input type="text" class="fText" style="width:40px;"/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">팩스</th>
+                <td>
+                    <select class="fSelect">
+                        <option>02</option>
+                        <option>051</option>
+                        <option>053</option>
+                        <option>032</option>
+                        <option>062</option>
+                        <option>042</option>
+                        <option>052</option>
+                        <option>031</option>
+                        <option>033</option>
+                        <option>043</option>
+                        <option>041</option>
+                        <option>063</option>
+                        <option>061</option>
+                        <option>054</option>
+                        <option>055</option>
+                        <option>064</option>
+                    </select> -
+                    <input type="text" class="fText" style="width:40px;"/> -
+                    <input type="text" class="fText" style="width:40px;"/>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">비고</th>
+                <td>
+                    <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>정산정보</h2>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>정산정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">사업자등록번호</th>
+                <td>
+                    <input type="text" name="name1" class="fText" style="width:170px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">계좌번호</th>
+                <td>
+                    <input type="text" name="name1" class="fText" style="width:170px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">예금주</th>
+                <td>
+                    <input type="text" name="name1" class="fText" style="width:170px;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">정산주기</th>
+                <td>
+                    <select class="fSelect">
+                        <option>월별</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>해외 배송정보</h2>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>해외 배송정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">배송사 배송서비스 그룹 <strong class="icoRequired">필수</strong></th>
+                <td>
+                    <select class="fSelect" style="width:280px;">
+                        <option>- 배송사 배송서비스 그룹을 선택 하세요. -</option>
+                        <option>한진</option>
+                        <option>범한</option>
+                        <option>린코스</option>
+                        <option>사가와</option>
+                        <option>EMS</option>
+                    </select>
+                    <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>배송사 배송 서비스 그룹 관리<em class="icoLink"></em></span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">패스박스 배송서비스 그룹</th>
+                <td>
+                    <select class="fSelect" style="width:280px;">
+                        <option>- 패스트박스 배송 서비스 -</option>
+                        <option>패스트박스 라이트</option>
+                        <option>패스트박스 스텐다드</option>
+                        <option>패스트박스 프리미엄</option>
+                    </select>
+                    <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>패스트박스 배송 서비스 그룹 관리<em class="icoLink"></em></span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">배송가능 국가</th>
+                <td>
+                    <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>배송가능 국가조회<em class="icoLink"></em></span></a>
+                    <p class="gSingle"><strong class="txtWarn">0</strong> 개국 등록</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">도착지 공항코드 사용여부</th>
+                <td>
+                    <label class="gLabel"><input type="radio" class="fChk" /> 사용안함</label>
+                    <label class="gLabel"><input type="radio" class="fChk" /> 사용함</label>
+                    <span class="gLabel"><a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>도착지 공항코드 관리<em class="icoLink"></em></span></a></span>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>화물인계증 배송사 기준</h2>
+    </div>
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>화물인계증 배송사 기준</caption>
+        <tbody>
+            <tr>
+                <th scope="row">화물인계증 배송사 기준</th>
+                <td>
+                    <label class="gLabel"><input type="radio" class="fChk" /> 배송사</label>
+                    <label class="gLabel"><input type="radio" class="fChk" /> 배송사 배송서비스그룹</label>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+
+<div class="mHelp typeInfo">
+    <h2>배송사 정보 안내</h2>
+    <div class="content">
+        <ul>
+            <li>창고에서 계약한 배송사정보를 관리합니다.</li>
+            <li>배송비를 등록 또는 수정하려면 시스템관리자에게 연락해 주세요.</li>
+            <li>
+                송장번호 연동 설정은 '출고준비'메뉴에서 송장번호 입력방법을 직접 혹은 연동을 선택할 수 있습니다.
+                <ul>
+                    <li>연동안함 : 송장번호 입력시 직접 입력 할 수 있습니다.</li>
+                    <li>연동함 : 송장번호 입력시 직접 혹은 연동을 선택하여 입력할 수 있습니다.  송장번호 입력방법의 기본값은 '연동'으로 처리됩니다.<br />
+                (단, 시스템 연동이 적용되어 있는 경우 사용가능함.)</li>
+                </ul>
+            </li>
+            <li>화물인계증 대표 배송사 :화물인계증 생성 시 기준이되는 대표 배송사를 설정할 수 있습니다.</li>
+            <li>배송사 배송서비스그룹은 배송사별 배송서비스 묶음입니다.</li>
+            <li>배송가능국가, 도착지공항코드 관리의 국가리스트는 배송비의 국가 리스트를 참조 합니다.</li>
+            <li>화물인계증 배송사 기준은 화물인계증 생서시 동일 배송사의 처리 기준 입니다.</li>
+        </ul>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

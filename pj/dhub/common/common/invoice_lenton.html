@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>송장출력(lenton)</title>
+    <style type="text/css">
+        /* reset */
+        html,body,div,h1,form,fieldset,p,th,td,img,dl,dt,dd { margin:0; padding:0; }
+        html { width:100%; height:100%; }
+        body { width:151mm; font-size:4mm; font-family:Calibri,simsun,sans-serif; color:#333; background:#fff; -webkit-text-size-adjust:none; }
+        img { border:0; vertical-align:top; }
+        table { border:0; width:100%; table-layout:fixed; border-spacing:0; border-collapse:collapse; line-height:1.2; }
+        caption { overflow:hidden; width:1px; font-size:1px; line-height:0; text-indent:150%; white-space:nowrap; }
+        .blind { display:block; overflow:hidden; position:absolute; width:1px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; white-space:nowrap; }
+        table th { border:0; vertical-align:top; text-align:left; font-weight:normal; }
+        table td { border:0; vertical-align:top; word-wrap:break-word; word-break:break-all; }
+        table.center, table .center { text-align:center; }
+        table .bottom { vertical-align:bottom; }
+
+        /* lenton */
+        .lenton .infoArea { height:30mm; padding:2mm; border-top:1px solid #000; box-sizing:border-box; }
+        .lenton .infoArea dt { float:left; width:16mm; }
+        .lenton .infoArea dd { float:left; overflow:hidden; word-wrap:break-word; }
+        .lenton .infoArea dl:after { display:block; content:""; clear:both; }
+        .lenton .infoArea.typeFrom { border-top:none; }
+        .lenton .infoArea.typeFrom .from { float:left; }
+        .lenton .infoArea.typeFrom .prompt { float:left; padding:8mm 0 0 2mm; }
+        .lenton .infoArea.typeFrom .info { float:right; width:56mm; height:26mm; font-size:3.2mm; border:1px solid #000; box-sizing:border-box; }
+        .lenton .infoArea.typeFrom:after { display:block; content:""; clear:both; }
+        .lenton .infoArea.typeFrom .info .postNum { float:left; width:47%; line-height:1.4; text-align:center; }
+        .lenton .infoArea.typeFrom .info .postNum .stamp { height:8mm; padding:4mm 0 3.2mm; }
+        .lenton .infoArea.typeFrom .info .postAddr { float:left; width:53%; height:100%; line-height:1.1; text-align:center; border-left:1px solid #000; box-sizing:border-box; }
+        .lenton .infoArea.typeFrom .info .postAddr .title { display:inline-block; padding:2mm 0 2.7mm; font-size:9mm; font-weight:bold; }
+        .lenton .infoArea.typeFrom .info .postAddr:after { display:block; content:""; clear:both; }
+        .lenton .infoArea.typeFrom .from dd { width:35mm; height:25mm; }
+        .lenton .infoArea.typeAddr { position:relative; }
+        .lenton .infoArea.typeAddr .addr dd { width:calc(100% - 16mm); }
+        .lenton .infoArea.typeAddr .addr dl + dl dd { height:14mm; }
+        .lenton .infoArea.typeAddr .num { position:absolute; bottom:2mm; }
+        .lenton .infoArea.typeAddr .num dt { width:auto; }
+        .lenton .infoArea.typeAddr .num dd { padding:0 2mm 0 1.5mm; }
+        .lenton .infoArea.typeAddr .num dd:first-of-type { width:44mm; }
+        .lenton .other .infoArea.typeRemark { float:left; overflow:hidden; width:50%; height:40mm; }
+        .lenton .other .infoArea.typeBarcode { float:left; width:50%; height:40mm; text-align:center; border-left:1px solid #000; }
+        .lenton .other:after { display:block; content:""; clear:both; }
+        .lenton .infoArea.typeBarcode .barcode { width:60mm; height:20mm; padding:0.7mm 0; }
+
+        /* For Print */
+        @media print {
+            body { -webkit-print-color-adjust:exact; }
+        }
+    </style>
+</head>
+<body>
+<div class="lenton">
+    <div class="infoArea typeFrom">
+        <dl class="from">
+            <dt>FROM :</dt>
+            <dd>66GIRLS <br>Cafe24</dd>
+        </dl>
+        <span class="prompt">無法投遞,請退回台北<br>郵局第91-666號信箱</span>
+        <div class="info">
+            <div class="postNum">
+                <img src="../../img/img_invoice_lenton.gif" class="stamp" alt="">
+                <p class="num">國內郵資已付<br>郵字第666號</p>
+            </div>
+            <div class="postAddr">
+                <span class="title">PPI</span>
+                <p class="addr">CHUNGHWA POST<br>TAIWAN R.O.C<br>LICENCE NO.666</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="infoArea typeAddr">
+        <div class="addr">
+            <dl>
+                <dt>收件人 :</dt>
+                <dd>蘇渝屏</dd>
+            </dl>
+            <dl>
+                <dt>地址 :</dt>
+                <dd>臺北市北投區立農街二段155號女五舍5308臺北市北投區立農街二段155號女五舍5308</dd>
+            </dl>
+        </div>
+        <dl class="num">
+            <dt>郵遞區號 :</dt>
+            <dd>10044</dd>
+            <dt>電話 :</dt>
+            <dd>0981681581</dd>
+        </dl>
+    </div>
+
+    <div class="other">
+        <p class="infoArea typeRemark">特別備註 :</p>
+        <div class="infoArea typeBarcode">
+            <p class="title">聯郵掛號函件<br>第010001號</p>
+            <img src="../../img/img_barcode_basic.gif" class="barcode" alt="">
+            <p class="num">0100109182170</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

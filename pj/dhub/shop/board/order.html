@@ -1,0 +1,146 @@
+<?php require_once('../../include/header.html'); ?>
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>주문관련메모조회</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li>게시판</li>
+                        <li class="now" title="현재 페이지">주문관련메모조회</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>주문관련메모조회</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>- 선택 -</option>
+                                        <option>판매사주문번호</option>
+                                        <option>출고지시번호</option>
+                                        <option>FB송장번호</option>
+                                        <option>작성자</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:330px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">등록일시</th>
+                                <td>
+                                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                                    <a href="#none" class="btnDate"><span>3일</span></a>
+                                    <a href="#none" class="btnDate"><span>7일</span></a>
+                                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                                    <a href="#none" class="btnDate"><span>3개월</span></a>
+                                    <a href="#none" class="btnDate"><span>1년</span></a>
+                                    <input type="text" id="pr_start_date" name="start_date" value="2012-06-07" class="fText gDate" />
+                                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                                    ~
+                                    <input type="text" id="pr_end_date" name="end_date" value="2012-06-07" class="fText gDate" />
+                                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문관련메모 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>3</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                            <option>300개씩보기</option>
+                            <option>500개씩보기</option>
+                            <option>1000개씩보기</option>
+                            <option>2000개씩보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                        <caption>주문관련메모 목록</caption>
+                        <colgroup>
+                            <col style="width:50px;" />
+                            <col class="time" />
+                            <col style="width:130px;" />
+                            <col style="width:auto;" />
+                            <col style="width:130px;" />
+                            <col style="width:160px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">등록일시</th>
+                                <th scope="col">판매사주문번호</th>
+                                <th scope="col">메모</th>
+                                <th scope="col">FB송장번호</th>
+                                <th scope="col">출고지시번호</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td>125</td>
+                                <td>2015-12-02 13:33:58</td>
+                                <td><a href="#none" class="txtLink">TEST-LEE-1001</a></td>
+                                <td class="left">입고 완료 상품 부터 출하 요청</td>
+                                <td>FB1512020152000018</td>
+                                <td><a href="#none" class="txtLink">20151202-2KR430000003</a></td>
+                            </tr>
+                            <tr>
+                                <td>124</td>
+                                <td>2015-12-02 13:33:58</td>
+                                <td><a href="#none" class="txtLink">TEST-LEE-1002</a></td>
+                                <td class="left">입고 완료 상품 부터 출하 요청</td>
+                                <td>FB1512020152000019</td>
+                                <td><a href="#none" class="txtLink">20151202-2KR430000003</a></td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td>2015-12-02 13:33:58</td>
+                                <td><a href="#none" class="txtLink">TEST-LEE-1003</a></td>
+                                <td class="left">입고 완료 상품 부터 출하 요청</td>
+                                <td>FB1512020152000020</td>
+                                <td><a href="#none" class="txtLink">20151202-2KR430000003</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="empty">검색결과가 없습니다.</p>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+
+<?php require_once('../../include/footer.html'); ?>

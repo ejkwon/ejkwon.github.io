@@ -1,0 +1,483 @@
+@charset "utf-8";
+
+.eVirtual { display:inline-block; padding:2px 7px; vertical-align:top; font-size:12px; line-height:1; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+*[class*="eDebug"] { outline:1px solid #467bff !important; }
+*[class*="eDebug"]:before { display:inline-block !important; padding:3px; background:#467bff; text-align:left; color:#fff; font-size:11px; }
+
+/* ********** OBJECT ********** */
+  /* Form */
+    label label,
+    label a { outline:2px solid #ca5ccb; }
+    select { outline:2px solid purple; }
+    select.fSelect,
+    select.fMultiple,
+    .fIntroSelect select { outline:0; }
+    .gForm { outline:2px solid #ca5ccb; }
+    .fSelect + span { outline:2px solid #ca5ccb; }
+    .fSelect + span:before { content:'gForm validation test'; color:#ca5ccb; font-weight:bold; }
+    .fSelect + .gForm:before, .fSelect + span[class*="g"]:before, .fSelect + span[class*="txt"]:before { display:none; }
+    .fSelect + .gForm, .gForm + .gForm, .fSelect + .txtInfo, span[class*="g"], .fSelect + span[class*="txt"] { outline:0; }
+    .fText.left { outline:1px solid #ca5ccb; }
+    .fText.left:after { content:'fText는 left가 기본값으로 사용하지 않습니다.';}
+    .fText.gDate { background:#fff !important; }
+
+  /* Grid */
+  [class*="w0"], [class*="w1"], [class*="w2"], [class*="w3"], [class*="w4"], [class*="w5"], [class*="w6"], [class*="w7"], [class*="w8"], [class*="w9"] { outline:2px solid #ca5ccb; }
+      /* Reset */
+      th[class*="w0"], th[class*="w1"], th[class*="w2"], th[class*="w3"], th[class*="w4"], th[class*="w5"], th[class*="w6"], th[class*="w7"], th[class*="w8"], th[class*="w9"],
+      td[class*="w0"], td[class*="w1"], td[class*="w2"], td[class*="w3"], td[class*="w4"], td[class*="w5"], td[class*="w6"], td[class*="w7"], td[class*="w8"], td[class*="w9"],
+      .submain[class*="w0"], .submain[class*="w1"], .submain[class*="w2"], .submain[class*="w3"], .submain[class*="w4"], .submain[class*="w5"], .submain[class*="w6"], .submain[class*="w7"], .submain[class*="w8"], .submain[class*="w9"],
+      .mThumbList.typeHor[class*="w0"], .mThumbList.typeHor[class*="w1"], .mThumbList.typeHor[class*="w2"], .mThumbList.typeHor[class*="w3"], .mThumbList.typeHor[class*="w4"], .mThumbList.typeHor[class*="w5"], .mThumbList.typeHor[class*="w6"], .mThumbList.typeHor[class*="w7"], .mThumbList.typeHor[class*="w8"], .mThumbList.typeHor[class*="w9"] { outline:0; }
+      .mAlign[class*="w0"], .mAlign[class*="w1"], .mAlign[class*="w2"], .mAlign[class*="w3"], .mAlign[class*="w4"], .mAlign[class*="w5"], .mAlign[class*="w6"], .mAlign[class*="w7"], .mAlign[class*="w8"], .mAlign[class*="w9"] { outline:0; }
+
+      .gWidth, .gColumnSet .column { outline:0 none; }
+      .mButton + .section { outline:1px solid #467bff; }
+      .section.gSingle,
+      .section.gDouble,
+      .section.gTriple,
+      .section.clear { outline:1px solid #467bff; }
+      .section.clear:before { display:block; padding:3px; background:#467bff; content:'section bug'; color:#fff; }
+
+  /* Button */
+    td + td .btnLink { }
+      td + td .btnLink:before { content:"목록형 게시판에서 사용금지"; color:red; }
+    .mTooltip .btnLink:before { display:none; }
+    .btnLink  [class*="txt"]:before { content:"강조는 strong으로만 가능, txtEm, txtWarn 금지"; color:red; }
+
+
+/* ********** Layout  ********** */
+  /* section */
+    .section .section,
+    .mLayer .section { outline:1px solid #467bff; position:relative; }
+    .section .section:before,
+    .mLayer .section:before { position:absolute; left:-1px; top:-1px; content:'section안에 section, mLayer내 section 금지'; padding:3px; background:#467bff; text-align:left; color:#fff; font-size:11px; z-index:100; }
+
+  /* popup  */
+    #popup #footer { outline:1px solid #467bff; }
+    #popup #footer:before  { position:fixed; left:-1px; bottom:-1px; content:'footer는 wrap에 포함되지 않음'; padding:3px; background:#467bff; text-align:left; color:#fff; font-size:11px; z-index:100; }
+    #wrap + #footer { outline:0; }
+    #wrap + #footer:before { display:none; }
+    #popup .mBreadcrumb { outline:1px solid #467bff; }
+    #popup .mBreadcrumb:before { content:'Breadcrumb은 popup에서 사용되지 않음'; padding:3px; background:#467bff; text-align:left; color:#fff; font-size:11px; }
+    #popup .mBoardArea.eDebug-minwidth:before { content:"팝업내 mBoardArea에는 inline으로 min-width 넓이 선언"; }
+    #popup .mBoard.eDebug-colauto:before { content:"팝업내 mBoard에는 col width auto 사용 금지"; }
+      #popup .mLayer .mBoard.eDebug-colauto {outline:0 !important}
+      #popup .mLayer .mBoard.eDebug-colauto:before { display:none !important; }
+      #popup .mLayer .mBoardArea { outline:0; }
+      #popup .mLayer  .mBoardArea:before { display:none; }
+
+  /* headingArea & mTitle */
+    .headingArea .mTitle > p, .headingArea .mTitle ul, .headingArea .mTitle ol { outline:2px solid #ca5ccb; }
+      .headingArea .mTitle .mList, .headingArea .mTitle .mTip ol, .headingArea .mTitle .mTip ul, .headingArea .mTitle .mTip p { outline:0; }
+      .section .headingArea { outline:1px solid #467bff; }
+      .section .headingArea:before { content:'section bug'; color:blue; font-size:15px; }
+
+    .headingArea div { outline:1px solid #467bff; }
+    .headingArea div:before { display:block; content:'heading 에서 사용되지 않는 모듈'; padding:3px; background:#467bff; }
+      .headingArea div.mBreadcrumb,
+      .headingArea div.mTooltip,
+      .headingArea div.mTooltip div,
+      .headingArea div.mTip,
+      .headingArea div.mTip div,
+      .headingArea div.typePath { outline:0; }
+      .headingArea div.mBreadcrumb:before,
+      .headingArea div.mTooltip:before,
+      .headingArea div.mTooltip div:before,
+      .headingArea div.mTip:before,
+      .headingArea div.mTip div:before,
+      .headingArea div.typePath:before { display:none; }
+
+    .headingArea .mBreadcrumb strong { background:red; }
+      .headingArea .mBreadcrumb li:last-child { background-color:blue; }
+      .headingArea .mBreadcrumb li.now { background-color:#fff; }
+
+    .headingArea .icoShop + .mTooltip, .headingArea .btnManual + .mTooltip, .headingArea .btnVideo + .btnManual, .headingArea .btnVideo + .mTooltip, .headingArea .btnManual + .icoShop, .headingArea .btnVideo + .icoShop { outline:1px solid #467bff; }
+      .headingArea h1 + .mTooltip, .headingArea h1 + .icoShop, .headingArea h1 + .btnManual, .headingArea h1 + .btnVideo, .headingArea .mTitle + .mTip { outline:0; }
+
+    .mTitle { outline:1px solid #467bff; min-height:19px; }
+    .mTitle:before { position:absolute; top:-15px; left:-1px; content:'section bug'; padding:1px 2px; background:#467bff; text-align:left; color:#fff; font-size:11px; }
+      .section > .mTitle, .section > div > .mTitle, .headingArea .mTitle, .mLayer .mTitle, .mZipcode .mTitle, .introduce .mTitle, .mSearchEngine .mTitle, .pickerArea .mTitle, .gFrame .mTitle, .samplePreview .mTitle, .dashMain .mTitle { outline:0; }
+      .section .mTitle:before, .headingArea .mTitle:before, .mLayer .mTitle:before, .mZipcode .mTitle:before, .introduce .mTitle:before, .mSearchEngine .mTitle:before, .pickerArea .mTitle:before, .gFrame .mTitle:before,  .samplePreview .mTitle:before, .dashMain .mTitle:before { display:none; }
+    .mTitle .total { outline:1px solid #ca5ccb; }
+      .mTitle .total:before { content:'total은 mState로 분리'; background:#ca5ccb; color:#fff; }
+
+    .mLayer .mTitle h2 { outline:1px solid #ca5ccb; }
+      .mLayer .mTitle h2:before { display:block; content:'mLayer는 h3 부터 시작'; padding:3px; background:#ca5ccb; color:#fff; font-size:11px; }
+
+    .mTitle .mList, .mTitle .mDesc { outline:1px solid #ca5ccb; }
+      .mTitle .mList:after { display:block; content:'mTitle h2 > ul, p'; background:#ca5ccb; color:#fff; }
+
+    /*
+      body .section > div:first-child { outline:1px solid #cb5c83; }
+      body .section > div:first-child:before { color:#cb5c83; content:'h2단위로 section 으로 그룹핑합니다. (test중,  해당 내용이 보이시는 분은 김진아에게 문의) ' }
+          body .section > .mTitle:first-child,
+          body .section > .mBox:first-child,
+          body .section > .mToggleBar:first-child,
+          .headingArea + .section .mBoard,
+          #wrap .section > div:first-child,
+          .samplePreview .section > *:first-child { outline:0; }
+
+          body .section > .mTitle:first-child:before,
+          body .section > .mBox:first-child:before,
+          body .section > .mToggleBar:first-child:before,
+          .headingArea + .section .mBoard:first-child:before,
+          #wrap .section > div:first-child:before,
+          .samplePreview .section > *:first-child:before { display:none; }
+      .section .mTitle h2 { outline:1px solid #cb5c83; }
+      .section .mTitle h2:after { color:#cb5c83; content:' h2단위로 section 으로 그룹핑합니다.' }
+      .section .mTitle:first-child h2,
+      .loginHelp .mTitle h2 { outline:0; }
+      .section .mTitle:first-child h2:after,
+      .loginHelp .mTitle h2:after { content:'' }
+
+      .section > .mTitle:first-child h3 { outline:1px solid #cb5c83; }
+      .section > .mTitle:first-child h3:after { color:#cb5c83; content:' h2단위로 section 으로 그룹핑합니다. 상단의 section에 해당 영역을 넣어주세요.' }
+    */
+
+    .mTitle > div { outline:1px solid #cb5c83; }
+      .mTitle > div:after { display:block; color:#fff; background:#cb5c83; white-space: pre; content:' - mTitle안에 툴팁,도움말(ul, p),버튼 제외 금지 \A  - mLayer 등에서 사용 될 경우 mTitle과 형제레벨로 코딩할 것' }
+      .mTitle > div.gRight { outline:0; }
+      .mTitle > div.gRight:after { display:none; } /* 상품분류 관리 예외처리 */
+
+    .mTitle > div.mTooltip, .mTitle > div.mTip { outline:0; }
+      .mTitle > div.mTooltip:after, .mTitle > div.mTip:after { display:none; }
+
+    .mTitle ul:first-child, .mTitle > p:first-child { background:#cb5c83; }
+    .mTitle ul:first-child:before, .mTitle > p:first-child:before { color:#fff; content:'mTitle에 heading 태그 생략금지 / 제목요청하거나, mList or mBox 등으로 대체' }
+
+    .mTitle .mPromotion, .mTitle .mPromotion > div { outline:0; }
+    .mTitle .mPromotion:after, .mTitle .mPromotion > div:after { display:none; }
+
+    .mTitle .mTooltip .gPreview ul:first-child:before { display:none; }
+    .mTitle .mTooltip .gPreview ul:first-child { background:none; }
+
+    h1 div:after, h2 div:after, h3 div:after, h1 p:after, h2 p:after, h3 p:after, h1 ul:after, h2 ul:after, h3 ul:after{ position:absolute; left:13px; padding:0 0 0 13px; width:150px; content:'h1태그 안에 block 금지'; background:#ca5ccb; color:#fff; font-size:11px; font-weight:normal; line-height:1.8em; }
+    .mTitle h1 *, .mTitle h2 *, .mTitle h3 * { outline:1px solid #cb5c83; }
+    .mTitle h1 *:after, .mTitle h2 *:after, .mTitle h3 *:after { content:"heading 안에 태그 금지"; color:#fff; background:#cb5c83; }
+
+/* ********** Module  ********** */
+
+  /* mCtrl */
+    .mCtrl { outline:1px solid #ca5ccb; }
+      .mBoardArea .mCtrl { outline:1px solid #ca5ccb !important; }
+      .mBoardArea .mCtrl:before { position:absolute; content:'mBoardArea 형제레벨'; background:#ca5ccb; color:#fff; z-index:10; padding:3px; }
+    .mCtrl.typeHeader,
+    .mCtrl[class*="g"] { outline:0 none !important; }
+    .mCtrl[class*="g"]:before { display:none !important; }
+    .mBoard + .mCtrl.typeFooter,
+    .mGridTable + .mCtrl.typeFooter,
+    .commentArea + .mCtrl.typeFooter,
+    .mCategorySet + .mCtrl.typeFooter,
+    .mBoardArea + .mCtrl.typeFooter,
+    .mThumbList + .mCtrl.typeFooter { outline:0 none !important; }
+
+    .mCtrl.gTable { outline:1px solid #ca5ccb !important; }
+     .mCtrl.gTable:before { display:inline-block !important; content:'gTable 필수여부 체크하기'; color:#ca5ccb; }
+
+  /* mTab */
+    .section .mTab.typeNav,
+    .mTab.typeTab { outline:1px solid #467bff; }
+    .submain .mTab.typeTab,
+    .section .mTab.typeTab,
+    .mLayer .mTab.typeTab,
+    .mBox + .mTab,
+    .mSearchEngine + .mTab.typeTab { outline:0; }
+    .section .mTab.typeNav:before { content:'section bug'; color:blue; font-size:15px; }
+    .tabCont:hover { outline:1px dashed #467bff; }
+
+  /* mTip, mTooltip */
+    .mTip .eDebug, .mTooltip .eDebug { position:absolute; left:0; top:0; display:block; padding:5px 10px; min-width:100px; color:#fff; font-weight:bold; text-align:left; background:#467bff; }
+    .mTooltip .eDebug { top:100%; }
+
+  /* mForm, addForm */
+    .mForm .mForm { outline:1px solid #ca5ccb !important; }
+    .mForm .mForm:after { content:'mForm 중복 금지'; display:block; padding:2px; background:#ca5ccb; color:#fff; }
+    .mForm .mBoard .mForm { outline:0 !important; }
+    .mForm .mBoard .mForm:after { display:none; }
+
+    .addForm, .subform { outline:1px solid #ca5ccb; }
+    .addForm:before, .subform:before { content:'addForm, subform은 mForm안에서만 사용'; display:block; padding:2px; background:#ca5ccb; color:#fff; }
+    .mForm .addForm, .mForm .subform { outline:0 none; }
+    .mForm .addForm:before, .mForm .subform:before { display:none; }
+
+    .mForm .addForm[class*="g" ] { outline:1px solid #ca5ccb; }
+    .addForm[class*="g" ]:before { content:'addForm grid 금지'; display:block; padding:2px; background:#ca5ccb; color:#fff; }
+
+    .mForm .addForm.mBoard { outline:1px solid #ca5ccb; }
+    .mForm .addForm.mBoard:before { content:'mBoard사용시 addForm으로 감쌀것'; display:block; padding:2px; background:#ca5ccb; color:#fff; }
+
+    p.mForm.typeVer, p.mForm.typeHor, div.mForm.typeVer, div.mForm.typeHor { outline:1px solid #ca5ccb; }
+    p.mForm.typeVer:before, p.mForm.typeHor:before, div.mForm.typeVer:before, div.mForm.typeHor:before { content:'type 선언은 UL만 허용'; display:block; padding:2px; background:#ca5ccb; color:#fff; }
+
+    .mForm .gSingle:first-child,
+    .mForm .gDouble:first-child,
+    .mForm .gTriple:first-child { outline:2px solid #ca5ccb; }
+
+    .mForm .mBoard .gSingle:first-child,
+    .mForm .mBoard .gDouble:first-child,
+    .mForm .mBoard .gTriple:first-child { outline:0; }
+
+    .mForm .addForm { outline:1px solid #ca5ccb; }
+    .mForm p.addForm, .mForm div.addForm, .mForm ul.addForm.gVer, .mForm ul.addForm.gHor { outline:0 none; }
+
+    .mForm ul.addForm:before { display:block; content:'ul.addForm 일 경우 type 명시'; background:#ca5ccb; color:#fff; }
+    .mForm ul.addForm.gHor:before, .mForm ul.addForm.gVer:before { display:none; }
+
+    .mForm p.addForm.gVer,
+    .mForm p.addForm.gHor { border:1px solid #ca5ccb; }
+    .mForm p.addForm.gVer:after,
+    .mForm p.addForm.gHor:after { content:'p.addForm 일 경우 type 명시금지'; color:#ca5ccb; }
+
+    table.addForm, thead.addForm, tbody.addForm, tfoot.addForm, tr.addForm, td.addForm { outline:2px solid #ca5ccb; }
+    ul.mForm { outline:2px solid #ca5ccb; }
+    ul.mForm.typeVer, ul.mForm.typeHor { outline:0; }
+
+    .mForm li > .mBoard:first-child,
+    .mForm li > .mBoardArea:first-child { outline:1px solid #ca5ccb; }
+    .mForm li > .mBoard:first-child:before,
+    .mForm li > .mBoardArea:first-child:before { display:block; content:'mForm 사용이 맞는지 재확인할 것!'; background:#ca5ccb; color:#fff; }
+
+
+/* mBox */
+.mBox { outline:1px solid #ca5ccb; }
+    .mBox[class*="type"] { outline:0; }
+
+.section .mBox { outline:1px solid #467bff; }
+    .section .mBox:first-child { outline:0; }
+    .section .mTitle + .mBox { outline:1px solid #ca5ccb; }
+    .section .mTitle + .mBox[class*="type"] { outline:0; }
+    .section .mTab + .mBox { outline:1px solid #ca5ccb; }
+    .section .mTab + .mBox[class*="type"] { outline:0; }
+    .section td .mBox { outline:0; }
+    .section .mState + .mBox,
+    .section .mBox + .mBox,
+    .section .mCtrl + .mBox { outline:0; }
+    [class*="tabCont"] .mBox { outline:0; }
+
+/* txtInfo - 검증 전인 소스임 */
+.txtInfo,
+td .txtInfo { outline:1px solid #ca5ccb; }
+.txtInfo:before,
+td > .txtInfo:before { content:'form 태그의 도움말이 아님'; background:#ca5ccb; color:#fff; }
+    td .txtInfo + .txtInfo { outline:0; }
+    td .txtInfo + .txtInfo:before { display:none; }
+
+.txtInfo.gSingle,
+.txtInfo.gDouble,
+.txtInfo.gTriple { outline:1px solid #ca5ccb; }
+.txtInfo.gSingle:before,
+.txtInfo.gDouble:before,
+.txtInfo.gTriple:before { display:inline-block; padding:0 10px; margin-left:-10px; content:'txtInfo에 grid 금지'; background:#ca5ccb; color:#fff; }
+
+.gLabel + .txtInfo,
+.gLabel + * + .txtInfo,
+.gLabel + .gSingle > .txtInfo,
+.gLabel + .gDouble > .txtInfo,
+.gLabel + .gTriple > .txtInfo,
+input + .txtInfo,
+input + * + .txtInfo,
+input + a + .txtInfo,
+input + a + a + .txtInfo,
+input + a + .mTooltip + .txtInfo,
+textarea + .txtInfo,
+textarea + * + .txtInfo,
+select + .txtInfo,
+select + * + .txtInfo,
+a + .txtInfo,
+.gEditor + .txtInfo,
+.gAddInfo .txtInfo,
+.mForm .txtInfo,
+.mForm + .txtInfo,
+.mForm + .gSingle + .txtInfo,
+.mThumbList + .txtInfo,
+.figure + .txtInfo,
+.frame + .txtInfo,
+.mSelect + .txtInfo,
+.gNumber + .txtInfo,
+.mBoard .mBoard + .txtInfo,
+.icoDot + .txtInfo,
+.txtWarn + .txtInfo,
+.mMultiple + .txtInfo,
+.gFile + .txtInfo,
+.mImgSelect + .txtInfo,
+.mInputForm + .txtInfo { outline:0; } /* mList 사용할 것 */
+
+.gLabel + .txtInfo:before,
+.gLabel + * + .txtInfo:before,
+.gLabel + .gSingle > .txtInfo:before,
+.gLabel + .gDouble > .txtInfo:before,
+.gLabel + .gTriple > .txtInfo:before,
+input + .txtInfo:before,
+input + * + .txtInfo:before,
+input + a + a + .txtInfo:before,
+input + a + .mTooltip + .txtInfo:before,
+textarea + .txtInfo:before,
+textarea + * + .txtInfo:before,
+select + .txtInfo:before,
+select + * + .txtInfo:before,
+a + .txtInfo:before,
+.gEditor + .txtInfo:before,
+.gAddInfo .txtInfo:before,
+.mForm .txtInfo:before,
+.mForm + .txtInfo:before,
+.mForm + .gSingle + .txtInfo:before,
+.mThumbList + .txtInfo:before,
+.figure + .txtInfo:before,
+.frame + .txtInfo:before,
+.mSelect + .txtInfo:before,
+.gNumber + .txtInfo:before,
+.mBoard .mBoard + .txtInfo:before,
+.txtWarn + .txtInfo:before,
+.icoDot + .txtInfo:before,
+.mMultiple + .txtInfo:before,
+.gFile + .txtInfo:before,
+.mImgSelect + .txtInfo:before,
+.mInputForm + .txtInfo:before { display:none; }
+
+/* mBubbles */
+.mBubbles .txtInfo { outline:0; }
+.mBubbles .txtInfo:before { display:none; }
+
+/*
+.mBoard .mTooltip .txtLink,
+.mBoard .mHelp .txtLink,
+.mBoard .mForm .txtLink,
+.mBoard .gLabel .txtLink { outline:1px solid #ca5ccb; }
+*/
+
+.mForm li > .txtInfo { outline:1px solid #ca5ccb; }
+.mForm li > .txtInfo:after { display:block; content:'도움말 ul은 별도로 분리'; background:#ca5ccb; color:#fff; }
+.mForm li > label + .txtInfo,
+.mForm li > .gLabel + .txtInfo,
+.mForm li > select + .txtInfo,
+.mForm li > input + .txtInfo,
+.mForm li > .figure + .txtInfo,
+.mForm li > .subform + .txtInfo,
+.mForm li > .addForm + .txtInfo,
+.mForm li > .btnIcon + .txtInfo { outline:0; }
+.mForm li > label + .txtInfo:after,
+.mForm li > .gLabel + .txtInfo:after,
+.mForm li > select + .txtInfo:after,
+.mForm li > input + .txtInfo:after,
+.mForm li > .figure + .txtInfo:after,
+.mForm li > .subform + .txtInfo:after,
+.mForm li > .addForm + .txtInfo:after,
+.mForm li > .btnIcon + .txtInfo:after { display:none; }
+
+td.txtNormal, td.txtEm, td.txtWarn, td.txtInfo, td.txtEng, td.txtKor, td.txtMore, td.txtLess, td.txtLight, td.txtIcon, td.txtLink, td.txtByte, td.txtDesign, td.txtLaw,
+ul.txtNormal, ul.txtEm, ul.txtWarn, ul.txtEng, ul.txtKor, ul.txtMore, ul.txtLess, .mBoard ul.txtLight, ul.txtIcon, ul.txtLink, ul.txtByte, ul.txtDesign, ul.txtLaw,
+li.txtNormal, li.txtEm, li.txtWarn, li.txtInfo, li.txtEng, li.txtKor, li.txtMore, li.txtLess, li.txtLight, li.txtIcon, li.txtLink, li.txtByte, li.txtDesign, li.txtLaw,
+div.txtNormal, div.txtEm, div.txtWarn, div.txtInfo, div.txtEng, div.txtKor, div.txtMore, div.txtLess, div.txtLight, div.txtIcon, div.txtLink, div.txtByte, div.txdivesign, div.txtLaw,
+em.txtNormal, em.txtEm, em.txtWarn, em.txtInfo, em.txtEng, em.txtKor, em.txtMore, em.txtLess, em.txtLight, em.txtIcon, em.txtLink, em.txtByte, em.txtDesign, em.txtLaw { color:#ca5ccb; font-size:16px; }
+
+/* th 태그 scope 속성이 누락되었거나, 속성값(col/row/colgroup/rowgroup) 이외의 값을 적용한 경우 */
+  .mBoard.scopenoneP { position:relative; }
+  .scopenoneP:before { z-index:2; position:absolute; left:0; top:-20px; padding:3px 10px; content:"th 태그 scope 필수"; white-space:nowrap; color:#fff; text-align:left; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+  table .scopeerror:before { z-index:2; position:absolute; left:0; top:-20px; padding:3px 10px; content:"scope 속성값 확인"; white-space:nowrap; color:#fff; text-align:left; background:#50a54c; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+
+/* introduceArea */
+  /* introduceArea가 headingArea 바로 아래에 위치하지 않은 경우 */
+    .introduceArea { position:relative; border:2px solid #467bff; }
+    .introduceArea:before { z-index:10; position:absolute; top:-2px; left:0; display:inline-block; content:"introduceArea는 headingArea 아래에 형제레벨로 위치"; padding:2px 7px; vertical-align:top; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+      .headingArea + .introduceArea { border-width:0; }
+      .headingArea + .introduceArea:before { display:none; }
+  /* introduceArea의 h2태그가 mIntroVisual 이나 mIntroTitle 내에 위치하지 않은 경우 */
+    .introduceArea h2 { position:relative; border:2px solid #467bff; }
+    .introduceArea h2:before { z-index:10; position:absolute; top:-2px; left:0; display:inline-block; content:"h2는 mIntroVisual 내에 위치, mIntroVisual 없는 경우 mIntroTitle로 감쌀 것"; padding:2px 7px; vertical-align:top; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+      .introduceArea .mIntroVisual h2,
+      .introduceArea .mIntroTitle h2 { border-width:0; }
+      .introduceArea .mIntroVisual h2:before,
+      .introduceArea .mIntroTitle h2:before { display:none; }
+  /* mIntroProcess 기본형으로 grid(3~6) 클래스를 추가하지 않은 경우 & step 7개 이상일때 typeVer 누락된 경우 */
+    .mIntroProcess:before { content:"기본형에서 grid3~6 class는 필수"; display:block; color:#fff; padding:2px; background:#467bff; }
+      .mIntroProcess[class*="grid"]:before { display:none; }
+    .mIntroProcess .step7:after,
+    .mIntroProcess .step8:after { content:"step7 부터는 typeVer 사용할 것"; display:block; position:absolute; top:0; left:0; z-index:10; color:#fff; padding:2px; background:#467bff; }
+    .mIntroProcess.typeVer:before,
+    .mIntroProcess.typeVer .step7:after,
+    .mIntroProcess.typeVer .step8:after { display:none; }
+  /* mIntroHelp 의 위치나 태그를 잘못 사용한 경우 */
+    div[class*="mIntro"] div.mIntroHelp,
+    div[class*="mIntro"] + ul.mIntroHelp,
+    div.mIntroHelp > *:first-child { outline:2px solid #467bff; }
+    div.mIntroHelp > h3:first-child { outline:0; }
+    div[class*="mIntro"] div.mIntroHelp:before { display:block; content:"mIntroXX 모듈내에 위치하는 도움말은 [ul.mIntroHelp] 로 사용"; padding:2px 7px; vertical-align:top; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+    div[class*="mIntro"] + ul.mIntroHelp:before,
+    div.mIntroHelp > *:first-child:after { display:block; content:"도움말은 mIntroXX 모듈과 형제레벨로 [h3타이틀을 포함하여 div.mIntroHelp] 사용하거나, 모듈내에 위치하는 [ul.mIntroHelp] 로 사용"; padding:2px 7px; vertical-align:top; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+    div.mIntroHelp > h3:first-child:after { display:none; }
+  /* mIntroQuick의 id 끝에 Quick 을 붙이지 않은 경우 */
+    .mIntroQuick .menu li a { position:relative; outline:2px solid #467bff; }
+      .mIntroQuick .menu li a[id$="Quick"] { outline:0; }
+    .mIntroQuick .menu li a:after { position:absolute; top:0; left:0; display:block; content:"퀵메뉴 id 끝에는 Quick을 붙임"; padding:2px 7px; vertical-align:top; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+      .mIntroQuick .menu li a[id$="Quick"]:after { display:none; }
+  /* recommend 디버깅 위치 */
+    .mIntroQuick .recommend .eVirtual { position:absolute; top:100%; left:0; }
+  /* mIntroFlow 디버깅 위치 */
+    .mIntroFlow { position:relative; }
+    .mIntroFlow .eVirtual { position:absolute; top:0; left:0; }
+
+
+/* eLayerClick 나 eModal 사용시, href 값이 비어있거나 "#" 이거나 "#none" 일 경우 */
+  .eLayerClick[href=""], .eLayerClick[href="#"], .eLayerClick[href="#none"],
+  .eModal[href=""], .eModal[href="#"], .eModal[href="#none"] { position:relative; outline:2px solid #467bff; overflow:initial; }
+  .eLayerClick[href=""]:after, .eLayerClick[href="#"]:after, .eLayerClick[href="#none"]:after { position:absolute; top:100%; left:0; display:block; z-index:1; content:"eLayerClick 사용시 href 값 체크"; padding:2px 7px; vertical-align:top; line-height:1; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+  .eModal[href=""]:after, .eModal[href="#"]:after, .eModal[href="#none"]:after { position:absolute; top:100%; left:0; display:block; z-index:1; content:"eModal 사용시 href 값 체크"; padding:2px 7px; vertical-align:top; line-height:1; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; box-shadow:6px 6px 10px -1px rgba(89,89,89,0.75); }
+
+
+/* ctrlHeight (OLD 버전) */
+  .ctrlHeight { position:relative; outline:1px solid #467bff; }
+  .ctrlHeight:before { z-index:10; position:absolute; top:-1px; left:-1px; display:inline-block; content:"[old] ctrlHeight → [new] mResizer.theme(1~n)"; vertical-align:top; font-size:12px; white-space:nowrap; color:#fff; background:#467bff; }
+
+/* mTooltip */
+  .mTooltip div.content .mList.removeMList { position:relative; outline:1px solid #ca5ccb; }
+  .mTooltip div.content .mList.removeMList:before { position:absolute; top:-23px; right:0; display:block; content:"mList안에 mList반복 사용금지"; padding:3px; color:#fff; background:#ca5ccb }
+
+  .mTooltip div.content > ul, .mTooltip div.content > ol, .mTooltip div.content > p { outline:1px solid #467bff; }
+  .mTooltip div.content .mList,
+  .mTooltip div.content .gPreview { outline:0 none; }
+  .mTooltip div.content > * > .mList { outline:1px solid #467bff; }
+  .mTooltip div.content .mList:after { display:none; }
+  .tooltip.posRight { display:block; }
+  .tooltip.posRight:before { display:block; margin:-22px 0 0 -1px; content:'sposRight > html 에 추가 금지!'; padding:3px; background:#467bff; color:#fff; font-size:11px; }
+
+  .mTooltip .close.eClose { outline:1px solid red; }
+    .content + .close.eClose { outline:0; }
+
+  tbody th .gTooltip { outline:1px solid red; }
+  tbody th .gTooltip:before { display:block; content:'thead에서만 쓰임'; }
+    tbody thead th .gTooltip { outline:0; }
+    tbody thead th .gTooltip:before { display:none; }
+    .typeHead tbody th .gTooltip { outline:0; }
+    .typeHead tbody th .gTooltip:before { display:none; }
+
+  .mBoard.gScroll .mTooltip .eTip { }
+  .mBoard.gScroll .mTooltip .eTip:before { display:block; position:absolute; top:-20px; padding:3px; background:#467bff; color:#fff; font-size:11px; width:auto; content:'gScroll 내 eTipScroll 사용'; text-indent:0; }
+  .mBoard .mBoard .mBoard { position:relative; outline:1px solid #467bff; }
+  .mBoard .mBoard .mBoard:before { content:'테이블 중첩이 심함, UI기획팀과 검토하기'; position:absolute; top:-15px; padding:3px; color:#fff; font-size:11px; font-weight:normal; white-space:nowrap; line-height:1.25; background:#467bff; }
+
+/* Tooltip */
+  .mTooltip.typeLaw + .txtInfo,
+  .mTooltip.typeDesign + .txtInfo { padding:3px; outline:1px solid #467bff; }
+  .mTooltip.typeLaw + .txtInfo:after,
+  .mTooltip.typeDesign + .txtInfo:after { content:'! 법적고지, 디자인 아이콘은 txtInfo 다음에 노출'; color:#467bff; }
+
+  .mTooltip .title [class*="txt"],
+  .mTooltip .titleEm [class*="txt"] { border:1px solid #467bff; }
+  .mTooltip .title [class*="txt"]:before,
+  .mTooltip .titleEm [class*="txt"]:before { content:'툴팁 제목내 강조(em, warn) 금지'; padding:2px; background:#467bff; color:#fff; }
+
+  th .mTooltip[class*="type"] { border:1px solid #467bff; }
+  th .mTooltip[class*="type"]:before { position:absolute; content:'th에 (?) 툴팁제외 금지'; bottom:20px; width:200px; color:#467bff; font-weight:bold; }
+
+/* mTip */
+.mTip { outline:1px solid #467bff; }
+.mTip:before { display:block; content:'section으로 감쌀 것'; padding:2px; background:#467bff; color:#fff; text-align:left; }
+.section > .mTip { outline:0; }
+.section > .mTip:before { display:none; }
+
+
+/* 새창열림 : icoLink */
+.dTcoLink { position:absolute; left:0; bottom:100%; display:inline-block; margin:1px 0 -5px; padding:2px 3px; color:#fff; font-size:11px; line-height:13px; font-style:normal; vertical-align:middle; background:#cb5c83; opacity:0.6; }
+
+/* 새창열림 : A */
+.dBlankA { position:absolute; left:0; bottom:100%; display:inline-block; margin:1px 0 -5px; padding:2px 3px; color:#fff; font-size:11px; line-height:13px; font-style:normal; vertical-align:middle; white-space:nowrap; background:#cb5c83; opacity:0.6; }

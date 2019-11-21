@@ -1,0 +1,57 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/front/include/header.html'); ?>
+
+<body class="memberArea">
+<div id="wrap">
+    <header id="header">
+        <h1 class="logo">
+            <a href="#none"><img src="//img.echosting.cafe24.com/api/dev/front/h1_logo_join.png" alt="cafe24" class="img"><span class="dev">Developers</span></a>
+        </h1>
+    </header>
+    <hr class="layout">
+
+    <div id="container">
+        <!-- [ contents ] -->
+        <section id="contents" class="joinArea">
+            <ol class="mIndicator">
+                <li>카페24 회원 정보 확인</li>
+                <li class="selected">개발사(자) 등록 약관 동의</li>
+                <li>개발사(자) 정보 입력</li>
+                <li>개발사(자) 등록 완료</li>
+            </ol>
+            <div class="mTitle gCenter">
+                <h2>개발사(자) 등록 약관 동의</h2>
+                <p>카페24 개발자센터를 이용하기 위한 서비스 이용약관 등에 동의합니다.</p>
+            </div>
+            <section class="section">
+                <div class="mTerm">
+                    <div class="check">
+                        <strong class="title">모두 동의합니다.</strong>
+                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+                    </div>
+                </div>
+                <div class="mTerm">
+                    <div class="check">
+                        <strong class="title">개발자센터 이용약관</strong>
+                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+                    </div>
+                    <div class="term">
+                        <iframe src="//m-img.cafe24.com/images/terms/dev/use_agreement.html"></iframe>
+                    </div>
+                </div>
+                <div class="mTerm">
+                    <div class="check">
+                        <strong class="title">개인정보 수집이용 동의</strong>
+                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel"></span></label>
+                    </div>
+                    <div class="term">
+                        <iframe src="//m-img.cafe24.com/images/terms/dev/api_personal_information.html"></iframe>
+                    </div>
+                </div>
+            </section>
+            <div class="mButton">
+                <a href="/pj/API/dev/front/member/join_info.html" class="btnEm">이전</a>
+                <a href="/pj/API/dev/front/member/join_register.html" class="btnStrong">다음</a>
+            </div>
+        </section><!-- //[ contents ] -->
+    </div>
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/front/include/footer.html'); ?>

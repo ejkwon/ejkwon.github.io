@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>리포트 자동화 차트툴</title>
+<link rel="stylesheet" type="text/css" href="../guide/ui/common.css" media="all" />
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../guide/ui/ui.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/menu.html'); ?>
+
+    <div id="contents">
+        <div class="mTitle">
+            <h1>리포트 자동화 차트툴</h1>
+        </div>
+        <table border="1" class="mTable" summary="">
+            <caption>페이지 목록</caption>
+            <colgroup>
+                <col style="width:120px" />
+                <col style="width:100px" />
+                <col style="width:180px" />
+                <col style="width:200px" />
+                <col style="width:170px" />
+                <col style="width:90px" />
+                <col style="width:90px" />
+                <col style="width:40px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">1depth</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col">3depth</th>
+                    <th scope="col">4depth</th>
+                    <th scope="col">퍼블리셔</th>
+                    <th scope="col">작성일</th>
+                    <th scope="col">로그</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>/layout</strong></td>
+                    <td>레이아웃</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>layout</td>
+                    <td></td>
+                    <td><a href="layout/layout.html" target="_blank">일반 레이아웃</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-03</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>divide</td>
+                    <td></td>
+                    <td><a href="layout/divide.html" target="_blank">컨텐츠 나눠진 레이아웃</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-03</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/chart</strong></td>
+                    <td>Chart</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td></td>
+                    <td><a href="chart/data.html" target="_blank">Data</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-07</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>chart</td>
+                    <td></td>
+                    <td><a href="chart/chart.html" target="_blank">Chart</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-07</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>format</td>
+                    <td></td>
+                    <td><a href="chart/format.html" target="_blank">Format</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-07</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/chartlist</strong></td>
+                    <td>Chart List</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>favorite</td>
+                    <td></td>
+                    <td><a href="chartlist/favorite.html" target="_blank">Favorite</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-09</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>My</td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td><a href="chartlist/favorite.html" target="_blank">Favorite</a>과 동일화면</td>
+                </tr>
+                <tr>
+                    <td>search</td>
+                    <td></td>
+                    <td><a href="chartlist/search.html" target="_blank">Search</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-09</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/admin</strong></td>
+                    <td>Admin</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>edit_chart</td>
+                    <td></td>
+                    <td><a href="admin/edit_chart.html" target="_blank">Edit Chart</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-09</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-15885</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>edit_report</td>
+                    <td></td>
+                    <td>Edit Report</td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-14260</li>
+                        </ul>
+                    </td>
+                    <td>2차 범위</td>
+                </tr>
+                <tr>
+                    <td>banner</td>
+                    <td></td>
+                    <td><a href="admin/banner.html" target="_blank">Banner</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-09</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-15885</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td></td>
+                    <td><a href="admin/admin.html" target="_blank">Admin</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-09</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-15885</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>/etc</strong></td>
+                    <td>기타</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>login</td>
+                    <td></td>
+                    <td><a href="etc/login.html" target="_blank">로그인</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-06-16</td>
+                    <td class="log">
+                        <ul>
+                            <li>GSO-16753</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer">
+        <p>Copyright&copy; <strong>EonJeong Kwon.</strong> All rights Reserved.</p>
+    </div>
+</div>
+</body>
+</html>

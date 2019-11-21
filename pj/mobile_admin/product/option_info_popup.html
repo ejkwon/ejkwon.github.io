@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>Mobile Admin</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css" media="screen">
+    <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../guide/js/ui.js"></script><!-- //참고 -->
+</head>
+<body id="popup">
+    <div id="header">
+        <h1>옵션 구성방식</h1>
+    </div>
+    <div id="content">
+        <div class="mIndex typeBg">
+            <h2>조합 일체형</h2>
+            <div class="mBox">
+                <p class="txtEm txtLess">구성이 많지 않은 경우 사용됩니다.</p>
+                <p class="example"><img src="//img.echosting.cafe24.com/mobile/product/img_option_info1.jpg" width="207" alt="조합 일체형 예시화면"></p>
+                <p class="help">하나의 선택박스에 모든 옵션이 조합되어 표시되며 옵션 선택 시 조합된 상태로 생성되는 구성입니다.</p>
+            </div>
+            <h2>조합 분리선택형</h2>
+            <div class="mBox">
+                <p class="txtEm txtLess">색상/사이즈와 같이 다양한 구성을 선택해야하는 상품의 경우 사용됩니다.</p>
+                <p class="example"><img src="//img.echosting.cafe24.com/mobile/product/img_option_info2.jpg" width="207" alt="조합 분리선택형 예시화면"></p>
+                <p class="help">옵션을 각각의 선택박스로 선택 할 수 있으며 옵션명을 기준으로 옵션값을 조합할 수 있는 구성입니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="mButton">
+        <a href="#none" onclick="window.close()" class="btnNormal">닫기</a>
+    </div>
+    <button type="button" class="btnPopupClose" onclick="window.close()">닫기</button>
+</body>
+</html>

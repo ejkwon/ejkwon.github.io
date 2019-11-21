@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript</title>
+<link rel="stylesheet" type="text/css" href="/css/module.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/uitest.css" media="all" /><!-- 테스트용 CSS -->
+<link rel="stylesheet" type="text/css" href="/guide/ui/import.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>Javascript</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>매뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <div class="mGuideBox">
+                <h2>주의사항</h2>
+                <ul>
+                    <li>자바스크립트의 셀렉터는 항상 e[명시적인 단어]를 사용합니다.</li>
+                    <li>e[명시적인단어]에는 display와 같은 특수한 경우를 제외하고 디자인을 적용하지 않습니다.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>radio, checkbox를 사용자가 선택했을때 bold 처리 됨</h2>
+                </div>
+                 <div class="mBoard type2">
+                    <table border="1" summary="">
+                    <caption>radio, checkbox 선택</caption>
+                    <colgroup><col width="20%" /><col width="auto" /></colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">선택</th>
+                        <td>
+                            <label class="fChk"><input type="radio" name="radio" checked="checked" /> 기본값은 checked 처리</label>
+                            <label class="fChk"><input type="radio" name="radio" /> 한 group끼리는 name을 항상 맞춰줍니다.</label>
+                            <label class="fChk"><input type="radio" name="radio" disabled="disabled" /> disabled 처리 되었을때는 bold처리가 삭제됩니다.</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">선택</th>
+                        <td>
+                            <label class="fChk"><input type="checkbox" name="checkbox" checked="checked" /> 기본값은 checked 처리</label>
+                            <label class="fChk"><input type="checkbox" name="checkbox" /> 한 group끼리는 name을 항상 맞춰줍니다.</label>
+                            <label class="fChk"><input type="checkbox" name="checkbox" checked="checked" disabled="disabled" /> disabled 처리 되었을때는 bold처리가 삭제됩니다.</label>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[eTip] Tooltip</h2>
+                </div>
+                 <div class="mBoard type2">
+                    <table border="1" summary="">
+                    <caption>Tooltip 사용 예</caption>
+                    <colgroup><col width="20%" /><col width="auto" /></colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Tooltip 사용 예
+                            <span class="icoHelp eTip">도움말</span>
+                            <div class="mTooltip gSmall" style="margin:-60px 0 0 -215px">
+                                <div class="gTop"></div>
+                                <div class="gMiddle">
+                                    <strong class="tipTitle">도움말</strong>
+                                    <p>아이디를 입력하는 공간입니다.</p>
+                                </div>
+                                <div class="gBottom"></div>
+                                <a href="#none" class="btnClose eClose"><span>도움말 닫기</span></a>
+                                <span class="icoArrTL"></span>
+                            </div>
+                        </th>
+                        <td>
+                            <span class="gSingle">툴팁은 th영역에만 사용하며, <span class="icoHelp">도움말</span>표의 아이콘을 마우스 오버하면 레이어가 뜹니다.</span>
+                            이벤트 실행이 필요한 엘리먼트에 eTip을 삽입하며, 활성화되는 레이어는  항상 eTip 다음에 마크업합니다.
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[eLayer] Layer popup</h2>
+                </div>
+                 <div class="mBoard type2">
+                    <table border="1" summary="">
+                    <caption>Layer popup 사용 예</caption>
+                    <colgroup><col width="20%" /><col width="auto" /></colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Layer popup 사용 예</th>
+                        <td class="gBtn">
+                            <a href="#none" class="btnEm eLayer"><span>레이어팝업 띄우기</span></a>
+                            <div class="mLayer gMedium">
+                                <div class="gTop">
+                                    <h6>수신거부 넣기</h6>
+                                </div>
+                                <div class="gMiddle">
+                                    <strong>아래 수신거부문구와 링크가 삽입됩니다.</strong>
+                                    <p class="mailLink">
+                                        메일 수신을 원치 않으시면 [$reject_link] 를 클릭하십시오. <br />
+                                        If you don't want to receive this mail anymore, click here [$reject_link_eng]
+                                    </p>
+                                    <ul>
+                                        <li>한글 수신거부 변수 [$reject_link] 는 &quot;수신거부&quot; 로 표시됩니다.</li>
+                                        <li>영문 수신거부 변수 [$reject_link_eng] 는 &quot;unsubscription&quot; 으로 표시됩니다. </li>
+                                        <li>메일에서 수신거부 클릭 시 수신거부리스트에 등록됩니다</li>
+                                    </ul>
+                                    <div class="mButton">
+                                        <a href="#none" class="btnEm"><span>적용</span></a>
+                                        <a href="#none" class="btnEm eLyrClose"><span>닫기</span></a>
+                                    </div>
+                                </div>
+                                <a href="#none" class="btnClose eClose"><span>레이어 닫기</span></a>
+                            </div>
+                            <span class="txtInfo">레이어팝업은 항상 eLayer 다음에 마크업합니다. </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[eTr] 마우스 hover시 배경색상 변경</h2>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>상품 가격정보 일괄수정 목록</caption>
+                    <colgroup><col class="chk" /><col width="auto;" /></colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                        <th scope="col">컬러선택</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="selected">
+                        <td class="chk"><input type="checkbox" class="rowCk" checked="checked" /></td>
+                        <td>행을 선택하는 테이블 에서만 마우스 hover기능 적용 전체선택하는 checkbox를 checked 하면 tr 배경색이 변경 됨</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                        <td>행을 선택하는 테이블 에서만 마우스 hover기능 적용 전체선택하는 checkbox를 checked 하면 tr 배경색이 변경 됨</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[ePlaceholder] Placeholder</h2>
+                    <p>html 작성 가이드는 <a href="/guide/module/form.html">[입력폼]</a> 페이지 참고</p>
+                </div>
+
+                <div class="mBoard type2">
+                    <table border="1" summary="">
+                    <caption>테이블 제목</caption>
+                    <colgroup><col width="15%" /><col width="auto" /></colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Placeholder 사용 예</th>
+                        <td>
+                            <label class="ePlaceholder">
+                                <span>포커스 발생시 텍스트가 사라집니다.</span>
+                                <input type="text" class="fText" name="gift1" style="width:490px;" />
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Placeholder 사용 예</th>
+                        <td>
+                            <label class="ePlaceholder typeFull">
+                                <span>가로폭이 100%일 경우 &lt;label&gt;에 .typeFull을 추가합니다.</span>
+                                <textarea class="fTextarea" cols="20" rows="3" name="sns_sentence"></textarea>
+                            </label>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[eInlay] eInlay</h2>
+                    <p>js 실행은 해당 mBoard가 끝나는 &lt;/table&gt;&lt;/div&gt; 가 끝나고 실행한다.</p>
+                </div>
+
+<div class="mGuideBox">
+<h2>기본옵션값을 사용 할 경우</h2>
+<pre><code style="font-size:12px; background:none; ">&lt;script type="text/javascript"&gt;
+//<![CDATA[
+var  call_inlay = function() { $(".eInlay").inlay(); }
+//]]>
+&lt;/script&gt;</code></pre>
+<h2>기본옵션값을 변경해서 사용 할 경우</h2>
+<pre><code style="font-size:12px; background:none; ">&lt;script type="text/javascript"&gt;
+//<![CDATA[
+var  call_inlay = function() {
+    var opts = {
+        'selected' : "selected",
+        'findSelector' : false,
+        'enableClass' : "enabled",
+        'indentity' : true,
+        'eventType' : 'click',
+        'animate' : true
+    };
+    $(".eInlay").inlay(opts);
+}
+//]]>
+&lt;/script&gt;</code></pre>
+</div>
+
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>메모 목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col class="subject" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                            <th scope="col">내역</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="subject"><a href="#none" class="eInlay">클릭 영역 a.eInlay / 선택하면 selected</a></td>
+                        </tr>
+                        <tr class="inlayArea">
+                            <td colspan="2">
+                                <div class="gInlay">
+                                    <ul>
+                                        <li>tr을 컨트롤 하지 않고, gInlay로 감싸져있는 내용이 display:none &gt; block 이 됨</li>
+                                        <li>단, td가 가지고 있는 border, padding 정보를 inlayArea enabled를 이용해 여백을 reset함 </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="subject"><a href="#none" class="eInlay">클릭 영역 a.eInlay / 선택하면 selected</a></td>
+                        </tr>
+                        <tr class="inlayArea">
+                            <td colspan="2">
+                                <div class="gInlay">
+                                    <ul>
+                                        <li>tr을 컨트롤 하지 않고, gInlay로 감싸져있는 내용이 display:none &gt; block 이 됨</li>
+                                        <li>단, td가 가지고 있는 border, padding 정보를 inlayArea enabled를 이용해 여백을 reset함 </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                            <td class="subject"><a href="#none" class="eInlay">클릭 영역 a.eInlay / 선택하면 selected</a></td>
+                        </tr>
+                        <tr class="inlayArea">
+                            <td colspan="2">
+                                <div class="gInlay">
+                                    <ul>
+                                        <li>tr을 컨트롤 하지 않고, gInlay로 감싸져있는 내용이 display:none &gt; block 이 됨</li>
+                                        <li>단, td가 가지고 있는 border, padding 정보를 inlayArea enabled를 이용해 여백을 reset함 </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <script type="text/javascript">
+                var  call_inlay = function()
+                {
+                    var opts = {
+                        'selected' : "selected",
+                        'findSelector' : false,
+                        'enableClass' : "enabled",
+                        'indentity' : true,
+                        'eventType' : 'click',
+                        'animate' : true
+                    };
+                    $(".eInlay").inlay(opts);
+                }
+                </script>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>[mTab]</h2>
+                    <ul>
+                        <li>&lt;script type="text/javascript"&gt; <strong>var call_eTab = function() { $.eTab($(".탭클래스명")); }</strong> &lt;/script&gt;</li>
+                        <li>위와 같이 <strong>.탭클래스</strong>를 모두 선택하여 eTab함수의 인수로 넘겨 준다.</li>
+                        <li>한페이지에 탭이 <strong>1~n개가 들어가도 위의 함수 호출은 1회만</strong> 한다.</li>
+                        <li>숨김/보임 처리되는 컨텐츠는 <strong>공통의 class</strong>를 갖는다.</li>
+                        <li>보여질 첫번재 컨텐츠는 <strong>display:block</strong>속성을 지정하고, 형제는 <strong>display:none</strong>을 지정한다.</li>
+                        <li>컨텐츠내용 중 ol의 list-style을 입힐 경우 IE버그가 있으므로 주의한다. : <a href="http://stackoverflow.com/questions/5584500/ordered-list-showing-all-zeros-in-ie9" target="_blank">참고사이트 가기</a></li>
+                    </ul>
+                </div>
+                <div id="tabTest" class="mTab typeNav">
+                    <ul>
+                        <li class="selected"><a href="#tabTestCont_1">상품정보</a></li>
+                        <li><a href="#tabTestCont_2">상품옵션</a></li>
+                        <li><a href="#tabTestCont_3">관련상품</a></li>
+                        <li><a href="#tabTestCont_4">가격할인</a></li>
+                    </ul>
+                </div>
+                <div id="tabTestCont_1" class="tabTestCont" style="display:block;">
+                    1
+                </div>
+                <div id="tabTestCont_2" class="tabTestCont" style="display:none;">
+                    2
+                </div>
+                <div id="tabTestCont_3" class="tabTestCont" style="display:none;">
+                    3
+                </div>
+                <div id="tabTestCont_4" class="tabTestCont" style="display:none;">
+                    4
+                </div>
+<div class="mGuideBox">
+<h2>탭 사용 예</h2>
+<pre><code style="font-size:12px; background:none; ">&lt;script type="text/javascript"&gt;
+var call_eTab = function() {
+    $.eTab($(".mTab"));
+}
+&lt;/script&gt;</code></pre>
+</div>
+                <script type="text/javascript">
+                    var call_eTab = function() {
+                        $.eTab($(".mTab"));
+                    }
+                </script>
+            </div>
+
+
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>
+

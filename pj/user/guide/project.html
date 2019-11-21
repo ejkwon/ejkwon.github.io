@@ -1,0 +1,27 @@
+<?php include('./include/top.html'); ?>
+    <div id="guideSnb">
+        <h2><?=$P_TYPE?> 프로젝트</h2>
+        <?php if(!$P_NAME){ ?>
+        <div id="guideFindProject">
+            <input type="text" placeholder="프로젝트 검색" />
+        </div>
+        <?php } ?>
+        <div class="guideTreeControl">
+            <a href="#none" class="allCollapse">메뉴 모두 닫힘</a>
+            <a href="#none" class="allExpand">메뉴 모두 펼침</a>
+            <a href="#none" class="allToggle">트리메뉴 모두 열기/닫기 전환</a>
+        </div>
+        <ul id="guideTree" class="treeview">
+        </ul>
+        <div class="guideFoldBar">
+            <button type="button">메뉴 숨김</button>
+        </div>
+    </div>
+    <hr class="guideLayout" />
+    <div id="guideContent" class="typeFrame">
+        <iframe src="<?=$ROOT?>/intro.html" frameborder="0" id="guideFrame"></iframe>
+    </div><!-- //content -->
+    <script type="text/javascript">
+        $.fn.projectList('<?=$ROOT?>', '<?=$P_TYPE?>', '<?=$P_NAME?>');
+    </script>
+<?php include('./include/bottom.html'); ?>

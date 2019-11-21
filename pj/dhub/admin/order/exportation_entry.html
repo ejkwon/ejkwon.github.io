@@ -1,0 +1,496 @@
+<?php include('../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>수출신고관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li>주문관리</li>
+                        <li class="now" title="현재 페이지">수출신고관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>확인필요 주문현황</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>확인필요 주문현황</caption>
+                    <colgroup>
+                        <col style="width:25%;" />
+                        <col style="width:25%;" />
+                        <col style="width:25%;" />
+                        <col style="width:25%;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">배송사 이행신고 확인필요건수</th>
+                            <th scope="col">수출취하요청 필요건수</th>
+                            <th scope="col">관세청 취하승인 필요건수</th>
+                            <th scope="col">KTnet 확인 필요건수</th>
+                        </tr>
+                    </thead>
+                    <tbody class="right">
+                        <tr>
+                            <td class="positive"><a href="#none" class="txtLink">5건</a></td>
+                            <td><a href="#none" class="txtLink">2건</a></td>
+                            <td><a href="#none" class="txtLink">3건</a></td>
+                            <td><a href="#none" class="txtLink">4건</a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="mTitle">
+                    <h2>주문 검색</h2>
+                </div>
+                <!-- 참고 : chzn 테스트용으로 개발소스에 적용하는 범위 아님 -->
+                <script type="text/javascript" src="../../js/chosen.jquery.js"></script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".chzn-select").chosen();
+                        $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+                    });
+                </script>
+                <!-- //참고 -->
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>주문 검색</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>등록일</option>
+                                    <option>판매자주문일자</option>
+                                    <option>수출신고요청일</option>
+                                    <option>수출신고완료일</option>
+                                    <option>수출신고취하요청일</option>
+                                    <option>수출신고취하승인일</option>
+                                    <option>수출이행완료일</option>
+                                </select>
+                                <a href="#none" class="btnDate gDate"><span> 오늘</span></a>
+                                <a href="#none" class="btnDate gDate"><span> 3일</span></a>
+                                <a href="#none" class="btnDate gDate"><span> 7일</span></a>
+                                <a href="#none" class="btnDate gDate"><span> 1개월</span></a>
+                                <a href="#none" class="btnDate gDate"><span> 3개월</span></a>
+                                <a href="#none" class="btnDate gDate"><span> 1년</span></a>
+                                <input type="text" class="fText gDate" value="2016-11-18" />
+                                <a href="javascript:;" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                                <input type="text" class="fText gDate" value="2016-11-18" />
+                                <a href="javascript:;" class="btnIcon icoCal"><span>달력보기</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">검색어</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>선택</option>
+                                    <option>판매사 주문번호</option>
+                                    <option>합포번호</option>
+                                    <option>FB송장번호</option>
+                                    <option>수출신고요청번호</option>
+                                </select>
+                                <input type="text" class="fText" style="width:210px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">송장번호 입력여부</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 전체</label>
+                                <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 입력</label>
+                                <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 입력안됨</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주문처리상태</th>
+                            <td>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 전체</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 주문접수</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 접수확정</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 배송지시</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 출고준비</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 출고보류</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 출고완료</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 출고취소</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 배송중</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 배송완료</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수출신고상태</th>
+                            <td>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 전체</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 미신고</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 신고요청</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 신고처리중</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 신고실패</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 신고완료</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 이행완료</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 신고취하요청</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 신고취하실패</label>
+                                <label class="gSingleLabel"><input type="checkbox" class="fChk" /> 신고취하승인</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">판매사</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" name="radio2" class="fChk" /> 전체</label>
+                                <label class="gLabel"><input type="radio" name="radio2" class="fChk" /> 선택</label>
+                                <span class="gLabel">
+                                    <select data-placeholder="- 전체 판매내역 -" class="mSearchForm chzn-select-deselect" style="width:200px;">
+                                        <option></option>
+                                        <option value="가제조사">가제조사</option>
+                                        <option value="나제조사">나제조사</option>
+                                        <option value="다제조사">다제조사</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩 보기</option>
+                            <option>20개씩 보기</option>
+                            <option>30개씩 보기</option>
+                            <option>50개씩 보기</option>
+                            <option>100개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 상품을</span>
+                        <a href="#alarmResultLayer" class="btnNormal eLayerClick"><span>수출신고 취하</span></a>
+                        <a href="#loading" class="btnNormal eModal"><span>수출신고 취하(처리중)</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+                <div class="mBoardArea typeDhub">
+                    <div class="mBoard gFixed gCell">
+                        <table border="1" summary="" class="eChkTr">
+                        <caption>주문 목록</caption>
+                        <colgroup>
+                            <col style="width:50px" />
+                            <col style="width:100px;" />
+                            <col style="width:130px;" />
+                            <col style="width:auto;" />
+                            <col class="chk" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">판매사</th>
+                                <th scope="col">FB송장<br />번호</th>
+                                <th scope="col">합포번호</th>
+                                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td style="height:210px;">1</td>
+                                <td>카페24</td>
+                                <td><a href="#none">FB20150707<br />00991234567</a></td>
+                                <td>20140315-88888</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                            </tr>
+                            <tr>
+                                <td style="height:210px;">2</td>
+                                <td>티몰유니버스</td>
+                                <td><a href="#none">FB20150707<br />00991234567</a></td>
+                                <td><a href="#none">20140315-88888</a></td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>일문몰</td>
+                                <td><a href="#none">FB20150707<br />00991234567</a></td>
+                                <td><a href="#none">20140315-88888</a></td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>중문몰</td>
+                                <td>FB20150707<br />00991234567</td>
+                                <td>20140315-88888</td>
+                                <td><input type="checkbox" class="rowChk" /></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="mBoard gScroll gCell">
+                        <table border="1" summary="">
+                        <caption>주문 목록</caption>
+                        <colgroup>
+                            <col style="width:90px;" />
+                            <col style="width:75px;" />
+                            <col style="width:95px;" />
+                            <col style="width:95px;" />
+                            <col class="date" />
+                            <col class="date" />
+                            <col class="date" />
+                            <col class="date" />
+                            <col class="date" />
+                            <col style="width:95px;" />
+                            <col style="width:85px;" />
+                            <col style="width:150px;" />
+                            <col style="width:100px;" />
+                            <col style="width:50px;" />
+                            <col style="width:80px;" />
+                            <col style="width:85px;" />
+                            <col style="width:70px;" />
+                            <col style="width:110px;" />
+                            <col style="width:95px;" />
+                            <col style="width:95px;" />
+                            <col style="width:80px;" />
+                            <col style="width:100px;" />
+                            <col style="width:95px;" />
+                            <col style="width:80px;" />
+                        </colgroup>
+                        <!--
+                            ※ 참고: 소팅 아이콘 가이드 : http://fe.cafe24.com/suio/include/layout.php?MODULE=board_col_list
+                        -->
+                        <thead>
+                            <tr>
+                                <th scope="col">수출신고<br />요청번호</th>
+                                <th scope="col">배송국가</th>
+                                <th scope="col">수출신고상태</th>
+                                <th scope="col">수출신고번호</th>
+                                <th scope="col">수출신고<br />요청일</th>
+                                <th scope="col">수출신고<br />완료일</th>
+                                <th scope="col">수출신고<br />취하요청일</th>
+                                <th scope="col">수출신고<br />취하승인일</th>
+                                <th scope="col">수출이행<br />완료일</th>
+                                <th scope="col">주문처리상태</th>
+                                <th scope="col">택배<br />송장번호</th>
+                                <th scope="col">상품명/픔목명</th>
+                                <th scope="col"><strong class="array descend">영문상품명<button type="button">내림차순 정렬</button></strong></th>
+                                <th scope="col">수량</th>
+                                <th scope="col">판매가</th>
+                                <th scope="col"><strong class="array descend">무게(Kg)<button type="button">내림차순 정렬</button></strong></th>
+                                <th scope="col">결제통화</th>
+                                <th scope="col"><strong class="array descend">영문수령자명<button type="button">내림차순 정렬</button></strong></th>
+                                <th scope="col">상점<br />사업자번호</th>
+                                <th scope="col">상점<br />대표상호</th>
+                                <th scope="col">상점<br />대표자명</th>
+                                <th scope="col">상점 주소</th>
+                                <th scope="col">배송메세지<br />/기타 메세지</th>
+                                <th scope="col">메모</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td rowspan="2">20140315-<br />21AA123456</td>
+                                <td rowspan="2" class="left">미국</td>
+                                <td rowspan="2">미신고</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">출고준비</td>
+                                <td rowspan="2" class="left">우체국EMS<br />/EM34792023</td>
+                                <td class="left">카라랩리본원피스_A2OP 원피스 여자 예쁜 옷 여름 썸머 블랙 핑크 랩 카라 리본 플레어카라원피</td>
+                                <td class="left">RIBBED<br />EDGES LONG<br />CARDIGAN</td>
+                                <td class="right">1</td>
+                                <td class="right">20</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:30px;" />
+                                    <span class="gSingle"><a href="#none" class="btnNormal"><span>저장</span></a></span>
+                                </td>
+                                <td rowspan="2">USD</td>
+                                <td rowspan="2" class="left">Kelly Young</td>
+                                <td rowspan="2" class="left">123456778</td>
+                                <td rowspan="2">믹스엑스믹스</td>
+                                <td rowspan="2">홍길동</td>
+                                <td rowspan="2" class="left">123-098<br />서울동작구 신대방2동<br />81번지</td>
+                                <td rowspan="2" class="left">-<br />/ -</td>
+                                <td rowspan="2"><a href="#none" class="txtLink">메모(10)</a></td>
+                            </tr>
+                            <tr>
+                                <td class="left">SCRAP테니스 스커트 팬츠(S,M,L)스카이블루 컬러추가재구매 2000원 할인</td>
+                                <td class="left">SLIM FIT <br />STRETCH <br />SHORT DRESS</td>
+                                <td class="right">1</td>
+                                <td class="right">20</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:30px;" />
+                                    <span class="gSingle"><a href="#none" class="btnNormal"><span>저장</span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">20140315-<br />21AA123456</td>
+                                <td rowspan="2" class="left">중화인민공화국</td>
+                                <td rowspan="2">신고취하승인</td>
+                                <td rowspan="2">1380480125</td>
+                                <td rowspan="2">2016-11-14 16:16:16</td>
+                                <td rowspan="2">2016-11-14 16:16:16</td>
+                                <td rowspan="2">2016-11-14 16:16:16</td>
+                                <td rowspan="2">2016-11-14 16:16:16</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">출고취소</td>
+                                <td rowspan="2" class="left">-<br />/ -</td>
+                                <td class="left">심플 타탄체크 스커트<br />/ Green,M</td>
+                                <td class="left">DISTRESSED <br />WHISKERED <br />SKINNY JEANS</td>
+                                <td class="right">1</td>
+                                <td class="right">20</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:30px;" />
+                                    <span class="gSingle"><a href="#none" class="btnNormal"><span>저장</span></a></span>
+                                </td>
+                                <td rowspan="2">CNY</td>
+                                <td rowspan="2" class="left">Kelly Young</td>
+                                <td rowspan="2" class="left">123456778</td>
+                                <td rowspan="2">믹스엑스믹스</td>
+                                <td rowspan="2">홍길동</td>
+                                <td rowspan="2" class="left">123-098<br />서울동작구 신대방2동<br />81번지</td>
+                                <td rowspan="2" class="left">-<br />/ -</td>
+                                <td rowspan="2"><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>메모<em class="icoLink"></em></span></a></td>
+                            </tr>
+                            <tr>
+                                <td class="left">벨피아블라우스<br />/ [Black (블랙)]</td>
+                                <td class="left">MABEL BRA <br />SET</td>
+                                <td class="right">1</td>
+                                <td class="right">20</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:30px;" />
+                                    <span class="gSingle"><a href="#none" class="btnNormal"><span>저장</span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>20140315-<br />21AA123456</td>
+                                <td class="left">일본</td>
+                                <td>신고완료</td>
+                                <td>1380480125</td>
+                                <td>2016-11-14 16:16:16</td>
+                                <td>2016-11-14 16:16:16</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>출고완료</td>
+                                <td class="left">-<br />/ -</td>
+                                <td class="left">심플 타탄체크 스커트<br />/ Green,M</td>
+                                <td class="left">DISTRESSED <br />WHISKERED <br />SKINNY JEANS</td>
+                                <td class="right">1</td>
+                                <td class="right">20</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:30px;" />
+                                    <span class="gSingle"><a href="#none" class="btnNormal"><span>저장</span></a></span>
+                                </td>
+                                <td>JPY</td>
+                                <td class="left">Kelly Young</td>
+                                <td class="left">123456778</td>
+                                <td>믹스엑스믹스</td>
+                                <td>홍길동</td>
+                                <td class="left">123-098<br />서울동작구 신대방2동<br />81번지</td>
+                                <td class="left">-<br />/ -</td>
+                                <td><a href="#none" class="txtLink">메모(10)</a></td>
+                            </tr>
+                            <tr>
+                                <td>20140315-<br />21AA123456</td>
+                                <td class="left">중화인민공화국</td>
+                                <td><a href="#layerAlarm" class="txtLink eLayerClick">신고실패</a></td>
+                                <td>-</td>
+                                <td>2016-11-14 16:16:16</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>출고준비</td>
+                                <td class="left">-<br />/ -</td>
+                                <td class="left">심플 타탄체크 스커트<br />/ Green,M</td>
+                                <td class="left">DISTRESSED <br />WHISKERED <br />SKINNY JEANS</td>
+                                <td class="right">1</td>
+                                <td class="right">20</td>
+                                <td>
+                                    <input type="text" class="fText right" style="width:30px;" />
+                                    <span class="gSingle"><a href="#none" class="btnNormal"><span>저장</span></a></span>
+                                </td>
+                                <td>CNY</td>
+                                <td class="left">Kelly Young</td>
+                                <td class="left">123456778</td>
+                                <td>믹스엑스믹스</td>
+                                <td>홍길동</td>
+                                <td class="left">123-098<br />서울동작구 신대방2동<br />81번지</td>
+                                <td class="left">-<br />/ -</td>
+                                <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>메모<em class="icoLink"></em></span></a></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <p class="empty">검색결과가 없습니다.</p>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 상품을</span>
+                        <a href="#alarmResultLayer" class="btnNormal eLayerClick"><span>수출신고 취하</span></a>
+                        <a href="#loading" class="btnNormal eModal"><span>수출신고 취하(처리중)</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#layerPassword" class="btnNormal eLayerClick"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><strong title="현재페이지">1</strong></li>
+                        <li><a href="#none">2</a></li>
+                        <li><a href="#none">3</a></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>수출신고관리 안내</h2>
+                <div class="content">
+                    <h3>1. 수출신고상태 안내</h3>
+                    <ol>
+                        <li>1) 미신고 : 수출신고요청 전 주문</li>
+                        <li>2) 신고요청 : 수출신고요청 후 관세청에서 발급한 수출신고번호를 회신 받기 전 주문</li>
+                        <li>3) 신고처리중 : 수출신고요청 후 관세청에서 수출신고처리중인 주문</li>
+                        <li>4) 신고실패 : 수출신고요청 후 수출신고처리 중 오류가 발생한 주문 (KTnet 확인 필요 고객지원센터 02-6000-2169)</li>
+                        <li>5) 신고완료 : 수출신고요청 후 관세청에서 발급한 수출신고번호를 회신 받은 주문</li>
+                        <li>6) 이행완료 : 수출신고완료된 주문이 배송사를 통하여 수출이행처리된 주문</li>
+                        <li>7) 신고취하요청 : 수출신고취하요청 후 관세청에서 발급한 수출신고승인처리 결과를 받기 전 주문</li>
+                        <li>8) 신고취하실패 : 수출신고취하요청 후 수출신고취하처리 중 오류가 발생한 주문 (KTnet 확인 필요 고객지원센터 02-6000-2169)</li>
+                        <li>9) 신고취하승인 : 수출신고취하요청 후 관세청에서 발급한 수출신고승인처리 결과를 받은 주문</li>
+                    </ol>
+                    <h3>2. 확인필요 주문현황 안내</h3>
+                    <ol>
+                        <li>1) 수출신고요청 필요건수 : 수출신고요청이 필요한 주문 건수</li>
+                        <li>2) 배송사 이행신고 확인필요건수: 수출신고완료되어 이행신고 미완료 상태 주문 건수</li>
+                        <li>3) 수출취하요청 필요건수 : 출고취소상태의 수출신고요청/신고완료 상태 주문 건수</li>
+                        <li>4) 관세청 취하승인 필요건수 : 수출신고취하요청되어 수출신고승인 미처리 상태 주문 건수</li>
+                        <li>5) KTnet 확인 필요건수 : 수출신고요청실패/수출신고취하실패 상태의 주문 건수</li>
+                    </ol>
+                </div>
+            </div>
+<?php include('../include/footer.html'); ?>

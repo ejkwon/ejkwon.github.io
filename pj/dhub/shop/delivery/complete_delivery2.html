@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>판매사 배송중 적용 2</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="850, 700"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+    <div id="wrap">
+        <div class="headingArea">
+            <div class="mTitle">
+                <h1>판매사 배송중 적용</h1>
+            </div>
+        </div>
+        <div class="section">
+            <div class="mTitle">
+                <h2>적용 결과</h2>
+            </div>
+            <div class="mBox typeBorder">
+                <ul class="mList typeMore">
+                    <li>성공 : <strong class="txtEm">00</strong>개</li>
+                    <li>실패 : <strong class="txtWarn">00</strong>개</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="mTitle">
+                <h2>적용 실패내역</h2>
+            </div>
+            <div class="mState gMerge">
+                <div class="gRight">
+                    <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+                    <select class="fSelect">
+                        <option>10개씩보기</option>
+                        <option>20개씩보기</option>
+                        <option>30개씩보기</option>
+                        <option>50개씩보기</option>
+                        <option>100개씩보기</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mBoard">
+                <table border="1" summary="">
+                    <caption>적용 실패내역</caption>
+                    <colgroup>
+                        <col style="width:50px;" />
+                        <col style="width:80px;" />
+                        <col style="width:120px;" />
+                        <col style="width:120px;" />
+                        <col style="width:170px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">판매사</th>
+                            <th scope="col">판매사주문번호</th>
+                            <th scope="col">판매사 품주번호</th>
+                            <th scope="col">FB송장번호/택배/송장번호</th>
+                            <th scope="col">실패사유</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>판매사1</td>
+                            <td>2016-2254555</td>
+                            <td>2016-2254555-001</td>
+                            <td>FB7894562111<br />우체국/ EM0909090990</td>
+                            <td>주문 혹은 품주 상태 확인필요</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>판매사2</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>연동설정오류(인증키 기간만료등..)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>판매사3</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>dabagirl - 멀티쇼핑몰 5번에 주문없음</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mPaginate">
+                <a href="#none" class="prev">이전 10페이지</a>
+                <ol>
+                    <li><a href="#none">1</a></li>
+                    <li><a href="#none">2</a></li>
+                    <li><strong title="현재페이지">3</strong></li>
+                    <li><a href="#none">4</a></li>
+                    <li><a href="#none">5</a></li>
+                    <li><a href="#none">6</a></li>
+                    <li><a href="#none">7</a></li>
+                    <li><a href="#none">8</a></li>
+                    <li><a href="#none">9</a></li>
+                    <li><a href="#none">10</a></li>
+                </ol>
+                <a href="#none" class="next">다음 10페이지</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="#none" class="btnEm"><span>닫기</span></a>
+    </div>
+
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

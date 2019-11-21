@@ -1,0 +1,22 @@
+/*
+ * Noto Sans http://fonts.googleapis.com/earlyaccess/notosanskr.css
+*/
+@font-face {
+  font-family:'Noto Sans KR';
+  font-style:normal;
+  font-weight:300;
+  src:url(./NotoSansKR-Light.woff2) format('woff2'),
+    url(./NotoSansKR-Light.woff) format('woff'),
+    url(./NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+  font-family:'Noto Sans KR';
+  font-style:normal;
+  font-weight:500;
+  src:url(./NotoSansKR-Medium.woff2) format('woff2'),
+    url(./NotoSansKR-Medium.woff) format('woff'),
+    url(./NotoSansKR-Medium.otf) format('opentype');
+}
+
+body,input,select,textarea, button { font-family:'Noto Sans KR', 'Dotum', '돋움', 'Arial', 'verdana', sans-serif; font-weight:300; }
+h1, h2, h3, h4, h5, strong { font-weight:500; }

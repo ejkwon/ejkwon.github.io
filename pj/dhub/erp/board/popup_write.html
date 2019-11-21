@@ -1,0 +1,145 @@
+<?php require_once('../../include/header.html'); ?>
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>팝업 관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li><a href="#none">게시판</a></li>
+                        <li class="now" title="현재 페이지">팝업관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>팝업 등록</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                        <caption>공지사항 등록</caption>
+                        <colgroup>
+                            <col style="width:154px;" />
+                            <col style="width:auto;" />
+                            <col style="width:154px;" />
+                            <col style="width:auto;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">제목</th>
+                                <td colspan="3"><input type="text" class="fText" style="width:90%;" /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">팝업대상</th>
+                                <td colspan="3">
+                                    <div class="mForm">
+                                        <label class="gLabel"><input type="radio" class="fChk" name="radio1" /> 전체상점</label>
+                                        <label class="gLabel"><input type="radio" class="fChk" name="radio1" /> 일부상점</label>
+                                        <div class="addForm">
+                                            <select class="chosen-select" multiple="multiple">
+                                                <option>MIXXMIX</option>
+                                                <option>zemmaworld-카페24</option>
+                                                <option>DABAGIRL-티몰유니버스</option>
+                                                <option>MIXXMIX-카페24(영문)</option>
+                                                <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                                                <option>MIXXMIX</option>
+                                                <option>zemmaworld-카페24</option>
+                                                <option>DABAGIRL-티몰유니버스</option>
+                                                <option>MIXXMIX-카페24(영문)</option>
+                                                <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">팝업표시기간</th>
+                                <td>
+                                    <input type="text" id="pr_start_date" name="start_date" value="2016-07-29" class="fText gDate" />
+                                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                                    ~
+                                    <input type="text" id="pr_end_date" name="end_date" value="2016-08-04" class="fText gDate" />
+                                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                                <th scope="row">공개설정</th>
+                                <td>
+                                    <label class="gLabel"><input type="radio" class="fChk" name="radio2" /> 공개</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" name="radio2" /> 비공개</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">팝업표시위치</th>
+                                <td colspan="3">
+                                    화면 위로부터
+                                    <input type="text" class="fText right" style="width:25px;" value="50" />
+                                    픽셀, 왼쪽으로부터
+                                    <input type="text" class="fText right" style="width:25px;" value="50" />
+                                    픽셀에 노출
+                                </td>
+                           </tr>
+                           <tr>
+                               <th scope="row">팝업크기</th>
+                               <td colspan="3">
+                                   가로
+                                    <input type="text" class="fText right" style="width:25px;" value="400" />
+                                    픽셀, 왼쪽으로부터
+                                    <input type="text" class="fText right" style="width:25px;" value="400" />
+                                    픽셀
+                               </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">창닫기방법</th>
+                                <td colspan="3">
+                                    <label class="gLabel"><input type="radio" class="fChk" name="radio3" /> 오늘 하루 열지 않음</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" name="radio3" /> 다시 열지 않음</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="gEditor"><img src="//img.echosting.cafe24.com/suio/@editor.gif" alt="" /></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mButton gCenter">
+                <a href="#popupPreviewLayer" class="btnSubmit eLayerClick"><span>미리보기</span></a>
+                <a href="#none" class="btnSubmit"><span>저장</span></a>
+                <a href="#none" class="btnEm"><span>취소</span></a>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>팝업 등록</h2>
+                <div class="content">
+                    <h3>팝업 대상</h3>
+                    <p>'일부상점'을 선택하고 상점을 등록하면, 등록된 상점들에게만 해당 팝업 내용이 표시됩니다.</p>
+                    <h3>팝업 표시 기간 및 공개 설정</h3>
+                    <ul>
+                        <li>팝업창이 표시될 시작 일자와 종료 일자를 설정합니다.</li>
+                        <li>팝업창 표시 일자에 해당하는 날이더라도 공개설정이 '비공개'로 되어 있으면, 팝업창이 표시되지 않습니다.</li>
+                    </ul>
+                    <h3>팝업창 세부 설정</h3>
+                    <p>팝업창 표시 위치, 크기, 창닫기 방법을 설정합니다.</p>
+                    <h3>팝업 내용 등록</h3>
+                    <p>에디터 툴을 이용하여 팝업 내용을 등록 합니다.</p>
+                </div>
+            </div>
+
+<script src="/js/scm/dhub/chosen.jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {width:"100%"},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+</script>
+
+<?php require_once('../../include/footer.html'); ?>

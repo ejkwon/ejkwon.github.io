@@ -1,0 +1,137 @@
+<?php
+    include('../include/header.html');
+?>
+    <!-- container -->
+    <div id="container">
+        <?php include('../include/sidebar.html'); ?>
+        <!-- content -->
+        <div id="content">
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>버튼 관리</h1>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>검색</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>버튼 검색</caption>
+                    <tbody>
+                    <tr>
+                        <th scope="row">검색어</th>
+                        <td>
+                            <select class="fSelect">
+                                <option>버튼명</option>
+                                <option>자동 로그인 도메인</option>
+                            </select>
+                            <input type="text" class="fText" style="width:200px" />
+                            <a class="btnSearch" href="#none">
+                                <span>검색</span>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>현황</h2>
+                </div>
+                <div class="mState">
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>버튼명 오름차순 보기</option>
+                            <option>권한 보유자 많은 순 보기</option>
+                        </select>
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option selected="selected">20개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                            <option>전체보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gRight">
+                        <a href="#none" class="btnCtrl"><span>등록</span></a>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>검색 상세 목록</caption>
+                    <colgroup>
+                        <col style="width:60px;" />
+                        <col style="width:auto;" />
+                        <col style="width:100px;" />
+                        <col style="width:auto" />
+                        <col style="width:120px;" />
+                        <col style="width:110px;" />
+                        <col style="width:90px;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">버튼명</th>
+                            <th scope="col">위치</th>
+                            <th scope="col">자동 로그인 도메인</th>
+                            <th scope="col">자동 로그인 종류</th>
+                            <th scope="col">권한 보유자</th>
+                            <th scope="col">버튼 관리</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center middle">
+                        <tr>
+                            <td>799</td>
+                            <td class="left">hosting.cafe24.com</td>
+                            <td>1영역</td>
+                            <td class="left">hosting.cafe24.com</td>
+                            <td>link</td>
+                            <td class="right"><a href="#none" class="txtLink">350</a></td>
+                            <td><a href="#none" class="btnNormal"><span>보기</span></a></td>
+                        </tr>
+                        <tr>
+                            <td>788</td>
+                            <td class="left">agency.cafe24.com</td>
+                            <td>2영역</td>
+                            <td class="left">agency.cafe24.com</td>
+                            <td>ds</td>
+                            <td class="right"><a href="#none" class="txtLink">200</a></td>
+                            <td><a href="#none" class="btnNormal"><span>보기</span></a></td>
+                        </tr>
+                        <tr>
+                            <td>782</td>
+                            <td class="left">리셀러 빌더 어드민</td>
+                            <td>3영역</td>
+                            <td class="left">userid.resellerdomain.com</td>
+                            <td>resellerBuilder</td>
+                            <td class="right"><a href="#none" class="txtLink">10</a></td>
+                            <td><a href="#none" class="btnNormal"><span>보기</span></a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p class="empty">검색 결과가 없습니다.</p>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //container -->
+<?php include('../include/footer.html'); ?>

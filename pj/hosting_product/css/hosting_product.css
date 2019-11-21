@@ -1,0 +1,472 @@
+@charset "utf-8";
+
+/* Reset */
+.prdIndex, .prdIndex th, .prdIndex td, .prdIndex h1, .prdIndex h2, .prdIndex h3, .prdIndex h4 { line-height:1.4; font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; color:#333; -webkit-text-size-adjust:none; }
+body { min-width:980px; }
+.prdIndex table { table-layout:fixed; width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+.prdIndex table img { vertical-align:middle; }
+.prdIndex caption { display:none; }
+.prdIndex th, .prdIndex td { border:0; word-wrap:break-word; }
+.prdIndex button { overflow:visible; padding:0; margin:0; border:0; cursor:pointer; background-color:transparent; }
+
+/* Dimmed */
+.dimmed { z-index:102; position:fixed; left:0px; top:0px; right:0px; bottom:0px; background-color:#fff; opacity:0.7; filter:alpha(opacity=70); }
+.dimmed.hide { background:none; }
+
+/* sidebar */
+#sidebar { float:left; width:206px; }
+#sidebar .snbTitle { height:45px; padding:35px 10px 6px; font-size:22px; line-height:34px; font-weight:normal; }
+#sidebar .snbTitle em { display:block; font-size:11px; color:#666; line-height:11px; }
+#snb { border-top:2px solid #3f5887; }
+#snb a { display:block; padding:14px 10px; font-size:13px; font-weight:bold; }
+#snb > li { border-bottom:1px solid #dddcdc; }
+#snb > li > a { position:relative; padding-right:25px; background-color:#f9fbfc; -webkit-transition:all .1s ease-out; transition:all .1s ease-out; }
+#snb > li > a:hover { color:#1a7ae2; }
+#snb > li.selected > a { color:#1a7ae2; background-color:#fff; }
+#snb > li > a:before { content:""; position:absolute; top:19px; right:12px; width:7px; height:7px; border-top:solid 1px #6d6e6e; border-right:solid 1px #6d6e6e; -webkit-transform:rotate(45deg); transform:rotate(45deg); -webkit-transition:all .1s ease-out; transition:all .1s ease-out; }
+#snb > li > a:hover:before { border-color:#1a7ae2; }
+#snb > li.selected > a:before { top:17px; border-color:#1a7ae2; -webkit-transform:rotate(135deg); transform:rotate(135deg); }
+#snb .children { display:none; padding:0 0 10px; }
+#snb .children > li > a { padding:7px 10px; font-size:12px; font-weight:normal; color:#888; -webkit-transition:all .1s ease-out; transition:all .1s ease-out; }
+#snb .children .selected a,
+#snb .children a:hover { color:#333; background-color:#e1f2ff; }
+#snb .children > li > a > img { vertical-align:middle; }
+#sidebar .findHosting { margin:20px 0 0; }
+#sidebar .findHosting a { display:block; }
+#sidebar .addService { margin:16px 10px 0; }
+#sidebar .addService h3 { margin:0 0 10px; font-size:13px; }
+#sidebar .addService .list a { display:block; padding:2px 0 2px 15px; font-size:12px; color:#555; background:url("//img.cafe24.com/images/hosting2/product/bg_bullet.gif") 1px 8px no-repeat; }
+#sidebar .addService .list a:hover { text-decoration:underline; }
+#sidebar .cscenter { margin:18px 0 0; }
+
+/* content */
+#content { position:relative; float:right; width:750px; }
+
+/* blank */
+.bTopXS { margin-top:5px !important; }
+.bTopS { margin-top:10px !important; }
+.bTopM { margin-top:15px !important; }
+
+/* text */
+.txtEm { color:#1a7ae2; }
+.txtStrong { color:#258a0e; }
+.txtPrice { color:#1a7ae2; font-size:16px; }
+.txtWarn { color:#e73d16; }
+.txtLink { color:#1a7ae2; text-decoration:underline; }
+.txtLink:hover { color:#1a7ae2; }
+
+/* btnIcon 아이콘형 버튼 */
+a.btnIcon { display:inline-block; overflow:hidden; font-size:1px; line-height:0; text-indent:150%; white-space:nowrap; vertical-align:middle; background:url("//img.cafe24.com/images/hosting2/product/sfix_button.png") 0 0 no-repeat; }
+.btnIcon.icoTip { width:14px; height:14px ; background-position:0 0; }
+
+/* 버튼 아이콘 */
+.icoLink:after { content:""; position:absolute; top:50%; width:4px; height:4px; margin:-3px 0 0; border-top:2px solid #99999a; border-right:2px solid #99999a; -webkit-transform:rotate(45deg); transform:rotate(45deg); }
+
+/* 텍스트 아이콘 */
+.icoNew,
+.icoQuadcore { overflow:hidden; display:inline-block; margin:0 0 0 3px; font-size:1px; line-height:0; white-space:nowrap; vertical-align:middle; text-indent:150%; background:url("//img.cafe24.com/images/hosting2/product/sfix_icon_text.png") 0 0 no-repeat; }
+.icoNew { width:11px; height:11px; background-position:0 0; }
+.icoQuadcore { width:43px; height:14px; margin:-2px 0 0; background-position:-50px 0; }
+
+/* 기본 시스템 버튼 */
+.btnNormal,
+.btnEm,
+.btnLink { display:inline-block; position:relative; font-weight:bold; text-align:center; vertical-align:middle; text-decoration:none; white-space:nowrap; box-sizing:border-box; }
+    /* btnNormal */
+    .btnNormal { height:26px; padding:0 14px; font-size:13px; line-height:22px; border:1px solid #c0c6ca; background-color:#fff; border-radius:2px; }
+    .btnNormal:hover { color:#333; }
+    .btnNormal.icoLink { padding-right:25px; }
+    .btnNormal.icoLink:after { right:14px; }
+    /* btnEm */
+    .btnEm { height:30px; padding:0 14px; font-size:12px; color:#fff; line-height:26px; border:1px solid transparent; background-color:#6b9bd3; }
+    .btnEm:hover { color:#fff; }
+    .btnEm.icoLink { padding-right:25px; }
+    .btnEm.icoLink:after { right:14px; border-color:#fff; }
+    /* btnLink */
+    .btnLink { height:20px; padding:0 10px; font-size:11px; color:#1a7ae2; line-height:16px; border:1px solid #7fb7f3; border-radius:2px; background-color:#f9fbfc; }
+    .btnLink:hover { color:#1a7ae2; }
+    .btnLink.icoLink { padding-right:20px; }
+    .btnLink.icoLink:after { right:10px; border-width:1px; border-color:#1a7ae2; }
+
+/* mTitle */
+#content .headingArea { position:relative; height:34px; padding:35px 0 17px; }
+#content .mTitle { margin:40px 0 0; border-bottom:1px solid #666; }
+#content .catchphrase + .mTitle { margin-top:0; }
+#content .mMerit.typeDetail + .mTitle { margin-top:20px; }
+#content .headingArea .mTitle { margin-top:0; border-bottom:0; }
+#content .headingArea .mTitle h2 { display:inline-block; font-size:28px; line-height:34px; font-weight:bold; letter-spacing:-1.5px; }
+#content .headingArea .mTitle .desc { display:inline-block; margin:0 0 0 10px; font-size:16px; word-spacing:-1.5px;}
+#content .headingArea .mTitle .desc img { vertical-align:middle; }
+#content .mTitle h3 { padding:0 0 10px; font-size:18px; }
+#content .mTitle h4 { position:relative; display:inline-block; margin:7px 0 0; padding:0 0 10px 11px; font-size:14px; font-weight:normal; }
+#content .mTitle h4:before { content:""; position:absolute; top:9px; left:0; width:4px; height:1px; background-color:#333; }
+.prdIndex .subTitle { display:block; margin:0 0 5px; }
+
+/* mBoard */
+.mBoard .center { text-align:center; }
+.mBoard thead th { padding:18px 5px; font-size:14px; background-color:#e9f0f7; border-left:1px solid #d0dde5; border-bottom:1px solid #768c96;  }
+.mBoard thead th:first-child { border-left:0; }
+.mBoard tbody th { padding:5px 10px; font-size:14px; font-weight:normal; vertical-align:middle; border:1px solid #d0dde5; border-left:0; background-color:#f4f7fa; }
+.mBoard tbody td { padding:16px 20px; font-size:12px; color:#555; border:1px solid #dce6ef; }
+.mBoard tbody .price { display:block; padding:0 30% 0 0; text-align:right; }
+.mBoard tbody tr:first-child th,
+.mBoard tbody tr:first-child td { border-top:0; }
+.mBoard tbody tr td:last-child { border-right:0; }
+.mBoard.gCell td { padding:9px; }
+    /* mBoard + typeProduct */
+    .mBoard.typeProduct { border-top:2px solid #3f5887; border-bottom:1px solid #9fb1c0; }
+    .mBoard.typeProduct thead th { padding:8px 5px; font-size:12px; color:#333; border:1px solid #ccd6df; background-color:#f0f8fe; }
+    .mBoard.typeProduct thead tr:first-child th { border-top:0; }
+    .mBoard.typeProduct tbody td { padding:8px 4px; font-size:12px; color:#333; border-bottom:0; }
+    .mBoard.typeProduct tbody th { padding:8px 10px; font-size:12px; text-align:left; border:1px solid #d6e1ea; background-color:#fff; border-bottom:0; }
+    .mBoard.typeProduct tbody tr:last-child th,
+    .mBoard.typeProduct tbody tr:last-child td { border-bottom-color:#9fb1c0; }
+    .mBoard.typeProduct tbody tr td:last-child { border-right:1px solid #d6e1ea; }
+    .mBoard.typeProduct .tooltip { position:relative; padding:0 14px 0 0; }
+    .mBoard.typeProduct .desc { display:block; margin:4px 0 0; font-size:11px; color:#888; }
+        .mBoard.typeProduct th .desc { color:#333; }
+    .mBoard.typeProduct .tooltip .btnIcon.icoTip { position:absolute; right:0; bottom:-1px; }
+    .mBoard.typeProduct .autoInstall li { display:inline-block; margin:0 0 0 36px; }
+    .mBoard.typeProduct .autoInstall li:first-child { margin-left:0; }
+    .mBoard.typeProduct th.highlight { background-color:#ddeffa; }
+    .mBoard.typeProduct td.highlight { background-color:#f6f6f6; }
+    .mBoard.typeProduct .btnNormal.apply { width:82px; font-size:13px; }
+    .mBoard.typeProduct .btnNormal:hover,
+    .mBoard.typeProduct .highlight .btnNormal { color:#fff; border-color:#1a7ae2; background-color:#1a7ae2; }
+    /* mBoard내 btnNormal */
+    .mBoard .mList .btnNormal { height:24px; padding:0 8px; line-height:20px; font-size:11px; }
+    .mBoard .mList .btnNormal.icoLink { padding-right:18px; }
+    .mBoard .mList .btnNormal.icoLink:after { right:9px; }
+
+/* mLayer */
+.mLayer { display:none; position:absolute; z-index:10000; left:50%; border:1px solid #3f5887; background-color:#fff; box-sizing:border-box; }
+    .mLayer.gSmall { width:500px; }
+    .mLayer.gMedium { width:570px; }
+    .mLayer.gLarge { width:650px; }
+.mLayer .wrap { padding:20px; }
+.mLayer .header { padding:0 20px; background-color:#3f5887; }
+.mLayer .header .layerTitle { display:inline-block; height:36px; line-height:34px; color:#fff; font-size:16px; }
+.mLayer .mTitle { margin:20px 0 10px; }
+.mLayer .mTitle:first-child { margin-top:0; }
+.mLayer .mTitle h3 { margin:0; padding:0; font-size:14px; }
+.mLayer .mBoard { border-top:1px solid #d0dde5; }
+.mLayer .mBoard tbody th { font-size:12px; }
+.mLayer .mBoard tbody td { padding:8px 20px; }
+.mLayer .mBoard thead th { padding:8px; border-bottom:1px solid #d0dde5; }
+.mLayer button.btnClose { position:absolute; top:10px; right:20px; display:block; padding:0; width:15px; height:15px; color:transparent; line-height:0; font-size:0; -webkit-transition:.5s; -moz-transition:.5s; transition:.5s; }
+.mLayer button.btnClose:before,
+.mLayer button.btnClose:after { content:""; position:absolute; left:0; top:7px; width:100%; height:1px; background-color:#fff; opacity:1; }
+.mLayer button.btnClose:before { -webkit-transform:rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+.mLayer button.btnClose:after { -webkit-transform:rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
+.mLayer button.btnClose:hover { padding:0; border-width:1px; -webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
+
+/* mBox */
+.mBox { margin:10px 0 0; padding:15px; }
+.mBox:after { content:""; display:block; clear:both; }
+.mBox.typeHalf { display:-webkit-flex; display:-ms-flex; display:flex; padding:0; text-align:center; }
+.mBox.typeHalf .gLeft,
+.mBox.typeHalf .gRight { width:50%; padding:15px 20px; border:1px solid #d0dde5; box-sizing:border-box; }
+.mBox.typeHalf .gRight { border-left:0 !important; }
+
+/* mBreadcrumb */
+.mBreadcrumb { position:absolute; right:0px; top:5px; }
+.mBreadcrumb ol { overflow:hidden; }
+.mBreadcrumb li { position:relative; float:left; padding:0 0 0 20px; font-size:12px; line-height:17px; }
+.mBreadcrumb li:before { content:""; position:absolute; top:6px; left:7px; width:5px; height:5px; border-right:solid 1px #1c1a47; border-bottom:solid 1px #1c1a47; -webkit-transform:rotate(-45deg); transform:rotate(-45deg); }
+.mBreadcrumb li.home { background-image:none; }
+.mBreadcrumb li.home:before { left:4px; width:4px; height:4px; border:1px solid #6e8a9e; background-color:#7ca0bb; -webkit-transform:rotate(0deg); transform:rotate(0deg); }
+.mBreadcrumb li.now { font-weight:bold; color:#598eb6; }
+
+/* mTab */
+.tabArea { margin:50px 0 0; }
+.tabArea:last-child { margin-bottom:40px; }
+.mTab { zoom:1; }
+    /* mTab + typeNav */
+    .mTab.typeNav { background-color:#f8f8f8; }
+    .mTab.typeNav ul { position:relative; display:-webkit-flex; display:-ms-flex; display:flex; height:39px; border-top:1px solid #d0d4e2; border-right:1px solid #d0d4e2; border-bottom:2px solid #3f5887; border-left:1px solid #d0d4e2; }
+    .mTab.typeNav ul:after { content:""; display:block; clear:both; }
+    .mTab.typeNav li { -webkit-flex:1; -ms-flex:1; flex:1; min-width:0; }
+    .mTab.typeNav li a { position:relative; display:block; min-width:40px; height:39px; margin:0 -1px 0 0; padding:0 25px; font-size:15px; text-align:center; line-height:39px; border-right:1px solid #d0d4e2; text-decoration:none;  }
+    .mTab.typeNav li a:hover { color:#333; }
+    .mTab.typeNav li.selected a { position:relative; top:-1px; height:40px; margin:0 -1px; color:#063894; font-weight:bold; line-height:37px; border-top:2px solid #063894; border-right:2px solid #063894; border-bottom:0; border-left:2px solid #063894; background-color:#fff; }
+
+/* mMerit */
+.mMerit { zoom:1; }
+.mMerit .list > li:before { background-repeat:no-repeat; }
+.mMerit .subTitle { margin-bottom:12px; font-size:14px; }
+.mMerit .list .desc { font-size:12px; line-height:20px; color:#888; word-break:keep-all; }
+.mMerit .list > li:before { content:""; width:90px; height:90px; }
+    /* mMerit + typeMark */
+    .mMerit.typeMark { margin:0 0 50px; text-align:center; }
+    .mMerit.typeMark .list { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; }
+    .mMerit.typeMark .list > li { width:250px; margin:40px 0 0; padding:0 20px; box-sizing:border-box; }
+    .mMerit.typeMark .list > li:before { display:block; margin:0 auto 17px; }
+        /* mMerit + typeMark + grid2 */
+        .mMerit.typeMark.grid2 { width:500px; margin-left:auto; margin-right:auto; }
+        .mMerit.typeMark.grid2 .list { -webkit-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between; }
+    /* mMerit + typeDetail */
+    .mMerit.typeDetail .list > li { position:relative; display:-webkit-flex; display:-ms-flex; display:flex; min-height:130px; padding:20px 40px 20px 130px;; border-top:1px solid #e1e1e1; box-sizing:border-box; -webkit-flex-direction:column; -ms-flex-direction:column; flex-direction:column; -webkit-justify-content:center; -ms-justify-content:center; justify-content:center; }
+    .mMerit.typeDetail .list > li:before { position:absolute; left:0; top:50%; margin:-45px 0 0; }
+    .mMerit.typeDetail .list > li:first-child { border-top:0; }
+    /* mMerit + typeService */
+    .mMerit.typeService .list { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; }
+    .mMerit.typeService .list > li { position:relative; width:50%; min-height:160px; padding:40px 40px 0 130px; box-sizing:border-box; }
+    .mMerit.typeService .list > li:before { position:absolute; left:0; }
+        /* 웹호스팅 > 10G광아우토반FullSSD */
+        .mMerit .list > li[class*="autoban"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_autoban.jpg"); }
+        /* 웹호스팅 > 32bit광호스팅 */
+        .mMerit .list > li[class*="bit32"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_bit32.jpg"); }
+        /* 웹호스팅 > 윈도우광호스팅(SQL2016) */
+        .mMerit .list > li[class*="sql2016"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_sql2016.jpg"); }
+        /* 웹호스팅 > 윈도우광호스팅(SQL2008) */
+        .mMerit .list > li[class*="sql2008"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_sql2008.jpg"); }
+        /* 웹호스팅 > 10g자이언트플러스 */
+        .mMerit .list > li[class*="giant"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_giant.jpg"); }
+        /* 웹호스팅 > 파워업무제한광호스팅 */
+        .mMerit .list > li[class*="powerup"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_powerup.jpg"); }
+        /* 웹호스팅 > 보장형단독웹호스팅 */
+        .mMerit .list > li[class*="exclusive"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_exclusive.jpg"); }
+        /* 웹호스팅 > 리눅스단독웹호스팅 */
+        .mMerit .list > li[class*="linux"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_linux.jpg"); }
+        /* 웹호스팅 > 윈도우단독웹호스팅 */
+        .mMerit .list > li[class*="windows"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/web/sfix_icon_windows.jpg"); }
+        /* 스페셜호스팅 > 이미지호스팅 */
+        .mMerit .list > li[class*="image"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_image.jpg"); }
+        /* 스페셜호스팅 > 모바일스트리밍호스팅 */
+        .mMerit .list > li[class*="mobile"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_mobile.jpg"); }
+        /* 스페셜호스팅 > 다운로드CDN */
+        .mMerit .list > li[class*="downloadcdn"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_downloadcdn.jpg"); }
+        /* 스페셜호스팅 > 64bit JSP광호스팅 */
+        .mMerit .list > li[class*="bit64"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_bit64.jpg"); }
+        /* 스페셜호스팅 > Tomcat JSP광호스팅 */
+        .mMerit .list > li[class*="tomcat"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_tomcat.jpg"); }
+        /* 스페셜호스팅 > node.js 호스팅 */
+        .mMerit .list > li[class*="nodejs"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_nodejs.jpg"); }
+        /* 스페셜호스팅 > MSSQL DB호스팅 */
+        .mMerit .list > li[class*="mssql"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_mssql.jpg"); }
+        /* 스페셜호스팅 > MySQL InnoDB호스팅 */
+        .mMerit .list > li[class*="innodb"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_innodb.jpg"); }
+        /* 스페셜호스팅 > Redis광호스팅 */
+        .mMerit .list > li[class*="redis"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_redis.jpg"); }
+        /* 스페셜호스팅 > Memcached광호스팅 */
+        .mMerit .list > li[class*="memcached"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_memcached.jpg"); }
+        /* 스페셜호스팅 > SMS호스팅 */
+        .mMerit .list > li[class*="sms"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_sms.jpg"); }
+        /* 스페셜호스팅 > 빌더호스팅 */
+        .mMerit .list > li[class*="builder"]:before { background-image:url("//img.cafe24.com/images/hosting2/product/special/sfix_icon_builder.jpg"); }
+            .mMerit .list [class$='_1']:before { background-position:0 0; }
+            .mMerit .list [class$='_2']:before { background-position:-200px 0; }
+            .mMerit .list [class$='_3']:before { background-position:-400px 0; }
+            .mMerit .list [class$='_4']:before { background-position:-600px 0; }
+            .mMerit .list [class$='_5']:before { background-position:-800px 0; }
+            .mMerit .list [class$='_6']:before { background-position:-1000px 0; }
+            .mMerit .list [class$='_7']:before { background-position:-1200px 0; }
+            .mMerit .list [class$='_8']:before { background-position:0 -200px; }
+            .mMerit .list [class$='_9']:before { background-position:-200px -200px; }
+            .mMerit .list [class$='_10']:before { background-position:-400px -200px; }
+            .mMerit .list [class$='_11']:before { background-position:-600px -200px; }
+            .mMerit .list [class$='_12']:before { background-position:-800px -200px; }
+            .mMerit .list [class$='_13']:before { background-position:-1000px -200px; }
+            .mMerit .list [class$='_14']:before { background-position:-1200px -200px; }
+            .mMerit .list [class$='_15']:before { background-position:0 -400px; }
+            .mMerit .list [class$='_16']:before { background-position:-200px -400px; }
+            .mMerit .list [class$='_17']:before { background-position:-400px -400px; }
+            .mMerit .list [class$='_18']:before { background-position:-600px -400px; }
+
+/* catchphrase  */
+.catchphrase { margin:35px 0; font-size:16px; text-align:center; word-spacing:-1.5px; }
+
+/* mSupport */
+.mSupport .mTab.typeTab { margin:0; padding:0 0 10px; }
+.mSupport .list { position:relative; display:-webkit-flex; display:-ms-flex; display:flex; }
+.mSupport .list li { position:relative; -webkit-flex:1; -ms-flex:1; flex:1; min-width:0; }
+.mSupport .list li:after { display:none; z-index:1; content:""; position:absolute; bottom:-18px; left:50%; margin:0 0 0 -8px; width:14px; height:14px; border-top:1px solid #b1d1e5; border-right:1px solid #b1d1e5; background-color:#f3f6fc; -webkit-transform:rotate(-45deg); transform:rotate(-45deg); }
+.mSupport .list li.selected:after { display:block; }
+.mSupport .list a { display:block; padding:25px 5px;color:#555; text-align:center; letter-spacing:-1px; word-break:keep-all; }
+.mSupport .list a:before { content:""; display:block; width:21px; height:21px; margin:0 auto 10px; background-image:url("//img.cafe24.com/images/hosting2/product/sfix_icon_product.gif"); background-repeat:no-repeat; }
+    /* 웹호스팅 > 10G광아우토반FullSSD */
+    .mSupport .list .autoban_1 a:before { background-position:0 0; }
+    .mSupport .list .autoban_2 a:before { background-position:-100px 0; }
+    .mSupport .list .autoban_3 a:before { background-position:-200px 0; }
+    .mSupport .list .autoban_4 a:before { background-position:-300px 0; }
+    .mSupport .list .autoban_5 a:before { background-position:-400px 0; }
+    .mSupport .list .autoban_6 a:before { background-position:-500px 0; }
+    .mSupport .list .autoban_7 a:before { background-position:-600px 0; }
+    .mSupport .list .autoban_8 a:before { background-position:-700px 0; }
+    /* 웹호스팅 > 32bit광호스팅 */
+    .mSupport .list .bit32_1 a:before { background-position:0 -200px; }
+    .mSupport .list .bit32_2 a:before { background-position:-100px -200px; }
+    .mSupport .list .bit32_3 a:before { background-position:-200px -200px; }
+    .mSupport .list .bit32_4 a:before { background-position:-300px -200px; }
+    .mSupport .list .bit32_5 a:before { background-position:-400px -200px; }
+    .mSupport .list .bit32_6 a:before { background-position:-500px -200px; }
+    .mSupport .list .bit32_7 a:before { background-position:-600px -200px; }
+    /* 웹호스팅 > 윈도우광호스팅(SQL2016) */
+    .mSupport .list .sql2016_1 a:before { background-position:0 -400px; }
+    .mSupport .list .sql2016_2 a:before { background-position:-100px -400px; }
+    .mSupport .list .sql2016_3 a:before { background-position:-200px -400px; }
+    .mSupport .list .sql2016_4 a:before { background-position:-300px -400px; }
+    .mSupport .list .sql2016_5 a:before { background-position:-400px -400px; }
+    .mSupport .list .sql2016_6 a:before { background-position:-500px -400px; }
+    .mSupport .list .sql2016_7 a:before { background-position:-600px -400px; }
+    .mSupport .list .sql2016_8 a:before { background-position:-700px -400px; }
+    /* 웹호스팅 > 윈도우광호스팅(SQL2008) */
+    .mSupport .list .sql2008_1 a:before { background-position:0 -600px; }
+    .mSupport .list .sql2008_2 a:before { background-position:-100px -600px; }
+    .mSupport .list .sql2008_3 a:before { background-position:-200px -600px; }
+    .mSupport .list .sql2008_4 a:before { background-position:-300px -600px; }
+    .mSupport .list .sql2008_5 a:before { background-position:-400px -600px; }
+    .mSupport .list .sql2008_6 a:before { background-position:-500px -600px; }
+    .mSupport .list .sql2008_7 a:before { background-position:-600px -600px; }
+    /* 웹호스팅 > 10G 자이언트 플러스 */
+    .mSupport .list .giant_1 a:before { background-position:0 -800px; }
+    .mSupport .list .giant_2 a:before { background-position:-100px -800px; }
+    .mSupport .list .giant_3 a:before { background-position:-200px -800px; }
+    .mSupport .list .giant_4 a:before { background-position:-300px -800px; }
+    .mSupport .list .giant_5 a:before { background-position:-400px -800px; }
+    .mSupport .list .giant_6 a:before { background-position:-500px -800px; }
+    .mSupport .list .giant_7 a:before { background-position:-600px -800px; }
+    .mSupport .list .giant_8 a:before { background-position:-700px -800px; }
+    /* 웹호스팅 > 파워업 무제한 광호스팅 */
+    .mSupport .list .powerup_1 a:before { background-position:0 -1000px; }
+    .mSupport .list .powerup_2 a:before { background-position:-100px -1000px; }
+    .mSupport .list .powerup_3 a:before { background-position:-200px -1000px; }
+    .mSupport .list .powerup_4 a:before { background-position:-300px -1000px; }
+    .mSupport .list .powerup_5 a:before { background-position:-400px -1000px; }
+    .mSupport .list .powerup_6 a:before { background-position:-500px -1000px; }
+    .mSupport .list .powerup_7 a:before { background-position:-600px -1000px; }
+    .mSupport .list .powerup_8 a:before { background-position:-700px -1000px; }
+    /* 웹호스팅 > 보장형 단독웹 호스팅 */
+    .mSupport .list .exclusive_1 a:before { background-position:0 -1200px; }
+    .mSupport .list .exclusive_2 a:before { background-position:-100px -1200px; }
+    .mSupport .list .exclusive_3 a:before { background-position:-200px -1200px; }
+    .mSupport .list .exclusive_4 a:before { background-position:-300px -1200px; }
+    .mSupport .list .exclusive_5 a:before { background-position:-400px -1200px; }
+    .mSupport .list .exclusive_6 a:before { background-position:-500px -1200px; }
+    .mSupport .list .exclusive_7 a:before { background-position:-600px -1200px; }
+    .mSupport .list .exclusive_8 a:before { background-position:-700px -1200px; }
+    /* 웹호스팅 > 리눅스 단독웹호스팅 */
+    .mSupport .list .linux_1 a:before { background-position:0 -1400px; }
+    .mSupport .list .linux_2 a:before { background-position:-100px -1400px; }
+    .mSupport .list .linux_3 a:before { background-position:-200px -1400px; }
+    .mSupport .list .linux_4 a:before { background-position:-300px -1400px; }
+    .mSupport .list .linux_5 a:before { background-position:-400px -1400px; }
+    .mSupport .list .linux_6 a:before { background-position:-500px -1400px; }
+    .mSupport .list .linux_7 a:before { background-position:-600px -1400px; }
+    .mSupport .list .linux_8 a:before { background-position:-700px -1400px; }
+    .mSupport .list .linux_9 a:before { background-position:-800px -1400px; }
+    .mSupport .list .linux_10 a:before { background-position:-900px -1400px; }
+    .mSupport .list .linux_11 a:before { background-position:0 -1500px; }
+    /* 웹호스팅 > 윈도우 단독웹호스팅 */
+    .mSupport .list .windows_1 a:before { background-position:0 -1600px; }
+    .mSupport .list .windows_2 a:before { background-position:-100px -1600px; }
+    .mSupport .list .windows_3 a:before { background-position:-200px -1600px; }
+    .mSupport .list .windows_4 a:before { background-position:-300px -1600px; }
+    .mSupport .list .windows_5 a:before { background-position:-400px -1600px; }
+    .mSupport .list .windows_6 a:before { background-position:-500px -1600px; }
+    .mSupport .list .windows_7 a:before { background-position:-600px -1600px; }
+    .mSupport .list .windows_8 a:before { background-position:-700px -1600px; }
+    .mSupport .list .windows_9 a:before { background-position:-800px -1600px; }
+    .mSupport .list .windows_10 a:before { background-position:-900px -1600px; }
+    /* 스페셜호스팅 > 64bit JSP 광호스팅 */
+    .mSupport .list .bit64_1 a:before { background-position:0 -1800px; }
+    .mSupport .list .bit64_2 a:before { background-position:-100px -1800px; }
+    .mSupport .list .bit64_3 a:before { background-position:-200px -1800px; }
+    .mSupport .list .bit64_4 a:before { background-position:-300px -1800px; }
+    .mSupport .list .bit64_5 a:before { background-position:-400px -1800px; }
+    .mSupport .list .bit64_6 a:before { background-position:-500px -1800px; }
+    .mSupport .list .bit64_7 a:before { background-position:-600px -1800px; }
+    /* 스페셜호스팅 > Tomcat JSP 광호스팅 */
+    .mSupport .list .tomcat_1 a:before { background-position:0 -2000px; }
+    .mSupport .list .tomcat_2 a:before { background-position:-100px -2000px; }
+    .mSupport .list .tomcat_3 a:before { background-position:-200px -2000px; }
+    .mSupport .list .tomcat_4 a:before { background-position:-300px -2000px; }
+    .mSupport .list .tomcat_5 a:before { background-position:-400px -2000px; }
+    /* 스페셜호스팅 > node.js 호스팅 */
+    .mSupport .list .nodejs_1 a:before { background-position:0 -2200px; }
+    .mSupport .list .nodejs_2 a:before { background-position:-100px -2200px; }
+    .mSupport .list .nodejs_3 a:before { background-position:-200px -2200px; }
+    /* 스페셜호스팅 > MySQL InnoDB 호스팅 */
+    .mSupport .list .innodb_1 a:before { background-position:0 -2400px; }
+    .mSupport .list .innodb_2 a:before { background-position:-100px -2400px; }
+    .mSupport .list .innodb_3 a:before { background-position:-200px -2400px; }
+    .mSupport .list .innodb_4 a:before { background-position:-300px -2400px; }
+    .mSupport .list .innodb_5 a:before { background-position:-400px -2400px; }
+    .mSupport .list .innodb_6 a:before { background-position:-500px -2400px; }
+    .mSupport .list .innodb_7 a:before { background-position:-600px -2400px; }
+    /* 스페셜호스팅 > 64bit 광아우토반 빌더호스팅 */
+    .mSupport .list .builder_1 a:before { background-position:0 -2600px; }
+    .mSupport .list .builder_2 a:before { background-position:-100px -2600px; }
+    .mSupport .list .builder_3 a:before { background-position:-200px -2600px; }
+    .mSupport .list .builder_4 a:before { background-position:-300px -2600px; }
+    .mSupport .list .builder_5 a:before { background-position:-400px -2600px; }
+    .mSupport .list .builder_6 a:before { background-position:-500px -2600px; }
+    .mSupport .list .builder_7 a:before { background-position:-600px -2600px; }
+    .mSupport .list .builder_8 a:before { background-position:-700px -2600px; }
+.mSupport .supportCont { display:none; width:100%; padding:30px; color:#555; line-height:20px; border:1px solid #b1d1e5; background-color:#f3f6fc; box-sizing:border-box; word-break:keep-all; }
+    .mSupport .supportCont.show { display:table; }
+.mSupport .supportCont > ul { display:table-cell; }
+.mSupport .supportCont > ul > li { margin:6px 0 0; }
+.mSupport .supportCont > ul > li:first-child { margin-top:0; }
+.mSupport .supportCont .desc { margin:5px 0 0; }
+.mSupport .supportCont .desc li { position:relative; margin:4px 0 0; padding:0 0 0 13px; }
+.mSupport .supportCont .desc li:before { content:""; position:absolute; top:9px; left:4px; width:4px; height:1px; background-color:#555; }
+.mSupport .supportCont .desc .empty { padding-left:0; }
+.mSupport .supportCont .desc .empty:before { display:none; }
+.mSupport .supportCont .desc li:first-child { margin-top:0; }
+.mSupport .supportCont .button { display:table-cell; width:98px; padding:0 0 0 30px; vertical-align:middle; }
+
+/* mList */
+.mList { font-size:12px; word-break:keep-all; }
+.mList li { position:relative; padding:0 0 0 9px; line-height:20px; color:#555; }
+.mList li:before { content:""; position:absolute; top:9px; left:0; width:4px; height:1px; background-color:#555; }
+    .mMerit .mList li { line-height:20px; color:#888; }
+    .mMerit .mList li:before { background-color:#888; }
+.mList .heading { display:block; color:#333; }
+.mList .button { padding:5px 0 10px; font-size:0; }
+.mList [class^='btn'] { margin-left:6px; }
+.mList .button a:first-child { margin-left:0; }
+.mList .btnIcon { margin-left:0; }
+.mList .empty { padding-left:0; }
+.mList .empty:before { display:none; }
+    .mBoard .mList li { line-height:24px; }
+    .mBoard .mList li:before { top:12px; background-color:#555; }
+    /* 2depth */
+    .mList li ul,
+    .mList li ol { margin:0 0 4px; }
+    .mList li li:before { width:2px; height:2px; }
+    /* 3depth */
+    .mList li li ul,
+    .mList li li ol { margin-left:9px; }
+
+/* mHelp */
+.mHelp { margin:20px 0 0; word-break:keep-all; }
+.mHelp h3 { padding:0 0 0 23px; font-size:14px; line-height:22px; background:url("//img.cafe24.com/images/hosting2/product/bg_help.png") 0 4px no-repeat; }
+.mHelp ul { margin:5px 0 0; }
+.mHelp ul li { position:relative; padding:0 0 0 9px; font-size:12px; line-height:20px; }
+.mHelp ul li:before { content:""; position:absolute; width:4px; height:1px; left:0; top:9px; background-color:#333; }
+
+/* mCustomer */
+.mCustomer { position:relative; padding:27px 10px 0 140px; font-size:12px; color:#666; box-sizing:border-box; }
+.mCustomer:before { content:""; position:absolute; left:0; top:25px; width:90px; height:90px; background:url("//img.cafe24.com/images/hosting2/product/bg_customer.png") 0 0 no-repeat; }
+.mCustomer .info { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between; }
+.mCustomer .desc { margin:0 0 14px; font-size:12px; color:#1f1e1e; letter-spacing:-0.5px; }
+.mCustomer .contact { -webkit-flex:1; -ms-flex:1; flex:1; font-size:0; }
+.mCustomer .contact li { line-height:26px; margin:6px 0 0; }
+.mCustomer .contact li:first-child { margin-top:0; }
+.mCustomer .csTitle { display:inline-block; margin:0 20px 0 0; font-size:14px; color:#1a7ae2; vertical-align:middle; }
+.mCustomer .csTitle:before { content:""; display:inline-block; width:4px; height:4px; margin:-3px 5px 0 0; background-color:#1f1e1e; vertical-align:middle; }
+.mCustomer .email { display:inline-block; margin:0 7px 0 0; font-size:12px; vertical-align:middle; }
+.mCustomer .tel { display:inline-block; font-size:12px; vertical-align:middle; }
+.mCustomer .button { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-direction:column; -ms-flex-direction:column; flex-direction:column; -webkit-justify-content:center; -ms-justify-content:center; justify-content:center; }
+.mCustomer .button a + a { margin:6px 0 0; }
+.mCustomer .btnNormal.cs { width:124px; }
+.mCustomer .num { color:#1f1e1e; }
+
+/* mImage */
+.mImage { margin:30px 0 0 -10px; }
+
+/* mCode */
+.mCode { display:-webkit-flex; display:-ms-flex; display:flex; margin:10px 0 0; color:#666; }
+.mCode .text { padding:0 5px 0 0; }
+.mCode .code { white-space:pre-wrap; }

@@ -1,0 +1,604 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>출고지시서</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li>출고</li>
+            <li>출고지시현황</li>
+            <li class="now" title="현재 페이지">출고지시서</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>기본 정보</h2>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>기본 정보</caption>
+        <colgroup>
+            <col style="width:154px;*width:135px;" />
+            <col style="width:auto;" />
+            <col style="width:154px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">출고지시번호</th>
+                <td>20140315-21AA123460 <a href="#layerProductAdd" class="btnNormal eLayerClick"><span>상품추가</span></a></td>
+                <th scope="row">등록일</th>
+                <td>2014.03.05 12:45:00</td>
+            </tr>
+            <tr>
+                <th scope="row">판매사</th>
+                <td>옥션</td>
+                <th scope="row">판매사 주문번호</th>
+                <td><a href="#none" class="txtLink" target="_blank" title="새창 열림">20140102-23232566</a></td>
+            </tr>
+            <tr>
+                <th scope="row">주문자정보</th>
+                <td>김주문/ 02-111-1111/ 010-1010-1010</td>
+                <th scope="row">주문자 주소</th>
+                <td>우편번호: 111-1111   서울 동작구 신대방2동120</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>상품/품목 정보</h2>
+    </div>
+    <div class="mBoard gScroll">
+        <table border="1" summary="" class="eChkBody">
+        <caption>상품/품목 정보</caption>
+        <colgroup>
+            <col class="chk" />
+            <col style="width:40px" />
+            <col style="width:100px" />
+            <col style="width:110px" />
+            <col style="width:120px" />
+            <col style="width:70px" />
+            <col style="width:90px" />
+            <col style="width:70px" />
+            <col style="width:70px" />
+            <col style="width:90px" />
+            <col style="width:80px" />
+            <col style="width:70px" />
+            <col style="width:70px" />
+            <col style="width:120px" />
+            <col style="width:60px" />
+            <col style="width:100px" />
+            <col style="width:70px" />
+            <col style="width:80px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+            <col style="width:100px" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                <th scope="col">No.</th>
+                <th scope="col">출고품목번호</th>
+                <th scope="col">바코드/상품코드</th>
+                <th scope="col">상품명/품목명</th>
+                <th scope="col">상품소재</th>
+                <th scope="col">위치코드</th>
+                <th scope="col">수량</th>
+                <th scope="col">재고할당</th>
+                <th scope="col">현재재고<br />(가용/할당)</th>
+                <th scope="col">판매가</th>
+                <th scope="col">통화</th>
+                <th scope="col">HS CODE</th>
+                <th scope="col">택배<br />송장번호</th>
+                <th scope="col">무게(g)</th>
+                <th scope="col">실 배송비<br />(선/착불)</th>
+                <th scope="col">배송정보</th>
+                <th scope="col">처리상태</th>
+                <th scope="col">품주정보01</th>
+                <th scope="col">품주정보02</th>
+                <th scope="col">품주정보03</th>
+                <th scope="col">품주정보04</th>
+                <th scope="col">품주정보05</th>
+                <th scope="col">품주정보06</th>
+                <th scope="col">품주정보07</th>
+                <th scope="col">품주정보08</th>
+                <th scope="col">품주정보09</th>
+                <th scope="col">품주정보10</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="center"><input type="checkbox" class="rowChk" /></td>
+                <td class="center">1</td>
+                <td>20140315-21AA123460-001</td>
+                <td class="center">11111 / 234676</td>
+                <td class="center">
+                    <div class="gGoods">
+                        <p>청바지</p>
+                        <p class="etc">/노랑빨강 XL</p>
+                    </div>
+                </td>
+                <td>면 100%</td>
+                <td class="center">AA-123-097</td>
+                <td class="right">10</td>
+                <td class="center"><a href="#none" class="txtLink">X</a></td>
+                <td class="right">100/ 30</td>
+                <td class="right">1,000</td>
+                <td class="right">KRW</td>
+                <td class="center">$HS CODE</td>
+                <td rowspan="2">
+                    <select class="fSelect">
+                      <option selected="selected">-택배선택-</option>
+                      <option>우체국택배</option>
+                      <option>CJ대한통운</option>
+                      <option>우체국EMS</option>
+                      <option>한진</option>
+                      <option>우정글로벌</option>
+                    </select>
+                    <span class="gSingle">
+                        <label>
+                            <input class="fChk" type="radio" checked="checked" name="radio1" />직접
+                        </label>
+                        <label>
+                            <input class="fChk" type="radio" checked="checked" name="radio1" />연동
+                        </label>
+                    </span>
+                    <input type="text" class="fText right gSingle" style="width:82px;" />
+                    <a href="#none" class="btnNormal gSingle"><span>송장직접 입력</span></a>
+                    <a href="#none" class="btnNormal gSingle"><span>송장연동 입력</span></a>
+                    <a href="#none" class="btnNormal gSingle"><span>송장번호 삭제</span></a>
+                    <a href="#none" class="btnNormal gSingle"><span>배송추가정보</span></a>
+                </td>
+                <td rowspan="2" class="center">
+                    <input type="text" class="fText right" style="width:30px;" />
+                    <a href="#none" class="btnNormal gSingle"><span>저장</span></a>
+                </td>
+                <td rowspan="2" class="right">
+                    <strong>0(선불)</strong>
+                    <span class="gSingle">기본 <input type="text" class="fText right" style="width:40px;" /></span>
+                    <span class="gSingle">기타 <input type="text" class="fText right" style="width:40px;" /></span>
+                </td>
+                <td rowspan="2" class="center"><a href="#none" class="txtLink" target="_blank" title="새창 열림">추가2</a></td>
+                <td rowspan="2" class="center">출고준비<br /><a href="#none" class="btnNormal gSingle"><span>배송나눔</span></a></td>
+                <td>성보1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td class="center"><input type="checkbox" class="rowChk" /></td>
+                <td class="center">2</td>
+                <td>20140315-21AA123460-002</td>
+                <td class="center">111114 / -</td>
+                <td class="center">
+                    <div class="gGoods">
+                        <p>치마</p>
+                        <p class="etc">/빨강</p>
+                    </div>
+                </td>
+                <td>-</td>
+                <td class="center">AA-123-007</td>
+                <td class="right">20</td>
+                <td class="center"><a href="#none" class="txtLink">O</a></td>
+                <td class="right">20/ 9</td>
+                <td class="right">25,000</td>
+                <td class="right">KRW</td>
+                <td class="center">$HS CODE</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="center"><input type="checkbox" class="rowChk" /></td>
+                <td class="center">3</td>
+                <td>20140315-21AA123460-003</td>
+                <td class="center">11111 / 234676</td>
+                <td class="center">
+                    <div class="gGoods">
+                        <p>가디건</p>
+                        <p class="etc">/블루</p>
+                    </div>
+                </td>
+                <td>-</td>
+                <td class="center">AA-301-007</td>
+                <td class="right">12</td>
+                <td class="center"><a href="#none" class="txtLink">O</a></td>
+                <td class="right">1/ 100</td>
+                <td class="right">35,000</td>
+                <td class="right">KRW</td>
+                <td class="center">$HS CODE</td>
+                <td>
+                    <select class="fSelect">
+                      <option>-택배선택-</option>
+                      <option>우체국택배</option>
+                      <option selected="selected">CJ대한통운</option>
+                      <option>우체국EMS</option>
+                      <option>한진</option>
+                      <option>우정글로벌</option>
+                    </select>
+                    <input type="text" class="fText right gSingle" value="456454645" style="width:82px;" />
+                    <a href="#none" class="btnNormal gSingle"><span>배송추가정보</span></a>
+                </td>
+                <td class="center"><input type="text" class="fText right" value="2" style="width:30px;" /></td>
+                <td class="right">
+                    <strong>5,000(착불)</strong>
+                    <span class="gSingle">기본 <input type="text" class="fText right" style="width:40px;" /></span>
+                    <span class="gSingle">기타 <input type="text" class="fText right" style="width:40px;" /></span>
+                </td>
+                <td class="center"><a href="#none" class="txtLink" target="_blank" title="새창 열림">추가1</a></td>
+                <td class="center">출고보류<br /><a href="#none" class="btnNormal gSingle"><span>배송나눔</span></a></td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="center"><input type="checkbox" class="rowChk" /></td>
+                <td class="center">4</td>
+                <td>20140315-21AA123460-004</td>
+                <td class="center"><span class="txtWarn">11111/234676</span></td>
+                <td class="center">
+                    <div class="gGoods">
+                        <p class="txtWarn">가디건</p>
+                        <p class="etc">/블루</p>
+                    </div>
+                </td>
+                <td>-</td>
+                <td class="center"><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>상품연결<em class="icoLink"></em></span></a></td>
+                <td class="right">2</td>
+                <td class="center"><a href="#none" class="txtLink">X</a></td>
+                <td class="right">-</td>
+                <td class="right">20,000</td>
+                <td class="right">KRW</td>
+                <td class="center">$HS CODE</td>
+                <td>-</td>
+                <td class="center">-</td>
+                <td class="right">-</td>
+                <td class="center"><a href="#none" class="txtLink" target="_blank" title="새창 열림">추가3</a></td>
+                <td class="center">출고대기</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="center"><input type="checkbox" class="rowChk" /></td>
+                <td class="center">5</td>
+                <td>20140315-21AA123460-005</td>
+                <td class="center">11111 / 234676</td>
+                <td class="center">
+                    <div class="gGoods">
+                        <p>가디건</p>
+                        <p class="etc">/블루</p>
+                    </div>
+                </td>
+                <td>-</td>
+                <td class="center">AA-301-017</td>
+                <td class="right">2</td>
+                <td class="center"><a href="#none" class="txtLink">O</a></td>
+                <td class="right">100/ 30</td>
+                <td class="right">35,000</td>
+                <td class="right">KRW</td>
+                <td class="center">$HS CODE</td>
+                <td>우체국택배<br />123456789</td>
+                <td class="center">3.25</td>
+                <td class="right">
+                    <strong>4,000</strong>
+                    <span class="gSingle">기본 3,000</span>
+                    <span class="gSingle">기타 1,000</span>
+                </td>
+                <td class="center">기본</td>
+                <td class="center">출고완료</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="center"><input type="checkbox" class="rowChk" /></td>
+                <td class="center">6</td>
+                <td>20140315-21AA123460-006</td>
+                <td class="center">1111112/ 44444</td>
+                <td class="center">
+                    <div class="gGoods">
+                        <p>자켓</p>
+                        <p class="etc">/Free</p>
+                    </div>
+                </td>
+                <td>-</td>
+                <td class="center">AA-501-017</td>
+                <td class="right">1</td>
+                <td class="center">-</td>
+                <td class="right">20/ 9</td>
+                <td class="right">40,000</td>
+                <td class="right">KRW</td>
+                <td class="center">$HS CODE</td>
+                <td>-</td>
+                <td class="center">-</td>
+                <td class="right">-</td>
+                <td class="center">-</td>
+                <td class="center">출고취소</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span>무게일괄저장</span></a>
+            <a href="#none" class="btnNormal"><span>출고취소처리</span></a>
+            <a href="#none" class="btnNormal"><span>출고준비처리</span></a>
+            <a href="#none" class="btnNormal"><span>출고보류처리</span></a>
+            <a href="#none" class="btnNormal"><span>출고완료처리</span></a>
+            <a href="#none" class="btnNormal"><span>배송묶음</span></a>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>배송 정보</h2>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>배송 정보</caption>
+        <colgroup>
+            <col style="width:100px" />
+            <col style="width:130px" />
+            <col style="width:auto" />
+            <col style="width:auto" />
+            <col style="width:130px" />
+            <col style="width:70px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">구분</th>
+                <th scope="col">배송국가</th>
+                <th scope="col">수령자명(수령자명2)/일반전화/휴대전화</th>
+                <th scope="col">주소</th>
+                <th scope="col">배송메세지</th>
+                <th scope="col">수정</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="center">기본</th>
+                <td class="center">대한민국</td>
+                <td>김배송(saraklm)<br />02-000-000 / 010-000-0000/</td>
+                <td>123-123<br />서울 동작구 신대방2동 81번지</td>
+                <td></td>
+                <td class="center"><a href="#none" class="btnNormal"><span>수정</span></a></td>
+            </tr>
+            <tr>
+                <th class="center">추가1</th>
+                <td class="center">대한민국</td>
+                <td>김배송(saraklm)<br />02-000-000 / 010-000-0000/</td>
+                <td>123-123<br />서울 동작구 신대방2동 81번지</td>
+                <td></td>
+                <td class="center"><a href="#none" class="btnNormal"><span>수정</span></a></td>
+            </tr>
+            <tr>
+                <th class="center">추가2</th>
+                <td class="center">대한민국</td>
+                <td>김사탕(-)<br />02-000-000 / 010-000-0000/</td>
+                <td>123-123<br />서울 관악구 봉천동 8989</td>
+                <td></td>
+                <td class="center"><a href="#none" class="btnNormal"><span>수정</span></a></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>추가정보</h2>
+    </div>
+
+    <div class="mState gMerge">
+        <div class="gRight">
+            <a href="#none" class="btnNormal"><span>수정</span></a>
+        </div>
+    </div>
+
+    <div class="mBoard gMedium">
+        <table border="1" summary="">
+        <caption>추가정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">희망택배사</th>
+                <td>우체국EMS</td>
+            </tr>
+            <tr>
+                <th scope="row">배송희망일</th>
+                <td>20150808</td>
+            </tr>
+            <tr>
+                <th scope="row">배송희망시간</th>
+                <td>12시에서 2시사이에 보내주세요</td>
+            </tr>
+            <tr>
+                <th scope="row">후불결제여부</th>
+                <td>후불</td>
+            </tr>
+            <tr>
+                <th scope="row">후불 실결제금액</th>
+                <td>100.23</td>
+            </tr>
+            <tr>
+                <th scope="row">후불결제 수수료</th>
+                <td>12.23</td>
+            </tr>
+            <tr>
+                <th scope="row">후불결제 통화</th>
+                <td>USD</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보01</th>
+                <td>원산지는 모두 부산입니다.</td>
+            </tr>
+             <tr>
+                <th scope="row">추가정보02</th>
+                <td>-</td>
+            </tr>
+             <tr>
+                <th scope="row">추가정보03</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보04</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보05</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보06</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보07</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보08</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보09</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">추가정보10</th>
+                <td>-</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>변경 내역</h2>
+        <a href="#none" title="새창 열림" class="btnNormal" target="_blank"><span>전체보기<em class="icoLink"></em></span></a>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">최근 <strong>4</strong>개 / 총 <strong>10</strong>개</p>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>변경 내역</caption>
+        <colgroup>
+            <col style="width:200px" />
+            <col style="width:120px" />
+            <col style="width:150px" />
+            <col style="width:auto" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><strong class="array descend">변경일시<button type="button">내림차순 정렬</button></strong></th>
+                <th scope="col">처리자</th>
+                <th scope="col">구분</th>
+                <th scope="col">처리 내용</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td>2014-03-08 15:08:09</td>
+                <td>잘처리</td>
+                <td>-</td>
+                <td class="left">'상품명/품목명 외 n개' 출고완료</td>
+            </tr>
+            <tr>
+                <td>2014-03-05 15:08:09</td>
+                <td>나담당</td>
+                <td>상점요청</td>
+                <td class="left">'상품명/품목명' 출고취소 :: $출고취소처리시 입력한 사유표시</td>
+            </tr>
+            <tr>
+                <td>2014-03-03 09:57:21</td>
+                <td>김담당</td>
+                <td>상점요청</td>
+                <td class="left">'상품명/품목명' 상품추가 :: $상품 추가시 입력한 사유표시</td>
+            </tr>
+            <tr>
+                <td>2014-02-28 11:15:16</td>
+                <td>김담당</td>
+                <td>-</td>
+                <td class="left">송장번호 재입력 :: 우체국 123456</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mButton gCenter">
+    <a href="#none" class="btnSubmit"><span>인쇄</span></a>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

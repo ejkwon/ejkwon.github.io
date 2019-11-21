@@ -1,0 +1,182 @@
+<?php
+    include('../include/header.html');
+?>
+    <!-- container -->
+    <div id="container">
+        <?php include('../include/sidebar.html'); ?>
+        <!-- content -->
+        <div id="content">
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>로그인 현황</h1>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>검색</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>로그인 검색</caption>
+                    <tbody>
+                    <tr>
+                        <th scope="row">기간</th>
+                        <td>
+                            <a href="#none" class="btnDate"><span>오늘</span></a>
+                            <a href="#none" class="btnDate"><span>3일</span></a>
+                            <a href="#none" class="btnDate"><span>7일</span></a>
+                            <a href="#none" class="btnDate"><span>1개월</span></a>
+                            <a href="#none" class="btnDate"><span>3개월</span></a>
+                            <a href="#none" class="btnDate"><span>1년</span></a>
+                            <input type="text" id="pr_start_date" name="start_date" value="2013-04-03" class="fText gDate"/>
+                            <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                            ~
+                            <input type="text" id="pr_end_date" name="end_date" value="2013-04-03" class="fText gDate"/>
+                            <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">버튼명</th>
+                        <td>
+                            <select class="fSelect top">
+                              <option value="-전체-">-전체-</option>
+                              <option value="hosting.cafe24.com">hosting.cafe24.com</option>
+                              <option value="reseller.cafe24.com">reseller.cafe24.com</option>
+                              <option value="reselleradmin.cafe24.com">reselleradmin.cafe24.com</option>
+                              <option value="home.cafe24.com">home.cafe24.com</option>
+                              <option value="cmc.cafe24.com">cmc.cafe24.com</option>
+                              <option value="adtok.com">adtok.com</option>
+                              <option value="edu.cafe24.com">edu.cafe24.com</option>
+                              <option value="dbank.cafe24.com">dbank.cafe24.com</option>
+                              <option value="d.cafe24.com">d.cafe24.com</option>
+                              <option value="agency.cafe24.com">agency.cafe24.com</option>
+                              <option value="biz.cafe24.com">biz.cafe24.com</option>
+                              <option value="tax.cafe24.com">tax.cafe24.com</option>
+                              <option value="etax.cafe24.com">etax.cafe24.com</option>
+                              <option value="weblog.cafe24.com">weblog.cafe24.com</option>
+                              <option value="bm-001.cafe24.com">bm-001.cafe24.com</option>
+                              <option value="쇼핑몰 어드민">쇼핑몰 어드민</option>
+                              <option value="쇼핑몰 어드민 (QA용)">쇼핑몰 어드민 (QA용)</option>
+                              <option value="쇼핑몰 어드민 (mnew1.9)">쇼핑몰 어드민 (mnew1.9)</option>
+                              <option value="쇼핑몰 어드민 (mnew2.0)">쇼핑몰 어드민 (mnew2.0)</option>
+                              <option value="쇼핑몰 어드민 (mold1.9)">쇼핑몰 어드민 (mold1.9)</option>
+                              <option value="쇼핑몰 어드민 (mold2.0)">쇼핑몰 어드민 (mold2.0)</option>
+                              <option value="그룹웨어 어드민">그룹웨어 어드민</option>
+                              <option value="그룹웨어 프론트">그룹웨어 프론트</option>
+                              <option value="빌더 어드민">빌더 어드민</option>
+                              <option value="리셀러 빌더 어드민">리셀러 빌더 어드민</option>
+                              <option value="웹메일 어드민">웹메일 어드민</option>
+                              <option value="mvod.cafe24.com">mvod.cafe24.com</option>
+                              <option value="쇼핑몰 어드민 (SUGAR)">쇼핑몰 어드민 (SUGAR)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">검색어</th>
+                        <td>
+                            <select class="fSelect">
+                                <option>사원 이름</option>
+                                <option>사원 아이디</option>
+                                <option>고객 아이디</option>
+                            </select>
+                            <input type="text" class="fText" style="width:200px" />
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>현황</h2>
+                </div>
+
+                <div class="mState">
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option selected="selected">20개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                            <option>전체보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>검색 상세 목록</caption>
+                    <colgroup>
+                        <col style="width:60px;" />
+                        <col class="time" />
+                        <col style="width:110px;" />
+                        <col style="width:100px;" />
+                        <col style="width:130px;" />
+                        <col style="width:110px;" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">일자</th>
+                            <th scope="col">사원 아이디</th>
+                            <th scope="col">사원 이름</th>
+                            <th scope="col">사원 IP</th>
+                            <th scope="col">고객 아이디</th>
+                            <th scope="col">버튼명</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center middle">
+                        <tr>
+                            <td>799</td>
+                            <td>2015-03-11 11:35</td>
+                            <td>ejkim</td>
+                            <td>김은주</td>
+                            <td>123.333.333.33</td>
+                            <td>stylenanda</td>
+                            <td class="left">hosting.cafe24.com</td>
+                        </tr>
+                        <tr>
+                            <td>788</td>
+                            <td>2015-03-11 11:35</td>
+                            <td>ejkim01</td>
+                            <td>김은진</td>
+                            <td>123.333.333.33</td>
+                            <td>stylenanda</td>
+                            <td class="left">agency.cafe24.com</td>
+                        </tr>
+                        <tr>
+                            <td>782</td>
+                            <td>2015-03-11 11:35</td>
+                            <td>cskim</td>
+                            <td>김철수</td>
+                            <td>123.333.333.33</td>
+                            <td>stylenanda</td>
+                            <td class="left">리셀러 빌더 어드민</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p class="empty">검색 결과가 없습니다.</p>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //container -->
+<?php include('../include/footer.html'); ?>

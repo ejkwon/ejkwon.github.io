@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>엑셀 다운로드 양식 등록</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="800, 600"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>엑셀 다운로드 양식 등록</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mBoard gMedium">
+            <table border="1" summary="">
+            <caption>양식 선택</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">메뉴</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>메뉴를 선택하세요.</option>
+                            <option>상품>상품목록</option>
+                            <option>입고>전체입고현황</option>
+                            <option>입고>전체입고현황>입고지시 상세</option>
+                            <option>배송지시>미입고</option>
+                            <option>배송지시>배송지시현황</option>
+                            <option>배송지시>출고준비</option>
+                            <option>배송지시>출고완료</option>
+                            <option>출고>출고준비</option>
+                            <option>출고>출고완료</option>
+                            <option>출고>출고지시현황</option>
+                            <option>배송현황>전체배송현황</option>
+                            <option>재고>재고현황</option>
+                            <option>재고>입출고내역</option>
+                            <option>재고>오입고처리내역</option>
+                            <option>재고>재고조사</option>
+                            <option>거래처>공급사</option>
+                            <option>거래처>판매사</option>
+                            <option>상점운영>상점</option>
+                            <option>창고운영>배송사</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">양식명</th>
+                    <td>
+                        <input type="text" class="fText" style="width:215px;" value="양식명을 입력해주세요" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">항목 설정</th>
+                    <td>
+                        <div class="multipleArea" style="width:800px;">
+                            <div class="gFlow">
+                                <div class="mMultiple">
+                                    <div class="gCtrl excel">
+                                        <span class="icoDot"></span> <strong>다운로드 가능한 항목</strong>
+                                    </div>
+                                    <select size="10" multiple="multiple" class="fMultiple" style="height:210px;">
+                                        <option>선택 01</option>
+                                        <option>선택 02</option>
+                                        <option>선택 03</option>
+                                        <option>선택 04</option>
+                                        <option>선택 05</option>
+                                        <option>선택 06</option>
+                                        <option>선택 07</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mController">
+                                <div class="button">
+                                    <p>
+                                        <button type="button" class="btnMove icoRight"><span>선택한 항목 오른쪽으로 이동</span></button>
+                                        <button type="button" class="btnMove icoLeft"><span>선택한 항목 왼쪽으로 이동</span></button>
+                                        <button type="button" class="btnMove icoBlank"><span>공란추가</span></button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="gReverse">
+                                <div class="mMultiple">
+                                    <div class="gCtrl">
+                                        <span class="icoDot"></span> <strong>다운로드 설정한 항목</strong>
+                                        <p class="edit">
+                                            <button type="button" class="btnMove icoPrev" ><span>이전</span></button>
+                                            <button type="button" class="btnMove icoNext"><span>다음</span></button>
+                                        </p>
+                                    </div>
+                                    <select size="10" multiple="multiple" class="fMultiple" style="height:210px;">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mHelp typeInfo">
+        <h2>엑셀 다운로드 양식 관리 안내</h2>
+        <div class="content">
+            <p>사용 편의에 따라 필요한 항목만을 선택하여 다운로드 설정이 가능합니다.</p>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>닫기</span></a>
+</div>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+
+</body>
+</html>

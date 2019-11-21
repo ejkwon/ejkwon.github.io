@@ -1,0 +1,318 @@
+<?php include("../../lib/lib.php"); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="Copyright(c) Simplex Internet Inc. All Rights Reserved." />
+    <?php include("../../include/ui_top.html"); ?>
+    <link rel="stylesheet" type="text/css" href="/img.cafe24.com/mobile/cmc/css/style.css">
+    <script type="text/javascript" src="/img.cafe24.com/img/cmc/js/ui.js"></script>
+    <script type="text/javascript" src="/img.cafe24.com/mobile/cmc/js/ui.js"></script>
+    <title>공통 UI</title>
+</head>
+<body id="guideUi" class="guideBody">
+    <div class="guideTitle">
+        <h2>공통 UI</h2>
+    </div>
+
+<guideFrame>
+    <guideTitle>mThumbList</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <!--
+            @참고 : pc 아이콘노출(pc링크 일경우)
+            - pc아이콘 노출함 : <li class="pc">
+            - pc아이콘 노출안함 : <li>
+        -->
+        <ul class="mThumbList">
+            <li class="pc">
+                <strong class="recommend">추천</strong>
+                <img src="http://img.cafe24.com/mobile/cmc/main/img_knowhow_naver.jpg" alt="">
+                <mark class="title">네이버 <span>키워드</span></mark>
+                <p>고객이 방문한 경우에만 광고비를 지불하는 종량제 방식의 키워드광고</p>
+                <a href="#none" class="more">자세히보기</a>
+            </li>
+            <li class="pc">
+                <strong class="recommend">추천</strong>
+                <img src="http://img.cafe24.com/mobile/cmc/main/img_knowhow_knowledge.jpg" alt="">
+                <mark class="title">네이버 <span>지식쇼핑</span></mark>
+                <p>최고의 온라인 마케팅 플랫폼 카페24의 다양한 비지니스를 경험해 보세요!</p>
+                <a href="#none" class="more">자세히보기</a>
+            </li>
+            <li>
+                <img src="http://img.cafe24.com/mobile/cmc/main/img_knowhow_daum.jpg" alt="">
+                <mark class="title">다음 <span>쇼핑하우</span></mark>
+                <p>상품광고, 판매, 쇼핑몰 홍보를 위한 최적의 마케팅 수단</p>
+                <a href="#none" class="more">자세히보기</a>
+            </li>
+        </ul>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mToggleNotice</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mToggleNotice">
+            <ul>
+                <li><a href="#none">한줄 공지 제목</a></li>
+                <li><a href="#none">한줄 공지 제목</a></li>
+                <li><a href="#none">한줄 공지 제목</a></li>
+                <li><a href="#none">한줄 공지 제목</a></li>
+            </ul>
+            <button type="button">공지 토글</button>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mToggle</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <!-- 
+            @참고 : 광고소개 토글
+            - 펼침상태 <section class="mToggle show">
+            - 닫힘상태 <section class="mToggle">
+            - 관련샘플 js : cmc_mobile_ui.js
+        -->
+        <section class="mToggle show">
+            <header>
+                <h1>키워드 광고</h1>
+                <p class="count" title="게시글수">7</p>
+                <button type="button">게시글 토글</button>
+            </header>
+            <article>
+                <ul class="mThumbList">
+                    <li class="pc">
+                        <strong class="recommend">추천</strong>
+                        <img src="http://img.cafe24.com/mobile/cmc/main/img_knowhow_naver.jpg" alt="">
+                        <mark class="title">네이버 <span>키워드</span></mark>
+                        <p>고객이 방문한 경우에만 광고비를 지불하는 종량제 방식의 키워드광고</p>
+                        <a href="#none" class="more">자세히보기</a>
+                    </li>
+                    <li>
+                        <strong class="recommend">추천</strong>
+                        <img src="http://img.cafe24.com/mobile/cmc/main/img_knowhow_knowledge.jpg" alt="">
+                        <mark class="title">네이버 <span>지식쇼핑</span></mark>
+                        <p>최고의 온라인 마케팅 플랫폼 카페24의 다양한 비지니스를 경험해 보세요!</p>
+                        <a href="#none" class="more">자세히보기</a>
+                    </li>
+                    <li>
+                        <img src="http://img.cafe24.com/mobile/cmc/main/img_knowhow_daum.jpg" alt="">
+                        <mark class="title">다음 <span>쇼핑하우</span></mark>
+                        <p>상품광고, 판매, 쇼핑몰 홍보를 위한 최적의 마케팅 수단</p>
+                        <a href="#none" class="more">자세히보기</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBoardCtrl</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mBoardCtrl">
+            <select class="eSelect flex">
+                <option>쇼핑몰1</option>
+                <option selected="selected">쇼핑몰2</option>
+                <option>쇼핑몰3333333333333333333333333333333333</option>
+            </select>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBoardList + typeText</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <ul class="mBoardList typeText">
+            <li>
+                <p>
+                    <mark class="subject">[클릭초이스]</mark>
+                    문의글 제목이 들어갑니다... 2줄까지보여요<span class="new">NEW</span>
+                </p>
+                <time class="date">2013-12-01</time>
+                <a href="#none" class="more">자세히보기</a>
+            </li>
+            <li>
+                <p>
+                    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA <span class="new">NEW</span>
+                </p>
+                <time class="date">2013-12-01</time>
+                <mark class="comment">답변완료</mark>
+                <a href="#none" class="more">자세히보기</a>
+            </li>
+            <!-- 참고 : 검색결과 목록 -->
+            <li>
+                <p>
+                    검색하여 결과값이 일치할경우 일치되는 문자열을 <strong>검색키워드</strong> 왼쪽과 같이 볼드처리합니다. <span class="new">NEW</span>
+                </p>
+                <time class="date">2013-12-01</time>
+                <a href="#none" class="more">자세히보기</a>
+            </li>
+            <!-- //참고 -->
+        </ul>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mPaginate</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mPaginate">
+            <a href="#none" class="btnNprev">이전</a>
+            <span class="info"><span>1</span>/10</span>
+            <a href="#none" class="next">다음</a>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBoardSearch</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mBoardSearch">
+            <fieldset>
+                <input type="text" class="fText flex" value="">
+                <button type="button" class="btnStrong submit">검색</button>
+            </fieldset>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBoardView</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mBoardView">
+            <mark class="title">제목이 들어갑니다. 제목이 들어갑니다. 초대 2줄</mark>
+            <time>2013-12-01</time>
+            <div class="attach">
+                <span><img src="http://img.cafe24.com/mobile/cmc/temp/@img_board_attach.gif" alt=""></span>
+            </div>
+            <!-- 
+                @참고 : 
+                - 확대상태 class="attach expand"
+                - 관련샘플 js : cmc_mobile_ui.js
+
+                <div class="attach expand">
+                    <span><img src="http://img.cafe24.com/mobile/cmc/temp/@img_board_attach.gif" alt=""></span>
+                </div>
+            -->
+            <p class="text">
+                충북 중북부지역을 중심으로 많은 눈이 내리고 
+                있다. 청주기상대는 27일 오전A 4시10분을 기해 
+                제천에 대설주의보를 내렸다. 오전 6시30분을 
+                기해서는 보은에도 대설주의보를 발효했다.
+            </p>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mComment</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mComment">
+            <mark class="state">답변완료</mark>
+            <time>2013-12-01</time>
+            <p class="text">안녕하세요. 홍길동님. 카페24 마케팅센터입니다. 문의하신 질문에 답변드립니다.</p>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBoardViewCtrl</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mBoardViewCtrl">
+            <a class="btnNormal" href="#none">목록</a>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBoardViewNav</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <div class="mBoardViewNav">
+            <a href="#none" class="prev"><span>이전글</span> 제목입니다. 제목목목목????</a>
+            <a href="#none" class="next"><span>다음글</span> 제목입니다. 제목목목목????</a>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>FORM</guideTitle>
+    <div class="guideBox">
+        <p class="guideList"></p>
+    </div>
+    <guidePreview>
+        <ul class="forms">
+            <li>
+                <input type="text" class="fText" style="width:270px;" value='inline 타입(style="width:100px;")의 고정넓이'>
+            </li>
+            <li>
+                <input type="text" class="fText flex" value='가로 100%'>
+            </li>
+            <li>
+                <textarea rows="3" cols="20" class="fTextarea" style="width:98%; height:150px;"></textarea>
+            </li>
+            <li>
+                <select class="eSelect">
+                    <option selected="selected">option 길이에따라 가변</option>
+                    <option>20개씩보기</option>
+                    <option>30개씩보기</option>
+                    <option>50개씩보기</option>
+                    <option>100개씩보기</option>
+                </select>
+            </li>
+            <li>
+                <select class="eSelect flex">
+                    <option selected="selected">가로 100%</option>
+                    <option>20개씩보기</option>
+                    <option>30개씩보기</option>
+                    <option>50개씩보기</option>
+                    <option>100개씩보기</option>
+                </select>
+            </li>
+            <li>
+                <input type="checkbox" class="eCheck">
+                <input type="checkbox" class="eCheck" checked="checked">
+            </li>
+            <li>
+                <label><input type="checkbox" class="eCheck"> label태그와 암시적 묶음</label>
+                <label><input type="checkbox" class="eCheck" checked="checked"> checked="checked"</label>
+            </li>
+        </ul>
+    </guidePreview>
+</guideFrame>
+
+
+</body>
+</html>

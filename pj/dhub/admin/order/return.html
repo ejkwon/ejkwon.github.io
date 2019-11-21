@@ -1,0 +1,302 @@
+<?php include('../include/header.html'); ?>
+
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>반송관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li><a href="#none">주문관리</a></li>
+                        <li class="now" title="현재 페이지">반송관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문 검색</h2>
+                </div>
+                <!-- 참고 : chzn 테스트용으로 개발소스에 적용하는 범위 아님 -->
+                <script type="text/javascript" src="../../js/chosen.jquery.js"></script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".chzn-select").chosen();
+                        $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+                    });
+                </script>
+                <!-- //참고 -->
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                    <caption>주문 검색</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">기간</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>판매사주문일자</option>
+                                    <option>등록일자</option>
+                                    <option>반송요청일</option>
+                                    <option>반송완료일</option>
+                                </select>
+                                <a href="#none" class="btnDate"><span>오늘</span></a>
+                                <a href="#none" class="btnDate"><span>3일</span></a>
+                                <a href="#none" class="btnDate"><span>7일</span></a>
+                                <a href="#none" class="btnDate"><span>5일</span></a>
+                                <a href="#none" class="btnDate"><span>1개월</span></a>
+                                <a href="#none" class="btnDate"><span>3개월</span></a>
+                                <a href="#none" class="btnDate"><span>1년</span></a>
+                                <a href="#none" class="btnDate"><span>전체</span></a>
+                                <input type="text" value="2013-03-13" class="fText gDate" />
+                                <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                                ~
+                                <input type="text" value="2014-03-14" class="fText gDate" />
+                                <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">처리상태</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>전체</option>
+                                    <option>반송요청</option>
+                                    <option>반송확정</option>
+                                    <option>반송준비</option>
+                                    <option>반송완료</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">판매사명</th>
+                            <td>
+                                <label class="gLabel"><input type="radio" name="radio" class="fChk" /> 전체</label>
+                                <label class="gLabel"><input type="radio" name="radio" class="fChk" /> 선택</label>
+                                <span class="gLabel">
+                                    <select data-placeholder="판매사 선택" class="mSearchForm chzn-select-deselect" style="width:200px;">
+                                        <option>판매사 선택</option>
+                                        <option>MIXXMIX(모구지에)</option>
+                                        <option>MIXXMIX(아마존US)</option>
+                                        <option>기타판매사(일문)</option>
+                                        <option>MIXXMIX(Rakuten)</option>
+                                        <option>카페23(일문)</option>
+                                        <option>카페23(중문)</option>
+                                        <option>카페23(영문)</option>
+                                        <option>카페23(대만)</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">검색어</th>
+                            <td>
+                                <select class="fSelect">
+                                    <option>선택</option>
+                                    <option>판매사 주문번호</option>
+                                    <option>합포번호</option>
+                                    <option>상품명/품목명</option>
+                                    <option>반송지시번호</option>
+                                    <option>반송송장번호</option>
+                                </select>
+                                <input type="text" class="fText" style="width:270px;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>주문 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩 보기</option>
+                            <option>20개씩 보기</option>
+                            <option>30개씩 보기</option>
+                            <option>50개씩 보기</option>
+                            <option>100개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 상품을</span>
+                        <a href="#none" class="btnNormal"><span>반송요청취소</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+                <div class="mBoard gScroll">
+                    <table border="1" summary="" class="eChkColor">
+                    <caption>주문 목록</caption>
+                    <colgroup>
+                        <col style="width:40px;" />
+                        <col class="chk" />
+                        <col style="width:95px;" />
+                        <col style="width:70px;" />
+                        <col style="width:80px;" />
+                        <col style="width:60px;" />
+                        <col class="date" />
+                        <col class="date" />
+                        <col style="width:80px;" />
+                        <col style="width:70px;" />
+                        <col style="width:180px;" />
+                        <col style="width:45px;" />
+                        <col class="date" />
+                        <col class="date" />
+                    </colgroup>
+                    <thead>
+                        <!--
+                            ※ 참고: 소팅 아이콘 가이드 : http://fe.cafe24.com/suio/include/layout.php?MODULE=board_col_list
+                        -->
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col"><input type="checkbox" class="allChk" /></th>
+                            <th scope="col">반송지시번호</th>
+                            <th scope="col">처리상태</th>
+                            <th scope="col">반송<br />송장번호</th>
+                            <th scope="col">반송비</th>
+                            <th scope="col"><strong class="array"><span>반송<br />요청일</span><button type="button">정렬선택</button></strong></th>
+                            <th scope="col"><strong class="array"><span>반송<br />완료일</span><button type="button">정렬선택</button></strong></th>
+                            <th scope="col">합포번호</th>
+                            <th scope="col">판매사<br />주문번호</th>
+                            <th scope="col">품명/품목명</th>
+                            <th scope="col">수량</th>
+                            <th scope="col">판매사<br />주문일자</th>
+                            <th scope="col">등록일자</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>1</td>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>-</td>
+                            <td>반송요청</td>
+                            <td>-</td>
+                            <td class="right">0</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>-</td>
+                            <td>20160202-0007665</td>
+                            <td>0160125-0013369</td>
+                            <td class="left">Solid Tone Chest Pocket T-Shirt/PINK</td>
+                            <td class="right">1</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>2016-03-15 09:28:58</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">2</td>
+                            <td rowspan="2"><input type="checkbox" class="rowChk" /></td>
+                            <td rowspan="2">20151117-5KR430000004</td>
+                            <td rowspan="2">반송준비</td>
+                            <td rowspan="2">213423453234</td>
+                            <td rowspan="2" class="right">3000</td>
+                            <td rowspan="2">2016-03-15 09:28:58</td>
+                            <td rowspan="2">-</td>
+                            <td>TEST-2222-101</td>
+                            <td>TEST-2222-101</td>
+                            <td class="left">이네스트 pants (*5color)/color=아이보리</td>
+                            <td class="right">1</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>2016-03-15 09:28:58</td>
+                        </tr>
+                        <tr>
+                            <td>20160322-0003218</td>
+                            <td>20160322-0003218</td>
+                            <td class="left">[22XX]데미멜빵팬츠/COLOR=Blue (블루), SIZE=S</td>
+                            <td class="right">1</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>2016-03-15 09:28:58</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>20151117-5KR430000002</td>
+                            <td>반송확정</td>
+                            <td>-</td>
+                            <td class="right">0</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>-</td>
+                            <td>20160322-0003218</td>
+                            <td>20160322-0003218</td>
+                            <td class="left">디렉트 소잉 진/color=중청, size=XL</td>
+                            <td class="right">2</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>2016-03-15 09:28:58</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="checkbox" class="rowChk" /></td>
+                            <td>20151117-5KR430000005</td>
+                            <td>반송완료</td>
+                            <td>2313234523</td>
+                            <td class="right">3000</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>1384930246780400</td>
+                            <td>1384930246780400</td>
+                            <td class="left">이네스트 pants (*5color)/color=아이보리</td>
+                            <td class="right">2</td>
+                            <td>2016-03-15 09:28:58</td>
+                            <td>2016-03-15 09:28:58</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p class="empty">검색결과가 없습니다.</p>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 상품을</span>
+                        <a href="#none" class="btnNormal"><span>반송요청취소</span></a>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀다운로드</span></a>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>반송관리 안내</h2>
+                <div class="content">
+                    <ul>
+                        <li><strong>반송요청된 주문이 패스트박스 입고전 상태일때 대해 반송요청취소할 수 있습니다.</strong></li>
+                        <li>
+                            <strong>주문상태 안내</strong>
+                            <ol>
+                                <li>1) 반송요청 : 상품발송 후 반품사유 발생 시 해당주문의 상품을 다시 상점으로 반송요청한 상태</li>
+                                <li>2) 반송확정 : 반송을 위해 패스트박스 담당자가 주문을 확인하고 반송확정을한 상태</li>
+                                <li>3) 반송준비 : 반송요청주문을 반송하기 위해 준비한 상태</li>
+                                <li>4) 반송완료 : 반송송장이 채번되고 상점으로 상품을 발송한 상태</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<?php include('../include/footer.html'); ?>

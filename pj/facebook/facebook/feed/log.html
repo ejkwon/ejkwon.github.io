@@ -1,0 +1,370 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/head.html'); ?>
+
+<div id="wrap">
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/header.html'); ?>
+    <div id="container">
+        <!-- [ content ] -->
+        <section id="content">
+
+<div class="mTitle">
+    <h1>제품 피드</h1>
+</div>
+
+<div class="mTab typeNav eTab">
+    <ul>
+        <li><a href="/cmc/facebook/feed/list.html">제품피드 리스트</a></li>
+        <li><a href="/cmc/facebook/feed/setting.html">제품피드 설정</a></li>
+        <li><a href="/cmc/facebook/feed/set.html">제품세트 추가</a></li>
+        <li><a href="/cmc/facebook/feed/except.html">제외상품 리스트</a></li>
+        <li><a href="/cmc/facebook/feed/default.html">피드 기본설정</a></li>
+        <li class="selected"><a href="#none">로그</a></li>
+    </ul>
+</div>
+
+<div class="mBoard typeEdit gBlankL">
+    <table border="1">
+        <caption>검색</caption>
+        <colgroup>
+            <col style="width:190px;">
+            <col style="width:auto;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">일자</th>
+                <td>
+                    <div class="mSelect" style="width:150px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                        <div class="value">일간 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                        <div class="optionLayer">
+                            <ul class="optionSelect">
+                                <li class="gridSet">
+                                    <span class="grid">일간</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">주간</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">월간</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <strong>&nbsp;-&nbsp;</strong>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <div class="mMethod typeToggle gSideS gBlankS">
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">금일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">7일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">30일</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">금주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전월</span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">일자</th>
+                <td>
+                    <div class="mSelect" style="width:150px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                        <div class="value">주간 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                        <div class="optionLayer">
+                            <ul class="optionSelect">
+                                <li class="gridSet">
+                                    <span class="grid">일간</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">주간</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">월간</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <strong>&nbsp;-&nbsp;</strong>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <div class="mMethod typeToggle gSideS gBlankS">
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">금주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">1주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">4주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">8주</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">12주</span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">일자</th>
+                <td>
+                    <div class="mSelect" style="width:150px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                        <div class="value">월간 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                        <div class="optionLayer">
+                            <ul class="optionSelect">
+                                <li class="gridSet">
+                                    <span class="grid">일간</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">주간</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">월간</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <strong>&nbsp;-&nbsp;</strong>
+                    <div class="mForm typeCalendar">
+                        <div class="fText">
+                            <input type="text" value="2017.06.09" id="datepicker">
+                            <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                        </div>
+                        <button type="button" class="btnPrev">이전</button>
+                        <button type="button" class="btnNext">다음</button>
+                    </div>
+                    <div class="mMethod typeToggle gSideS gBlankS">
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">금월</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">전월</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">1달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">3달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">6달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">9달</span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test1">
+                            <span class="fLabel">12달</span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">유형</th>
+                <td>
+                    <div class="mForm">
+                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">전체</span></label>
+                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">피드 기본설정</span></label>
+                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">제외상품 추가</span></label>
+                        <label class="gLabel"><input type="checkbox" class="fCheck"><span class="fLabel">제외상품 해제</span></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">수정한 사람</th>
+                <td>
+                    <div class="mSelect" style="width:150px;"><!--  참고: 활성화시, class "selected" 추가. -->
+                        <div class="value">이름 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                        <div class="optionLayer">
+                            <ul class="optionSelect">
+                                <li class="gridSet">
+                                    <span class="grid">ID</span>
+                                </li>
+                                <li class="gridSet">
+                                    <span class="grid">상품명</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <textarea class="fTextarea" style="width:792px;"></textarea>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--
+        ※ 참고: 검색결과가 없을 경우
+            tbody의 <tr>을 제거한 후,
+            <p class="mEmpty">검색결과가 없습니다.</p>
+
+        ※ 화면미리보기: http://fe-front.cafe24.com/cmc/facebook/common/component.html#empty
+    -->
+</div>
+
+<div class="mButton">
+    <button type="button" class="btnSubmit medium">검색</button>
+</div>
+
+<div class="mTitle">
+    <h2>로그</h2>
+    <p class="txtDesc">[총 상품 <span class="txtEm">40</span>개] 검색결과 <span class="txtEm">11</span>개</p>
+    <select class="fSelect" style="width:190px;">
+        <option>100개씩보기</option>
+        <option>200개씩보기</option>
+        <option>300개씩보기</option>
+        <option>400개씩보기</option>
+        <option>500개씩보기</option>
+    </select>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#eMultiTable').fixResize({ scrollWidth:5 });
+    });
+</script>
+ <div class="mBoard typeView">
+     <table border="1" id="eMultiTable">
+         <caption>로그</caption>
+         <thead>
+             <tr>
+                 <th scope="col" style="width:80px;">No</th>
+                 <th scope="col" class="array ascend" style="width:170px;">일자<button type="button">오름차순 정렬</button></th>
+                 <th scope="col" class="array" style="width:230px;">유형<button type="button">내림차순 정렬</button></th>
+                 <th scope="col" style="width:auto;">변경내용</th>
+                 <th scope="col" style="width:150px;">수정자(ID)</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td class="center">11122</td>
+                 <td class="center">2017-09-08 11:22:32</td>
+                 <td class="center">피드 기본설정</td>
+                 <td>
+                     상품분류 기본값 : 분류 길이가 긴 것
+                     상품상세설명 기본값 : 상품간략설명
+                     이미지 기본값 : 목록 이미지
+                     구글 카테고리 기본값 : Home & Garden
+                     특정 카테고리 제외 : SEASON
+                     구글 UTM 기능 : 사용안함
+                     카페24 파라미터 : 없음
+                 </td>
+                 <td class="center">홍길동(gdhong)</td>
+             </tr>
+             <tr>
+                 <td class="center">11122</td>
+                 <td class="center">2017-09-08 11:22:32</td>
+                 <td class="center">피드 기본설정</td>
+                 <td>
+                     상품분류 기본값 : 분류 길이가 긴 것
+                     상품상세설명 기본값 : 상품간략설명
+                     이미지 기본값 : 목록 이미지
+                     구글 카테고리 기본값 : Home & Garden
+                 </td>
+                 <td class="center">홍길동(gdhong)</td>
+             </tr>
+             <tr>
+                 <td class="center">11122</td>
+                 <td class="center">2017-09-08 11:22:32</td>
+                 <td class="center">피드 기본설정</td>
+                 <td>
+                     상품분류 기본값 : 분류 길이가 긴 것
+                     상품상세설명 기본값 : 상품간략설명
+                 </td>
+                 <td class="center">홍길동(gdhong)</td>
+             </tr>
+         </tbody>
+     </table>
+     <!-- 참고: 내역 없을 경우 tbody의 <tr>을 제거한 후, <p class="mEmpty">내역이 없습니다.</p> 로 처리합니다 -->
+     <!--<p class="mEmpty">검색 결과가 없습니다.</p>-->
+</div>
+
+<div class="mPaginate">
+    <a href="#none" class="btnPrev disabled">이전페이지</a><!-- 참고: 이전,다음 페이지가 없는 경우, class "disabled" 추가. -->
+    <span class="page">
+        <a href="#none" class="selected" title="현재페이지">1</a>
+        <a href="#none">2</a>
+        <a href="#none">3</a>
+        <a href="#none">4</a>
+        <a href="#none">5</a>
+        <a href="#none">6</a>
+        <a href="#none">7</a>
+        <a href="#none">8</a>
+        <a href="#none">9</a>
+        <a href="#none">10</a>
+    </span>
+    <a href="#none" class="btnNext">다음페이지</a>
+</div>
+
+    </section><!-- //[ content ] -->
+
+</div>
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/cmc/facebook/include/footer.html'); ?>

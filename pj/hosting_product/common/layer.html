@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8" />
+    <title>카페24 호스팅/웹호스팅 - 10G 광아우토반 FullSSD</title>
+    <link rel="shortcut icon" type="image/x-icon" href="//img.cafe24.com/favicon/cafe24_hosting_center.ico" />
+    <link rel="stylesheet" href="../css/common30.css" type="text/css" />
+    <link rel="stylesheet" href="../css/hosting2_main_css_sp.css" type="text/css" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/hosting_product.css" type="text/css" />
+    <script type="text/javascript" src="../js/hosting2_ui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//www.cafe24.com/js/googleweblog.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//www.cafe24.com/js/product/product.comm.js" charset="utf-8"></script>
+    <style type="text/css">
+        .guide #content { float:none; margin:0 auto; }
+        .guide h2.guideTitle { margin:40px -50px; padding:15px 30px; font-size:28px; background:#f1f4f9; }
+        .guide  h2.guideTitle:first-child { margin-top:0; }
+        .guide  h3.guideSub { margin:20px -40px; padding:0 30px; font-size:18px; color:#555; }
+        .guide  h3.guideSub:before { display:inline-block; vertical-align:top; content:"·"; margin:-2px 5px 0 0; }
+        .guide #content .mTitle { margin-top:10px; }
+        .guide .mLayer { position:relative; left:0; display:block; margin-bottom:30px; }
+        .guide .guideWrap { width:750px; margin:0 auto; }
+    </style>
+</head>
+<body>
+<div id="body" class="prdIndex guide">
+    <div class="guideWrap">
+        <h2 class="guideTitle">레이어 | mLayer</h2>
+        <h3 class="guideSub">#content와 형제레벨로 놓임</h3>
+        <?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/hosting_product/include/layer.html'); ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        // mLayer : eLayerClick
+        $('body').delegate('.eLayerClick', 'click', function(e){
+            var findThis = $(this),
+                findTarget = $($(this).attr('href')),
+                propTargetWidth = findTarget.outerWidth(),
+                propTargetHeight = findTarget.outerHeight(),
+                propDocWidth = $(document).width(),
+                propDocHeight = $(document).height(),
+                propTop = findThis.offset().top,
+                propLeft = findThis.offset().left,
+                figure = propLeft + propTargetWidth,
+                propMarginLeft = 0;
+
+            var propFooterHeight = $('body').find('#footer').outerHeight();
+            if(propFooterHeight == null){
+                propFooterHeight = 0;
+            }
+            propTargetHeight = propTargetHeight+propFooterHeight+20;
+
+            if((propDocHeight-propTop) < propTargetHeight){
+                if(propDocHeight < propTargetHeight) {
+                    propTop = -20;
+                } else {
+                    propTop = propDocHeight - propTargetHeight - 10;
+                }
+            }
+
+            if(propDocWidth <= figure){
+                if(propTargetWidth > propLeft){
+                    propMarginLeft = '-' + ( propTargetWidth / 2 ) + 'px';
+                    propLeft = '50%';
+                } else {
+                    propLeft = propLeft - propTargetWidth + 20;
+                }
+            }
+            findTarget.css({'top':propTop+14, 'left':propLeft - 13, 'marginLeft':propMarginLeft}).show();
+            findTarget.siblings('[id^="layer"]').hide(); // 기타 레이어 닫기
+            e.preventDefault();
+        });
+
+        // mLayer : close
+        $.mLayer_close = function(target){
+            var findParent = target.parents('.mLayer:first');
+            findParent.hide();
+            return false
+        }
+        $('body').delegate('.mLayer .footer .eClose', 'click', function(){
+            $.mLayer_close($(this));
+        });
+        $('body').delegate('.mLayer > .eClose', 'click', function(){
+            $.mLayer_close($(this));
+        });
+    });
+</script>
+
+</body>
+</html>

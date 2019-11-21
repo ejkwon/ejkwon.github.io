@@ -1,0 +1,32 @@
+<?php include('./lib/lib.php') ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>퍼블리싱 가이드</title>
+    <link rel="stylesheet" type="text/css" href="<?=$ROOT?>/css/common.css">
+    <link rel="stylesheet" type="text/css" href="<?=$ROOT?>/css/layout.css">
+    <script type="text/javascript" src="<?=$ROOT?>/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="<?=$ROOT?>/js/ui.js"></script>
+</head>
+<body id="guideBody">
+    <div id="guideSkipNavigation">
+        <p><a href="#content">메뉴 건너 뛰기</a></p>
+    </div>
+    <hr class="guideLayout" />
+
+    <!-- wrap -->
+    <div id="guideWrap">
+        <!-- header -->
+        <div id="guideHeader">
+            <h1>판매몰 퍼블리싱 가이드</h1>
+            <div id="guideGnb">
+                <ul>
+                    <li <?php if($GNB == 'index.html'){?>class="selected"<?php } ?>><a href="<?=$ROOT?>/index.html">코딩 규칙</a></li>
+                    <li <?php if($P_TYPE == 'PC'){?>class="selected"<?php } ?>><a href="<?=$ROOT?>/project.html?P_TYPE=PC">PC 프로젝트</a></li>
+                    <li <?php if($P_TYPE == 'MOBILE'){?>class="selected"<?php } ?>><a href="<?=$ROOT?>/project.html?P_TYPE=MOBILE">Mobile 프로젝트</a></li>
+                </ul>
+            </div>
+        </div><!-- //header -->
+        <hr class="guideLayout" />
+        <div id="guideContainer">

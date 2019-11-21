@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>프로모션, 광고</title>
+<link rel="stylesheet" type="text/css" href="/css/module.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/uitest.css" media="all" /><!-- 테스트용 CSS -->
+<link rel="stylesheet" type="text/css" href="/guide/ui/import.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>프로모션, 광고</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>매뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <div class="mGuideBox">
+                <h2>주의사항</h2>
+                <ul>
+                    <li>일반페이지에는 가로형만 사용합니다.</li>
+                    <li>section으로 감싸지 않고, 같은 레벨로 사용합니다.</li>
+                    <li>대시보드 등 특별한 경우에만, 세로형을 사용합니다. </li>
+                    <li>module.css를 link하지 않는 dashboard 와 같은 페이지는 해당 CSS를 dashboard.css에서 관리합니다.</li>
+                    <li>심플어드민의 왼쪽배너도 col type이지만 유니크모듈로 판단, #snb를 활용해서 구성합니다.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>가로형 프로모션 배너</h2>
+                    <p>보더와 배경색을 CSS가 가지고 있습니다.</p>
+                </div>
+                <h3>일반형</h3>
+                <div class="mPromotion typeRow">
+                    <p><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_780x85.jpg" alt="" width="780" height="85" /></a></p>
+                </div>
+
+                <h3>롤링배너형 (이후 확장 가능)</h3>
+                <div class="mPromotion typeRow">
+                    <ul>
+                        <li><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_780x85.jpg" alt="" width="780" height="85" /></a></li>
+                        <li><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_780x85.jpg" alt="" width="780" height="85" /></a></li>
+                        <li><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_780x85.jpg" alt="" width="780" height="85" /></a></li>
+                    </ul>
+                    <p class="gPaging">
+                        <span class="selected"><a href="#none">1</a></span>
+                        <span><a href="#none">2</a></span>
+                        <span><a href="#none">3</a></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>가로 Half형 프로모션 배너</h2>
+                </div>
+
+                <div class="mPromotion typeHalf">
+                    <p class="gFlow"><img src="//img.echosting.cafe24.com/smartAdmin/img/promotion/txt-buyService-inquiry2.gif" alt="" /></p>
+                    <p class="gReverse"><img src="//img.echosting.cafe24.com/smartAdmin/img/promotion/txt-buyService-inquiry2.gif" alt="" /></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>세로형 프로모션 배너</h2>
+                </div>
+                <div class="mPromotion typeCol">
+                    <p><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_160x130.jpg" alt="" width="160" height="130" /></a></p>
+                    <p><a href="#none"><img src="//img.echosting.cafe24.com/smartAdmin/img/common/@img_160x130.jpg" alt="" width="160" height="130" /></a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

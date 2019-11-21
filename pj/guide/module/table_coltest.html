@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>테이블 col,td,th width 관계 테스트</title>
+<link rel="stylesheet" type="text/css" href="/css/module.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/uitest.css" media="all" /><!-- 테스트용 CSS -->
+<link rel="stylesheet" type="text/css" href="/guide/ui/import.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/guide/ui/contReset.css" media="all" /><!-- 가이드용 CSS -->
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p><a href="#gnb">대메뉴 바로가기</a><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+
+<div id="wrap">
+    <div id="header"></div>
+    <hr class="layout" />
+
+    <div id="container">
+        <div id="sidebar"></div>
+        <hr class="layout" />
+
+        <div id="content">
+
+            <div class="gHeading">
+                <div class="mTitle">
+                    <h1>테이블 col,td,th width 관계 테스트</h1>
+                </div>
+                <div class="mPath">
+                    <h2>현재 위치</h2>
+                    <ol>
+                        <li class="home"><a href="/">홈</a></li>
+                        <li>1depth</li>
+                        <li title="현재 위치"><strong>2depth</strong></li>
+                    </ol>
+                    <p><a href="#none" class="btnManual"><span>메뉴얼</span></a></p>
+                </div>
+            </div>
+
+            <br /><br />
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>col class 추가</h2>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>상품목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col style="width:13%;" />
+                        <col style="width:auto;" />
+                        <col class="number" />
+                        <col style="width:9%;" />
+                        <col style="width:8%;" />
+                        <col style="width:10%;" />
+                        <col style="width:8%;" />
+                        <col style="width:5%;" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                        <th scope="col">상품코드</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">판매가</th>
+                        <th scope="col">제조사</th>
+                        <th scope="col">진열상태</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                        <td class="center">521246241456</td>
+                        <td>내용</td>
+                        <td>3,000원</td>
+                        <td class="center">샘플</td>
+                        <td class="center">진열</td>
+                        <td class="center">2012-04-13</td>
+                        <td class="center"><a href="#none"><span>3</span></a></td>
+                        <td class="center">
+                            <a href="/smartAdmin/product/list/memo.html" class="btnIcon icoMemo" target="_blank" onclick="window.open(this.href,'smAdminPopup1','scrollbars=1,width=650,height=500');return false;">메모</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>td class 추가</h2>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>상품목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col style="width:13%;" />
+                        <col style="width:auto;" />
+                        <col style="width:9%;" />
+                        <col style="width:9%;" />
+                        <col style="width:8%;" />
+                        <col style="width:10%;" />
+                        <col style="width:8%;" />
+                        <col style="width:5%;" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                        <th scope="col">상품코드</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">판매가</th>
+                        <th scope="col">제조사</th>
+                        <th scope="col">진열상태</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                        <td class="center">521246241456</td>
+                        <td>내용</td>
+                        <td class="number">3,000원</td>
+                        <td class="center">샘플</td>
+                        <td class="center">진열</td>
+                        <td class="center">2012-04-13</td>
+                        <td class="center"><a href="#none"><span>3</span></a></td>
+                        <td class="center">
+                            <a href="/smartAdmin/product/list/memo.html" class="btnIcon icoMemo" target="_blank" onclick="window.open(this.href,'smAdminPopup1','scrollbars=1,width=650,height=500');return false;">메모</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>td,col class 추가</h2>
+                    <ul>
+                        <li>요게 젤 나을듯~ th 좌우 패딩값이 없어서 th width를 td width와 같은 값을 줄 경우 ie7에서 다르게 랜더링</li>
+                        <li>col 규칙 : class or %값 사용..?</li>
+                    </ul>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>상품목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col style="width:13%;" />
+                        <col style="width:auto;" />
+                        <col class="number" />
+                        <col style="width:9%;" />
+                        <col style="width:8%;" />
+                        <col style="width:10%;" />
+                        <col style="width:8%;" />
+                        <col style="width:5%;" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                        <th scope="col">상품코드</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">판매가</th>
+                        <th scope="col">제조사</th>
+                        <th scope="col">진열상태</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                        <td class="center">521246241456</td>
+                        <td>내용</td>
+                        <td class="number">3,000원</td>
+                        <td class="center">샘플</td>
+                        <td class="center">진열</td>
+                        <td class="center">2012-04-13</td>
+                        <td class="center"><a href="#none"><span>3</span></a></td>
+                        <td class="center">
+                            <a href="/smartAdmin/product/list/memo.html" class="btnIcon icoMemo" target="_blank" onclick="window.open(this.href,'smAdminPopup1','scrollbars=1,width=650,height=500');return false;">메모</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>td class 추가, 빈 col 삽입</h2>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>상품목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col style="width:13%;" />
+                        <col style="width:auto;" />
+                        <col />
+                        <col style="width:9%;" />
+                        <col style="width:8%;" />
+                        <col style="width:10%;" />
+                        <col style="width:8%;" />
+                        <col style="width:5%;" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                        <th scope="col">상품코드</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col" class="number">판매가</th>
+                        <th scope="col">제조사</th>
+                        <th scope="col">진열상태</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                        <td class="center">521246241456</td>
+                        <td>내용</td>
+                        <td class="number">3,000원</td>
+                        <td class="center">샘플</td>
+                        <td class="center">진열</td>
+                        <td class="center">2012-04-13</td>
+                        <td class="center"><a href="#none"><span>3</span></a></td>
+                        <td class="center">
+                            <a href="/smartAdmin/product/list/memo.html" class="btnIcon icoMemo" target="_blank" onclick="window.open(this.href,'smAdminPopup1','scrollbars=1,width=650,height=500');return false;">메모</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>td,th class 추가</h2>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>상품목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col style="width:13%;" />
+                        <col style="width:auto;" />
+                        <col style="width:9%;" />
+                        <col style="width:9%;" />
+                        <col style="width:8%;" />
+                        <col style="width:10%;" />
+                        <col style="width:8%;" />
+                        <col style="width:5%;" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                        <th scope="col">상품코드</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col" class="number">판매가</th>
+                        <th scope="col">제조사</th>
+                        <th scope="col">진열상태</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                        <td class="center">521246241456</td>
+                        <td>내용</td>
+                        <td class="number">3,000원</td>
+                        <td class="center">샘플</td>
+                        <td class="center">진열</td>
+                        <td class="center">2012-04-13</td>
+                        <td class="center"><a href="#none"><span>3</span></a></td>
+                        <td class="center">
+                            <a href="/smartAdmin/product/list/memo.html" class="btnIcon icoMemo" target="_blank" onclick="window.open(this.href,'smAdminPopup1','scrollbars=1,width=650,height=500');return false;">메모</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>td,th,col class 추가</h2>
+                </div>
+                <div class="mBoard type1">
+                    <table border="1" summary="" class="eTr">
+                    <caption>상품목록</caption>
+                    <colgroup>
+                        <col class="chk" />
+                        <col style="width:13%;" />
+                        <col style="width:auto;" />
+                        <col class="number" />
+                        <col style="width:9%;" />
+                        <col style="width:8%;" />
+                        <col style="width:10%;" />
+                        <col style="width:8%;" />
+                        <col style="width:5%;" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="chk"><input type="checkbox" class="allCk" /></th>
+                        <th scope="col">상품코드</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col" class="number">판매가</th>
+                        <th scope="col">제조사</th>
+                        <th scope="col">진열상태</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="chk"><input type="checkbox" class="rowCk" /></td>
+                        <td class="center">521246241456</td>
+                        <td>내용</td>
+                        <td class="number">3,000원</td>
+                        <td class="center">샘플</td>
+                        <td class="center">진열</td>
+                        <td class="center">2012-04-13</td>
+                        <td class="center"><a href="#none"><span>3</span></a></td>
+                        <td class="center">
+                            <a href="/smartAdmin/product/list/memo.html" class="btnIcon icoMemo" target="_blank" onclick="window.open(this.href,'smAdminPopup1','scrollbars=1,width=650,height=500');return false;">메모</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="layout" />
+</div>
+
+<div id="footer"><p class="copyright"><img src="//img.echosting.cafe24.com/layout/txt_copyright.png" alt="Copyright&copy; Cafe24 Corp. All Rights Reserved." /></p></div>
+
+<!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+<script type="text/javascript" src="/guide/ui/debug.js" charset="utf-8"></script><!-- //참고 -->
+</body>
+</html>

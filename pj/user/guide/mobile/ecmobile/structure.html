@@ -1,0 +1,203 @@
+<?php include("../../include/project_top.html"); ?>
+<body class="guideBody">
+    <div class="guideTitle">
+        <h2>파일 및 디렉토리 구조</h2>
+    </div>
+
+    <div class="guideTitle">
+        <h3>Layout 구조</h3>
+    </div>
+    <div class="guideBoard">
+        <table border="1" summary="">
+        <caption></caption>
+        <colgroup>
+            <col style="width:15%;" />
+            <col style="width:20%;" />
+            <col style="width:50%;" />
+            <col style="width:15%;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">파일명</th>
+                <th scope="col">Layout 파일</th>
+                <th scope="col">Layout 사용 페이지</th>
+                <th scope="col">비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>메인 레이아웃</td>
+                <td>/layout/basic/main.html</td>
+                <td>쇼핑몰메인</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>공통 레이아웃</td>
+                <td>/layout/basic/layout.html</td>
+                <td>서브 전체</td>
+                <td>특수페이지를 제외한 공통</td>
+            </tr>
+            <tr>
+                <td>인트로 레이아웃</td>
+                <td>/layout/basic/intro.html</td>
+                <td>/인트로</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>팝업 레이아웃</td>
+                <td>/layout/basic/popup.html</td>
+                <td>
+                    <ul class="fileList">
+                        <li>개인정보보호정책</li>
+                        <li>/회원/약관</li>
+                        <li>쿠폰적용 가능상품</li>
+                        <li>환불계좌등록</li>
+                        <li>주문정보선택</li>
+                        <li>상품정보선택</li>
+                        <li>/주문/동의</li>
+                        <li style="width:130px;">최대 할인쿠폰 다운받기</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>확대 레이아웃</td>
+                <td>/layout/basic/zoom.html</td>
+                <td>
+                    <ul class="fileList">
+                        <li>이미지 확대보기</li>
+                        <li>상품상세(확대)</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>레이어 팝업</td>
+                <td>/layout/basic/layer.html</td>
+                <td>쿠폰 조회/적용</td>
+                <td></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div class="guideTitle">
+        <h3>Include 구조</h3>
+    </div>
+    <div class="guideBoard">
+        <table border="1" summary="">
+        <caption></caption>
+        <colgroup>
+            <col style="width:15%;" />
+            <col style="width:20%;" />
+            <col style="width:50%;" />
+            <col style="width:15%;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">파일명</th>
+                <th scope="col">Include 파일</th>
+                <th scope="col">Include 사용 페이지</th>
+                <th scope="col">비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>레이아웃(검색)</td>
+                <td>/layout/basic/search.html</td>
+                <td>
+                    <ul class="fileList">
+                        <li>공통 레이아웃</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>레이아웃(슬라이딩 메뉴)</td>
+                <td>/layout/basic/sidebar.html</td>
+                <td>
+                    <ul class="fileList">
+                        <li>메인 레이아웃</li>
+                        <li>공통 레이아웃</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>레이아웃(상단 메뉴)</td>
+                <td>/layout/basic/navigation.html</td>
+                <td>
+                    <ul class="fileList">
+                        <li>메인 레이아웃</li>
+                        <li>공통 레이아웃</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>레이아웃(하단 회사정보)</td>
+                <td>/layout/basic/footer.html</td>
+                <td>
+                    <ul class="fileList">
+                        <li>메인 레이아웃</li>
+                        <li>공통 레이아웃</li>
+                    </ul>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+        <div class="guideTitle">
+        <h3>Image 구조 : http://img.echosting.cafe24.com</h3>
+    </div>
+    <div class="guideBoard">
+        <table border="1" summary="">
+        <caption></caption>
+        <colgroup>
+            <col style="width:10%;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">용도</th>
+                <th scope="col" colspan="7">디렉토리 <span class="guideTxtEm">(각 언어별 언어코드 적용)</span></th>
+            </tr>
+            <tr>
+                <th scope="col">국문</th>
+                <th scope="col">영문</th>
+                <th scope="col">일문</th>
+                <th scope="col">중문간체</th>
+                <th scope="col">중문번체</th>
+                <th scope="col">포르투갈어</th>
+                <th scope="col">스페인어</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>모바일</td>
+                <td>/skin/mobile_<span class="guideTxtEm">ko_KR</span>/</td>
+                <td>/skin/mobile_<span class="guideTxtEm">en_US</span>/</td>
+                <td>/skin/mobile_<span class="guideTxtEm">ja_JP</span>/</td>
+                <td>/skin/mobile_<span class="guideTxtEm">zh_CN</span>/</td>
+                <td>/skin/mobile_<span class="guideTxtEm">zh_TW</span>/</td>
+                <td>/skin/mobile_<span class="guideTxtEm">pt_PT</span>/</td>
+                <td>/skin/mobile_<span class="guideTxtEm">es_ES</span>/</td>
+            </tr>
+            <tr>
+                <td>어드민용</td>
+                <td>/skin/admin_<span class="guideTxtEm">ko_KR</span>/</td>
+                <td>/skin/admin_<span class="guideTxtEm">en_US</span>/</td>
+                <td>/skin/admin_<span class="guideTxtEm">ja_JP</span>/</td>
+                <td>/skin/admin_<span class="guideTxtEm">zh_CN</span>/</td>
+                <td>/skin/admin_<span class="guideTxtEm">zh_TW</span>/</td>
+                <td>/skin/admin_<span class="guideTxtEm">pt_PT</span>/</td>
+                <td>/skin/admin_<span class="guideTxtEm">es_ES</span>/</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <p>※ 언어코드 참고 : <a href="http://fe.cafe24.com/flag.html" target="_blank">http://fe.cafe24.com/flag.html</a></p>
+
+</body>
+</html>

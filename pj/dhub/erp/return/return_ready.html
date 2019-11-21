@@ -1,0 +1,337 @@
+<?php require_once('../../include/header.html'); ?>
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>반송준비</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home"><a href="#none">홈</a></li>
+                        <li>반송처리</li>
+                        <li class="now" title="현재 페이지">반송준비</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>반송 검색</h2>
+                </div>
+                <div class="mBoard gSmall">
+                    <table border="1" summary="">
+                        <caption>반송 검색</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">검색어</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>판매사주문번호</option>
+                                        <option>합포번호</option>
+                                        <option>송장번호</option>
+                                        <option>FB송장번호</option>
+                                        <option>반송지시번호</option>
+                                    </select>
+                                    <input type="text" class="fText" style="width:200px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상점</th>
+                                <td>
+                                    <select class="fSelect">
+                                        <option>전체</option>
+                                        <option>MIXXMIX</option>
+                                        <option>DABAGIRL</option>
+                                        <option>LG생활건강</option>
+                                        <option>메이블루</option>
+                                        <option>샵인샵</option>
+                                        <option>ZEMMAWORLD</option>
+                                        <option>티몰유니버스</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">송장번호입력여부</th>
+                                <td>
+                                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 전체</label>
+                                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 입력</label>
+                                    <label class="gLabel"><input type="radio" name="radio1" class="fChk" /> 입력안됨</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnSearch"><span>검색</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>반송 목록</h2>
+                </div>
+                <div class="mState">
+                    <div class="gLeft">
+                        <p class="total">[검색결과 <strong>15</strong>건]</p>
+                    </div>
+                    <div class="gRight">
+                        <select class="fSelect">
+                            <option>10개씩보기</option>
+                            <option>50개씩보기</option>
+                            <option>100개씩보기</option>
+                            <option>300개씩보기</option>
+                            <option>500개씩보기</option>
+                            <option>1000개씩보기</option>
+                            <option>2000개씩보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mCtrl typeHeader">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span>송장번호 일괄 연동</span></a>
+                        <a href="#none" class="btnNormal"><span>반송완료처리</span></a>
+                        <a href="#none" class="btnNormal"><span>반송피킹리스트</span></a>
+                    </div>
+                    <div class="gRight">
+                        <div class="mOpen">
+                            <a href="#excelOpen1" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 택배사양식 엑셀다운로드<em class="icoLayer"></em></span></a>
+                            <div id="excelOpen1" class="open" style="width:168px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">우체국</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mOpen">
+                            <a href="#excelOpen2" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 송장번호 엑셀등록</span></a>
+                            <div id="excelOpen2" class="open" style="width:125px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">배송사1엑셀양식</a></li>
+                                        <li><a href="#none">배송사2엑셀양식</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <div class="mOpen">
+                            <a href="#excelOpen3" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+                            <div id="excelOpen3" class="open" style="width:120px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">기본양식</a></li>
+                                        <li><a href="#none">사용자 입력 양식1</a></li>
+                                        <li><a href="#none">사용자 입력 양식2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mBoard gScroll">
+                    <table border="1" summary="" class="eChkColor">
+                        <caption>반송 목록</caption>
+                        <colgroup>
+                            <col style="width:40px;" />
+                            <col class="chk" />
+                            <col style="width:150px;" />
+                            <col style="width:120px;" />
+                            <col style="width:110px;" />
+                            <col style="width:120px;" />
+                            <col class="time" />
+                            <col style="width:140px;" />
+                            <col style="width:140px;" />
+                            <col style="width:50px;" />
+                            <col class="time" />
+                            <col style="width:150px;" />
+                            <col style="width:120px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                                <th scope="col">반송지시번호</th>
+                                <th scope="col">택배 송장번호</th>
+                                <th scope="col">상점</th>
+                                <th scope="col">카페24아이디</th>
+                                <th scope="col">반송요청일</th>
+                                <th scope="col">판매사주문번호</th>
+                                <th scope="col">FB송장번호</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">판매사 주문일자</th>
+                                <th scope="col">반송지 주소</th>
+                                <th scope="col">반송지 전화번호</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td rowspan="3">1</td>
+                                <td rowspan="3"><input type="checkbox" class="rowChk" /></td>
+                                <td rowspan="3">20160502-5KR430000001</td>
+                                <td rowspan="3" class="left">
+                                    <select class="fSelect full gSingleBreak">
+                                        <option>우체국택배</option>
+                                    </select>
+                                    <span class="gSingleBreak">
+                                        <label><input type="radio" name="radio2" class="fChk" /> 직접</label>
+                                        <label><input type="radio" name="radio2" class="fChk" /> 연동</label>
+                                    </span>
+                                    <span class="gSingleBreak"><input type="text" class="fText right" style="width:80px;" /></span>
+                                    <!--a href="#none" class="btnNormal"><span>송장번호 삭제</span></a-->
+                                    <a href="#layerResult" class="btnNormal eLayerClick"><span>송장연동 입력</span></a>
+                                </td>
+                                <td rowspan="3">샵인샵</td>
+                                <td rowspan="3" class="left">nsokr11<br />(인스타일핏)</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>20160125-0013369</td>
+                                <td>FB1603150121000007</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td rowspan="3" class="left">08511<br />서울시 금천구 디지털로 173 (가산동,엘리시아 8~9층)</td>
+                                <td rowspan="3" class="left">02-4832-5830<br />010-5783-9213</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>TEST-2222-101</td>
+                                <td>FB1603150121000018</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>20160322-0003218</td>
+                                <td>FB1603150121000024</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">2</td>
+                                <td rowspan="2"><input type="checkbox" class="rowChk" /></td>
+                                <td rowspan="2">20160502-5KR430000002</td>
+                                <td rowspan="2" class="left">
+                                    <select class="fSelect full gSingleBreak">
+                                        <option>우체국택배</option>
+                                    </select>
+                                    <span class="gSingleBreak">
+                                        <label><input type="radio" name="radio2" class="fChk" /> 직접</label>
+                                        <label><input type="radio" name="radio2" class="fChk" /> 연동</label>
+                                    </span>
+                                    <span class="gSingleBreak"><input type="text" class="fText right" style="width:80px;" /></span>
+                                    <!--a href="#none" class="btnNormal"><span>송장번호 삭제</span></a-->
+                                    <a href="#layerResult" class="btnNormal eLayerClick"><span>송장연동 입력</span></a>
+                                </td>
+                                <td rowspan="2">LOVELOVEME</td>
+                                <td rowspan="2" class="left">()</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>TEST-LEE-0326003</td>
+                                <td>FB1603150121000030</td>
+                                <td class="right">2</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td rowspan="2" class="left">92743<br />서울특별시 성북구 하월곡동 51-30번지 자산빌딩 4층</td>
+                                <td rowspan="2" class="left">02-4832-5830<br />010-5783-9213</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>1384930246780400</td>
+                                <td>FB1603150121000046</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">3</td>
+                                <td rowspan="2"><input type="checkbox" class="rowChk" /></td>
+                                <td rowspan="2">20160502-5KR430000003</td>
+                                <td rowspan="2" class="left">
+                                    <select class="fSelect full gSingleBreak">
+                                        <option>우체국택배</option>
+                                    </select>
+                                    <span class="gSingleBreak">
+                                        <label><input type="radio" name="radio2" class="fChk" /> 직접</label>
+                                        <label><input type="radio" name="radio2" class="fChk" /> 연동</label>
+                                    </span>
+                                    <span class="gSingleBreak"><input type="text" class="fText right" style="width:80px;" /></span>
+                                    <!--a href="#none" class="btnNormal"><span>송장번호 삭제</span></a-->
+                                    <a href="#layerResult" class="btnNormal eLayerClick"><span>송장연동 입력</span></a>
+                                </td>
+                                <td rowspan="2">OHTORO</td>
+                                <td rowspan="2" class="left">()</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>TEST-LEE-0326005</td>
+                                <td>FB1603150121000011</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                                <td rowspan="2" class="left">92743<br />서울특별시 성북구 하월곡동 51-30번지 자산빌딩 4층</td>
+                                <td rowspan="2" class="left">02-4832-5830<br />010-5783-9213</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-15 09:28:58</td>
+                                <td>TEST-LEE-0326012</td>
+                                <td>FB1603150121000078</td>
+                                <td class="right">1</td>
+                                <td>2016-03-15 09:28:58</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="empty">검색결과가 없습니다.</p>
+                </div>
+                <div class="mCtrl typeFooter">
+                    <div class="gLeft">
+                        <span class="txtLess">선택한 항목을</span>
+                        <a href="#none" class="btnNormal"><span>송장번호 일괄 연동</span></a>
+                        <a href="#none" class="btnNormal"><span>반송완료처리</span></a>
+                        <a href="#none" class="btnNormal"><span>반송피킹리스트</span></a>
+                    </div>
+                    <div class="gRight">
+                        <div class="mOpen">
+                            <a href="#excelOpen4" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 택배사양식 엑셀다운로드<em class="icoLayer"></em></span></a>
+                            <div id="excelOpen4" class="open" style="width:168px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">우체국</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mOpen">
+                            <a href="#excelOpen5" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 송장번호 엑셀등록</span></a>
+                            <div id="excelOpen5" class="open" style="width:125px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">배송사1엑셀양식</a></li>
+                                        <li><a href="#none">배송사2엑셀양식</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#none" title="새창 열림" target="_blank" class="btnNormal"><span>엑셀다운로드양식 관리<em class="icoLink"></em></span></a>
+                        <div class="mOpen">
+                            <a href="#excelOpen6" class="btnNormal eOpenClick"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+                            <div id="excelOpen6" class="open" style="width:120px;">
+                                <div class="wrap">
+                                    <ul class="default">
+                                        <li><a href="#none">기본양식</a></li>
+                                        <li><a href="#none">사용자 입력 양식1</a></li>
+                                        <li><a href="#none">사용자 입력 양식2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mPaginate">
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                </div>
+            </div>
+
+<?php require_once('../../include/footer.html'); ?>

@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>우편번호 검색</title>
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script><!-- 참고 :  ECHOSTING-173192 -->
+    <link rel="stylesheet" type="text/css" href="//img.echosting.cafe24.com/css/postcode.css" media="all" charset="utf-8">
+    <style type="text/css">
+        html { width:100%; height:100%; }
+        body { height:100%; margin:0; padding:0; overflow-x:hidden; }
+    </style>
+    <!-- 참고 :  ECHOSTING-173192 -->
+    <script>
+        $(document).ready(function(){
+            $('body').delegate('.eTab a', 'click', function(e){
+                var _li = $(this).parent('li').addClass('selected').siblings().removeClass('selected'),
+                    _target = $(this).attr('href'),
+                    _siblings = $(_target).attr('class').split(/[ ]+/);
+                $(_target).show().siblings('.' + _siblings[0]).hide();
+                e.preventDefault();
+            });
+        });
+    </script>
+    <!-- // 참고 -->
+</head>
+
+<body> <!-- 참고 : 팝업 권장사이즈 : width=600, height=620 -->
+    <div class="mCafe24Post gPc">
+        <h1>우편번호 검색</h1>
+        <div class="content">
+
+            <!-- 참고 :  ECHOSTING-173192 -->
+            <div class="mTab typeNav eTab">
+                <ul>
+                    <li class="selected"><a href="#newCode">새 우편번호</a></li>
+                    <li><a href="#oldCode">구) 우편번호</a></li>
+                </ul>
+            </div>
+            <!-- // 참고 -->
+
+            <div class="search">
+                <table border="1" summary="">
+                    <caption>동(읍/면) + 지번 검색</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">지번/도로명</th>
+                            <td>
+                                <input type="text" class="fText" />
+                                <a href="#none" class="btnSearch"><img src="//img.echosting.cafe24.com/postcode/ko_KR/btn_postcode_search.gif" alt="검색" /></a>
+
+                                <!-- 참고 :  ECHOSTING-173192 -->
+                                <p class="txtInfo">[검색방법] 도로명+건물번호(예:테헤란로5) | 읍/면/동/리+지번(예:서린동154)</p>
+                                <!-- //참고 -->
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 참고 : 새 우편번호 -->
+            <div id="newCode" class="tabCont" style="display:block;">
+
+                <div class="ctrl">
+                    <span class="txtInfo txtEm">주소란에 입력하실 도로명주소 혹은 지번주소를 선택해주세요.</span>
+                    <!-- 참고 : 영문포함용 -->
+                    <!--<span class="txtInfo txtEm">주소란에 입력하실 주소를 선택해주세요.</span> -->
+                    <!-- // 참고 -->
+                    <select>
+                        <option selected="selected">전체지역(51)</option>
+                        <option>서울(36)</option>
+                        <option>대구(15)</option>
+                    </select>
+                </div>
+
+                <div class="addressList">
+                    <table border="1" summary="">
+                        <caption>검색결과</caption>
+                        <colgroup>
+                            <col style="width:auto;" />
+                            <col style="width:60px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">상세주소</th>
+                                <th scope="col">우편번호</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="address">
+                                    <a href="#none">
+                                        <span class="streetLine">
+                                            <span class="icoStreet">도로명</span>
+                                            서울특별시 강남구 개포로 202
+                                        </span>
+                                    </a>
+                                    <a href="#none">
+                                        <span class="numberLine">
+                                            <span class="icoNumber">지번</span>
+                                            서울특별시 강남구 개포로 1238 석인빌딩
+                                        </span>
+                                    </a>
+                                </td>
+                                <td class="right">13529</td>
+                            </tr>
+                            <tr>
+                                <td class="address">
+                                    <a href="#none">
+                                        <span class="streetLine">
+                                            <span class="icoStreet">도로명</span>
+                                            서울특별시 강남구 개포로 202
+                                        </span>
+                                    </a>
+                                    <a href="#none">
+                                        <span class="numberLine">
+                                            <span class="icoNumber">지번</span>
+                                            서울특별시 강남구 개포로 1238 석인빌딩
+                                        </span>
+                                    </a>
+                                </td>
+                                <td class="right">13529</td>
+                            </tr>
+                            <tr>
+                                <td class="address">
+                                    <a href="#none">
+                                        <span class="streetLine">
+                                            <span class="icoStreet">도로명</span>
+                                            서울특별시 강남구 개포로 202
+                                        </span>
+                                    </a>
+                                    <a href="#none">
+                                        <span class="numberLine">
+                                            <span class="icoNumber">지번</span>
+                                            서울특별시 강남구 개포로 1238 석인빌딩
+                                        </span>
+                                    </a>
+                                </td>
+                                <td class="right">13529</td>
+                            </tr>
+                            <tr>
+                                <td class="address">
+                                    <a href="#none">
+                                        <span class="streetLine">
+                                            <span class="icoStreet">도로명</span>
+                                            서울특별시 강남구 개포로 202
+                                        </span>
+                                    </a>
+                                    <a href="#none">
+                                        <span class="numberLine">
+                                            <span class="icoNumber">지번</span>
+                                            서울특별시 강남구 개포로 1238 석인빌딩
+                                        </span>
+                                    </a>
+                                </td>
+                                <td class="right">13529</td>
+                            </tr>
+                            <!-- 참고 : 영문포함용 -->
+                            <tr>
+                                <td class="address">
+                                    <a href="#none">
+                                        <span class="streetLine">
+                                            <span class="icoStreet">도로명</span>
+                                            서울특별시 강남구 개포로 202 서울특별시 강남구 개포로 202 서울특별시 강남구 개포로 202
+                                            <span class="eng">202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL 202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL </span>
+                                        </span>
+                                        <span class="numberLine">
+                                            <span class="icoNumber">지번</span>
+                                            서울특별시 강남구 개포로 1238 석인빌딩
+                                        </span>
+                                    </a>
+                                </td>
+                                <td class="right">13529</td>
+                            </tr>
+                            <!-- // 참고 -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 참고 : 검색 결과 없음 -->
+                <p class="empty"><strong>'$검색 입력값'</strong>에 대한 결과가 없습니다.<br />찾으실 지번주소 혹은 도로명주소를 검색해 주세요.</p>
+                <!--// 참고 -->
+
+                <div class="paginate">
+                    <a href="#none" class="first">이전 10페이지</a>
+                    <a href="#none" class="prev">이전 10페이지</a>
+                    <ol>
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><strong title="현재페이지">3</strong></li>
+                        <li><a href="#none">4</a></li>
+                        <li><a href="#none">5</a></li>
+                        <li><a href="#none">6</a></li>
+                        <li><a href="#none">7</a></li>
+                        <li><a href="#none">8</a></li>
+                        <li><a href="#none">9</a></li>
+                        <li><a href="#none">10</a></li>
+                    </ol>
+                    <a href="#none" class="next">다음 10페이지</a>
+                    <a href="#none" class="last">다음 10페이지</a>
+                </div>
+            </div>
+            <!-- // 참고 -->
+
+            <!-- 참고 : 구 우편번호 -->
+            <div id="oldCode" class="tabCont" style="display:none;">
+
+                <div class="mTab typeTab eTab">
+                    <ul>
+                        <li class="selected"><a href="#tabNumber">지번 주소(0건)</a></li>
+                        <li><a href="#tabStreet">도로명 주소(0건)</a></li>
+                        <li><a href="#tabZero">검색결과가 없을 경우 예시</a></li>
+                    </ul>
+                </div>
+
+                <!-- 참고 : 지번주소 -->
+                <div id="tabNumber" class="tabCont" style="display:block;">
+
+                      <!-- 참고 :  ECHOSTING-173192 -->
+                      <div class="ctrl">
+                        <span class="txtInfo txtEm">주소란에 입력하실 도로명주소 혹은 지번주소를 선택해주세요.</span>
+                        <!-- 참고 : 영문포함용 -->
+                        <!--<span class="txtInfo txtEm">주소란에 입력하실 주소를 선택해주세요.</span> -->
+                        <!-- // 참고 -->
+                        <select>
+                            <option selected="selected">전체지역(51)</option>
+                            <option>서울(36)</option>
+                            <option>대구(15)</option>
+                        </select>
+                    </div>
+                    <!-- // 참고-->
+
+                    <div class="mResult type1">
+                        <div class="resultList">
+                            <table border="1" summary="">
+                            <caption>지번 주소 검색결과</caption>
+                            <colgroup>
+                                <col style="width:auto;">
+                                <col style="width:60px;">
+                                <col style="width:60px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">상세주소</th>
+                                    <th scope="col">우편번호</th>
+                                    <th scope="col">선택</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mPaginate">
+                        <a href="#none" class="prev">이전 10페이지</a>
+                        <ol>
+                            <li><a href="#none">1</a></li>
+                            <li><a href="#none">2</a></li>
+                            <li><strong title="현재페이지">3</strong></li>
+                            <li><a href="#none">4</a></li>
+                            <li><a href="#none">5</a></li>
+                            <li><a href="#none">6</a></li>
+                            <li><a href="#none">7</a></li>
+                            <li><a href="#none">8</a></li>
+                            <li><a href="#none">9</a></li>
+                            <li><a href="#none">10</a></li>
+                        </ol>
+                        <a href="#none" class="next">다음 10페이지</a>
+                    </div>
+                </div>
+                <!-- // 참고 -->
+
+                <!-- 참고 : 도로명 주소 -->
+                <div id="tabStreet" class="tabCont" style="display:none;">
+
+                    <!-- 참고 :  ECHOSTING-173192 -->
+                    <div class="ctrl">
+                        <span class="txtInfo txtEm">주소란에 입력하실 도로명주소 혹은 지번주소를 선택해주세요.</span>
+                        <!-- 참고 : 영문포함용 -->
+                        <!--<span class="txtInfo txtEm">주소란에 입력하실 주소를 선택해주세요.</span> -->
+                        <!-- // 참고 -->
+                        <select>
+                            <option selected="selected">전체지역(51)</option>
+                            <option>서울(36)</option>
+                            <option>대구(15)</option>
+                        </select>
+                    </div>
+                    <!-- // 참고 --->
+
+                    <div class="mResult type3">
+                        <div class="resultList">
+                            <table border="1" summary="">
+                            <caption>도로명 주소 검색결과</caption>
+                            <colgroup>
+                                <col style="width:auto;">
+                                <col style="width:60px;">
+                                <col style="width:60px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">상세주소</th>
+                                    <th scope="col">우편번호</th>
+                                    <th scope="col">선택</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoStreet">도로명</span><p>서울 동작구 신대방로</p></li>
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoStreet">도로명</span><p>서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로</p></li>
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoStreet">도로명</span><p>서울 동작구 신대방로</p></li>
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoStreet">도로명</span><p>서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로</p></li>
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoStreet">도로명</span><p>서울 동작구 신대방로</p></li>
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoStreet">도로명</span><p>서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로 서울 동작구 신대방로</p></li>
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동 서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <ul class="address">
+                                            <li><span class="icoStreet">도로명</span><p>서울 동작구 신대방로</p></li>
+                                            <li><span class="icoNumber">지번</span><p>서울 동작구 신대방2동</p></li>
+                                            <li><p><span class="txtLight">1238 sukin building, Gaepo-dong, Gangnam-gu, Seoul, SEOUL</span></p></li>
+                                        </ul>
+                                    </td>
+                                    <td>156-012</td>
+                                    <td><a href="#none" class="btnSelect"><span>선택</span></a></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mPaginate">
+                        <a href="#none" class="prev">이전 10페이지</a>
+                        <ol>
+                            <li><a href="#none">1</a></li>
+                            <li><a href="#none">2</a></li>
+                            <li><strong title="현재페이지">3</strong></li>
+                            <li><a href="#none">4</a></li>
+                            <li><a href="#none">5</a></li>
+                            <li><a href="#none">6</a></li>
+                            <li><a href="#none">7</a></li>
+                            <li><a href="#none">8</a></li>
+                            <li><a href="#none">9</a></li>
+                            <li><a href="#none">10</a></li>
+                        </ol>
+                        <a href="#none" class="next">다음 10페이지</a>
+                    </div>
+                </div>
+                <!-- // 참고 -->
+
+                <!-- 참고 : 검색 결과 없음 -->
+                <div id="tabZero" class="tabCont" style="display:none;">
+                    <div class="mResult type0">
+                        <div class="resultList">
+                            <table border="1" summary="">
+                            <caption>도로명 주소 검색결과</caption>
+                            <colgroup>
+                                <col style="width:auto;">
+                                <col style="width:60px;">
+                                <col style="width:60px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">상세주소</th>
+                                    <th scope="col">우편번호</th>
+                                    <th scope="col">선택</th>
+                                </tr>
+                            </thead>
+                            <tbody class="empty">
+                                <tr><td colspan="3">우편번호 검색 내역이 없습니다.</td></tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mPaginate">
+                        <ol>
+                            <li><strong title="현재페이지">1</strong></li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- // 참고 -->
+
+            </div>
+            <!-- // 참고 -->
+        </div>
+        <div class="btnArea">
+            <a href="#none" onclick="window.close();"><img src="//img.echosting.cafe24.com/postcode/ko_KR/btn_postcode_close.gif" alt="닫기" /></a>
+        </div>
+        <div class="btnClose"><a href="#none" onclick="$('.mCafe24Post').hide();"><img src="//img.echosting.cafe24.com/postcode/btn_close.gif" alt="닫기" /></a></div>
+    </div>
+</body>
+</html>

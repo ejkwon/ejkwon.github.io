@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>상품엑셀수정 양식 정보</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="700, 600"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>상품엑셀수정 양식 정보</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>엑셀양식</h2>
+        </div>
+        <div class="mBoard gSmall">
+            <table border="1" summary="">
+            <caption>엑셀양식</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">엑셀양식명 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <input type="text" class="fText" style="width:200px;" />
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>항목 엑셀매칭</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="">
+            <caption>항목 엑셀매칭</caption>
+            <colgroup>
+                <col style="width:50%" />
+                <col style="width:50%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">항목</th>
+                    <th scope="col">엑셀 열</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">상품코드 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">바코드 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상품명</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상점상품코드 <strong class="icoRequired">필수</strong></th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">공급사상품명</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">공급사명</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">판매가</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상품이미지URL</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">품목명</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상점품목코드</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">입고가</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">HS코드</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상품소재</th>
+                    <td>
+                        <select class="fSelect">
+                            <option>-엑셀열 선택-</option>
+                            <option>A열</option>
+                            <option>B열</option>
+                            <option>C열</option>
+                            <option>D열</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mHelp typeInfo">
+        <h2>상품엑셀수정 양식 정보 안내</h2>
+        <div class="content">
+            <ol>
+                <li>1. 엑셀양식명은 기존 엑셀양식명과 중복되지 않게 입력해 주세요.</li>
+                <li>2. 항목에 매칭될 엑셀 열을 선택해 주세요. 항목 2개 이상에 동일한 엑셀 열을 선택할 수 없습니다.</li>
+                <li>3. "저장"버튼을 클릭하면 엑셀양식이 저장됩니다.</li>
+            </ol>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+
+</body>
+</html>

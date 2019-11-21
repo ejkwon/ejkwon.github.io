@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>우편번호 검색</title>
+    <link rel="stylesheet" type="text/css" href="/css/ec/design_zipcode.css" media="all" charset="utf-8">
+    <script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            $('body').delegate('.eTab a', 'click', function(e){
+                var _li = $(this).parent('li').addClass('selected').siblings().removeClass('selected'),
+                    _target = $(this).attr('href'),
+                    _siblings = $(_target).attr('class').split(/[ ]+/);
+                $(_target).show().siblings('.' + _siblings[0]).hide();
+                e.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body id="popup">
+    <!--@contents-->
+    <div id="cafe24zipLayer" class="zipcodeArea typeNewMobile ko_KR">
+        <h2>우편번호 검색</h2>
+        <div class="wrap">
+            <div class="search">
+                <div class="searchForm">
+                    <input type="text" placeholder="도로명/지번 입력">
+                    <button type="button" class="btnDelete">입력 내용 삭제</button>
+                </div>
+                <button type="button" class="btnSearch">검색</button>
+                <ul class="txtInfo">
+                    <li>지번(동,읍,면,리) : 예)신대방동 / 도로명(새주소) : 예)신대방길</li>
+                </ul>
+            </div>
+            <div class="zipcode">
+                <div class="tab eTab">
+                    <ul>
+                        <li class="selected"><a href="#tabCont1">지번 주소(0건)</a></li><!-- 참고 : 선택시 클래스 selected 추가 -->
+                        <li><a href="#tabCont2">도로명 주소(28건)</a></li>
+                    </ul>
+                </div>
+
+                <!-- 참고 : 지번 주소 검색결과 -->
+                <div id ="tabCont1" class="addressList" style="display:block;">
+                    <div class="areaInquiry">
+                        지역조회
+                        <select>
+                            <option>전체지역(4)</option>
+                            <option>서울(0)</option>
+                            <option>경기(0)</option>
+                            <option>강원(0)</option>
+                            <option>충북(0)</option>
+                            <option>충남(0)</option>
+                            <option>경북(0)</option>
+                            <option>경남(0)</option>
+                            <option>전북(0)</option>
+                            <option>전남(0)</option>
+                            <option>제주도(0)</option>
+                        </select>
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio1" id="code1">
+                            <label for="code1">서울특별시 강남구 개포동 1238<strong>135-964</strong></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="code2">
+                            <label for="code2">서울특별시 강남구 개포동 1238<strong>135-964</strong></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="code3">
+                            <label for="code3">서울특별시 강남구 개포동 1238 석인빌딩<strong>135-964</strong></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="code4">
+                            <label for="code4">서울특별시 강남구 개포동 1238<strong>135-964</strong></label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 참고 : 도로명 주소 검색결과, 도로명일 경우 클래스 typeRoad 추가 -->
+                <div id ="tabCont2" class="addressList typeRoad" style="display:none;">
+                    <div class="areaInquiry">
+                        지역조회
+                        <select>
+                            <option>전체지역(4)</option>
+                            <option>서울(0)</option>
+                            <option>경기(0)</option>
+                            <option>강원(0)</option>
+                            <option>충북(0)</option>
+                            <option>충남(0)</option>
+                            <option>경북(0)</option>
+                            <option>경남(0)</option>
+                            <option>전북(0)</option>
+                            <option>전남(0)</option>
+                            <option>제주도(0)</option>
+                        </select>
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio1" id="code5">
+                            <label for="code5">
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_road.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span><br>
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_street.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span>
+                                <strong>135-964</strong>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="code6">
+                            <label for="code6">
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_road.png" alt="도로명" height="13"> 서울특별시 강남구 개포로 2021-2 도심공항빌딩타워</span><br>
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_street.png" alt="도로명" height="13"> 서울특별시 강남구 개포로 1238 석인빌딩</span>
+                                <strong>135-964</strong>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="code7">
+                            <label for="code7">
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_road.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span><br>
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_street.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span>
+                                <strong>135-964</strong>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="code8">
+                            <label for="code8">
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_road.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span><br>
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_street.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span>
+                                <strong>135-964</strong>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="code9">
+                            <label for="code9">
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_road.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span><br>
+                                <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_street.png" alt="도로명" height="13"> 서울특별시 강남구 개포로</span>
+                                <strong>135-964</strong>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="empty">우편번호 검색 내역이 없습니다.</p>
+            </div>
+            <div class="paginate">
+                <p class="prev"><a href="#none"><span>이전 페이지</span></a></p>
+                <ol>
+                    <li><a href="#none" class="this">1</a></li>
+                    <li><a href="#none" class="other">2</a></li>
+                    <li><a href="#none" class="other">3</a></li>
+                    <li><a href="#none" class="other">4</a></li>
+                    <li><a href="#none" class="other">5</a></li>
+                </ol>
+                <p class="next"><a href="#none"><span>다음 페이지</span></a></p>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btnClose" onclick="window.close()">닫기</button>
+</body>
+</html>
+

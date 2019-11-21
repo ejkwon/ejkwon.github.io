@@ -1,0 +1,57 @@
+<?php require_once('../include/header.html'); ?>
+    <div id="container">
+        <div class="mTitle">
+            <h1>마이캐쉬 충전</h1>
+        </div>
+        <div class="mResult wait">
+            <p>결제 대기 중인 <br class="RMB"><strong>마이캐쉬 충전</strong>건이 있습니다.</p>
+        </div>
+        <section class="mBoxThin">
+            <div class="mTitle">
+                <h3>신청 정보</h3>
+            </div>
+            <div class="mBoard typeRow">
+                <table border="1">
+                    <caption>신청 정보</caption>
+                    <colgroup>
+                        <col style="width:30%;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">충전하실 <br class="RMB">금액</th>
+                            <td>50,000원</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">결제수단</th>
+                            <td>무통장(공용계좌)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금하실 <br class="RMB">계좌</th>
+                            <td>우리 382-183756-13-007<p>카페24(주)</p></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">신청금액</th>
+                            <td>10,000원</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금자명</th>
+                            <td>홍길동</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul class="mHelp em">
+                <li>결제 처리(입금확인) 후 충전이 가능합니다.</li>
+                <li>결제수단 및 금액 변경을 원하시면 [신청취소] 클릭 후 다시 신청하여 주세요.</li>
+                <li>입금자명과 동일하게 입금해 주셔야 빠른 확인이 가능하며, 입금 후에도 신청 내역이 남아있다면 [입금확인요청]을 클릭해 주세요.</li>
+            </ul>
+        </section>
+
+        <div class="mButton gFlex">
+            <a href="#layerSendEmail" class="btnEm eModal">입금 확인 요청</a>
+            <a href="#none" class="btnSubmit">신청 취소</a>
+        </div>
+    </div>
+
+<?php require_once('../include/footer.html'); ?>

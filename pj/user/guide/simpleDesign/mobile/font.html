@@ -1,0 +1,273 @@
+ <?php include("../../lib/lib.php"); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="Copyright(c) Simplex Internet Inc. All Rights Reserved." />
+    <?php include("../../include/ui_top.html"); ?>
+    <title>font</title>
+    <style type="text/css">
+th, td { padding:8px; text-align:center; }
+td[class*="BB"] { background:#4a5164; }
+
+/* ==========================================적용====================================== */
+/* 영역&공통 */
+body, code, .txtBase {
+    font-size:13px;
+    color:#1b1b1b;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+a, a:active, a:focus {
+    font-size:12px;
+    color:#000;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+a:hover {
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:12px;
+    color:#757575;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:underline;
+}
+
+strong > a, strong a:hover { font-weight:bold; }
+input, select {
+    font-size:13px;
+    color:#353535;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+textarea {
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:11px;
+    color:#8f8f8f;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+select.disabled, textarea.disabled {
+    color:#bfbfbf;
+}
+
+/* 타이틀 */
+.txtTitle24B, .txtTitle24B a, .txtTitle24B a:hover, .txtTitle24B a:active, .txtTitle24B a:focus {
+    font-size:24px;
+    color:#2e2e2e;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtTitle15B, .txtTitle15B a, .txtTitle15B a:hover, .txtTitle15B a:active, .txtTitle15B a:focus {
+    font-size:15px;
+    color:#1b1b1b;
+    font-weight:bold;
+    text-decoration:none;
+    font-style:normal;
+}
+.txtTitle14B, .txtTitle14B a, .txtTitle14B a:hover, .txtTitle14B a:active, .txtTitle14B a:focus {
+    font-family:verdana,Dotum,sans-serif;
+    font-size:14px;
+    color:#2e2e2e;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtTitle13B, .txtTitle13B a, .txtTitle13B a:hover, .txtTitle13B a:active, .txtTitle13B a:focus {
+    font-size:13px;
+    color:#1b1b1b;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtTitle15BB, .txtTitle15BB a, .txtTitle15BB a:hover, .txtTitle15BB a:active, .txtTitle15BB a:focus {
+    font-size:15px;
+    color:#fff;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtTitle14BB, .txtTitle14BB a, .txtTitle14BB a:hover, .txtTitle14BB a:active, .txtTitle14BB a:focus {
+    font-size:14px;
+    color:#fff;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtTitle13BB, .txtTitle13BB a, .txtTitle13BB a:hover, .txtTitle13BB a:active, .txtTitle13BB a:focus {
+    font-size:13px;
+    color:#fff;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtTitle13BS, .txtTitle13BS a, .txtTitle13BS a:hover, .txtTitle13BS a:active, .txtTitle13BS a:focus {
+    font-size:13px;
+    color:#508bed;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+/* 강조 */
+.txtStrong15, .txtStrong15 a, .txtStrong15 a:hover, .txtStrong15 a:active, .txtStrong15 a:focus {
+    font-size:15px;
+    color:#508bed;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtStrong13, .txtStrong13 a, .txtStrong13 a:hover, .txtStrong13 a:active, .txtStrong13 a:focus {
+    font-size:13px;
+    color:#508bed;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtStrong, .txtStrong a, .txtStrong a:hover, .txtStrong a:active, .txtStrong a:focus {
+    font-size:inherit;
+    color:#757575;
+    font-style:normal;
+    text-decoration:none;
+}
+/* 안내 */
+.txtSub13, .txtSub13 a, .txtSub13 a:hover, .txtSub13 a:active, .txtSub13 a:focus {
+    font-size:13px;
+    color:#757575;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtSub12, .txtSub12 a, .txtSub12 a:hover, .txtSub12 a:active, .txtSub12 a:focus {
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:12px;
+    color:inherit;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtSub11, .txtSub11 a, .txtSub11 a:hover, .txtSub11 a:active, .txtSub11 a:focus {
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:11px;
+    color:#757575;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+.txtPrice,  .txtPrice a, .txtPrice a:hover, .txtPrice a:active, .txtPrice a:focus {
+    font-family:tahoma,Dotum,sans-serif;
+    font-size:inherit;
+    color:#508bed;
+    font-style:normal;
+    text-decoration:none;
+}
+    </style>
+</head>
+
+<body id="guideUi" class="guideBody">
+    <div class="guideTitle">
+        <h2>FONT</h2>
+    </div>
+
+<guideFrame>
+    <guideTitle>FONT</guideTitle>
+    <guidePreview>
+        <div>
+            <table border="1" summary="" style="border-collapse: collapse;">
+            <colgroup>
+                <col style="width:10%">
+                <col style="width:22.5%">
+                <col style="width:22.5%">
+                <col style="width:22.5%">
+                <col style="width:22.5%">
+            </colgroup>
+            <tbody>
+                <tr>
+                  <th>태그 명</th>
+                  <th>기본</th>
+                  <th>.txtSub11</th>
+                  <th>.txtSub12</th>
+                  <th>.txtSub13</th>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>일반 텍스트 sample 1234</td>
+                    <td class="txtSub11">도움말 등 부가설명 sample 1234 </td>
+                    <td class="txtSub12">부가설명 sample 1234 </td>
+                    <td class="txtSub13">주의 sample 1234 </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div style="margin:20px 0;">
+            <table border="1" summary="" style="border-collapse: collapse;">
+            <colgroup>
+                <col style="width:10%">
+                <col style="width:30%">
+                <col style="width:30%">
+                <col style="width:30%">
+            </colgroup>
+            <tbody>
+                <tr>
+                  <th>태그 명</th>
+                  <th>.txtStrong</th>
+                  <th>.txtStrong13</th>
+                  <th>.txtStrong15</th>
+                </tr>
+                <tr>
+                    <td>th, strong, span, p</td>
+                    <td class="txtStrong">부모의 size상속 받는 th등 제목 sample 1234 </td>
+                    <td class="txtStrong13">강조(판매가 등) sample 1234 </td>
+                    <td class="txtStrong15">경고, 주의, 알림 sample 1234 </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div>
+            <table border="1" summary="" style="border-collapse: collapse;">
+            <colgroup>
+                <col style="width:10%">
+                <col style="width:11.25%">
+                <col style="width:11.25%">
+                <col style="width:11.25%">
+                <col style="width:11.25%">
+                <col style="width:11.25%">
+                <col style="width:11.25%">
+                <col style="width:11.25%">
+                <col style="width:11.25%">
+            </colgroup>
+            <tbody>
+                <tr>
+                  <th>태그 명</th>
+                  <th>txtTitle13BS</th>
+                  <th>.txtTitle13BB</th>
+                  <th>.txtTitle14BB</th>
+                  <th>.txtTitle15BB</th>
+                  <th>.txtTitle13B</th>
+                  <th>.txtTitle14B</th>
+                  <th>.txtTitle15B</th>
+                  <th>.txtTitle24B</th>
+                </tr>
+                <tr>
+                    <td>h</td>
+                    <td class="txtTitle13BS">토글, 박스 타이틀 sample 1234</td>
+                    <td class="txtTitle13BB">짙은 배경 h3 sample 1234</td>
+                    <td class="txtTitle14BB">짙은 배경 h4, h3, h2 sample 1234</td>
+                    <td class="txtTitle15BB">짙은 배경 h2 sample 1234</td>
+                    <td class="txtTitle13B">토글, 박스 타이틀 sample 1234</td>
+                    <td class="txtTitle14B">상품관련 h2 sample 1234</td>
+                    <td class="txtTitle15B">h2, 게시글 제목 sample 1234</td>
+                    <td class="txtTitle24B">로고 sample 1234</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+</body>
+</html>

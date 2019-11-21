@@ -1,0 +1,44 @@
+<div class="description">
+    <h2>관련 설명<span class="btnToggle"></span></h2>
+    <ol>
+        <li>1. 해당 페이지로 <strong>전체 브라우저</strong>에서의 폰트 확인이 가능합니다.</li>
+        <li>2. 폰트 우선순위에 따라 테이블 열 순서대로 노출됩니다.</li>
+        <li>3. 폰트 권장 사이즈는 아래 테이블의 <span class="recommend box"></span> 배경색으로 표시된 행을 참고해주세요.</li>
+        <li>4. 폰트 확인 대상
+            <ul>
+                <li>PC</li>
+                <li>모바일</li>
+                <li>반응형
+                    <ul>
+                        <li>모바일 사이즈로 PC에서 볼때</li>
+                        <li>모바일 사이즈를 모바일에서 볼때</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>5. 해외언어 lang 필수 적용 (디버깅 추가예정)
+            <ul>
+                <li><strong>HTML 가이드</strong>
+                    <ul>
+                        <li>한국어 : &lt;html lang="<span class="txtWarn">ko</span>"&gt;</li>
+                        <li>영어 : &lt;html lang="<span class="txtWarn">en</span>"&gt;</li>
+                        <li>일본어 : &lt;html lang="<span class="txtWarn">ja</span>"&gt;</li>
+                        <li>중국어 : &lt;html lang="<span class="txtWarn">zh</span>"&gt;</li>
+                    </ul>
+                </li>
+                <li><strong>CSS 가이드</strong>: 일본어와 중국어는 <span class="txtWarn">폰트 최소사이즈 12px 처리</span>
+                    <ul>
+                        <li>html:lang(ja) .txt10, html:lang(ja) .txt11 { font-size:12px; }</li>
+                        <li>html:lang(zh) .txt10, html:lang(zh) .txt11 { font-size:12px; }</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>6. 폰트 사이즈 10~11px 필요할 경우, 전체 언어 공통으로 적용하기 위해 해당 클래스로 처리합니다.
+            <ul>
+                <li> &lt;span class="txt10"&gt; &lt;/span&gt;</li>
+                <li> &lt;span class="txt11"&gt; &lt;/span&gt;</li>
+            </ul>
+        </li>
+    </ol>
+</div>

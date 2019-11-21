@@ -1,0 +1,62 @@
+<?php include('./include/head.html'); ?>
+<body>
+<div id="top">
+    <h1>[퍼블리싱 가이드]</h1>
+    <a href="../index.php" target="_blank">- 모바일어드민 IA 바로가기▶</a>
+    <div class="tab gExtend">
+        <ul>
+            <li><a href="./icon.html">object</a></li>
+            <li class="selected">
+                <a href="./title.html">module</a>
+                <ul>
+                    <li><a href="./title.html">mTitle</a></li>
+                    <li class="selected"><a href="./tab.html">mTab</a></li>
+                    <li><a href="./toggle.html">mToggle</a></li>
+                    <li><a href="./board.html">mBoard</a></li>
+                    <li><a href="./search.html">mSearch</a></li>
+                    <li><a href="./searcharea.html">searchArea</a></li>
+                    <li><a href="./paginate.html">mPaginate</a></li>
+                    <li><a href="./index.html">mIndex</a></li>
+                    <li><a href="./summary.html">mSummary</a></li>
+                    <li><a href="./list.html">mList</a></li>
+                    <li><a href="./total.html">mTotal/deliveryInfo</a></li>
+                </ul>
+            </li>
+            <li><a href="./popup.html">popup</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="guide">
+    <h1>탭</h1>
+    <h2>mTab</h2>
+    <h3>탭은 현재 각 모듈에서 사용하는 디자인 타입 2가지로 나뉜다. (기본 탭 디자인은 추후 작업이 추가될 때 고려할 예정)</h3>
+    <p class="info">대시보드 페이지의 typeDash / 로그인 페이지의 typeLogin</p>
+
+    <!-- 예시화면 -->
+    <div class="guideArea">
+        <a href="#none" class="btnHide">Hide</a>
+
+        <div id="contents">
+            <h3>mTab typeDash</h3><br>
+            <div class="mTab typeDash">
+                <ul>
+                    <li class="selected"><a href="#none">오늘 현황</a></li>
+                    <li><a href="#none">어제 현황</a></li>
+                </ul>
+            </div>
+
+            <br><br>
+            <h3>mTab typeLogin</h3><br>
+            <div class="mTab typeLogin">
+                <ul>
+                    <li class="selected"><a href="#none">대표 운영자</a></li>
+                    <li><a href="#none">부운영자</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>Mobile Admin</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css" media="screen">
+</head>
+<body id="main">
+     <div id="wrap">
+        <!-- aside -->
+        <?php include('../layout/aside.html'); ?><!-- //aside -->
+        <hr class="layout">
+
+        <div id="container">
+            <!-- header -->
+            <header id="header">
+                <div class="topArea">
+                    <h1 class="logo"><a href="../dashboard/dashboard.html"><img src="//img.echosting.cafe24.com/mobile/layout/img_logo.png" height="15" alt="CAFE24 쇼핑몰관리자"></a></h1>
+                    <a href="#none" class="fold">카테고리</a>
+                    <a href="#none" class="shop" target="_blank">내 상점</a>
+                </div>
+                <nav id="nav">
+                    <!--
+                        ※참고: 개발 스크립트 처리 가이드
+                            1. 스와이프 작동시 ul 태그의 translateX 값 유동 처리
+                            2. 사양에 따라 btnNavPrev / btnNavNext 노출 처리
+                            3. 디바이스 크기에 따라 한줄에 4개 메뉴 노출되도록 #nav li 의 min-width 값 유동 처리
+                    -->
+                    <ul style="transform:translateX(0px);">
+                        <li class="shop"><a href="../shop/myshop.html">상점</a></li>
+                        <li class="product"><a href="../product/list.html">상품</a></li>
+                        <li class="order"><a href="../order/list.html">주문</a></li>
+                        <li class="member"><a href="../member/list.html">고객</a></li>
+                        <li class="board"><a href="../board/board.html">게시판</a></li>
+                        <li class="service"><a href="../service/use.html">부가서비스</a></li>
+                        <li class="report"><a href="/ec/report/analytics/visitor/overview.html" target="_blank" title="새창 열림">접속통계</a></li>
+                    </ul>
+                    <button type="button" class="btnNavPrev" style="display:none">이전 메뉴</button>
+                    <button type="button" class="btnNavNext">다음 메뉴</button>
+                </nav>
+            </header><!-- //header -->
+            <hr class="layout">

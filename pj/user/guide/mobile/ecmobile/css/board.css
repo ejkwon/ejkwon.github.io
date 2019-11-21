@@ -1,0 +1,162 @@
+/* boardList */
+.boardList { margin:-1px 0 0; border-top:1px solid #ececec; font-size:11px; }
+.boardList li { overflow:hidden; position:relative; padding:14px; border-bottom:1px solid #ececec; }
+.boardList a.summary { display:block; color:#757575; }
+.boardList .subject { display:block; padding:0 0 7px; font-size:15px; line-height:1.3em; color:#1b1b1b; font-weight:normal; }
+.boardList .comment { color:#508bed; }
+.boardList a.summary > span { padding:0 6px 0 0; }
+.boardList a.summary img { width:auto; height:11px; vertical-align:-1px; }
+    /* notice */
+    .boardList.notice li { background:#f9f9f9; }
+    .boardList.notice .subject { font-weight:bold; }
+
+    /* 상품게시판 */
+    .boardList .thumb { float:left; }
+    .boardList .thumb img { width:50px; max-height:50px; padding:0 7px 0 0; }
+    /*.boardList a.summary { padding:0 30px 0 57px; } 오른쪽 btnToggle과 겹침 방지 */
+    .boardList .view { position:absolute; right:14px; top:14px; width:30px; height:30px; }
+    .boardList .view .btnToggle { display:inline-block; width:30px; height:30px; padding:0; margin:0; border:1px solid #d5d5d5; border-radius:3px; background:#fff; }
+    .boardList .view .btnToggle img { width:13px; height:8px; padding:11px 8px 11px 8px; }
+    /* 아코디언형 */
+    .boardList .contentView { font-size:15px; word-wrap:break-word; background:#f1f1f1; }
+    .boardList .contentView img { margin:0 0 14px; max-width:100%; }
+
+/* 게시글 없음 */
+.empty { padding:28px 0; border-bottom:1px solid #d5d5d5; text-align:center; font-size:12px; background:#fff; }
+
+/* boardRead */
+.boardRead .label { font-weight:normal; }
+.boardRead .label.hide { display:none; }
+.boardRead .title { margin:14px 14px 0; }
+.boardRead .title h3 { font-size:15px; word-wrap:break-word; }
+.boardRead .info { overflow:hidden; margin:7px 0; padding:0 14px; }
+.boardRead .info > span { position:relative; display:inline-block; padding:0 7px 0 8px; margin:7px 0 0; color:#757575; }
+.boardRead .info > span:first-child { padding-left:0; }
+.boardRead .info > span:before { display:block; content:""; position:absolute; top:2px; left:0; width:1px; height:11px; background:#d6d6d6; }
+.boardRead .info > span.vote:before { top:7px; }
+.boardRead .info > span:first-child:before { display:none; }
+.boardRead .info > span.chk { width:100%; margin:0; }
+.boardRead .info > span.vote a { margin:0 0 0 7px; }
+.boardRead .info .writer a { color:#757575; }
+.boardRead .info .rating img { margin:-4px 0 0; width:auto; height:11px; }
+.boardRead .info .btnIcon img { width:12px; height:12px; }
+.boardRead .content { margin:-1px 0 0; padding:14px 14px 14px; word-wrap:break-word; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; text-align:center; }
+.boardRead .content p,
+.boardRead .content div { text-align:left; }
+.boardRead .content img { margin:0 auto 10px; max-width:100%; }
+.boardRead .content ul li { text-align:left; list-style:disc; }
+.boardRead .attach { overflow:hidden; padding:14px 10px 14px; border-bottom:1px solid #d5d5d5; color:#757575; }
+.boardRead .attach:after { content:""; display:block; clear:both; }
+.boardRead .attach a { padding:0 0 0 17px; text-decoration:underline; white-space:nowrap; background:url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_file.png") no-repeat 0 4px; background-size:13px 12px; }
+.boardRead .attach .label { float:left; width:20%; }
+.boardRead .attach span.file { float:left; width:80%; }
+.boardRead .password { overflow:hidden; padding:7px 14px 14px; border-bottom:1px solid #d5d5d5; color:#757575; }
+.boardRead .password:after { content:""; display:block; clear:both; }
+.boardRead .password .label { float:left; width:20%; padding-top:3px; line-height:24px; }
+.boardRead .password .form { float:left; position:relative; float:left; width:80%; }
+.boardRead .password .passwordForm { display:block; padding:0 107px 0 0; }
+.boardRead .password .right { position:absolute; right:0; top:0; }
+.boardRead .password .help { margin:14px 0 0; }
+.boardRead #password { width:100%; }
+
+/* boardWrite */
+.boardWrite { margin:-1px 14px 7px; border:1px solid #cccccc; background:#fff; }
+.boardWrite a { color:#333; }
+.boardWrite table th { color:#757575; font-weight:normal; }
+.boardWrite table thead th { padding:8px 0; text-align:center; border-bottom:1px solid #cacaca; border-left:1px solid #cacaca; }
+.boardWrite table thead tr > th:first-child { border-left:0; }
+.boardWrite table tbody th,
+.boardWrite table tbody td { border-bottom:1px solid #f1f1f1; word-wrap:break-word; }
+.boardWrite table tbody th { padding:14px 0 7px 14px; vertical-align:top; text-align:left; }
+.boardWrite table tbody td { padding:7px 14px 7px 14px; }
+.boardWrite table tbody td.write { padding:14px; }
+.boardWrite table tbody tr > td:first-child { border-left:0; }
+.boardWrite table #content { width:100%; height:100px; }
+.boardWrite table #email1,
+.boardWrite table #email2 { float:left; margin:0 1% 4px 0; width:45.5%; }
+.boardWrite table #email2 { float:right; margin:0 0 4px 0; }
+.boardWrite table #email3 { width:100%; }
+.boardWrite table #ucc { margin:0 0 5px 0; width:100%; }
+.boardWrite table #ucc_width { float:left; width:46%; }
+.boardWrite table #ucc_height { float:right; margin:0 0 0 -12px; width:46%; }
+.boardWrite table .captcha { position:relative; }
+.boardWrite table .captcha span { display:block; padding:0 0 0 94px; }
+.boardWrite table .captcha img { position:absolute; left:14px; top:14px; }
+.boardWrite table #captcha { width:100%; }
+.boardWrite .grid { margin:3px 0 0; }
+.boardWrite table #board_category { margin:0 0 7px; }
+.boardWrite table select,
+.boardWrite table input[type="text"],
+.boardWrite table input[type="password"] { width:100%; }
+.boardWrite table .size { overflow:hidden; margin:0; padding:0; width:0; height:0; font-size:0; }
+.boardWrite table .txtEm { color:#ff6600; }
+.boardWrite p { margin:3px 0 0; }
+
+/* boardSearch */
+.boardSearch { margin:0 0 29px; padding:14px; border-top:1px solid #ececec; border-bottom:1px solid #ececec; text-align:left; }
+.boardSearch .keyword { position:relative; margin:7px 0 0; padding:0 51px 0 0 }
+.boardSearch input[type="text"] { width:100%; }
+.boardSearch .category { overflow:hidden; }
+.boardSearch .category select.searchDate { float:left; width:49%; }
+.boardSearch .category select.searchKey { float:right; width:49%; }
+.boardSearch .btnStrong { position:absolute; right:0; top:0; }
+
+/* commentView */
+.commentView { background-color:#ffffff; }
+.commentView .label { vertical-align:middle; letter-spacing:-1px; }
+.commentView .label.hide { display:none; }
+.commentView li { position:relative; padding:14px 0 0; border-bottom:1px solid #d5d5d5; }
+.commentView li > div { padding:0 14px; }
+.commentView li .info { overflow:hidden; margin:0 0 7px; color:#757575; }
+.commentView li .info .writer a { color:#757575; }
+.commentView li .info > span { position:relative; display:inline-block; padding:0 7px 0 8px; font-size:11px; vertical-align:top; }
+.commentView li .info > span:first-child { padding-left:0; }
+.commentView li .info > span:before { display:block; content:""; position:absolute; top:2px; left:0; width:1px; height:11px; background:#d6d6d6; }
+.commentView li .info > span:first-child:before { display:none; }
+.commentView li .info > span.chk { width:100%; margin:0; }
+.commentView li .info > span.rating img { margin:1px 0 0; width:auto; height:11px; }
+.commentView li .content { word-wrap:break-word; }
+.commentView li .content span img { width:13px; height:13px; }
+.commentView .btnArea { overflow:hidden; margin:7px 0; padding:0 14px; }
+.commentView .btnArea div button.replyList span { margin:0 0 0 5px; color:#508bed; }
+.commentView .btnArea div button.reply { padding:0 9px 0 26px; background:#fff url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_comment.png") no-repeat 9px 50%; background-size:13px 13px; }
+
+/* commentWrite */
+.commentWrite { padding:29px 0 0; }
+.commentWrite fieldset { padding:7px 0 0; border-top:1px solid #d5d5d5; }
+.commentWrite .label { padding:0 7px 0 0; color:#757575; font-weight:normal; vertical-align:middle; letter-spacing:-1px; }
+.commentWrite .label.hide { display:none; }
+.commentWrite .info { margin:0 0 7px; padding:0 14px; }
+.commentWrite .info:after { content:""; display:block; clear:both; }
+.commentWrite .info p.name { float:left; margin-right:3%; width:48.5%; }
+.commentWrite .info p.password { float:right; width:48.5%; border-bottom:0; text-align:right; }
+.commentWrite .info p.name #comment_name { width:60%; }
+.commentWrite .info p.password #comment_password { width:60%; }
+.commentWrite .info p.password .label { margin:0; }
+.commentWrite .admin { margin:14px 0 0; }
+.commentWrite .admin a { display:block; text-align:center; }
+.commentWrite .comment { margin:7px 14px; }
+.commentWrite .comment textarea#comment { width:100%; height:50px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.commentWrite .byteRating { padding:0 14px; }
+.commentWrite .byteRating:after { content:""; display:block; clear:both; }
+.commentWrite .byteRating .displaynone { display:none; }
+.commentWrite .rating { float:left; padding:0; width:75%; }
+.commentWrite .rating label { margin-right:5px; }
+.commentWrite .rating input { margin-right:2px; }
+.commentWrite .byte { float:right; margin:-4px 0 0; padding:0; width:25%; font-size:11px; text-align:right; line-height:29px; }
+.commentWrite .captcha { overflow:hidden; padding:0 14px 0 104px; }
+.commentWrite .captcha .img,
+.commentWrite .captcha .form { float:left; position:relative; }
+.commentWrite .captcha .img { left:-90px; width:90px; margin-right:-90px; }
+.commentWrite .captcha .form { width:100%; }
+.commentWrite .captcha .form p { margin:14px 0 0; padding:0 0 0 20px; font-size:11px; background:url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_important.png") no-repeat 0 50%; background-size:13px 13px; }
+.commentWrite #captcha  { margin:2px 0 0 0; width:100%; }
+.commentWrite .btnArea { margin:0; padding:7px 14px; }
+.commentWrite .btnArea .gLeft.secret label { color:#757575; }
+
+    /* typeModify */
+    .commentWrite.typeModify { padding:0; }
+    .commentWrite.typeModify fieldset { padding:14px 0 0; border-top:0; }
+
+    /* typeReply */
+    .commentWrite.typeReply { padding:0; background:#f1f1f1; }

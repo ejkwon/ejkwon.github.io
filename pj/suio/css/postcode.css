@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/* Reset */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img { margin:0; padding:0; }
+html { width:100%; height:100%; }
+body,code { font:0.75em "돋움",Dotum,AppleGothic,sans-serif; color:#1c1c1c; background:#fff; }
+  html:lang(ja) body, html:lang(ja) code { font-family:Meiryo,"メイリオ","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",sans-serif; }
+li { list-style:none; }
+img,fieldset { border:0; vertical-align:top; }
+table { table-layout:fixed; width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+table img { vertical-align:middle; }
+caption { display:none; }
+th,td { border:0; word-wrap:break-word; }
+input,select,textarea { font-size:13px; font-family:"돋움", Dotum; color:#111; vertical-align:middle; }
+  html:lang(ja) input, html:lang(ja) select, html:lang(ja) textarea, html:lang(ja) button { font-family:Meiryo,"メイリオ","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",sans-serif; }
+legend { visibility:hidden; position:absolute; left:-9999px; top:-9999px; width:0; height:0; line-height:0; }
+button { overflow:visible; padding:0; margin:0; border:0; cursor:pointer; }
+button::-moz-focus-inner { padding:0; border:0; }
+hr.layout { display:none; }
+a { text-decoration:none; color:#1c1c1c; }
+a:hover { text-decoration:underline; }
+
+/* mTab */
+.mTab { zoom:1; margin:0 0; }
+   /* mTab + typeNav */
+    .mTab.typeNav ul { margin:0 0 20px; padding:0 1px; }
+    .mTab.typeNav ul:after { content:""; display:block; clear:both; }
+    .mTab.typeNav li { float:left; width:50%; }
+    .mTab.typeNav li a { display:block; text-align:center; }
+      /* pc */
+      .gPc .mTab.typeNav li a { position:relative; height:38px; margin:0 0 0 -1px; border:1px solid #d7d7d7; border-bottom:1px solid #666; font-weight:bold; color:#777; line-height:38px; text-decoration:none; background:#f3f3f3; }
+      .gPc .mTab.typeNav li.selected a { z-index:1; height:39px; border-color:#666; border-bottom:0; line-height:39px; color:#000; background-color:#fff; }
+      /* mobile */
+      .gMobile.typeAll .mTab.typeNav { margin:-7px; }
+      .gMobile.typeAll .mTab.typeNav li a { height:41px; box-shadow:inset 0 -1px #dbdbdb; font-size:14px; line-height:41px; color:#605f5f; background:#fff; }
+      .gMobile.typeAll .mTab.typeNav li.selected a { box-shadow:inset 0 -3px #656c80; font-weight:bold; color:#4a5164; }
+    /* mTab + typeTab */
+      /* pc */
+      .gPc .mTab.typeTab ul { position:relative; height:27px; padding:0 15px; border-bottom:1px solid #a4a4ad; }
+      .gPc .mTab.typeTab ul:after { content:""; display:block; clear:both; }
+      .gPc .mTab.typeTab li a { position:relative; float:left; min-width:40px; height:25px; margin:0 1px 0 0; padding:1px 30px 0 20px; color:#fff; font-size:11px; text-align:center; line-height:25px; border:1px solid #8b94a1; border-bottom:0; text-decoration:none; background:#a8afbb url("//img.echosting.cafe24.com/suio/sflex_tab.png") no-repeat 100% -188px; border-radius:3px 3px 0 0; }
+      .gPc .mTab.typeTab li.selected a { position:relative; height:26px; margin-bottom:-1px; color:#1c1c1c; line-height:26px; border-color:#a4a4ad; background-color:#fff; background-position:100% -288px; }
+      .gPc .mTab.typeTab li.important a { border-color:#e25508; background-color:#ff7400; }
+      .gPc .mTab.typeTab li.important.selected a { border-color:#a4a4ad; background-color:#fff; }
+
+
+/****************************** 새 우편번호 ******************************/
+.mCafe24Post img { border:none; margin:0; padding:0; vertical-align:middle; }
+.mCafe24Post caption { display:none; }
+.mCafe24Post table { width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+.mCafe24Post th,td { margin:0; padding:0; border:0; vertical-align:top; }
+.mCafe24Post a { text-decoration:none; color:#000; }
+.mCafe24Post a:active{ text-decoration:none; }
+
+/* ---------- PC ---------- */
+.mCafe24Post.gPc { position:relative; min-width:598px; color:#20232c; line-height:1.2em; }
+    .mCafe24Post.gPc.typeLayer { width:598px; position:absolute; top:0; left:50%; margin:0 0 0 -300px; border:1px solid #7f8186; }
+.mCafe24Post.gPc h1 { margin:0; height:39px; padding:0 35px 0 18px; color:#fefefe; font-size:14px; line-height:39px; background-color:#666; }
+.mCafe24Post.gPc .content { padding:20px 19px; margin:0 0 41px; min-height:498px; background-color:#fff; }
+    .mCafe24Post.gPc.typeLayer .content { margin:0; }
+.mCafe24Post.gPc .btnClose { display:none; position:absolute; right:13px; top:13px; }
+    .mCafe24Post.gPc.typeLayer .btnClose { display:block; }
+.mCafe24Post.gPc .btnArea { position:fixed; left:0; bottom:0; width:100%; padding:9px 0 10px; border-top:1px solid #c7ccd2; text-align:center; background:#e5e5e5; }
+    .mCafe24Post.gPc.typeLayer .btnArea { position:static; }
+
+.mCafe24Post.gPc .search { margin:0 0 15px; }
+.mCafe24Post.gPc .search table { border:1px solid #d8d8d8; line-height:1.5; background-color:#fff; }
+.mCafe24Post.gPc .search th { padding:10px 9px; width:80px; vertical-align:middle; font-weight:normal; color:#777; background-color:#f5f5f5; }
+.mCafe24Post.gPc .search td { position:relative; padding:10px 80px 10px 9px; vertical-align:middle; }
+.mCafe24Post.gPc .fText {
+    margin:0; height:30px; width:100%; padding:2px 10px; line-height:24px; border:1px solid #c5c5c5; border-right-color:#e9e9e9; border-bottom-color:#e9e9e9; outline:none; font-size:11px; font-family:dotum,'돋움',sans-serif; color:#1b1b1b; vertical-align:middle; font-weight:normal; background:#fff;
+    box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-sizing:border-box; -o-box-sizing:border-box;
+}
+.mCafe24Post.gPc .btnSearch { position:absolute; top:10px; right:14px; }
+.mCafe24Post.gPc .txtInfo { padding:0; margin:9px 0 0 3px; font-size:11px; color:#747474; letter-spacing:-0.05em; }
+.mCafe24Post.gPc .txtEm { color:#6292db; }
+
+.mCafe24Post.gPc .ctrl { overflow:hidden; margin:15px 0 10px; line-height:20px; }
+.mCafe24Post.gPc .ctrl .txtInfo { margin:0 0 0 7px; padding:0 0 0 11px; background:url("//img.echosting.cafe24.com/postcode/sflex_ico.png") no-repeat -443px -96px; }
+.mCafe24Post.gPc .ctrl select { float:right; width:120px; height:20px; margin:0; padding:0; border:1px solid #e0e0e0; border-top-color:#afafaf; font-size:11px; color:#777; font-family:dotum,'돋움',sans-serif; vertical-align:middle; }
+
+.mCafe24Post.gPc .addressList { overflow-x:hidden; overflow-y:auto; height:342px; border-top:1px solid #dadada; border-bottom:1px solid #dadada; }
+.mCafe24Post.gPc .addressList thead { display:none; }
+.mCafe24Post.gPc .addressList td { padding:8px 15px; border-top:1px dotted #c2c2c2; color:#20232c; vertical-align:middle; line-height:16px; word-break:break-word; }
+.mCafe24Post.gPc .addressList tr:first-child td { border-top:0; }
+.mCafe24Post.gPc .addressList .right { padding-left:5px; text-align:right; }
+.mCafe24Post.gPc .addressList .address .streetLine,
+.mCafe24Post.gPc .addressList .address .numberLine { position:relative; display:block; padding:0 0 0 55px; }
+.mCafe24Post.gPc .addressList .address .numberLine { margin:10px 0 0; }
+.mCafe24Post.gPc .addressList .address > a .eng { display:block; color:#898989; }
+.mCafe24Post.gPc .addressList .address > a:hover,
+.mCafe24Post.gPc .addressList .address > a:focus,
+.mCafe24Post.gPc .addressList .address > a:hover .eng,
+.mCafe24Post.gPc .addressList .address > a:focus .eng { color:#246bd8; }
+.mCafe24Post.gPc .addressList .address .icoNumber,
+.mCafe24Post.gPc .addressList .address .icoStreet { position:absolute; left:0; top:0; width:40px; height:15px; font-size:0; line-height:0; background-image:url("//img.echosting.cafe24.com/postcode/sfix_ico.png"); background-repeat:no-repeat; }
+.mCafe24Post.gPc .addressList .address .icoNumber { background-position:0 0; }
+  html:lang(ja) .mCafe24Post.gPc .addressList .address .icoNumber { background-position:-50px 0; }
+.mCafe24Post.gPc .addressList .address .icoStreet { background-position:0 -25px; }
+  html:lang(ja) .mCafe24Post.gPc .addressList .address .icoStreet { background-position:-50px -25px; }
+.mCafe24Post.gPc .empty { margin:0; padding:185px 0; line-height:1.5; text-align:center; }
+
+.mCafe24Post.gPc .paginate { margin:10px 0 5px; font-size:0; line-height:0; text-align:center; }
+.mCafe24Post.gPc .paginate a,
+.mCafe24Post.gPc .paginate strong { display:inline-block; padding:0 6px 0 5px; color:#7c7b7b; font-size:12px; font-weight:bold; font-family:Tahoma, sans-serif; line-height:12px; vertical-align:middle; text-decoration:none; }
+.mCafe24Post.gPc .paginate ol,
+.mCafe24Post.gPc .paginate li { margin:0; padding:0; display:inline-block; }
+.mCafe24Post.gPc .paginate ol { list-style-position:inside; }
+.mCafe24Post.gPc .paginate a:hover,
+.mCafe24Post.gPc .paginate a:active,
+.mCafe24Post.gPc .paginate a:focus,
+.mCafe24Post.gPc .paginate strong { color:#fd5c40; text-decoration:none; }
+.mCafe24Post.gPc .paginate .first,
+.mCafe24Post.gPc .paginate .prev,
+.mCafe24Post.gPc .paginate .next,
+.mCafe24Post.gPc .paginate .last { overflow:hidden; width:20px; height:17px; padding:0; border:0; background:url("//img.echosting.cafe24.com/postcode/sfix_btn.png") no-repeat -63px 0; font-size:0; line-height:0; }
+.mCafe24Post.gPc .paginate .first { background-position:0 -62px; }
+.mCafe24Post.gPc .paginate .prev { margin:0 18px 0 1px; background-position:-30px -62px; }
+.mCafe24Post.gPc .paginate .next { margin:0 1px 0 20px; background-position:-60px -62px; }
+.mCafe24Post.gPc .paginate .last { background-position:-90px -62px; }
+
+
+/* ---------- Mobile ---------- */
+.mCafe24Post.gMobile { position:relative; min-width:320px; min-height:100%; font:13px Malgun Gothic,'맑은 고딕',dotum,'돋움',sans-serif; color:#1c1c1c; line-height:1.2em; background:#f0f0f0; }
+.mCafe24Post.gMobile .btnClose { position:absolute; right:0; top:0; z-index:110; width:36px; height:36px; border:0; padding:0; font-size:0; text-indent:100%; cursor:pointer; background:url("//img.echosting.cafe24.com/postcode/ico_close.png") center center no-repeat; background-size:14px 14px; }
+.mCafe24Post.gMobile h2 { margin:0; height:36px; padding:0 38px 0 34px; font-size:15px; line-height:36px; color:#fff; text-align:center; background:#666; }
+.mCafe24Post.gMobile .content { padding:7px; font-size:13px; background:#f0f0f0; }
+.mCafe24Post.gMobile .search,
+.mCafe24Post.gMobile .postcode { width:100%; margin:0 0 7px; border:1px solid #ccc; border-radius:2px; color:#1b1b1b; background:#fff; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-sizing:border-box; -o-box-sizing:border-box; }
+
+.mCafe24Post.gMobile .search { position:relative; margin:7px 0; padding:6px 13px; }
+.mCafe24Post.gMobile .search .searchForm {
+    position:relative; margin:0 50px 0 0; padding:0 34px 0 7px; border:1px solid #ccc;
+    border-radius:1px; -webkit-border-radius:1px; -moz-border-radius:1px; -ms-border-radius:1px; -o-border-radius:1px;
+}
+.mCafe24Post.gMobile .search .searchForm .fText { width:100%; height:27px; border:0; margin:0; padding:0; font-size:100%; font-family:dotum,'돋움',sans-serif; color:#1b1b1b; outline:none; vertical-align:middle; }
+.mCafe24Post.gMobile .search .searchForm .btnDelete { position:absolute; right:7px; top:5px; width:20px; height:20px; border:0; cursor:pointer; overflow:hidden; text-indent:100%; font-size:0; white-space:nowrap; outline:none; background:url("//img.echosting.cafe24.com/postcode/btn_delete.png") no-repeat 0 0; background-size:20px 20px; }
+.mCafe24Post.gMobile .search .btnSearch { position:absolute; right:13px; top:6px; width:43px; height:29px; margin:0; padding:0; border:1px solid #4a5164; border-bottom-color:#3b4150; border-radius:3px; outline-style:none; cursor:pointer; font-size:13px; background:#4a5164; color:#fefefe; text-align:center; }
+.mCafe24Post.gMobile .search .txtInfo { padding:0; margin:5px 0 0; font-size:11px; line-height:16px; color:#478be6; }
+.mCafe24Post.gMobile .search .txtInfo span.blank { display:block; margin:0 0 0 54px; }
+.mCafe24Post.gMobile .postcode .ctrl { border-bottom:1px solid #ececec; padding:7px 14px; color:#757575; }
+.mCafe24Post.gMobile .postcode .ctrl select {
+    max-width:100%; height:29px; border:1px solid #ccc; padding:0 35px 0 3px; margin:0;
+    font-size:11px; color:#353535; font-family:dotum,'돋움',sans-serif; vertical-align:middle;
+    background:#fff url("//img.echosting.cafe24.com/postcode/bg_selectbox.gif") no-repeat right center; background-size:32px 27px;
+    -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; border-radius:3px;
+    -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;appearance:none;
+}
+
+.mCafe24Post.gMobile .addressList { padding:0 14px; }
+.mCafe24Post.gMobile .addressList thead { display:none; }
+.mCafe24Post.gMobile .addressList td { padding:4px 0; border-top:1px solid #ececec; vertical-align:middle; line-height:16px; word-break:break-word; }
+.mCafe24Post.gMobile .addressList tr:first-child td { border-top:0; }
+.mCafe24Post.gMobile .addressList .right { text-align:right; }
+.mCafe24Post.gMobile .addressList .address > a { position:relative; display:block; padding:0 0 0 42px; margin:10px 0; color:#1b1b1b; }
+.mCafe24Post.gMobile .postcode .addressList .address > a:hover, .mCafe24Post.gMobile .postcode .addressList .address > a:focus { color:#246bd8; }
+.mCafe24Post.gMobile .addressList .address > a > img { position:absolute; left:0; top:2px; }
+.mCafe24Post.gMobile .postcode .empty { margin:0; padding:170px 0; line-height:1.5; text-align:center; }
+
+.mCafe24Post.gMobile .paginate { padding:7px 0; text-align:center; color:#1b1b1b; font-size:0; line-height:0; background:#f1f1f1; }
+.mCafe24Post.gMobile .paginate ol,
+.mCafe24Post.gMobile .paginate ol li,
+.mCafe24Post.gMobile .paginate ol li a,
+.mCafe24Post.gMobile .paginate ol li strong { display:inline-block; vertical-align:middle; }
+.mCafe24Post.gMobile .paginate ol { padding:0; margin:0 8px; list-style-position:inside; }
+.mCafe24Post.gMobile .paginate ol li { padding:0; margin:0 3px; background:#fff; }
+.mCafe24Post.gMobile .paginate ol li a,
+.mCafe24Post.gMobile .paginate ol li strong { width:31px; height:27px; border:1px solid #d9d9d9; border-radius:2px; text-align:center; font-size:13px; line-height:28px; font-weight:bold; }
+.mCafe24Post.gMobile .paginate ol li strong { border-color:#508bed; color:#508bed; }
+.mCafe24Post.gMobile .paginate > a { display:inline-block; vertical-align:middle; border:1px solid #d9d9d9; display:inline-block; width:31px; height:27px; color:#fff; overflow:hidden; text-indent:150%; font-size:0; line-height:0; background:#fff url("//img.echosting.cafe24.com/postcode/btn_prev.png") no-repeat 50% 50%; background-size:7px auto; }
+.mCafe24Post.gMobile .paginate .next { background-image:url("//img.echosting.cafe24.com/postcode/btn_next.png"); }
+
+
+/****************************** 구 우편번호 ******************************/
+/* mResult */
+.mResult { position:relative; overflow-x:hidden; overflow-y:auto; border:1px solid #a7a7a7; }
+    /* size */
+    .mResult.type0 { height:366px; border-top:0; }
+    .mResult.type1 { height:336px; }
+    .mResult.type2 { height:316px; }
+    .mResult.type3 { height:296px; }
+.mResult .resultList thead { display:none; }
+.mResult .resultList td { padding:8px 0 7px; line-height:140%; vertical-align:middle; }
+.mResult .resultList tr:hover,
+.mResult .resultList tr.selected { cursor:pointer; background-color:#e3e7f0; }
+.mResult .resultList .center { text-align:center; }
+.mResult .resultList .left { padding-left:10px; text-align:left; }
+.mResult .resultList .address li { overflow:hidden; }
+.mResult .resultList .address p { padding:0 0 0 45px; }
+.mResult .resultList .address .icoNumber,
+.mResult .resultList .address .icoStreet { float:left; overflow:hidden; width:38px; height:14px; margin:1px 0 0 0; font-size:0; line-height:0; background-image:url("//img.echosting.cafe24.com/suio/sfix_zipcode.png"); background-repeat:no-repeat; vertical-align:middle; }
+.mResult .resultList .address .icoNumber { background-position:0 0; }
+  html:lang(ja) .mResult .resultList .address .icoNumber { height:17px; background-position:0 -20px; }
+.mResult .resultList .address .icoStreet { background-position:-48px 0; }
+  html:lang(ja) .mResult .resultList .address .icoStreet { height:17px; background-position:-48px -20px; }
+.mResult .resultList .empty td { padding:30px 0; cursor:default; text-align:center; background-color:#fff; }
+.mResult .resultList.street { height:140px; }
+.mResult .resultList.building { height:179px; }
+.mResult .btnSelect,
+.mResult .btnSelect span { display:inline-block; position:relative; vertical-align:middle; text-decoration:none; white-space:nowrap; background-image:url("//img.echosting.cafe24.com/suio/sflex_btn_bg.png"); }
+.mResult .btnSelect { overflow:visible; margin-right:1px; background-position:0 -87px; }
+.mResult .btnSelect span { left:1px; padding:0 10px 0 9px; height:22px; line-height:23px; color:#363636; font-size:11px; background-position:100% -87px; }
+:root .btnNormal span { line-height:25px \0/; }
+.mResult .btnSelect:hover { text-decoration:none; background-position:0 -119px; }
+.mResult .btnSelect:hover span { background-position:100% -119px; }
+
+/* mPaginate */
+.mPaginate { margin:10px 0 0; font-size:0; line-height:0; text-align:center; }
+.mPaginate a,
+.mPaginate strong { display:inline-block; padding:0 9px 0 8px; color:#333; font-size:12px; font-weight:bold; line-height:12px; vertical-align:middle; text-decoration:none; }
+.mPaginate ol,
+.mPaginate li { display:inline-block; }
+.mPaginate li { border-left:1px solid #d7d7d7; }
+.mPaginate li:first-child { border:0; }
+.mPaginate a:hover,
+.mPaginate a:active,
+.mPaginate a:focus,
+.mPaginate strong { color:#25baff; text-decoration:none; }
+.mPaginate .prev,
+.mPaginate .next { overflow:hidden; width:20px; height:20px; padding:0; border:0; background:url("//img.echosting.cafe24.com/suio/sfix_btn.png") no-repeat -63px 0; font-size:0; line-height:0; }
+.mPaginate .prev { margin:0 10px 0 0; background-position:-63px 0; }
+.mPaginate .next { margin:0 0 0 11px; background-position:-93px 0; }
+
+/* mInfo + typePage */
+.mInfo.typePage { position:relative; padding:75px 15px 0 220px; color:#555; }
+.mInfo.typePage .txtEm { font-weight:normal; color:#1b87d4; }
+.mInfo.typePage .visual { position:absolute; left:0; top:80px; width:205px; height:150px; }
+.mInfo.typePage .visual img { max-width:100%; max-height:100%; }
+.mInfo.typePage h2 { margin-left:-3px; font-weight:normal; font-size:30px; line-height:35px; color:#000; letter-spacing:-1px; word-spacing:-1px; font-family:"굴림", Gulim, sans-serif; }
+.mInfo.typePage .detail { margin:32px 0 0; line-height:20px; }
+.mInfo.typePage .detail p { margin:4px 0; }
+.mInfo.typePage .solution p { padding:10px 0 18px; }
+.mInfo.typePage .solution .step { padding:16px 0; font-size:11px; border-top:1px dashed #c8c9cb; border-bottom:1px dashed #c8c9cb; }
+.mInfo.typePage .solution .step li { position:relative; padding:4px 0 4px 25px; min-height:12px; word-spacing:-1px; }
+.mInfo.typePage .solution .step li .number { position:absolute; left:0px; top:3px; width:14px; height:14px; font-size:10px; line-height:14px; color:#444; text-align:center; font-family:Tahoma; background:url("//img.echosting.cafe24.com/suio/sflex_info.png") no-repeat -186px 0px; }
+.mInfo.typePage .solution .list { padding:15px 0; border-top:1px dashed #c8c9cb; border-bottom:1px dashed #c8c9cb; font-size:11px; line-height:20px; word-spacing:-1px; }
+.mInfo.typePage .customer { margin:19px 0 0; padding:0 0 0 18px; font-size:11px; background:url("//img.echosting.cafe24.com/suio/sflex_info.png") no-repeat -138px -99px; }
+.mInfo.typePage .button { margin:38px 0 0; }
+
+/* 모바일 통합(새우편번호 + 구우편번호) 버전 */
+.gMobile.typeAll + .btnClose { position:absolute; right:0; top:0; z-index:110; width:36px; height:36px; border:0; padding:0; font-size:0; text-indent:100%; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_white.png") center center no-repeat; background-size:14px 14px; }
+.gMobile.typeAll h2 { background:#4a5164; }
+.gMobile.typeAll select { max-width:100%; height:29px; margin:0; padding:0 35px 0 3px; color:#353535; font-weight:inherit; border:1px solid #ccc; background:#fff url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_selectbox.gif") no-repeat right center; background-size:32px 27px; -webkit-border-radius:3px; -webkit-appearance:none; }
+.gMobile.typeAll label { line-height:inherit; min-height:inherit; }
+.gMobile.typeAll input[type="text"] { padding:0; }
+.gMobile.typeAll .wrap { padding:7px; font-size:13px; background:#f1f1f1; }
+.gMobile.typeAll .wrap > div { margin-top:7px; }
+.gMobile.typeAll .search,
+.gMobile.typeAll .zipcode { display:block;  height:auto; min-height:130px; width:100%; border:1px solid #ccc; border-radius:2px; color:#1b1b1b; background:#fff; }
+.gMobile.typeAll .search { position:relative; min-height:58px; }
+.gMobile.typeAll .areaInquiry { padding:7px 14px; color:#757575; }
+.gMobile.typeAll .empty { padding:40px 0; text-align:center; }
+.gMobile.typeAll .btnArea { max-width:320px; margin:10px auto; text-align:center; font-size:0; line-height:0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.gMobile.typeAll .btnArea button { display:inline-block; height:29px; line-height:29px; margin:0 0 0 7px; padding:0 7px; text-align:center; cursor:pointer; border-radius:2px; -moz-box-sizing:border-box; box-sizing:border-box; font-size:13px; }
+.gMobile.typeAll .btnArea button:first-child { margin-left:0; }
+.gMobile.typeAll .btnArea .btnSubmit { border:1px solid #4a5164; color:#fff; background:#4a5164; }
+.gMobile.typeAll .btnArea .btnEm { border:1px solid #d5d5d5; background:#fff; }
+.gMobile.typeAll .zipcode .mTab { width:100%; margin:-1px 0 0; background:#f0f0f0; }
+.gMobile.typeAll .zipcode .mTab ul { width:100%; height:36px; border-top:1px solid #ccc; font-size:0; }
+.gMobile.typeAll .zipcode .mTab li { float:left; width:50%; height:36px; text-align:center; vertical-align:middle; background:#f0f0f0; }
+.gMobile.typeAll .zipcode .mTab li a { display:inline-block; width:100%; border-left:1px solid #ccc; border-bottom:1px solid #ccc; font-size:13px; line-height:35px; }
+.gMobile.typeAll .zipcode .mTab li:first-child a { border-left:none; }
+.gMobile.typeAll .zipcode .mTab li.selected { background:#fff; }
+.gMobile.typeAll .zipcode .mTab li.selected a { border-bottom:none; color:#4a5164; font-weight:bold; }
+.gMobile.typeAll .zipcode .addressList { width:100%; padding:0; border-top:1px solid #ececec; }
+.gMobile.typeAll .zipcode .addressList li { position:relative; margin:0 14px; padding:14px 54px 14px 0; border-top:1px solid #ececec; }
+.gMobile.typeAll .zipcode .addressList li:after { display:block; content:""; clear:both; }
+.gMobile.typeAll .zipcode .addressList li:first-child { border-top:0; }
+.gMobile.typeAll .zipcode .addressList li input[type="radio"] { display:inline-block; float:left; width:24px; margin:0; }
+.gMobile.typeAll .zipcode .addressList li label { display:inline-block; float:left; width:85%; }
+.gMobile.typeAll .zipcode .addressList li label strong { position:absolute; right:2px; top:14px; font-weight:normal; }
+.gMobile.typeAll .paginate { padding:7px 0; text-align:center; color:#1b1b1b; font-size:0; line-height:0; background:#f1f1f1; }
+.gMobile.typeAll .paginate ol,
+.gMobile.typeAll .paginate ol li,
+.gMobile.typeAll .paginate p,
+.gMobile.typeAll .paginate p a,
+.gMobile.typeAll .paginate ol li a { display:inline-block; vertical-align:middle; }
+.gMobile.typeAll .paginate ol { margin:0 8px; font-size:0; line-height:0; }
+.gMobile.typeAll .paginate ol li { margin:0 3px 5px; list-style:none; background:#fff; }
+.gMobile.typeAll .paginate ol li a { width:31px; height:28px; border-radius:2px; text-align:center; font-size:13px; line-height:28px; }
+.gMobile.typeAll .paginate ol li .other,
+.gMobile.typeAll .paginate p,
+.gMobile.typeAll .paginate ol li a { border:1px solid #d9d9d9; }
+.gMobile.typeAll .paginate ol li .this { border:1px solid #508bed; }
+.gMobile.typeAll .paginate .this { color:#508bed; }
+.gMobile.typeAll .paginate .prev,
+.gMobile.typeAll .paginate .next { margin:0 0 5px; width:31px; background:#fff url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_prev.png") no-repeat 50% 50%; background-size:7px auto; }
+.gMobile.typeAll .paginate .next { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_next.png"); }
+.gMobile.typeAll .paginate p a { display:inline-block; width:31px; height:28px; color:#fff; }
+.gMobile.typeAll .paginate p span { overflow:hidden; display:block; width:29px; text-indent:-999px; }
+
+.gMobile.typeAll .areaInquiry { padding:7px 14px; color:#757575; }

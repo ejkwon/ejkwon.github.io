@@ -1,0 +1,333 @@
+<?php include("../../lib/lib.php"); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="Copyright(c) Simplex Internet Inc. All Rights Reserved." />
+    <?php include("../../include/ui_top.html"); ?>
+    <link rel="stylesheet" href="/img.cafe24.com/img/cmc/css/common.css" type="text/css" />
+    <link rel="stylesheet" href="//img.cafe24.com/img/cmc/css/info.css" type="text/css" />
+    <script type="text/javascript" src="/img.cafe24.com/img/cmc/js/ui.js"></script>
+    <title>마케팅정보 UI</title>
+</head>
+<body id="guideUi" class="guideBody">
+    <div class="guideTitle">
+        <h2>마케팅정보 UI</h2>
+    </div>
+
+<guideFrame>
+    <guideTitle>h3.mTitle</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">타이틀</p>
+    </div>
+    <guidePreview>
+        <h3 class="mTitle">컨설팅 신청</h3>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mVisual</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">상단 비주얼</p>
+    </div>
+    <guidePreview>
+        <div class="freeConsulting">
+            <div class="mVisual">
+                <p>
+                    카페24 전문가들이 <strong>무료로 컨설팅</strong>을 해 드립니다.<br />
+                     내 쇼핑몰(사이트), 이젠 뭘 해야할까?<br />
+                     쇼핑몰(사이트)을 운영하고 있는데, 이젠 뭘 해야할지 모르겠다면..<br />
+                     무료 마케팅 컨설팅을 신청하세요.<br />
+                     사이트 구성 현황(상품 종류/ 규모/ 컨셉 및 사이트 디자인 등)을 검토하고,
+                     사이트, 혹은 보완 및 쇼핑몰(사이트)에 적절한 광고 등 먼저 해야할 것을 제안해 드립니다.
+                </p>
+            </div>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBrdView</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">게시판 상세보기</p>
+    </div>
+    <guidePreview>
+        <div class="mBrdView">
+            <table border="1" summary="">
+                <caption>컨설팅 신청</caption>
+                <colgroup>
+                    <col style="width:160px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                <!-- 로그인 시 -->
+                <tr>
+                    <th scope="row">사이트 선택</th>
+                    <td>$사이트 이름1</td>
+                </tr>
+                <!-- 미로그인 시 -->
+                <tr>
+                    <th scope="row">카페24 ID</th>
+                    <td class="login">
+                        <a href="#none"><img src="//img.cafe24.com/img/cmc/info/btn_login.gif" alt="로그인" /></a>
+                        <p>카페24 회원인 경우, 로그인 후 이용해주세요.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">사이트명 <strong class="icoRequired" title="필수입력">필수</strong></th>
+                    <td><input type="text" class="fText" style="width:300px;" value="테스트몰" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">사이트 URL <strong class="icoRequired" title="필수입력">필수</strong>
+                    </th>
+                    <td><input type="text" class="fText" style="width:300px;" value="http://www.abcdef.co.kr" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">담당자 이름 <strong class="icoRequired" title="필수입력">필수</strong></th>
+                    <td><input type="text" class="fText" style="width:300px;" value="홍길동" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">담당자 휴대전화 <strong class="icoRequired" title="필수입력">필수</strong></th>
+                    <td><input type="text" class="fText" style="width:300px;" value="010-000-1111" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">담당자 이메일 <strong class="icoRequired" title="필수입력">필수</strong></th>
+                    <td><input type="text" class="fText email" style="width:300px;" value="abcd@mail.net" /></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBrdView + typeBorder</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">보더 타입의 게시판 상세보기</p>
+    </div>
+    <guidePreview>
+        <div class="mBrdView typeBorder gAttach">
+            <table border="1" summary="">
+            <caption>첨부파일</caption>
+            <colgroup>
+                <col style="width:115px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">첨부파일</th>
+                    <td>
+                        <ul class="attach">
+                            <li><a href="#none"><em class="icoFile"></em>10월광고통계.pdf(50KB)</a></li>
+                            <li><a href="#none"><em class="icoFile"></em>10월광고통계.pdf(50KB)</a></li>
+                            <li><a href="#none"><em class="icoFile"></em>10월광고통계.pdf(50KB)</a></li>
+                            <li><a href="#none"><em class="icoFile"></em>10월광고통계.pdf(50KB)</a></li>
+                            <li><a href="#none"><em class="icoFile"></em>10월광고통계asdfasdfasdfasfasdf.pdf(50KB)</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mAgreement</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">개인정보 수집 및 이용에 대한 안내</p>
+    </div>
+    <guidePreview>
+        <div class="mAgreement">
+            <h3>:: 개인정보 수집 및 이용에 대한 안내 ::</h3>
+            <p>
+                수집하는 개인정보 항목 업체명, 사이트url, 담당자 이름, 담당자 연락처, 이메일, 문의내용, 개인정보 수집 및 이용목적 광고 문의에 대한
+                상담 및 정보전달, 광고계약 등 수집한 개인정보의 보유 및 이용기간 회사는 수집한 개인정보를 수집 후 1년간 정보전달 등의 목적으로
+                보관합니다. 단, 회원으로 가입하거나 광고서비스를 신청한 경우에는 회원가입 기간 또는 광고서비스에 따른 필요기간까지 보존합니다.
+            </p>
+            <label class=""><input type="checkbox" /> <strong>동의</strong>합니다.</label>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBox</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">박스형태의 모듈</p>
+    </div>
+    <guidePreview>
+        <div class="mBox gCenter">
+            <div class="inner">
+                <select class="fSelect">
+                    <option selected="selected">전체</option>
+                    <option>지식쇼핑</option>
+                    <option>쇼핑하우</option>
+                    <option>체크아웃</option>
+                    <option>마일리지</option>
+                </select>
+                <input type="text" class="fText" style="width:235px;" value="" placeholder="검색어를입력하세요" />
+                <a href="#none"><img src="//img.cafe24.com/img/cmc/info/btn_search.gif" alt="검색" /></a>
+            </div>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mBrdList</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">게시판 리스트</p>
+    </div>
+    <guidePreview>
+        <div class="mBrdList">
+            <table border="1" summary="">
+            <caption>게시판 목록</caption>
+            <colgroup>
+                <col style="width:60px;" />
+                <col style="width:140px;" />
+                <col style="width:auto;" />
+                <col style="width:100px;" />
+                <col style="width:90px;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">서비스</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>25</td>
+                    <td class="service">네이버</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a> <span><img src="//img.cafe24.com/img/cmc/info/ico_new.gif" alt="new" /></span></td>
+                    <td>2013-02-25</td>
+                    <td>134</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td class="service">다음</td>
+                    <td class="subject"><a href="#none" class="txtWarn">광고에 대해서 공지사항 알려드립니다.</a> <span><img src="//img.cafe24.com/img/cmc/info/ico_new.gif" alt="new" /></span></td>
+                    <td>2013-02-25</td>
+                    <td>1234</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td class="service">구글</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a> <span><img src="//img.cafe24.com/img/cmc/info/ico_new.gif" alt="new" /></span></td>
+                    <td>2013-02-25</td>
+                    <td>9834</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td class="service">기타</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a></td>
+                    <td>2013-02-25</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td class="service">엔비스타</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a></td>
+                    <td>2013-02-25</td>
+                    <td>2308</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td class="service">클릭초이스</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a></td>
+                    <td>2013-02-25</td>
+                    <td>13415</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td class="service">크레테오</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a></td>
+                    <td>2013-02-25</td>
+                    <td>34234</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td class="service">기타</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a></td>
+                    <td>2013-02-25</td>
+                    <td>323</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td class="service">구글</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a></td>
+                    <td>2013-02-25</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td class="service">다음</td>
+                    <td class="subject"><a href="#none">광고에 대해서 공지사항 알려드립니다.</a></td>
+                    <td>2013-02-25</td>
+                    <td>9</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mSearch</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">검색</p>
+    </div>
+    <guidePreview>
+        <div class="mSearch">
+            <div class="gLeft">
+                <select class="fSelect">
+                    <option selected="selected">서비스전체</option>
+                    <option>클릭초이스</option>
+                    <option>다음</option>
+                    <option>네이버</option>
+                    <option>구글</option>
+                    <option>네이트</option>
+                    <option>어바웃</option>
+                    <option>야후</option>
+                    <option>오버추어</option>
+                    <option>마케팅센터</option>
+                    <option>기타서비스</option>
+                </select>
+            </div>
+            <div class="gRight">
+                <select class="fSelect">
+                    <option selected="selected">전체</option>
+                    <option>제목</option>
+                    <option>내용</option>
+                </select>
+                <input type="text" style="width:167px;"/>
+                <p class="btn"><a href="#none"><img src="//img.cafe24.com/img/cmc/info/btn_search.gif" alt="검색" /></a></p>
+            </div>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+<guideFrame>
+    <guideTitle>mViewPagenate</guideTitle>
+    <div class="guideBox">
+        <p class="guideList">이전/다음 페이징</p>
+    </div>
+    <guidePreview>
+        <div class="mViewPagenate">
+            <ul>
+                <li class="prev">
+                    <strong><span class="icoPrev"></span>이전글</strong><a href="#none">지식쇼핑 상품광고, 파워컬렉션 서비스 종료 안내</a><span class="txtService">네이버 지식쇼핑</span><span class="date">2013-04-24</span>
+                </li>
+                <li class="next">
+                    <strong><span class="icoNext"></span>다음글</strong><a href="#none">전화 전 문의사항</a><span class="txtService">마케팅센터</span><span class="date">2013-04-24</span>
+                </li>
+            </ul>
+        </div>
+    </guidePreview>
+</guideFrame>
+
+</body>
+</html>

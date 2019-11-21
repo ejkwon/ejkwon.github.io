@@ -1,0 +1,56 @@
+<?php include('./include/head.html'); ?>
+<body>
+<div id="top">
+    <h1>[퍼블리싱 가이드]</h1>
+    <a href="../index.php" target="_blank">- 모바일어드민 IA 바로가기▶</a>
+    <div class="tab gExtend">
+        <ul>
+            <li><a href="./icon.html">object</a></li>
+            <li class="selected">
+                <a href="./title.html">module</a>
+                <ul>
+                    <li class="selected"><a href="./title.html">mTitle</a></li>
+                    <li><a href="./tab.html">mTab</a></li>
+                    <li><a href="./toggle.html">mToggle</a></li>
+                    <li><a href="./board.html">mBoard</a></li>
+                    <li><a href="./search.html">mSearch</a></li>
+                    <li><a href="./searcharea.html">searchArea</a></li>
+                    <li><a href="./paginate.html">mPaginate</a></li>
+                    <li><a href="./index.html">mIndex</a></li>
+                    <li><a href="./summary.html">mSummary</a></li>
+                    <li><a href="./list.html">mList</a></li>
+                    <li><a href="./total.html">mTotal/deliveryInfo</a></li>
+                </ul>
+            </li>
+            <li><a href="./popup.html">popup</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="guide">
+    <h1>타이틀</h1>
+    <h2>mTitle</h2>
+    <h3>타이틀은 mTitle 내에 타이틀 h1 / 뒤로가기 버튼 / 전송 버튼으로 구성한다.</h3>
+    <ul class="info">
+        <li>뒤로가기 버튼 : btnTitle+back</li>
+        <li>전송 버튼 : btnTitle+submit</li>
+        <li>서브 레이아웃의 타이틀은 헤더영역 고정이므로 "대제목"으로 통일한다.</li>
+        <li>메인 레이아웃에서 타이틀이 필요한 경우는 mTitle 부분을 contents 내 상단에 적용한다. <a href="/ec_mobile/board/board.html" target="_blank">[예시]</a></li>
+    </ul>
+
+    <!-- 예시화면 -->
+    <div class="guideArea">
+        <a href="#none" class="btnHide">Hide</a>
+
+        <div id="contents">
+            <div class="mTitle">
+                <h1>대제목</h1>
+                <a href="#none" class="btnTitle back">뒤로가기</a>
+                <a href="#none" class="btnTitle submit">저장</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+#gnb { width:980px; margin:0 auto 8px; border-bottom:3px solid #1174b3; font-family:'맑은 고딕', 'malgun gothic', sans-serif; letter-spacing:-0.05em; }
+#gnb:after { content:''; display:block; clear:both; }
+#gnb .category { float:left; height:231px; border-left:1px solid #e4e4e4;  }
+#gnb .mall { width:134px; border-left-color:transparent; }
+#gnb .global { width:134px; }
+#gnb .web { width:149px; }
+#gnb .special { width:139px; }
+#gnb .server { width:139px; }
+#gnb .domain { width:139px; }
+#gnb .myservice { position:relative; width:139px; }
+#gnb .myservice:after { content:''; position:absolute; bottom:-3px; left:-1px; right:0; height:3px; background:#71b615; }
+#gnb .category .title { display:block; position:relative; left:-1px; height:35px; }
+#gnb .category .title.hot:after { content:'hot'; position:absolute; right:5px; top:-8px; width:26px; height:26px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; background:url("//img.cafe24.com/images/hosting2/main_css/gnb/sfix_gnb_icon.png") no-repeat 0 -50px; }
+#gnb .category .title a { float:left; width:62px; }
+#gnb .category .title .biz { width:77px; }
+#gnb .category .menu { margin:8px 5px 0 9px; }
+#gnb .menu li { position:relative; }
+#gnb .menu li:after { overflow:hidden; position:absolute; right:0; top:2px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; background:url("//img.cafe24.com/images/hosting2/main_css/gnb/sfix_gnb_icon.png") no-repeat 0 0; }
+#gnb .menu .hit { padding-right:12px; }
+#gnb .menu .new { padding-right:12px; }
+#gnb .menu .fullssd { padding-right:34px; }
+#gnb .menu .hit:after { content:'hit'; width:11px; height:11px; }
+#gnb .menu .new:after { content:'new';width:11px; height:11px; background-position:-50px 0; }
+#gnb .menu .fullssd:after { content:'fullssd'; top:3px; width:32px; height:9px; background-position:-100px 0; }
+#gnb .menu > li > a { font-size:12px; line-height:1.45; color:#476178; }
+#gnb  a:hover { text-decoration:underline; }
+#gnb .menu .em a { color:#0c6ff6; }
+#gnb .myservice .menu a { font-family:"돋움", Dodum, sans-serif; line-height:1.35; color:#588f02; letter-spacing:-0.09em; }
+#gnb .myservice .customer { margin-bottom:9px; }
+#gnb .myservice .customer a { color:#2c82f7; }
+#gnb .myservice .customer a:after { content:''; display:inline-block; width:12px; height:10px; margin:0 0 0 3px; background:url("//img.cafe24.com/images/hosting2/main_css/gnb/sfix_gnb_icon.png") no-repeat -50px -50px; }
+#gnb .other { margin:9px 5px 8px 8px; }
+#gnb .other a { font-size:11px; font-family:"돋움", Dodum, sans-serif; color:#4b94af; letter-spacing:-0.09em; }
+#gnb .bar { display:inline-block; width:1px; height:10px; margin:0 4px; background:#476178; }
+#gnb .myservice .bar { background:#588f02; }
+
+#gnb .menu + .menu { margin-top:5px; padding-top:3px; border-top:1px dotted #eaeaea; }
+#gnb .submenu { margin:1px 0 0; }
+#gnb .submenu li { line-height:1.1; }
+#gnb .submenu li a { margin-right:2px; font-size:10px; font-family:"Tahoma", sans-serif; color:#637e7a; }

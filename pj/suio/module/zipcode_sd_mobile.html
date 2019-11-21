@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<title>우편번호 검색</title>
+<link rel="stylesheet" type="text/css" href="//img.echosting.cafe24.com/css/ec/design_zipcode.css" media="all" charset="utf-8">
+<script type="text/javascript" src="//img.echosting.cafe24.com/js/jquery-1.4.4.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="zipcodeArea typeMobile">
+    <h1>우편번호 검색</h1>
+    <div class="search">
+        <p>
+            <input type="text" placeholder="도로명/지번 입력">
+            <button type="button" class="btnDelete">입력 내용 삭제</button>
+            <button type="button" class="btnSearch">우편검색</button>
+        </p>
+    </div>
+    <p class="txtInfo">지번(동,읍,면,리) : 예)신대방동 / 도로명(새주소) : 예)신대방길</p>
+    <div class="tab">
+        <a href="#none" class="selected">지번 주소(4건)</a><!-- 참고 : 선택시 클래스 selected 추가 -->
+        <a href="#none">도로명 주소(28건)</a>
+    </div>
+    <div class="areaList">
+        지역조회
+        <select>
+            <option>전체지역(0)</option>
+            <option>서울(0)</option>
+            <option>경기(0)</option>
+            <option>강원(0)</option>
+            <option>충북(0)</option>
+            <option>충남(0)</option>
+            <option>경북(0)</option>
+            <option>경남(0)</option>
+            <option>전북(0)</option>
+            <option>전남(0)</option>
+            <option>제주도(0)</option>
+        </select>
+    </div>
+
+    <!-- 참고 : 지번 주소 검색결과 -->
+    <div class="zipList" style="display:block;">
+        <table border="1" summary="">
+        <caption>지번 주소 검색결과</caption>
+        <thead>
+            <tr>
+                <th scope="col">선택</th>
+                <th scope="col">상세주소</th>
+                <th scope="col">우편번호</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="radio"></td>
+                <td>
+                    <ul class="address">
+                        <li><p>서울특별시 강남구 개포로 2021-2 도심공항빌딩타워</p></li>
+                        <li><p class="eng">202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL </p></li>
+                    </ul>
+                </td>
+                <td>135-964</td>
+            </tr>
+            <tr>
+                <td><input type="radio"></td>
+                <td>
+                    <ul class="address">
+                        <li><p>서울특별시 강남구 개포로 2021-2 도심공항빌딩타워</p></li>
+                        <li><p class="eng">202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL </p></li>
+                    </ul>
+                </td>
+                <td>135-964</td>
+            </tr>
+            <tr>
+                <td><input type="radio"></td>
+                <td>
+                    <ul class="address">
+                        <li><p>서울특별시 강남구 개포로 2021-2 도심공항빌딩타워</p></li>
+                        <li><p class="eng">202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL </p></li>
+                    </ul>
+                </td>
+                <td>135-964</td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr><td colspan="3">우편번호 검색 내역이 없습니다.</td></tr>
+        </tbody>
+        </table>
+    </div><!-- //참고 -->
+
+    <!-- 참고 : 도로명 주소 검색결과, 도로명일 경우 클래스 street 추가 -->
+    <div class="zipList street" style="display:none;">
+        <table border="1" summary="">
+        <caption>도로명 주소 검색결과</caption>
+        <thead>
+            <tr>
+                <th scope="col">선택</th>
+                <th scope="col">상세주소</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="radio"></td>
+                <td>
+                    <ul class="address">
+                        <li><span class="item">도로명 :</span><p>서울특별시 강남구 개포로 2021-2 도심공항빌딩타워</p></li>
+                        <li><span class="item">지 번 :</span><p>서울특별시 강남구 개포동 1238 도심공항빌딩타워</p></li>
+                        <li><p class="eng">202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL </p></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio"></td>
+                <td>
+                    <ul class="address">
+                        <li><span class="item">도로명 :</span><p>서울특별시 강남구 개포로 2021-2 도심공항빌딩타워</p></li>
+                        <li><span class="item">지 번 :</span><p>서울특별시 강남구 개포동 1238 도심공항빌딩타워</p></li>
+                        <li><p class="eng">202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL </p></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio"></td>
+                <td>
+                    <ul class="address">
+                        <li><span class="item">도로명 :</span><p>서울특별시 강남구 개포로 2021-2 도심공항빌딩타워</p></li>
+                        <li><span class="item">지 번 :</span><p>서울특별시 강남구 개포동 1238 도심공항빌딩타워</p></li>
+                        <li><p class="eng">202, Gaepo-ro, Gangnam-gu, Seoul, SEOUL </p></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr><td colspan="2">우편번호 검색 내역이 없습니다.</td></tr>
+        </tbody>
+        </table>
+    </div><!-- //참고 -->
+
+    <a href="#none" class="btnClose" onclick="$('.zipcodeArea').hide();">닫기</a>
+</div>
+</body>
+</html>

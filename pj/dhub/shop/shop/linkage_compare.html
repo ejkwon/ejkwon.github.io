@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>연동상품 비교</title>
+    <link rel="stylesheet" type="text/css" href="../../../suio/css/suio.css" media="all" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/dhub.css" media="all" charset="utf-8" />
+    <script type="text/javascript" src="../../../js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../suio/js/suio.js" charset="utf-8"></script>
+</head>
+<body id="popup" size="800, 700"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+<div id="wrap">
+    <div class="headingArea">
+        <div class="mTitle">
+            <h1>연동상품 비교</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="mTitle">
+            <h2>상품정보 비교</h2>
+        </div>
+        <div class="mBoard">
+            <table border="1" summary="" class="eChkTr">
+            <caption>상품정보 비교</caption>
+            <colgroup>
+                <col class="chk" />
+                <col style="width:130px;" />
+                <col style="width:200px;" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" class="allChk" /></th>
+                    <th scope="col">항목명</th>
+                    <th scope="col">연동대상</th>
+                    <th scope="col">디허브</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="positive">
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>공급사명</td>
+                    <td>구로패션71호</td>
+                    <td>
+                        <select class="fSelect">
+                            <option>동대문25호</option>
+                            <option>공급사1</option>
+                            <option>공급사2</option>
+                            <option>공급사3</option>
+                            <option>공급사4</option>
+                            <option>.</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="positive">
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>공급사상품명</td>
+                    <td>무명 봄원피스</td>
+                    <td>무명 벌룬원피스</td>
+                </tr>
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>판매가</td>
+                    <td>30,000</td>
+                    <td>30,000</td>
+                </tr>
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>상품코드</td>
+                    <td>OU2_121107003</td>
+                    <td>OU2_121107003</td>
+                </tr>
+                <tr class="positive">
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>상품명</td>
+                    <td>2014 SS최신유행 원피스</td>
+                    <td>원피스</td>
+                </tr>
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>바코드</td>
+                    <td>8100003978713</td>
+                    <td>8100003978713</td>
+                </tr>
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>품목명</td>
+                    <td>흰색/M</td>
+                    <td>흰색/M</td>
+                </tr>
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>입고가</td>
+                    <td>15,000</td>
+                    <td>15,000</td>
+                </tr>
+                <tr>
+                    <td class="center"><input type="checkbox" class="rowChk" /></td>
+                    <td>상품메모 등록</td>
+                    <td>-</td>
+                    <td>
+                        <textarea rows="3" cols="20" class="fTextarea" style="width:98%;"></textarea>
+                        <p class="txtByte" title="현재글자수/최대글자수">[ <strong>0</strong> / 500 ]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="empty">
+                <tr>
+                    <td colspan="4">결과가 없습니다.</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <a href="#none" class="btnSubmit"><span>저장</span></a>
+    <a href="#none" class="btnEm"><span>취소</span></a>
+</div>
+    <!-- 참고 : UI개발팀 퍼블리싱 정합성 체크용 JS. 실서비스 배포 절대금지 -->
+    <script type="text/javascript" src="../../../suio/js/debug.js" charset="utf-8"></script><!-- //참고 -->
+
+</body>
+</html>

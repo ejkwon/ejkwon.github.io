@@ -1,0 +1,161 @@
+<?php include('../include/header.html'); ?>
+
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>세트상품 통관정보</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home">홈</li>
+            <li>통관정보 관리</li>
+            <li class="now" title="현재 페이지">세트상품 통관정보</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+            <caption>세트상품 통관정보</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">기간</th>
+                    <td>
+                        <a href="#none" class="btnDate"><span>오늘</span></a>
+                        <a href="#none" class="btnDate"><span>3일</span></a>
+                        <a href="#none" class="btnDate"><span>7일</span></a>
+                        <a href="#none" class="btnDate"><span>1개월</span></a>
+                        <a href="#none" class="btnDate"><span>3개월</span></a>
+                        <a href="#none" class="btnDate"><span>1년</span></a>
+                        <a href="#none" class="btnDate"><span>전체</span></a>
+                        <input type="text" class="fText gDate" />
+                        <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                        <input type="text" class="fText gDate" />
+                        <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">판매사명</th>
+                    <td>
+                        <label class="gLabel"><input type="radio" class="fChk" /> 전체</label>
+                        <label class="gLabel"><input type="radio" class="fChk" /> 선택</label>
+                        <select class="fSelect chosen-select2 gLabel" style="width:150px;">
+                            <option>판매사 선택</option>
+                            <option>기타판매사(일문)</option>
+                            <option>카페24</option>
+                            <option>카페24(일문)</option>
+                            <option>카페24(중문)</option>
+                            <option>카페24(영문)</option>
+                            <option>카페24(대만)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">기준상품 상품코드</th>
+                    <td><input type="text" class="fText" style="width:300px;" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>세트상품 통관정보 목록</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 <strong>40</strong>건] 검색결과 <strong>4</strong>건</p>
+        </div>
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩 보기</option>
+                <option>20개씩 보기</option>
+                <option>30개씩 보기</option>
+                <option>50개씩 보기</option>
+                <option>100개씩 보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+            <caption>세트상품 통관정보 목록</caption>
+            <colgroup>
+                <col style="width:50px;" />
+                <col style="width:auto;" />
+                <col style="width:200px;" />
+                <col class="time" />
+            </colgroup>
+            <thead>
+                <!--
+                    ※ 참고: 소팅 아이콘 가이드 : http://fe.cafe24.com/suio/include/layout.php?MODULE=board_col_list
+                -->
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">판매사명</th>
+                    <th scope="col">기준상품 상품코드</th>
+                    <th scope="col"><strong class="array descend">등록일시<button type="button">내림차순 정렬</button></strong></th>
+                </tr>
+            </thead>
+            <tbody class="center">
+                <tr>
+                    <td>3</td>
+                    <td class="left"><a href="#none" class="txtLink">카페24중문</a></td>
+                    <td>P00123456</td>
+                    <td>2018-07-17 12:12:12</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="left"><a href="#none" class="txtLink">카페24중문</a></td>
+                    <td>P00123456</td>
+                    <td>2018-07-17 12:12:12</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="left"><a href="#none" class="txtLink">카페24중문</a></td>
+                    <td>P00123456</td>
+                    <td>2018-07-17 12:12:12</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="empty">검색결과가 없습니다.</p>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><strong title="현재 페이지">1</strong></li>
+            <li><a href="#none">2</a></li>
+            <li><a href="#none">3</a></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<script src="../../js/select2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".chosen-select2").select2();
+    });
+</script>
+
+<?php include('../include/footer.html'); ?>

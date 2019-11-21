@@ -1,0 +1,35 @@
+<?php include('./include/head.html'); ?>
+<body>
+<div id="top">
+    <h1>[퍼블리싱 가이드]</h1>
+    <a href="../index.php" target="_blank">- 모바일어드민 IA 바로가기▶</a>
+    <div class="tab gExtend">
+        <ul>
+            <li><a href="./icon.html">object</a></li>
+            <li><a href="./title.html">module</a></li>
+            <li class="selected">
+                <a href="./popup.html">popup</a>
+                <ul>
+                    <li><a href="./popup.html">popup</a></li>
+                    <li><a href="./layer.html">mLayer</a></li>
+                    <li class="selected"><a href="./loading.html">mLoading</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="guide">
+    <h1>로딩바</h1>
+    <h2>mLoading</h2>
+    <p class="info">mLoading은 #wrap과 같은 레벨로, &lt;/body&gt; 태그 닫기 바로전에 위치한다.</p>
+    <!-- 예시화면 -->
+    <div class="mLoading" style="display:block; /* 실 사용시엔 style 삭제*/"><img src="//img.echosting.cafe24.com/mobile/layout/ico_loading.gif" width="92" height="58" alt="" /></div>
+
+    <h2>mLoading typeRefresh</h2>
+    <p class="info">새로고침 안내용 : 페이지가 정상적으로 로딩되지 않았습니다.</p>
+    <!-- 예시화면 -->
+    <div class="mLoading typeRefresh" style="display:block; /* 실 사용시엔 style 삭제*/">페이지가 정상적으로 로딩되지 않았습니다.<button type="button" class="btnRefresh">새로고침</button></div>
+</div>
+</body>
+</html>

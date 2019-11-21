@@ -1,0 +1,110 @@
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/alliance_chart/layout/header.html'); ?>
+
+<!-- container -->
+<div id="container">
+    <!-- sidebar -->
+    <div id="sidebar">
+        <h2 class="blind">사이드바 메뉴</h2>
+        <ul class="menu">
+            <li>
+                <a href="/pj/alliance_chart/admin/edit_chart.html">
+                    <span class="heading">Edit Chart</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pj/alliance_chart/admin/edit_report.html">
+                    <span class="heading">Edit Report</span>
+                </a>
+            </li>
+            <li class="selected">
+                <a href="#none">
+                    <span class="heading">Banner</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pj/alliance_chart/admin/admin.html">
+                    <span class="heading">Admin</span>
+                </a>
+            </li>
+        </ul>
+    </div><!-- //sidebar -->
+
+    <hr class="layout" />
+
+    <!-- content -->
+    <div id="content">
+        <div class="innerArea">
+            <div class="section">
+                <div class="mTitle">
+                    <h2>Edit Announcement Banner</h2>
+                    <p>간단한 공지 배너를 사용할 수 있습니다.</p>
+                </div>
+                <div class="mBoard gDouble">
+                    <table border="1" summary="">
+                    <caption>Edit Announcement Banner</caption>
+                    <colgroup>
+                        <col style="width:110px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Description</th>
+                            <td><input type="text" class="fText full" placeholder="enter text..." /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">URL</th>
+                            <td><input type="text" class="fText full" placeholder="enter text..." /></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="mButton gCenter">
+                    <a href="#none" class="btnStrong"><span>Set Banner</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mTitle">
+                    <h2>Banner List</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                    <caption>배너 목록</caption>
+                    <colgroup>
+                        <col style="width:60px;" />
+                        <col />
+                        <col />
+                        <col style="width:150px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">N</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">설정</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td>1</td>
+                            <td class="left">기능개선 건 등 메세지를 쓸 수 있는 공간입니다.</td>
+                            <td class="left">https://jira.simplexi.com</td>
+                            <td><a href="#none" class="btnNormal"><span>Edit</span></a> <a href="#none" class="btnNormal"><span><em class="icoDel"></em> delete</span></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left">기능개선 건 등 메세지를 쓸 수 있는 공간입니다.</td>
+                            <td class="left">gskimhttps://jira.simplexi.com</td>
+                            <td><a href="#none" class="btnNormal"><span>Edit</span></a> <a href="#none" class="btnNormal"><span><em class="icoDel"></em> delete</span></a></td>
+                        </tr>
+                        <tr class="empty">
+                            <td colspan="4">데이터가 없습니다.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //container -->
+
+<?php require( $_SERVER['DOCUMENT_ROOT'].'/pj/alliance_chart/layout/footer.html'); ?>

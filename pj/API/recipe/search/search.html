@@ -1,0 +1,73 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/API/recipe/include/inc_head.html'); ?>
+        <section id="contents">
+            <div class="headingArea">
+                <h2>레시피 검색</h2>
+            </div>
+            <div class="innerContents">
+                <div class="mSearch typeChannel selected"><!-- 참고: 텍스트 입력중일 때 selected 추가 -->
+                    <input type="search" class="fSearch" placeholder="레시피 및 채널 검색">
+                    <button type="button" class="btnDel">검색어 삭제</button>
+                    <button type="submit" class="btnSearch">검색</button>
+                </div>
+                <div class="mTitle">
+                    <h3>핫키워드</h3>
+                </div>
+                <div class="mBubble">
+                    <button type="button" class="bubble">#유니크</button>
+                    <button type="button" class="bubble">#자동화</button>
+                    <button type="button" class="bubble">#키워드는 최대 30글자 입력</button>
+                    <button type="button" class="bubble">#가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마</button>
+                </div>
+                <div class="mTitle">
+                    <h3>채널</h3>
+                </div>
+                <div class="btnSorting eToggle">
+                    <button type="button" class="button selected">최신순</button>
+                    <button type="button" class="button">인기순</button>
+                    <button type="button" class="button">가나다순</button>
+                </div>
+                <ul class="mForm typeThumb scroll2"><!-- 참고: 등록 페이지의 .mForm.typeThumb 차이점 : fLabel을 a태그인 gLabel 감싸고, input 요소가 삭제  -->
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_product.png" class="imgChannel" alt="">상품</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_facebook.png" class="imgChannel" alt="">페이스북페이스북페이스북페이스북페이스북</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_instagram.png" class="imgChannel" alt="">인스타그램</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_kakaotalk.png" class="imgChannel" alt="">카카오톡</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_pinterest.png" class="imgChannel" alt="">핀터레스트</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_tumblr.png" class="imgChannel" alt="">텀블러</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_slack.png" class="imgChannel" alt="">슬랙</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="gLabel">
+                            <span class="fLabel"><img src="//img.echosting.cafe24.com/api/recipe/ico_channel_kakaostory.png" class="imgChannel" alt="">카카오스토리</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/API/recipe/include/inc_foot.html'); ?>

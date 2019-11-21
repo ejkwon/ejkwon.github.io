@@ -1,0 +1,1169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>물류/생산관리 솔루션 디허브</title>
+<link rel="stylesheet" type="text/css" href="../guide/ui/common.css" media="all" />
+<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+<script src="https://use.fontawesome.com/cef0874c19.js"></script><!-- //fontawesome.io/icons/ -->
+<script type="text/javascript" src="../guide/ui/ui.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <?php require('../menu.html'); ?>
+
+    <div id="contents">
+        <div class="mTitle">
+            <h1>디허브</h1>
+        </div>
+
+        <div class="mTab typeNav gExtend">
+            <ul>
+                <li class="selected">
+                    <a href="index.html"><span>ERP</span></a>
+                    <ul>
+                        <li class="selected"><a href="index.html">공통</a></li>
+                        <li><a href="erp/index.html">디허브관리</a></li>
+                        <li><a href="shop/index.html">상점별</a></li>
+                    </ul>
+                </li>
+                <li><a href="admin/index.html"><span>상점Admin</span></a></li>
+            </ul>
+        </div>
+
+        <div class="mTitle">
+            <h2>디허브 CSS 가이드</h2>
+        </div>
+        <div class="section gHalf">
+            <div class="gLeft">
+                <div class="mBox gFlow">
+                    퍼블리싱 생략하고 개발팀에서 자체 제작한 컨텐츠가 다수 존재합니다.
+                </div>
+            </div>
+            <div class="gRight">
+                <table border="1" class="mTable typeGuide" summary="">
+                    <caption>페이지 목록</caption>
+                    <colgroup>
+                        <col style="width:40%" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">메뉴명</th>
+                            <th scope="col">CSS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ERP (공통, 디허브관리, 상점별)</td>
+                            <td>/dhub/css/dhub.css</td>
+                        </tr>
+                        <tr>
+                            <td>상점Admin</td>
+                            <td>/dhub/css/admin.css</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mTitle">
+            <h2>레이아웃</h2>
+        </div>
+
+        <table border="1" class="mTable eHover" summary="">
+            <caption>페이지 목록</caption>
+            <colgroup>
+                <col class="gId" />
+                <col class="g2depth" />
+                <col class="g3depth" />
+                <col class="g4depth" />
+                <col class="gName" />
+                <col class="gDate" />
+                <col class="gLog" />
+                <col class="gEtc" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col">3depth</th>
+                    <th scope="col">4depth</th>
+                    <th scope="col">퍼블리셔</th>
+                    <th scope="col">작성일</th>
+                    <th scope="col">로그</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>/layout</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>layout</td>
+                    <td><a href="common/layout/layout.html" target="_blank">레이아웃</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">이승준</td>
+                    <td class="center">2014-05-30</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-17</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>view_layer</td>
+                    <td><a href="common/layout/view_layer.html" target="_blank">레이어팝업 모아보기</a></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2016-10-27</td>
+                    <td class="log">
+                        <ul>
+                            <li>SUIO-875</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h2>회원</h2>
+        </div>
+
+        <table border="1" class="mTable eHover" summary="">
+            <caption>페이지 목록</caption>
+            <colgroup>
+                <col class="gId" />
+                <col class="g2depth" />
+                <col class="g3depth" />
+                <col class="g4depth" />
+                <col class="gName" />
+                <col class="gDate" />
+                <col class="gLog" />
+                <col class="gEtc" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col">3depth</th>
+                    <th scope="col">4depth</th>
+                    <th scope="col">퍼블리셔</th>
+                    <th scope="col">작성일</th>
+                    <th scope="col">로그</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>/member</strong></td>
+                    <td>회원</td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>login</td>
+                    <td></td>
+                    <td><a href="common/member/login.html" target="_blank">로그인</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-06-23</td>
+                    <td class="log">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h2>메일</h2>
+        </div>
+
+        <table border="1" class="mTable eHover" summary="">
+            <caption>페이지 목록</caption>
+            <colgroup>
+                <col class="gId" />
+                <col class="g2depth" />
+                <col class="g3depth" />
+                <col class="g4depth" />
+                <col class="gName" />
+                <col class="gDate" />
+                <col class="gLog" />
+                <col class="gEtc" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col" colspan="2">제목</th>
+                    <th scope="col">퍼블리셔</th>
+                    <th scope="col">작성일</th>
+                    <th scope="col">로그</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>/mail</strong></td>
+                    <td>자동발송메일</td>
+                    <td colspan="2"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>mail1</td>
+                    <td></td>
+                    <td colspan="2"><a href="common/mail/mail1.html" target="_blank">요청하신 임시 비빌번호를 안내해 드립니다.</a></td>
+                    <td class="center">오열</td>
+                    <td class="center">2015-09-01</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-483</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>mail2</td>
+                    <td></td>
+                    <td colspan="2"><a href="common/mail/mail2.html" target="_blank">상점가입을 진심으로 감사 드립니다.</a></td>
+                    <td class="center">오열</td>
+                    <td class="center">2015-09-01</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-483</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>mail3</td>
+                    <td></td>
+                    <td colspan="2"><a href="common/mail/mail3.html" target="_blank">공지사항 보기</a></td>
+                    <td class="center">박정우</td>
+                    <td class="center">2018-07-17</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1834</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h2>공통</h2>
+        </div>
+
+        <table border="1" class="mTable eHover" summary="">
+            <caption>페이지 목록</caption>
+            <colgroup>
+                <col class="gId" />
+                <col class="g2depth" />
+                <col class="g3depth" />
+                <col class="g4depth" />
+                <col class="gName" />
+                <col class="gDate" />
+                <col class="gLog" />
+                <col class="gLink" />
+                <col class="gEtc" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col">3depth</th>
+                    <th scope="col">4depth</th>
+                    <th scope="col">퍼블리셔</th>
+                    <th scope="col">작성일</th>
+                    <th scope="col">로그</th>
+                    <th scope="col">공통</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>/common</strong></td>
+                    <td>공통</td>
+                    <td></td>
+                    <td></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>menu</td>
+                    <td></td>
+                    <td><a href="common/common/menu.html" target="_blank">권한없는 메뉴</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_directions</td>
+                    <td></td>
+                    <td><a href="shop/delivery/delivery_directions.html" target="_blank">출고지시서</a></td>
+                    <td></td>
+                    <td class="center">오열</td>
+                    <td class="center">2017-02-07</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1250</li>
+                            <li>SCMSERVICE-586</li>
+                            <li>SCMSERVICE-462</li>
+                            <li>SCMSERVICE-426</li>
+                            <li>SCMSERVICE-417</li>
+                            <li>SCMSERVICE-355</li>
+                            <li>SCMSERVICE-70</li>
+                            <li>SCMSERVICE-48</li>
+                            <li>SCMSERVICE-169</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_print</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/delivery/delivery_print.html" target="_blank" target="_blank" opts="1000,700,y" class="popup">출고지시정보</a></td>
+                    <td class="center">왕하</td>
+                    <td class="center">2015-08-20</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-462</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_change</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/delivery/order_change.html" target="_blank" target="_blank" opts="800,700,y" class="popup">변경내역</a></td>
+                    <td class="center">왕하</td>
+                    <td class="center">2014-07-23</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-426</li>
+                            <li>SCMSERVICE-48</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_sub</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/delivery/delivery_sub.html" target="_blank" target="_blank" opts="800,700,y" class="popup">출고지시 추가정보 변경</a></td>
+                    <td class="center">왕하</td>
+                    <td class="center">2014-07-24</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-426</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_modify</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/delivery/delivery_modify.html" target="_blank" target="_blank" opts="800,700,y" class="popup">배송정보 변경</a></td>
+                    <td class="center">왕하</td>
+                    <td class="center">2014-07-24</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-426</li>
+                            <li>SCMSERVICE-48</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_list</td>
+                    <td></td>
+                    <td><a href="shop/delivery/delivery_list.html" target="_blank">출고지시현황</a></td>
+                    <td></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2015-12-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-586</li>
+                            <li>SCMSERVICE-480</li>
+                            <li>SCMSERVICE-426</li>
+                            <li>SCMSERVICE-424</li>
+                            <li>SCMSERVICE-417</li>
+                            <li>SCMSERVICE-383</li>
+                            <li>SCMSERVICE-70</li>
+                            <li>SCMSERVICE-56</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>개발자체제작</td>
+                    <td></td>
+                    <td><a class="popup">송장번호_엑셀업로드</a></td>
+                    <td></td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="log"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_detail</td>
+                    <td></td>
+                    <td><a href="shop/out/order_detail.html" target="_blank" >주문상세(3PL)</a></td>
+                    <td></td>
+                    <td class="center">김도희</td>
+                    <td class="center">2015-08-25</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-436</li>
+                            <li>SCMSERVICE-417</li>
+                            <li>SCMSERVICE-15</li>
+                            <li>SCMSERVICE-169</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_change</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="shop/delivery/delivery_change.html" target="_blank" target="_blank" opts="800,700,y" class="popup">변경내역</a></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-05-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-48</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>memo</td>
+                    <td></td>
+                    <td><a href="common/common/memo.html" target="_blank" opts="700,600,y" class="popup">메모</a></td>
+                    <td></td>
+                    <td class="center">오열</td>
+                    <td class="center">2015-08-10</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-466</li>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>product</td>
+                    <td></td>
+                    <td><a href="common/common/product.html" target="_blank" opts="1200,700,y" class="popup">상품 선택</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-05-19</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-47</li>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>product_iframe</td>
+                    <td></td>
+                    <td></td>
+                     <td><a href="common/common/product_iframe.html" target="_blank" class="iframe">상품 선택</a></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-05-19</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-47</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>code</td>
+                    <td></td>
+                    <td><a href="common/common/code.html" target="_blank" opts="600,700,y" class="popup">위치코드 선택</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>imgview</td>
+                    <td></td>
+                    <td><a href="common/common/imgview.html" target="_blank" opts="530,650,y" class="popup">상품 이미지 보기</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>supply</td>
+                    <td></td>
+                    <td><a href="common/common/supply.html" target="_blank" opts="800,700,y" class="popup">공급사 선택</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>listview</td>
+                    <td></td>
+                    <td><a href="common/common/listview.html" target="_blank" opts="600,700,y" class="popup">입고가 내역</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>useview</td>
+                    <td></td>
+                    <td><a href="common/common/useview.html" target="_blank" opts="600,500,y" class="popup">창고 이용현황</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td></td>
+                    <td><a href="common/common/admin.html" target="_blank" opts="800,800,y" class="popup">상품연결 관리</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>barcode</td>
+                    <td></td>
+                    <td><a href="common/common/barcode.html" target="_blank" opts="800,700,y" class="popup">바코드 인쇄</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order</td>
+                    <td></td>
+                    <td><a href="common/common/order.html" target="_blank" opts="650,700,y" class="popup">주문 엑셀 업로드</a></td>
+                    <td></td>
+                    <td class="center">박정우</td>
+                    <td class="center">2016-11-18</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1184</li>
+                            <li>SCMSERVICE-437</li>
+                            <li>SCMSERVICE-417</li>
+                            <li>SCMSERVICE-9</li>
+                            <li>SCMSERVICE-169</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/order_register.html" target="_blank" opts="650,700,y" class="popup">주문 엑셀 양식 등록</a></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2015-12-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-586</li>
+                            <li>SCMSERVICE-437</li>
+                            <li>SCMSERVICE-417</li>
+                            <li>SCMSERVICE-9</li>
+                            <li>SCMSERVICE-169</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/order_list.html" target="_blank" opts="600,600,y" class="popup">주문 엑셀 양식 목록</a></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order_result</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/order_result.html" target="_blank" opts="600,600,y" class="popup">주문 엑셀 업로드 결과</a></td>
+                    <td class="center">한룡건</td>
+                    <td class="center">2015-07-14</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-417</li>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice</td>
+                    <td></td>
+                    <td><a href="common/common/invoice.html" target="_blank" opts="650,700,y" class="popup">송장번호 엑셀 등록</a></td>
+                    <td></td>
+                    <td class="center">윤태철</td>
+                    <td class="center">2015-03-09</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                            <li>SCMSERVICE-169</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice_result</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/invoice_result.html" target="_blank" opts="600,600,y" class="popup">송장번호 엑셀 등록 결과</a></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/invoice_register.html" target="_blank" opts="650,500,y" class="popup">(공통) 송장번호 엑셀 양식 등록</a></td>
+                    <td class="center">윤태철</td>
+                    <td class="center">2015-03-09</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1305</li>
+                            <li>SCMSERVICE-9</li>
+                            <li>SCMSERVICE-169</li>
+                        </ul>
+                    </td>
+                    <td class="link">
+                        <ul class="out" title="공통">
+                            <li>디허브관리 &gt; 창고운영 &gt; 배송사 &gt; 배송사 청구배송비 엑셀양식 등록</li>
+                            <li>디허브관리 &gt; 창고운영 &gt; (팝업) 배송사 청구배송비 엑셀양식 등록</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice_list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/invoice_list.html" target="_blank" opts="600,600,y" class="popup">송장번호 엑셀 양식 목록</a></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>excel</td>
+                    <td></td>
+                    <td><a href="common/common/excel.html" target="_blank" opts="800,600,y" class="popup">엑셀 다운로드 양식 선택</a></td>
+                    <td></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-07-08</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-56</li>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>excel_register</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/excel_register.html" target="_blank" opts="800,600,y" class="popup">엑셀 다운로드 양식 등록</a></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-07-08</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-56</li>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>excel_list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/excel_list.html" target="_blank" opts="600,600,y" class="popup">엑셀 다운로드 양식 목록</a></td>
+                    <td class="center">승기용</td>
+                    <td class="center">2014-07-08</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-56</li>
+                            <li>SCMSERVICE-9</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>view</td>
+                    <td></td>
+                    <td><a href="common/common/view.html" target="_blank" opts="1000,900,y" class="popup">주문상세</a></td>
+                    <td></td>
+                    <td class="center">한룡건</td>
+                    <td class="center">2015-07-14</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-417</li>
+                            <li>SCMSERVICE-56</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>additional_info</td>
+                    <td></td>
+                    <td><a href="common/common/additional_info.html" target="_blank" opts="700,600,y" class="popup">해외배송 추가정보</a></td>
+                    <td></td>
+                    <td class="center">조경수</td>
+                    <td class="center">2014-10-22</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-88</li>
+                            <li>SCMSERVICE-70</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_input</td>
+                    <td></td>
+                    <td><a href="common/common/delivery_input.html" target="_blank" opts="600,700,y" class="popup">택배사 일괄입력</a></td>
+                    <td></td>
+                    <td class="center">윤나영</td>
+                    <td class="center">2014-11-06</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-91</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_fastbox</td>
+                    <td></td>
+                    <td><a href="common/common/delivery_fastbox.html" target="_blank" opts="530,420,y" class="popup">배송현황 확인</a></td>
+                    <td></td>
+                    <td class="center">윤소영</td>
+                    <td class="center">2015-02-24</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-157</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_info1</td>
+                    <td></td>
+                    <td>배송 추가정보</td>
+                    <td><a href="common/common/delivery_info1.html" target="_blank" opts="700,600,y" class="popup">우체국EMS</a></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-08-12</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1018</li>
+                            <li>SCMSERVICE-254</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_info2</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/delivery_info2.html" target="_blank" opts="700,600,y" class="popup">범한판토스</a></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-08-12</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1018</li>
+                            <li>SCMSERVICE-254</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_info3</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/delivery_info3.html" target="_blank" opts="700,600,y" class="popup">K-Packet</a></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-08-12</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1018</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_info4</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/delivery_info4.html" target="_blank" opts="700,600,y" class="popup">Sea Express</a></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-08-12</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1018</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_info5</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/delivery_info5.html" target="_blank" opts="700,600,y" class="popup">차이냐오</a></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-08-12</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1018</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_info6</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="common/common/delivery_info6.html" target="_blank" opts="700,600,y" class="popup">사가와</a></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-08-12</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1018</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>delivery_tracking</td>
+                    <td></td>
+                    <td><a href="common/common/delivery_tracking.html" target="_blank" opts="600,700,y" class="popup">배송 조회</a></td>
+                    <td></td>
+                    <td class="center">오열</td>
+                    <td class="center">2015-08-10</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-466</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>print</td>
+                    <td></td>
+                    <td><a href="common/common/print.html" target="_blank" opts="1200,800,y" class="popup">FB송장출력 1/3</a></td>
+                    <td></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-03-07</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-747</li>
+                            <li>SCMSERVICE-466</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>print2</td>
+                    <td></td>
+                    <td><a href="common/common/print2.html" target="_blank" opts="1200,800,y" class="popup">FB송장출력 1/6 </a></td>
+                    <td></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-03-07</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-747</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>print3</td>
+                    <td></td>
+                    <td><a href="common/common/print3.html" target="_blank" opts="288,432,y" class="popup">FB송장출력 1/1 </a></td>
+                    <td></td>
+                    <td class="center">송유진</td>
+                    <td class="center">2016-09-22</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1094</li>
+                            <li>SCMSERVICE-1046</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>fastbox</td>
+                    <td></td>
+                    <td><a href="common/common/fastbox.html" target="_blank" opts="800,1000,y" class="popup">패스트박스 배송조회</a></td>
+                    <td></td>
+                    <td class="center">후금암</td>
+                    <td class="center">2016-02-22</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-737</li>
+                            <li>SCMSERVICE-623</li>
+                            <li>SCMSERVICE-466</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>fastbox</td>
+                    <td></td>
+                    <td><a href="common/common/fastbox2.html" target="_blank" opts="1280,1017,y" class="popup">패스트박스 배송조회 리뉴얼</a></td>
+                    <td></td>
+                    <td class="center">윤나영</td>
+                    <td class="center">2016-07-07</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-929</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice_print</td>
+                    <td></td>
+                    <td><a href="common/common/invoice_print.html" target="_blank" opts="800,1000,y" class="popup">사가와 송장</a></td>
+                    <td></td>
+                    <td class="center">윤나영</td>
+                    <td class="center">2016-04-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>EXPRESS-112</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice_print2</td>
+                    <td></td>
+                    <td><a href="common/common/invoice_print2.html" target="_blank" opts="400,1000,y" class="popup">사가와 송장(라쿠텐)</a></td>
+                    <td></td>
+                    <td class="center">김도희</td>
+                    <td class="center">2016-06-03</td>
+                    <td class="log">
+                        <ul>
+                            <li>MARKET-5951</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td>A4라벨지로 출력 시
+                        <a href="common/common/invoice_print2_2.html" target="_blank" opts="800,1000,y" class="popup">99.1 * 93.1</a>,
+                        <a href="common/common/invoice_print2_3.html" target="_blank" opts="800,1000,y" class="popup">98.8 * 92.7</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>hanjin_fedex</td>
+                    <td></td>
+                    <td><a href="common/common/hanjin_fedex.html" target="_blank" opts="400,1000,y" class="popup">한진FEDEX 송장출력</a></td>
+                    <td></td>
+                    <td class="center">송유진</td>
+                    <td class="center">2016-09-21</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1099</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>invoice_lenton</td>
+                    <td></td>
+                    <td><a href="common/common/invoice_lenton.html" target="_blank">송장출력(lenton)</a></td>
+                    <td></td>
+                    <td class="center">박정우</td>
+                    <td class="center">2018-03-02</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1675</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>exchange_info</td>
+                    <td></td>
+                    <td><a href="common/common/exchange_info.html" target="_blank" opts="700,720,y" class="popup">환율정보</a></td>
+                    <td></td>
+                    <td class="center">권언정</td>
+                    <td class="center">2017-06-29</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1422</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>expiration</td>
+                    <td></td>
+                    <td><a href="common/common/expiration.html" target="_blank" class="overlay">카페24 쇼핑몰 연동 인증키 만료 안내</a></td>
+                    <td></td>
+                    <td class="center">박정우</td>
+                    <td class="center">2018-05-28</td>
+                    <td class="log">
+                        <ul>
+                            <li>SCMSERVICE-1772</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer">
+        <p>Copyright&copy; <strong>EonJeong Kwon.</strong> All rights Reserved.</p>
+    </div>
+</div>
+</body>
+</html>

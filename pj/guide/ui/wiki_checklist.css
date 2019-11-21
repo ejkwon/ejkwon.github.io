@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.wiki-content .table-wrap th, .wiki-content .table-wrap td { min-width:0; font-size:12px; }
+.status-macro { white-space: pre; font-size:12px; font-weight:normal; }
+.tablesorter-header-inner,
+.wiki-content ul.inline-task-list>li { white-space: pre; }
+.wiki-content ul.inline-task-list>li { background-position:0 0; }
+.confluence-information-macro-note .wiki-content .table-wrap { overflow:visible}
+.wiki-content time { background:none; padding-left:1px; border:0; font-size:12px; }

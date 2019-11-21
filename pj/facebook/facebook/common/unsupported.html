@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>페이스북 광고관리 솔루션</title>
+    <!-- 참고: 필수 CSS, JS -->
+    <link rel="stylesheet" type="text/css" href="/img.cafe24.com/img/cmc_facebook/css/font/notosans.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/img.cafe24.com/img/cmc_facebook/css/layout.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//img.cafe24.com/img/cmc_facebook/css/common.css" media="all">
+    <!-- 참고: UI확인용으로 퍼블리싱 미리보기용 CSS, JS 소스들입니다 -->
+    <script type="text/javascript" src="/img.cafe24.com/img/cmc_facebook/js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="/img.cafe24.com/img/cmc_facebook/js/table.fix.resize.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/img.cafe24.com/img/cmc_facebook/js/ui.js"></script>
+    <script type="text/javascript" src="/img.cafe24.com/img/cmc_facebook/js/jquery-ui.js" charset="utf-8"></script>
+</head>
+<body id="unsupported">
+<!-- 참고: 미대응 브라우저 -->
+<div class="unsupported">
+    <div class="infoBox">
+        <h1>서비스 이용 안내</h1>
+        <p class="desc">페이스북 광고관리 솔루션은 <br><strong>Internet explorer 11 이상, Chrome, Safari, Firefox 최신버전</strong>에 최적화되어 있습니다. <br>최적화된 브라우저에서 서비스를 이용해 주시기 바랍니다.<br>
+            브라우저 설치하기를 진행하시면 해당 브라우저의 최신버전을 설치하실 수 있습니다.</p>
+        <ul class="browser">
+            <li><img src="//img.cafe24.com/images/common/browser/img_browser_chrome.jpg" alt="Chrome"><a href="https://www.google.com/intl/ko/chrome/browser/desktop/index.html" class="btnInstall"><img src="//img.cafe24.com/img/soho/head/common/btn_install.png" alt="설치하기"></a></li>
+            <li><img src="//img.cafe24.com/images/common/browser/img_browser_firefox.jpg" alt="Firefox"><a href="https://www.mozilla.org/en-US/firefox/new/" class="btnInstall"><img src="//img.cafe24.com/img/soho/head/common/btn_install.png" alt="설치하기"></a></li>
+            <li><img src="//img.cafe24.com/images/common/browser/img_browser_IE.jpg" alt="Internet Explorer"><a href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" class="btnInstall"><img src="//img.cafe24.com/img/soho/head/common/btn_install.png" alt="설치하기"></a></li>
+        </ul>
+        <div class="footer">
+            <span>오늘하루열지않음</span><label class="gLabel gSideS"><input type="checkbox" class="check fCheck"><span class="fLabel"></span></label>
+            <button type="button" class="close eClose">닫기</button>
+        </div>
+    </div>
+    <div class="dimmedBlack"></div>
+</div>
+<!-- //참고 -->
+
+<div id="wrap">
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/header.html'); ?>
+    <div id="container">
+        <!-- [ content ] -->
+        <section id="content">
+        </section><!-- //[ content ] -->
+    </div>
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/footer.html'); ?>

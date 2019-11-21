@@ -1,0 +1,18 @@
+<?php require_once('../include/header.html'); ?>
+<div id="container">
+</div>
+<section id="layerPayment" class="mLayer gFull">
+    <h1 class="title">결제</h1>
+    <iframe src="payment_comm.html" width="100%" height="100%" scrolling="auto" frameborder="0" title="결제"></iframe>
+    <button type="button" class="btnClose eClose">닫기</button>
+</section>
+
+<!-- 참고: 레이어 활성화시 필요한 style -->
+<style type="text/css">
+body { overflow:hidden; height:100%; }
+#wrap { padding:0; }
+.mLayer.gFull { display:block; top:0; }
+</style><!-- //참고 -->
+
+</div>
+<?php require_once('../include/footer.html'); ?>

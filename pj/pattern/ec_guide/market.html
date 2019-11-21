@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>솔루션 퍼블리싱가이드</title>
+    <link rel="stylesheet" type="text/css" href="/guide/ui/common.css" media="all" />
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/guide/ui/ui.js"></script>
+</head>
+
+<body id="main">
+<div id="wrap">
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/menu.html'); ?>
+
+    <div id="contents">
+        <div class="mTitle">
+            <h1>EC 솔루션 - 오픈마켓</h1>
+            <ul>
+                <li>오픈마켓 추가시, UI 영향 받는 페이지 리스트</li>
+                <li>퍼블리싱 작업범위는 작업자가 판단하여 적용(문구 수정/아이콘 추가는 생략)</li>
+                <li>오픈마켓 아이콘만 추가 된 경우 Y</li>
+            </ul>
+        </div>
+
+        <table border="1" class="mTable" summary="">
+            <caption>EC 솔루션 - 오픈마켓</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:50px" />
+                <col style="width:400px" />
+                <col style="width:300px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">타입</th>
+                <th scope="col">아이콘</th>
+                <th scope="col">메뉴</th>
+                <th scope="col">작업 내용</th>
+                <th scope="col">비고</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>대시보드/공통 &gt; 레이아웃 &gt; <a href="/smartAdmin/layout/layout_market.html" target="_blank">마켓통합관리</a></td>
+                <td><strong>오픈마켓 공지사항</strong> 추가</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>대시보드/공통 &gt; 대시보드 &gt; <a href="/smartAdmin/dashboard/mainsupply.html" target="_blank">메인 (공급사)</a></td>
+                <td><strong>오픈마켓</strong> 추가</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>대시보드/공통 &gt; 공지게시판 &gt; <a href="/ec/common/notice/openmarket.html" target="_blank">오픈마켓 소식</a></td>
+                <td>-</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 서브메인 &gt; <a href="/smartAdmin/product/product_batch_modify_not.html" target="_blank">선택정보 일괄수정</a></td>
+                <td><strong>마켓 상품정보</strong> 대표/마켓카테고리 > 마켓카테고리</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 상품등록 &gt; <a href="/smartAdmin/product/registration/product/register_market2.html" target="_blank">마켓연동</a></td>
+                <td><strong>마켓 연동 공통설정</strong> 전자상거래관련 상품정보 제공에 관한 고시 입력</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 상품관리 &gt; 상품목록 > <a href="/smartAdmin/product/manage/list/list.html" target="_blank">목록(B2B)</a></td>
+                <td><strong>마켓연동</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 상품관리 &gt; 상품정보 일괄변경 > <a href="/smartAdmin/product/manage/modify/list.html" target="_blank">목록(B2B)</a></td>
+                <td><strong>마켓연동</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 상품관리 &gt; 삭제상품목록 > <a href="/smartAdmin/product/manage/delete/list.html" target="_blank">목록(B2B)</a></td>
+                <td><strong>마켓연동</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 재고관리 &gt; 상품재고 > <a href="/smartAdmin/product/stock/product/list.html" target="_blank">상품재고 목록(B2B)</a></td>
+                <td><strong>마켓연동</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 재고관리 &gt; 품절상품 > <a href="/smartAdmin/product/stock/soldout/list.html" target="_blank">품절상품 목록(B2B)</a></td>
+                <td><strong>마켓연동</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>상품 &gt; 재고관리 &gt; 안전재고 > <a href="/smartAdmin/product/stock/soldout/list.html" target="_blank">안전재고 목록(B2B)</a></td>
+                <td><strong>마켓연동</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 메인/공통 > 주문관리 템플릿 > <a href="/ec/order/template/search.html" target="_blank">검색(B2B)</a></td>
+                <td><strong>상세조건</strong> 주문경로 > 판매처 </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 메인/공통 > 주문관리 템플릿 > <a href="/ec/order/template/list.html" target="_blank">리스트(B2B)</a></td>
+                <td>
+                    <strong>검색결과</strong> 주문번호<br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/deposit/deposit.html" target="_blank">입금전 관리</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호별 > 주문번호 <br>
+                    <strong>검색 결과</strong> 품목주문별 > 품목별 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/market/market.html" target="_blank">마켓발주 관리</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/market/market_order.html" target="_blank">오픈마켓 주문 수집</a></td>
+                <td><strong>마켓</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 상품준비중 관리 (B2B) > <a href="/ec/order/list/product/number.html" target="_blank">주문번호별</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 상품준비중 관리 (B2B) > <a href="/ec/order/list/product/item.html" target="_blank">품목주문별</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 상품준비중 관리 (B2B) > <a href="/ec/order/list/product/product.html" target="_blank">상품별</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 상품준비중 관리 (B2B) > <a href="/ec/order/list/product/order.html" target="_blank">추가주문</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 상품준비중 관리 (B2B) > <a href="/ec/order/list/product/delay.html" target="_blank">배송보류</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/number.html" target="_blank">주문번호별(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호, 상품명/옵션 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/foreign.html" target="_blank">해외배송별(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/product.html" target="_blank">상품별(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/delivery.html" target="_blank">배송번호별(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/order.html" target="_blank">추가주문(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/delay.html" target="_blank">배송보류(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/bunch.html" target="_blank">묶음배송(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/receipt.html" target="_blank">직접수령</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 배송준비중 관리(XX) > <a href="/ec/order/list/prepare/cancel.html" target="_blank">마켓주문취소(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호 <br>
+                    <strong>주문/매출 경로구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/standby/manage.html" target="_blank">배송대기 관리(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호별 탭 > 주문번호 <br>
+                    <strong>검색 결과</strong> 배송번호별 탭 > 상품명/옵션 <br>
+                    <strong>검색 결과</strong> 배송번호별 탭 > 품목별 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/delivery/delivery.html" target="_blank">	배송중 관리(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호별 탭 > 주문일/주문번호, 상품명/옵션 <br>
+                    <strong>검색 결과</strong> 배송번호별 탭 > 품목별 주문번호 <br>
+                    <strong>검색 결과</strong> 직접수령 탭 > 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/complete/complete.html" target="_blank">배송완료 조회(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호별 탭 > 주문일/주문번호, 상품명/옵션 <br>
+                    <strong>검색 결과</strong> 배송번호별 탭 > 품목별 주문번호 <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/calculate/calculate.html" target="_blank">정산완료 조회</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호별 탭 > 주문일/주문번호 <br>
+                    <strong>검색 결과</strong> 배송번호별 탭 > 품목별 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/inquiry/inquiry.html" target="_blank">전체주문 조회(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호별 탭 > 주문번호 <br>
+                    <strong>검색 결과</strong> 품목주문별 탭 > 품목별 주문번호 <br>
+                    <strong>주문 경로 분석</strong> <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 취소/교환/반품/환불 관리 > <a href="/ec/order/list/return/deposit_cancel.html" target="_blank">입금전취소 관리</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호 <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 취소/교환/반품/환불 관리 > <a href="/ec/order/list/return/cancel.html" target="_blank">취소 관리(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호/취소번호  <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 취소/교환/반품/환불 관리 > <a href="/ec/order/list/return/exchange.html" target="_blank">교환 관리</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호/교환번호 <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 취소/교환/반품/환불 관리 > <a href="/ec/order/list/return/return.html" target="_blank">반품 관리</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호/반품번호 <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 취소/교환/반품/환불 관리 > <a href="/ec/order/list/return/refund.html" target="_blank">환불 관리(B2B)</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 품목별 주문번호/환불번호 <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > 취소/교환/반품/환불 관리 > <a href="/ec/order/list/return/card.html" target="_blank">카드취소 조회</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호 <br>
+                    <strong>주문/매출 경로 구분</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(영업) &gt; 리스트 > 취소/교환/반품/환불 관리 > <a href="/ec/order/list/return/refund_admin.html" target="_blank">관리자 환불 관리</a></td>
+                <td>
+                    <strong>검색 결과</strong> 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(영업) &gt; 리스트 > 세금계산서 관리 > <a href="/ec/order/list/tax/list.html" target="_blank">미신청내역 관리</a></td>
+                <td>
+                    <strong>검색 결과</strong> 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/etc/delete.html" target="_blank">주문서삭제</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/etc/memo.html" target="_blank">관리자 메모 조회</a></td>
+                <td>
+                    <strong>검색 결과</strong> 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 리스트 > <a href="/ec/order/list/etc/log.html" target="_blank">주문서 LOG</a></td>
+                <td>
+                    <strong>상세조건</strong> 주문경로 > 판매처 <br>
+                    <strong>검색 결과</strong> 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(영업) &gt; 팝업 > 취소/교환/반품/환불 > <a href="/ec/order/popup/return/restore2.html" target="_blank">재고복구 처리</a></td>
+                <td>
+                    <strong>상품목록</strong> 품목별 주문번호
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>주문(영업) &gt; 팝업 > 부가기능 > <a href="/ec/order/popup/option/path.html" target="_blank">주문경로 분석</a></td>
+                <td>-</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(정산) &gt; 매출분석 > <a href="/ec/calculate/sales/day.html" target="_blank">일별매출</a></td>
+                <td><strong>판매처</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(정산) &gt; 매출분석 > <a href="/ec/calculate/sales/week.html" target="_blank">주별매출</a></td>
+                <td><strong>판매처</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>주문(정산) &gt; 매출분석 > <a href="/ec/calculate/sales/month.html" target="_blank">월별매출</a></td>
+                <td><strong>판매처</strong></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="mTitle">
+            <h1>마켓통합관리</h1>
+            <ul>
+                <li>오픈마켓 추가시, UI 영향 받는 페이지 리스트</li>
+                <li>퍼블리싱 작업범위는 작업자가 판단하여 적용(문구 수정/아이콘 추가는 생략)</li>
+                <li>오픈마켓 아이콘만 추가 된 경우 Y</li>
+            </ul>
+        </div>
+
+        <table border="1" class="mTable" summary="">
+            <caption>마켓통합관리</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:50px" />
+                <col style="width:400px" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">센터</th>
+                <th scope="col">아이콘</th>
+                <th scope="col">메뉴</th>
+                <th scope="col">비고</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>마켓통합관리(국내마켓) &gt; 서비스 안내 > <a href="/smartAdmin/market/local/introduce/introduce.html" target="_blank">국내 오픈 마켓 안내</a></td>
+                <td><strong>오픈마켓 지원 현황</strong></td>
+                <td>큰아이콘</td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>마켓통합관리(국내마켓) &gt; 서비스 안내 > <a href="/smartAdmin/market/local/introduce/introduce_global.html" target="_blank">해외 오픈 마켓 안내</a></td>
+                <td><strong>오픈마켓 지원 현황</strong></td>
+                <td>큰아이콘</td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">N</td>
+                <td>마켓통합관리(국내마켓) &gt; 서비스 설정 > 마켓 계정 등록 > <a href="/smartAdmin/market/local/service/register/auction.html" target="_blank">마켓 계정 등록 - 옥션</a></td>
+                <td>마켓별로 별도 페이지 구성</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > <a href="/smartAdmin/market/local/product/product_before.html" target="_blank">연동전 상품관리</a></td>
+                <td><strong>상품목록</strong> 상품</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > 연동전 상품관리 > <a href="/smartAdmin/market/local/product/register.html" target="_blank">마켓상품등록</a></td>
+                <td><strong>마켓 정보</strong> 마켓선택</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > <a href="/smartAdmin/market/local/product/sales_approval.html" target="_blank">판매승인 상품관리</a></td>
+                <td><strong>상품 검색</strong> 마켓선택</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > <a href="/smartAdmin/market/local/product/product_onsale.html" target="_blank">판매중 상품관리</a></td>
+                <td><strong>상품목록</strong> 상품</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > <a href="/smartAdmin/market/local/product/product_terminate.html" target="_blank">판매종료 상품관리</a></td>
+                <td>
+                    <strong>상품검색</strong> 마켓선택 <br>
+                    <strong>상품목록</strong> 마켓
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > 상품정보 일괄수정 > <a href="/smartAdmin/market/local/product/product_batch_modify_not.html" target="_blank">미연동/연동예정/실패</a></td>
+                <td>
+                    <strong>카테고리</strong> 마켓카테고리
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > 전송 > <a href="/smartAdmin/market/local/product/request.html" target="_blank">전송요청</a></td>
+                <td>
+                    <strong>전송요청내역</strong> 마켓 <br>
+                    <strong>전송불가대상</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > 전송 > <a href="/smartAdmin/market/local/product/request_complete.html" target="_blank">요청완료</a></td>
+                <td>
+                    <strong>전송결과내역</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓통합 상품관리 > <a href="/smartAdmin/market/local/product/log.html" target="_blank">최근전송일 실패</a></td>
+                <td>
+                    <strong>상품검색</strong> 마켓선택<br>
+                    <strong>전송실패</strong> 마켓
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓 게시글관리 > <a href="/smartAdmin/market/local/board/notice.html" target="_blank">마켓 공지사항</a></td>
+                <td>
+                    <strong>마켓선택</strong><br>
+                    <strong>마켓 공지사항 목록</strong> 제목
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓 게시글관리 > 마켓 공지사항 > <a href="/smartAdmin/market/local/board/notice_detail.html" target="_blank">마켓 공지사항 내용</a></td>
+                <td>-</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓 게시글관리 > <a href="/smartAdmin/market/local/board/qna.html" target="_blank">마켓 문의사항</a></td>
+                <td>
+                    <strong>마켓선택</strong><br>
+                    <strong>문의사항 목록</strong> 마켓(판매자 ID) <br>
+                    <strong>문의정보 탭</strong> 마켓(판매자 ID)
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓 게시글관리 > <a href="/smartAdmin/market/local/board/sos.html" target="_blank">마켓 긴급메세지</a></td>
+                <td>
+                    <strong>마켓선택</strong> <br>
+                    <strong>긴급메세지 목록</strong> 마켓(판매자 ID) <br>
+                    <strong>메시지정보 탭</strong> 마켓(판매자 ID)
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓 게시글관리 > <a href="/smartAdmin/market/local/board/review.html" target="_blank">마켓 구매후기</a></td>
+                <td>
+                    <strong>마켓선택</strong> <br>
+                    <strong>구매후기 목록</strong> 마켓(판매자 ID) <br>
+                    <strong>구매후기 내용</strong> 마켓(판매자 ID)
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓 게시글관리 > 마켓 구매후기 > <a href="/smartAdmin/market/local/board/review_conform.html" target="_blank">구매후기 확인</a></td>
+                <td>
+                    <strong>마켓명(판매자 ID)</strong>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 마켓 게시글관리 > <a href="/smartAdmin/market/local/board/log.html" target="_blank">전송로그 확인</a></td>
+                <td>
+                    <strong>마켓선택</strong> <br>
+                    <strong>로그목록</strong> 마켓
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 전송로그 확인 > <a href="/smartAdmin/market/local/log/order_collecting.html" target="_blank">주문수집 로그</a></td>
+                <td>
+                    <strong>마켓선택</strong> <br>
+                    <strong>주문수집 로그 탭</strong> 마켓 <br>
+                    <strong>수집실패 사유 탭</strong> 마켓
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 전송로그 확인 > <a href="/smartAdmin/market/local/log/product.html" target="_blank">상품관리 로그</a></td>
+                <td>
+                    <strong>로그 검색</strong> 마켓선택<br>
+                    <strong>로그목록</strong> 마켓
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="center">PC Admin</td>
+                <td class="center">Y</td>
+                <td>마켓통합관리(국내마켓) &gt; 전송로그 확인 > <a href="/smartAdmin/market/local/log/order.html" target="_blank">주문처리 로그</a></td>
+                <td>
+                    <strong>로그목록</strong> 마켓
+                </td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer">
+        <p>copyright&copy; <strong>Cafe24 Corp.</strong> All rights Reserved.</p>
+        <p class="guide"><a href="/guide/uidev_guide.pdf">[가이드 개요 다운로드]</a></p>
+    </div>
+</div>
+</body>
+</html>

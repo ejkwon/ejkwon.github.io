@@ -1,0 +1,239 @@
+<?php require_once('../include/header.html'); ?>
+    <div id="container">
+        <div class="mTitle">
+            <h1>$퀵로드밸런싱 신청</h1>
+        </div>
+        <div class="mProcess">
+            <ol>
+                <li class="done"><span>아이디등록</span></li><!-- 참고: 완료된 단계에 class="done" 추가-->
+                <li class="selected"><span>정보입력</span></li><!-- 참고: 활성화시, class="selected" 추가-->
+                <li><span>결제</span></li>
+                <li><span>신청완료</span></li>
+            </ol>
+        </div>
+        <section class="mBoxThin">
+            <div class="mTitle">
+                <h3>신청정보</h3>
+            </div>
+            <div class="mBoard typeRow">
+                <table border="1">
+                    <caption>신청정보</caption>
+                    <colgroup>
+                        <col style="width:30%;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">신청서비스</th>
+                            <td>Quick E3 352 (SSD)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이용기간</th>
+                            <td>
+                                <select class="fSelect full">
+                                    <option>1개월</option>
+                                    <option>3개월</option>
+                                    <option>6개월 (5%할인)</option>
+                                    <option>1년 (10%할인)</option>
+                                    <option>2년 (12%할인)</option>
+                                    <option>3년 (15%할인)</option>
+                                    <option>10년 (20%할인)</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mTotal">
+                <dl class="total">
+                    <dt>서버호스팅/IDC</dt>
+                    <dd><em>10,400</em>원</dd>
+                </dl>
+            </div>
+            <div class="mTitle">
+                <h3>서버 환경설정 (선택)</h3>
+            </div>
+            <div class="mBoard typeRow">
+                <table border="1">
+                    <caption>서버 환경설정</caption>
+                    <colgroup>
+                        <col style="width:30%;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">OS</th>
+                        <td>
+                            <select class="fSelect full">
+                                <option disabled>선택해주세요.</option>
+                                <option>Linux APM v.2</option>
+                                <option>Window Server 2012</option>
+                                <option>Window Server 2008</option>
+                                <option>기타</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MS-ASP <br class="RMB">MSSQL DB</th>
+                        <td>
+                            <select class="fSelect full">
+                                <option disabled>선택해주세요.</option>
+                                <option>MSSQL Server 2005 Standard 4Core</option>
+                                <option>MSSQL Server 2005 Enterprise 4Core</option>
+                                <option>MSSQL Server 2008 Standard 4Core</option>
+                                <option>MSSQL Server 2008 Enterprise 4Core</option>
+                                <option>MSSQL Server 2012 Standard 4Core</option>
+                                <option>MSSQL Server 2012 Enterprise 4Core</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="mHelp">
+                                <li>선택하신 OS 라이센스 <a href="#layerRequest" class="txtLinkEm eModal">요청사항</a>를 확인해 주세요.</li>
+                                <li>해당사양은 결제 후 30분 이내로 설치가 완료됩니다.</li>
+                                <li>OS에 따라 요금의 차이가 있습니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">RAM</th>
+                        <td>
+                            DDR3 U-ECC 8GB
+                            <select class="fSelect full gBlank">
+                                <option disabled>선택해주세요.</option>
+                                <option>1 (10,000원/월)</option>
+                                <option>2 (20,000원/월)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="mHelp">
+                                <li>서버 부품은 임대형입니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">기본HDD</th>
+                        <td>SSD 240GB + SATA3 1TB</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="mHelp">
+                                <li>백업의 책임은 고객님께 있으며, 무료 제공 된 디스크는 백업용으로 사용을 권고 드립니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">추가HDD</th>
+                        <td>
+                            <select class="fSelect" style="width:65%;">
+                                <option>선택해주세요.</option>
+                                <option>SATA3 1TB (7,200RPM, 3.5")</option>
+                                <option>SATA3 2TB (7,200RPM, 3.5")</option>
+                                <option>SSD 240GB (2.5")</option>
+                                <option>SSD 500GB (2.5")</option>
+                                <option>SATA3 4TB (5,900RPM, 3.5")</option>
+                            </select>
+                            <select class="fSelect" style="width:32%;">
+                                <option>0</option>
+                                <option>1 (10,000원/월)</option>
+                                <option>3 (20,000원/월)</option>
+                                <option>5 (30,000원/월)</option>
+                            </select>
+                            <div class="gBlank">
+                                <select class="fSelect" style="width:65%;">
+                                    <option>선택해주세요.</option>
+                                    <option>SATA3 1TB (7,200RPM, 3.5")</option>
+                                    <option>SATA3 2TB (7,200RPM, 3.5")</option>
+                                    <option>SSD 240GB (2.5")</option>
+                                    <option>SSD 500GB (2.5")</option>
+                                    <option>SATA3 4TB (5,900RPM, 3.5")</option>
+                                </select>
+                                <select class="fSelect" style="width:32%;">
+                                    <option>0</option>
+                                    <option>1 (10,000원/월)</option>
+                                    <option>3 (20,000원/월)</option>
+                                    <option>5 (30,000원/월)</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="mHelp">
+                                <li>종류에 관계없이 최대 2개 수량까지만 추가 선택하 실 수 있습니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            서버 통합관리
+                            <div class="mTooltip top">
+                            <button type="button" class="icon">도움말</button>
+                            <div class="tooltip gLarge">
+                                <ul>
+                                    <li>
+                                        <strong class="titleEm">1:1 시스템 관리</strong>
+                                        별도의 전문 엔지니어가 없으시더라도 카페24 서버 통합관리 서비스 하나로 OS Application 설치에서 튜닝, 버전 업그레이드까지 전문 엔지니어가 1:1로 시스템을 관리해 드립니다.
+                                    </li>
+                                    <li>
+                                        <strong class="titleEm">차별화된 통합 관리</strong>
+                                        시스템 이력/트래픽/자원/보안 점검 리포트 발송 등, 카페24 서버 호스팅만의 차별화된 통합관리 서비스를 받으실 수 있습니다.
+                                    </li>
+                                    <li>
+                                        <strong class="titleEm">서버 관리 패키징</strong>
+                                        서버 통합관리 서비스는 카페24IDC 센터에서 24시간 365일 전문 기술진의 통합관리 서비스와 시스템 컨설팅 등을 저렴한 비용의 패키징화된 서비스로 제공해 드립니다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </th>
+                        <td>
+                            <label class="gLabelClear"><input type="radio" name="radio" class="fRadio"> <span class="fLabel">스탠다드</span></label>
+                            <label class="gLabelClear"><input type="radio" name="radio" class="fRadio"> <span class="fLabel">프리미엄</span></label>
+                            <label class="gLabelClear"><input type="radio" name="radio" class="fRadio"> <span class="fLabel">없음</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="mHelp">
+                                <li>서버 통합관리 유형에 따라 요금의 차이가 있습니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mTotal">
+                <dl class="total">
+                    <dt>추가옵션</dt>
+                    <dd><em>100,000</em>원</dd>
+                </dl>
+                <dl class="detail">
+                    <dt>OS : $Windows Server 2012 Standard</dt>
+                    <dd>28,000원</dd>
+                    <dt>HDD : $SATA3 1TB (7,200RPM, 3.5")</dt>
+                    <dd>5,000원</dd>
+                    <dt>HDD : $SATA3 2TB (7,200RPM, 3.5")</dt>
+                    <dd>10,000원</dd>
+                    <dt>RAM : $DDR4 ECC-REG 16GB * 3</dt>
+                    <dd>78,000원</dd>
+                    <dt>통합관리: $프리미엄</dt>
+                    <dd>200,000원</dd>
+                </dl>
+            </div>
+            <div class="mTotal">
+                <dl class="total">
+                    <dt>합계</dt>
+                    <dd><em>987,400</em>원</dd>
+                </dl>
+            </div>
+        </section>
+        <div class="mButton gFlex">
+            <a href="#none" class="btnNormal">이전단계</a>
+            <a href="#none" class="btnSubmit">다음단계</a>
+        </div>
+    </div>
+<?php require_once('../include/footer.html'); ?>

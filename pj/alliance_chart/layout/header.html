@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>REPORT</title>
+    <link rel="stylesheet" type="text/css" href="../css/report.css" />
+    <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../js/report.js"></script>
+
+    <!-- 참고 : chzn 테스트용으로 개발소스에 적용하는 범위 아님 -->
+    <script type="text/javascript" src="../js/chosen.jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".chzn-select").chosen();
+            $(".chzn-select-deselect").chosen({allow_single_deselect:true, no_results_text : "검색결과가 없습니다. : "});
+            $(".chzn-container-multi.chzn-disabled").on('click', function (event) {
+                event.preventDefault();
+                $(".chzn-container.chzn-with-drop .chzn-drop").hide();
+            });
+        });
+    </script>
+    <!-- //참고 -->
+</head>
+<body>
+<div id="skipNavigation">
+    <p>
+        <a href="#snb">메뉴 바로가기</a>
+        <a href="#content">본문 바로가기</a>
+    </p>
+</div>
+<hr class="layout" />
+
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <div id="header">
+        <h1 class="logo">REPORT</h1>
+        <h2 class="blind">주요메뉴</h2>
+        <ul class="gnb">
+            <li class="selected"><a href="#none">Chart</a></li>
+            <li><a href="#none">Chart List</a></li>
+            <li><a href="#none">Report</a></li>
+            <li><a href="#none">Report List</a></li>
+        </ul>
+        <div class="topBar">
+            <div class="banner">
+                <ul class="message">
+                    <li>기능 개선 건 등 메세지 쓸 수 있는 공간입니다.</li>
+                    <li>2. 기능 개선 건 등 메세지 쓸 수 있는 공간입니다.</li>
+                </ul>
+            </div>
+            <ul class="util">
+                <li><a href="#none">Guide</a></li>
+                <li><a href="#none">Logout</a></li>
+                <li><a href="#none">Admin</a></li>
+            </ul>
+        </div>
+    </div><!-- //header -->
+    <hr class="layout" />

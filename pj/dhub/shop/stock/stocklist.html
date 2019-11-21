@@ -1,0 +1,199 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>오입고처리내역</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">재고</a></li>
+            <li class="now" title="현재 페이지">오입고처리내역</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>검색조건</h2>
+    </div>
+    <div class="mBoard gSmall">
+        <table border="1" summary="">
+        <caption>검색조건</caption>
+        <tbody>
+            <tr>
+                <th scope="row">입고완료일</th>
+                <td>
+                    <a href="#none" class="btnDate"><span>오늘</span></a>
+                    <a href="#none" class="btnDate selected"><span>2일</span></a>
+                    <a href="#none" class="btnDate"><span>3일</span></a>
+                    <a href="#none" class="btnDate"><span>5일</span></a>
+                    <a href="#none" class="btnDate"><span>7일</span></a>
+                    <a href="#none" class="btnDate"><span>1개월</span></a>
+                    <input type="text" id="pr_start_date" name="start_date" value="2013-04-03" class="fText" style="width:65px;" />
+                    <a href="javascript:;" id="start_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                    ~
+                    <input type="text" id="pr_end_date" name="end_date" value="2013-04-03" class="fText" style="width:65px;" />
+                    <a href="javascript:;" id="end_date" class="btnIcon icoCal"><span>달력보기</span></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">출고여부</th>
+                <td>
+                    <label class="gLabel"><input type="radio" name="radio" checked="checked" class="fChk" /> 전체</label>
+                    <label class="gLabel"><input type="radio" name="radio" class="fChk" /> 출고안함</label>
+                    <label class="gLabel"><input type="radio" name="radio" class="fChk" /> 출고완료</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">검색어</th>
+                <td>
+                    <select class="fSelect">
+                        <option>공급사명</option>
+                        <option>공급사상품명</option>
+                        <option>입고지시번호</option>
+                    </select>
+                    <input type="text" class="fText" style="width:280px;" />
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mButton gCenter">
+        <a href="#none" class="btnSearch"><span>검색</span></a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>검색결과</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 <strong>40</strong>건]</p>
+        </div>
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>출고완료처리</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+        </div>
+    </div>
+    <div class="mBoard gScroll">
+        <table border="1" summary="" class="eChkTr">
+        <caption>검색결과</caption>
+        <colgroup>
+            <col class="chk" />
+            <col style="width:50px;" />
+            <col class="time" />
+            <col style="width:150px;" />
+            <col style="width:100px;" />
+            <col style="width:auto;" />
+            <col style="width:100px;" />
+            <col style="width:150px;" />
+            <col style="width:100px;" />
+            <col style="width:100px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" class="allChk" /></th>
+                <th scope="col">No</th>
+                <th scope="col">
+                    <strong class="array descend">입고완료일<button type="button">내림차순 정렬</button></strong>
+                    <!--
+                    <strong class="array ascend">입고완료일<button type="button">오름차순 정렬</button></strong>
+                    -->
+                </th>
+                <th scope="col">입고지시번호</th>
+                <th scope="col">공급사명</th>
+                <th scope="col">공급사상품명</th>
+                <th scope="col">수량</th>
+                <th scope="col">출고여부</th>
+                <th scope="col">입고처리자</th>
+                <th scope="col">출고처리자</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>13</td>
+                <td>2014-05-22 14:42:58</td>
+                <td><a href="#none">20140305-11AA123456</a></td>
+                <td>나공급</td>
+                <td class="left">잘못들어온상품</td>
+                <td class="right">1,200</td>
+                <td>출고안함<br /><span class="txtLight">(-)</span></td>
+                <td>김입고</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>12</td>
+                <td>2014-05-22 14:42:58</td>
+                <td><a href="#none">20140305-11AA123456</a></td>
+                <td><a href="#infoviewLayer" class="txtLink eModal">다공급</a></td>
+                <td class="left">잘못들어온상품</td>
+                <td class="right">1,200</td>
+                <td>출고안함<br /><span class="txtLight">(2014-05-21 15:08:04)</span></td>
+                <td>김입고</td>
+                <td>나출고</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="rowChk" /></td>
+                <td>11</td>
+                <td>2014-05-22 14:42:58</td>
+                <td><a href="#none">20140305-11AA123456</a></td>
+                <td><a href="#infoviewLayer" class="txtLink eModal">라공급</a></td>
+                <td class="left">잘못들어온상품</td>
+                <td class="right">1,200</td>
+                <td>출고안함<br /><span class="txtLight">(2014-05-21 15:08:04)</span></td>
+                <td>김입고</td>
+                <td>나출고</td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="10">검색결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" target="_blank" title="새창 열림" class="btnNormal"><span>출고완료처리</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" class="btnNormal"><span><em class="icoXls"></em> 엑셀바로다운로드</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

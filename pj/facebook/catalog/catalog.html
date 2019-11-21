@@ -1,0 +1,123 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/head.html'); ?>
+
+<div id="wrap">
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/header.html'); ?>
+    <div id="container">
+        <!-- [ content ] -->
+        <section id="content">
+
+<div class="mTitle">
+    <h1>제품 카탈로그</h1>
+</div>
+
+<div class="mBoard typeEdit">
+    <table border="1">
+        <caption>제품카탈로그 설정</caption>
+        <colgroup>
+            <col style="width:190px;">
+            <col style="width:auto;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">카탈로그 이름 <strong class="txtRequired">(필수)</strong></th>
+                <td>
+                    <div class="fText full">
+                        <input type="text" placeholder="카탈로그 1">
+                        <button type="button" class="btnReset"><i class="icoReset">입력 초기화</i></button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">이벤트 소스</th>
+                <td><a href="#layerConnectApp" class="btnConfirm eLayerClick">연결하기</a></td>
+            </tr>
+            <tr>
+                <th scope="row">이벤트 소스</th>
+                <td>
+                    국내_TEST 님의 픽셀 (픽셀 ID : 12323431244334) <a href="#layerConnectApp" class="btnConfirm eLayerClick gSideS">수정</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">이미지 변환</th>
+                <td>
+                    <div class="mForm">
+                        <label class="gLabel"><input type="radio" class="fRadio" checked><span class="fLabel">슬라이드/컬렉션 광고</span></label>
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">단일 광고</span></label>
+                    </div>
+                    <div class="mMethod typeButton gLarge center middle">
+                        <label class="btnMethod">
+                            <input type="radio" name="test4">
+                            <span class="fLabel">
+                                이미지로 광고 채우기
+                                <img src="//img.cafe24.com/img/cmc_facebook/img_convert1.jpg" class="thumb" alt="">
+                            </span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test4">
+                            <span class="fLabel">
+                                이미지를 광고에 맞추기
+                                <img src="//img.cafe24.com/img/cmc_facebook/img_convert2.jpg" class="thumb" alt="">
+                            </span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test4">
+                            <span class="fLabel">
+                                광고에 맞춰 이미지 크기 조정
+                                <img src="//img.cafe24.com/img/cmc_facebook/img_convert3.jpg" class="thumb" alt="">
+                             </span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">이미지 변환</th>
+                <td>
+                    <div class="mForm">
+                        <label class="gLabel"><input type="radio" class="fRadio"><span class="fLabel">슬라이드/컬렉션 광고</span></label>
+                        <label class="gLabel"><input type="radio" class="fRadio" checked><span class="fLabel">단일 광고</span></label>
+                    </div>
+                    <div class="mMethod typeButton gLarge center middle">
+                        <label class="btnMethod">
+                            <input type="radio" name="test4">
+                            <span class="fLabel">
+                                이미지로 광고 채우기
+                                <img src="//img.cafe24.com/img/cmc_facebook/img_convert4.jpg" class="thumb" alt="">
+                            </span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test4">
+                            <span class="fLabel">
+                                이미지를 광고에 맞추기
+                                <img src="//img.cafe24.com/img/cmc_facebook/img_convert5.jpg" class="thumb" alt="">
+                            </span>
+                        </label>
+                        <label class="btnMethod">
+                            <input type="radio" name="test4">
+                            <span class="fLabel">
+                                광고에 맞춰 이미지 크기 조정
+                                <img src="//img.cafe24.com/img/cmc_facebook/img_convert6.jpg" class="thumb" alt="">
+                            </span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">카탈로그 삭제</th>
+                <td><button type="button" class="btnConfirm">삭제</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="mButton">
+    <button type="button" class="btnSubmit large">저장</button>
+</div>
+
+<p class="mEmpty">
+    생성된 카탈로그가 없습니다.<br><a href="#layerCatalog" class="btnConfirm medium gBlankM eLayerClick">새 카탈로그 만들기</a>
+</p>
+
+        </section><!-- //[ content ] -->
+
+    </div>
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/footer.html'); ?>

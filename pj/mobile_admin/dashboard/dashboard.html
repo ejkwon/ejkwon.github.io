@@ -1,0 +1,168 @@
+<?php include('../layout/header_main.html'); ?>
+    <!-- content -->
+    <div id="contents">
+        <div class="dashArea">
+            <div class="mTab typeDash">
+                <ul>
+                    <li class="selected"><a href="#none">오늘 현황</a></li>
+                    <li><a href="#none">어제 현황</a></li>
+                </ul>
+            </div>
+            <div class="status">
+                <div class="order">
+                    <ul class="check">
+                        <li>입금전<a href="#none">28</a></li>
+                        <li>상품준비중<a href="#none">12</a></li>
+                        <li>배송준비중<a href="#none">329</a></li>
+                        <li>배송대기중<a href="#none">88</a></li>
+                    </ul>
+                    <ul class="view">
+                        <li><a href="#none"><span class="state delivery">배송중</span>102</a></li>
+                        <li><a href="#none"><span class="state delivered">배송완료</span>103</a></li>
+                        <li><a href="#none"><span class="state cancel">취소</span>18</a></li>
+                        <li><a href="#none"><span class="state exchange">교환</span>32</a></li>
+                        <li><a href="#none"><span class="state return">반품</span>39</a></li>
+                    </ul>
+                </div>
+                <div class="sales">
+                    <dl>
+                        <dt><span class="state order">주문</span></dt>
+                        <dd class="count">152건</dd>
+                        <dd class="price">2,231,000원</dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="state pay">결제</span></dt>
+                        <dd class="count">1,108건</dd>
+                        <dd class="price">1,941,400원</dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="state refund">환불</span></dt>
+                        <dd class="count">2건</dd>
+                        <dd class="price">24,000원</dd>
+                    </dl>
+                    <div class="group">
+                        <div class="btnSales eToggle">
+                            <button type="button" class="eButton">주간 / 월간 매출</button>
+                            <div class="report">
+                                <div class="mButton grid2">
+                                    <a href="#none" class="btnStrong">주간 매출</a>
+                                    <a href="#none" class="btnStrong disabled">월간 매출</a>
+                                </div>
+                                <div class="mBoard typeCol">
+                                    <table border="1">
+                                        <caption>제목</caption>
+                                        <colgroup>
+                                            <col style="width:13%;">
+                                            <col style="width:29%;">
+                                            <col style="width:29%;">
+                                            <col style="width:29%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">주문</th>
+                                                <th scope="col">결제</th>
+                                                <th scope="col">환불</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot class="right">
+                                            <tr>
+                                                <th scope="row" class="center">합계</th>
+                                                <td>12,321,000원<br>(152건)</td>
+                                                <td>11,321,000원<br>(92건)</td>
+                                                <td>25,000원<br>(2건)</td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody class="right">
+                                            <tr>
+                                                <th scope="row" class="center">평균</th>
+                                                <td>2,120,321,000원<br>(152건)</td>
+                                                <td>11,321,000원<br>(92건)</td>
+                                                <td>25,000원<br>(2건)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="desc">* 당일통계 미포함</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li>
+                        <a href="#none">
+                            <span class="label">품절된 상품</span>
+                            <strong>102</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <span class="label">신규회원</span>
+                            <strong>103</strong>
+                        </a>
+                    </li>
+                    <li class="child eToggle">
+                        <a href="#none" class="eButton">
+                            <span class="label">게시물</span>
+                            <strong>18</strong>
+                        </a>
+                        <ul>
+                            <li><a href="#none"><span class="label">공지사항</span>2건</a></li>
+                            <li><a href="#none"><span class="label">뉴스 / 이벤트</span>18건</a></li>
+                            <li><a href="#none"><span class="label">이용안내 FAQ</span>23건</a></li>
+                            <li><a href="#none"><span class="label">상품 사용후기</span>52건</a></li>
+                            <li><a href="#none"><span class="label">상품 Q&A</span>6건</a></li>
+                            <li><a href="#none"><span class="label">자유게시판자유게시판자유게시판자유게시판</span>3200건</a></li>
+                            <li><a href="#none"><span class="label">갤러리</span>52건</a></li>
+                            <li><a href="#none"><span class="label">자료실</span>5건</a></li>
+                            <li><a href="#none"><span class="label">긴급문의</span>27건</a></li>
+                        </ul>
+                    </li>
+                    <li class="child eToggle">
+                        <a href="#none" class="eButton">
+                            <span class="label">부가서비스</span>
+                            <strong>32</strong>
+                        </a>
+                        <ul>
+                            <li><span class="label">SMS 서비스</span>5,000 건</li>
+                            <li><span class="label">대량 메일 발송</span>5,000 건</li>
+                            <li><span class="label">부운영자 인원</span>1 명</li>
+                            <li><span class="label">자료실 용량</span>12MB</li>
+                            <li>
+                                <span class="label">연결 도메인</span>1개
+                                <p class="info">
+                                    (이용만료 : 8일전)
+                                    <button type="button" class="btnExtend">연장하기</button>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="notice">
+                <h3>공지사항<a href="../dashboard/notice_detail.html" class="all">전체보기</a></h3>
+                <ul>
+                    <li>
+                        <a href="../dashboard/notice_detail.html"><span class="label">[안내] 2월 3일(화) 네이버체크아웃 API</span>05/05</a>
+                    </li>
+                    <li>
+                        <a href="#none"><span class="label">[이벤트] 다이소 박스 구매금액별 사은품 증정</span>05/05</a>
+                    </li>
+                    <li>
+                        <a href="#none"><span class="label">[안내] 2월 4일(수) LGU+ 휴대폰 결제시스템</span>05/05</a>
+                    </li>
+                    <li>
+                        <a href="#none"><span class="label">[안내] 2월 2일(월) 일부 카드사 Active x 제거</span>05/05</a>
+                    </li>
+                    <li>
+                        <a href="#none"><span class="label">[안내] 1월 18일(수) 일부 카드사 Active X 제거</span>05/05</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- //content -->
+<?php include('../layout/footer.html'); ?>

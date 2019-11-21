@@ -1,0 +1,158 @@
+<?php require_once('../../include/header.html'); ?>
+            <div class="headingArea">
+                <div class="mTitle">
+                    <h1>공지사항 관리</h1>
+                </div>
+                <div class="mBreadcrumb">
+                    <ol>
+                        <li class="home">홈</li>
+                        <li>게시판</li>
+                        <li class="now" title="현재 페이지">공지사항 관리</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="mTitle">
+                    <h2>공지사항 수정</h2>
+                </div>
+                <div class="mBoard">
+                    <table border="1" summary="">
+                        <caption>공지사항 수정</caption>
+                        <colgroup>
+                            <col style="width:154px;" />
+                            <col style="width:auto;" />
+                            <col style="width:154px;" />
+                            <col style="width:auto;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">제목</th>
+                                <td colspan="3"><input type="text" class="fText" style="width:90%;" /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">공지대상</th>
+                                <td colspan="3">
+                                    <div class="mForm">
+                                        <label class="gLabel"><input type="radio" class="fChk" /> 전체상점</label>
+                                        <label class="gLabel"><input type="radio" class="fChk" /> 일부상점</label>
+                                        <div class="addForm">
+                                            <select class="chosen-select" multiple="multiple">
+                                                <option>MIXXMIX</option>
+                                                <option>zemmaworld-카페24</option>
+                                                <option>DABAGIRL-티몰유니버스</option>
+                                                <option>MIXXMIX-카페24(영문)</option>
+                                                <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                                                <option>MIXXMIX</option>
+                                                <option>zemmaworld-카페24</option>
+                                                <option>DABAGIRL-티몰유니버스</option>
+                                                <option>MIXXMIX-카페24(영문)</option>
+                                                <option>MIXXMIX-카페24(영문) 긴글자 블라블라</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">게시일자</th>
+                                <td>
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                                <th scope="row">공개설정</th>
+                                <td>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 공개</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 비공개</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">공지타입</th>
+                                <td>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 일반공지</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 중요공지</label>
+                                </td>
+                                <th scope="row">중요공지 기간</th>
+                                <td>
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a> ~
+                                    <input type="text" class="fText gDate" />
+                                    <a href="#none" class="btnIcon icoCal"><span>달력보기</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">공지메일 발송여부</th>
+                                <td colspan="3">
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 메일발송 안함</label>
+                                    <label class="gLabel"><input type="radio" class="fChk" /> 메일발송 처리(2018-07-13 10:53:50)</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="gEditor"><img src="//img.echosting.cafe24.com/suio/@editor.gif" alt="" /></div>
+                                </td>
+                            </tr>
+                            <!-- 참고: 파일있는 경우 -->
+                            <tr>
+                                <th scope="row">첨부파일</th>
+                                <td colspan="3" uidev-case="첨부파일 있는 경우">
+                                    <p class="mAttach typeFile">
+                                        <a href="예치금 등록 가이드.ppt" class="attached">예치금 등록 가이드.ppt</a> (3M)
+                                        <button type="button" class="btnIcon icoDel"><span>삭제</span></button>
+                                    </p>
+                                </td>
+                            </tr><!-- //참고: 파일있는 경우 -->
+                            <!-- 참고: 파일없는 경우 -->
+                            <tr>
+                                <th scope="row">첨부파일</th>
+                                <td colspan="3" uidev-case="첨부파일 없는 경우">
+                                    <input type="file" class="fFile" />
+                                    <p class="txtInfo">첨부파일은 10M 이하 파일만 등록 가능합니다.</p>
+                                </td>
+                            </tr><!-- //참고: 파일없는 경우 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mButton gCenter">
+                <a href="#previewLayer" class="btnSubmit eLayerClick"><span>미리보기</span></a>
+                <a href="#none" class="btnSubmit"><span>저장</span></a>
+                <a href="#none" class="btnEm"><span>취소</span></a>
+            </div>
+
+            <div class="mHelp typeInfo">
+                <h2>공지사항 수정</h2>
+                <div class="content">
+                    <h3>공지대상</h3>
+                    <p>'일부상점'을 선택하고 상점을 등록하면, 등록된 상점들에게만 해당 공지 내용이 표시됩니다.</p>
+                    <h3>공개설정</h3>
+                    <ul>
+                        <li>게시 일자에 설정된 날부터 디허브 상점 어드민에 공지사항이 표시됩니다.</li>
+                        <li>공개 설정에서 '공개'를 체크해야 디허브 상점 어드민에서 상점 운영자가 공지사항 내용을 확인할 수 있습니다.</li>
+                        <li> '비공개' 체크를 하면 내용은 삭제 되지 않지만, 디허브 상점 어드민에 관련 공지사항 내용이 표시되지 않습니다.</li>
+                    </ul>
+                    <h3>공지타입</h3>
+                    <ul>
+                        <li>'일반공지'로 등록하면, 작성일 기준으로 공지사항 목록에 표시됩니다.</li>
+                        <li>'중요공지'로 등록하면, 설정한 중요 공지 기간동안 공지사항 목록의 가장 상단에 표시됩니다.</li>
+                    </ul>
+                    <h3>공지사항 내용 등록</h3>
+                    <p>에디터 툴을 이용하여 공지사항을 입력합니다.</p>
+                </div>
+            </div>
+
+<script src="/js/scm/dhub/chosen.jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {width:"100%"},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+</script>
+
+<?php require_once('../../include/footer.html'); ?>

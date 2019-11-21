@@ -1,0 +1,213 @@
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/head_popup.html'); ?>
+
+<body id="popup" size="1147, 720"><!-- 참고 : size 속성은 팝업 가로/세로 체크용입니다. 개발진행시에 팝업사이즈에 적용해주시고, size 는 삭제해주세요. -->
+    <section class="mLayer">
+        <header class="header">
+            <h1 class="title">상세보기</h1>
+        </header>
+        <div class="wrap">
+            <div class="mBoard typeEdit">
+                <table border="1">
+                    <caption>이슈유형</caption>
+                    <colgroup>
+                        <col style="width:190px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">이슈유형</th>
+                            <td>
+                                <div class="mSelect full"><!--  참고: 활성화시, class "selected" 추가. -->
+                                    <div class="value">전체 <button type="button" class="btnCover eSelect">옵션 변경<i class="icoArrow"></i></button></div>
+                                    <div class="optionLayer">
+                                        <ul class="optionSelect">
+                                            <li class="gridSet">
+                                                <span class="grid">누락된 필드 : google_product_category</span>
+                                            </li>
+                                            <li class="gridSet">
+                                                <span class="grid">필드에 대문자만 사용 : title</span>
+                                            </li>
+                                            <li class="gridSet">
+                                                <span class="grid">이미지 사이즈</span>
+                                            </li>
+                                            <li class="gridSet">
+                                                <span class="grid">선택 4</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mAccordion gBlankL">
+                <div class="head">
+                    <strong class="title">google_product_category 정보가 없으면 제품이 광고에 원하는 방식으로 표시되지 않을 수 있습니다.</strong>
+                    <button type="button" class="btnCover eAccordion">열기<i class="icoAccordion"></i></button>
+                </div>
+                <div class="content">
+                    <div class="mBoard typeView">
+                        <table border="1">
+                            <caption>유형에 따른 이슈 목록</caption>
+                            <colgroup>
+                                <col style="width:80px;">
+                                <col style="width:90px;">
+                                <col style="width:200px;">
+                                <col style="width:240px;">
+                                <col style="width:auto;">
+                                <col style="width:150px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">라인</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">google_product_category</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td>1635</td>
+                                    <td>23610</td>
+                                    <td class="left">그래픽 반팔티</td>
+                                    <td class="highlight"></td>
+                                    <td class="left">한여름 멋스럽게 입는 그래픽 반팔티</td>
+                                    <td class="right">7,000 KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>1635</td>
+                                    <td>23610</td>
+                                    <td class="left">그래픽 반팔티</td>
+                                    <td class="highlight"></td>
+                                    <td class="left">가을여신 슬림라인 스커트, 예뻐예뻐 가을여신 슬림라인 스커트, 예뻐예뻐 가을여신 슬림라인 스커트, 예뻐예뻐 가을여신 슬림라인 스커트, 예뻐예뻐</td>
+                                    <td class="right">7,000 KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>1635</td>
+                                    <td>23610</td>
+                                    <td class="left">그래픽 반팔티</td>
+                                    <td class="highlight"></td>
+                                    <td class="left">한여름 멋스럽게 입는 그래픽 반팔티</td>
+                                    <td class="right">7,000 KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>1635</td>
+                                    <td>23610</td>
+                                    <td class="left">그래픽 반팔티</td>
+                                    <td class="highlight"></td>
+                                    <td class="left">한여름 멋스럽게 입는 그래픽 반팔티</td>
+                                    <td class="right">7,000 KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>1635</td>
+                                    <td>23610</td>
+                                    <td class="left">그래픽 반팔티</td>
+                                    <td class="highlight"></td>
+                                    <td class="left">한여름 멋스럽게 입는 그래픽 반팔티</td>
+                                    <td class="right">7,000 KRW</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="gBlankM">※ 위 항목들은 일부 데이터만 표시한 것으로, 전체 데이터를 검토하려면 보고서 파일을 다운로드 받아 확인하세요.</p>
+                </div>
+                <div class="head">
+                    <strong class="title">광고에 대문자만 사용되지 않도록 필드 형식을 다시 지정하세요.</strong>
+                    <button type="button" class="btnCover eAccordion">열기<i class="icoAccordion"></i></button>
+                </div>
+                <div class="content">
+                    <div class="mBoard typeView">
+                        <table border="1">
+                            <caption>유형에 따른 이슈 목록</caption>
+                            <colgroup>
+                                <col style="width:80px;">
+                                <col style="width:90px;">
+                                <col style="width:200px;">
+                                <col style="width:auto;">
+                                <col style="width:150px;">
+                                <col style="width:350px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">라인</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1635</td>
+                                    <td class="center">23610</td>
+                                    <td class="highlight">ABCD</td>
+                                    <td>한여름 멋스럽게 입는 그래픽 반팔티</td>
+                                    <td class="right">7,000 KRW</td>
+                                    <td>http://miamasvin.co.kr/product/detail.html?product_no=29937&cafe_mkt=facebook</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">1635</td>
+                                    <td class="center">23610</td>
+                                    <td class="highlight">EWQEW</td>
+                                    <td>한여름 멋스럽게 입는 그래픽 반팔티</td>
+                                    <td class="right">20,000 KRW</td>
+                                    <td>http://miamasvin.co.kr/product/detail.html?product_no=29937&cafe_mkt=facebook</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">1635</td>
+                                    <td class="center">23610</td>
+                                    <td class="highlight">ABCD</td>
+                                    <td>한여름 멋스럽게 입는 그래픽 반팔티</td>
+                                    <td class="right">7,000 KRW</td>
+                                    <td>http://miamasvin.co.kr/product/detail.html?product_no=29937&cafe_mkt=facebook</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="gBlankM">※ 위 항목들은 일부 데이터만 표시한 것으로, 전체 데이터를 검토하려면 보고서 파일을 다운로드 받아 확인하세요.</p>
+                </div>
+                <div class="head">
+                    <strong class="title">이미지가 너무 작습니다. (권장 해상도인 600 * 600 픽셀보다 작습니다.)</strong>
+                    <button type="button" class="btnCover eAccordion">열기<i class="icoAccordion"></i></button>
+                </div>
+                <div class="content">
+                    <div class="mBoard typeView">
+                        <table border="1">
+                            <caption>유형에 따른 이슈 목록</caption>
+                            <colgroup>
+                                <col style="width:auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">이미지 URL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>http://irisccc.cafe24.com/web/product/big/201503/31196_shop1_556655.jpg</td>
+                                </tr>
+                                <tr>
+                                    <td>http://irisccc.cafe24.com/web/product/big/201503/31196_shop1_556655.jpg</td>
+                                </tr>
+                                <tr>
+                                    <td>http://irisccc.cafe24.com/web/product/big/201503/31196_shop1_556655.jpg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="gBlankM">※ 위 항목들은 일부 데이터만 표시한 것으로, 전체 데이터를 검토하려면 보고서 파일을 다운로드 받아 확인하세요.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <button type="button" class="btnNormal medium" onclick="window.close();">닫기</button>
+        </footer>
+
+    <?php require_once( $_SERVER['DOCUMENT_ROOT'].'/pj/facebook/include/footer_popup.html'); ?>

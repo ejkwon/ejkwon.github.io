@@ -1,0 +1,41 @@
+#header, #contents { margin-right:400px; }
+/* #header, #contents, #footer { margin-right:400px; min-width:582px; } */
+#contents .preview { position:absolute; top:0; right:0; bottom:26px; z-index:10; width:400px; padding:70px 0 20px; border-left:1px solid #999; text-align:center; background:#eee; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+/* #contents .preview { position:fixed; top:0; right:0; z-index:10; width:400px; min-height:100%; padding:70px 0 20px; border-left:1px solid #999; text-align:center; background:#eee; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; } */
+@media all and (max-width:767px) {
+  #header, #contents { margin-right:0; }
+  #contents .preview { display:none; }
+}
+
+/* ia영역 */
+.ia > p { font-size:15px; }
+.ia h3 { margin:30px 10px 0 0; padding:10px 15px; border:1px solid #ccc; border-bottom:0; font-size:16px; color:#1b87d4; background:#eee; }
+.ia ul li { position:relative; border-top:1px solid #ccc; padding:0 0 0 170px; line-height:1.5; font-size:12px; }
+.ia ul li .id { position:absolute; left:15px; top:6px; font-size:12px; color:#42567B; }
+.ia ul li > p { height:29px; line-height:29px; }
+.ia ul li a { display:inline-block; width:100%; padding:0 0 0 170px; margin:0 0 0 -170px; }
+.ia ul li a:hover { z-index:10; margin-bottom:-1px; text-decoration:none; color:#6302ff; background:#ebf0f4; }
+.ia ul li .record { position:absolute; top:6px; right:100px; width:150px; margin:0 0 0 10px; color:#898989; font-size:12px; }
+.ia > ul { margin:0 10px 0 0; border:1px solid #ccc; border-bottom:0; }
+.ia > ul > li { border-top:0; border-bottom:1px solid #ccc; }
+.ia .depth3 { margin:0 0 0 -160px; }
+.ia .depth3 li { border-color:#ececec; }
+.ia .depth3 li a { padding-left:180px; margin-left:-180px; }
+.ia .depth3 li .id { color:#476cad; }
+
+    /* 로그 */
+    .log { display:inline-block; padding:0 5px; height:18px; vertical-align:1px; *display:inline; *zoom:1; }
+    .log .content { z-index:20; position:absolute; display:none; padding:3px 10px; margin:5px 0 0 10px; white-space:nowrap; border:2px solid #5a5a5a; background-color:#fff; }
+    .log .content.view { display:block; }
+    .log .content ul li { position:relative; padding-left:7px; margin:3px 0; border:0; font-size:11px; }
+    .log .content ul li:before { content:""; display:block; position:absolute; left:0px; top:50%; width:2px; height:2px; margin-top:-2px; background:#000; }
+    .log .content ul li a { padding:0; margin:0; color:#467bff; }
+    .log .content ul li a:hover { margin:0; border:0; background:#fff; }
+
+/* 미리보기 영역 */
+.buttonArea [class*="btn"] { display:inline-block; height:24px; padding:0 10px; border:1px solid #aaa; border-radius:3px; line-height:24px; letter-spacing:0; font-size:14px; font-family:gulim,"굴림"; outline:0; background:#fff; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.buttonArea [class*="btn"]:hover { text-decoration:none; }
+.buttonArea [class*="btn"].selected { border:1px solid #007e9e; color:#fff; background:#009dc4; }
+.buttonArea,
+.buttonArea .desc { margin:10px 0 0; }
+.iframeWrap { position:fixed; top:160px; width:337px; height:480px; margin:0 0 0 10px; padding:30px 20px 40px; border:2px solid #343434; border-radius:20px; background:#444; }

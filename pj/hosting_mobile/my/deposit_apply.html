@@ -1,0 +1,193 @@
+<?php require_once('../include/header.html'); ?>
+    <div id="container">
+        <div class="mTitle">
+            <h1>나의 서비스 관리</h1>
+        </div>
+        <div class="mTab typeNav gScroll">
+            <div>
+                <ul>
+                    <li><a href="state.html">사용현황</a></li>
+                    <li><a href="hosting_state.html">호스팅 관리</a></li>
+                    <li><a href="domain.html">도메인 관리</a></li>
+                    <li><a href="cash.html">마이캐쉬</a></li>
+                    <li class="selected"><a href="deposit_apply.html">입금조회</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btnSwipePrev">이전 메뉴</button>
+            <button type="button" class="btnSwipeNext">다음 메뉴</button>
+        </div>
+
+        <div class="mTab typeBasic">
+            <ul>
+                <li class="selected"><a href="#none">신청내역</a></li>
+                <li><a href="deposit_pay.html">결제내역</a></li>
+            </ul>
+        </div>
+
+        <!-- 참고: 내역 있는 경우 -->
+        <div class="toggleArea">
+            <!-- 참고: 디폴트로 항상 노출되는 영역 -->
+            <div class="mToggle eToggle">
+                <button type="button" class="btnToggle"><span class="icoArrow">상세정보 열기/닫기</span></button>
+                <div class="mBoard typeRow gClear">
+                    <table border="1">
+                        <caption>신청내역</caption>
+                        <colgroup>
+                            <col style="width:38%;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">신청일시</th>
+                                <td>2016-10-10 12:22:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">아이디</th>
+                                <td>hostest01</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">서비스명</th>
+                                <td><strong class="txtNormal">HDD 용량추가(100M)</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금하실 금액</th>
+                                <td><span class="txtNum"><em>44,000</em>원</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제수단</th>
+                                <td>공용계좌</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- //참고 -->
+            <!-- 참고: 토글액션으로 열고 닫히는 영역 -->
+            <div class="mInfo">
+                <div class="info">
+                    <table border="1">
+                        <caption>신청 상세내역</caption>
+                        <colgroup>
+                            <col style="width:38%;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">결제번호</th>
+                                <td>20161010_328083311</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금계좌</th>
+                                <td>우리 112-222222-12-001<br>카페24(주)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금자</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">영수증</th>
+                                <td>신청안함</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gFull">
+                    <a href="#none" class="btnSubmit">신청취소</a>
+                    <a href="#layerEmail" class="btnStrong eModal">확인요청</a>
+                </div>
+            </div><!-- //참고 -->
+        </div>
+        <div class="toggleArea">
+            <!-- 참고: 디폴트로 항상 노출되는 영역 -->
+            <div class="mToggle eToggle">
+                <button type="button" class="btnToggle"><span class="icoArrow">상세정보 열기/닫기</span></button>
+                <div class="mBoard typeRow gClear">
+                    <table border="1">
+                        <caption>신청내역</caption>
+                        <colgroup>
+                            <col style="width:38%;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">신청일시</th>
+                                <td>2016-10-10 12:22:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">아이디</th>
+                                <td>hostest01</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">서비스명</th>
+                                <td><strong class="txtNormal">HDD 용량추가(100M)</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금하실 금액</th>
+                                <td><span class="txtNum"><em>44,000</em>원</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제수단</th>
+                                <td>공용계좌</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- //참고 -->
+            <!-- 참고: 토글액션으로 열고 닫히는 영역 -->
+            <div class="mInfo">
+                <div class="info">
+                    <table border="1">
+                        <caption>신청 상세내역</caption>
+                        <colgroup>
+                            <col style="width:38%;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">결제번호</th>
+                                <td>20161010_328083311</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금계좌</th>
+                                <td>우리 112-222222-12-001<br>카페24(주)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금자</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">영수증</th>
+                                <td>신청안함</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mButton gFull">
+                    <a href="#none" class="btnSubmit">신청취소</a>
+                    <a href="#layerEmail" class="btnStrong eModal">확인요청</a>
+                </div>
+            </div><!-- //참고 -->
+        </div>
+        <div class="mTotal">
+            <dl class="total">
+                <dt>총 신청금액</dt>
+                <dd><em>270,250</em>원</dd>
+            </dl>
+        </div>
+        <button type="button" class="btnMore"><span class="icoArrow"></span> 더 보기</button><!-- //참고 -->
+
+        <!-- 참고: 내역 없는 경우 -->
+        <p class="mEmpty">무통장입금 신청 내역이 없습니다.</p><!-- //참고 -->
+
+        <section class="mBox">
+            <div class="mTitle"><h3>신청내역 안내</h3></div>
+            <ul class="mList typeDash">
+                <li>무통장(공용계좌)는 입금자명과 동일하게 입금해 주셔야 빠른 확인이 가능합니다.</li>
+                <li>입금을 하셨으나, 하단의 신청 내역이 있다면 결제가 완료되지 않은 것이니 <span class="txtNormal">[확인요청]</span> 해주세요.</li>
+                <li>결제가 완료되면 관리자에게 결제완료 SMS와 메일이 발송됩니다.</li>
+                <li>신청일이 7일 이상 경과된 경우에는 자동 입금처리가 되지 않으니, 취소 후 다시 신청해 주세요.</li>
+                <li>무통장(가상계좌)는 입금 시 자동확인 처리됨으로 별도 확인요청 기능을 제공하지 않습니다.</li>
+                <li>다른 결제수단(신용카드, 실시간계좌이체, 마이캐쉬, 휴대폰결제)으로 변경하여 결제하길 원하는 경우 <span class="txtNormal">“즉시결제”</span>를 선택해 주세요.</li>
+            </ul>
+        </section>
+    </div>
+<?php require_once('../include/footer.html'); ?>

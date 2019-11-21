@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>사가와 송장</title>
+    <style type="text/css">
+        html,body,div,table,p,th,td,dl,dt,dd,ul,li,input,img { margin:0; padding:0; }
+        html { width:100%; height:100%; }
+        body { height:100%; color:#1c1c1c; background:#fff; font-family:"MS Gothic"; }
+        li { list-style:none; }
+        .wrap { position:relative; margin:0 auto; width:210mm; }
+        .box { position:relative; height:143mm; padding:5mm 0 0 5mm; }
+        .notUse { word-break:break-all; font-size:11px; line-height:7px;  }
+        .notUse li { height:2.2mm; }
+        /* information */
+            .information { position:relative; overflow:hidden; width:104mm; height:53mm; }
+            .information .topArea { margin:0 0mm 1mm 3mm; }
+            .information .topArea .notUse, .information .topArea .title { display:inline-block; text-align:center; vertical-align:top; }
+            .information .topArea .notUse { padding:2px 0 0; font-size:11px; }
+            .information .topArea .title { width:26mm; font-size:12px; font-weight:bold; }
+            .information .topArea .itemNo { display:inline-block; vertical-align:top; font-size:11px; font-weight:bold; }
+            .information .topArea .count { display:inline-block; font-size:11px; font-weight:bold; vertical-align:top; }
+            .information .divide1 { float:left; width:38mm; margin-left:6mm; font-size:9px; font-weight:bold; }
+            .information .divide1 .address { height:10mm; line-height:10px; }
+            .information .divide1 .name { height:5mm; }
+            .information .divide1 .send .address { height:8mm; }
+            .information .divide2 { float:left; width:29.5mm; }
+            .information .divide2 .price { height:11mm; font-size:11px; text-align:right; letter-spacing:-0.5px; font-weight:bold; }
+            .information .divide2 .notUse.data { margin:0 0 3mm; }
+            .information .divide2 .companyInfo { margin:0.5mm 0 0 2mm; font-size:9px; line-height:1.2em; }
+            .information .divide3 { position:absolute; right:3mm; bottom:7mm; }
+            .information .divide3 ul { display:inline-block; width:15.5mm; }
+        /* invoice */
+            .invoice { position:relative; overflow:hidden; width:99mm; height:90mm; padding:0 0 0 6mm; }
+            .invoice .topArea { height:6mm; margin:2mm 0 0; }
+            .invoice .topArea .notUse, .invoice .topArea .title { display:inline-block; vertical-align:top; margin-right:4mm; text-align:center; }
+            .invoice .topArea .notUse { padding:5px 0 0; font-size:11px; }
+            .invoice .topArea .title { width:16mm; font-size:14px; font-weight:bold; }
+            .invoice .topArea .deliveryInfo { display:inline-block; font-size:10px; font-weight:bold; }
+            .invoice .topArea .count { width:10mm; text-align:center; position:absolute; right:2mm; top:2mm; font-size:15px; }
+            .invoice .label { position:absolute; left:6mm; top:19mm; width:6mm; height:11mm; padding-top:1mm; font-size:17px; font-weight:bold; text-align:center; color:#fff; background:#000; }
+            .invoice .recipient { height:26mm; margin:1mm 1.5mm 0 10mm; font-size:12px; font-weight:bold; }
+            .invoice .recipient .zipcode { margin-right:3mm; }
+            .invoice .recipient .address { height:14mm; margin-top:1mm; }
+            .invoice .barcode { position:relative; margin:3mm 0 0 10mm; }
+            .invoice .barcode img { display:block; margin:0 0 1mm 3mm; }
+            .invoice .barcode .code { font-size:17px; margin-right:2.5mm; font-weight:bold; }
+            .invoice .barcode .notUse { position:absolute; right:3mm; top:3mm; }
+            .invoice .send { position:relative; margin:3mm 45mm 0 0; font-weight:bold; font-size:9px; }
+            .invoice .send .info { position:absolute; right:-36mm; top:0; }
+            .invoice .send .info .time { margin:3mm 0 0; }
+            .invoice .send .address { height:9mm; }
+            .invoice .price { position:absolute; right:17mm; bottom:14mm; width:15mm; font-size:12px; text-align:right; font-weight:bold; }
+            .invoice .price strong { display:block; width:15mm; margin-bottom:2px; text-align:center; color:#fff; background:#000; }
+            .invoice .land { position:absolute; right:5mm; bottom:14mm; font-size:12px; font-weight:bold; }
+        /* freight */
+            .freight { position:absolute; right:0; top:5mm; width:95mm; height:143mm; }
+            .freight .companyTel { height:5mm; margin-left:5mm; font-size:12px; font-weight:bold; }
+            .freight .codeInfo { height:32mm; }
+            .freight .codeInfo .codeNo { height:10mm; margin-left:5mm; }
+            .freight .codeInfo .codeNo .number {  margin-left:1.5mm; line-height:10mm; font-size:42px; vertical-align:top; font-weight:normal; }
+            .freight .codeInfo .codeNo .number span { display:inline-block; height:7mm; line-height:1; margin-top:6px; padding:1px 3px; font-weight:bold; vertical-align:top; font-size:23px; color:#fff; background-color:#000; }
+            .freight .codeInfo .customerNo { margin:4px 0; font-size:10px; line-height:1.2; letter-spacing:-0.5px; font-weight:bold; }
+            .freight .codeInfo .deliveryInfo { position:absolute; left:48mm; top:16mm; font-size:9px; font-weight:bold; }
+            .freight .codeInfo .deliveryInfo .time { margin:3mm 0 0; }
+            .freight .codeInfo .weight { position:absolute; right:5mm; top:5mm; width:15mm; text-align:center; }
+            .freight .codeInfo .weight li { margin-bottom:2mm; }
+            .freight .codeInfo .weight li p { margin-top:0.5mm; font-size:9px; font-family:serif; font-weight:bold; }
+            .freight .recipient { position:relative; height:32mm; margin:2mm 20mm 0 3mm; font-size:12px; font-weight:bold; }
+            .freight .recipient .zipcode { margin-right:3mm; }
+            .freight .recipient .address { height:16mm; }
+            .freight .recipient .count { position:absolute; right:-13mm; top:0; }
+            .freight .barcode { position:relative; margin:3mm 5mm 0 40mm; text-align:right; }
+            .freight .barcode .code { font-size:16px; font-weight:bold; }
+            .freight .barcode .notUse { position:absolute; right:3mm; top:3mm; }
+            .freight .send { position:relative; margin:0 44mm 0 3mm; font-size:10px; font-weight:bold; }
+            .freight .send .tel { position:absolute; right:-40mm; top:0; font-size:10px; }
+            .freight .send .address { height:9.5mm; }
+            .freight .timeLabel { position:absolute; right:36mm; bottom:5mm; width:30mm; height:30mm; text-align:center; border-radius:5px; background:#949494; }
+            .freight .timeLabel .title { margin:1.5mm 0 0; display:inline-block; font-size:14px; }
+            .freight .timeLabel .data { overflow:hidden; margin-top:2mm; padding:0 1.5mm; text-align:left; }
+            .freight .timeLabel .data li { display:inline-block; margin-bottom:1mm; font-size:15px; border:1px solid #000; padding:2px; background:#fff; }
+            .freight .timeLabel .data li:nth-child(2) { float:right; }
+            .freight .timeLabel .data li:last-child { clear:both; }
+            .freight .eCollect { position:absolute; right:5mm; bottom:5mm; width:28mm; height:28mm; padding:1mm; color:#fff; text-align:center; border-radius:5px; background:#000; }
+            .freight .eCollect .price { width:20mm; height:7mm; margin:10mm auto 0; font-size:17px; line-height:25px; color:#000; font-weight:bold; background:#fff; }
+    </style>
+    <style type="text/css" media="print">
+        body { -webkit-print-color-adjust:exact; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="information">
+                <div class="topArea">
+                    <span class="notUse">*******</span>
+                    <p class="title">業代引金額領收書</p>
+                    <span class="itemNo">お問い合わせNo.:5659-0516-7295</span>
+                    <span class="count">個數 : 1</span>
+                </div>
+                <div class="divide1">
+                    <div class="recipient">
+                        <span class="zipcode">〒211-0053</span>
+                        <span class="tel">TEL 080-9459-8282</span>
+                        <p class="address">神奈川県 川崎市中原区 上小田中6-11-5ディアレイシャス武蔵中原603号室 JPN 高橋 由紀</p>
+                        <p class="name">ヒカラ イテヒョク</p>
+                    </div>
+                    <div class="send">
+                        <p class="address">千業県成田市南三里塚78-7 AMB成田工ア力ーゴセソター UNIT B3F</p>
+                        <p class="name">SGHグローバル．ヅヤパソ (CAFE24樣分)</p>
+                    </div>
+                </div>
+                <div class="divide2">
+                    <div class="price">
+                        代引金額 (消費稅含)<br />
+                        ￥1,548
+                    </div>
+                    <p class="notUse data">****************************************</p>
+                    <ul class="notUse">
+                        <li>****&nbsp&nbsp*********</li>
+                        <li>****&nbsp&nbsp*********</li>
+                        <li>****&nbsp&nbsp*********</li>
+                    </ul>
+                    <div class="companyInfo">
+                        <strong class="store">集荷店  成  南</strong>
+                        <p>TEL 03-3799-8666</p>
+                        <p>FAX 03-3799-8650</p>
+                    </div>
+                    <div class="companyInfo">
+                        <strong class="store">集荷店  成  南</strong>
+                        <p>TEL 03-3799-8666</p>
+                        <p>FAX 03-3799-8650</p>
+                    </div>
+                </div>
+                <div class="divide3 notUse">
+                    <ul>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                    </ul>
+                    <ul>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                        <li>*********</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="invoice">
+                <div class="topArea">
+                    <span class="notUse">************</span>
+                    <p class="title">業入金票</p>
+                    <ul class="deliveryInfo">
+                        <li>集荷店 成 南 TEL 03-3799-8666</li>
+                        <li>發送日</li>
+                    </ul>
+                    <span class="count">1</span>
+                </div>
+                <p class="label">代引</p>
+                <div class="recipient">
+                    <span class="zipcode">〒211-0053</span>
+                    <span class="tel">TEL 080-9459-8282</span>
+                    <p class="address">神奈川県 川崎市中原区 上小田中6-11-5ディアレイシャス武蔵中原603号室 JPN 高橋 由紀</p>
+                    <p class="name">ヒカラ イテヒョク</p>
+                </div>
+                <div class="barcode">
+                    <img src="../../img/img_barcode_invoice.gif" alt="" width="170" height="38" />
+                    <span class="code">830445</span>
+                    <span class="code">565905167295</span>
+                    <span class="code">110397762104</span>
+                    <ul class="notUse">
+                        <li>*********</li>
+                        <li>*********</li>
+                    </ul>
+                </div>
+                <div class="send">
+                    <ul class="info">
+                        <li>TEL 0476-40-5456</li>
+                        <li>ご衣頼主コード:110397762104</li>
+                        <li class="time">時間帶:16時 ~ 18時</li>
+                    </ul>
+                    <p class="address">千業県成田市南三里塚78-7 AMB成田工ア力ーゴセソター UNIT B3F</p>
+                    <p class="name">SGHグローバル．ヅヤパソ (CAFE24樣分)</p>
+                </div>
+                <div class="price">
+                    <strong>代引金額</strong>
+                    ￥1,548
+                </div>
+                <p class="land">陸便</p>
+            </div>
+
+            <div class="freight">
+                <p class="companyTel">集荷店 成 南 <span>TEL 03-3799-8666</span></p>
+                <div class="codeInfo">
+                    <div class="codeNo">
+                        <img src="../../img/img_barcode_invoice.gif" alt="" width="110" height="38" />
+                        <strong class="number">0121<span>823</span></strong>
+                    </div>
+                    <ul class="customerNo">
+                        <li>お客樣管理No : CAFE3126712016039</li>
+                        <li>お問い合わせNo : 5659-0516-7295</li>
+                    </ul>
+                    <ul class="deliveryInfo">
+                        <li>發送日 :</li>
+                        <li>便種 : 陸便</li>
+                        <li class="time">時間帶 : 16時 ~ 18時</li>
+                    </ul>
+                    <img src="../../img/img_barcode_invoice.gif" alt="" width="170" height="38" />
+                    <ul class="weight">
+                        <li>
+                            <img src="../../img/img_barcode_invoice.gif" alt="" width="57" height="19" />
+                            <p>2kg</p>
+                        </li>
+                        <li>
+                            <img src="../../img/img_barcode_invoice.gif" alt="" width="57" height="19" />
+                            <p>5kg</p>
+                        </li>
+                        <li>
+                            <img src="../../img/img_barcode_invoice.gif" alt="" width="57" height="19" />
+                            <p>10kg</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recipient">
+                    <span class="zipcode">〒211-0053</span>
+                    <span class="tel">TEL 080-9459-8282</span>
+                    <p class="address">神奈川県 川崎市中原区 上小田中6-11-5ディアレイシャス武蔵中原603号室 JPN 高橋 由紀</p>
+                    <p class="name">ヒカラ イテヒョク</p>
+                    <span class="count">個數 : 1</span>
+                </div>
+                <div class="send">
+                    <ul class="tel">
+                        <li>TEL 0476-40-5456</li>
+                        <li>ご衣頼主コード:110397762104</li>
+                    </ul>
+                    <p class="address">千業県成田市南三里塚78-7 AMB成田工ア力ーゴセソター UNIT B3F</p>
+                    <p class="name">SGHグローバル．ヅヤパソ (CAFE24樣分)</p>
+                </div>
+                <div class="barcode">
+                    <img src="../../img/img_barcode_invoice.gif" alt="" width="170" height="26" />
+                    <p class="code">* CAFE3126712015702</p>
+                </div>
+                <div class="timeLabel">
+                    <strong class="title">時間帶 サーヒス</strong>
+                    <ul class="data">
+                        <li>16時~  18時</li>
+                        <li>   月    日</li>
+                        <li><img src="../../img/img_barcode_invoice.gif" alt="" width="65" height="20" /></li>
+                    </ul>
+                </div>
+                <div class="eCollect">
+                    <strong class="title">e - コレクト</strong>
+                    <p class="price">現&nbsp&nbsp&nbsp金</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

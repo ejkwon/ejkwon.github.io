@@ -1,0 +1,136 @@
+<?php require_once('../../include/header.html'); ?>
+<div class="headingArea">
+    <div class="mTitle">
+        <h1>창고</h1>
+    </div>
+    <div class="mBreadcrumb">
+        <ol>
+            <li class="home"><a href="#none">홈</a></li>
+            <li><a href="#none">창고운영</a></li>
+            <li class="now" title="현재 페이지">창고</li>
+        </ol>
+    </div>
+</div>
+
+<div class="section">
+    <div class="mTitle">
+        <h2>창고 목록</h2>
+    </div>
+    <div class="mState">
+        <div class="gLeft">
+            <p class="total">[총 <strong>1</strong>건]</p>
+        </div>
+        <div class="gRight">
+            <select class="fSelect">
+                <option>10개씩보기</option>
+                <option>20개씩보기</option>
+                <option>30개씩보기</option>
+                <option>50개씩보기</option>
+                <option>100개씩보기</option>
+            </select>
+        </div>
+    </div>
+    <div class="mCtrl typeHeader">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mBoard">
+        <table border="1" summary="">
+        <caption>창고 목록</caption>
+        <colgroup>
+            <col style="width:50px;" />
+            <col style="width:130px" />
+            <col style="width:auto;" />
+            <col style="width:80px;" />
+            <col style="width:100px;" />
+            <col style="width:80px;" />
+            <col style="width:85px;" />
+            <col style="width:70px;" />
+            <col style="width:70px;" />
+            <col class="time" />
+            <col style="width:65px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">창고명</th>
+                <th scope="col">창고주소</th>
+                <th scope="col">담당자명</th>
+                <th scope="col">연락처</th>
+                <th scope="col">위치코드</th>
+                <th scope="col">이용상점 수</th>
+                <th scope="col">품목 수</th>
+                <th scope="col">현재재고</th>
+                <th scope="col"><strong class="array descend">등록일시<button type="button">내림차순 정렬</button></strong></th>
+                <!--<th scope="col"><strong class="array ascend">등록일시<button type="button">오름차순 정렬</button></strong></th>-->
+                <th scope="col">메모</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            <tr>
+                <td>2</td>
+                <td class="left"><a href="#none" class="txtLink">디허브김포</a></td>
+                <td class="left">경기도 김포시 사우동 263-1 시청 건너 물류창고</td>
+                <td>홍카페</td>
+                <td>010-4654-4565 <br />02-1234-5678</td>
+                <td class="right">150</td>
+                <td class="right"><a href="#useviewLayer" class="txtLink eModal">3</a></td>
+                <td class="right">175</td>
+                <td class="right">2,539</td>
+                <td>2014-03-04 14:42:58</td>
+                <td><a href="#none" class="btnNormal" target="_blank" title="새창 열림"><span>메모<em class="icoLink"></em></span></a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="left"><a href="#none" class="txtLink">디허브김포</a></td>
+                <td class="left">경기도 김포시 사우동 263-1 시청 건너 물류창고</td>
+                <td>홍카페</td>
+                <td>010-4654-4565 <br />02-1234-5678</td>
+                <td class="right">150</td>
+                <td class="right"><a href="#useviewLayer" class="txtLink eModal">3</a></td>
+                <td class="right">175</td>
+                <td class="right">2,539</td>
+                <td>2014-03-04 14:42:58</td>
+                <td><a href="#none" class="txtLink">메모(<span class="txtWarn">1</span>)</a></td>
+            </tr>
+        </tbody>
+        <tbody class="empty">
+            <tr>
+                <td colspan="11">검색결과가 없습니다.</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="mCtrl typeFooter">
+        <div class="gLeft">
+            <span class="txtLess">선택한 항목을</span>
+            <a href="#none" class="btnNormal"><span><em class="icoDel"></em> 삭제</span></a>
+        </div>
+        <div class="gRight">
+            <a href="#none" class="btnCtrl"><span>등록</span></a>
+        </div>
+    </div>
+    <div class="mPaginate">
+        <a href="#none" class="prev">이전 10페이지</a>
+        <ol>
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><strong title="현재페이지">3</strong></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+        </ol>
+        <a href="#none" class="next">다음 10페이지</a>
+    </div>
+</div>
+
+<?php require_once('../../include/footer.html'); ?>

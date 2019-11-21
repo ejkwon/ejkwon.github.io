@@ -1,0 +1,189 @@
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/header.html'); ?>
+
+        <!-- [ contents ] -->
+        <section id="contents">
+            <ol class="mBreadcrumb">
+                <li>Home</li>
+                <li class="now" title="현재 페이지">레시피 채널관리</li>
+            </ol>
+            <div class="mTitle">
+                <h1>레시피 채널관리</h1>
+            </div>
+
+            <section class="section">
+                <div class="mState typeAppManager">
+                    <div class="gLeft">
+                        <span class="heading">서비스상태</span>
+                        <div class="mTooltip gLarge">
+                            <button type="button" class="icon eTip">도움말</button>
+                            <div class="tooltip">
+                                <div class="content">
+                                    <strong class="titleEm">서비스 상태 도움말</strong>
+                                    <ul class="mList">
+                                        <li>레시피 서비스 상에 채널이 등록되었는지, 사용자가 이용할 수 있는지 구분합니다.</li>
+                                        <li>'서비스중'인 채널이라도 검색 공개여부 설정에서 이용 권한을 부여한 사용자만 <br>해당 채널을 이용할 수 있는 점 유의하시기 바랍니다.</li>
+                                    </ul>
+                                    <div class="mBoard gDouble">
+                                        <table border="1">
+                                            <caption>서비스 상태 도움말</caption>
+                                            <colgroup>
+                                                <col style="width:80px;">
+                                                <col style="width:auto;">
+                                                <col style="width:110px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">상태값</th>
+                                                    <th scope="col">설명</th>
+                                                    <th scope="col">서비스 버전</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="center">
+                                                <tr>
+                                                    <td>서비스중</td>
+                                                    <td>레시피 서비스에 채널 등록됨, 사용자에게 제공됨</td>
+                                                    <td>배포 시 수정됨</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>준비중</td>
+                                                    <td>채널 등록 전, 사용자에게 제공되지 않음</td>
+                                                    <td>없음</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <button type="button" class="close eClose">닫기</button>
+                                <span class="edge"></span>
+                            </div>
+                        </div>
+                        <select class="fSelect" style="width:190px;">
+                            <option>전체보기</option>
+                            <option>서비스중</option>
+                            <option>준비중</option>
+                        </select>
+                        <span class="heading">배포상태</span>
+                        <div class="mTooltip gLarge">
+                            <button type="button" class="icon eTip">도움말</button>
+                            <div class="tooltip">
+                                <div class="content">
+                                    <strong class="titleEm">배포 상태 도움말</strong>
+                                    <ul class="mList">
+                                        <li>레시피 서비스 상에 채널을 제공하기 위해 또는 제공중인 채널에 변경사항이 있을 경우에는 배포 요청을 해야하며, 처리 결과는 상태 값으로 알 수 있습니다.</li>
+                                        <li>채널 수정 화면에서 [배포] 버튼을 클릭하면 카페24에 해당 채널의 배포 승인 요청이 접수되고, '심사대기' 상태로 표시됩니다.</li>
+                                        <li>배포요청 후 심사중인 단계까지는 채널 정보를 수정할 수 없습니다.</li>
+                                        <li>카페24 운영자는 '심사중' 상태로 변경하기 직전인, '심사대기' 상태로 요청된 내용까지 반영된 가장 최신 정보를 기준으로 테스트를 진행하고 배포 상태를 변경합니다.</li>
+                                        <li>레시피 서비스 서버에 새 버전으로 '배포완료'되기 전까지, 변경한 내용은 레시피 서비스상에 반영되지 않습니다.</li>
+                                        <li>배포완료 이후 채널을 수정하지 않으면 가장 최근 배포 버전에 대한 상태값이 표시되고, 수정하면 다시 배포를 요청하기 전까지는 상태값이 표시되지 않습니다.</li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="close eClose">닫기</button>
+                                <span class="edge"></span>
+                            </div>
+                        </div>
+                        <select class="fSelect" style="width:190px;">
+                            <option>전체보기</option>
+                            <option>심사대기</option>
+                            <option>심사중</option>
+                            <option>배포보류</option>
+                            <option>배포완료</option>
+                        </select>
+                    </div>
+                    <div class="gRight">
+                        <label><input type="checkbox" class="fChk"> 검색 공개 채널만 보기</label>
+                    </div>
+                </div>
+                <div class="mAppManager">
+                    <ul class="list">
+                        <li>
+                            <a href="#none" class="item btnAddApps">
+                                <span class="addApps"><span class="icoPlus"></span>채널 추가</span>
+                            </a>
+                        </li>
+                        <!-- 참고: 숨김처리 필요한 li 태그들에 class="hide" 추가/삭제 -->
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. 2.0</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage1.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus inService">서비스중</span>
+                                <span class="icoLabel underReview">심사중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. 2.0</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage2.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus inService">서비스중</span>
+                                <span class="icoLabel distributeHold">배포보류</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. -</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage3.png" class="thumb" alt="">
+                                <p class="name">페이스북 페이지플러그인 페이스북 페이지플러그인</p>
+                                <span class="icoStatus preparing">준비중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. 2.0</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage4.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus inService"><span class="icoLock">비공개</span> 서비스중</span>
+                                <span class="icoLabel underReview">심사중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. -</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage5.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus preparing">준비중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. -</p>
+                                <img src="//img.echosting.cafe24.com/api/dev/admin/thumb_120x120.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus preparing">준비중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. 2.0</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage6.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus inService">서비스중</span>
+                                <span class="icoLabel distributeComplete">배포완료</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. -</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage7.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus preparing">준비중</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="item">
+                                <p class="version">ver. 2.0</p>
+                                <img src="../../../img/dev/admin/@img_thumb_appimage8.png" class="thumb" alt="">
+                                <p class="name">인스타그램 자동 퍼오기</p>
+                                <span class="icoStatus inService">서비스중</span>
+                                <span class="icoLabel standbyReview">심사대기</span>
+                            </a>
+                        </li><!-- //참고 -->
+                    </ul>
+                </div>
+            </section>
+
+            <?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/quick_recipe.html'); ?>
+        </section><!-- //[ contents ] -->
+
+<?php include( $_SERVER['DOCUMENT_ROOT'].'/pj/API/dev/admin/include/footer.html'); ?>
+
