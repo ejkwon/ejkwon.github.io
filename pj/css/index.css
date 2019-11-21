@@ -17,8 +17,8 @@ i[class*="ico"]:before { content:''; position:absolute; box-sizing:border-box; }
 ::-webkit-scrollbar-button { display:none; }
 ::-webkit-scrollbar-thumb { border:0; border-radius:10px; background:#aeb0b4; }
 #header { z-index:20; position:fixed; top:0; left:0; right:0; box-sizing:border-box; border-bottom:1px solid transparent; min-width:320px; background:#fff; }
-#header .inner { display:flex; display:-webkit-flex; display:-moz-flex; display:-ms-flex; 
-justify-content:space-between; -webkit-justify-content:space-between; -moz-justify-content:space-between; -ms-justify-content:space-between; 
+#header .inner { display:flex; display:-webkit-flex; display:-moz-flex; display:-ms-flex;
+justify-content:space-between; -webkit-justify-content:space-between; -moz-justify-content:space-between; -ms-justify-content:space-between;
 align-items:center; -webkit-align-items:center; -mos-align-items:center; -ms-align-items:center; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
 #header.fixed { border-bottom-color:#d9d9d9; }
 #header.fixed .inner { padding:7px 20px 10px; }
@@ -58,10 +58,10 @@ align-items:center; -webkit-align-items:center; -mos-align-items:center; -ms-ali
 .section { position:relative; padding:100px 34px; text-align:center; }
 .section .heading { position:relative; margin:0 0 30px; }
 .bgSection { z-index:-1; position:absolute; top:0; left:0; right:0; bottom:0; }
-#about .bgSection { opacity:0.6; background:url("/images/index/bg_flower2.jpg") no-repeat 60% 0; background-size:cover; }
+#about .bgSection { opacity:0.6; background:url("../img/bg_flower2.jpg") no-repeat 60% 0; background-size:cover; }
 #timeline { background-image:linear-gradient(#f4f7fb, #fbf0f6); }
-#portfolio .bgSection { opacity:0.6; background:url("/images/index/bg_flower3.jpg") no-repeat 50% 90%; background-size:cover; }
-#contact .bgSection { opacity:0.6; background:url("/images/index/bg_road3.jpg") no-repeat 50% 100%; background-size:cover; }
+#portfolio .bgSection { opacity:0.6; background:url("../img/bg_flower3.jpg") no-repeat 50% 90%; background-size:cover; }
+#contact .bgSection { opacity:0.6; background:url("../img/bg_road3.jpg") no-repeat 50% 100%; background-size:cover; }
 .intro { position:relative; word-break:keep-all; word-wrap:break-word; }
 .myname { display:block; margin:0 0 15px; font-size:28px; color:#c44242; }
 .about { position:relative; margin:40px 0 10px; }
@@ -102,30 +102,30 @@ align-items:center; -webkit-align-items:center; -moz-align-items:center; -ms-ali
  */
 .portfolio .thumbBox { height:260px; background-repeat:no-repeat; background-position:center top; background-size:100% auto; transform:scale(0.9); transition:background-position 1.5s, transform .2s; }
 .portfolio .item:hover .thumbBox { background-position:center bottom; transform:scale(1.0); transition-delay:.2s; }
-  .portfolio .thumbBox.item1 { background-image:url("/images/index/img_item1.png"); }
-  .portfolio .thumbBox.item2 { background-image:url("/images/index/img_item2.png"); }
-  .portfolio .thumbBox.item3 { background-image:url("/images/index/img_item3.png"); }
-  .portfolio .thumbBox.item4 { background-image:url("/images/index/img_item4.png"); }
-  .portfolio .thumbBox.item5 { background-image:url("/images/index/img_item5.png"); }
-  .portfolio .thumbBox.item6 { background-image:url("/images/index/img_item6.png"); }
-  .portfolio .thumbBox.item7 { background-image:url("/images/index/img_item7.png"); }
-  .portfolio .thumbBox.item8 { background-image:url("/images/index/img_item8.png"); }
-  .portfolio .thumbBox.item9 { background-image:url("/images/index/img_item9.png"); }
-  .portfolio .thumbBox.item10 { background-image:url("/images/index/img_item10.png"); }
-  .portfolio .thumbBox.item11 { background-image:url("/images/index/img_item11.png"); }
-  .portfolio .thumbBox.item12 { background-image:url("/images/index/img_item12.png"); }
-  .portfolio .thumbBox.item13 { background-image:url("/images/index/img_item13.png"); }
-  .portfolio .thumbBox.item14 { background-image:url("/images/index/img_item14.png"); }
-  .portfolio .thumbBox.item15 { background-image:url("/images/index/img_item15.png"); }
-  .portfolio .thumbBox.item16 { background-image:url("/images/index/img_item16.png"); }
-  .portfolio .thumbBox.item17 { background-image:url("/images/index/img_item17.png"); }
-  .portfolio .thumbBox.item18 { background-image:url("/images/index/img_item18.png"); }
-  .portfolio .thumbBox.item19 { background-image:url("/images/index/img_item19.png"); }
-  .portfolio .thumbBox.item20 { background-image:url("/images/index/img_item20.png"); }
-  .portfolio .thumbBox.item21 { background-image:url("/images/index/img_item21.png"); }
-  .portfolio .thumbBox.item22 { background-image:url("/images/index/img_item22.png"); }
-  .portfolio .thumbBox.item23 { background-image:url("/images/index/img_item23.png"); }
-  .portfolio .thumbBox.item24 { background-image:url("/images/index/img_item24.png"); }
+  .portfolio .thumbBox.item1 { background-image:url("../img/img_item1.png"); }
+  .portfolio .thumbBox.item2 { background-image:url("../img/img_item2.png"); }
+  .portfolio .thumbBox.item3 { background-image:url("../img/img_item3.png"); }
+  .portfolio .thumbBox.item4 { background-image:url("../img/img_item4.png"); }
+  .portfolio .thumbBox.item5 { background-image:url("../img/img_item5.png"); }
+  .portfolio .thumbBox.item6 { background-image:url("../img/img_item6.png"); }
+  .portfolio .thumbBox.item7 { background-image:url("../img/img_item7.png"); }
+  .portfolio .thumbBox.item8 { background-image:url("../img/img_item8.png"); }
+  .portfolio .thumbBox.item9 { background-image:url("../img/img_item9.png"); }
+  .portfolio .thumbBox.item10 { background-image:url("../img/img_item10.png"); }
+  .portfolio .thumbBox.item11 { background-image:url("../img/img_item11.png"); }
+  .portfolio .thumbBox.item12 { background-image:url("../img/img_item12.png"); }
+  .portfolio .thumbBox.item13 { background-image:url("../img/img_item13.png"); }
+  .portfolio .thumbBox.item14 { background-image:url("../img/img_item14.png"); }
+  .portfolio .thumbBox.item15 { background-image:url("../img/img_item15.png"); }
+  .portfolio .thumbBox.item16 { background-image:url("../img/img_item16.png"); }
+  .portfolio .thumbBox.item17 { background-image:url("../img/img_item17.png"); }
+  .portfolio .thumbBox.item18 { background-image:url("../img/img_item18.png"); }
+  .portfolio .thumbBox.item19 { background-image:url("../img/img_item19.png"); }
+  .portfolio .thumbBox.item20 { background-image:url("../img/img_item20.png"); }
+  .portfolio .thumbBox.item21 { background-image:url("../img/img_item21.png"); }
+  .portfolio .thumbBox.item22 { background-image:url("../img/img_item22.png"); }
+  .portfolio .thumbBox.item23 { background-image:url("../img/img_item23.png"); }
+  .portfolio .thumbBox.item24 { background-image:url("../img/img_item24.png"); }
 
 .portfolio .title { padding:30px 15px; font-size:24px; line-height:1.4; }
 .portfolio .info { position:relative; padding:0 15px 15px; text-align:left; color:#686b6d; word-break:keep-all; word-wrap:break-word; }
@@ -148,7 +148,7 @@ align-items:center; -webkit-align-items:center; -moz-align-items:center; -ms-ali
 .map { position:relative; }
 .panel { padding:18px 20px; position:absolute; top:30%; left:55%; width:260px; box-sizing:border-box; box-shadow:0 1px 20px #d9d9d9; border-radius:2px; background:#fff; -webkit-transition:opacity .3s ease-out; transition:opacity .3s ease-out; }
 .kakaoChat { color:#482d2d; }
-.kakaoChat:after { display:inline-block; content:""; width:20px; height:20px; margin:-2px 0 0 7px; vertical-align:middle; background:url("/images/index/kakao_chat.png"); background-size:20px 20px; }
+.kakaoChat:after { display:inline-block; content:""; width:20px; height:20px; margin:-2px 0 0 7px; vertical-align:middle; background:url("../img/kakao_chat.png"); background-size:20px 20px; }
 
 #footer { padding:20px; color:#96979c; font-size:12px; background:#3a4254; }
 #wrap .btnTop { z-index:10; position:fixed; display:block; bottom:70px; right:20px; width:60px; height:60px; border:1px solid #d9d9d9; box-sizing:border-box; font-size:0; line-height:0; background:#fff; }
