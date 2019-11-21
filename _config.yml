@@ -4,9 +4,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "ejkwon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author
-author-name:    Clayton Hanson
+author-name:    Kwon EonJeong
 author-image:   1.jpg
-author-job:     Web Developer
+author-job:     UI Developer
 author-email:   your-email@domain.com # Add your email for contant form.
 author-twitter: artemsheludko_ # Add your twitter account
 about-author:   I am a web developer focusing on front-end development. Always hungry to keep learning.
@@ -16,7 +16,7 @@ social-twitter:   artemsheludko_
 social-facebook:
 social-github:    artemsheludko
 social-pinterest: artemsheludko
-social-instagram: artemsheludko_
+social-instagram: kkk.ej
 social-youtube:
 social-vk:   
 social-linkedin:
