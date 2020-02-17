@@ -1,0 +1,23 @@
+/*
+ * Nanum Myeongjo (Korean) http://m-img.cafe24.com/images/font
+ */
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//m-img.cafe24.com/images/font/NanumMyeongjo-Regular.eot);
+  src: url(//m-img.cafe24.com/images/font/NanumMyeongjo-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//m-img.cafe24.com/images/font/NanumMyeongjo-Regular.woff2) format('woff2'),
+       url(//m-img.cafe24.com/images/font/NanumMyeongjo-Regular.woff) format('woff'),
+       url(//m-img.cafe24.com/images/font/NanumMyeongjo-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 600;
+  src: url(//m-img.cafe24.com/images/font/NanumMyeongjo-Bold.eot);
+  src: url(//m-img.cafe24.com/images/font/NanumMyeongjo-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//m-img.cafe24.com/images/font/NanumMyeongjo-Bold.woff2) format('woff2'),
+       url(//m-img.cafe24.com/images/font/NanumMyeongjo-Bold.woff) format('woff'),
+       url(//m-img.cafe24.com/images/font/NanumMyeongjo-Bold.ttf) format('truetype');
+}
