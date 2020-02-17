@@ -1,1 +1,0 @@
-<?php header('Location: ./include/layout.php?MODULE=main'); ?>
