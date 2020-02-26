@@ -20,8 +20,9 @@
 	<script type="text/javascript">
 	function openLayer(){
 		$('.layerPopup').show();
-		//$('.layerPopup .btnClose.type1').attr('tabindex','0').focus();
 		$('#link').attr('tabindex','-1');
+		$('.layerPopup').attr('tabindex','0').focus();
+		//$('.layerPopup .btnClose.type1').attr('tabindex','0').focus();
 	}
 	$(document).ready(function(){
 		$('.btnClose').click(function(){
