@@ -18,15 +18,10 @@
 	#iframe:focus{outline:1px solid red;}
 	</style>
 	<script type="text/javascript">
-
-	function IFocus(){
-		$('#iframe')[0].focus();
-	}
 	function openLayer(){
 		$('.layerPopup').show();
 		//$('.layerPopup .btnClose.type1').attr('tabindex','0').focus();
-		//window.setInterval(IFocus, 300);
-		$('#link').attr('tabindex','-1');
+		//$('#link').attr('tabindex','-1');
 	}
 	$(document).ready(function(){
 		$('.btnClose').click(function(){
