@@ -19,9 +19,8 @@
 	</style>
 	<script type="text/javascript">
 	function openLayer(){
-		$('.layerPopup').show();
 		$('#link').attr('tabindex','-1');
-		$('.layerPopup').attr('tabindex','0').focus();
+		$('.layerPopup').show().attr('tabindex','0').focus();
 		//$('.layerPopup .btnClose.type1').attr('tabindex','0').focus();
 	}
 	$(document).ready(function(){
