@@ -8,29 +8,30 @@
 	<script type="text/javascript" src="pj/js/jquery-1.10.2.min.js"></script>
 	<title>레이어팝업</title>
 	<style>
-	.layerWrap{display:none;}
+	.layerWrap{visibility:visible;}
+	.layerWrap[hidden]{visibility:hidden;display:block;}
 	.layerPopup{z-index:100;position:absolute;top:100px;left:20px;right:20px;border:1px solid #d7d7d7;box-sizing:border-box;background:#fff;}
 	.layerPopup .title{padding:10px;font-size:16px;}
-	.layerPopup .btnClose.type1{position:absolute;top:20px;right:20px;display:inline-block;}
+	.layerPopup #btnCloseFirst{position:absolute;top:20px;right:20px;display:inline-block;}
 	.layerPopup .content{margin:20px;padding:10px;color:#333;font-size:14px;border:1px solid #ccc;}
 	.layerPopup .btnArea{text-align:center;}
-	.layerPopup .btnClose.type2{display:inline-block;}
+	.layerPopup #btnClose{display:inline-block;}
 	.layerWrap .dimmed {z-index:99;position: absolute;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.6);}
 	#iframe{border:0;}
 	</style>
 	<script type="text/javascript">
 	function openLayer(){
-		$('.layerWrap').show();
-		$('.layerPopup .btnClose.type1').attr('tabindex','0').focus();
+		$('.layerWrap').attr('hidden',false);
+		$('.layerPopup #btnCloseFirst').attr('tabindex','0').focus();
 		$('#link').attr('tabindex','-1');
 	}
 	$(document).ready(function(){
 		$('.btnClose').click(function(){
-			$('.layerWrap').hide();
-			$('.layerPopup .btnClose.type1').removeAttr('tabindex');
+			$('.layerWrap').attr('hidden',true);
+			$('.layerPopup #btnCloseFirst').removeAttr('tabindex');
 			$('#link').attr('tabindex','0').focus();
 		});
-		$('.layerPopup .btnClose.type1, #link').focusout(function() {
+		$('.layerPopup #btnCloseFirst, #link').focusout(function() {
 		  $(this).removeAttr('tabindex');
 		});
 		//$('.btnArea .btnClose').keydown(function(event){
@@ -49,15 +50,15 @@
 <body>
 	<a href="#none" id="link" onclick="openLayer();">팝업열기</a>
 
-	<div class="layerWrap">
-		<div class="layerPopup">
-			<h1 class="title">제목</h1>
-			<a href="#none" class="btnClose type1">닫기</a>
+	<div class="layerWrap" hidden="hidden">
+		<div class="layerPopup" role="dialog" aria-modal="true" aria-labelledby="layerTitle">
+			<a href="#none" class="btnClose" id="btnCloseFirst">닫기</a>
+			<h1 class="title" id="layerTitle">제목</h1>
 			<div class="content">
 				<iframe id="iframe" src="https://nice.checkplus.co.kr/Common/agree.cb?m=agreeContent&gubun=MOBILE&no=L1" frameborder="1" width="100%" height="290"></iframe>
 			</div>
 			<div class="btnArea">
-				<a href="#none" class="btnClose type2">닫기</a>
+				<a href="#none" class="btnClose" id="btnClose">닫기</a>
 			</div>
 		</div>
 		<div class="dimmed"></div>
