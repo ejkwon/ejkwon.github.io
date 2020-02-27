@@ -30,7 +30,7 @@
 			$('.layerPopup .btnClose.type1').removeAttr('tabindex');
 			$('#link').attr('tabindex','0').focus();
 		});
-		$('.layerPopup .btnClose.type1').focusout(function() {
+		$('.layerPopup .btnClose.type1, #link').focusout(function() {
 		  $(this).removeAttr('tabindex');
 		});
 		//$('.btnArea .btnClose').keydown(function(event){
