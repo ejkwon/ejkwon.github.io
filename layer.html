@@ -31,9 +31,6 @@
 			$('.layerPopup #btnCloseFirst').removeAttr('tabindex');
 			$('#link').attr('tabindex','0').focus();
 		});
-		$('.layerPopup #btnCloseFirst, #link').focusout(function() {
-		  $(this).removeAttr('tabindex');
-		});
 		//$('.btnArea .btnClose').keydown(function(event){
 		//$('.btnArea .btnClose').bind("change keydown",function(event){
 		//document.addEventListener('keypress',function(event){
@@ -44,6 +41,27 @@
 // 				$('.btnClose.type1').attr('tabindex','0').focus();
 // 			}
 // 		};
+
+	});
+	$(document).on('keydown', function(e) {
+		var target = e.target;
+		var shiftPressed = e.shiftKey;
+		if (e.keyCode == 9) {
+			if ($(target).parents('[role=dialog]').length) {
+				var borderElem = shiftPressed ?
+				$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').first()
+				:
+				$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').last();
+				if ($(borderElem).length) {
+					if ($(target).is($(borderElem))) {
+						return false;
+					} else {
+						return true;
+					}
+				}
+			}
+		}
+		return true;
 	});
 	</script>
 </head>
