@@ -20,17 +20,63 @@
 	#iframe{border:0;}
 	</style>
 	<script type="text/javascript">
+	// 비활성 처리 함수 선언
+	function setInertness (dialog) {
+	  // non-presentaion elements 제외
+	  var ommits = ["script", "meta", "link", "style", "base"];
+	  for(var i = -1, node; node = dialog.parentNode.children[++i];){
+	    if(node == dialog || ommits.indexOf(node.tagName.toLowerCase()) > -1)
+	      continue;
+	    //  대화상자 외 요소들에 `aria-hidden=true`, `inert` 속성 설정
+	    node.setAttribute("aria-hidden", "true");
+	    node.setAttribute("inert", "");
+	  }
+	}
+	// 비활성화 처리 해제 함수 선언
+	function unsetInertness () {
+	  // 비활성 처리시 설정했던 inert 속성으로 요소 가져오기
+	  var nodes = document.querySelectorAll('[inert]');
+	  for(var i = -1, node = null; node = nodes[++i];){
+	    // `aria-hidden="true"`, `inert` 속성 제거
+	    node.removeAttribute('aria-hidden');
+	    node.removeAttribute('inert');
+	  }
+	}
 	function openLayer(){
+		var elem = document.querySelector('.layerWrap');
 		$('.layerWrap').attr('hidden',false);
+		setInertness(elem);
 		$('.layerPopup #btnCloseFirst').attr('tabindex','0').focus();
 		$('#link').attr('tabindex','-1');
 	}
 	$(document).ready(function(){
 		$('.btnClose').click(function(){
 			$('.layerWrap').attr('hidden',true);
+			unsetInertness();
 			$('.layerPopup #btnCloseFirst').removeAttr('tabindex');
 			$('#link').attr('tabindex','0').focus();
 		});
+		$(document).on('keydown', function(e) {
+			var target = e.target;
+			var shiftPressed = e.shiftKey;
+			if (e.keyCode == 9) {
+				if ($(target).parents('[role=dialog]').length) {
+					var borderElem = shiftPressed ?
+					$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').first()
+					:
+					$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').last();
+					if ($(borderElem).length) {
+						if ($(target).is($(borderElem))) {
+							return false;
+						} else {
+							return true;
+						}
+					}
+				}
+			}
+			return true;
+		});
+	});
 		//$('.btnArea .btnClose').keydown(function(event){
 		//$('.btnArea .btnClose').bind("change keydown",function(event){
 		//document.addEventListener('keypress',function(event){
@@ -41,64 +87,45 @@
 // 				$('.btnClose.type1').attr('tabindex','0').focus();
 // 			}
 // 		};
-// $(document).on('keydown', function(e) {
-// 	var target = e.target;
-// 	var shiftPressed = e.shiftKey;
-// 	if (e.keyCode == 9) {
-// 		if ($(target).parents('[role=dialog]').length) {
-// 			var borderElem = shiftPressed ?
-// 			$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').first()
-// 			:
-// 			$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').last();
-// 			if ($(borderElem).length) {
-// 				if ($(target).is($(borderElem))) {
-// 					return false;
-// 				} else {
-// 					return true;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	return true;
-// });
-		$.fn.modalTabbing = function() {
 
-        var tabbing = function(jqSelector) {
-            var inputs = $(jqSelector).find('select, input, textarea, button, a[href]').filter(':visible').not(':disabled');
+		// $.fn.modalTabbing = function() {
+		//
+    //     var tabbing = function(jqSelector) {
+    //         var inputs = $(jqSelector).find('select, input, textarea, button, a[href]').filter(':visible').not(':disabled');
+		//
+    //         //Focus to first element in the container.
+    //         inputs.first().focus();
+		//
+    //         $(jqSelector).on('keydown', function(e) {
+    //             if (e.which === 9) {
+		//
+    //                 var inputs = $(jqSelector).find('select, input, textarea, button, a[href]').filter(':visible').not(':disabled');
+		//
+    //                 /*redirect last tab to first input*/
+    //                 if (!e.shiftKey) {
+    //                     if (inputs[inputs.length - 1] === e.target) {
+    //                         e.preventDefault();
+    //                         inputs.first().focus();
+    //                     }
+    //                 }
+    //                 /*redirect first shift+tab to last input*/
+    //                 else {
+    //                     if (inputs[0] === e.target) {
+    //                         e.preventDefault();
+    //                         inputs.last().focus();
+    //                     }
+    //                 }
+    //             }
+    //         });
+    //     };
+		//
+    //     return this.each(function() {
+    //         tabbing(this);
+    //     });
+		//
+    // };
+		// $("#layerWrap").modalTabbing();
 
-            //Focus to first element in the container.
-            inputs.first().focus();
-
-            $(jqSelector).on('keydown', function(e) {
-                if (e.which === 9) {
-
-                    var inputs = $(jqSelector).find('select, input, textarea, button, a[href]').filter(':visible').not(':disabled');
-
-                    /*redirect last tab to first input*/
-                    if (!e.shiftKey) {
-                        if (inputs[inputs.length - 1] === e.target) {
-                            e.preventDefault();
-                            inputs.first().focus();
-                        }
-                    }
-                    /*redirect first shift+tab to last input*/
-                    else {
-                        if (inputs[0] === e.target) {
-                            e.preventDefault();
-                            inputs.last().focus();
-                        }
-                    }
-                }
-            });
-        };
-
-        return this.each(function() {
-            tabbing(this);
-        });
-
-    };
-		$("#layerWrap").modalTabbing(); 
-	});
 	</script>
 </head>
 <body>
