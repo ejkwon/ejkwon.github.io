@@ -6,49 +6,61 @@
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 	<meta http-equiv="Pragma" content="no-cache" />
 	<script type="text/javascript" src="pj/js/jquery-1.10.2.min.js"></script>
-	<title>레이어팝업1</title>
+	<title>레이어팝업</title>
 	<style>
-	.layerPopup{display:none;z-index:100;position:absolute;top:100px;left:20px;right:20px;border:1px solid #d7d7d7;box-sizing:border-box;background:#fff;}
+	.layerWrap{display:none;}
+	.layerPopup{z-index:100;position:absolute;top:100px;left:20px;right:20px;border:1px solid #d7d7d7;box-sizing:border-box;background:#fff;}
 	.layerPopup .title{padding:10px;font-size:16px;}
 	.layerPopup .btnClose.type1{position:absolute;top:20px;right:20px;display:inline-block;}
 	.layerPopup .content{margin:20px;padding:10px;color:#333;font-size:14px;border:1px solid #ccc;}
 	.layerPopup .btnArea{text-align:center;}
 	.layerPopup .btnClose.type2{display:inline-block;}
+	.layerWrap .dimmed {z-index:99;position: absolute;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.6);}
 	#iframe{border:0;}
-	#iframe:focus{outline:1px solid red;border:1px solid blue;box-shadow:0 0 8px 0px rgba(0,0,0,0.5)}
 	</style>
 	<script type="text/javascript">
 	function openLayer(){
+		$('.layerWrap').show();
+		$('.layerPopup .btnClose.type1').attr('tabindex','0').focus();
 		$('#link').attr('tabindex','-1');
-		$('.layerPopup').show().attr('tabindex','0').focus();
-		//$('.layerPopup .btnClose.type1').attr('tabindex','0').focus();
 	}
 	$(document).ready(function(){
 		$('.btnClose').click(function(){
-			$('.layerPopup').hide().removeAttr('tabindex');
+			$('.layerWrap').hide();
+			$('.layerPopup .btnClose.type1').removeAttr('tabindex');
 			$('#link').attr('tabindex','0').focus();
 		});
-		$('.btnArea .btnClose').keydown(function(event){
-			if(event.keyCode == '9' && !event.shiftKey){
-				event.preventDefault();
-				$('.btnClose.type1').attr('tabindex','0').focus();
-			}
+		$('.layerPopup .btnClose.type1').focusout(function() {
+		  $(this).removeAttr('tabindex');
 		});
+		//$('.btnArea .btnClose').keydown(function(event){
+		//$('.btnArea .btnClose').bind("change keydown",function(event){
+		//document.addEventListener('keypress',function(event){
+// 		$('.btnArea .btnClose').onkeydown = function(){
+// alert('ok');
+// 			if(event.keyCode == '9' && !event.shiftKey){
+// 				event.preventDefault();
+// 				$('.btnClose.type1').attr('tabindex','0').focus();
+// 			}
+// 		};
 	});
 	</script>
 </head>
 <body>
 	<a href="#none" id="link" onclick="openLayer();">팝업열기</a>
 
-	<div class="layerPopup">
-		<h1 class="title">제목</h1>
-		<a href="#none" class="btnClose type1">닫기</a>
-		<div class="content">
-			<iframe id="iframe" src="https://nice.checkplus.co.kr/Common/agree.cb?m=agreeContent&gubun=MOBILE&no=L1" frameborder="1" width="100%" height="290" title="약관내용"></iframe>
+	<div class="layerWrap">
+		<div class="layerPopup">
+			<h1 class="title">제목</h1>
+			<a href="#none" class="btnClose type1">닫기</a>
+			<div class="content">
+				<iframe id="iframe" src="https://nice.checkplus.co.kr/Common/agree.cb?m=agreeContent&gubun=MOBILE&no=L1" frameborder="1" width="100%" height="290"></iframe>
+			</div>
+			<div class="btnArea">
+				<a href="#none" class="btnClose type2">닫기</a>
+			</div>
 		</div>
-		<div class="btnArea">
-			<a href="#none" class="btnClose type2">닫기</a>
-		</div>
+		<div class="dimmed"></div>
 	</div>
 	<br />
 	<br />
@@ -59,9 +71,6 @@
 	<br />
 	<br />
 	<a href="#none">링크3</a>
-	<br />
-	<br />
-	<a href="#none">링크4</a>
 	<br />
 	<br />
 </body>
