@@ -41,34 +41,70 @@
 // 				$('.btnClose.type1').attr('tabindex','0').focus();
 // 			}
 // 		};
+// $(document).on('keydown', function(e) {
+// 	var target = e.target;
+// 	var shiftPressed = e.shiftKey;
+// 	if (e.keyCode == 9) {
+// 		if ($(target).parents('[role=dialog]').length) {
+// 			var borderElem = shiftPressed ?
+// 			$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').first()
+// 			:
+// 			$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').last();
+// 			if ($(borderElem).length) {
+// 				if ($(target).is($(borderElem))) {
+// 					return false;
+// 				} else {
+// 					return true;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	return true;
+// });
+		$.fn.modalTabbing = function() {
 
-	});
-	$(document).on('keydown', function(e) {
-		var target = e.target;
-		var shiftPressed = e.shiftKey;
-		if (e.keyCode == 9) {
-			if ($(target).parents('[role=dialog]').length) {
-				var borderElem = shiftPressed ?
-				$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').first()
-				:
-				$(target).closest('[role=dialog]').find('iframe:visible,button:visible,a:visible').last();
-				if ($(borderElem).length) {
-					if ($(target).is($(borderElem))) {
-						return false;
-					} else {
-						return true;
-					}
-				}
-			}
-		}
-		return true;
+        var tabbing = function(jqSelector) {
+            var inputs = $(jqSelector).find('select, input, textarea, button, a[href]').filter(':visible').not(':disabled');
+
+            //Focus to first element in the container.
+            inputs.first().focus();
+
+            $(jqSelector).on('keydown', function(e) {
+                if (e.which === 9) {
+
+                    var inputs = $(jqSelector).find('select, input, textarea, button, a[href]').filter(':visible').not(':disabled');
+
+                    /*redirect last tab to first input*/
+                    if (!e.shiftKey) {
+                        if (inputs[inputs.length - 1] === e.target) {
+                            e.preventDefault();
+                            inputs.first().focus();
+                        }
+                    }
+                    /*redirect first shift+tab to last input*/
+                    else {
+                        if (inputs[0] === e.target) {
+                            e.preventDefault();
+                            inputs.last().focus();
+                        }
+                    }
+                }
+            });
+        };
+
+        return this.each(function() {
+            tabbing(this);
+        });
+
+    };
+		$("#layerWrap").modalTabbing(); 
 	});
 	</script>
 </head>
 <body>
 	<a href="#none" id="link" onclick="openLayer();">팝업열기</a>
 
-	<div class="layerWrap" hidden="hidden">
+	<div id="layerWrap" class="layerWrap" hidden="hidden">
 		<div class="layerPopup" role="dialog" aria-modal="true" aria-labelledby="layerTitle">
 			<a href="#none" class="btnClose" id="btnCloseFirst">닫기</a>
 			<h1 class="title" id="layerTitle">제목</h1>
