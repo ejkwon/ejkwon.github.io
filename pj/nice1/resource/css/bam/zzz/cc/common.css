@@ -1,0 +1,209 @@
+@charset "euc-kr";
+
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input, a
+{margin:0;padding:0;color:#333333;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+body{background-color:#ffffff}
+li{list-style:none}
+img{max-width:100%;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+em, address{font-style:normal}
+a{color:inherit}
+h1, h2, h3, h4, h5, h6{background:none}
+caption{overflow:hidden;position:absolute;top:0;left:-999px;width:0;height:0;line-height:0;color:transparent;font-size:0}
+
+
+
+
+
+
+
+
+
+/****************************************************** reset ******************************************************/
+.ft-inner .footer-menu li{height:auto}
+.ft-inner .ft-input-wrap{height:28px;margin:10px 0}
+.ft-inner .ft-input-wrap input{height:28px}
+.ft-inner .ft-input-wrap .btn-ft-search{height:28px}
+#footer .ft-inner .ft-addr{text-align:center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** layout ******************************************************/
+#wrap{background:#deecf1;}
+#header{height:54px;padding:17px 0 0 20px;box-sizing:border-box;background-color:transparent;}
+#header .logoTxt{overflow:hidden;font-size:1px;line-height:0;text-indent:150%;white-space:nowrap;display:inline-block;vertical-align:middle;width:68px;height:16px;background:url('../../../../img/bam/zzz/cc/h1_logo.png') no-repeat 0 0;background-size:100%;}
+#footer{position:relative;background:#fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** font ******************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** title ******************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** text ******************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** button ******************************************************/
+.btnSubmit{display:inline-block;padding:14px 10px;text-align:center;color:#fff;font-size:16px;line-height:18px;letter-spacing:-0.5px;background:#29abe2}
+.btnNormal{display:inline-block;padding:14px 10px;text-align:center;color:#fff;font-size:16px;line-height:18px;letter-spacing:-0.5px;background:#bcbcbc}
+.btnArea{margin:15px 0 23px;}
+.btnArea .txtS{font-size:14px;}
+.btnArea [class*='btn']{width:100%;}
+.btnArea .grid.type1{display:table;table-layout:fixed;width:100%;}
+.btnArea .grid.type1 li{display:table-cell;vertical-align:middle;}
+.btnArea .grid.type1 li:first-child{width:30%;}
+.btnArea.type1{display:table;table-layout:fixed;width:100%;}
+.btnArea.type1 [class*='btn']{display:table-cell;vertical-align:middle;width:auto;}
+.btnArea.type1 [class*='btn']:first-child{width:30%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** input ******************************************************/
+::-webkit-input-placeholder{color:#bababa;}
+:-ms-input-placeholder{color:#bababa;}
+::-moz-placeholder{color:#bababa;opacity:1;}
+:-moz-placeholder{color:#bababa;opacity:1;}
+input[type=text]::-ms-clear{display:none;}
+.inpWrap{position:relative;}
+.inpWrap .fRadio:after{display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** list ******************************************************/
+.txtInfo li{color:#888888;font-size:12px;line-height:18px;letter-spacing:-0.5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************** layerPopup ******************************************************/
+.layerPopup{display:none;z-index:100;position:fixed;max-width:500px;top:0;width:100%;bottom:0;}
+.layerPopup.on{display:block;}
+.layerPopup .layerWrap{position:absolute;top:120px;left:20px;right:20px;border-radius:6px;background:#fff;}
+.layerPopup .layerCont{padding:29px 25px;color:#1a1a1a;font-size:14px;line-height:23px;letter-spacing:-0.3px;}
+.layerPopup .txtPoint{font-size:16px;line-height:24px;font-weight:700;}
+.layerPopup .txtStrong{color:#29abe2;}
+.layerPopup .imgLoading{margin:5px auto;}
+.layerPopup .layerCont.typeCenter{text-align:center;}
+.layerPopup .layerButton{border-top:1px solid #e5e5e5;height:46px;text-align:center;}
+.layerPopup .layerButton .btnConfirm{display:inline-block;width:100%;vertical-align:middle;padding:12px;color:#29abe2;font-size:16px;letter-spacing:-0.3px;font-weight:700;}
+.layerPopup .dimmed{width:100%;height:100%;background:rgba(0,0,0,0.5);}
