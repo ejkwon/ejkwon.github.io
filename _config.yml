@@ -51,4 +51,4 @@ exclude:
   - Gemfile.lock
   - vendor
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-architect
