@@ -94,7 +94,7 @@ align-items:center; -webkit-align-items:center; -moz-align-items:center; -ms-ali
 .timeline .date { display:inline-block; box-sizing:border-box; border:1px solid #0f95ed; border-radius:13px; padding:0 15px; height:28px; line-height:26px; color:#0f94ec; vertical-align:top; white-space:nowrap;}
 .timeline .cont { color:#666; word-break:keep-all; word-wrap:break-word; }
 .portfolio { margin:20px 0 0; }
-.subDesc{color:#9c9a9a;font-size:16px;}
+.subDesc{color:#9c9a9a;font-size:16px;margin:0 40px;word-break:keep-all;}
 /* .portfolio .thumbBox { position:relative; display:block; overflow:hidden; height:310px; }
   .portfolio .item:hover .thumbBox { height:0; padding-bottom:70%; }
   .portfolio .item:hover .thumbBox:after { display:block; content:""; position:absolute; top:0; left:0; right:0; bottom:0; border-radius:3px 3px 0 0; background:rgba(81,81,93,.6); }
@@ -153,7 +153,7 @@ align-items:center; -webkit-align-items:center; -moz-align-items:center; -ms-ali
 .portfolio .title { padding:30px 15px; font-size:24px; line-height:1.4; }
 .portfolio .info { position:relative; padding:0 15px 15px; text-align:left; color:#686b6d; word-break:keep-all; word-wrap:break-word; }
 .portfolio .info .date { color:#b9c0c8; font-size:14px; }
-.portfolio .info .pjLink { position:absolute; top:8px; right:16px; padding:0 7px 2px 0; line-height:1.2em; color:#3177c9; font-size:14px; text-decoration:none; }
+.portfolio .info .pjLink { position:absolute; top:8px; right:16px; padding:0 7px 2px 0; white-space:nowrap; line-height:1.2em; color:#3177c9; font-size:14px; text-decoration:none; }
         .pjLink:after { content:""; position:absolute; top:50%; right:0; margin:-3px 0 0; display:inline-block; width:0; height:0; border-top:3px solid transparent; border-left:3px solid #3177c9; border-bottom:3px solid transparent; }
         a.pjLink:hover, span.pjLink a:hover { -webkit-box-shadow:0px 1px 0px 0px rgba(49,120,201,1);
     -moz-box-shadow:0px 1px 0px 0px rgba(49,120,201,1);
@@ -278,6 +278,7 @@ justify-content:center; -webkit-justify-content:center; -moz-justify-content:cen
     .timeline { margin:30px 10px 0; }
     .timeline:before { left:0; }
     .timeline .date { margin:0 0 10px; font-size:14px; }
+    .subDesc{font-size:14px;}
     .portfolio .primary { font-size:14px; }
     .btnDetail { padding:12px 19px; font-size:14px; }
     .panel { top:55%; left:50%; margin:0 0 0 -130px; padding:10px 14px; }
