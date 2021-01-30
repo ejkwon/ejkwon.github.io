@@ -91,7 +91,7 @@ align-items:center; -webkit-align-items:center; -moz-align-items:center; -ms-ali
 .timeline:before { display:block; position:absolute; content:""; width:1px; top:7px; bottom:0; background:#d2d2d2; }
 .timeline li { position:relative; margin:30px 0 0; box-sizing:border-box; padding:0 0 0 30px; text-align:left; }
 .timeline li:before { position:absolute; top:7px; left:0; content:""; display:block; width:11px; height:11px; margin:0 0 0 -5px; border-radius:50%; background:#0f95ed; }
-.timeline .date { display:inline-block; box-sizing:border-box; border:1px solid #0f95ed; border-radius:13px; padding:0 15px; height:28px; line-height:26px; color:#0f94ec; vertical-align:top; }
+.timeline .date { display:inline-block; box-sizing:border-box; border:1px solid #0f95ed; border-radius:13px; padding:0 15px; height:28px; line-height:26px; color:#0f94ec; vertical-align:top; white-space:nowrap;}
 .timeline .cont { color:#666; word-break:keep-all; word-wrap:break-word; }
 .portfolio { margin:20px 0 0; }
 .subDesc{color:#9c9a9a;font-size:16px;}
